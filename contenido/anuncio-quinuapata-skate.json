@@ -13,19 +13,19 @@
     "escenas": [
       {
         "tipo": "video",
-        "segundos": 2.5,
+        "segundos": 1.95,
         "archivo": "clientes/quinuapata/gancho-skate.mp4",
         "texto": "Tu encomienda sale *volando* al VRAEM"
       },
       {
         "tipo": "video",
-        "segundos": 3.6,
+        "segundos": 3.35,
         "archivo": "clientes/quinuapata/listas.mp4",
         "texto": "De Ayacucho al VRAEM *y del VRAEM a Ayacucho*"
       },
       {
         "tipo": "video",
-        "segundos": 4.5,
+        "segundos": 5.0,
         "archivo": "clientes/quinuapata/carga.mp4",
         "texto": "La recibimos, la *aseguramos* y la llevamos"
       },
@@ -50,7 +50,7 @@
           "Tutumbaru"
         ],
         "texto": "Llegamos a *todo el VRAEM*",
-        "cambio": 1.25,
+        "cambio": 1.65,
         "texto2": "Envía lo que necesites, *del tamaño que sea*"
       },
       {
@@ -63,54 +63,54 @@
       },
       {
         "tipo": "video",
-        "segundos": 2.6,
+        "segundos": 2.3,
         "archivo": "clientes/quinuapata/camioneta.mp4",
         "encaje": "tarjeta",
         "texto": "Encuéntranos en *Jr. César Vallejo 340*"
       },
       {
         "tipo": "foto",
-        "segundos": 2.5,
+        "segundos": 1.95,
         "archivo": "clientes/quinuapata/fachada.jpg",
         "texto": "Ayacucho: Jr. César Vallejo *340*"
       },
       {
         "tipo": "foto",
-        "segundos": 5.8,
+        "segundos": 5.15,
         "archivo": "clientes/quinuapata/encomiendas.webp",
         "texto": "Seguridad, garantía *y confianza*"
       },
       {
         "tipo": "cierre",
-        "segundos": 5.1
+        "segundos": 4.5
       }
     ],
     "voz": "clientes/quinuapata/voz-c.m4a",
     "efectos": [
       {
         "archivo": "sfx/viento-salto.wav",
-        "segundo": 0.2,
-        "volumen": 0.35
+        "segundo": 0.15,
+        "volumen": 0.3
       },
       {
         "archivo": "sfx/whoosh.wav",
         "segundo": 0.25,
-        "volumen": 0.5
+        "volumen": 0.45
       },
       {
         "archivo": "sfx/whip.wav",
-        "segundo": 2.4,
-        "volumen": 0.25
+        "segundo": 1.85,
+        "volumen": 0.22
       },
       {
         "archivo": "sfx/page-turn.wav",
-        "segundo": 10.55,
-        "volumen": 0.3
+        "segundo": 10.25,
+        "volumen": 0.25
       },
       {
         "archivo": "sfx/ding.wav",
-        "segundo": 28.1,
-        "volumen": 0.25
+        "segundo": 26.15,
+        "volumen": 0.22
       }
     ]
   }
