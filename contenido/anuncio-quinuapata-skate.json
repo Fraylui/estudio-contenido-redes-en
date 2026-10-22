@@ -8,31 +8,31 @@
       "eslogan": "Seguridad, garantía y confianza",
       "whatsapp": "943 960 656",
       "direccion": "Jr. César Vallejo 340 · Ayacucho",
-      "llamada": "Escríbenos y envía hoy"
+      "llamada": "Contáctanos y envía hoy"
     },
     "escenas": [
       {
         "tipo": "video",
-        "segundos": 3.1,
-        "archivo": "clientes/quinuapata/gancho-skate.mp4"
-      },
-      {
-        "tipo": "video",
-        "segundos": 3,
-        "archivo": "clientes/quinuapata/listas.mp4",
+        "segundos": 2.5,
+        "archivo": "clientes/quinuapata/gancho-skate.mp4",
         "texto": "Tu encomienda sale *volando* al VRAEM"
       },
       {
         "tipo": "video",
-        "segundos": 3.5,
+        "segundos": 3.6,
+        "archivo": "clientes/quinuapata/listas.mp4",
+        "texto": "De Ayacucho al VRAEM *y del VRAEM a Ayacucho*"
+      },
+      {
+        "tipo": "video",
+        "segundos": 4.5,
         "archivo": "clientes/quinuapata/carga.mp4",
         "texto": "La recibimos, la *aseguramos* y la llevamos"
       },
       {
         "tipo": "mapa",
-        "segundos": 5.5,
+        "segundos": 4.1,
         "archivo": "clientes/quinuapata/vraem.webp",
-        "texto": "Llegamos a *todo el VRAEM*",
         "origen": "Ayacucho",
         "destinos": [
           "San Francisco",
@@ -48,17 +48,14 @@
           "Rinconada",
           "Pichiwillca",
           "Tutumbaru"
-        ]
+        ],
+        "texto": "Llegamos a *todo el VRAEM*",
+        "cambio": 1.25,
+        "texto2": "Envía lo que necesites, *del tamaño que sea*"
       },
       {
         "tipo": "foto",
-        "segundos": 3,
-        "archivo": "clientes/quinuapata/encomiendas.webp",
-        "texto": "Envía lo que necesites, *del tamaño que sea*"
-      },
-      {
-        "tipo": "foto",
-        "segundos": 3,
+        "segundos": 2.3,
         "archivo": "clientes/quinuapata/encomiendas.webp",
         "zoom": 2.2,
         "centro": "52% 42%",
@@ -66,20 +63,54 @@
       },
       {
         "tipo": "video",
-        "segundos": 3,
+        "segundos": 2.6,
         "archivo": "clientes/quinuapata/camioneta.mp4",
         "encaje": "tarjeta",
-        "texto": "Tu encomienda, *en camino*"
+        "texto": "Encuéntranos en *Jr. César Vallejo 340*"
       },
       {
         "tipo": "foto",
         "segundos": 2.5,
         "archivo": "clientes/quinuapata/fachada.jpg",
-        "texto": "Jr. César Vallejo *340*"
+        "texto": "Ayacucho: Jr. César Vallejo *340*"
+      },
+      {
+        "tipo": "foto",
+        "segundos": 5.8,
+        "archivo": "clientes/quinuapata/encomiendas.webp",
+        "texto": "Seguridad, garantía *y confianza*"
       },
       {
         "tipo": "cierre",
-        "segundos": 4.5
+        "segundos": 5.1
+      }
+    ],
+    "voz": "clientes/quinuapata/voz-c.m4a",
+    "efectos": [
+      {
+        "archivo": "sfx/viento-salto.wav",
+        "segundo": 0.2,
+        "volumen": 0.35
+      },
+      {
+        "archivo": "sfx/whoosh.wav",
+        "segundo": 0.25,
+        "volumen": 0.5
+      },
+      {
+        "archivo": "sfx/whip.wav",
+        "segundo": 2.4,
+        "volumen": 0.25
+      },
+      {
+        "archivo": "sfx/page-turn.wav",
+        "segundo": 10.55,
+        "volumen": 0.3
+      },
+      {
+        "archivo": "sfx/ding.wav",
+        "segundo": 28.1,
+        "volumen": 0.25
       }
     ]
   }

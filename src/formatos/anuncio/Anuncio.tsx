@@ -6,6 +6,7 @@ import {
   Easing,
   Img,
   interpolate,
+  Sequence,
   Series,
   staticFile,
   useCurrentFrame,
@@ -33,6 +34,9 @@ export const anuncioSchema = z.object({
       segundos: z.number().min(0.5),
       // Texto grande en pantalla. Lo que va entre *asteriscos* sale resaltado.
       texto: z.string().optional(),
+      // Segundo texto que reemplaza al primero a los `cambio` segundos (para seguir la voz)
+      texto2: z.string().optional(),
+      cambio: z.number().optional(),
       archivo: z.string().optional(),
       // Videos horizontales: "tarjeta" los muestra completos sobre un fondo desenfocado
       encaje: z.enum(["cubrir", "tarjeta"]).optional(),
@@ -45,6 +49,10 @@ export const anuncioSchema = z.object({
   ),
   voz: z.string().optional(),
   musica: z.string().optional(),
+  // Efectos de sonido (archivos en public/sfx/) en un segundo exacto del anuncio
+  efectos: z
+    .array(z.object({ archivo: z.string(), segundo: z.number(), volumen: z.number().optional() }))
+    .optional(),
 });
 
 type Props = z.infer<typeof anuncioSchema>;
@@ -57,7 +65,7 @@ export const calcularAnuncio: CalculateMetadataFunction<Props> = ({ props }) => 
   durationInFrames: Math.round(props.escenas.reduce((t, e) => t + e.segundos, 0) * FPS),
 });
 
-export const Anuncio: React.FC<Props> = ({ negocio, escenas, voz, musica }) => {
+export const Anuncio: React.FC<Props> = ({ negocio, escenas, voz, musica, efectos }) => {
   const { durationInFrames } = useVideoConfig();
   return (
     <AbsoluteFill style={{ backgroundColor: "#000000" }}>
@@ -73,6 +81,11 @@ export const Anuncio: React.FC<Props> = ({ negocio, escenas, voz, musica }) => {
         ))}
       </Series>
       {voz ? <Audio src={staticFile(voz)} /> : null}
+      {(efectos ?? []).map((e, i) => (
+        <Sequence key={i} name={`Efecto ${e.archivo}`} from={Math.round(e.segundo * FPS)} layout="none">
+          <Audio src={staticFile(e.archivo)} volume={e.volumen ?? 0.35} />
+        </Sequence>
+      ))}
       {musica ? (
         <Audio
           src={staticFile(musica)}
@@ -139,13 +152,29 @@ const EscenaAnuncio: React.FC<{ escena: Escena; negocio: Negocio }> = ({ escena,
       <AbsoluteFill style={{ scale: escena.tipo === "cielo" ? 1 : golpe }}>{fondo}</AbsoluteFill>
       {escena.tipo !== "cierre" && escena.tipo !== "cielo" ? <LogoEsquina logo={negocio.logo} /> : null}
       {escena.texto ? (
-        <TextoGrande
-          texto={escena.texto}
-          color={negocio.color}
-          acento={negocio.acento}
-          arriba={escena.tipo === "mapa"}
-          retraso={escena.tipo === "cielo" ? 20 : 4}
-        />
+        <Sequence
+          layout="none"
+          durationInFrames={escena.texto2 && escena.cambio ? Math.round(escena.cambio * FPS) : undefined}
+        >
+          <TextoGrande
+            texto={escena.texto}
+            color={negocio.color}
+            acento={negocio.acento}
+            arriba={escena.tipo === "mapa"}
+            retraso={escena.tipo === "cielo" ? 20 : 4}
+          />
+        </Sequence>
+      ) : null}
+      {escena.texto2 && escena.cambio ? (
+        <Sequence layout="none" from={Math.round(escena.cambio * FPS)}>
+          <TextoGrande
+            texto={escena.texto2}
+            color={negocio.color}
+            acento={negocio.acento}
+            arriba={escena.tipo === "mapa"}
+            retraso={0}
+          />
+        </Sequence>
       ) : null}
     </AbsoluteFill>
   );
