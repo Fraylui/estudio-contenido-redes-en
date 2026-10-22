@@ -1,4 +1,4 @@
-import { AbsoluteFill, Easing, interpolate, useCurrentFrame, useVideoConfig } from "remotion";
+import { AbsoluteFill, Easing, Img, interpolate, staticFile, useCurrentFrame, useVideoConfig } from "remotion";
 import { useEscala } from "../../comun/escala";
 import { marca } from "../../marca";
 
@@ -9,7 +9,9 @@ export const MapaRuta: React.FC<{
   destinos: string[];
   color: string;
   acento: string;
-}> = ({ origen, destinos, color, acento }) => {
+  // Foto de fondo opcional (por ejemplo, del lugar de destino) en lugar de las montañas dibujadas
+  fondo?: string;
+}> = ({ origen, destinos, color, acento, fondo }) => {
   const frame = useCurrentFrame();
   const { fps } = useVideoConfig();
   const { px, vertical } = useEscala();
@@ -24,15 +26,29 @@ export const MapaRuta: React.FC<{
 
   return (
     <AbsoluteFill style={{ background: "linear-gradient(180deg, #dfe9f5 0%, #dfe9f5 32%, #2f8f46 32%, #1f6b33 100%)" }}>
+      {fondo ? (
+        <AbsoluteFill style={{ scale: interpolate(frame, [0, 6 * fps], [1.05, 1.18]) }}>
+          <Img
+            src={staticFile(fondo)}
+            style={{
+              width: "100%",
+              height: "100%",
+              objectFit: "cover",
+              // Un poco de desenfoque disimula fotos de baja resolución y hace legibles los textos
+              filter: "blur(3px) brightness(0.8) saturate(1.2)",
+            }}
+          />
+        </AbsoluteFill>
+      ) : null}
       {/* Montañas de la sierra con nieve */}
-      <svg
+      {fondo ? null : <svg
         viewBox="0 0 1080 700"
         style={{ position: "absolute", top: 0, left: 0, width: "100%", height: vertical ? "37%" : "45%" }}
         preserveAspectRatio="none"
       >
         <path d="M0 620 L180 300 L300 460 L470 180 L640 470 L780 300 L1080 620 Z" fill="#8a93a3" />
         <path d="M470 180 L420 270 L470 250 L520 280 Z M180 300 L145 365 L190 345 L225 380 Z M780 300 L745 360 L790 345 L825 370 Z" fill="#ffffff" />
-      </svg>
+      </svg>}
 
       {/* Carretera que baja serpenteando */}
       <svg viewBox="0 0 1080 1920" style={{ position: "absolute", inset: 0, width: "100%", height: "100%" }} preserveAspectRatio="none">

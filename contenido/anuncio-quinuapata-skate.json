@@ -7,7 +7,7 @@
       "acento": "#ffd400",
       "eslogan": "Seguridad, garantía y confianza",
       "whatsapp": "943 960 656",
-      "direccion": "Jr. César Vallejo 354 · Ayacucho",
+      "direccion": "Jr. César Vallejo 340 · Ayacucho",
       "llamada": "Escríbenos y envía hoy"
     },
     "escenas": [
@@ -47,7 +47,8 @@
           "Rinconada",
           "Pichiwillca",
           "Tutumbaru"
-        ]
+        ],
+        "archivo": "clientes/quinuapata/vraem.webp"
       },
       {
         "tipo": "foto",
@@ -66,7 +67,7 @@
         "tipo": "foto",
         "segundos": 2.5,
         "archivo": "clientes/quinuapata/fachada.jpg",
-        "texto": "Jr. César Vallejo *354*"
+        "texto": "Jr. César Vallejo *340*"
       },
       {
         "tipo": "cierre",

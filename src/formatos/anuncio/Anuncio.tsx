@@ -107,6 +107,7 @@ const EscenaAnuncio: React.FC<{ escena: Escena; negocio: Negocio }> = ({ escena,
             destinos={escena.destinos ?? []}
             color={negocio.color}
             acento={negocio.acento}
+            fondo={escena.archivo}
           />
         );
       case "video":
