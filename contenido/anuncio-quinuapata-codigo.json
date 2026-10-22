@@ -12,20 +12,21 @@
     },
     "escenas": [
       {
-        "tipo": "cielo",
-        "segundos": 3.5,
-        "archivo": "clientes/quinuapata/nieve.webp",
-        "texto": "Si tienes familia o negocio *en el VRAEM*"
+        "tipo": "video",
+        "segundos": 3,
+        "archivo": "clientes/quinuapata/listas.mp4",
+        "texto": "¿Sabías por qué cada encomienda *lleva un código*?"
       },
       {
         "tipo": "video",
-        "segundos": 4,
+        "segundos": 3.5,
         "archivo": "clientes/quinuapata/carga.mp4",
         "texto": "La recibimos, la *aseguramos* y la llevamos"
       },
       {
         "tipo": "mapa",
         "segundos": 5.5,
+        "archivo": "clientes/quinuapata/vraem.webp",
         "texto": "Llegamos a *todo el VRAEM*",
         "origen": "Ayacucho",
         "destinos": [
@@ -42,13 +43,20 @@
           "Rinconada",
           "Pichiwillca",
           "Tutumbaru"
-        ],
-        "archivo": "clientes/quinuapata/vraem.webp"
+        ]
       },
       {
         "tipo": "foto",
-        "segundos": 3.5,
+        "segundos": 3,
         "archivo": "clientes/quinuapata/encomiendas.webp",
+        "texto": "Sobres, paquetes y hasta *refrigeradoras*"
+      },
+      {
+        "tipo": "foto",
+        "segundos": 3,
+        "archivo": "clientes/quinuapata/encomiendas.webp",
+        "zoom": 2.2,
+        "centro": "52% 42%",
         "texto": "Cada envío con *su propio código*"
       },
       {

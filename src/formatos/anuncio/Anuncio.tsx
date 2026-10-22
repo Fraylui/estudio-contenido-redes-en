@@ -38,6 +38,9 @@ export const anuncioSchema = z.object({
       encaje: z.enum(["cubrir", "tarjeta"]).optional(),
       origen: z.string().optional(),
       destinos: z.array(z.string()).optional(),
+      // Fotos: acercar a un detalle. zoom 1 = foto completa; centro = punto en % ("52% 45%")
+      zoom: z.number().min(1).optional(),
+      centro: z.string().optional(),
     }),
   ),
   voz: z.string().optional(),
@@ -114,8 +117,16 @@ const EscenaAnuncio: React.FC<{ escena: Escena; negocio: Negocio }> = ({ escena,
         return <Clip archivo={escena.archivo!} encaje={escena.encaje ?? "cubrir"} />;
       case "foto":
         return (
-          <AbsoluteFill style={{ scale: lento }}>
-            <Img src={staticFile(escena.archivo!)} style={{ width: "100%", height: "100%", objectFit: "cover" }} />
+          <AbsoluteFill
+            style={{
+              scale: lento * (escena.zoom ?? 1),
+              transformOrigin: escena.centro ?? "50% 50%",
+            }}
+          >
+            <Img
+              src={staticFile(escena.archivo!)}
+              style={{ width: "100%", height: "100%", objectFit: "cover", objectPosition: escena.centro ?? "50% 50%" }}
+            />
           </AbsoluteFill>
         );
       case "cierre":
@@ -193,57 +204,103 @@ const Clip: React.FC<{ archivo: string; encaje: "cubrir" | "tarjeta" }> = ({ arc
   );
 };
 
-// Texto grande en caja de color. *palabras* entre asteriscos van resaltadas.
+// Texto en pantalla al estilo de los Reels actuales: letras blancas grandes sin caja ni contorno,
+// palabras que entran una por una y la parte entre *asteriscos* sobre una barra de marcador
+// que se pinta de izquierda a derecha. Un degradado oscuro suave abajo asegura la lectura.
 const TextoGrande: React.FC<{
   texto: string;
   color: string;
   acento: string;
   arriba: boolean;
   retraso: number;
-}> = ({ texto, color, acento, arriba, retraso }) => {
+}> = ({ texto, acento, arriba, retraso }) => {
   const frame = useCurrentFrame();
   const { px, vertical } = useEscala();
-  const partes = texto.split("*");
+  const suave = Easing.out(Easing.cubic);
+  const clamp = { extrapolateLeft: "clamp", extrapolateRight: "clamp" } as const;
+
+  // Separa en palabras recordando cuáles van resaltadas
+  const palabras = texto
+    .split("*")
+    .flatMap((parte, i) => parte.split(/\s+/).filter(Boolean).map((p) => ({ p, marca: i % 2 === 1 })));
+  // Las palabras resaltadas seguidas forman un solo bloque de marcador
+  const grupos: { palabras: string[]; marca: boolean; indice: number }[] = [];
+  palabras.forEach((w, i) => {
+    const ultimo = grupos[grupos.length - 1];
+    if (ultimo && ultimo.marca && w.marca) ultimo.palabras.push(w.p);
+    else grupos.push({ palabras: [w.p], marca: w.marca, indice: i });
+  });
+
+  const PASO = 3; // fotogramas entre palabra y palabra
+  const entrada = (i: number) => ({
+    opacity: interpolate(frame, [retraso + i * PASO, retraso + i * PASO + 6], [0, 1], clamp),
+    translate: interpolate(frame, [retraso + i * PASO, retraso + i * PASO + 8], ["0px 28px", "0px 0px"], {
+      ...clamp,
+      easing: suave,
+    }),
+  });
+
   return (
-    <AbsoluteFill
-      style={{
-        justifyContent: arriba ? "flex-start" : "center",
-        alignItems: "center",
-        // En vertical, el texto queda arriba de la zona que tapan los botones de Facebook
-        paddingTop: arriba ? px(vertical ? 360 : 330) : 0,
-        paddingBottom: arriba ? 0 : px(vertical ? 560 : 120),
-        paddingLeft: px(60),
-        paddingRight: px(60),
-      }}
-    >
+    <AbsoluteFill>
+      {/* Degradado oscuro para que el texto blanco se lea sobre cualquier fondo */}
+      <AbsoluteFill
+        style={{
+          background: arriba
+            ? "linear-gradient(180deg, rgba(0,0,0,0.55) 0%, rgba(0,0,0,0) 38%)"
+            : "linear-gradient(0deg, rgba(0,0,0,0.7) 0%, rgba(0,0,0,0.45) 30%, rgba(0,0,0,0) 55%)",
+          opacity: interpolate(frame, [retraso - 4, retraso + 6], [0, 1], clamp),
+        }}
+      />
       <div
         style={{
-          ...(arriba ? {} : { marginTop: "auto" }),
-          padding: `${px(18)}px ${px(34)}px`,
-          borderRadius: px(18),
-          background: color,
-          border: `${px(6)}px solid #ffffff`,
-          boxShadow: `0 ${px(10)}px 0 rgba(0,0,0,0.4)`,
-          fontFamily: marca.fuentes.titulo,
-          fontSize: px(vertical ? 92 : 76),
-          lineHeight: 1.05,
+          position: "absolute",
+          left: px(70),
+          // A la derecha queda libre la columna de "me gusta" y comentarios de Facebook
+          right: px(vertical ? 150 : 400),
+          ...(arriba ? { top: px(vertical ? 330 : 150) } : { bottom: px(vertical ? 470 : 110) }),
+          display: "flex",
+          flexWrap: "wrap",
+          alignItems: "center",
+          columnGap: px(20),
+          rowGap: px(8),
+          fontFamily: marca.fuentes.texto,
+          fontWeight: 800,
+          fontSize: px(vertical ? 86 : 72),
+          lineHeight: 1.1,
+          letterSpacing: px(-1),
           textTransform: "uppercase",
-          textAlign: "center",
           color: "#ffffff",
-          rotate: "-2deg",
-          opacity: interpolate(frame, [retraso, retraso + 4], [0, 1], { extrapolateLeft: "clamp", extrapolateRight: "clamp" }),
-          scale: interpolate(frame, [retraso, retraso + 10], [0.5, 1], {
-            extrapolateLeft: "clamp",
-            extrapolateRight: "clamp",
-            easing: Easing.spring({ damping: 10 }),
-          }),
         }}
       >
-        {partes.map((p, i) => (
-          <span key={i} style={{ color: i % 2 ? acento : "#ffffff" }}>
-            {p}
-          </span>
-        ))}
+        {grupos.map((g, gi) => {
+          if (!g.marca) {
+            return g.palabras.map((p, k) => (
+              <span key={`${gi}-${k}`} style={entrada(g.indice + k)}>
+                {p}
+              </span>
+            ));
+          }
+          // Barra de marcador que se pinta de izquierda a derecha detrás de la frase clave
+          const inicio = retraso + g.indice * PASO;
+          const pintado = interpolate(frame, [inicio, inicio + 8], [0, 100], { ...clamp, easing: suave });
+          return (
+            <span
+              key={gi}
+              style={{
+                ...entrada(g.indice),
+                position: "relative",
+                padding: `${px(2)}px ${px(14)}px`,
+                color: "#111111",
+                boxDecorationBreak: "clone",
+                WebkitBoxDecorationBreak: "clone",
+                background: `linear-gradient(90deg, ${acento} ${pintado}%, transparent ${pintado}%)`,
+                borderRadius: px(10),
+              }}
+            >
+              {g.palabras.join(" ")}
+            </span>
+          );
+        })}
       </div>
     </AbsoluteFill>
   );
