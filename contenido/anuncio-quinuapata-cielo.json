@@ -15,7 +15,7 @@
         "tipo": "cielo",
         "segundos": 3.5,
         "archivo": "clientes/quinuapata/nieve.webp",
-        "texto": "Llueva o nieve, *de ida y de vuelta*"
+        "texto": "Si tienes familia o negocio *en el VRAEM*"
       },
       {
         "tipo": "video",
@@ -26,7 +26,7 @@
       {
         "tipo": "mapa",
         "segundos": 5.5,
-        "texto": "Ayacucho y todo el VRAEM, *ida y vuelta*",
+        "texto": "Llegamos a *todo el VRAEM*",
         "origen": "Ayacucho",
         "destinos": [
           "San Francisco",
@@ -48,7 +48,7 @@
         "tipo": "foto",
         "segundos": 3.5,
         "archivo": "clientes/quinuapata/encomiendas.webp",
-        "texto": "Sobres, paquetes, cajas: *todo tipo de encomiendas*"
+        "texto": "Cada envío con *su propio código*"
       },
       {
         "tipo": "video",

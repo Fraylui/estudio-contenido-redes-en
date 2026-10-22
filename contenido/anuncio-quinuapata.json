@@ -15,7 +15,7 @@
         "tipo": "video",
         "segundos": 3,
         "archivo": "clientes/quinuapata/almacen.mp4",
-        "texto": "De Ayacucho al VRAEM *y del VRAEM a Ayacucho*"
+        "texto": "Mira cuántas encomiendas *salen hoy al VRAEM*"
       },
       {
         "tipo": "video",
@@ -26,7 +26,7 @@
       {
         "tipo": "mapa",
         "segundos": 5.5,
-        "texto": "Ayacucho y todo el VRAEM, *ida y vuelta*",
+        "texto": "Llegamos a *todo el VRAEM*",
         "origen": "Ayacucho",
         "destinos": [
           "San Francisco",
@@ -47,14 +47,14 @@
       {
         "tipo": "foto",
         "segundos": 3.5,
-        "archivo": "clientes/quinuapata/encomiendas.webp",
+        "archivo": "clientes/quinuapata/nieve.webp",
         "texto": "Sobres, paquetes, cajas: *todo tipo de encomiendas*"
       },
       {
         "tipo": "foto",
         "segundos": 3.5,
-        "archivo": "clientes/quinuapata/nieve.webp",
-        "texto": "Llueva o nieve, *tu envío llega*"
+        "archivo": "clientes/quinuapata/encomiendas.webp",
+        "texto": "Cada envío con *su propio código*"
       },
       {
         "tipo": "video",
