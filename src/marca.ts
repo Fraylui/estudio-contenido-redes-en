@@ -28,4 +28,8 @@ export const marca = {
     titulo: "Titulo",
     texto: "Texto",
   },
+  // El narrador dibujado que aparece en el estilo "dibujo"
+  personaje: {
+    camisa: "#e63946",
+  },
 };

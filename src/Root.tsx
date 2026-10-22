@@ -1,5 +1,5 @@
 import { z } from "zod";
-import { Composition, Folder } from "remotion";
+import { Composition, Folder, Still } from "remotion";
 import datosEjemplo from "../contenido/datos-poblacion-sudamerica.json";
 import fraseEjemplo from "../contenido/frase-constancia.json";
 import finDeMes from "../contenido/narrado-fin-de-mes.json";
@@ -13,6 +13,7 @@ import {
 } from "./formatos/DatosBarras";
 import { calcularFrase, Frase, fraseSchema } from "./formatos/Frase";
 import { calcularNarrado, Narrado, narradoSchema } from "./formatos/narrado/Narrado";
+import { Miniatura } from "./formatos/narrado/Miniatura";
 import { calcularTopLista, TopLista, topListaSchema } from "./formatos/TopLista";
 import { calcularTrivia, Trivia, triviaSchema } from "./formatos/Trivia";
 
@@ -27,6 +28,28 @@ const TAMANOS = [
 export const RemotionRoot: React.FC = () => {
   return (
     <>
+      {/* Miniaturas de YouTube para los videos narrados (imagen fija de 1280x720) */}
+      <Folder name="Miniaturas">
+        {[finDeMes, elTunche].map((n) => (
+          <Still
+            key={n.props.id}
+            id={`Miniatura-${n.props.id}`}
+            component={Miniatura}
+            schema={narradoSchema}
+            defaultProps={n.props as z.infer<typeof narradoSchema>}
+            width={1280}
+            height={720}
+          />
+        ))}
+        <Still
+          id="Miniatura"
+          component={Miniatura}
+          schema={narradoSchema}
+          defaultProps={finDeMes.props as z.infer<typeof narradoSchema>}
+          width={1280}
+          height={720}
+        />
+      </Folder>
       {TAMANOS.map((t) => (
         <Folder key={t.nombre} name={t.nombre}>
           <Composition

@@ -15,7 +15,13 @@ import { Firma } from "../../comun/Firma";
 import { marca } from "../../marca";
 import { Escena } from "./Escena";
 import { ESTILOS, Estilo } from "./estilos";
-import { SubtituloProvisional, Subtitulos } from "./Subtitulos";
+import { COLORES_CLAVE, Presentador } from "./Presentador";
+import {
+  paginaProvisional,
+  PaginasEnElTiempo,
+  SubtituloAbajo,
+  usePalabras,
+} from "./Subtitulos";
 
 export const narradoSchema = z.object({
   id: z.string(),
@@ -29,17 +35,33 @@ export const narradoSchema = z.object({
       texto: z.string(),
       prompt: z.string(),
       efecto: z.enum(["acercar", "alejar", "izquierda", "derecha"]),
+      // Solo estilo dibujo: cara del personaje y palabra grande de la escena
+      emocion: z.enum(["explica", "senala", "feliz", "preocupado", "sorprendido"]).optional(),
+      clave: z.string().optional(),
+      colorClave: z.enum(Object.keys(COLORES_CLAVE) as [keyof typeof COLORES_CLAVE]).optional(),
       // Estos los completa "npm run preparar" a partir de tu grabación
       inicio: z.number().optional(),
       imagen: z.string().optional(),
     }),
   ),
+  // Textos grandes de la miniatura de YouTube (ver Miniatura.tsx)
+  miniatura: z
+    .object({
+      texto: z.string(),
+      color: z.enum(Object.keys(COLORES_CLAVE) as [keyof typeof COLORES_CLAVE]),
+      texto2: z.string().optional(),
+      color2: z.enum(Object.keys(COLORES_CLAVE) as [keyof typeof COLORES_CLAVE]).optional(),
+      emocion: z.enum(["explica", "senala", "feliz", "preocupado", "sorprendido"]).optional(),
+      escena: z.number().int().min(1).optional(),
+    })
+    .optional(),
   voz: z.string().optional(),
   subtitulos: z.string().optional(),
   duracion: z.number().optional(),
 });
 
-type Props = z.infer<typeof narradoSchema>;
+export type NarradoProps = z.infer<typeof narradoSchema>;
+type Props = NarradoProps;
 
 const FPS = 30;
 const CIERRE = 3;
@@ -72,6 +94,11 @@ export const Narrado: React.FC<Props> = (props) => {
   const { fps, durationInFrames } = useVideoConfig();
   const { inicios, narracion, conVoz } = calcularTiempos(props);
   const finNarracion = Math.round(narracion * fps);
+  const captions = usePalabras(conVoz ? subtitulos : undefined);
+  const tramos = escenas.map((e, i) => ({
+    desde: Math.round(inicios[i] * fps),
+    hasta: i + 1 < escenas.length ? Math.round(inicios[i + 1] * fps) : finNarracion,
+  }));
 
   return (
     <AbsoluteFill style={{ backgroundColor: estilo.fondo }}>
@@ -92,9 +119,9 @@ export const Narrado: React.FC<Props> = (props) => {
               estilo={estilo}
               fundido={i === 0 ? 0 : FUNDIDO}
             />
-            {!conVoz ? (
+            {!conVoz && !estilo.personaje ? (
               <Sequence durationInFrames={hasta - desde} layout="none">
-                <SubtituloProvisional texto={escena.texto} estilo={estilo} />
+                <SubtituloAbajo page={paginaProvisional(escena.texto)} estilo={estilo} pequeno />
               </Sequence>
             ) : null}
           </Sequence>
@@ -108,7 +135,24 @@ export const Narrado: React.FC<Props> = (props) => {
         <Titulo titulo={props.titulo} subtitulo={props.subtitulo} estilo={estilo} />
       </Sequence>
 
-      {conVoz && subtitulos ? <Subtitulos archivo={subtitulos} estilo={estilo} /> : null}
+      {estilo.personaje ? (
+        <Presentador
+          escenas={escenas.map((e, i) => ({
+            ...tramos[i],
+            texto: e.texto,
+            emocion: e.emocion ?? "explica",
+            clave: e.clave,
+            colorClave: e.colorClave ?? "rojo",
+          }))}
+          captions={captions}
+          finNarracion={finNarracion}
+          estilo={estilo}
+        />
+      ) : captions ? (
+        <PaginasEnElTiempo captions={captions}>
+          {(page) => <SubtituloAbajo page={page} estilo={estilo} />}
+        </PaginasEnElTiempo>
+      ) : null}
 
       <Sequence name="Cierre" from={finNarracion} layout="none">
         <Cierre cta={props.cta} estilo={estilo} />

@@ -52,16 +52,17 @@ export const Escena: React.FC<{
       <AbsoluteFill
         style={{
           backgroundColor: estilo.fondo,
-          // En horizontal el cuadro sube para dejar espacio a los subtítulos
-          justifyContent: vertical ? "center" : "flex-start",
-          alignItems: "center",
+          // Vertical: el cuadro arriba y el personaje abajo.
+          // Horizontal: el cuadro a la izquierda y el personaje a la derecha.
+          justifyContent: vertical ? "flex-start" : "center",
+          alignItems: vertical ? "center" : "flex-start",
           padding: px(70),
-          paddingTop: px(vertical ? 70 : 120),
+          paddingTop: px(vertical ? 370 : 70),
         }}
       >
         <div
           style={{
-            ...(vertical ? { width: "100%" } : { height: "64%" }),
+            ...(vertical ? { width: "100%" } : { height: "70%" }),
             aspectRatio: "4 / 3",
             border: `${px(10)}px solid ${estilo.subtituloBorde}`,
             borderRadius: px(18),

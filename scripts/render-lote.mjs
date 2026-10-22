@@ -5,7 +5,7 @@
 //   npm run lote -- --ambos           → todos, en los dos tamaños
 //   npm run lote -- trivia            → solo los archivos cuyo nombre contiene "trivia"
 //
-// Los videos quedan en out/<nombre-del-archivo>-<Tamaño>.mp4
+// Los videos quedan en out/<nombre-del-archivo>-<Tamaño>.mp4 (y las miniaturas en .png)
 import { execFileSync } from "node:child_process";
 import { readdirSync, readFileSync, writeFileSync, mkdirSync } from "node:fs";
 import { join, basename } from "node:path";
@@ -35,6 +35,15 @@ for (const archivo of archivos) {
   const nombre = basename(archivo, ".json");
   const rutaProps = join("out/.props", archivo);
   writeFileSync(rutaProps, JSON.stringify(props));
+
+  // Los videos narrados también llevan su miniatura de YouTube (PNG de 1280x720)
+  if (formato === "Narrado") {
+    const miniatura = `out/${nombre}-miniatura.png`;
+    console.log(`\n▶ ${archivo} → ${miniatura}`);
+    execFileSync("npx", ["remotion", "still", "Miniatura", miniatura, `--props=${rutaProps}`], {
+      stdio: "inherit",
+    });
+  }
 
   for (const tamano of tamanos) {
     const salida = `out/${nombre}-${tamano}.mp4`;

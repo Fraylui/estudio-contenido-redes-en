@@ -23,7 +23,7 @@ Además está el formato **`Narrado`**, para videos con tu voz (ver más abajo),
 | Estilo | Para qué canal | Ejemplo |
 |---|---|---|
 | `misterio` | Leyendas, terror, misterios: imágenes de cine, grano de película y viñeta oscura | `contenido/narrado-el-tunche.json` |
-| `dibujo` | Finanzas, explicaciones, curiosidades: fondo blanco con dibujos en cuadros, tipo pizarra | `contenido/narrado-fin-de-mes.json` |
+| `dibujo` | Finanzas, explicaciones, curiosidades: fondo blanco con dibujos en cuadros, un **personaje narrador animado** con globo de diálogo y palabras clave grandes | `contenido/narrado-fin-de-mes.json` |
 
 Todos llevan tu @usuario arriba, una barra de progreso abajo (ayuda a que vean el video completo) y un cierre con llamada a la acción.
 
@@ -88,6 +88,20 @@ Necesitas además [ffmpeg](https://ffmpeg.org) (`winget install ffmpeg` en Windo
    - **genera los subtítulos** con Whisper, en tu computadora y gratis (la primera vez descarga unos 500 MB);
    - **alinea tu voz con el guion**: los subtítulos salen sin faltas de ortografía y cada imagen aparece justo cuando dices su primera frase.
 5. **Revisa** con `npm run dev` y **genera** con `npm run lote -- el-tunche --ambos`.
+
+### Personaje, palabras clave y miniatura (estilo dibujo)
+
+En cada escena puedes agregar:
+
+| Campo | Qué hace | Valores |
+|---|---|---|
+| `emocion` | La cara y los brazos del personaje | `explica`, `senala`, `feliz`, `preocupado`, `sorprendido` |
+| `clave` | Palabra grande arriba del dibujo (como "CARO" o "BARATO") | cualquier texto corto |
+| `colorClave` | Color de esa palabra | `rojo`, `verde`, `amarillo`, `azul`, `negro` |
+
+El personaje mueve la boca solo cuando suena tu voz y parpadea. Su camiseta se cambia en `src/marca.ts` (`personaje.camisa`).
+
+Con el campo `miniatura` (`texto`, `color`, `texto2`, `color2`, `emocion`, `escena`), `npm run lote` también genera `out/<id>-miniatura.png`, la miniatura de YouTube en 1280x720.
 
 Opciones: `--modelo medium` (subtítulos más precisos, más lento) y `--pausas-naturales` (no acorta las pausas).
 

@@ -14,6 +14,8 @@ export type Estilo = {
   imagen: "cine" | "tarjeta";
   grano: boolean;
   vineta: boolean;
+  // Un narrador dibujado con globo de diálogo en lugar de subtítulos abajo
+  personaje: boolean;
 };
 
 export const ESTILOS = {
@@ -28,8 +30,9 @@ export const ESTILOS = {
     imagen: "cine",
     grano: true,
     vineta: true,
+    personaje: false,
   },
-  // Finanzas, explicaciones, curiosidades: fondo blanco con dibujos, al estilo pizarra
+  // Finanzas, explicaciones, curiosidades: fondo blanco con dibujos y un narrador animado
   dibujo: {
     fondo: "#ffffff",
     texto: "#111111",
@@ -40,6 +43,7 @@ export const ESTILOS = {
     imagen: "tarjeta",
     grano: false,
     vineta: false,
+    personaje: true,
   },
 } satisfies Record<string, Estilo>;
 
