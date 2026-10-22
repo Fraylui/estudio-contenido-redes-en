@@ -15,7 +15,7 @@
         "tipo": "video",
         "segundos": 3,
         "archivo": "clientes/quinuapata/almacen.mp4",
-        "texto": "¿Envías a *Kimbiri, Pichari o San Francisco*?"
+        "texto": "De Ayacucho al VRAEM *y del VRAEM a Ayacucho*"
       },
       {
         "tipo": "video",
@@ -26,7 +26,7 @@
       {
         "tipo": "mapa",
         "segundos": 5.5,
-        "texto": "De Ayacucho a *todo el VRAEM*",
+        "texto": "Ayacucho y todo el VRAEM, *ida y vuelta*",
         "origen": "Ayacucho",
         "destinos": [
           "San Francisco",
