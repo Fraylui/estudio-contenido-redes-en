@@ -1,6 +1,9 @@
+import { z } from "zod";
 import { Composition, Folder } from "remotion";
 import datosEjemplo from "../contenido/datos-poblacion-sudamerica.json";
 import fraseEjemplo from "../contenido/frase-constancia.json";
+import finDeMes from "../contenido/narrado-fin-de-mes.json";
+import elTunche from "../contenido/narrado-el-tunche.json";
 import topEjemplo from "../contenido/top-5-platos-peruanos.json";
 import triviaEjemplo from "../contenido/trivia-capital-australia.json";
 import {
@@ -9,6 +12,7 @@ import {
   datosBarrasSchema,
 } from "./formatos/DatosBarras";
 import { calcularFrase, Frase, fraseSchema } from "./formatos/Frase";
+import { calcularNarrado, Narrado, narradoSchema } from "./formatos/narrado/Narrado";
 import { calcularTopLista, TopLista, topListaSchema } from "./formatos/TopLista";
 import { calcularTrivia, Trivia, triviaSchema } from "./formatos/Trivia";
 
@@ -65,6 +69,33 @@ export const RemotionRoot: React.FC = () => {
             defaultProps={datosEjemplo.props}
             calculateMetadata={calcularDatosBarras}
             durationInFrames={360}
+            fps={30}
+            width={t.width}
+            height={t.height}
+          />
+          {/* Videos narrados con tu voz: uno por cada ejemplo de contenido/narrado-*.json */}
+          {[elTunche, finDeMes].map((n) => (
+            <Composition
+              key={n.props.id}
+              id={`Narrado-${n.props.id}-${t.nombre}`}
+              component={Narrado}
+              schema={narradoSchema}
+              defaultProps={n.props as z.infer<typeof narradoSchema>}
+              calculateMetadata={calcularNarrado}
+              durationInFrames={900}
+              fps={30}
+              width={t.width}
+              height={t.height}
+            />
+          ))}
+          {/* Plantilla genérica que usa "npm run lote" para cualquier narrado-*.json */}
+          <Composition
+            id={`Narrado-${t.nombre}`}
+            component={Narrado}
+            schema={narradoSchema}
+            defaultProps={elTunche.props as z.infer<typeof narradoSchema>}
+            calculateMetadata={calcularNarrado}
+            durationInFrames={900}
             fps={30}
             width={t.width}
             height={t.height}
