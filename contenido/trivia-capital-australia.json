@@ -1,0 +1,11 @@
+{
+  "formato": "Trivia",
+  "props": {
+    "pregunta": "¿Cuál es la capital de Australia?",
+    "opciones": ["Sídney", "Melbourne", "Canberra", "Perth"],
+    "correcta": 2,
+    "segundosParaPensar": 5,
+    "explicacion": "Canberra se construyó como capital para que Sídney y Melbourne dejaran de pelear por el título.",
+    "cta": "¿Acertaste? Dímelo en los comentarios"
+  }
+}

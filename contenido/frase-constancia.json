@@ -1,0 +1,8 @@
+{
+  "formato": "Frase",
+  "props": {
+    "texto": "No tienes que ser grande para empezar, pero tienes que empezar para ser grande.",
+    "autor": "Zig Ziglar",
+    "resaltar": ["empezar", "grande"]
+  }
+}

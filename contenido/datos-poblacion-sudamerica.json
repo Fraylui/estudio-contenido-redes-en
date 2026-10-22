@@ -1,0 +1,17 @@
+{
+  "formato": "DatosBarras",
+  "props": {
+    "titulo": "Países más poblados de Sudamérica",
+    "unidad": "millones de habitantes",
+    "fuente": "ONU, World Population Prospects 2024 (valores aproximados)",
+    "datos": [
+      { "etiqueta": "Brasil", "valor": 211 },
+      { "etiqueta": "Colombia", "valor": 52.9 },
+      { "etiqueta": "Argentina", "valor": 45.7 },
+      { "etiqueta": "Perú", "valor": 34.2 },
+      { "etiqueta": "Venezuela", "valor": 28.4 },
+      { "etiqueta": "Chile", "valor": 19.8 }
+    ],
+    "decimales": 1
+  }
+}

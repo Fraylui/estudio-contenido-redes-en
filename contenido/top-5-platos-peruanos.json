@@ -1,0 +1,16 @@
+{
+  "formato": "TopLista",
+  "props": {
+    "titulo": "Platos peruanos que debes probar",
+    "subtitulo": "¿Cuál es tu favorito? 👇",
+    "items": [
+      { "emoji": "🐟", "nombre": "Ceviche", "detalle": "Pescado fresco marinado en limón, ají y cebolla" },
+      { "emoji": "🥩", "nombre": "Lomo saltado", "detalle": "Carne salteada al wok con papas fritas y arroz" },
+      { "emoji": "🍗", "nombre": "Ají de gallina", "detalle": "Pollo deshilachado en crema de ají amarillo" },
+      { "emoji": "🍢", "nombre": "Anticuchos", "detalle": "Brochetas de corazón a la parrilla" },
+      { "emoji": "🥔", "nombre": "Causa limeña", "detalle": "Papa amarilla prensada con relleno de pollo o atún" }
+    ],
+    "segundosPorItem": 3,
+    "cta": "Comenta cuál pondrías en el #1"
+  }
+}

@@ -1,7 +1,7 @@
 {
   "name": "estudio-contenido-redes",
   "version": "1.0.0",
-  "description": "My Remotion video",
+  "description": "Fábrica de videos para Reels, Shorts y YouTube con Remotion",
   "repository": {},
   "license": "UNLICENSED",
   "engines": {
@@ -10,9 +10,14 @@
   "private": true,
   "dependencies": {
     "@remotion/cli": "4.0.537",
+    "@remotion/fonts": "4.0.537",
+    "@remotion/media": "4.0.537",
+    "@remotion/transitions": "4.0.537",
+    "@remotion/zod-types": "4.0.537",
     "react": "19.2.3",
     "react-dom": "19.2.3",
-    "remotion": "4.0.537"
+    "remotion": "4.0.537",
+    "zod": "4.5.4"
   },
   "devDependencies": {
     "@remotion/eslint-config-flat": "4.0.537",
@@ -26,7 +31,8 @@
     "dev": "remotion studio",
     "build": "remotion bundle",
     "upgrade": "remotion upgrade",
-    "lint": "eslint src && tsc"
+    "lint": "eslint src && tsc",
+    "lote": "node scripts/render-lote.mjs"
   },
   "allowScripts": {
     "esbuild": false
