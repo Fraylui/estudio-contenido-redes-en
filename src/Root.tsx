@@ -4,6 +4,7 @@ import datosEjemplo from "../contenido/datos-poblacion-sudamerica.json";
 import fraseEjemplo from "../contenido/frase-constancia.json";
 import finDeMes from "../contenido/narrado-fin-de-mes.json";
 import elTunche from "../contenido/narrado-el-tunche.json";
+import anuncioEjemplo from "../contenido/anuncio-quinuapata.json";
 import topEjemplo from "../contenido/top-5-platos-peruanos.json";
 import triviaEjemplo from "../contenido/trivia-capital-australia.json";
 import {
@@ -14,6 +15,7 @@ import {
 import { calcularFrase, Frase, fraseSchema } from "./formatos/Frase";
 import { calcularNarrado, Narrado, narradoSchema } from "./formatos/narrado/Narrado";
 import { Miniatura } from "./formatos/narrado/Miniatura";
+import { Anuncio, anuncioSchema, calcularAnuncio } from "./formatos/anuncio/Anuncio";
 import { calcularTopLista, TopLista, topListaSchema } from "./formatos/TopLista";
 import { calcularTrivia, Trivia, triviaSchema } from "./formatos/Trivia";
 
@@ -111,6 +113,18 @@ export const RemotionRoot: React.FC = () => {
               height={t.height}
             />
           ))}
+          {/* Anuncios para Facebook e Instagram (contenido/anuncio-*.json) */}
+          <Composition
+            id={`Anuncio-${t.nombre}`}
+            component={Anuncio}
+            schema={anuncioSchema}
+            defaultProps={anuncioEjemplo.props as z.infer<typeof anuncioSchema>}
+            calculateMetadata={calcularAnuncio}
+            durationInFrames={900}
+            fps={30}
+            width={t.width}
+            height={t.height}
+          />
           {/* Plantilla genérica que usa "npm run lote" para cualquier narrado-*.json */}
           <Composition
             id={`Narrado-${t.nombre}`}

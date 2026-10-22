@@ -1,0 +1,72 @@
+{
+  "formato": "Anuncio",
+  "props": {
+    "negocio": {
+      "logo": "clientes/quinuapata/logo.png",
+      "color": "#064ca1",
+      "acento": "#ffd400",
+      "eslogan": "Seguridad, garantía y confianza",
+      "whatsapp": "943 960 656",
+      "direccion": "Jr. César Vallejo 354 · Ayacucho",
+      "llamada": "Escríbenos y envía hoy"
+    },
+    "escenas": [
+      {
+        "tipo": "cielo",
+        "segundos": 3.5,
+        "archivo": "clientes/quinuapata/nieve.webp",
+        "texto": "Llueva o nieve, tu encomienda *llega al VRAEM*"
+      },
+      {
+        "tipo": "video",
+        "segundos": 4,
+        "archivo": "clientes/quinuapata/carga.mp4",
+        "texto": "La recibimos, la *aseguramos* y la llevamos"
+      },
+      {
+        "tipo": "mapa",
+        "segundos": 5.5,
+        "texto": "De Ayacucho a *todo el VRAEM*",
+        "origen": "Ayacucho",
+        "destinos": [
+          "San Francisco",
+          "Pichari",
+          "Kimbiri",
+          "Palmapampa",
+          "Santa Rosa",
+          "Lobo Manitea",
+          "Malvinas",
+          "Progreso",
+          "Sirenachayocc",
+          "Chirumpiari",
+          "Rinconada",
+          "Pichiwillca",
+          "Tutumbaru"
+        ]
+      },
+      {
+        "tipo": "foto",
+        "segundos": 3.5,
+        "archivo": "clientes/quinuapata/encomiendas.webp",
+        "texto": "Sobres, paquetes, cajas: *todo tipo de encomiendas*"
+      },
+      {
+        "tipo": "video",
+        "segundos": 3,
+        "archivo": "clientes/quinuapata/camioneta.mp4",
+        "encaje": "tarjeta",
+        "texto": "Tu encomienda, *en camino*"
+      },
+      {
+        "tipo": "foto",
+        "segundos": 2.5,
+        "archivo": "clientes/quinuapata/fachada.jpg",
+        "texto": "Jr. César Vallejo *354*"
+      },
+      {
+        "tipo": "cierre",
+        "segundos": 4.5
+      }
+    ]
+  }
+}

@@ -10,3 +10,6 @@ out
 grabaciones/*
 !grabaciones/LEEME.md
 .whisper
+
+# Material de clientes (fotos y videos): no se sube porque el repositorio es público
+public/clientes/

@@ -1,0 +1,344 @@
+import { z } from "zod";
+import { Audio, Video } from "@remotion/media";
+import {
+  AbsoluteFill,
+  CalculateMetadataFunction,
+  Easing,
+  Img,
+  interpolate,
+  Series,
+  staticFile,
+  useCurrentFrame,
+  useVideoConfig,
+} from "remotion";
+import { useEscala } from "../../comun/escala";
+import { marca } from "../../marca";
+import { MapaRuta } from "./MapaRuta";
+
+export const anuncioSchema = z.object({
+  negocio: z.object({
+    logo: z.string(),
+    color: z.string(),
+    acento: z.string(),
+    eslogan: z.string(),
+    whatsapp: z.string(),
+    direccion: z.string(),
+    llamada: z.string(),
+  }),
+  escenas: z.array(
+    z.object({
+      // cielo: la cámara baja del cielo a la imagen (gancho)
+      // mapa: ruta animada con destinos · video / foto: material con texto · cierre: logo y contacto
+      tipo: z.enum(["cielo", "mapa", "video", "foto", "cierre"]),
+      segundos: z.number().min(0.5),
+      // Texto grande en pantalla. Lo que va entre *asteriscos* sale resaltado.
+      texto: z.string().optional(),
+      archivo: z.string().optional(),
+      // Videos horizontales: "tarjeta" los muestra completos sobre un fondo desenfocado
+      encaje: z.enum(["cubrir", "tarjeta"]).optional(),
+      origen: z.string().optional(),
+      destinos: z.array(z.string()).optional(),
+    }),
+  ),
+  voz: z.string().optional(),
+  musica: z.string().optional(),
+});
+
+type Props = z.infer<typeof anuncioSchema>;
+type Escena = Props["escenas"][number];
+type Negocio = Props["negocio"];
+
+const FPS = 30;
+
+export const calcularAnuncio: CalculateMetadataFunction<Props> = ({ props }) => ({
+  durationInFrames: Math.round(props.escenas.reduce((t, e) => t + e.segundos, 0) * FPS),
+});
+
+export const Anuncio: React.FC<Props> = ({ negocio, escenas, voz, musica }) => {
+  const { durationInFrames } = useVideoConfig();
+  return (
+    <AbsoluteFill style={{ backgroundColor: "#000000" }}>
+      <Series>
+        {escenas.map((escena, i) => (
+          <Series.Sequence
+            key={i}
+            name={`${i + 1}. ${escena.tipo}`}
+            durationInFrames={Math.round(escena.segundos * FPS)}
+          >
+            <EscenaAnuncio escena={escena} negocio={negocio} />
+          </Series.Sequence>
+        ))}
+      </Series>
+      {voz ? <Audio src={staticFile(voz)} /> : null}
+      {musica ? (
+        <Audio
+          src={staticFile(musica)}
+          loop
+          volume={(f) =>
+            interpolate(f, [0, 10, durationInFrames - 20, durationInFrames], [0, voz ? 0.15 : 0.6, voz ? 0.15 : 0.6, 0], {
+              extrapolateLeft: "clamp",
+              extrapolateRight: "clamp",
+            })
+          }
+        />
+      ) : null}
+    </AbsoluteFill>
+  );
+};
+
+const EscenaAnuncio: React.FC<{ escena: Escena; negocio: Negocio }> = ({ escena, negocio }) => {
+  const frame = useCurrentFrame();
+  const { durationInFrames } = useVideoConfig();
+  // Cada corte entra con un pequeño "golpe" de zoom, típico de los anuncios en Reels
+  const golpe = interpolate(frame, [0, 8], [1.12, 1], {
+    extrapolateRight: "clamp",
+    easing: Easing.out(Easing.cubic),
+  });
+  const lento = interpolate(frame, [0, durationInFrames], [1, 1.08]);
+
+  const fondo = (() => {
+    switch (escena.tipo) {
+      case "cielo":
+        return <Cielo imagen={escena.archivo!} />;
+      case "mapa":
+        return (
+          <MapaRuta
+            origen={escena.origen ?? "Ayacucho"}
+            destinos={escena.destinos ?? []}
+            color={negocio.color}
+            acento={negocio.acento}
+          />
+        );
+      case "video":
+        return <Clip archivo={escena.archivo!} encaje={escena.encaje ?? "cubrir"} />;
+      case "foto":
+        return (
+          <AbsoluteFill style={{ scale: lento }}>
+            <Img src={staticFile(escena.archivo!)} style={{ width: "100%", height: "100%", objectFit: "cover" }} />
+          </AbsoluteFill>
+        );
+      case "cierre":
+        return <Cierre negocio={negocio} />;
+    }
+  })();
+
+  return (
+    <AbsoluteFill>
+      <AbsoluteFill style={{ scale: escena.tipo === "cielo" ? 1 : golpe }}>{fondo}</AbsoluteFill>
+      {escena.tipo !== "cierre" && escena.tipo !== "cielo" ? <LogoEsquina logo={negocio.logo} /> : null}
+      {escena.texto ? (
+        <TextoGrande
+          texto={escena.texto}
+          color={negocio.color}
+          acento={negocio.acento}
+          arriba={escena.tipo === "mapa"}
+          retraso={escena.tipo === "cielo" ? 20 : 4}
+        />
+      ) : null}
+    </AbsoluteFill>
+  );
+};
+
+// Gancho "del cielo hacia abajo": empieza mostrando solo el cielo y baja hasta el sujeto
+const Cielo: React.FC<{ imagen: string }> = ({ imagen }) => {
+  const frame = useCurrentFrame();
+  const { fps } = useVideoConfig();
+  const avance = interpolate(frame, [0.2 * fps, 2.2 * fps], [0, 1], {
+    extrapolateLeft: "clamp",
+    extrapolateRight: "clamp",
+    easing: Easing.inOut(Easing.cubic),
+  });
+  return (
+    <AbsoluteFill style={{ overflow: "hidden" }}>
+      <Img
+        src={staticFile(imagen)}
+        style={{
+          width: "100%",
+          height: "100%",
+          objectFit: "cover",
+          transformOrigin: "50% 0%",
+          scale: interpolate(avance, [0, 1], [2.6, 1]),
+          // Desenfoque de movimiento mientras baja
+          filter: `blur(${Math.sin(avance * Math.PI) * 6}px)`,
+        }}
+      />
+    </AbsoluteFill>
+  );
+};
+
+const Clip: React.FC<{ archivo: string; encaje: "cubrir" | "tarjeta" }> = ({ archivo, encaje }) => {
+  const src = staticFile(archivo);
+  if (encaje === "cubrir") {
+    return <Video src={src} muted loop objectFit="cover" style={{ width: "100%", height: "100%" }} />;
+  }
+  return (
+    <AbsoluteFill>
+      <Video
+        src={src}
+        muted
+        loop
+        objectFit="cover"
+        style={{
+          width: "100%",
+          height: "100%",
+          filter: "blur(40px) brightness(0.6)",
+          scale: 1.2,
+        }}
+      />
+      <AbsoluteFill style={{ justifyContent: "center" }}>
+        <Video src={src} muted loop objectFit="contain" style={{ width: "100%" }} />
+      </AbsoluteFill>
+    </AbsoluteFill>
+  );
+};
+
+// Texto grande en caja de color. *palabras* entre asteriscos van resaltadas.
+const TextoGrande: React.FC<{
+  texto: string;
+  color: string;
+  acento: string;
+  arriba: boolean;
+  retraso: number;
+}> = ({ texto, color, acento, arriba, retraso }) => {
+  const frame = useCurrentFrame();
+  const { px, vertical } = useEscala();
+  const partes = texto.split("*");
+  return (
+    <AbsoluteFill
+      style={{
+        justifyContent: arriba ? "flex-start" : "center",
+        alignItems: "center",
+        // En vertical, el texto queda arriba de la zona que tapan los botones de Facebook
+        paddingTop: arriba ? px(vertical ? 360 : 330) : 0,
+        paddingBottom: arriba ? 0 : px(vertical ? 560 : 120),
+        paddingLeft: px(60),
+        paddingRight: px(60),
+      }}
+    >
+      <div
+        style={{
+          ...(arriba ? {} : { marginTop: "auto" }),
+          padding: `${px(18)}px ${px(34)}px`,
+          borderRadius: px(18),
+          background: color,
+          border: `${px(6)}px solid #ffffff`,
+          boxShadow: `0 ${px(10)}px 0 rgba(0,0,0,0.4)`,
+          fontFamily: marca.fuentes.titulo,
+          fontSize: px(vertical ? 92 : 76),
+          lineHeight: 1.05,
+          textTransform: "uppercase",
+          textAlign: "center",
+          color: "#ffffff",
+          rotate: "-2deg",
+          opacity: interpolate(frame, [retraso, retraso + 4], [0, 1], { extrapolateLeft: "clamp", extrapolateRight: "clamp" }),
+          scale: interpolate(frame, [retraso, retraso + 10], [0.5, 1], {
+            extrapolateLeft: "clamp",
+            extrapolateRight: "clamp",
+            easing: Easing.spring({ damping: 10 }),
+          }),
+        }}
+      >
+        {partes.map((p, i) => (
+          <span key={i} style={{ color: i % 2 ? acento : "#ffffff" }}>
+            {p}
+          </span>
+        ))}
+      </div>
+    </AbsoluteFill>
+  );
+};
+
+const LogoEsquina: React.FC<{ logo: string }> = ({ logo }) => {
+  const { px, vertical } = useEscala();
+  return (
+    <Img
+      src={staticFile(logo)}
+      style={{
+        position: "absolute",
+        top: px(vertical ? 90 : 40),
+        left: px(40),
+        width: px(vertical ? 300 : 260),
+        borderRadius: px(16),
+        boxShadow: `0 ${px(6)}px ${px(16)}px rgba(0,0,0,0.4)`,
+      }}
+    />
+  );
+};
+
+const Cierre: React.FC<{ negocio: Negocio }> = ({ negocio }) => {
+  const frame = useCurrentFrame();
+  const { fps } = useVideoConfig();
+  const { px, vertical } = useEscala();
+  const aparece = (desde: number) => ({
+    opacity: interpolate(frame, [desde, desde + 6], [0, 1], { extrapolateLeft: "clamp", extrapolateRight: "clamp" }),
+    translate: interpolate(frame, [desde, desde + 10], ["0px 40px", "0px 0px"], {
+      extrapolateLeft: "clamp",
+      extrapolateRight: "clamp",
+      easing: Easing.out(Easing.cubic),
+    }),
+  });
+  // El botón de WhatsApp "late" para llamar la atención
+  const latido = 1 + Math.max(0, Math.sin((frame / fps) * Math.PI * 2.2)) * 0.06;
+
+  return (
+    <AbsoluteFill
+      style={{
+        background: `radial-gradient(circle at 50% 30%, ${negocio.color} 0%, #021e45 100%)`,
+        justifyContent: "center",
+        alignItems: "center",
+        gap: px(vertical ? 46 : 26),
+        padding: px(70),
+        fontFamily: marca.fuentes.texto,
+        color: "#ffffff",
+        textAlign: "center",
+      }}
+    >
+      <Img
+        src={staticFile(negocio.logo)}
+        style={{
+          width: px(vertical ? 900 : 700),
+          scale: interpolate(frame, [0, 12], [0.6, 1], {
+            extrapolateRight: "clamp",
+            easing: Easing.spring({ damping: 10 }),
+          }),
+        }}
+      />
+      <div style={{ ...aparece(8), fontFamily: marca.fuentes.titulo, fontSize: px(vertical ? 70 : 56), color: negocio.acento, textTransform: "uppercase" }}>
+        {negocio.eslogan}
+      </div>
+      <div
+        style={{
+          ...aparece(14),
+          display: "flex",
+          alignItems: "center",
+          gap: px(20),
+          padding: `${px(22)}px ${px(46)}px`,
+          borderRadius: px(999),
+          background: "#25d366",
+          fontWeight: 800,
+          fontSize: px(vertical ? 70 : 56),
+          boxShadow: `0 ${px(10)}px 0 rgba(0,0,0,0.35)`,
+          scale: frame > 24 ? latido : 1,
+        }}
+      >
+        <WhatsappIcono tamano={px(vertical ? 76 : 60)} />
+        {negocio.whatsapp}
+      </div>
+      <div style={{ ...aparece(20), fontWeight: 800, fontSize: px(vertical ? 54 : 44), textTransform: "uppercase" }}>
+        {negocio.llamada}
+      </div>
+      <div style={{ ...aparece(24), fontWeight: 700, fontSize: px(vertical ? 44 : 36), opacity: 0.9 }}>
+        📍 {negocio.direccion}
+      </div>
+    </AbsoluteFill>
+  );
+};
+
+const WhatsappIcono: React.FC<{ tamano: number }> = ({ tamano }) => (
+  <svg width={tamano} height={tamano} viewBox="0 0 32 32">
+    <path
+      fill="#ffffff"
+      d="M16 3C9 3 3.3 8.6 3.3 15.6c0 2.4.7 4.7 1.9 6.7L3.2 29l6.9-1.8c1.9 1 4 1.6 6 1.6 7 0 12.7-5.6 12.7-12.6S23 3 16 3zm0 23.1c-1.9 0-3.8-.5-5.4-1.5l-.4-.2-4.1 1.1 1.1-4-.3-.4c-1.1-1.7-1.6-3.6-1.6-5.5 0-5.8 4.8-10.5 10.7-10.5s10.7 4.7 10.7 10.5S21.9 26.1 16 26.1zm5.9-7.9c-.3-.2-1.9-.9-2.2-1-.3-.1-.5-.2-.7.2-.2.3-.8 1-1 1.2-.2.2-.4.2-.7.1-.3-.2-1.4-.5-2.6-1.6-1-.9-1.6-1.9-1.8-2.2-.2-.3 0-.5.1-.7.1-.1.3-.4.5-.6.2-.2.2-.3.3-.6.1-.2 0-.4 0-.6-.1-.2-.7-1.7-1-2.4-.3-.6-.5-.5-.7-.5h-.6c-.2 0-.6.1-.9.4-.3.3-1.2 1.2-1.2 2.9s1.2 3.3 1.4 3.6c.2.2 2.4 3.6 5.8 5 .8.3 1.4.5 1.9.7.8.3 1.5.2 2.1.1.6-.1 1.9-.8 2.2-1.5.3-.7.3-1.4.2-1.5-.1-.2-.3-.3-.6-.4z"
+    />
+  </svg>
+);
