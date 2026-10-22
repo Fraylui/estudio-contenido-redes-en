@@ -12,10 +12,10 @@
     },
     "escenas": [
       {
-        "tipo": "video",
+        "tipo": "foto",
         "segundos": 3,
-        "archivo": "clientes/quinuapata/listas.mp4",
-        "texto": "¿Sabías por qué cada encomienda *lleva un código*?"
+        "archivo": "clientes/quinuapata/encomiendas.webp",
+        "texto": "Mal embalada, *llega dañada*"
       },
       {
         "tipo": "video",
@@ -49,7 +49,7 @@
         "tipo": "foto",
         "segundos": 3,
         "archivo": "clientes/quinuapata/encomiendas.webp",
-        "texto": "Sobres, paquetes y hasta *refrigeradoras*"
+        "texto": "Envía lo que necesites, *del tamaño que sea*"
       },
       {
         "tipo": "foto",
@@ -57,7 +57,7 @@
         "archivo": "clientes/quinuapata/encomiendas.webp",
         "zoom": 2.2,
         "centro": "52% 42%",
-        "texto": "Cada envío con *su propio código*"
+        "texto": "Llega completo, *como lo enviaste*"
       },
       {
         "tipo": "video",

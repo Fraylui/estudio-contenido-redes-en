@@ -20,7 +20,7 @@
         "tipo": "video",
         "segundos": 3,
         "archivo": "clientes/quinuapata/listas.mp4",
-        "texto": "¿Sabías que puedes enviar *hasta una refrigeradora* al VRAEM?"
+        "texto": "Tu encomienda sale *volando* al VRAEM"
       },
       {
         "tipo": "video",
@@ -54,7 +54,7 @@
         "tipo": "foto",
         "segundos": 3,
         "archivo": "clientes/quinuapata/encomiendas.webp",
-        "texto": "Sobres, paquetes y hasta *refrigeradoras*"
+        "texto": "Envía lo que necesites, *del tamaño que sea*"
       },
       {
         "tipo": "foto",
@@ -62,7 +62,7 @@
         "archivo": "clientes/quinuapata/encomiendas.webp",
         "zoom": 2.2,
         "centro": "52% 42%",
-        "texto": "Cada envío con *su propio código*"
+        "texto": "Llega completo, *como lo enviaste*"
       },
       {
         "tipo": "video",
