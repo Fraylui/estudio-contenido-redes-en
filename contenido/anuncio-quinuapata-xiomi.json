@@ -150,7 +150,7 @@
       {
         "texto": "¡Tu encomienda sale volando al VRAEM!",
         "estilo": "urgente",
-        "semilla": 5
+        "semilla": 6
       },
       {
         "texto": "De Ayacucho a todo el VRAEM, y del VRAEM a Ayacucho.",
@@ -159,13 +159,14 @@
       },
       {
         "texto": "En SD Quinuapata la recibimos, la aseguramos y la llevamos.",
-        "estilo": "vendedor"
+        "estilo": "vendedor",
+        "semilla": 1
       },
       {
         "texto": "Llegamos a todo el VRAEM.",
         "estilo": "feliz",
         "pausa": 0.2,
-        "semilla": 1
+        "semilla": 2
       },
       {
         "texto": "Envía lo que necesites, del tamaño que sea,",
@@ -182,7 +183,8 @@
       },
       {
         "texto": "SD Quinuapata: seguridad, garantía y confianza.",
-        "estilo": "serio"
+        "estilo": "serio",
+        "semilla": 1
       },
       {
         "texto": "Contáctanos al 943 960 656.",

@@ -117,6 +117,11 @@ def normalizar_texto(x):
     return re.sub(r"[^a-zñ0-9 ]", "", unicodedata.normalize("NFC", x)).split()
 
 
+def comparable(x):
+    # "Kinuapáta" (como se le dicta al modelo) y "Quinuapata" (como escribe Whisper) suenan igual
+    return " ".join(normalizar_texto(x)).replace("k", "qu")
+
+
 def recortar_cola(ruta, fin, margen=0.2):
     """Corta lo que el modelo genera después de la última palabra (respiraciones y ruido) y desvanece el final."""
     audio, sr = sf.read(str(ruta), dtype="float32")
@@ -225,7 +230,7 @@ def main():
             continue
         modelo, revisor = cargar()
         mejor, mejor_nota = None, -1
-        for intento in range(1, 4):
+        for intento in range(1, 5):
             torch.manual_seed(intento * 100 + n + 1000 * f.get("semilla", 0))
             wav = modelo.generate(para_voz(f["texto"], cfg), language_id="es", audio_prompt_path=str(ref),
                                   exaggeration=e["exageracion"], cfg_weight=e["cfg"])
@@ -237,15 +242,19 @@ def main():
             segmentos = list(revisor.transcribe(sf.read(str(a16), dtype="float32")[0], language="es",
                                                 word_timestamps=True)[0])
             oido = " ".join(s.text for s in segmentos)
-            nota = difflib.SequenceMatcher(None, normalizar_texto(f["texto"]), normalizar_texto(oido)).ratio()
+            # Se compara letra por letra con el texto tal como debe sonar ("SD" -> "señor de"): así un nombre
+            # casi bien dicho ("braem" por "vraem") vale más que uno cortado ("prime")
+            nota = difflib.SequenceMatcher(None, comparable(para_voz(f["texto"], {**cfg, "seseo": False})),
+                                           comparable(oido)).ratio()
             palabras = [w for s in segmentos for w in (s.words or [])]
             if palabras:
-                recortar_cola(crudo, palabras[-1].end)
+                # Whisper marca el final de la última palabra antes de tiempo: con poco margen se come el final
+                recortar_cola(crudo, palabras[-1].end, margen=0.4)
             if huecos(crudo) >= 20:
                 nota -= 0.5  # una toma con agujeros se descarta aunque se entienda
             if nota > mejor_nota:
                 mejor, mejor_nota = crudo, nota
-            if nota >= 0.85:
+            if nota >= 0.93:
                 break
         print(f"[{n}/{len(frases)}] {estilo:8s} coincide {mejor_nota * 100:3.0f}%  {f['texto'][:50]}", flush=True)
         mejor.replace(guardada)
