@@ -19,3 +19,4 @@ voz/.venv
 voz/referencias/*
 !voz/referencias/LEEME.md
 public/voz/
+__pycache__/
