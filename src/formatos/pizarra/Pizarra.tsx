@@ -6,7 +6,7 @@ import { loadFont } from "@remotion/fonts";
 import { useMemo } from "react";
 import { z } from "zod";
 import {
-  AbsoluteFill, CalculateMetadataFunction, Easing, interpolate, Sequence, spring, staticFile, useCurrentFrame, useVideoConfig,
+  AbsoluteFill, CalculateMetadataFunction, Easing, Img, interpolate, Sequence, spring, staticFile, useCurrentFrame, useVideoConfig,
 } from "remotion";
 import { composicionSchema, resolverDibujo, type DibujoPizarra } from "./dibujos";
 import catalogoSfx from "../../../public/sfx/efectos/sfx.json";
@@ -153,6 +153,19 @@ const MODERNOS: Record<string, [string, string, string]> = {
 const Fondo: React.FC<{ nombre: string }> = ({ nombre }) => {
   const frame = useCurrentFrame();
   if (nombre === "papel") return null;
+  // Fondo ilustrado con IA (public/assets/ia/<nombre>.jpg): un poco desenfocado y oscuro para dar profundidad
+  // y que el personaje resalte, con un acercamiento lento de cámara (Ken Burns)
+  if (nombre.startsWith("ia:")) {
+    return (
+      <AbsoluteFill style={{ overflow: "hidden", backgroundColor: "#1f1f1f" }}>
+        <Img src={staticFile(`assets/ia/${nombre.slice(3)}.jpg`)} style={{
+          width: "100%", height: "100%", objectFit: "cover", filter: "blur(3px) brightness(0.88) saturate(1.1)",
+          scale: `${interpolate(frame, [0, 300], [1.04, 1.12], { extrapolateRight: "clamp" })}`,
+        }} />
+        <AbsoluteFill style={{ background: "radial-gradient(ellipse at center, rgba(0,0,0,0) 50%, rgba(0,0,0,0.35) 100%)" }} />
+      </AbsoluteFill>
+    );
+  }
   // Fondo moderno (por defecto): degradado vivo + manchas que flotan, como los motion graphics de After Effects
   if (MODERNOS[nombre]) {
     const [arriba, abajo, mancha] = MODERNOS[nombre];

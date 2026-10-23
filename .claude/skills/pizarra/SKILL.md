@@ -108,6 +108,11 @@ Licencias:
   - **Entrada de cada escena con zoom y desenfoque**, como una transición de CapCut.
   - **Subtítulos en negrita** (Montserrat 900, mayúsculas, contorno negro) con rebote palabra por palabra; la palabra clave va más grande en amarillo.
   - Los escenarios de cuarto siguen disponibles: `cuarto-cielo`, `cuarto-menta`, etc. También hay `blanco` y `papel`.
+- **Fondos ilustrados con IA** (`"fondo": "ia:cuarto-amanecer"` → `public/assets/ia/<nombre>.jpg`): el modelo instalado (`imagen/generar.py`) da **escenarios muy buenos** si el prompt es preciso.
+  - **Escena:** `--estilo escena --ancho 768 --alto 448 --pasos 4 --variantes 2`. Describe el lugar, la luz, los colores y 3 o 4 objetos concretos (*"cozy bedroom at sunrise, warm golden light through a big window, bed with blue blanket, alarm clock on a nightstand, plants"*). Sin personas: los personajes los ponemos nosotros encima.
+  - Elige la mejor variante, escálala a 1920 con lanczos y un poco de nitidez, y guárdala como JPG.
+  - En el video va un poco desenfocada y con acercamiento lento, para que el personaje resalte.
+  - **No sirve para personas ni para texto.** Para objetos usa `--estilo objeto --sin-fondo` y revísalos antes.
 - **No todo es la mascota cerebro:** usa Mateo y Lucía en caricatura (`caricatura:mateo:<ojos>:<boca>:<brazo>`) para las historias, y el cerebro solo cuando se habla de la mente.
 - **Punch-in:** la cámara da un pequeño golpe de zoom cuando aparece la palabra resaltada.
 - **Ritmo visual:** algo nuevo aparece cada 1 o 2 s (trazo, objeto, rótulo, palabra), y los dibujos respiran al terminar.

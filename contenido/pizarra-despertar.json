@@ -20,7 +20,8 @@
         "texto": "Suena la alarma… y la apagas.",
         "resaltar": "apagas",
         "sonido": "flash_shock",
-        "sonidoEn": 0.1
+        "sonidoEn": 0.1,
+        "fondo": "ia:cuarto-amanecer"
       },
       {
         "dibujo": {
@@ -42,7 +43,8 @@
           "rotulo": "x3"
         },
         "texto": "Cinco minutos más… otra vez.",
-        "resaltar": "otra vez"
+        "resaltar": "otra vez",
+        "fondo": "ia:cuarto-amanecer"
       },
       {
         "dibujo": {
@@ -60,7 +62,8 @@
           "rotulo": "¡tarde!"
         },
         "texto": "Te levantas tarde, apurado y cansado.",
-        "resaltar": "cansado"
+        "resaltar": "cansado",
+        "fondo": "ia:cuarto-amanecer"
       },
       {
         "dibujo": {
@@ -109,7 +112,8 @@
         "resaltar": "celular.",
         "sonido": "whoosh",
         "sonidoEn": 0.2,
-        "etiqueta": "La historia de Mateo"
+        "etiqueta": "La historia de Mateo",
+        "fondo": "ia:cuarto-noche"
       },
       {
         "dibujo": {
@@ -123,7 +127,8 @@
           "rotulo": "6:00 a. m."
         },
         "texto": "Su alarma suena a las 6.",
-        "resaltar": "6"
+        "resaltar": "6",
+        "fondo": "ia:cuarto-amanecer"
       },
       {
         "dibujo": {
@@ -140,7 +145,8 @@
           ]
         },
         "texto": "La pospone cinco veces.",
-        "resaltar": "cinco veces."
+        "resaltar": "cinco veces.",
+        "fondo": "ia:cuarto-amanecer"
       },
       {
         "dibujo": {
@@ -157,7 +163,8 @@
           ]
         },
         "texto": "Dos cafés para funcionar.",
-        "resaltar": "Dos cafés"
+        "resaltar": "Dos cafés",
+        "fondo": "ia:cuarto-amanecer"
       },
       {
         "dibujo": {
@@ -171,7 +178,8 @@
           "rotulo": "3:00 p. m."
         },
         "texto": "…y a la tarde está agotado.",
-        "resaltar": "agotado."
+        "resaltar": "agotado.",
+        "fondo": "ia:cuarto-amanecer"
       },
       {
         "dibujo": {
@@ -188,7 +196,8 @@
           ]
         },
         "texto": "El fin de semana duerme hasta el mediodía.",
-        "resaltar": "mediodía."
+        "resaltar": "mediodía.",
+        "fondo": "ia:cuarto-amanecer"
       },
       {
         "dibujo": {
@@ -202,7 +211,8 @@
           "rotulo": "lunes"
         },
         "texto": "Y el lunes… todo empeora.",
-        "resaltar": "empeora."
+        "resaltar": "empeora.",
+        "fondo": "ia:cuarto-amanecer"
       },
       {
         "dibujo": {
@@ -266,7 +276,8 @@
           ]
         },
         "texto": "La luz lo pone en hora.",
-        "resaltar": "luz"
+        "resaltar": "luz",
+        "fondo": "ia:cuarto-noche"
       },
       {
         "dibujo": {
@@ -283,7 +294,8 @@
           ]
         },
         "texto": "La pantalla de noche lo confunde.",
-        "resaltar": "confunde."
+        "resaltar": "confunde.",
+        "fondo": "ia:cuarto-noche"
       },
       {
         "dibujo": {
@@ -712,7 +724,8 @@
         "resaltar": "3 semanas.",
         "sonido": "whoosh_2",
         "sonidoEn": 0.2,
-        "etiqueta": "El resultado"
+        "etiqueta": "El resultado",
+        "fondo": "ia:cuarto-amanecer"
       },
       {
         "dibujo": {
@@ -729,7 +742,8 @@
           ]
         },
         "texto": "Ya no pospone la alarma.",
-        "resaltar": "no pospone"
+        "resaltar": "no pospone",
+        "fondo": "ia:cuarto-amanecer"
       },
       {
         "dibujo": {
@@ -748,7 +762,8 @@
         "texto": "…y tiene energía todo el día.",
         "resaltar": "energía",
         "sonido": "ding",
-        "sonidoEn": 1.0
+        "sonidoEn": 1.0,
+        "fondo": "ia:cuarto-amanecer"
       },
       {
         "dibujo": {
@@ -765,7 +780,8 @@
           ]
         },
         "texto": "No necesitó más fuerza de voluntad.",
-        "resaltar": "fuerza"
+        "resaltar": "fuerza",
+        "fondo": "ia:cuarto-amanecer"
       },
       {
         "dibujo": {

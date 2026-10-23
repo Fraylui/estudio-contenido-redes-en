@@ -4,6 +4,8 @@ Uso:
   imagen/.venv/bin/python imagen/generar.py "a cute cat reading a book" salida.png
   imagen/.venv/bin/python imagen/generar.py "alarm clock" reloj.png --estilo pizarra --sin-fondo --variantes 4
 
+  --estilo escena    fondo ilustrado detallado (lo mejor de este modelo): usar --ancho 768 --alto 448 --pasos 4
+  --estilo objeto    un objeto suelto sobre blanco (usar con --sin-fondo)
   --estilo pizarra   dibujo a mano con tinta negra y colores planos, para que combine con los videos de pizarra
   --sin-fondo        quita el fondo (toma el color de las esquinas) y guarda PNG transparente
   --variantes N      genera N versiones (salida-1.png, salida-2.png…) para elegir la mejor
@@ -25,6 +27,12 @@ from PIL import Image
 ESTILOS = {
     "pizarra": ("{p}, hand-drawn doodle illustration, thick black ink outlines, flat pastel colors, simple, "
                 "cute, centered, isolated on plain white background, no text"),
+    # Escenas de fondo (16:9, p. ej. --ancho 768 --alto 448 --pasos 4): este sufijo probado da ilustraciones detalladas
+    "escena": ("{p}, flat vector illustration, kurzgesagt style, clean geometric shapes, smooth gradients, soft shadows, "
+               "vibrant limited color palette, high detail, crisp edges, no text, no people"),
+    # Un objeto suelto: centrado y sobre blanco para poder recortarlo con --sin-fondo
+    "objeto": ("a single {p}, centered, isolated on plain white background, flat vector illustration, kurzgesagt style, "
+               "clean geometric shapes, smooth gradients, soft shadows, vibrant limited color palette, crisp edges, no text"),
     "foto": "{p}, photo, natural light, high detail",
     "ninguno": "{p}",
 }
