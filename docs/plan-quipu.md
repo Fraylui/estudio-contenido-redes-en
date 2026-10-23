@@ -4,7 +4,11 @@
 
 ## Público
 - **Fase 1 (hasta monetizar): solo español.** Personas de 18 a 35 años de Latinoamérica (primero Perú, México, Colombia y Argentina) y de España, que quieren mejorar su dinero, su mente y sus hábitos. Un canal en dos idiomas confunde al algoritmo: no sabe a quién mostrarle los videos.
-- **Regiones prioritarias:** México (el mayor público), Estados Unidos hispano y España (pagan más por anuncio), Colombia, Argentina, Perú y Chile.
+- **Sin límite de lugar:** los videos se hacen para cualquier persona del mundo. La voz va en español y se suma alcance en otros idiomas sin mezclar canales:
+  - subtítulos en inglés y portugués (archivos `.srt` que genera Whisper y se traducen);
+  - título y descripción traducidos (Studio, en "Idioma y subtítulos");
+  - el doblaje automático de YouTube, cuando esté activo en el canal.
+- **Dónde se espera más público** (no es un límite): México (el mayor público), Estados Unidos hispano y España (pagan más por anuncio), Colombia, Argentina, Perú y Chile.
   - Español neutro, sin jerga local.
   - Montos en dólares o sin moneda ("5 al día son 1 800 al año"), salvo un ejemplo local puntual.
   - Ejemplos que sirvan en cualquier país.
