@@ -131,3 +131,5 @@ Narrar un video de 4 minutos toma de 40 a 60 minutos, así que vale la pena revi
 
 ## 6. Publicar
 Siempre **público** (el canal es para monetizar), con Metricool: solo YouTube, categoría Educación, `madeForKids: false`, `isAiGeneratedContent: true` (voz clonada) y capítulos en la descripción. El video se sube a la rama `publicaciones` del repositorio para que Metricool tenga un link público; nunca los videos de clientes.
+
+**Miniaturas:** cada video sale con 3 variantes (`MiniaturaPizarra`). La más fuerte va en `videoThumbnailUrl` de Metricool (PNG en la rama `publicaciones`), así el video ya se publica con miniatura. Metricool no hace pruebas A/B: las otras 2 se le envían al usuario para "Probar y comparar" en YouTube Studio (desde la computadora o Chrome en modo computadora).
