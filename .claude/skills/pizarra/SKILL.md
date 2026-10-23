@@ -11,6 +11,13 @@ El formato vive en `src/formatos/pizarra/` y cada video es un `contenido/pizarra
 npm run lote -- pizarra-<nombre> --horizontal     # narra con voz-narradora y renderiza 1920x1080
 ```
 
+## 0. Investigar antes de escribir (obligatorio)
+
+1. **Qué ya funciona en YouTube:** `python3 scripts/investigar-youtube.py "<tema>"` muestra los videos más vistos del tema, con su canal, vistas y duración. Anota qué títulos, duraciones y promesas se repiten, y busca el **ángulo que nadie cubrió**.
+2. **Datos verificados:** investiga el tema con búsqueda web, o con la skill `anthropic-skills:deep-research` si es complejo. Usa solo fuentes confiables (estudios, universidades, organismos de salud, medios serios). Cada dato del guion debe tener su fuente, y las fuentes van en la descripción del video. Nada de cifras inventadas ni consejos "de moda" sin respaldo.
+3. **Ganchos:** elige un gancho verbal y uno visual de `docs/ganchos.md`, más 2 o 3 ganchos de retención (bucle abierto, "paso N de 5", promesa del final).
+4. **Mejora visual:** elige 1 o 2 técnicas nuevas de `docs/mejora-continua.md` para estrenar en este video.
+
 ## 1. Primero el guion, después los dibujos
 
 Usa la estructura de los canales que funcionan (de 4 a 8 min; con más de 8 min caben anuncios a mitad del video):
