@@ -145,11 +145,13 @@
     "narracion": [
       {
         "texto": "¡Tu encomienda sale volando al VRAEM!",
-        "estilo": "urgente"
+        "estilo": "urgente",
+        "semilla": 5
       },
       {
         "texto": "De Ayacucho a todo el VRAEM, y del VRAEM a Ayacucho.",
-        "estilo": "vendedor"
+        "estilo": "vendedor",
+        "semilla": 5
       },
       {
         "texto": "En SD Quinuapata la recibimos, la aseguramos y la llevamos.",
@@ -158,7 +160,8 @@
       {
         "texto": "Llegamos a todo el VRAEM.",
         "estilo": "feliz",
-        "pausa": 0.2
+        "pausa": 0.2,
+        "semilla": 1
       },
       {
         "texto": "Envía lo que necesites, del tamaño que sea,",
