@@ -171,11 +171,11 @@ def ambiente(audio, db=-72.0):
     return audio + ruido / (np.sqrt(np.mean(ruido ** 2)) or 1) * 10 ** (db / 20)
 
 
-def expandir(audio, rango_db=-20.0, debajo_db=22.0):
-    """Baja el soplido de fondo ("tele sin señal") que la compresión y el volumen final suben entre palabras.
+def expandir(audio, rango_db=-20.0, debajo_db=24.0, pausa_min=0.12):
+    """Baja el soplido de fondo ("tele sin señal") que la compresión y el volumen final suben en las pausas.
 
-    Expansor suave: donde el nivel cae más de `debajo_db` por debajo de la voz, atenúa hasta `rango_db`.
-    Abre 15 ms antes de cada palabra (no corta el inicio) y cierra despacio (sin bombeo).
+    Solo actúa en pausas reales (más de `pausa_min` segundos por debajo del umbral): dentro de las palabras no toca
+    nada, porque un expansor que abre y cierra en cada sílaba hace sonar la voz "con agua", como bocina mojada.
     """
     paso = SR // 200  # 5 ms
     n = len(audio) // paso
@@ -184,17 +184,22 @@ def expandir(audio, rango_db=-20.0, debajo_db=22.0):
     marcos = audio[: n * paso].reshape(n, paso)
     nivel = 10 * np.log10(np.mean(marcos ** 2, axis=1) + 1e-12)
     voz = nivel[nivel > nivel.max() - 35]
-    umbral = np.median(voz) - debajo_db
-    objetivo = np.clip((nivel - umbral) * 3, rango_db, 0)
-    # Mirar adelante: abrir antes de que empiece la palabra
-    adelante = 3
-    objetivo = np.max(np.lib.stride_tricks.sliding_window_view(np.pad(objetivo, (0, adelante), mode="edge"), adelante + 1), axis=1)
-    ganancia = np.empty(n)
-    g = objetivo[0]
-    soltar = np.exp(-1 / 24)  # ~120 ms para cerrar
-    for i, o in enumerate(objetivo):
-        g = o if o > g else soltar * g + (1 - soltar) * o
-        ganancia[i] = g
+    abajo = nivel < np.median(voz) - debajo_db
+    ganancia = np.zeros(n)
+    margen, rampa, minimo = 4, 6, int(pausa_min * 200)  # 20 ms sin tocar en cada borde, 30 ms de fundido
+    i = 0
+    while i < n:
+        if not abajo[i]:
+            i += 1
+            continue
+        j = i
+        while j < n and abajo[j]:
+            j += 1
+        if j - i >= minimo:
+            a, b = i + margen, j - margen
+            forma = np.minimum(np.minimum(np.arange(b - a) + 1, np.arange(b - a)[::-1] + 1) / rampa, 1)
+            ganancia[a:b] = rango_db * forma
+        i = j
     curva = np.interp(np.arange(len(audio)), np.arange(n) * paso + paso / 2, 10 ** (ganancia / 20))
     return (audio * curva).astype(np.float32)
 
