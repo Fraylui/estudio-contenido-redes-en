@@ -2,6 +2,10 @@
 
 **Promesa:** "Lo que nadie te explicó, explicado fácil." Videos de pizarra con la mascota cerebro (Quipu) y la voz de Xiomi.
 
+## Público
+- **Fase 1 (hasta monetizar): solo español.** Personas de 18 a 35 años de Latinoamérica (primero Perú, México, Colombia y Argentina) y de España, que quieren mejorar su dinero, su mente y sus hábitos. Un canal en dos idiomas confunde al algoritmo: no sabe a quién mostrarle los videos.
+- **Fase 2 (con el canal monetizado):** inglés como **pista de audio doblada** en los mismos videos (función de audio en varios idiomas de YouTube) o como canal aparte. El público en inglés paga más por anuncio, pero tiene mucha más competencia.
+
 ## Regla de publicación
 **Todo se publica PÚBLICO**: el objetivo es monetizar. En Metricool, `privacy: "public"`, categoría Educación, no hecho para niños y voz con IA declarada.
 
