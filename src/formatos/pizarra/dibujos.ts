@@ -4,7 +4,7 @@
 // "textos": rótulos escritos a mano dentro del dibujo.
 // El conjunto se ajusta solo al espacio disponible, así que las coordenadas solo importan entre sí.
 import { z } from "zod";
-import { billeteraAbierta, caja, cerebro, icono, monigote, type Brazos, type Cara, type PoseCerebro, type Trazo } from "./trazos";
+import { billeteraAbierta, caja, caricatura, cerebro, icono, LUCIA, MATEO, monigote, type BocaCaricatura, type OjosCaricatura, type Brazos, type Cara, type PoseCerebro, type Trazo } from "./trazos";
 
 export type Objeto = { img: string; x: number; y: number; t: number; rot?: number };
 export type Rotulo = { texto: string; x: number; y: number; t: number; color?: string; rot?: number };
@@ -15,6 +15,20 @@ const ROJO = "#d7263d";
 const VERDE = "#2e9e4f";
 
 export const DIBUJOS: Record<string, DibujoPizarra> = {
+  // --- Prueba de personajes de caricatura ---
+  "prueba-caricatura": {
+    trazos: [
+      ...caricatura(250, 900, { ojos: "dinero", boca: "abierta", brazo: "adelante" }),
+      ...caricatura(750, 900, { modelo: LUCIA, ojos: "preocupado", boca: "ondulada", brazo: "cadera" }),
+    ],
+  },
+  "prueba-caricatura-2": {
+    trazos: [
+      ...caricatura(250, 900, { ojos: "cansado", boca: "chica", brazo: "abajo" }),
+      ...caricatura(750, 900, { modelo: LUCIA, ojos: "feliz", boca: "sonrisa", brazo: "arriba" }),
+    ],
+  },
+
   // --- Prueba de íconos a mano ---
   "prueba-iconos": {
     trazos: [
@@ -280,7 +294,15 @@ export const componer = (c: Composicion): DibujoPizarra => {
   const [tipo, a, b] = (c.personaje ?? "").split(":");
   if (tipo === "peep") objetos.push({ img: `peep:${a}`, x: 290, y: 440, t: 480 });
   else if (tipo === "cerebro") trazos.push(...cerebro(290, 430, { cara: (a || "feliz") as Cara, pose: (b || "abajo") as PoseCerebro }));
-  else if (tipo === "monigote" || tipo === "lucia") {
+  else if (tipo === "caricatura") {
+    // "caricatura:mateo:dinero:abierta:adelante" → modelo, ojos, boca y brazos
+    const [, modelo, ojos, boca, brazo] = (c.personaje ?? "").split(":");
+    trazos.push(...caricatura(290, 900, {
+      modelo: modelo === "lucia" ? LUCIA : MATEO,
+      ojos: (ojos || "normal") as OjosCaricatura, boca: (boca || "sonrisa") as BocaCaricatura,
+      brazo: (brazo || "abajo") as "abajo" | "arriba" | "adelante" | "cadera",
+    }));
+  } else if (tipo === "monigote" || tipo === "lucia") {
     trazos.push(...monigote(290, 300, { cara: (a || "normal") as Cara, brazos: (b || "abajo") as Brazos, pelo: tipo === "lucia" }));
   }
   const iconos = c.iconos ?? [];

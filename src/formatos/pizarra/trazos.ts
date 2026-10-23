@@ -239,3 +239,79 @@ export const icono = (nombre: string, x: number, y: number, t: number, color = "
   }
   return trazos;
 };
+
+// Personaje de caricatura estilo Aprendiz Financiero: contorno negro grueso, colores planos, ojos grandes.
+// (x, y) es el punto entre los pies. Ropa, pelo y piel se pueden cambiar para tener varios personajes fijos.
+export type OjosCaricatura = "normal" | "dinero" | "cansado" | "sorpresa" | "feliz" | "preocupado";
+export type BocaCaricatura = "sonrisa" | "abierta" | "chica" | "ondulada" | "o";
+export type ModeloCaricatura = { piel: string; pelo: string; polo: string; pantalon: string; zapatos: string; pelo_largo?: boolean };
+export const MATEO: ModeloCaricatura = { piel: "#f6c9a0", pelo: "#7a4a2a", polo: "#c0432f", pantalon: "#3f5a45", zapatos: "#333333" };
+export const LUCIA: ModeloCaricatura = { piel: "#f6c9a0", pelo: "#f2a33a", polo: "#2f7fc0", pantalon: "#5a4a9a", zapatos: "#333333", pelo_largo: true };
+
+export const caricatura = (
+  x: number, y: number,
+  { modelo = MATEO, ojos = "normal" as OjosCaricatura, boca = "sonrisa" as BocaCaricatura, brazo = "abajo" as "abajo" | "arriba" | "adelante" | "cadera", s = 1 } = {},
+) => {
+  const P = (px: number, py: number) => `${x + px * s} ${y + py * s}`;
+  // La cabeza va 30 % más grande que el cuerpo, como en las caricaturas: se escala alrededor del cuello
+  const K = 1.3;
+  const H = (px: number, py: number) => `${x + px * K * s} ${y + (-540 + (py + 540) * K) * s}`;
+  const hx = (px: number) => x + px * K * s;
+  const hy = (py: number) => y + (-540 + (py + 540) * K) * s;
+  const linea_ = { strokeWidth: 7, roughness: 0.45, bowing: 0.6 };
+  const relleno = (c: string) => ({ ...linea_, fill: c, fillStyle: "solid" as const });
+  const t: Trazo[] = [];
+  // Pelo largo detrás de la cabeza
+  if (modelo.pelo_largo) t.push(...camino(`M ${H(-95, -640)} Q ${H(-140, -520)} ${P(-130, -330)} L ${P(130, -330)} Q ${H(140, -520)} ${H(95, -640)} Z`, relleno(modelo.pelo)));
+  // Zapatos y piernas
+  t.push(...camino(`M ${P(-120, 0)} Q ${P(-130, -40)} ${P(-70, -45)} L ${P(-20, -40)} Q ${P(-10, 0)} ${P(-30, 0)} Z`, relleno(modelo.zapatos)));
+  t.push(...camino(`M ${P(30, 0)} Q ${P(10, -40)} ${P(40, -45)} L ${P(100, -45)} Q ${P(140, -30)} ${P(120, 0)} Z`, relleno(modelo.zapatos)));
+  t.push(...camino(`M ${P(-95, -280)} L ${P(-80, -40)} L ${P(-25, -40)} L ${P(0, -200)} L ${P(30, -40)} L ${P(90, -42)} L ${P(95, -280)} Z`, relleno(modelo.pantalon)));
+  // Torso (polo de manga larga)
+  t.push(...camino(`M ${P(-95, -290)} Q ${P(-120, -420)} ${P(-80, -500)} Q ${P(0, -530)} ${P(80, -500)} Q ${P(120, -420)} ${P(95, -290)} Z`, relleno(modelo.polo)));
+  // Brazos
+  const brazos = {
+    abajo: [`M ${P(-80, -490)} Q ${P(-150, -420)} ${P(-140, -320)}`, `M ${P(80, -490)} Q ${P(150, -420)} ${P(140, -320)}`, [-140, -310], [140, -310]],
+    arriba: [`M ${P(-80, -490)} Q ${P(-210, -560)} ${P(-230, -700)}`, `M ${P(80, -490)} Q ${P(210, -560)} ${P(230, -700)}`, [-232, -716], [232, -716]],
+    adelante: [`M ${P(-80, -490)} Q ${P(-150, -420)} ${P(-140, -320)}`, `M ${P(80, -490)} Q ${P(190, -470)} ${P(250, -520)}`, [-140, -310], [262, -530]],
+    cadera: [`M ${P(-80, -490)} Q ${P(-170, -400)} ${P(-90, -330)}`, `M ${P(80, -490)} Q ${P(170, -400)} ${P(90, -330)}`, [-85, -325], [85, -325]],
+  }[brazo] as [string, string, number[], number[]];
+  t.push(...camino(brazos[0], { ...linea_, strokeWidth: 44, stroke: modelo.polo }), ...camino(brazos[1], { ...linea_, strokeWidth: 44, stroke: modelo.polo }));
+  t.push(...camino(brazos[0], { ...linea_, strokeWidth: 7 }), ...camino(brazos[1], { ...linea_, strokeWidth: 7 }));
+  t.push(...circulo(x + brazos[2][0] * s, y + brazos[2][1] * s, 62 * s, relleno(modelo.piel)), ...circulo(x + brazos[3][0] * s, y + brazos[3][1] * s, 62 * s, relleno(modelo.piel)));
+  // Cuello, cabeza y orejas
+  t.push(...rect(x - 22 * s, y - 545 * s, 44 * s, 40 * s, relleno(modelo.piel)));
+  t.push(...circulo(hx(-98), hy(-650), 42 * K * s, relleno(modelo.piel)), ...circulo(hx(98), hy(-650), 42 * K * s, relleno(modelo.piel)));
+  t.push(...camino(`M ${H(-95, -700)} Q ${H(-100, -560)} ${H(0, -540)} Q ${H(100, -560)} ${H(95, -700)} Q ${H(90, -790)} ${H(0, -795)} Q ${H(-90, -790)} ${H(-95, -700)} Z`, relleno(modelo.piel)));
+  // Pelo de arriba (despeinado)
+  t.push(...camino(`M ${H(-100, -700)} Q ${H(-110, -820)} ${H(-20, -830)} Q ${H(30, -860)} ${H(70, -820)} Q ${H(120, -800)} ${H(100, -690)} Q ${H(60, -760)} ${H(0, -745)} Q ${H(-60, -770)} ${H(-100, -700)} Z`, relleno(modelo.pelo)));
+  // Ojos grandes
+  const sBase = s;
+  const ojo = (ox: number) => {
+    const cx = hx(ox), cy = hy(-670);
+    const s = sBase * K;
+    if (ojos === "feliz") return camino(`M ${cx - 30 * s} ${cy + 8 * s} Q ${cx} ${cy - 30 * s} ${cx + 30 * s} ${cy + 8 * s}`, linea_);
+    const blanco = circulo(cx, cy, 78 * s, relleno("#ffffff"));
+    if (ojos === "dinero") return [...blanco, ...camino(`M ${cx + 12 * s} ${cy - 22 * s} Q ${cx - 18 * s} ${cy - 26 * s} ${cx - 14 * s} ${cy - 6 * s} Q ${cx + 16 * s} ${cy + 4 * s} ${cx + 12 * s} ${cy + 20 * s} Q ${cx - 10 * s} ${cy + 28 * s} ${cx - 18 * s} ${cy + 16 * s} M ${cx} ${cy - 34 * s} L ${cx} ${cy + 34 * s}`, { ...linea_, stroke: "#2e9e4f", strokeWidth: 8 })];
+    const pupila = ojos === "sorpresa" ? 18 : 36;
+    const t2 = [...blanco, ...circulo(cx + 6 * s, cy + 4 * s, pupila * s, relleno("#1f1f1f"))];
+    if (ojos === "cansado") t2.push(...camino(`M ${cx - 40 * s} ${cy - 6 * s} Q ${cx} ${cy - 50 * s} ${cx + 40 * s} ${cy - 6 * s} Z`, relleno(modelo.piel)));
+    if (ojos === "preocupado") t2.push(...linea(cx - 30 * s, cy - 58 * s, cx + 20 * s, cy - (ox < 0 ? 48 : 68) * s, linea_));
+    return t2;
+  };
+  t.push(...ojo(-38), ...ojo(38));
+  // Boca
+  const by = hy(-590);
+  const sb = s;
+  {
+  const s = sb * K;
+  t.push(...{
+    sonrisa: camino(`M ${x - 30 * s} ${by} Q ${x} ${by + 25 * s} ${x + 30 * s} ${by}`, linea_),
+    abierta: camino(`M ${x - 35 * s} ${by - 8 * s} Q ${x} ${by + 55 * s} ${x + 35 * s} ${by - 8 * s} Z`, relleno("#7a1f2b")),
+    chica: camino(`M ${x - 12 * s} ${by + 6 * s} L ${x + 12 * s} ${by + 6 * s}`, linea_),
+    ondulada: camino(`M ${x - 30 * s} ${by + 5 * s} Q ${x - 15 * s} ${by - 8 * s} ${x} ${by + 5 * s} Q ${x + 15 * s} ${by + 18 * s} ${x + 30 * s} ${by + 5 * s}`, linea_),
+    o: circulo(x, by + 8 * s, 26 * s, relleno("#7a1f2b")),
+  }[boca]);
+  }
+  return t;
+};
