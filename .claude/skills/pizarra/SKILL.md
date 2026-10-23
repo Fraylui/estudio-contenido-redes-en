@@ -102,7 +102,13 @@ Licencias:
 - **Golpes clave a mano** (8 a 12 por video) con `"sonido"` y `"sonidoEn"`: `magic_reveal` en revelaciones, `caja_registradora` con dinero, `boom` en datos impactantes, `ding` en conclusiones. Nunca el mismo sonido fuerte seguido.
 - **Etiquetas de sección** con `"etiqueta"` en la escena ("La ciencia", "Paso 2 de 5"): se quedan arriba hasta la siguiente, y si dicen "Paso N de M" llevan una barra de progreso.
 - **Sacudida de pantalla** automática cuando la escena tiene `"sonido": "boom"`.
-- **Fondos de color con piso** (pared + piso con línea, como Aprendiz Financiero): cambian solos en cada sección. Se fija uno con `"fondo"`: `cielo`, `mostaza`, `menta`, `durazno`, `lila`, `blanco`, `papel` o un #hex.
+- **Estilo moderno (por defecto), como en CapCut o After Effects:**
+  - **Fondos degradados vivos** con manchas de color que flotan y viñeta: `cielo`, `durazno`, `menta`, `lila`, `mostaza`, `noche`. Cambian solos en cada sección.
+  - **Look sticker:** borde blanco y sombra profunda alrededor de cada dibujo.
+  - **Entrada de cada escena con zoom y desenfoque**, como una transición de CapCut.
+  - **Subtítulos en negrita** (Montserrat 900, mayúsculas, contorno negro) con rebote palabra por palabra; la palabra clave va más grande en amarillo.
+  - Los escenarios de cuarto siguen disponibles: `cuarto-cielo`, `cuarto-menta`, etc. También hay `blanco` y `papel`.
+- **No todo es la mascota cerebro:** usa Mateo y Lucía en caricatura (`caricatura:mateo:<ojos>:<boca>:<brazo>`) para las historias, y el cerebro solo cuando se habla de la mente.
 - **Punch-in:** la cámara da un pequeño golpe de zoom cuando aparece la palabra resaltada.
 - **Ritmo visual:** algo nuevo aparece cada 1 o 2 s (trazo, objeto, rótulo, palabra), y los dibujos respiran al terminar.
 

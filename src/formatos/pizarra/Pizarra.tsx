@@ -6,7 +6,7 @@ import { loadFont } from "@remotion/fonts";
 import { useMemo } from "react";
 import { z } from "zod";
 import {
-  AbsoluteFill, CalculateMetadataFunction, interpolate, Sequence, spring, staticFile, useCurrentFrame, useVideoConfig,
+  AbsoluteFill, CalculateMetadataFunction, Easing, interpolate, Sequence, spring, staticFile, useCurrentFrame, useVideoConfig,
 } from "remotion";
 import { composicionSchema, resolverDibujo, type DibujoPizarra } from "./dibujos";
 import catalogoSfx from "../../../public/sfx/efectos/sfx.json";
@@ -138,13 +138,38 @@ export const momentos = (d: DibujoPizarra, total: number) => {
 // Fondos de color con piso, como los escenarios de Aprendiz Financiero: pared lisa con luz suave arriba
 // y un piso más oscuro con su línea. "papel" deja la textura de papel arrugado.
 const FONDOS: Record<string, [string, string]> = {
-  cielo: ["#a7dcef", "#b9a6d6"], mostaza: ["#e8c87e", "#c9a35c"], menta: ["#bfe8cf", "#8fc7a3"],
-  durazno: ["#f8c9ab", "#e39a7a"], lila: ["#d6c4f0", "#a993d3"], blanco: ["#ffffff", "#e9e9e9"],
+  "cuarto-cielo": ["#a7dcef", "#b9a6d6"], "cuarto-mostaza": ["#e8c87e", "#c9a35c"], "cuarto-menta": ["#bfe8cf", "#8fc7a3"],
+  "cuarto-durazno": ["#f8c9ab", "#e39a7a"], "cuarto-lila": ["#d6c4f0", "#a993d3"], blanco: ["#ffffff", "#e9e9e9"],
 };
-const ORDEN_FONDOS = ["cielo", "mostaza", "menta", "durazno", "lila"];
+const ORDEN_FONDOS = ["cielo", "durazno", "menta", "lila", "mostaza"];
+
+const MODERNOS: Record<string, [string, string, string]> = {
+  // fondo arriba, fondo abajo, color de las manchas
+  cielo: ["#5ec8f2", "#2f6fd6", "#9ff0ff"], mostaza: ["#ffcf4d", "#ff8a3d", "#fff2a8"],
+  menta: ["#43d9a3", "#178f8f", "#b8ffe0"], durazno: ["#ff9a8b", "#ff5f7e", "#ffd3b5"],
+  lila: ["#a78bfa", "#6d42d9", "#e3d4ff"], noche: ["#283a8f", "#120f3a", "#5b6cff"],
+};
 
 const Fondo: React.FC<{ nombre: string }> = ({ nombre }) => {
+  const frame = useCurrentFrame();
   if (nombre === "papel") return null;
+  // Fondo moderno (por defecto): degradado vivo + manchas que flotan, como los motion graphics de After Effects
+  if (MODERNOS[nombre]) {
+    const [arriba, abajo, mancha] = MODERNOS[nombre];
+    const t = frame / 30;
+    return (
+      <AbsoluteFill style={{ background: `linear-gradient(160deg, ${arriba}, ${abajo})`, overflow: "hidden" }}>
+        {[0, 1, 2].map((k) => (
+          <div key={k} style={{
+            position: "absolute", width: 700, height: 700, borderRadius: "50%", background: mancha, opacity: 0.35, filter: "blur(90px)",
+            left: `${[10, 60, 35][k] + 6 * Math.sin(t * 0.4 + k * 2)}%`, top: `${[5, 40, 70][k] + 6 * Math.cos(t * 0.3 + k)}%`,
+            translate: "-50% -50%",
+          }} />
+        ))}
+        <AbsoluteFill style={{ background: "radial-gradient(ellipse at center, rgba(0,0,0,0) 55%, rgba(0,0,0,0.28) 100%)" }} />
+      </AbsoluteFill>
+    );
+  }
   const [pared, piso] = FONDOS[nombre] ?? [nombre, "rgba(0,0,0,0.12)"];
   return (
     <AbsoluteFill style={{ background: `radial-gradient(ellipse at 50% 20%, rgba(255,255,255,0.45), rgba(255,255,255,0) 60%), ${pared}` }}>
@@ -222,13 +247,16 @@ const Escena: React.FC<Props["escenas"][number]> = ({ dibujo, texto, resaltar, s
   const sacude = t0 >= 0 && frame >= t0 && frame < t0 + 12 ? (1 - (frame - t0) / 12) * 14 : 0;
   const dx = sacude * Math.sin(frame * 2.7), dy = sacude * Math.cos(frame * 3.3);
   return (
-    <AbsoluteFill style={{ transform: `translate(${dx}px, ${dy}px) scale(${zoom})` }}>
+    <AbsoluteFill style={{
+      transform: `translate(${dx}px, ${dy}px) scale(${zoom * interpolate(frame, [0, 8], [1.12, 1], { extrapolateRight: "clamp", easing: Easing.bezier(0.16, 1, 0.3, 1) })})`,
+      filter: `blur(${interpolate(frame, [0, 7], [10, 0], { extrapolateRight: "clamp" })}px)`,
+    }}>
       {/* El dibujo ocupa toda la escena, parado sobre el piso; el texto va abajo como subtítulo */}
       <div style={{ position: "absolute", left: horizontal ? 120 : 30, right: horizontal ? 120 : 30, top: horizontal ? 70 : 230, bottom: horizontal ? "16%" : "24%" }}>
         <Dibujo dibujo={resolverDibujo(dibujo)} duracion={total} />
       </div>
       <div style={{ position: "absolute", left: 0, right: 0, bottom: horizontal ? 24 : 300, display: "flex", justifyContent: "center", padding: "0 80px" }}>
-        <Texto texto={texto} resaltar={resaltar} duracion={total * 0.5} tamano={horizontal ? 58 : 70} />
+        <Texto texto={texto} resaltar={resaltar} duracion={total * 0.5} tamano={horizontal ? 64 : 76} />
       </div>
     </AbsoluteFill>
   );
@@ -268,8 +296,7 @@ const Dibujo: React.FC<{ dibujo: DibujoPizarra; duracion: number }> = ({ dibujo,
   const balanceo = 1.2 * Math.sin(seg * 1.7) * vida;
   const centro = `${vx + vw / 2} ${vy + vh * 0.9}`;
   return (
-    <svg viewBox={vista} style={{ width: "100%", height: "100%" }}>
-      {trazos.length ? <ellipse cx={vx + vw / 2} cy={vy + vh - 40} rx={vw * 0.34} ry={vh * 0.025} fill="rgba(0,0,0,0.13)" /> : null}
+    <svg viewBox={vista} style={{ width: "100%", height: "100%", filter: "drop-shadow(0 0 0 #fff) drop-shadow(5px 0 0 #fff) drop-shadow(-5px 0 0 #fff) drop-shadow(0 5px 0 #fff) drop-shadow(0 -5px 0 #fff) drop-shadow(0 18px 22px rgba(0,0,0,0.30))" }}>
       <g transform={`rotate(${balanceo} ${centro}) translate(${centro}) scale(${2 - respira} ${respira}) translate(${centro.split(" ").map((n) => -Number(n)).join(" ")})`}>
       {trazos.map((t, i) => {
         const largo = largos[i];
@@ -321,19 +348,21 @@ const Texto: React.FC<{ texto: string; resaltar?: string; duracion: number; tama
   const limpia = (p: string) => p.toLowerCase().replace(/[¿?¡!.,:;…"«»]/g, "");
   const claves = new Set((resaltar ?? "").split(/\s+/).map(limpia).filter(Boolean));
   return (
-    <div style={{ fontFamily: "Mano", fontSize: tamano, lineHeight: 1.25, color: "#1f1f1f", textAlign: "center" }}>
+    <div style={{ fontFamily: "Texto", fontWeight: 900, fontSize: tamano, lineHeight: 1.15, textAlign: "center", textTransform: "uppercase" }}>
       {palabras.map((p, i) => {
         const aparece = (i / palabras.length) * duracion;
-        const o = interpolate(frame, [aparece, aparece + 5], [0, 1], { extrapolateLeft: "clamp", extrapolateRight: "clamp" });
         const marcada = claves.has(limpia(p));
-        const pinta = interpolate(frame, [aparece + 3, aparece + 12], [0, 100], { extrapolateLeft: "clamp", extrapolateRight: "clamp" });
+        const pop = spring({ frame: frame - aparece, fps: FPS, config: { damping: 10, stiffness: 220 } });
         return (
           <span key={i} style={{
-            opacity: o, display: "inline-block", margin: "0 9px", padding: "0 10px",
-            transform: `translateY(${(1 - o) * 14}px)`,
-            background: marcada
-              ? `linear-gradient(90deg, #ffe14d ${pinta}%, rgba(255,255,255,0.92) ${pinta}%)`
-              : "rgba(255,255,255,0.92)",
+            display: "inline-block", margin: "0 12px", fontSize: marcada ? "1.2em" : "1em",
+            opacity: frame < aparece ? 0 : 1,
+            scale: `${0.6 + 0.4 * pop}`,
+            rotate: marcada ? `${-3 * pop}deg` : "0deg",
+            color: marcada ? "#ffe14d" : "#ffffff",
+            WebkitTextStroke: "10px #111",
+            paintOrder: "stroke fill",
+            textShadow: "0 8px 0 rgba(0,0,0,0.35)",
           }}>
             {p}
           </span>
@@ -342,3 +371,4 @@ const Texto: React.FC<{ texto: string; resaltar?: string; duracion: number; tama
     </div>
   );
 };
+

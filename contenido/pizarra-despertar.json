@@ -8,7 +8,7 @@
     "escenas": [
       {
         "dibujo": {
-          "personaje": "peep:mateo-cansada",
+          "personaje": "caricatura:mateo:cansado:ondulada:abajo",
           "iconos": [
             [
               "alarm",
@@ -24,7 +24,7 @@
       },
       {
         "dibujo": {
-          "personaje": "peep:mateo-cansada",
+          "personaje": "caricatura:mateo:cansado:ondulada:abajo",
           "iconos": [
             [
               "alarm-snooze",
@@ -46,7 +46,7 @@
       },
       {
         "dibujo": {
-          "personaje": "peep:mateo-estresada",
+          "personaje": "caricatura:mateo:sorpresa:abierta:cadera",
           "iconos": [
             [
               "clock",
@@ -96,7 +96,7 @@
       },
       {
         "dibujo": {
-          "personaje": "peep:mateo-sonrisa",
+          "personaje": "caricatura:mateo:normal:sonrisa:abajo",
           "iconos": [
             [
               "device-mobile",
@@ -113,7 +113,7 @@
       },
       {
         "dibujo": {
-          "personaje": "peep:mateo-cansada",
+          "personaje": "caricatura:mateo:cansado:ondulada:abajo",
           "iconos": [
             [
               "alarm",
@@ -127,7 +127,7 @@
       },
       {
         "dibujo": {
-          "personaje": "peep:mateo-cansada",
+          "personaje": "caricatura:mateo:cansado:ondulada:abajo",
           "iconos": [
             [
               "alarm-snooze",
@@ -144,7 +144,7 @@
       },
       {
         "dibujo": {
-          "personaje": "peep:mateo-comiendo",
+          "personaje": "caricatura:mateo:cansado:chica:adelante",
           "iconos": [
             [
               "coffee",
@@ -161,7 +161,7 @@
       },
       {
         "dibujo": {
-          "personaje": "peep:mateo-cansada",
+          "personaje": "caricatura:mateo:cansado:ondulada:abajo",
           "iconos": [
             [
               "battery-1",
@@ -175,7 +175,7 @@
       },
       {
         "dibujo": {
-          "personaje": "peep:mateo-calma",
+          "personaje": "caricatura:mateo:feliz:sonrisa:abajo",
           "iconos": [
             [
               "calendar-week",
@@ -192,7 +192,7 @@
       },
       {
         "dibujo": {
-          "personaje": "peep:mateo-preocupada",
+          "personaje": "caricatura:mateo:preocupado:ondulada:cadera",
           "iconos": [
             [
               "repeat",
@@ -364,7 +364,7 @@
       },
       {
         "dibujo": {
-          "personaje": "peep:mateo-sorprendida",
+          "personaje": "caricatura:mateo:sorpresa:o:arriba",
           "iconos": [
             [
               "alarm",
@@ -395,7 +395,7 @@
       },
       {
         "dibujo": {
-          "personaje": "peep:mateo-preocupada",
+          "personaje": "caricatura:mateo:preocupado:ondulada:cadera",
           "iconos": [
             [
               "alarm-snooze",
@@ -427,7 +427,7 @@
       },
       {
         "dibujo": {
-          "personaje": "peep:mateo-cansada",
+          "personaje": "caricatura:mateo:cansado:ondulada:abajo",
           "iconos": [
             [
               "calendar-week",
@@ -561,7 +561,7 @@
       },
       {
         "dibujo": {
-          "personaje": "peep:mateo-sospecha",
+          "personaje": "caricatura:mateo:normal:chica:cadera",
           "iconos": [
             [
               "alarm-snooze",
@@ -699,7 +699,7 @@
       },
       {
         "dibujo": {
-          "personaje": "peep:mateo-feliz",
+          "personaje": "caricatura:mateo:feliz:abierta:arriba",
           "iconos": [
             [
               "sunrise",
@@ -716,7 +716,7 @@
       },
       {
         "dibujo": {
-          "personaje": "peep:mateo-feliz",
+          "personaje": "caricatura:mateo:feliz:abierta:arriba",
           "iconos": [
             [
               "alarm",
@@ -733,7 +733,7 @@
       },
       {
         "dibujo": {
-          "personaje": "peep:mateo-risa",
+          "personaje": "caricatura:mateo:feliz:abierta:arriba",
           "iconos": [
             [
               "battery-4",
@@ -787,7 +787,7 @@
       },
       {
         "dibujo": {
-          "personaje": "peep:mateo-explicando",
+          "personaje": "caricatura:mateo:normal:abierta:adelante",
           "iconos": [
             [
               "device-mobile",
