@@ -107,6 +107,32 @@ Opciones: `--modelo medium` (subtítulos más precisos, más lento) y `--pausas-
 
 Antes de grabar puedes abrir el Studio y ver el video con el ritmo estimado de narración, para revisar el guion.
 
+### Narración con voz clonada (opcional)
+Una narradora lee el texto que escribas, con voz clonada y en **español latino** (pronuncia la c y la z como s, y corrige nombres como Kimbiri o Huamanga).
+
+**Instalar una vez** (necesita [uv](https://docs.astral.sh/uv/) y [ffmpeg](https://ffmpeg.org); funciona sin tarjeta gráfica):
+
+```bash
+./voz/instalar.sh
+```
+
+Luego pon la grabación de la narradora en `voz/referencias/xiomi.wav` (ver `voz/referencias/LEEME.md`). **Esa grabación no se sube a GitHub**: con ella cualquiera podría clonar la voz. Usa solo la voz de alguien que te dio permiso.
+
+**Usar:** agrega `narracion` dentro de `props`:
+
+```json
+"narracion": [
+  { "texto": "¿Cuál es la capital de Australia?", "estilo": "pregunta" },
+  { "texto": "¡Es Canberra!", "estilo": "emocion", "en": 7.6 }
+]
+```
+
+- `estilo`: `normal`, `emocion`, `rapido`, `contando` o `pregunta` (si no lo pones, las frases con "?" van como pregunta).
+- `en`: segundo exacto en que empieza esa frase (para que coincida con lo que se ve).
+- Nombres mal pronunciados: agrega junto a `props` `"voz": { "pronunciacion": { "Pichari": "Pichári" } }`.
+
+`npm run lote` genera la voz antes del video (solo si cambiaste el texto), alarga el video si la narración es más larga y baja la música para que se entienda la voz. Cada frase se revisa con Whisper y se repite sola si salió mal. Tarda unos 8 segundos de cálculo por cada segundo de voz.
+
 ## Rutina sugerida para monetizar
 
 1. **Elige un nicho** y no lo cambies (curiosidades, datos de Latinoamérica, comida, motivación…).
@@ -126,6 +152,7 @@ grabaciones/      ← tus grabaciones de voz originales (no se suben a GitHub)
 public/fuentes/   ← fuentes tipográficas
 public/musica/    ← música de fondo
 scripts/          ← render-lote.mjs (genera videos) y preparar-narrado.mjs (voz y subtítulos)
+voz/              ← narración con voz clonada: instalar.sh, narrar.py, referencias/ (privadas)
 src/marca.ts      ← tu identidad: colores, fuentes, @usuario
 src/formatos/     ← las plantillas de video
 src/comun/        ← piezas compartidas (fondo, firma, música, animaciones)
