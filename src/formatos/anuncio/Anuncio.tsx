@@ -45,13 +45,27 @@ export const anuncioSchema = z.object({
       // Fotos: acercar a un detalle. zoom 1 = foto completa; centro = punto en % ("52% 45%")
       zoom: z.number().min(1).optional(),
       centro: z.string().optional(),
+      // Con narración generada: la escena empieza cuando la voz dice esa frase (1 = la primera)
+      frase: z.number().int().min(1).optional(),
+      // y su segundo texto aparece cuando dice esta otra frase
+      fraseCambio: z.number().int().min(1).optional(),
     }),
   ),
   voz: z.string().optional(),
+  // Tiempos de cada frase de la narración (los completa npm run lote desde public/voz/<id>.json)
+  frasesVoz: z.array(z.object({ inicio: z.number(), fin: z.number() })).optional(),
   musica: z.string().optional(),
   // Efectos de sonido (archivos en public/sfx/) en un segundo exacto del anuncio
   efectos: z
-    .array(z.object({ archivo: z.string(), segundo: z.number(), volumen: z.number().optional() }))
+    .array(
+      z.object({
+        archivo: z.string(),
+        segundo: z.number(),
+        volumen: z.number().optional(),
+        // Si se indica, "segundo" se cuenta desde el inicio de esa escena (1 = la primera)
+        escena: z.number().int().min(1).optional(),
+      }),
+    )
     .optional(),
 });
 
@@ -61,9 +75,37 @@ type Negocio = Props["negocio"];
 
 const FPS = 30;
 
-export const calcularAnuncio: CalculateMetadataFunction<Props> = ({ props }) => ({
-  durationInFrames: Math.round(props.escenas.reduce((t, e) => t + e.segundos, 0) * FPS),
-});
+// Ajusta la duración de cada escena a la frase de la narración con la que empieza.
+// Las escenas sin "frase" conservan sus segundos; la última dura hasta 1 s después de la voz.
+const sincronizar = (props: Props): Props["escenas"] => {
+  const frases = props.frasesVoz;
+  if (!frases?.length || !props.escenas.some((e) => e.frase)) return props.escenas;
+  const inicioDe = (n?: number) => (n && frases[n - 1] ? Math.max(0, frases[n - 1].inicio - 0.12) : null);
+  const finVoz = frases[frases.length - 1].fin + 1;
+  // Momento en que empieza cada escena
+  const inicios: number[] = [];
+  props.escenas.forEach((e, i) => {
+    const fijo = i === 0 ? 0 : inicioDe(e.frase);
+    inicios.push(fijo ?? inicios[i - 1] + props.escenas[i - 1].segundos);
+  });
+  return props.escenas.map((e, i) => {
+    const fin = i + 1 < props.escenas.length ? inicios[i + 1] : Math.max(finVoz, inicios[i] + e.segundos);
+    const cambio = inicioDe(e.fraseCambio);
+    return {
+      ...e,
+      segundos: Math.max(0.5, fin - inicios[i]),
+      ...(cambio !== null ? { cambio: Math.max(0.3, cambio - inicios[i]) } : {}),
+    };
+  });
+};
+
+export const calcularAnuncio: CalculateMetadataFunction<Props> = ({ props }) => {
+  const escenas = sincronizar(props);
+  return {
+    durationInFrames: Math.round(escenas.reduce((t, e) => t + e.segundos, 0) * FPS),
+    props: { ...props, escenas },
+  };
+};
 
 export const Anuncio: React.FC<Props> = ({ negocio, escenas, voz, musica, efectos }) => {
   const { durationInFrames } = useVideoConfig();
@@ -82,7 +124,14 @@ export const Anuncio: React.FC<Props> = ({ negocio, escenas, voz, musica, efecto
       </Series>
       {voz ? <Audio src={staticFile(voz)} /> : null}
       {(efectos ?? []).map((e, i) => (
-        <Sequence key={i} name={`Efecto ${e.archivo}`} from={Math.round(e.segundo * FPS)} layout="none">
+        <Sequence
+          key={i}
+          name={`Efecto ${e.archivo}`}
+          from={Math.round(
+            (e.segundo + (e.escena ? escenas.slice(0, e.escena - 1).reduce((t, x) => t + x.segundos, 0) : 0)) * FPS,
+          )}
+          layout="none"
+        >
           <Audio src={staticFile(e.archivo)} volume={e.volumen ?? 0.35} />
         </Sequence>
       ))}

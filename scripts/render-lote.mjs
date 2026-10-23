@@ -38,13 +38,24 @@ for (const archivo of archivos) {
   if (props.narracion) {
     const audio = `public/voz/${nombre}.wav`;
     const json = join(carpeta, archivo);
-    if (!existsSync(audio) || statSync(audio).mtimeMs < statSync(json).mtimeMs) {
+    const python = "voz/.venv/bin/python";
+    const referencia = JSON.parse(readFileSync(json, "utf8")).voz?.referencia ?? "voz/referencias/xiomi.wav";
+    const desactualizada = !existsSync(audio) || statSync(audio).mtimeMs < statSync(json).mtimeMs;
+    if (desactualizada && (!existsSync(python) || !existsSync(referencia))) {
+      // La voz es opcional: sin instalarla o sin grabación de referencia, el video sale sin narración
+      console.log(`\n⚠️  ${archivo}: falta instalar voz/ o la referencia ${referencia}; se genera sin narración.`);
+    } else if (desactualizada) {
       console.log(`\n🎙  Narrando ${archivo}…`);
-      execFileSync("voz/.venv/bin/python", ["voz/narrar.py", json, audio], { stdio: "inherit" });
+      execFileSync(python, ["voz/narrar.py", json, audio], { stdio: "inherit" });
     }
+  }
+  if (props.narracion && existsSync(`public/voz/${nombre}.json`)) {
     // Anuncio y Narrado leen la voz con su ruta dentro de public/; los demás formatos, desde public/voz/
     props.voz = formato === "Anuncio" || formato === "Narrado" ? `voz/${nombre}.wav` : `${nombre}.wav`;
-    props.duracionVoz = JSON.parse(readFileSync(`public/voz/${nombre}.json`, "utf8")).duracion;
+    const tiemposVoz = JSON.parse(readFileSync(`public/voz/${nombre}.json`, "utf8"));
+    props.duracionVoz = tiemposVoz.duracion;
+    // Los anuncios usan los tiempos de cada frase para sincronizar sus escenas
+    props.frasesVoz = tiemposVoz.frases.map(({ inicio, fin }) => ({ inicio, fin }));
   }
   const rutaProps = join("out/.props", archivo);
   writeFileSync(rutaProps, JSON.stringify(props));
