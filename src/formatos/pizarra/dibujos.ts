@@ -4,7 +4,7 @@
 // "textos": rótulos escritos a mano dentro del dibujo.
 // El conjunto se ajusta solo al espacio disponible, así que las coordenadas solo importan entre sí.
 import { z } from "zod";
-import { billeteraAbierta, caja, caricatura, cerebro, icono, LUCIA, MATEO, monigote, type BocaCaricatura, type OjosCaricatura, type Brazos, type Cara, type PoseCerebro, type Trazo } from "./trazos";
+import { billeteraAbierta, caja, camino, caricatura, cerebro, icono, LUCIA, MATEO, monigote, type BocaCaricatura, type OjosCaricatura, type Brazos, type Cara, type PoseCerebro, type Trazo } from "./trazos";
 
 export type Objeto = { img: string; x: number; y: number; t: number; rot?: number };
 export type Rotulo = { texto: string; x: number; y: number; t: number; color?: string; rot?: number };
@@ -15,6 +15,16 @@ const ROJO = "#d7263d";
 const VERDE = "#2e9e4f";
 
 export const DIBUJOS: Record<string, DibujoPizarra> = {
+  // --- Miniatura del video 2: antes (cansado) → después (con energía) ---
+  "mini-despertar": {
+    trazos: [
+      ...caricatura(230, 900, { ojos: "cansado", boca: "ondulada", brazo: "abajo" }),
+      ...caricatura(800, 900, { ojos: "feliz", boca: "abierta", brazo: "arriba" }),
+      ...icono("alarm", 440, 140, 150, "#ffadad"), ...icono("sun", 1020, 130, 160, "#ffe14d"),
+      ...camino("M 420 450 Q 510 400 600 450 M 570 420 L 605 452 L 565 480", { strokeWidth: 12, stroke: "#d7263d" }),
+    ],
+  },
+
   // --- Prueba de personajes de caricatura ---
   "prueba-caricatura": {
     trazos: [
