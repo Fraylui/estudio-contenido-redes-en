@@ -207,3 +207,19 @@ export const japon = (x: number, y: number, s = 1) => [
 export const destellos = (x: number, y: number, s = 1) => [
   ...linea(x, y - 40 * s, x, y - 70 * s), ...linea(x + 30 * s, y - 30 * s, x + 52 * s, y - 52 * s), ...linea(x - 30 * s, y - 30 * s, x - 52 * s, y - 52 * s),
 ];
+
+// Quipu inca: cuerda principal con cuerdas de colores colgando y sus nudos (identidad del canal "Tu Quipu")
+export const quipu = (x1: number, x2: number, y: number, { largo = 220, colores = ["#d7263d", "#f6c445", "#2e9e4f", "#4d8fe0", "#ff8fab", "#8b5a2b"] } = {}) => {
+  const t: Trazo[] = [...camino(`M ${x1} ${y} Q ${(x1 + x2) / 2} ${y + 25} ${x2} ${y}`, { strokeWidth: 8, stroke: "#6e3b1f" })];
+  const n = Math.max(3, Math.round((x2 - x1) / 45));
+  for (let i = 1; i < n; i++) {
+    const x = x1 + ((x2 - x1) * i) / n;
+    const color = colores[i % colores.length];
+    const l = largo * (0.7 + ((i * 37) % 30) / 100);
+    const yc = y + 12 * Math.sin((Math.PI * i) / n);
+    t.push(...camino(`M ${x} ${yc} Q ${x + 10} ${yc + l / 2} ${x - 4} ${yc + l}`, { strokeWidth: 6, stroke: color }));
+    // Nudos: cada cuerda guarda un número
+    for (let k = 1; k <= 1 + (i % 3); k++) t.push(...circulo(x + 2, yc + (l * k) / (2 + (i % 3)), 16, pintado(color)));
+  }
+  return t;
+};

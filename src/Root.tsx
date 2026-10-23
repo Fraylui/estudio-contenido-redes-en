@@ -18,6 +18,7 @@ import { calcularNarrado, Narrado, narradoSchema } from "./formatos/narrado/Narr
 import { Miniatura } from "./formatos/narrado/Miniatura";
 import { Anuncio, anuncioSchema, calcularAnuncio } from "./formatos/anuncio/Anuncio";
 import { calcularPizarra, Pizarra, pizarraSchema } from "./formatos/pizarra/Pizarra";
+import { BannerCanal, LogoCanal } from "./formatos/pizarra/Marca";
 import { calcularTopLista, TopLista, topListaSchema } from "./formatos/TopLista";
 import { calcularTrivia, Trivia, triviaSchema } from "./formatos/Trivia";
 import { conDuracionVoz, conNarracion, vozSchema } from "./comun/Narracion";
@@ -39,6 +40,9 @@ const TAMANOS = [
 export const RemotionRoot: React.FC = () => {
   return (
     <>
+      {/* Identidad del canal de YouTube: foto de perfil y banner */}
+      <Still id="LogoCanal" component={LogoCanal} width={800} height={800} />
+      <Still id="BannerCanal" component={BannerCanal} width={2560} height={1440} />
       {/* Miniaturas de YouTube para los videos narrados (imagen fija de 1280x720) */}
       <Folder name="Miniaturas">
         {[finDeMes, elTunche].map((n) => (
