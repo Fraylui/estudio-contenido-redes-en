@@ -13,8 +13,8 @@ loadFont({
 });
 
 export const marca = {
-  nombre: "Mi Página",
-  usuario: "@mipagina",
+  nombre: "Tu Quipu",
+  usuario: "@tuquipu",
   colores: {
     fondo: "#0b1020",
     fondo2: "#1b2350",
