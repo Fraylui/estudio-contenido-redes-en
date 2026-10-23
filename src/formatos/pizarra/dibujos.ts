@@ -286,10 +286,11 @@ export type Composicion = z.infer<typeof composicionSchema>;
 
 const PASTELES = ["#ffe14d", "#a2d2ff", "#ffadad", "#caffbf", "#ffd6a5", "#cdb4db"];
 const POSICIONES: Record<number, [number, number, number][]> = {
-  1: [[760, 430, 320]],
-  2: [[700, 280, 240], [820, 600, 240]],
-  3: [[650, 230, 210], [880, 430, 210], [680, 650, 210]],
-  4: [[650, 240, 190], [880, 240, 190], [650, 560, 190], [880, 560, 190]],
+  // Junto a un personaje los íconos van grandes: si no, al lado de alguien de cuerpo entero quedan como puntitos
+  1: [[820, 430, 470]],
+  2: [[760, 270, 350], [920, 640, 350]],
+  3: [[720, 220, 300], [980, 470, 300], [740, 730, 300]],
+  4: [[700, 250, 270], [990, 250, 270], [700, 630, 270], [990, 630, 270]],
 };
 const POSICIONES_SOLAS: Record<number, [number, number, number][]> = {
   1: [[550, 430, 420]],

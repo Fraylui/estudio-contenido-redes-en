@@ -232,14 +232,46 @@ export const quipu = (x1: number, x2: number, y: number, { largo = 220, colores 
 // Ícono de línea (Tabler, MIT) redibujado a mano con rough.js, con una mancha de color detrás como si lo
 // hubieran pintado con plumón. Así los objetos tienen el mismo trazo que los monigotes y no parecen emojis.
 // (x, y) es el centro y t el tamaño; los nombres disponibles están en scripts/generar-iconos.mjs.
+// Ícono como ilustración plana: mancha de color con sombra y brillo, las formas cerradas pintadas con un color vivo
+// y el contorno negro a mano encima (más cerca de Aprendiz Financiero que de un ícono de línea).
+const VIVOS: Record<string, string> = {
+  "#ffe14d": "#ffc21a", "#a2d2ff": "#4d9de8", "#ffadad": "#ff6464", "#caffbf": "#3fbf6f", "#ffd6a5": "#ff9b3d", "#cdb4db": "#9b7be0",
+};
+const oscurecer = (hex: string, f: number) =>
+  "#" + [1, 3, 5].map((i) => Math.round(parseInt(hex.slice(i, i + 2), 16) * f).toString(16).padStart(2, "0")).join("");
+
+// Partes cerradas de un path (terminan donde empezaron o con Z): son las que se pueden pintar
+const cerradas = (d: string) =>
+  // Primero en coordenadas absolutas: así cada parte se puede pintar sola en su lugar
+  svgpath(d).abs().toString().split(/(?=M)/).filter((sub) => {
+    if (/Z/i.test(sub)) return true;
+    let ini: [number, number] | null = null;
+    let fin: [number, number] = [0, 0];
+    let segmentos = 0;
+    svgpath(sub).iterate((seg, _i, x, y) => {
+      const n = seg.slice(1) as number[];
+      fin = seg[0] === "H" ? [n[0], y] : seg[0] === "V" ? [x, n[0]] : [n[n.length - 2], n[n.length - 1]];
+      if (!ini) ini = fin;
+      else segmentos++;
+    });
+    // Tabler deja muchas figuras "casi" cerradas (a 1 unidad de su inicio): también cuentan
+    return !!ini && segmentos >= 2 && Math.hypot(fin[0] - ini![0], fin[1] - ini![1]) < 1.6;
+  });
+
 export const icono = (nombre: string, x: number, y: number, t: number, color = "#ffe14d") => {
   const k = t / 24;
+  const vivo = VIVOS[color.toLowerCase()] ?? oscurecer(color, 0.8);
+  const a = (d: string) => svgpath(d).scale(k).translate(x - t / 2, y - t / 2).toString();
   const trazos: Trazo[] = [
-    ...circulo(x + t * 0.06, y + t * 0.06, t * 0.82, { fill: color, fillStyle: "solid", stroke: "none" }),
+    // Sombra suave abajo a la derecha, mancha de color y brillo arriba a la izquierda
+    ...circulo(x + t * 0.1, y + t * 0.12, t * 0.84, { fill: oscurecer(color, 0.78), fillStyle: "solid", stroke: "none" }),
+    ...circulo(x + t * 0.04, y + t * 0.04, t * 0.84, { fill: color, fillStyle: "solid", stroke: "none" }),
+    ...camino(`M ${x - t * 0.3} ${y - t * 0.12} Q ${x - t * 0.28} ${y - t * 0.3} ${x - t * 0.1} ${y - t * 0.34}`,
+      { stroke: "#ffffff", strokeWidth: Math.max(5, k * 1.6), roughness: 0.3 }),
   ];
-  for (const d of ICONOS[nombre] ?? []) {
-    trazos.push(...camino(svgpath(d).scale(k).translate(x - t / 2, y - t / 2).toString(), { strokeWidth: Math.max(4, k * 1.5), roughness: 0.7 }));
-  }
+  const caminos = ICONOS[nombre] ?? [];
+  for (const d of caminos) for (const sub of cerradas(d)) trazos.push(...camino(a(sub), { fill: vivo, fillStyle: "solid", stroke: "none", roughness: 0.2 }));
+  for (const d of caminos) trazos.push(...camino(a(d), { strokeWidth: Math.max(4.5, k * 1.7), roughness: 0.6 }));
   return trazos;
 };
 
