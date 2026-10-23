@@ -9,5 +9,5 @@ uv venv -p 3.11 .venv
 uv pip install --python .venv/bin/python \
   --index-url https://pypi.org/simple --extra-index-url https://download.pytorch.org/whl/cpu \
   --index-strategy unsafe-best-match \
-  "torch==2.6.0+cpu" "diffusers==0.35.1" "transformers==4.46.3" "accelerate==1.2.1" safetensors pillow
+  "torch==2.6.0+cpu" "diffusers==0.35.1" "transformers==4.46.3" "accelerate==1.2.1" "rembg[cpu]" safetensors pillow
 echo "Listo. Genera con: imagen/.venv/bin/python imagen/generar.py \"descripción\" salida.png"
