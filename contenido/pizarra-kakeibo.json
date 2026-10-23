@@ -1,0 +1,20 @@
+{
+  "formato": "Pizarra",
+  "voz": {
+    "referencia": "voz/referencias/xiomi.wav",
+    "tono": "alegre",
+    "velocidad": 1.05
+  },
+  "props": {
+    "escenas": [
+      { "dibujo": "billetera-vacia", "texto": "Llega fin de mes… y tu billetera está vacía.", "resaltar": "vacía" },
+      { "dibujo": "a-donde-se-va", "texto": "No es que ganes poco: no sabes a dónde se va tu dinero.", "resaltar": "a dónde" },
+      { "dibujo": "metodo-japones", "texto": "Un método japonés de hace más de cien años te ayuda a ahorrar.", "resaltar": "japonés" }
+    ],
+    "narracion": [
+      { "texto": "Llega fin de mes… y tu billetera está así. ¿Te suena?", "estilo": "contando" },
+      { "texto": "No es que ganes poco. El problema es que no sabes a dónde se va tu dinero.", "estilo": "normal" },
+      { "texto": "Hoy te cuento un método japonés de hace más de cien años, que te ayuda a ahorrar sin dejar de vivir.", "estilo": "emocion" }
+    ]
+  }
+}

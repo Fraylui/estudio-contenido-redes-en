@@ -5,6 +5,7 @@ import fraseEjemplo from "../contenido/frase-constancia.json";
 import finDeMes from "../contenido/narrado-fin-de-mes.json";
 import elTunche from "../contenido/narrado-el-tunche.json";
 import anuncioEjemplo from "../contenido/anuncio-quinuapata.json";
+import pizarraEjemplo from "../contenido/pizarra-kakeibo.json";
 import topEjemplo from "../contenido/top-5-platos-peruanos.json";
 import triviaEjemplo from "../contenido/trivia-capital-australia.json";
 import {
@@ -16,6 +17,7 @@ import { calcularFrase, Frase, fraseSchema } from "./formatos/Frase";
 import { calcularNarrado, Narrado, narradoSchema } from "./formatos/narrado/Narrado";
 import { Miniatura } from "./formatos/narrado/Miniatura";
 import { Anuncio, anuncioSchema, calcularAnuncio } from "./formatos/anuncio/Anuncio";
+import { calcularPizarra, Pizarra, pizarraSchema } from "./formatos/pizarra/Pizarra";
 import { calcularTopLista, TopLista, topListaSchema } from "./formatos/TopLista";
 import { calcularTrivia, Trivia, triviaSchema } from "./formatos/Trivia";
 import { conDuracionVoz, conNarracion, vozSchema } from "./comun/Narracion";
@@ -127,6 +129,18 @@ export const RemotionRoot: React.FC = () => {
             schema={anuncioSchema}
             defaultProps={anuncioEjemplo.props as z.infer<typeof anuncioSchema>}
             calculateMetadata={calcularAnuncio}
+            durationInFrames={900}
+            fps={30}
+            width={t.width}
+            height={t.height}
+          />
+          {/* Videos de pizarra estilo DOMINALO (contenido/pizarra-*.json); pensados para horizontal */}
+          <Composition
+            id={`Pizarra-${t.nombre}`}
+            component={Pizarra}
+            schema={pizarraSchema}
+            defaultProps={pizarraEjemplo.props as z.infer<typeof pizarraSchema>}
+            calculateMetadata={calcularPizarra}
             durationInFrames={900}
             fps={30}
             width={t.width}

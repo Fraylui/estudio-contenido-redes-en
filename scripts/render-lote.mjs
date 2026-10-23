@@ -60,7 +60,7 @@ for (const archivo of archivos) {
   }
   if (props.narracion && existsSync(`public/voz/${nombre}.json`)) {
     // Anuncio y Narrado leen la voz con su ruta dentro de public/; los demás formatos, desde public/voz/
-    props.voz = formato === "Anuncio" || formato === "Narrado" ? `voz/${nombre}.wav` : `${nombre}.wav`;
+    props.voz = ["Anuncio", "Narrado", "Pizarra"].includes(formato) ? `voz/${nombre}.wav` : `${nombre}.wav`;
     const tiemposVoz = JSON.parse(readFileSync(`public/voz/${nombre}.json`, "utf8"));
     props.duracionVoz = tiemposVoz.duracion;
     // Los anuncios usan los tiempos de cada frase para sincronizar sus escenas
