@@ -11,6 +11,8 @@ El formato vive en `src/formatos/pizarra/` y cada video es un `contenido/pizarra
 npm run lote -- pizarra-<nombre> --horizontal     # narra con voz-narradora y renderiza 1920x1080
 ```
 
+**Cada video cumple la lista completa de `docs/receta-video.md`** (idea, empaquetado, investigación, guion, visual, sonido, revisión, publicación y aprendizaje). Lo de abajo es el detalle técnico.
+
 ## 0. Investigar antes de escribir (obligatorio)
 
 1. **Qué ya funciona en YouTube:** `python3 scripts/investigar-youtube.py "<tema>"` muestra los videos más vistos del tema, con su canal, vistas y duración. Anota qué títulos, duraciones y promesas se repiten, y busca el **ángulo que nadie cubrió**.
