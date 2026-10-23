@@ -273,7 +273,7 @@ def main():
     crudo = salida.with_name(salida.stem + "-crudo.wav")
     sf.write(str(crudo), total, SR)
     # Acabado de locución: el ecualizador automático corrige el balance y deja el volumen a -14 LUFS
-    subprocess.run([sys.executable, str(Path(__file__).with_name("ecualizar.py")), str(crudo), str(salida)], check=True)
+    subprocess.run([sys.executable, str(Path(__file__).with_name("ecualizar.py")), str(crudo), str(salida), "--sintetica"], check=True)
     crudo.unlink()
     huella = sys.argv[3] if len(sys.argv) > 3 else None
     salida.with_suffix(".json").write_text(json.dumps({"duracion": round(len(total) / SR, 3), "huella": huella,
