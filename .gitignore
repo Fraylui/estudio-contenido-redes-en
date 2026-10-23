@@ -5,3 +5,9 @@ dist
 
 # Ignore the output video from Git but not videos you import into src/.
 out
+
+# Voz: entorno de Python, grabaciones de referencia (privadas) y narraciones generadas
+voz/.venv
+voz/referencias/*
+!voz/referencias/LEEME.md
+public/voz/

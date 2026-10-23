@@ -11,6 +11,13 @@ import {
 import { calcularFrase, Frase, fraseSchema } from "./formatos/Frase";
 import { calcularTopLista, TopLista, topListaSchema } from "./formatos/TopLista";
 import { calcularTrivia, Trivia, triviaSchema } from "./formatos/Trivia";
+import { conDuracionVoz, conNarracion, vozSchema } from "./comun/Narracion";
+
+// Todos los formatos aceptan narración con voz (campos "voz" y "duracionVoz").
+const TopListaVoz = conNarracion(TopLista);
+const TriviaVoz = conNarracion(Trivia);
+const FraseVoz = conNarracion(Frase);
+const DatosBarrasVoz = conNarracion(DatosBarras);
 
 // Cada formato existe en dos tamaños:
 //   Vertical   1080x1920 → Facebook Reels, YouTube Shorts, TikTok, Instagram
@@ -27,10 +34,10 @@ export const RemotionRoot: React.FC = () => {
         <Folder key={t.nombre} name={t.nombre}>
           <Composition
             id={`TopLista-${t.nombre}`}
-            component={TopLista}
-            schema={topListaSchema}
+            component={TopListaVoz}
+            schema={topListaSchema.extend(vozSchema.shape)}
             defaultProps={topEjemplo.props}
-            calculateMetadata={calcularTopLista}
+            calculateMetadata={conDuracionVoz(calcularTopLista)}
             durationInFrames={600}
             fps={30}
             width={t.width}
@@ -38,10 +45,10 @@ export const RemotionRoot: React.FC = () => {
           />
           <Composition
             id={`Trivia-${t.nombre}`}
-            component={Trivia}
-            schema={triviaSchema}
+            component={TriviaVoz}
+            schema={triviaSchema.extend(vozSchema.shape)}
             defaultProps={triviaEjemplo.props}
-            calculateMetadata={calcularTrivia}
+            calculateMetadata={conDuracionVoz(calcularTrivia)}
             durationInFrames={450}
             fps={30}
             width={t.width}
@@ -49,10 +56,10 @@ export const RemotionRoot: React.FC = () => {
           />
           <Composition
             id={`Frase-${t.nombre}`}
-            component={Frase}
-            schema={fraseSchema}
+            component={FraseVoz}
+            schema={fraseSchema.extend(vozSchema.shape)}
             defaultProps={fraseEjemplo.props}
-            calculateMetadata={calcularFrase}
+            calculateMetadata={conDuracionVoz(calcularFrase)}
             durationInFrames={300}
             fps={30}
             width={t.width}
@@ -60,10 +67,10 @@ export const RemotionRoot: React.FC = () => {
           />
           <Composition
             id={`DatosBarras-${t.nombre}`}
-            component={DatosBarras}
-            schema={datosBarrasSchema}
+            component={DatosBarrasVoz}
+            schema={datosBarrasSchema.extend(vozSchema.shape)}
             defaultProps={datosEjemplo.props}
-            calculateMetadata={calcularDatosBarras}
+            calculateMetadata={conDuracionVoz(calcularDatosBarras)}
             durationInFrames={360}
             fps={30}
             width={t.width}

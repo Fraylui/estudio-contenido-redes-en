@@ -65,6 +65,32 @@ Los videos quedan en `out/`.
 ### Música de fondo (opcional)
 Pon un `.mp3` en `public/musica/` y agrega `"musica": "nombre.mp3"` dentro de `props`. Usa solo música libre de derechos (por ejemplo, la Biblioteca de audio de YouTube); si no, te quitan la monetización de ese video.
 
+### Narración con voz (opcional)
+Una narradora lee el texto que escribas, con voz clonada y en **español latino** (pronuncia la c y la z como s, y corrige nombres como Kimbiri o Huamanga).
+
+**Instalar una vez** (necesita [uv](https://docs.astral.sh/uv/) y [ffmpeg](https://ffmpeg.org); funciona sin tarjeta gráfica):
+
+```bash
+./voz/instalar.sh
+```
+
+Luego pon la grabación de la narradora en `voz/referencias/xiomi.wav` (ver `voz/referencias/LEEME.md`). **Esa grabación no se sube a GitHub**: con ella cualquiera podría clonar la voz. Usa solo la voz de alguien que te dio permiso.
+
+**Usar:** agrega `narracion` dentro de `props`:
+
+```json
+"narracion": [
+  { "texto": "¿Cuál es la capital de Australia?", "estilo": "pregunta" },
+  { "texto": "¡Es Canberra!", "estilo": "emocion", "en": 7.6 }
+]
+```
+
+- `estilo`: `normal`, `emocion`, `rapido`, `contando` o `pregunta` (si no lo pones, las frases con "?" van como pregunta).
+- `en`: segundo exacto en que empieza esa frase (para que coincida con lo que se ve).
+- Nombres mal pronunciados: agrega junto a `props` `"voz": { "pronunciacion": { "Pichari": "Pichári" } }`.
+
+`npm run lote` genera la voz antes del video (solo si cambiaste el texto), alarga el video si la narración es más larga y baja la música para que se entienda la voz. Cada frase se revisa con Whisper y se repite sola si salió mal. Tarda unos 8 segundos de cálculo por cada segundo de voz.
+
 ## Rutina sugerida para monetizar
 
 1. **Elige un nicho** y no lo cambies (curiosidades, datos de Latinoamérica, comida, motivación…).
@@ -82,6 +108,7 @@ contenido/        ← tus videos, uno por archivo JSON
 public/fuentes/   ← fuentes tipográficas
 public/musica/    ← música de fondo
 scripts/          ← render-lote.mjs (genera todos los videos)
+voz/              ← narración con voz: instalar.sh, narrar.py, referencias/ (privadas)
 src/marca.ts      ← tu identidad: colores, fuentes, @usuario
 src/formatos/     ← las plantillas de video
 src/comun/        ← piezas compartidas (fondo, firma, música, animaciones)
