@@ -5,7 +5,10 @@ import type { Options } from "roughjs/bin/core";
 import svgpath from "svgpath";
 import { ICONOS } from "./iconos.gen";
 
-export type Trazo = { d: string; stroke: string; strokeWidth: number; fill?: string };
+// "parte" marca a qué parte del personaje pertenece el trazo (cabeza, ojos, boca, brazo-izq, brazo-der),
+// para animarlas por separado: parpadeo, cabeza que se inclina, brazos que gesticulan
+export type Trazo = { d: string; stroke: string; strokeWidth: number; fill?: string; parte?: string };
+const parte = (trazos: Trazo[], nombre: string) => trazos.map((t) => ({ ...t, parte: nombre }));
 
 const gen = rough.generator();
 const TINTA = "#1f1f1f";
@@ -144,7 +147,7 @@ export const cerebro = (x: number, y: number, { cara = "feliz" as Cara, pose = "
   const ojo = (ox: number) => [...circulo(x + ox * s, y - 5 * s, 52 * s, pintado("#ffffff")), ...circulo(x + (ox + 4) * s, y - 2 * s, 20 * s, pintado("#1f1f1f"))];
   if (cara === "feliz") {
     t.push(...camino(`M ${P(-55, -5)} Q ${P(-38, -25)} ${P(-20, -5)}`), ...camino(`M ${P(20, -5)} Q ${P(38, -25)} ${P(55, -5)}`));
-  } else t.push(...ojo(-38), ...ojo(38));
+  } else t.push(...parte([...ojo(-38), ...ojo(38)], "ojos"));
   t.push(...camino({
     feliz: `M ${P(-25, 30)} Q ${P(0, 55)} ${P(25, 30)}`, normal: `M ${P(-15, 38)} Q ${P(0, 44)} ${P(15, 38)}`,
     triste: `M ${P(-20, 48)} Q ${P(0, 30)} ${P(20, 48)}`, sorpresa: `M ${P(-12, 40)} Q ${P(0, 20)} ${P(12, 40)} Q ${P(0, 60)} ${P(-12, 40)}`,
@@ -159,7 +162,7 @@ export const cerebro = (x: number, y: number, { cara = "feliz" as Cara, pose = "
     menton: [`M ${P(-150, 40)} Q ${P(-190, 90)} ${P(-185, 150)}`, `M ${P(150, 40)} Q ${P(110, 120)} ${P(40, 70)}`],
     arriba: [`M ${P(-150, -20)} Q ${P(-210, -80)} ${P(-200, -160)}`, `M ${P(150, -20)} Q ${P(210, -80)} ${P(200, -160)}`],
   }[pose];
-  t.push(...camino(brazos[0], { strokeWidth: 6 }), ...camino(brazos[1], { strokeWidth: 6 }));
+  t.push(...parte(camino(brazos[0], { strokeWidth: 6 }), "brazo-izq"), ...parte(camino(brazos[1], { strokeWidth: 6 }), "brazo-der"));
   if (pose === "musculos") {
     // Bíceps marcados
     t.push(...circulo(x - 205 * s, y - 15 * s, 42 * s, rosa), ...circulo(x + 205 * s, y - 15 * s, 42 * s, rosa));
@@ -276,15 +279,16 @@ export const caricatura = (
     adelante: [`M ${P(-80, -490)} Q ${P(-150, -420)} ${P(-140, -320)}`, `M ${P(80, -490)} Q ${P(190, -470)} ${P(250, -520)}`, [-140, -310], [262, -530]],
     cadera: [`M ${P(-80, -490)} Q ${P(-170, -400)} ${P(-90, -330)}`, `M ${P(80, -490)} Q ${P(170, -400)} ${P(90, -330)}`, [-85, -325], [85, -325]],
   }[brazo] as [string, string, number[], number[]];
-  t.push(...camino(brazos[0], { ...linea_, strokeWidth: 44, stroke: modelo.polo }), ...camino(brazos[1], { ...linea_, strokeWidth: 44, stroke: modelo.polo }));
-  t.push(...camino(brazos[0], { ...linea_, strokeWidth: 7 }), ...camino(brazos[1], { ...linea_, strokeWidth: 7 }));
-  t.push(...circulo(x + brazos[2][0] * s, y + brazos[2][1] * s, 62 * s, relleno(modelo.piel)), ...circulo(x + brazos[3][0] * s, y + brazos[3][1] * s, 62 * s, relleno(modelo.piel)));
+  t.push(...parte([...camino(brazos[0], { ...linea_, strokeWidth: 44, stroke: modelo.polo }), ...camino(brazos[0], { ...linea_, strokeWidth: 7 }),
+    ...circulo(x + brazos[2][0] * s, y + brazos[2][1] * s, 62 * s, relleno(modelo.piel))], "brazo-izq"));
+  t.push(...parte([...camino(brazos[1], { ...linea_, strokeWidth: 44, stroke: modelo.polo }), ...camino(brazos[1], { ...linea_, strokeWidth: 7 }),
+    ...circulo(x + brazos[3][0] * s, y + brazos[3][1] * s, 62 * s, relleno(modelo.piel))], "brazo-der"));
   // Cuello, cabeza y orejas
   t.push(...rect(x - 22 * s, y - 545 * s, 44 * s, 40 * s, relleno(modelo.piel)));
-  t.push(...circulo(hx(-98), hy(-650), 42 * K * s, relleno(modelo.piel)), ...circulo(hx(98), hy(-650), 42 * K * s, relleno(modelo.piel)));
-  t.push(...camino(`M ${H(-95, -700)} Q ${H(-100, -560)} ${H(0, -540)} Q ${H(100, -560)} ${H(95, -700)} Q ${H(90, -790)} ${H(0, -795)} Q ${H(-90, -790)} ${H(-95, -700)} Z`, relleno(modelo.piel)));
+  t.push(...parte([...circulo(hx(-98), hy(-650), 42 * K * s, relleno(modelo.piel)), ...circulo(hx(98), hy(-650), 42 * K * s, relleno(modelo.piel))], "cabeza"));
+  t.push(...parte(camino(`M ${H(-95, -700)} Q ${H(-100, -560)} ${H(0, -540)} Q ${H(100, -560)} ${H(95, -700)} Q ${H(90, -790)} ${H(0, -795)} Q ${H(-90, -790)} ${H(-95, -700)} Z`, relleno(modelo.piel)), "cabeza"));
   // Pelo de arriba (despeinado)
-  t.push(...camino(`M ${H(-100, -700)} Q ${H(-110, -820)} ${H(-20, -830)} Q ${H(30, -860)} ${H(70, -820)} Q ${H(120, -800)} ${H(100, -690)} Q ${H(60, -760)} ${H(0, -745)} Q ${H(-60, -770)} ${H(-100, -700)} Z`, relleno(modelo.pelo)));
+  t.push(...parte(camino(`M ${H(-100, -700)} Q ${H(-110, -820)} ${H(-20, -830)} Q ${H(30, -860)} ${H(70, -820)} Q ${H(120, -800)} ${H(100, -690)} Q ${H(60, -760)} ${H(0, -745)} Q ${H(-60, -770)} ${H(-100, -700)} Z`, relleno(modelo.pelo)), "cabeza"));
   // Ojos grandes
   const sBase = s;
   const ojo = (ox: number) => {
@@ -299,19 +303,19 @@ export const caricatura = (
     if (ojos === "preocupado") t2.push(...linea(cx - 30 * s, cy - 58 * s, cx + 20 * s, cy - (ox < 0 ? 48 : 68) * s, linea_));
     return t2;
   };
-  t.push(...ojo(-38), ...ojo(38));
+  t.push(...parte([...ojo(-38), ...ojo(38)], "ojos"));
   // Boca
   const by = hy(-590);
   const sb = s;
   {
   const s = sb * K;
-  t.push(...{
+  t.push(...parte({
     sonrisa: camino(`M ${x - 30 * s} ${by} Q ${x} ${by + 25 * s} ${x + 30 * s} ${by}`, linea_),
     abierta: camino(`M ${x - 35 * s} ${by - 8 * s} Q ${x} ${by + 55 * s} ${x + 35 * s} ${by - 8 * s} Z`, relleno("#7a1f2b")),
     chica: camino(`M ${x - 12 * s} ${by + 6 * s} L ${x + 12 * s} ${by + 6 * s}`, linea_),
     ondulada: camino(`M ${x - 30 * s} ${by + 5 * s} Q ${x - 15 * s} ${by - 8 * s} ${x} ${by + 5 * s} Q ${x + 15 * s} ${by + 18 * s} ${x + 30 * s} ${by + 5 * s}`, linea_),
     o: circulo(x, by + 8 * s, 26 * s, relleno("#7a1f2b")),
-  }[boca]);
+  }[boca], "boca"));
   }
   return t;
 };

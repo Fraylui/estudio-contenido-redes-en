@@ -13,19 +13,35 @@
 | Whoosh en cada escena, pops variados y golpes clave | Video 2 |
 | Punch-in de cámara en la palabra clave | Video 2 |
 | Dibujos que respiran y se balancean | Video 2 |
+| Etiquetas de sección con barra de progreso ("Paso 2 de 5") | Video 2 |
+| Sacudida de pantalla en los golpes | Video 2 |
+| Fondos degradados modernos con manchas en movimiento | Video 2 |
+| Fondos ilustrados con IA (escenarios) con desenfoque y acercamiento | Video 2 |
+| Look sticker (borde blanco + sombra) | Video 2 |
+| Subtítulos estilo CapCut (negrita, contorno, palabra clave en amarillo con rebote) | Video 2 |
+| Entrada de escena con zoom y desenfoque | Video 2 |
+| Personajes en caricatura (Mateo y Lucía) que aparecen enteros con rebote | Video 2 |
+| **Personajes vivos:** parpadean, inclinan la cabeza, gesticulan y mueven la boca | Video 2 |
 
 ## Próximas, por orden de impacto en la retención
+Las nuevas que vienen de lo aprendido en Infonimados, Academia Play y los anuncios de 2026:
+| N | Técnica | Inspirada en | Para qué sirve |
+|---|---|---|---|
+| A | **Personajes con objetos en la mano** (sobre de sueldo, celular) y **globos de diálogo** escritos a mano | Aprendiz Financiero | Contar la historia sin depender solo de la voz |
+| B | **Mano real dibujando** sobre la pizarra | Academia Play | Sensación artesanal y de "en vivo" |
+| C | **Celular con la app y un círculo rojo** sobre el dato | Anuncios 2026 | Mostrar cifras y apps de forma creíble |
+| D | **Personajes caminando y entrando a la escena** | Infonimados | Más acción, menos personajes quietos |
+| E | **Escenarios con IA por cada sección** (cocina, oficina, calle andina) | Infonimados | Variedad de lugares |
+
+Y las que ya estaban en la lista:
 | # | Técnica | Inspirada en | Para qué sirve |
 |---|---|---|---|
-| 1 | **Barra de progreso por capítulos** ("Paso 2 de 5") | Canales de listas y tutoriales | Que la gente se quede hasta el final |
 | 2 | **Pantallas de sección** animadas entre partes | Academia Play, Basado en Ciencia | Marcan el avance y "reinician" la atención |
 | 3 | **Números que cuentan solos** (de 0 a 1 800 soles) | MrBeast, canales de finanzas | Hacer impactantes los datos |
-| 4 | **Mascota que parpadea y mueve la boca con la voz** | CasiCreativo, Simio Alpha | Dar vida al personaje |
 | 5 | **Cámara que viaja por una pizarra gigante** (cada escena es una zona del mismo lienzo) | VideoScribe, Aprendiz Financiero | Continuidad visual: se siente un solo dibujo |
 | 6 | **Antes / después en pantalla dividida** | Miniaturas de comparación | Mostrar el cambio de Lucía o Mateo |
 | 7 | **Flechas, círculos y subrayados a mano** sobre lo importante | DOMINALO | Guiar la mirada |
 | 8 | **Remates de humor** cada 30 a 40 s (reacción exagerada, meme dibujado) | CasiCreativo | Romper el patrón y que el video se comparta |
-| 9 | **Sacudida de pantalla** en datos impactantes | MrBeast | Énfasis |
 | 10 | **Música de fondo libre** (Biblioteca de audio de YouTube) que baja sola cuando habla la voz | Todos | Energía constante |
 | 11 | **Pantalla final animada** con el siguiente video | Todos | Encadenar videos y sumar horas |
 | 12 | **Gancho de texto fijo arriba en los Shorts** | Shorts virales | Retener los primeros 3 s |

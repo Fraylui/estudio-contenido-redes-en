@@ -9,6 +9,7 @@ import {
   AbsoluteFill, CalculateMetadataFunction, Easing, Img, interpolate, Sequence, spring, staticFile, useCurrentFrame, useVideoConfig,
 } from "remotion";
 import { composicionSchema, resolverDibujo, type DibujoPizarra } from "./dibujos";
+import type { Trazo } from "./trazos";
 import catalogoSfx from "../../../public/sfx/efectos/sfx.json";
 
 loadFont({ family: "Mano", url: staticFile("fuentes/PatrickHand.woff2") });
@@ -318,9 +319,7 @@ const Dibujo: React.FC<{ dibujo: DibujoPizarra; duracion: number }> = ({ dibujo,
         <g style={{ transformBox: "fill-box", transformOrigin: "50% 100%" }}
           transform={`translate(0 ${(1 - entrada) * 120})`} opacity={Math.min(1, entrada * 2)}>
           <g style={{ transformBox: "fill-box", transformOrigin: "50% 100%", scale: `${0.7 + 0.3 * entrada}` }}>
-            {personaje.map((t, i) => (t.stroke === "none"
-              ? <path key={`p${i}`} d={t.d} fill={t.fill} />
-              : <path key={`p${i}`} d={t.d} stroke={t.stroke} strokeWidth={t.strokeWidth} fill="none" strokeLinecap="round" strokeLinejoin="round" />))}
+            <PersonajeVivo trazos={personaje} frame={frame} fps={fps} />
           </g>
         </g>
       ) : null}
@@ -364,6 +363,54 @@ const Dibujo: React.FC<{ dibujo: DibujoPizarra; duracion: number }> = ({ dibujo,
         );
       })}
     </svg>
+  );
+};
+
+// Personaje con vida: parpadea, inclina la cabeza, gesticula con los brazos y mueve la boca mientras habla la voz
+const dibujarTrazos = (trazos: Trazo[], clave: string) => trazos.map((t, i) => (t.stroke === "none"
+  ? <path key={`${clave}${i}`} d={t.d} fill={t.fill} />
+  : <path key={`${clave}${i}`} d={t.d} stroke={t.stroke} strokeWidth={t.strokeWidth} fill="none" strokeLinecap="round" strokeLinejoin="round" />));
+
+const caja = (trazos: Trazo[]) => {
+  const c = trazos.map((t) => getBoundingBox(t.d));
+  return { x1: Math.min(...c.map((b) => b.x1)), y1: Math.min(...c.map((b) => b.y1)), x2: Math.max(...c.map((b) => b.x2)), y2: Math.max(...c.map((b) => b.y2)) };
+};
+// El brazo gira desde el hombro: el punto donde empieza su primer trazo
+const hombro = (trazos: Trazo[]) => {
+  const m = trazos[0]?.d.match(/M\s*(-?[\d.]+)[ ,]+(-?[\d.]+)/);
+  return m ? `${m[1]} ${m[2]}` : "0 0";
+};
+
+const PersonajeVivo: React.FC<{ trazos: Trazo[]; frame: number; fps: number }> = ({ trazos, frame, fps }) => {
+  const partes = useMemo(() => {
+    const de = (n?: string) => trazos.filter((t) => t.parte === n);
+    return { cuerpo: de(undefined), izq: de("brazo-izq"), der: de("brazo-der"), cabeza: de("cabeza"), ojos: de("ojos"), boca: de("boca") };
+  }, [trazos]);
+  const t = frame / fps;
+  const cabeza = partes.cabeza.length ? caja(partes.cabeza) : null;
+  const ojos = partes.ojos.length ? caja(partes.ojos) : null;
+  const boca = partes.boca.length ? caja(partes.boca) : null;
+  // Parpadeo cada ~3,2 s durante 4 cuadros
+  const parpado = frame % Math.round(3.2 * fps) < 4 ? 0.12 : 1;
+  const giro = (centro: string, grados: number) => `rotate(${grados} ${centro})`;
+  const conCabeza = (
+    <>
+      {dibujarTrazos(partes.cabeza, "c")}
+      {ojos ? (
+        <g transform={`translate(0 ${(ojos.y1 + ojos.y2) / 2}) scale(1 ${parpado}) translate(0 ${-(ojos.y1 + ojos.y2) / 2})`}>{dibujarTrazos(partes.ojos, "o")}</g>
+      ) : null}
+      {boca ? (
+        <g transform={`translate(0 ${boca.y1}) scale(1 ${1 + 0.16 * Math.abs(Math.sin(t * 9))}) translate(0 ${-boca.y1})`}>{dibujarTrazos(partes.boca, "b")}</g>
+      ) : null}
+    </>
+  );
+  return (
+    <>
+      {dibujarTrazos(partes.cuerpo, "x")}
+      <g transform={giro(hombro(partes.izq), 5 * Math.sin(t * 2.3))}>{dibujarTrazos(partes.izq, "i")}</g>
+      <g transform={giro(hombro(partes.der), -5 * Math.sin(t * 2.3 + 1))}>{dibujarTrazos(partes.der, "d")}</g>
+      {cabeza ? <g transform={giro(`${(cabeza.x1 + cabeza.x2) / 2} ${cabeza.y2}`, 3 * Math.sin(t * 1.6))}>{conCabeza}</g> : conCabeza}
+    </>
   );
 };
 
