@@ -3,7 +3,7 @@
 // "objetos": ilustraciones de public/objetos/ (Fluent Emoji, licencia MIT) con su centro (x, y) y tamaño t.
 // "textos": rótulos escritos a mano dentro del dibujo.
 // El conjunto se ajusta solo al espacio disponible, así que las coordenadas solo importan entre sí.
-import { billeteraAbierta, caja, cerebro, monigote, type Trazo } from "./trazos";
+import { billeteraAbierta, caja, cerebro, icono, monigote, type Trazo } from "./trazos";
 
 export type Objeto = { img: string; x: number; y: number; t: number; rot?: number };
 export type Rotulo = { texto: string; x: number; y: number; t: number; color?: string; rot?: number };
@@ -14,6 +14,15 @@ const ROJO = "#d7263d";
 const VERDE = "#2e9e4f";
 
 export const DIBUJOS: Record<string, DibujoPizarra> = {
+  // --- Prueba de íconos a mano ---
+  "prueba-iconos": {
+    trazos: [
+      ...icono("pig-money", 150, 150, 220, "#ffd6a5"), ...icono("wallet", 450, 150, 220, "#cdb4db"),
+      ...icono("bulb", 750, 150, 220, "#ffe14d"), ...icono("alarm", 150, 450, 220, "#ffadad"),
+      ...icono("bed", 450, 450, 220, "#a2d2ff"), ...icono("coffee", 750, 450, 220, "#e9c46a"),
+    ],
+  },
+
   // --- Miniaturas ---
   "mini-kakeibo": {
     trazos: cerebro(330, 420, { cara: "sorpresa", pose: "arriba", s: 1.25 }),

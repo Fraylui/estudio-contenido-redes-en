@@ -21,10 +21,12 @@
     "react-dom": "19.2.3",
     "remotion": "4.0.537",
     "roughjs": "^4.6.6",
+    "svgpath": "^2.6.0",
     "zod": "4.5.4"
   },
   "devDependencies": {
     "@remotion/eslint-config-flat": "4.0.537",
+    "@tabler/icons": "^3.49.0",
     "@types/react": "19.2.7",
     "@types/web": "0.0.166",
     "eslint": "10.12.0",

@@ -2,6 +2,8 @@
 // siempre iguales gracias a la semilla, así el video no cambia entre un render y otro.
 import rough from "roughjs";
 import type { Options } from "roughjs/bin/core";
+import svgpath from "svgpath";
+import { ICONOS } from "./iconos.gen";
 
 export type Trazo = { d: string; stroke: string; strokeWidth: number; fill?: string };
 
@@ -222,4 +224,18 @@ export const quipu = (x1: number, x2: number, y: number, { largo = 220, colores 
     for (let k = 1; k <= 1 + (i % 3); k++) t.push(...circulo(x + 2, yc + (l * k) / (2 + (i % 3)), 16, pintado(color)));
   }
   return t;
+};
+
+// Ícono de línea (Tabler, MIT) redibujado a mano con rough.js, con una mancha de color detrás como si lo
+// hubieran pintado con plumón. Así los objetos tienen el mismo trazo que los monigotes y no parecen emojis.
+// (x, y) es el centro y t el tamaño; los nombres disponibles están en scripts/generar-iconos.mjs.
+export const icono = (nombre: string, x: number, y: number, t: number, color = "#ffe14d") => {
+  const k = t / 24;
+  const trazos: Trazo[] = [
+    ...circulo(x + t * 0.06, y + t * 0.06, t * 0.82, { fill: color, fillStyle: "solid", stroke: "none" }),
+  ];
+  for (const d of ICONOS[nombre] ?? []) {
+    trazos.push(...camino(svgpath(d).scale(k).translate(x - t / 2, y - t / 2).toString(), { strokeWidth: Math.max(4, k * 1.5), roughness: 0.7 }));
+  }
+  return trazos;
 };
