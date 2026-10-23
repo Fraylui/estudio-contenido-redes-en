@@ -1,6 +1,7 @@
 """Narra la "narracion" de un archivo de contenido con una voz clonada (Chatterbox) en español latino.
 
-Uso:  voz/.venv/bin/python voz/narrar.py contenido/mi-video.json public/voz/mi-video.wav
+Uso:  voz/.venv/bin/python voz/narrar.py contenido/mi-video.json public/voz/mi-video.wav [huella]
+(npm run lote pasa la huella del texto narrado para no volver a narrar si no cambió.)
 
 En el JSON, dentro de "props":
   "narracion": [
@@ -31,6 +32,7 @@ from chatterbox.mtl_tts import ChatterboxMultilingualTTS
 
 SR = 48000
 INICIO, PAUSA, FINAL = 0.3, 0.35, 0.5
+UMBRAL_SILENCIO = 0.006  # ~ -45 dBFS: no se come las "s", "f" y "h" suaves al recortar
 ESTILOS = {
     "normal":   {"exageracion": 0.40, "cfg": 0.30, "tempo": 1.00},
     "emocion":  {"exageracion": 0.65, "cfg": 0.30, "tempo": 1.00},
@@ -92,8 +94,9 @@ def a_48k(origen, destino, tempo=1.0):
     subprocess.run(["ffmpeg", "-loglevel", "error", "-y", "-i", str(origen), *filtro, "-ac", "1", "-ar", str(SR),
                     str(destino)], check=True)
     a, _ = sf.read(str(destino), dtype="float32")
-    voz = np.nonzero(np.abs(a) > 0.02)[0]
-    return a[max(voz[0] - 480, 0): voz[-1] + 480] if len(voz) else a
+    voz = np.nonzero(np.abs(a) > UMBRAL_SILENCIO)[0]
+    margen = int(0.035 * SR)
+    return a[max(voz[0] - margen, 0): voz[-1] + margen] if len(voz) else a
 
 
 def main():
@@ -146,11 +149,16 @@ def main():
         t += len(audio) / SR + f.get("pausa", PAUSA)
 
     total = np.concatenate(partes + [np.zeros(int(FINAL * SR), np.float32)])
-    total = total / (np.abs(total).max() or 1) * 0.89
     salida.parent.mkdir(parents=True, exist_ok=True)
-    sf.write(str(salida), total, SR)
-    salida.with_suffix(".json").write_text(json.dumps({"duracion": round(len(total) / SR, 3), "frases": tiempos},
-                                                      ensure_ascii=False, indent=1), encoding="utf-8")
+    # Volumen parejo entre narraciones: sonoridad -16 LUFS (pico máximo -1.5 dB), no por pico.
+    crudo = tmp / "narracion.wav"
+    sf.write(str(crudo), total, SR)
+    subprocess.run(["ffmpeg", "-loglevel", "error", "-y", "-i", str(crudo), "-af", "loudnorm=I=-16:TP=-1.5:LRA=11",
+                    "-ar", str(SR), "-ac", "1", str(salida)], check=True)
+    huella = sys.argv[3] if len(sys.argv) > 3 else None
+    salida.with_suffix(".json").write_text(json.dumps({"duracion": round(len(total) / SR, 3), "huella": huella,
+                                                       "frases": tiempos}, ensure_ascii=False, indent=1),
+                                           encoding="utf-8")
     print(f"Voz lista: {salida} ({len(total) / SR:.1f} s)")
 
 
