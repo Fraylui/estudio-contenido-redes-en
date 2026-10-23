@@ -4,7 +4,10 @@ import { useEscala } from "./escala";
 
 // Tu @usuario siempre visible y una barra de progreso abajo.
 // La barra hace que la gente se quede hasta el final.
-export const Firma: React.FC = () => {
+export const Firma: React.FC<{ colorTexto?: string; colorBarra?: string }> = ({
+  colorTexto = marca.colores.textoSuave,
+  colorBarra = marca.colores.primario,
+}) => {
   const frame = useCurrentFrame();
   const { durationInFrames } = useVideoConfig();
   const { px, vertical } = useEscala();
@@ -21,7 +24,7 @@ export const Firma: React.FC = () => {
           fontFamily: marca.fuentes.texto,
           fontWeight: 700,
           fontSize: px(34),
-          color: marca.colores.textoSuave,
+          color: colorTexto,
           letterSpacing: px(1),
         }}
       >
@@ -34,7 +37,7 @@ export const Firma: React.FC = () => {
           bottom: 0,
           height: px(10),
           width: `${(frame / (durationInFrames - 1)) * 100}%`,
-          background: marca.colores.primario,
+          background: colorBarra,
         }}
       />
     </AbsoluteFill>

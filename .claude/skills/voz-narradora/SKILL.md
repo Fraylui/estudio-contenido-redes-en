@@ -1,0 +1,87 @@
+---
+name: voz-narradora
+description: Narrar videos con voz clonada (Chatterbox) en español latino y dejar cualquier voz con calidad de locución. Usar cuando haya que generar la voz de un anuncio, Reel o video narrado, clonar la voz de una persona, mejorar o ecualizar una grabación (voz ronca, apagada, con ruido o poco clara), elegir las mejores frases entre varias tomas, o sincronizar las escenas de un anuncio con la narración.
+---
+
+# Voz narradora
+
+Todo vive en `voz/` y funciona en procesador, sin tarjeta gráfica. Las grabaciones de referencia (`voz/referencias/*`), el entorno (`voz/.venv`) y las voces generadas (`public/voz/`) **no se suben a GitHub**: el repositorio es público y con una grabación cualquiera puede clonar esa voz. Usa solo voces de personas que dieron su permiso.
+
+## 1. Instalar (una vez)
+
+```bash
+./voz/instalar.sh          # crea voz/.venv con Chatterbox, PyTorch CPU y faster-whisper (necesita uv y ffmpeg)
+```
+
+La primera narración descarga los modelos de Chatterbox multilingüe y del revisor Whisper (varios GB).
+
+## 2. Preparar la voz de referencia
+
+Pide a la persona **dos lecturas de 12 a 15 s cada una**, en un cuarto sin eco y con el celular a un palmo de la boca:
+- una **noticia**, para el tono serio → `voz/referencias/<nombre>.wav`;
+- un **cuento infantil**, para el tono alegre → `voz/referencias/<nombre>-alegre.wav`.
+
+Chatterbox copia el timbre **y también el sonido de la grabación**. Por eso la referencia siempre pasa por el ecualizador:
+
+```bash
+voz/.venv/bin/python voz/ecualizar.py nota.m4a voz/referencias/xiomi.wav --referencia        # 24 kHz, -18 LUFS
+voz/.venv/bin/python voz/ecualizar.py cuento.m4a voz/referencias/xiomi-alegre.wav --referencia
+```
+
+Si la persona mandó una sola grabación larga, transcríbela, busca los tramos y recórtalos con `ffmpeg -ss <inicio> -t <duración>`. Elige tramos sin errores ni repeticiones, porque la referencia también contagia las muletillas.
+
+## 3. Narrar
+
+En el JSON de contenido, dentro de `props`:
+
+```json
+"narracion": [
+  { "texto": "¡Tu encomienda sale volando al VRAEM!", "estilo": "urgente" },
+  { "texto": "Contáctanos al 943 960 656.", "estilo": "vendedor", "pausa": 0.2 }
+]
+```
+
+Y junto a `props`, si hace falta: `"voz": { "referencia": "voz/referencias/xiomi.wav", "pronunciacion": { "Satipo": "Satípo" } }`.
+
+`npm run lote -- <nombre>` narra (solo si el JSON cambió), revisa cada frase con Whisper, la repite hasta 3 veces si no coincide con el texto y ecualiza el resultado a -14 LUFS. Para narrar sin generar el video: `voz/.venv/bin/python voz/narrar.py contenido/x.json public/voz/x.wav`. También escribe `public/voz/x.json` con el inicio y el fin de cada frase.
+
+| Estilo | Para | Referencia |
+|---|---|---|
+| `normal` | información neutra | seria |
+| `serio` | datos, confianza, garantías | seria |
+| `calmado` | cierre tranquilo, explicaciones | seria |
+| `triste` | historias, pérdidas, empatía | seria |
+| `suspenso` | misterio, "lo que nadie te cuenta" | seria |
+| `pregunta` | ganchos con "?" (automático) | seria |
+| `feliz` | buenas noticias, logros | alegre |
+| `emocion` | sorpresa, revelación | alegre |
+| `vendedor` | anuncios, ofertas, llamados a la acción | alegre |
+| `urgente` | ganchos de los primeros 3 segundos | alegre |
+| `rapido`, `contando` | listas, ritmo de Reels, cuentos | alegre |
+
+**Pronunciación latina (automática en `narrar.py`):**
+- seseo: la c ante e/i y la z suenan como s;
+- nombres del VRAEM con su acento escrito (Pichári, Kimbíri, Vráem, Kinuapáta…);
+- siglas deletreadas (SD → "ese de", PNP → "pe ene pe");
+- "Jr." y "Av." sin pausa;
+- celulares dichos cifra por cifra, de tres en tres.
+
+Si un nombre sale mal, agrégalo en `voz.pronunciacion` escrito como se pronuncia, con la tilde donde va el acento. El texto en pantalla no cambia.
+
+## 4. Sincronizar un anuncio con la narración
+
+En `contenido/anuncio-*.json` cada escena puede indicar `"frase": n`, y entonces empieza cuando la voz dice la frase número n. Con `"fraseCambio": m`, su segundo texto (`texto2`) aparece en la frase m. La última escena dura hasta 1 s después de que termina la voz. Los efectos de sonido pueden anclarse a una escena con `"escena": n` (su `segundo` se cuenta desde el inicio de esa escena). Así nadie mide tiempos a mano.
+
+## 5. Mejorar una voz grabada (humana)
+
+1. **Diagnosticar antes de tocar.** Mide la energía por bandas: `voz/.venv/bin/python voz/ecualizar.py grabacion.m4a --medir`. En los celulares, lo típico es que sobren 250–500 Hz (suena ronca o "encajonada") y falten 2–4 kHz (no se entienden las consonantes). Busca también saturación (muestras cerca de 0 dBFS) y el nivel de ruido.
+2. **Si hay varias tomas, arma la mejor ("comping").** Transcribe con confianza por palabra (whisper.cpp `-ojf`), alinea cada toma con el guion y quédate, frase por frase, con la de mejor exactitud y confianza. Corta solo en silencios reales: mide la energía cada 10 ms, porque los tiempos de Whisper se corren entre 0,2 y 0,5 s. Pon fundidos de 15 ms y pausas de 0,12 s. Vuelve a transcribir el resultado para comprobar que no quedan palabras repetidas ni cortadas.
+3. **Ecualizar:** `voz/.venv/bin/python voz/ecualizar.py grabacion.wav final.wav`. Aplica el filtro de graves, la reducción de ruido suave, la compresión y la ecualización calculada para esa voz (no fija). Después controla las eses y normaliza a -14 LUFS en dos pasadas.
+4. **No uses reducción de ruido con IA si la grabación es limpia** (voz más de 30 dB sobre el fondo): no arregla lo ronco y puede borrar consonantes.
+
+## 6. Comprobar antes de entregar
+
+- Whisper reconoce el texto completo, sin frases repetidas ni cortadas. Los nombres propios pueden fallar en Whisper sin que suenen mal.
+- Las bandas quedan cerca del objetivo de `ecualizar.py`, sobre todo 2–4 kHz.
+- El video final mide -14 ±0,5 LUFS con pico de -1 dBFS o menos: `ffmpeg -i out.mp4 -af ebur128=peak=true -f null -`.
+- Escúchalo con audífonos y pide a la persona que lo confirme. Ni Claude ni Whisper reemplazan un oído humano para juzgar la naturalidad.

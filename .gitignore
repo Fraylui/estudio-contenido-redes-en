@@ -6,8 +6,17 @@ dist
 # Ignore the output video from Git but not videos you import into src/.
 out
 
+# Voz original y herramientas descargadas
+grabaciones/*
+!grabaciones/LEEME.md
+.whisper
+
+# Material de clientes (fotos y videos): no se sube porque el repositorio es público
+public/clientes/
+
 # Voz: entorno de Python, grabaciones de referencia (privadas) y narraciones generadas
 voz/.venv
 voz/referencias/*
 !voz/referencias/LEEME.md
 public/voz/
+__pycache__/

@@ -1,6 +1,10 @@
-import { Composition, Folder } from "remotion";
+import { z } from "zod";
+import { Composition, Folder, Still } from "remotion";
 import datosEjemplo from "../contenido/datos-poblacion-sudamerica.json";
 import fraseEjemplo from "../contenido/frase-constancia.json";
+import finDeMes from "../contenido/narrado-fin-de-mes.json";
+import elTunche from "../contenido/narrado-el-tunche.json";
+import anuncioEjemplo from "../contenido/anuncio-quinuapata.json";
 import topEjemplo from "../contenido/top-5-platos-peruanos.json";
 import triviaEjemplo from "../contenido/trivia-capital-australia.json";
 import {
@@ -9,6 +13,9 @@ import {
   datosBarrasSchema,
 } from "./formatos/DatosBarras";
 import { calcularFrase, Frase, fraseSchema } from "./formatos/Frase";
+import { calcularNarrado, Narrado, narradoSchema } from "./formatos/narrado/Narrado";
+import { Miniatura } from "./formatos/narrado/Miniatura";
+import { Anuncio, anuncioSchema, calcularAnuncio } from "./formatos/anuncio/Anuncio";
 import { calcularTopLista, TopLista, topListaSchema } from "./formatos/TopLista";
 import { calcularTrivia, Trivia, triviaSchema } from "./formatos/Trivia";
 import { conDuracionVoz, conNarracion, vozSchema } from "./comun/Narracion";
@@ -30,6 +37,28 @@ const TAMANOS = [
 export const RemotionRoot: React.FC = () => {
   return (
     <>
+      {/* Miniaturas de YouTube para los videos narrados (imagen fija de 1280x720) */}
+      <Folder name="Miniaturas">
+        {[finDeMes, elTunche].map((n) => (
+          <Still
+            key={n.props.id}
+            id={`Miniatura-${n.props.id}`}
+            component={Miniatura}
+            schema={narradoSchema}
+            defaultProps={n.props as z.infer<typeof narradoSchema>}
+            width={1280}
+            height={720}
+          />
+        ))}
+        <Still
+          id="Miniatura"
+          component={Miniatura}
+          schema={narradoSchema}
+          defaultProps={finDeMes.props as z.infer<typeof narradoSchema>}
+          width={1280}
+          height={720}
+        />
+      </Folder>
       {TAMANOS.map((t) => (
         <Folder key={t.nombre} name={t.nombre}>
           <Composition
@@ -72,6 +101,45 @@ export const RemotionRoot: React.FC = () => {
             defaultProps={datosEjemplo.props}
             calculateMetadata={conDuracionVoz(calcularDatosBarras)}
             durationInFrames={360}
+            fps={30}
+            width={t.width}
+            height={t.height}
+          />
+          {/* Videos narrados con tu voz: uno por cada ejemplo de contenido/narrado-*.json */}
+          {[elTunche, finDeMes].map((n) => (
+            <Composition
+              key={n.props.id}
+              id={`Narrado-${n.props.id}-${t.nombre}`}
+              component={Narrado}
+              schema={narradoSchema}
+              defaultProps={n.props as z.infer<typeof narradoSchema>}
+              calculateMetadata={calcularNarrado}
+              durationInFrames={900}
+              fps={30}
+              width={t.width}
+              height={t.height}
+            />
+          ))}
+          {/* Anuncios para Facebook e Instagram (contenido/anuncio-*.json) */}
+          <Composition
+            id={`Anuncio-${t.nombre}`}
+            component={Anuncio}
+            schema={anuncioSchema}
+            defaultProps={anuncioEjemplo.props as z.infer<typeof anuncioSchema>}
+            calculateMetadata={calcularAnuncio}
+            durationInFrames={900}
+            fps={30}
+            width={t.width}
+            height={t.height}
+          />
+          {/* Plantilla genérica que usa "npm run lote" para cualquier narrado-*.json */}
+          <Composition
+            id={`Narrado-${t.nombre}`}
+            component={Narrado}
+            schema={narradoSchema}
+            defaultProps={elTunche.props as z.infer<typeof narradoSchema>}
+            calculateMetadata={calcularNarrado}
+            durationInFrames={900}
             fps={30}
             width={t.width}
             height={t.height}
