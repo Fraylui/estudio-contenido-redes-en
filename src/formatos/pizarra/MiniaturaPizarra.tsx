@@ -35,7 +35,7 @@ const DibujoQuieto: React.FC<{ dibujo: DibujoPizarra }> = ({ dibujo }) => {
         ),
       )}
       {objetos.map((o, i) => (
-        <image key={`o${i}`} href={staticFile(o.img.startsWith("doodle:") ? `assets/doodles/${o.img.slice(7)}.svg` : o.img.startsWith("peep:") ? `assets/peeps/${o.img.slice(5)}.svg` : `objetos/${o.img}.svg`)}
+        <image key={`o${i}`} href={staticFile(o.img.startsWith("ia:") ? `assets/objetos-ia/${o.img.slice(3)}.png` : o.img.startsWith("doodle:") ? `assets/doodles/${o.img.slice(7)}.svg` : o.img.startsWith("peep:") ? `assets/peeps/${o.img.slice(5)}.svg` : `objetos/${o.img}.svg`)}
           x={o.x - o.t / 2} y={o.y - o.t / 2} width={o.t} height={o.t} transform={`rotate(${o.rot ?? 0} ${o.x} ${o.y})`} />
       ))}
       {textos.map((e, i) => (

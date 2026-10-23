@@ -33,13 +33,23 @@ ESTILOS = {
     # Un objeto suelto: centrado y sobre blanco para poder recortarlo con --sin-fondo
     "objeto": ("a single {p}, centered, isolated on plain white background, flat vector illustration, kurzgesagt style, "
                "clean geometric shapes, smooth gradients, soft shadows, vibrant limited color palette, crisp edges, no text"),
+    # Objetos 3D tipo plastilina: el estilo que mejor sale con este modelo (usar con --sin-fondo --pasos 4 --variantes 3)
+    "objeto3d": ("{p}, single object, centered, isolated on a pure white background, cute 3d clay render, soft rounded shapes, "
+                 "glossy plastic material, soft studio lighting, gentle shadow under the object, pastel colors, high detail, "
+                 "no text, no letters"),
     "foto": "{p}, photo, natural light, high detail",
     "ninguno": "{p}",
 }
 
 
 def quitar_fondo(img: Image.Image, tolerancia: int = 38) -> Image.Image:
-    """Vuelve transparente el color del fondo (el promedio de las 4 esquinas) con un borde suave."""
+    """Recorta el objeto con la IA de rembg (isnet, gratis y local); si no está instalada, usa el color de las esquinas."""
+    try:
+        from rembg import new_session, remove
+        recorte = remove(img, session=new_session("isnet-general-use"), post_process_mask=True)
+        return recorte.crop(recorte.getbbox())
+    except ImportError:
+        pass
     a = np.asarray(img.convert("RGB")).astype(np.int16)
     esquinas = np.array([a[0, 0], a[0, -1], a[-1, 0], a[-1, -1]]).mean(0)
     dist = np.sqrt(((a - esquinas) ** 2).sum(-1))
