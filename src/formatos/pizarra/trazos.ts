@@ -95,6 +95,28 @@ export const billetera = (x: number, y: number, { dinero = false, s = 1 } = {}) 
   return t;
 };
 
+// Billetera abierta y vacía en primer plano, sostenida por dos manos (como la foto de referencia)
+export const billeteraAbierta = (x: number, y: number, s = 1) => {
+  const P = (px: number, py: number) => `${x + px * s} ${y + py * s}`;
+  const cafe = { ...pintado("#6e3b1f"), hachureGap: 7 };
+  const interior = { ...pintado("#d29a62"), hachureGap: 11, hachureAngle: 60 };
+  return [
+    // Interior vacío (el bolsillo de los billetes abierto)
+    ...camino(`M ${P(-230, -40)} Q ${P(-110, -95)} ${P(0, -70)} Q ${P(110, -95)} ${P(230, -40)} L ${P(15, 20)} L ${P(-15, 20)} Z`, interior),
+    // Pliegue del medio: se ve el fondo vacío
+    ...camino(`M ${P(-15, 20)} Q ${P(0, -30)} ${P(0, -70)} Q ${P(0, -30)} ${P(15, 20)}`, { strokeWidth: 4 }),
+    // Las dos tapas de cuero
+    ...camino(`M ${P(-230, -40)} L ${P(-15, 20)} L ${P(-15, 140)} L ${P(-235, 75)} Z`, cafe),
+    ...camino(`M ${P(15, 20)} L ${P(230, -40)} L ${P(235, 75)} L ${P(15, 140)} Z`, cafe),
+    // Ranuras de las tarjetas, vacías
+    ...linea(x - 210 * s, y - 5 * s, x - 35 * s, y + 45 * s), ...linea(x - 210 * s, y + 25 * s, x - 35 * s, y + 75 * s),
+    // Mano izquierda abajo, sosteniendo
+    ...camino(`M ${P(-420, 260)} L ${P(-250, 110)} Q ${P(-200, 80)} ${P(-150, 110)} Q ${P(-110, 135)} ${P(-60, 150)} Q ${P(-40, 175)} ${P(-80, 185)} Q ${P(-170, 175)} ${P(-200, 190)} L ${P(-330, 320)}`, pintado("#f1c9a5")),
+    // Mano derecha arriba, abriendo la tapa
+    ...camino(`M ${P(420, -260)} L ${P(260, -110)} Q ${P(215, -70)} ${P(225, -30)} Q ${P(232, 0)} ${P(255, 0)} Q ${P(285, -10)} ${P(290, -60)} Q ${P(330, -100)} ${P(380, -110)} L ${P(470, -200)}`, pintado("#f1c9a5")),
+  ];
+};
+
 // Polilla que sale de la billetera vacía (el clásico chiste)
 export const polilla = (x: number, y: number, s = 1) => [
   ...camino(`M ${x} ${y} Q ${x - 25 * s} ${y - 30 * s} ${x - 35 * s} ${y + 5 * s} Z`, pintado("#9a9a9a")),
