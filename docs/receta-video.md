@@ -5,7 +5,7 @@ Es la lista que se cumple **en cada video, sin excepción**. El detalle está en
 ## 1. Elegir la idea (antes de escribir nada)
 - [ ] **Demanda comprobada:** `scripts/investigar-youtube.py "<tema>"`. Hay videos de ese tema con más de 500 000 vistas.
 - [ ] **Ángulo propio:** algo que esos videos no dicen, o una forma más clara o más cercana (Perú, Latinoamérica).
-- [ ] **Encaja en una serie** (`docs/plan-quipu.md`) y en el nicho de los primeros 20 videos: dinero, mente y hábitos.
+- [ ] **Encaja en una serie** (`docs/plan-quipu.md`), o abre una nueva. Cualquier tema vale: historias, lugares, curiosidades, dinero, tecnología, emociones…
 - [ ] **Se resume en una promesa:** "Después de verlo vas a poder ___".
 
 ## 2. Empaquetado primero: título y miniatura antes del guion
@@ -65,5 +65,5 @@ Si no hay un título y una miniatura que provoquen el clic, la idea se cambia (`
 
 ## 10. Aprender siempre
 - [ ] Anotar en `docs/mejora-continua.md` qué funcionó y qué no, con los datos.
-- [ ] Cada semana: revisar qué subieron los canales de referencia y los videos virales del nicho, y sumar ideas, ganchos y técnicas a los documentos.
+- [ ] Cada semana: revisar qué subieron los canales de referencia y los videos virales de cada serie, y sumar ideas, ganchos y técnicas a los documentos.
 - [ ] La siguiente vez, hacerlo mejor que la anterior.

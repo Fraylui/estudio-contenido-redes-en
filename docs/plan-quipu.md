@@ -2,7 +2,7 @@
 
 **Nombre:** **Khipu**, como se escribe en quechua (el sistema de cuerdas con nudos de los incas). La voz lo pronuncia "Kípu" (`voz/narrar.py`). El usuario del canal sigue siendo @tu_quipu mientras no se cambie en YouTube.
 
-**Promesa:** "Lo que nadie te explicó, explicado fácil." Videos de pizarra con la mascota cerebro (Khipu) y la voz de Xiomi.
+**Promesa:** "Lo que nadie te explicó, explicado fácil." Videos ilustrados con la voz de Xiomi, de **cualquier tema**. La marca es el nombre y el khipu, no un personaje: cada video usa los personajes y escenarios que pida su historia (el cerebro solo aparece en temas de mente).
 
 ## Público
 - **Fase 1 (hasta monetizar): solo español.** Personas de 18 a 35 años de Latinoamérica (primero Perú, México, Colombia y Argentina) y de España, que quieren mejorar su dinero, su mente y sus hábitos. Un canal en dos idiomas confunde al algoritmo: no sabe a quién mostrarle los videos.
@@ -17,14 +17,22 @@
 ## Regla de publicación
 **Todo se publica PÚBLICO**: el objetivo es monetizar. En Metricool, `privacy: "public"`, categoría Educación, no hecho para niños y voz con IA declarada.
 
-## Series fijas
-Hay tres series, para que el algoritmo y la gente sepan qué esperar.
+## Temas: sin límites
+Khipu habla de **todo**: historias, lugares, curiosidades, viajes y visitas, dinero, tecnología, amor, emociones, ciencia, salud, historia, misterios… Lo que une a los videos no es el tema sino la **forma**: contado fácil, bien investigado y muy visual.
 
-| Serie | Tema | Formato de título |
+Para que YouTube aprenda a quién mostrar cada video y la gente vea uno tras otro, cada tema va en una **serie con su lista de reproducción**. Se pueden abrir series nuevas cuando haga falta:
+
+| Serie | Temas | Formato de título |
 |---|---|---|
-| **Dinero simple** | Ahorro, deudas, hábitos con el dinero | "El método ___ para ___" |
-| **Tu cerebro cuando…** | Psicología, hábitos, emociones, amor | "Tu cerebro cuando ___" |
-| **¿Por qué…?** | Curiosidades del cuerpo, el mundo y la historia | "¿Por qué ___?" |
+| **Historias que no conocías** | Historias reales, personajes, hechos | "La historia de ___" |
+| **Lugares increíbles** | Lugares del Perú y del mundo, visitas, viajes | "El lugar donde ___" |
+| **¿Por qué…?** | Curiosidades del cuerpo, el mundo, la ciencia | "¿Por qué ___?" |
+| **Dinero simple** | Ahorro, deudas, inversiones | "El método ___ para ___" |
+| **Tecnología explicada** | Apps, IA, inventos, cómo funciona | "Cómo funciona ___" |
+| **Tu mente y tus emociones** | Psicología, hábitos, amor, relaciones | "Por qué sientes ___" |
+| **Misterios** | Enigmas, casos sin resolver, leyendas | "El misterio de ___" |
+
+**Regla de crecimiento:** se rotan las series, pero se repite más la que mejor funcione en las estadísticas (la revisión de cada lunes lo decide).
 
 ## Ritmo semanal
 
@@ -53,7 +61,7 @@ Hay tres series, para que el algoritmo y la gente sepan qué esperar.
 3. **Dibujos:** primero reusar la biblioteca; si falta uno, dibujarlo en el mismo estilo.
 4. **Voz:** la referencia clara de Xiomi, con el estilo `narrador` y sin cambiar la velocidad.
 5. **Efectos de sonido:** de 8 a 12 por video, solo en momentos clave (skill `video-sfx`).
-6. **Miniatura:** `MiniaturaPizarra`, con la mascota con una emoción exagerada, 2 o 3 palabras y una en rojo.
+6. **Miniatura:** `MiniaturaPizarra`, con el personaje o el objeto central del tema y una emoción exagerada, 2 o 3 palabras y una en rojo.
 7. **Short:** versión vertical del mejor tramo.
 8. **Publicación con Metricool:** solo en YouTube; Educación; voz con IA declarada; capítulos en la descripción.
 

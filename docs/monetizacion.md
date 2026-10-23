@@ -17,15 +17,15 @@ La voz con IA **no** está prohibida; lo que se castiga es que todos los videos 
 
 **Lo que hace Khipu para pasar la revisión:**
 - Un **guion propio** en cada video, investigado y con fuentes en la descripción. Nunca se resume ni se copia el video de otro.
-- **Dibujos y personajes propios** (Mateo, Lucía, la mascota) y escenas hechas para ese tema. Nada de clips de stock repetidos.
+- **Dibujos y personajes propios** (Mateo, Lucía y los que pida cada historia) y escenas hechas para ese tema. Nada de clips de stock repetidos.
 - Cada video estrena técnicas nuevas (`docs/mejora-continua.md`). Nunca dos videos con la misma estructura visual.
 - **Opinión y criterio:** ejemplos peruanos y latinos, humor y un reto propio al final.
 - Se declara la IA (`isAiGeneratedContent`). Declararla no quita la monetización; ocultarla sí puede.
 - **Ritmo sostenible:** 2 o 3 videos largos por semana y un Short diario. Subir 10 videos al día parecería una granja de contenido.
 
 ## 3. Lo que hacen los creadores que monetizan rápido
-1. **Un nicho claro al inicio.** El algoritmo necesita saber a quién mostrar el canal. Los primeros 20 videos van a dinero, mente y hábitos; las curiosidades se suman después.
-2. **Series con nombre fijo** ("Tu cerebro cuando…", "Método japonés para…"), para que la gente vea un video tras otro.
+1. **Todos los temas, ordenados en series.** Khipu no se limita a un nicho. Para que el algoritmo sepa a quién mostrar cada video, cada uno va en una serie con su lista de reproducción, y se repite más la serie que mejor funciona.
+2. **Series con nombre fijo** ("La historia de…", "¿Por qué…?", "El lugar donde…"), para que la gente vea un video tras otro.
 3. **Videos de 8 a 12 minutos:** suman horas y permiten anuncios a mitad del video.
 4. **Retención por encima del 50 %:** gancho en 3 s, un cambio cada 30 s y bucles abiertos (`docs/psicologia-atencion.md`).
 5. **CTR de miniatura entre 5 y 10 %:** 3 variantes en cada video y prueba A/B.

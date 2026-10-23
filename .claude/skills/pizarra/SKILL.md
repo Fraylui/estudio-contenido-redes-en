@@ -119,7 +119,7 @@ Licencias:
 - **Motion graphics de `@remotion/effects`:** destello de luz de color (light leak) al cambiar de sección, automático.
 - **Círculo dibujado a mano** alrededor de cada rótulo (números, horas), automático.
 - **Confeti** con `"confeti": true` en las escenas de logro o resultado.
-- **No todo es la mascota cerebro:** usa Mateo y Lucía en caricatura (`caricatura:mateo:<ojos>:<boca>:<brazo>`) para las historias, y el cerebro solo cuando se habla de la mente.
+- **El cerebro no es la marca ni la mascota del canal:** Khipu trata todos los temas (historias, lugares, curiosidades, dinero, tecnología, emociones…). Cada video usa los personajes y escenarios de su historia: Mateo y Lucía en caricatura (`caricatura:mateo:<ojos>:<boca>:<brazo>`), personajes nuevos cuando hagan falta y escenarios con IA del lugar o la época. El cerebro solo aparece cuando se habla de la mente.
 - **Punch-in:** la cámara da un pequeño golpe de zoom cuando aparece la palabra resaltada.
 - **Ritmo visual:** algo nuevo aparece cada 1 o 2 s (trazo, objeto, rótulo, palabra), y los dibujos respiran al terminar.
 
