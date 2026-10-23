@@ -45,6 +45,18 @@ Una frase de narración = una escena = un dibujo nuevo (de 3 a 6 s). El texto en
 - Usa el estilo `narrador` en **todas** las frases y no pongas `velocidad`: cambiar la velocidad le da un tono robótico.
 - Sin puntos suspensivos en la narración (en pantalla sí).
 
+### Escenas armadas en el JSON (lo más rápido)
+
+En vez de un nombre, `dibujo` puede describir la escena y se arma sola: un personaje a la izquierda, de 1 a 4 íconos a mano a la derecha y un rótulo.
+
+```json
+{ "dibujo": { "personaje": "peep:mateo-cansada", "iconos": [["alarm", "#ffadad"], ["bed"]], "rotulo": "6:00" },
+  "texto": "Suena la alarma… y la apagas.", "resaltar": "apagas" }
+```
+
+- `personaje`: `peep:<persona>-<emoción>`, `cerebro:<cara>:<pose>`, `monigote:<cara>:<brazos>`, `lucia:<cara>:<brazos>`, o nada (solo íconos, centrados).
+- Íconos que todavía no existen: agrega su nombre en `scripts/generar-iconos.mjs` y corre `node scripts/generar-iconos.mjs`.
+
 ## 3. La biblioteca: primero reusar, después dibujar
 
 **Busca siempre primero en lo que ya existe** (`src/formatos/pizarra/dibujos.ts`):

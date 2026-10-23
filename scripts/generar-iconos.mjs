@@ -9,6 +9,9 @@ const ICONOS = [
   "confetti", "question-mark", "trending-up", "trending-down", "receipt", "bus", "torii", "alarm", "sparkles",
   "check", "x", "shopping-cart", "clock", "zzz", "bed", "sun", "moon", "heart", "heart-broken", "mood-happy",
   "mood-sad", "alarm-snooze", "run", "book", "barbell", "apple", "droplet", "flame",
+  "sunrise", "sunset", "window", "glass-full", "bolt", "battery-1", "battery-4", "walk", "stretching", "repeat",
+  "calendar-week", "device-tv", "hand-stop", "hourglass", "bell-ringing", "moon-stars", "cup", "clock-hour-7",
+  "mood-smile-beam", "mood-sick", "dna", "wave-sine", "stairs-up", "target",
 ];
 
 // Convierte cada elemento del SVG (path, circle, rect, line, polyline) en un "d" de path

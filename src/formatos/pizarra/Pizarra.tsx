@@ -8,7 +8,7 @@ import { z } from "zod";
 import {
   AbsoluteFill, CalculateMetadataFunction, interpolate, Sequence, spring, staticFile, useCurrentFrame, useVideoConfig,
 } from "remotion";
-import { DIBUJOS, type DibujoPizarra } from "./dibujos";
+import { composicionSchema, resolverDibujo, type DibujoPizarra } from "./dibujos";
 import catalogoSfx from "../../../public/sfx/efectos/sfx.json";
 
 loadFont({ family: "Mano", url: staticFile("fuentes/PatrickHand.woff2") });
@@ -16,7 +16,8 @@ loadFont({ family: "Mano", url: staticFile("fuentes/PatrickHand.woff2") });
 export const pizarraSchema = z.object({
   escenas: z.array(
     z.object({
-      dibujo: z.string(),
+      // Nombre de un dibujo de la biblioteca, o una escena armada (personaje + íconos + rótulo)
+      dibujo: z.union([z.string(), composicionSchema]),
       texto: z.string(),
       // Palabra (o palabras) que se resaltan en amarillo
       resaltar: z.string().optional(),
@@ -113,7 +114,7 @@ const Escena: React.FC<Props["escenas"][number]> = ({ dibujo, texto, resaltar, s
   return (
     <AbsoluteFill style={{ flexDirection: horizontal ? "row" : "column", transform: `scale(${zoom})` }}>
       <div style={{ flex: horizontal ? 1.05 : 1.2, position: "relative" }}>
-        <Dibujo dibujo={DIBUJOS[dibujo] ?? {}} duracion={Math.min(total * 0.6, 2.6 * FPS)} />
+        <Dibujo dibujo={resolverDibujo(dibujo)} duracion={Math.min(total * 0.6, 2.6 * FPS)} />
       </div>
       <div style={{ flex: 1, display: "flex", alignItems: "center", justifyContent: "center", padding: horizontal ? "0 90px 0 0" : "0 70px 160px" }}>
         <Texto texto={texto} resaltar={resaltar} duracion={total * 0.5} />

@@ -3,11 +3,11 @@
 import { getBoundingBox } from "@remotion/paths";
 import { z } from "zod";
 import { AbsoluteFill, staticFile } from "remotion";
-import { DIBUJOS, type DibujoPizarra } from "./dibujos";
+import { composicionSchema, resolverDibujo, type DibujoPizarra } from "./dibujos";
 import "../../marca";
 
 export const miniaturaPizarraSchema = z.object({
-  dibujo: z.string(),
+  dibujo: z.union([z.string(), composicionSchema]),
   linea1: z.string(),
   // Palabra estrella, en blanco sobre rojo
   linea2: z.string(),
@@ -48,7 +48,7 @@ const DibujoQuieto: React.FC<{ dibujo: DibujoPizarra }> = ({ dibujo }) => {
 export const MiniaturaPizarra: React.FC<z.infer<typeof miniaturaPizarraSchema>> = ({ dibujo, linea1, linea2, fondo }) => (
   <AbsoluteFill style={{ backgroundColor: fondo ?? "#ffe14d", flexDirection: "row", alignItems: "center", padding: "30px 40px" }}>
     <div style={{ width: 640, height: 640 }}>
-      <DibujoQuieto dibujo={DIBUJOS[dibujo] ?? {}} />
+      <DibujoQuieto dibujo={resolverDibujo(dibujo)} />
     </div>
     <div style={{ flex: 1, display: "flex", flexDirection: "column", alignItems: "center", gap: 18, fontFamily: "Titulo", textAlign: "center" }}>
       <div style={{ fontSize: 118, lineHeight: 0.95, color: "#1f1f1f" }}>{linea1}</div>

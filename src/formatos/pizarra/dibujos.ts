@@ -3,7 +3,8 @@
 // "objetos": ilustraciones de public/objetos/ (Fluent Emoji, licencia MIT) con su centro (x, y) y tamaño t.
 // "textos": rótulos escritos a mano dentro del dibujo.
 // El conjunto se ajusta solo al espacio disponible, así que las coordenadas solo importan entre sí.
-import { billeteraAbierta, caja, cerebro, icono, monigote, type Trazo } from "./trazos";
+import { z } from "zod";
+import { billeteraAbierta, caja, cerebro, icono, monigote, type Brazos, type Cara, type PoseCerebro, type Trazo } from "./trazos";
 
 export type Objeto = { img: string; x: number; y: number; t: number; rot?: number };
 export type Rotulo = { texto: string; x: number; y: number; t: number; color?: string; rot?: number };
@@ -245,3 +246,53 @@ export const DIBUJOS: Record<string, DibujoPizarra> = {
     textos: [{ texto: "¡Suscríbete!", x: 680, y: 220, t: 100, color: ROJO, rot: -6 }],
   },
 };
+
+// Escena armada desde el JSON, sin escribir coordenadas: un personaje a la izquierda, de 1 a 4 íconos a mano
+// a la derecha y un rótulo opcional. Así cada video nuevo no necesita tocar este archivo.
+//   personaje: "peep:mateo-cansada" · "cerebro:duda:menton" · "monigote:triste:abajo" · "lucia:feliz:arriba"
+//   iconos:    [["alarm", "#ffadad"], ["bed"]]   (nombre de Tabler y color de la mancha)
+export const composicionSchema = z.object({
+  personaje: z.string().optional(),
+  iconos: z.array(z.tuple([z.string()]).rest(z.string())).optional(),
+  rotulo: z.string().optional(),
+  colorRotulo: z.string().optional(),
+});
+export type Composicion = z.infer<typeof composicionSchema>;
+
+const PASTELES = ["#ffe14d", "#a2d2ff", "#ffadad", "#caffbf", "#ffd6a5", "#cdb4db"];
+const POSICIONES: Record<number, [number, number, number][]> = {
+  1: [[760, 430, 320]],
+  2: [[700, 280, 240], [820, 600, 240]],
+  3: [[650, 230, 210], [880, 430, 210], [680, 650, 210]],
+  4: [[650, 240, 190], [880, 240, 190], [650, 560, 190], [880, 560, 190]],
+};
+const POSICIONES_SOLAS: Record<number, [number, number, number][]> = {
+  1: [[550, 430, 420]],
+  2: [[330, 430, 320], [770, 430, 320]],
+  3: [[230, 430, 270], [550, 430, 270], [870, 430, 270]],
+  4: [[330, 250, 250], [770, 250, 250], [330, 620, 250], [770, 620, 250]],
+};
+
+export const componer = (c: Composicion): DibujoPizarra => {
+  const trazos: Trazo[] = [];
+  const objetos: Objeto[] = [];
+  const textos: Rotulo[] = [];
+  const [tipo, a, b] = (c.personaje ?? "").split(":");
+  if (tipo === "peep") objetos.push({ img: `peep:${a}`, x: 290, y: 440, t: 480 });
+  else if (tipo === "cerebro") trazos.push(...cerebro(290, 430, { cara: (a || "feliz") as Cara, pose: (b || "abajo") as PoseCerebro }));
+  else if (tipo === "monigote" || tipo === "lucia") {
+    trazos.push(...monigote(290, 300, { cara: (a || "normal") as Cara, brazos: (b || "abajo") as Brazos, pelo: tipo === "lucia" }));
+  }
+  const iconos = c.iconos ?? [];
+  const lugares = (tipo ? POSICIONES : POSICIONES_SOLAS)[Math.min(iconos.length, 4)] ?? [];
+  iconos.slice(0, 4).forEach(([nombre, color], i) => {
+    const [x, y, t] = lugares[i];
+    trazos.push(...icono(nombre, x, y, t, color ?? PASTELES[i % PASTELES.length]));
+  });
+  if (c.rotulo) {
+    textos.push({ texto: c.rotulo, x: tipo ? 760 : 550, y: tipo ? 880 : 860, t: 100, color: c.colorRotulo ?? ROJO });
+  }
+  return { trazos, objetos, textos };
+};
+
+export const resolverDibujo = (d: string | Composicion): DibujoPizarra => (typeof d === "string" ? DIBUJOS[d] ?? {} : componer(d));

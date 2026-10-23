@@ -1,0 +1,1006 @@
+{
+  "formato": "Pizarra",
+  "voz": {
+    "referencia": "voz/referencias/xiomi-clara.wav",
+    "pausa": 0.22
+  },
+  "props": {
+    "escenas": [
+      {
+        "dibujo": {
+          "personaje": "peep:mateo-cansada",
+          "iconos": [
+            [
+              "alarm",
+              "#ffadad"
+            ]
+          ],
+          "rotulo": "6:00"
+        },
+        "texto": "Suena la alarma… y la apagas.",
+        "resaltar": "apagas",
+        "sonido": "flash_shock",
+        "sonidoEn": 0.1
+      },
+      {
+        "dibujo": {
+          "personaje": "peep:mateo-cansada",
+          "iconos": [
+            [
+              "alarm-snooze",
+              "#ffadad"
+            ],
+            [
+              "alarm-snooze",
+              "#ffd6a5"
+            ],
+            [
+              "alarm-snooze",
+              "#ffe14d"
+            ]
+          ],
+          "rotulo": "x3"
+        },
+        "texto": "Cinco minutos más… otra vez.",
+        "resaltar": "otra vez"
+      },
+      {
+        "dibujo": {
+          "personaje": "peep:mateo-estresada",
+          "iconos": [
+            [
+              "clock",
+              "#ffadad"
+            ],
+            [
+              "run",
+              "#a2d2ff"
+            ]
+          ],
+          "rotulo": "¡tarde!"
+        },
+        "texto": "Te levantas tarde, apurado y cansado.",
+        "resaltar": "cansado"
+      },
+      {
+        "dibujo": {
+          "personaje": "cerebro:duda:menton",
+          "iconos": [
+            [
+              "question-mark",
+              "#ffe14d"
+            ]
+          ]
+        },
+        "texto": "¿Por qué pasa esto?",
+        "resaltar": "¿Por qué"
+      },
+      {
+        "dibujo": {
+          "personaje": "cerebro:sorpresa:arriba",
+          "iconos": [
+            [
+              "clock-hour-7",
+              "#caffbf"
+            ],
+            [
+              "bulb",
+              "#ffe14d"
+            ]
+          ]
+        },
+        "texto": "Tu cerebro tiene un reloj.",
+        "resaltar": "reloj.",
+        "sonido": "magic_reveal",
+        "sonidoEn": 1.0
+      },
+      {
+        "dibujo": {
+          "personaje": "peep:mateo-sonrisa",
+          "iconos": [
+            [
+              "device-mobile",
+              "#cdb4db"
+            ]
+          ],
+          "rotulo": "1:00 a. m."
+        },
+        "texto": "Mateo se duerme viendo el celular.",
+        "resaltar": "celular.",
+        "sonido": "whoosh",
+        "sonidoEn": 0.2
+      },
+      {
+        "dibujo": {
+          "personaje": "peep:mateo-cansada",
+          "iconos": [
+            [
+              "alarm",
+              "#ffadad"
+            ]
+          ],
+          "rotulo": "6:00 a. m."
+        },
+        "texto": "Su alarma suena a las 6.",
+        "resaltar": "6"
+      },
+      {
+        "dibujo": {
+          "personaje": "peep:mateo-cansada",
+          "iconos": [
+            [
+              "alarm-snooze",
+              "#ffadad"
+            ],
+            [
+              "repeat",
+              "#ffd6a5"
+            ]
+          ]
+        },
+        "texto": "La pospone cinco veces.",
+        "resaltar": "cinco veces."
+      },
+      {
+        "dibujo": {
+          "personaje": "peep:mateo-comiendo",
+          "iconos": [
+            [
+              "coffee",
+              "#ffd6a5"
+            ],
+            [
+              "coffee",
+              "#e9c46a"
+            ]
+          ]
+        },
+        "texto": "Dos cafés para funcionar.",
+        "resaltar": "Dos cafés"
+      },
+      {
+        "dibujo": {
+          "personaje": "peep:mateo-cansada",
+          "iconos": [
+            [
+              "battery-1",
+              "#ffadad"
+            ]
+          ],
+          "rotulo": "3:00 p. m."
+        },
+        "texto": "…y a la tarde está agotado.",
+        "resaltar": "agotado."
+      },
+      {
+        "dibujo": {
+          "personaje": "peep:mateo-calma",
+          "iconos": [
+            [
+              "calendar-week",
+              "#a2d2ff"
+            ],
+            [
+              "bed",
+              "#caffbf"
+            ]
+          ]
+        },
+        "texto": "El fin de semana duerme hasta el mediodía.",
+        "resaltar": "mediodía."
+      },
+      {
+        "dibujo": {
+          "personaje": "peep:mateo-preocupada",
+          "iconos": [
+            [
+              "repeat",
+              "#ffadad"
+            ]
+          ],
+          "rotulo": "lunes"
+        },
+        "texto": "Y el lunes… todo empeora.",
+        "resaltar": "empeora."
+      },
+      {
+        "dibujo": {
+          "personaje": "cerebro:duda:menton",
+          "iconos": [
+            [
+              "question-mark",
+              "#ffe14d"
+            ],
+            [
+              "battery-1",
+              "#ffadad"
+            ]
+          ]
+        },
+        "texto": "¿Por qué siempre está cansado?",
+        "resaltar": "siempre"
+      },
+      {
+        "dibujo": {
+          "personaje": "cerebro:feliz:abajo",
+          "iconos": [
+            [
+              "clock",
+              "#caffbf"
+            ]
+          ],
+          "rotulo": "24 h"
+        },
+        "texto": "Un reloj interno de 24 horas.",
+        "resaltar": "24",
+        "sonido": "whoosh_2",
+        "sonidoEn": 0.2
+      },
+      {
+        "dibujo": {
+          "personaje": "cerebro:feliz:arriba",
+          "iconos": [
+            [
+              "sun",
+              "#ffe14d"
+            ],
+            [
+              "moon",
+              "#a2d2ff"
+            ]
+          ]
+        },
+        "texto": "Ritmo circadiano.",
+        "resaltar": "circadiano."
+      },
+      {
+        "dibujo": {
+          "personaje": "cerebro:sorpresa:arriba",
+          "iconos": [
+            [
+              "sunrise",
+              "#ffe14d"
+            ]
+          ]
+        },
+        "texto": "La luz lo pone en hora.",
+        "resaltar": "luz"
+      },
+      {
+        "dibujo": {
+          "personaje": "cerebro:duda:menton",
+          "iconos": [
+            [
+              "device-mobile",
+              "#cdb4db"
+            ],
+            [
+              "moon",
+              "#a2d2ff"
+            ]
+          ]
+        },
+        "texto": "La pantalla de noche lo confunde.",
+        "resaltar": "confunde."
+      },
+      {
+        "dibujo": {
+          "personaje": "cerebro:triste:abajo",
+          "iconos": [
+            [
+              "clock",
+              "#ffadad"
+            ]
+          ],
+          "rotulo": "se atrasa"
+        },
+        "texto": "Tu reloj se atrasa.",
+        "resaltar": "atrasa."
+      },
+      {
+        "dibujo": {
+          "personaje": "cerebro:feliz:abajo",
+          "iconos": [
+            [
+              "hourglass",
+              "#ffd6a5"
+            ]
+          ]
+        },
+        "texto": "Presión de sueño.",
+        "resaltar": "Presión"
+      },
+      {
+        "dibujo": {
+          "personaje": "cerebro:triste:abajo",
+          "iconos": [
+            [
+              "battery-1",
+              "#ffadad"
+            ],
+            [
+              "zzz",
+              "#a2d2ff"
+            ]
+          ]
+        },
+        "texto": "Más adenosina, más sueño.",
+        "resaltar": "más sueño."
+      },
+      {
+        "dibujo": {
+          "personaje": "cerebro:duda:menton",
+          "iconos": [
+            [
+              "coffee",
+              "#ffd6a5"
+            ],
+            [
+              "hand-stop",
+              "#ffadad"
+            ]
+          ]
+        },
+        "texto": "La cafeína la tapa.",
+        "resaltar": "tapa."
+      },
+      {
+        "dibujo": {
+          "personaje": "cerebro:sorpresa:arriba",
+          "iconos": [
+            [
+              "wave-sine",
+              "#caffbf"
+            ]
+          ],
+          "rotulo": "90 min"
+        },
+        "texto": "Ciclos de unos 90 minutos.",
+        "resaltar": "90",
+        "sonido": "ding",
+        "sonidoEn": 1.2
+      },
+      {
+        "dibujo": {
+          "personaje": "peep:mateo-sorprendida",
+          "iconos": [
+            [
+              "alarm",
+              "#ffadad"
+            ],
+            [
+              "zzz",
+              "#a2d2ff"
+            ]
+          ]
+        },
+        "texto": "Despertar en sueño profundo pesa.",
+        "resaltar": "profundo"
+      },
+      {
+        "dibujo": {
+          "personaje": "cerebro:duda:menton",
+          "iconos": [
+            [
+              "hourglass",
+              "#ffd6a5"
+            ]
+          ],
+          "rotulo": "inercia"
+        },
+        "texto": "Se llama inercia del sueño.",
+        "resaltar": "inercia"
+      },
+      {
+        "dibujo": {
+          "personaje": "peep:mateo-preocupada",
+          "iconos": [
+            [
+              "alarm-snooze",
+              "#ffadad"
+            ],
+            [
+              "x",
+              "#ffadad"
+            ]
+          ]
+        },
+        "texto": "Posponer la alarma lo empeora.",
+        "resaltar": "empeora."
+      },
+      {
+        "dibujo": {
+          "personaje": "cerebro:triste:abajo",
+          "iconos": [
+            [
+              "battery-1",
+              "#ffadad"
+            ]
+          ]
+        },
+        "texto": "Más inercia, más cansancio.",
+        "resaltar": "cansancio.",
+        "sonido": "boom",
+        "sonidoEn": 1.2
+      },
+      {
+        "dibujo": {
+          "personaje": "peep:mateo-cansada",
+          "iconos": [
+            [
+              "calendar-week",
+              "#a2d2ff"
+            ],
+            [
+              "sunrise",
+              "#ffe14d"
+            ]
+          ]
+        },
+        "texto": "Dormir hasta tarde el finde: jet lag social.",
+        "resaltar": "jet lag"
+      },
+      {
+        "dibujo": {
+          "personaje": "cerebro:triste:abajo",
+          "iconos": [
+            [
+              "clock",
+              "#ffadad"
+            ],
+            [
+              "repeat",
+              "#ffd6a5"
+            ]
+          ],
+          "rotulo": "lunes"
+        },
+        "texto": "Por eso el lunes cuesta tanto.",
+        "resaltar": "lunes"
+      },
+      {
+        "dibujo": {
+          "personaje": "cerebro:feliz:musculos",
+          "iconos": [
+            [
+              "target",
+              "#caffbf"
+            ]
+          ],
+          "rotulo": "5 pasos"
+        },
+        "texto": "5 pasos para despertar con energía.",
+        "resaltar": "energía.",
+        "sonido": "whoosh_3",
+        "sonidoEn": 0.2
+      },
+      {
+        "dibujo": {
+          "iconos": [
+            [
+              "calendar-week",
+              "#a2d2ff"
+            ],
+            [
+              "clock-hour-7",
+              "#caffbf"
+            ]
+          ],
+          "rotulo": "1"
+        },
+        "texto": "1. Misma hora, todos los días.",
+        "resaltar": "Misma hora,"
+      },
+      {
+        "dibujo": {
+          "personaje": "cerebro:feliz:abajo",
+          "iconos": [
+            [
+              "clock",
+              "#caffbf"
+            ]
+          ],
+          "rotulo": "±1 h"
+        },
+        "texto": "Máximo una hora de diferencia.",
+        "resaltar": "una hora"
+      },
+      {
+        "dibujo": {
+          "iconos": [
+            [
+              "sunrise",
+              "#ffe14d"
+            ],
+            [
+              "window",
+              "#a2d2ff"
+            ]
+          ],
+          "rotulo": "2"
+        },
+        "texto": "2. Luz natural apenas despiertes.",
+        "resaltar": "Luz natural"
+      },
+      {
+        "dibujo": {
+          "personaje": "cerebro:sorpresa:arriba",
+          "iconos": [
+            [
+              "sun",
+              "#ffe14d"
+            ]
+          ],
+          "rotulo": "10–15 min"
+        },
+        "texto": "Diez a quince minutos bastan.",
+        "resaltar": "quince minutos"
+      },
+      {
+        "dibujo": {
+          "iconos": [
+            [
+              "alarm",
+              "#ffadad"
+            ],
+            [
+              "walk",
+              "#caffbf"
+            ]
+          ],
+          "rotulo": "3"
+        },
+        "texto": "3. Alarma lejos de la cama.",
+        "resaltar": "lejos"
+      },
+      {
+        "dibujo": {
+          "personaje": "peep:mateo-sospecha",
+          "iconos": [
+            [
+              "alarm-snooze",
+              "#ffadad"
+            ],
+            [
+              "x",
+              "#ffadad"
+            ]
+          ]
+        },
+        "texto": "Nada de posponer.",
+        "resaltar": "Nada"
+      },
+      {
+        "dibujo": {
+          "iconos": [
+            [
+              "wave-sine",
+              "#caffbf"
+            ],
+            [
+              "bed",
+              "#a2d2ff"
+            ]
+          ],
+          "rotulo": "4"
+        },
+        "texto": "4. Calcula tus ciclos.",
+        "resaltar": "ciclos."
+      },
+      {
+        "dibujo": {
+          "personaje": "cerebro:feliz:abajo",
+          "iconos": [
+            [
+              "clock-hour-7",
+              "#caffbf"
+            ]
+          ],
+          "rotulo": "7 h 30"
+        },
+        "texto": "5 ciclos = 7 h 30.",
+        "resaltar": "7 h 30."
+      },
+      {
+        "dibujo": {
+          "personaje": "cerebro:duda:menton",
+          "iconos": [
+            [
+              "moon-stars",
+              "#a2d2ff"
+            ]
+          ],
+          "rotulo": "+15 min"
+        },
+        "texto": "Suma 15 minutos para dormirte.",
+        "resaltar": "15 minutos"
+      },
+      {
+        "dibujo": {
+          "iconos": [
+            [
+              "device-mobile",
+              "#cdb4db"
+            ],
+            [
+              "moon",
+              "#a2d2ff"
+            ],
+            [
+              "coffee",
+              "#ffd6a5"
+            ]
+          ],
+          "rotulo": "5"
+        },
+        "texto": "5. Prepara la noche.",
+        "resaltar": "noche."
+      },
+      {
+        "dibujo": {
+          "personaje": "cerebro:duda:menton",
+          "iconos": [
+            [
+              "coffee",
+              "#ffd6a5"
+            ],
+            [
+              "clock",
+              "#ffadad"
+            ]
+          ],
+          "rotulo": "2:00 p. m."
+        },
+        "texto": "Último café antes de las 2.",
+        "resaltar": "antes"
+      },
+      {
+        "dibujo": {
+          "personaje": "cerebro:feliz:musculos",
+          "iconos": [
+            [
+              "stairs-up",
+              "#caffbf"
+            ]
+          ],
+          "rotulo": "15 min"
+        },
+        "texto": "El truco: avanza de 15 en 15.",
+        "resaltar": "15",
+        "sonido": "whoosh",
+        "sonidoEn": 0.2
+      },
+      {
+        "dibujo": {
+          "personaje": "cerebro:feliz:abajo",
+          "iconos": [
+            [
+              "calendar",
+              "#a2d2ff"
+            ],
+            [
+              "stairs-up",
+              "#caffbf"
+            ]
+          ],
+          "rotulo": "cada 3 días"
+        },
+        "texto": "Adelanta 15 minutos cada 3 días.",
+        "resaltar": "cada 3 días."
+      },
+      {
+        "dibujo": {
+          "personaje": "peep:mateo-feliz",
+          "iconos": [
+            [
+              "sunrise",
+              "#ffe14d"
+            ]
+          ],
+          "rotulo": "6:30"
+        },
+        "texto": "Mateo probó durante 3 semanas.",
+        "resaltar": "3 semanas.",
+        "sonido": "whoosh_2",
+        "sonidoEn": 0.2
+      },
+      {
+        "dibujo": {
+          "personaje": "peep:mateo-feliz",
+          "iconos": [
+            [
+              "alarm",
+              "#caffbf"
+            ],
+            [
+              "check",
+              "#caffbf"
+            ]
+          ]
+        },
+        "texto": "Ya no pospone la alarma.",
+        "resaltar": "no pospone"
+      },
+      {
+        "dibujo": {
+          "personaje": "peep:mateo-risa",
+          "iconos": [
+            [
+              "battery-4",
+              "#caffbf"
+            ],
+            [
+              "bolt",
+              "#ffe14d"
+            ]
+          ]
+        },
+        "texto": "…y tiene energía todo el día.",
+        "resaltar": "energía",
+        "sonido": "ding",
+        "sonidoEn": 1.0
+      },
+      {
+        "dibujo": {
+          "personaje": "cerebro:feliz:arriba",
+          "iconos": [
+            [
+              "clock",
+              "#caffbf"
+            ],
+            [
+              "bulb",
+              "#ffe14d"
+            ]
+          ]
+        },
+        "texto": "No necesitó más fuerza de voluntad.",
+        "resaltar": "fuerza"
+      },
+      {
+        "dibujo": {
+          "iconos": [
+            [
+              "calendar-week",
+              "#a2d2ff"
+            ],
+            [
+              "check",
+              "#caffbf"
+            ]
+          ],
+          "rotulo": "7 días"
+        },
+        "texto": "Reto: 7 días a la misma hora.",
+        "resaltar": "7 días"
+      },
+      {
+        "dibujo": {
+          "personaje": "peep:mateo-explicando",
+          "iconos": [
+            [
+              "device-mobile",
+              "#cdb4db"
+            ]
+          ]
+        },
+        "texto": "Cuéntame tu hora de despertar.",
+        "resaltar": "Cuéntame"
+      },
+      {
+        "dibujo": {
+          "personaje": "cerebro:feliz:musculos",
+          "iconos": [
+            [
+              "heart",
+              "#ffadad"
+            ]
+          ],
+          "rotulo": "Quipu"
+        },
+        "texto": "Suscríbete a Quipu.",
+        "resaltar": "Quipu.",
+        "sonido": "ding",
+        "sonidoEn": 1.2
+      }
+    ],
+    "narracion": [
+      {
+        "texto": "Suena la alarma. La apagas. Cinco minutos más.",
+        "estilo": "narrador"
+      },
+      {
+        "texto": "Y otra vez. Y otra vez.",
+        "estilo": "narrador"
+      },
+      {
+        "texto": "Al final te levantas tarde, apurado, y más cansado que cuando te acostaste.",
+        "estilo": "narrador"
+      },
+      {
+        "texto": "¿Te ha pasado? No es pereza.",
+        "estilo": "narrador"
+      },
+      {
+        "texto": "Es tu reloj interno, y hoy vas a aprender a ponerlo de tu lado. Esto es Quipu.",
+        "estilo": "narrador"
+      },
+      {
+        "texto": "Él es Mateo. Todas las noches dice que se va a dormir temprano, pero se queda viendo el celular hasta la una de la mañana.",
+        "estilo": "narrador"
+      },
+      {
+        "texto": "Su alarma suena a las seis.",
+        "estilo": "narrador"
+      },
+      {
+        "texto": "La pospone cinco veces.",
+        "estilo": "narrador"
+      },
+      {
+        "texto": "Toma dos cafés para poder funcionar,",
+        "estilo": "narrador"
+      },
+      {
+        "texto": "y a las tres de la tarde ya está agotado.",
+        "estilo": "narrador"
+      },
+      {
+        "texto": "El fin de semana duerme hasta el mediodía para recuperarse.",
+        "estilo": "narrador"
+      },
+      {
+        "texto": "Y el lunes, todo vuelve a empezar, pero peor.",
+        "estilo": "narrador"
+      },
+      {
+        "texto": "¿Por qué Mateo siempre está cansado, aunque a veces duerma muchas horas?",
+        "estilo": "narrador"
+      },
+      {
+        "texto": "Dentro de tu cerebro hay un reloj que marca un ciclo de unas veinticuatro horas.",
+        "estilo": "narrador"
+      },
+      {
+        "texto": "Se llama ritmo circadiano, y decide cuándo te da sueño y cuándo te sientes despierto.",
+        "estilo": "narrador"
+      },
+      {
+        "texto": "Y lo que más lo ajusta es la luz. Cuando la luz de la mañana entra por tus ojos, tu reloj entiende que empezó el día.",
+        "estilo": "narrador"
+      },
+      {
+        "texto": "Pero si de noche miras una pantalla brillante, tu reloj se confunde, y retrasa la hormona que te da sueño: la melatonina.",
+        "estilo": "narrador"
+      },
+      {
+        "texto": "Resultado: tu reloj se atrasa. Te da sueño más tarde, y a las seis de la mañana tu cuerpo todavía cree que es de noche.",
+        "estilo": "narrador"
+      },
+      {
+        "texto": "Hay un segundo sistema: la presión de sueño. Mientras estás despierto, en tu cerebro se acumula una sustancia llamada adenosina.",
+        "estilo": "narrador"
+      },
+      {
+        "texto": "Mientras más se acumula, más sueño sientes. Dormir es lo que la limpia.",
+        "estilo": "narrador"
+      },
+      {
+        "texto": "La cafeína funciona tapando la adenosina. No te quita el cansancio: solo lo esconde un rato.",
+        "estilo": "narrador"
+      },
+      {
+        "texto": "Y el sueño no es una sola cosa: va en ciclos de unos noventa minutos, de sueño ligero a sueño profundo, y de vuelta.",
+        "estilo": "narrador"
+      },
+      {
+        "texto": "Si la alarma te despierta en medio del sueño profundo, te levantas atontado, como con la cabeza pesada.",
+        "estilo": "narrador"
+      },
+      {
+        "texto": "Eso se llama inercia del sueño, y puede durar desde unos minutos hasta una hora.",
+        "estilo": "narrador"
+      },
+      {
+        "texto": "Y aquí está la trampa: cada vez que pospones la alarma, vuelves a dormirte un poco, y despiertas otra vez a la fuerza.",
+        "estilo": "narrador"
+      },
+      {
+        "texto": "Más interrupciones, más inercia del sueño. Los cinco minutos más te dejan más cansado, no menos.",
+        "estilo": "narrador"
+      },
+      {
+        "texto": "Y dormir hasta el mediodía el fin de semana es como viajar a otro país cada sábado. Los científicos lo llaman jet lag social.",
+        "estilo": "narrador"
+      },
+      {
+        "texto": "Tu reloj se mueve dos o tres horas, y por eso el lunes se siente tan terrible.",
+        "estilo": "narrador"
+      },
+      {
+        "texto": "La buena noticia: tu reloj se puede reentrenar. Estos son cinco pasos.",
+        "estilo": "narrador"
+      },
+      {
+        "texto": "Uno: despierta a la misma hora todos los días, también el fin de semana.",
+        "estilo": "narrador"
+      },
+      {
+        "texto": "Si quieres dormir un poco más el sábado, que sea máximo una hora más. Tu reloj ama la rutina.",
+        "estilo": "narrador"
+      },
+      {
+        "texto": "Dos: apenas te levantes, busca luz natural. Abre la cortina, sal al balcón, o camina unos minutos afuera.",
+        "estilo": "narrador"
+      },
+      {
+        "texto": "Con diez o quince minutos, tu reloj recibe la señal de que empezó el día, y esa noche te dará sueño más temprano.",
+        "estilo": "narrador"
+      },
+      {
+        "texto": "Tres: pon la alarma lejos de la cama, para tener que levantarte a apagarla.",
+        "estilo": "narrador"
+      },
+      {
+        "texto": "Y una regla: nada de posponer. Pon la alarma a la hora real en que te vas a levantar.",
+        "estilo": "narrador"
+      },
+      {
+        "texto": "Cuatro: calcula tus ciclos. Como cada ciclo dura unos noventa minutos, despertar al final de uno es más fácil.",
+        "estilo": "narrador"
+      },
+      {
+        "texto": "Cinco ciclos son siete horas y media. Si te levantas a las seis y media, intenta estar dormido a las once.",
+        "estilo": "narrador"
+      },
+      {
+        "texto": "Y súmale unos quince minutos, que es lo que tarda la mayoría en quedarse dormida.",
+        "estilo": "narrador"
+      },
+      {
+        "texto": "Cinco: prepara la noche. Una hora antes de dormir, baja las luces y deja el celular lejos de la cama.",
+        "estilo": "narrador"
+      },
+      {
+        "texto": "Y cuidado con el café: su efecto dura muchas horas. Lo ideal es tomar el último antes de las dos de la tarde.",
+        "estilo": "narrador"
+      },
+      {
+        "texto": "¿Y si hoy te despiertas a las nueve y quieres levantarte a las seis? No lo cambies de golpe.",
+        "estilo": "narrador"
+      },
+      {
+        "texto": "Adelanta tu alarma quince minutos cada tres días. Tu reloj se va acomodando sin que lo sufras.",
+        "estilo": "narrador"
+      },
+      {
+        "texto": "Mateo lo probó durante tres semanas.",
+        "estilo": "narrador"
+      },
+      {
+        "texto": "Ahora se despierta a la misma hora todos los días, ya no pospone la alarma,",
+        "estilo": "narrador"
+      },
+      {
+        "texto": "y a las tres de la tarde todavía tiene energía.",
+        "estilo": "narrador"
+      },
+      {
+        "texto": "No necesitó más fuerza de voluntad. Solo dejó de pelear contra su propio reloj.",
+        "estilo": "narrador"
+      },
+      {
+        "texto": "Te reto a probar solo una cosa durante siete días: despertar a la misma hora y salir a la luz apenas te levantes.",
+        "estilo": "narrador"
+      },
+      {
+        "texto": "Cuéntame en los comentarios a qué hora te despiertas, y a qué hora te gustaría despertar.",
+        "estilo": "narrador"
+      },
+      {
+        "texto": "Y si te sirvió, suscríbete. Esto fue Quipu: lo que nadie te explicó, explicado fácil.",
+        "estilo": "narrador"
+      }
+    ]
+  }
+}
