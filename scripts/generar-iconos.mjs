@@ -4,6 +4,8 @@
 import { readFileSync, writeFileSync } from "node:fs";
 
 const ICONOS = [
+  "car", "credit-card", "building-bank", "chart-line", "cash-banknote", "device-laptop", "basket", "beer", "cup", "brand-netflix",
+  "truck-delivery", "motorbike", "package", "scale", "arrow-big-up", "arrow-big-down", "plus", "minus", "chart-pie", "school", "tools", "soup",
   "world", "map-pin", "cpu", "rocket", "plane", "camera", "history", "telescope", "wallet", "coin", "cash", "pig-money", "moneybag", "bulb", "brain", "notebook", "pencil", "home", "shopping-bag",
   "coffee", "pizza", "ticket", "device-gamepad-2", "books", "headphones", "pill", "device-mobile", "calendar",
   "confetti", "question-mark", "trending-up", "trending-down", "receipt", "bus", "torii", "alarm", "sparkles",
@@ -39,6 +41,16 @@ for (const nombre of ICONOS) {
   }
   salida[nombre] = trazos;
 }
+// Íconos propios que Tabler no tiene, en la misma cuadrícula de 24x24 y con el mismo trazo
+salida.hormiga = [
+  "M 2.8 10 a 2.2 2.2 0 1 0 4.4 0 a 2.2 2.2 0 1 0 -4.4 0",
+  "M 7.6 11 a 2.4 1.8 0 1 0 4.8 0 a 2.4 1.8 0 1 0 -4.8 0",
+  "M 12.5 12 a 4 3 0 1 0 8 0 a 4 3 0 1 0 -8 0",
+  "M 9 12.5 L 7 16", "M 10 12.8 L 10 17", "M 11 12.6 L 13 16.5",
+  "M 9 9.5 L 7.5 6.5", "M 10.5 9.3 L 11 6", "M 11.5 9.6 L 13.5 7",
+  "M 4 8.2 C 3.5 6 2.5 5 1.5 5", "M 5.8 8 C 6 5.8 5.5 4.5 4.5 3.8",
+];
+
 writeFileSync(
   "src/formatos/pizarra/iconos.gen.ts",
   "// Generado por scripts/generar-iconos.mjs a partir de @tabler/icons (MIT). No editar a mano.\n" +

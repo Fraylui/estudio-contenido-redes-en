@@ -45,6 +45,19 @@ export const pizarraSchema = z.object({
 type Props = z.infer<typeof pizarraSchema>;
 const FPS = 30;
 
+// Números que cuentan solos, como en los videos de MrBeast: "1 800" sube de 0 a 1 800 en 0,9 s (también "+78 000", "12 %")
+const contar = (texto: string, f: number, fps: number) => {
+  const m = texto.match(/^([^\d]*)(\d{1,3}(?:[ .,]\d{3})*|\d+)(.*)$/);
+  if (!m) return texto;
+  const total = Number(m[2].replace(/[ .,]/g, ""));
+  // Los años ("1904") y los números chicos no cuentan: se ven raros subiendo
+  if (total < 10 || (/^\d{4}$/.test(m[2]) && total >= 1000 && total <= 2100)) return texto;
+  const t = interpolate(f, [0, 0.9 * fps], [0, 1], { extrapolateLeft: "clamp", extrapolateRight: "clamp", easing: Easing.out(Easing.cubic) });
+  const sep = m[2].match(/[ .,]/)?.[0] ?? (total >= 10000 ? " " : "");
+  const n = Math.round(total * t).toString().replace(/\B(?=(\d{3})+(?!\d))/g, sep);
+  return `${m[1]}${n}${m[3]}`;
+};
+
 // Música de fondo que se aparta cuando habla la voz (ducking): baja bajo la voz y sube un poco en las pausas
 // Los MP3 se dejan a −20 LUFS (scripts/bajar-musica.sh); la voz está a −14 LUFS
 const MUSICA_PAUSA = 0.4; // ≈ −28 LUFS en las pausas
@@ -421,7 +434,7 @@ const Dibujo: React.FC<{ dibujo: DibujoPizarra; duracion: number }> = ({ dibujo,
             strokeDashoffset={interpolate(frame, [inicio + 6, inicio + 20], [1, 0], { extrapolateLeft: "clamp", extrapolateRight: "clamp" })} />
           <text x={e.x} y={e.y} textAnchor="middle" fontFamily="Mano" fontSize={e.t}
             fill={e.color ?? "#1f1f1f"} transform={`rotate(${e.rot ?? 0} ${e.x} ${e.y}) translate(${e.x} ${e.y}) scale(${pop}) translate(${-e.x} ${-e.y})`}>
-            {e.texto}
+            {contar(e.texto, frame - inicio, fps)}
           </text>
           </g>
         );
