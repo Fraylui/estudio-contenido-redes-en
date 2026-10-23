@@ -57,6 +57,8 @@ Una frase de narración = una escena = un dibujo nuevo (de 3 a 6 s). El texto en
 | Billetera abierta con manos, cajas de cartón, signo de pregunta | `trazos.ts` | trazos |
 | 39 objetos a color (dinero, monedas, chancho, cuaderno, celular, foco, cerebro, reloj, gráficos, Japón…) | `public/objetos/*.svg` (Fluent Emoji, MIT) | `objetos: [{ img, x, y, t }]` |
 | 31 ilustraciones de personas haciendo cosas (leyendo, corriendo, café, abriendo una caja…) | `public/assets/doodles/*.svg` (Open Doodles, CC0) | `objetos` con `img: "doodle:reading"` |
+| **Íconos redibujados a mano** con mancha de color (la opción principal para objetos; ver lista en `scripts/generar-iconos.mjs`, se agregan más de los 5 000 de Tabler) | `icono(nombre, x, y, t, color)` en `trazos.ts` | trazos |
+| **Caras de reacción Open Peeps** (CC0): Lucía, Mateo y la abuela, con 16 emociones cada uno (feliz, miedo, cansada, enamorada…) | `public/assets/peeps/` (`node scripts/generar-peeps.mjs`) | `objetos` con `img: "peep:lucia-miedo"` |
 | Rótulos escritos a mano ("1904", "24 h", "¡50 %!") | `textos: [{ texto, x, y, t, color }]` | textos |
 
 **Si falta algo, dibújalo en el mismo estilo y agrégalo a la biblioteca** para el siguiente video:
@@ -67,6 +69,7 @@ Una frase de narración = una escena = un dibujo nuevo (de 3 a 6 s). El texto en
 
 Licencias:
 - Fluent Emoji (MIT) y Open Doodles (CC0) se pueden usar en videos comerciales.
+- Solo usamos recursos **gratis**: Tabler (MIT), Open Peeps (CC0), Open Doodles (CC0), Fluent Emoji (MIT). Los emojis 3D solo cuando un ícono de línea no alcanza.
 - **No subas al repositorio** imágenes de Storyset o Freepik: su licencia no permite redistribuirlas y el repositorio es público.
 
 ## 4. Animación (ya resuelta en `Pizarra.tsx`)

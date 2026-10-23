@@ -173,7 +173,7 @@ const Dibujo: React.FC<{ dibujo: DibujoPizarra; duracion: number }> = ({ dibujo,
         const flota = Math.sin((frame - inicio) / 14 + i) * 6;
         return (
           <g key={`o${i}`} transform={`translate(${o.x} ${o.y + flota}) rotate(${(o.rot ?? 0) + (1 - pop) * -25}) scale(${pop})`}>
-            <image href={staticFile(o.img.startsWith("doodle:") ? `assets/doodles/${o.img.slice(7)}.svg` : `objetos/${o.img}.svg`)} x={-o.t / 2} y={-o.t / 2} width={o.t} height={o.t} />
+            <image href={staticFile(o.img.startsWith("doodle:") ? `assets/doodles/${o.img.slice(7)}.svg` : o.img.startsWith("peep:") ? `assets/peeps/${o.img.slice(5)}.svg` : `objetos/${o.img}.svg`)} x={-o.t / 2} y={-o.t / 2} width={o.t} height={o.t} />
           </g>
         );
       })}
