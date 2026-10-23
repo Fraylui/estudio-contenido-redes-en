@@ -4,6 +4,11 @@
 
 ## Público
 - **Fase 1 (hasta monetizar): solo español.** Personas de 18 a 35 años de Latinoamérica (primero Perú, México, Colombia y Argentina) y de España, que quieren mejorar su dinero, su mente y sus hábitos. Un canal en dos idiomas confunde al algoritmo: no sabe a quién mostrarle los videos.
+- **Regiones prioritarias:** México (el mayor público), Estados Unidos hispano y España (pagan más por anuncio), Colombia, Argentina, Perú y Chile.
+  - Español neutro, sin jerga local.
+  - Montos en dólares o sin moneda ("5 al día son 1 800 al año"), salvo un ejemplo local puntual.
+  - Ejemplos que sirvan en cualquier país.
+  - Publicar a las 4 p. m. de Lima (3 p. m. en México, 5 p. m. en Nueva York).
 - **Fase 2 (con el canal monetizado):** inglés como **pista de audio doblada** en los mismos videos (función de audio en varios idiomas de YouTube) o como canal aparte. El público en inglés paga más por anuncio, pero tiene mucha más competencia.
 
 ## Regla de publicación
