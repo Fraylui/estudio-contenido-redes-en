@@ -149,9 +149,25 @@ const Fondo: React.FC<{ nombre: string }> = ({ nombre }) => {
   return (
     <AbsoluteFill style={{ background: `radial-gradient(ellipse at 50% 20%, rgba(255,255,255,0.45), rgba(255,255,255,0) 60%), ${pared}` }}>
       <div style={{ position: "absolute", left: 0, right: 0, bottom: 0, height: "17%", background: piso, borderTop: "6px solid #1f1f1f" }} />
+      {nombre !== "blanco" ? <Decorado /> : null}
     </AbsoluteFill>
   );
 };
+
+// Decorado suave del escenario (ventana con cielo, cuadro y planta) para que no se vea plano
+const Decorado: React.FC = () => (
+  <svg viewBox="0 0 1920 1080" preserveAspectRatio="xMidYMax slice" style={{ position: "absolute", inset: 0, width: "100%", height: "100%", opacity: 0.55 }}>
+    <g stroke="#1f1f1f" strokeWidth="6" strokeLinejoin="round">
+      <rect x="1600" y="150" width="230" height="300" rx="10" fill="#e9f7ff" />
+      <path d="M1715 150 V450 M1600 300 H1830" fill="none" />
+      <path d="M1585 140 Q1600 300 1570 470 M1845 140 Q1830 300 1860 470" fill="none" />
+      <rect x="90" y="190" width="170" height="130" rx="6" fill="#fff6d6" />
+      <path d="M115 295 L160 240 L195 280 L215 260 L240 295 Z" fill="#9fd3a8" />
+      <path d="M150 885 Q140 820 110 790 M150 885 Q160 800 190 770 M150 885 Q150 810 150 760" fill="none" />
+      <path d="M115 885 H185 L175 945 H125 Z" fill="#e08a5c" />
+    </g>
+  </svg>
+);
 
 // Etiqueta de sección arriba a la izquierda, con una barra que se llena si dice "Paso N de M"
 const Etiqueta: React.FC<{ texto: string; entra: boolean }> = ({ texto, entra }) => {
@@ -206,12 +222,13 @@ const Escena: React.FC<Props["escenas"][number]> = ({ dibujo, texto, resaltar, s
   const sacude = t0 >= 0 && frame >= t0 && frame < t0 + 12 ? (1 - (frame - t0) / 12) * 14 : 0;
   const dx = sacude * Math.sin(frame * 2.7), dy = sacude * Math.cos(frame * 3.3);
   return (
-    <AbsoluteFill style={{ flexDirection: horizontal ? "row" : "column", transform: `translate(${dx}px, ${dy}px) scale(${zoom})` }}>
-      <div style={{ flex: horizontal ? 1.05 : 1.2, position: "relative" }}>
+    <AbsoluteFill style={{ transform: `translate(${dx}px, ${dy}px) scale(${zoom})` }}>
+      {/* El dibujo ocupa toda la escena, parado sobre el piso; el texto va abajo como subtítulo */}
+      <div style={{ position: "absolute", left: horizontal ? 120 : 30, right: horizontal ? 120 : 30, top: horizontal ? 70 : 230, bottom: horizontal ? "16%" : "24%" }}>
         <Dibujo dibujo={resolverDibujo(dibujo)} duracion={total} />
       </div>
-      <div style={{ flex: 1, display: "flex", alignItems: "center", justifyContent: "center", padding: horizontal ? "0 90px 0 0" : "0 70px 160px" }}>
-        <Texto texto={texto} resaltar={resaltar} duracion={total * 0.5} />
+      <div style={{ position: "absolute", left: 0, right: 0, bottom: horizontal ? 24 : 300, display: "flex", justifyContent: "center", padding: "0 80px" }}>
+        <Texto texto={texto} resaltar={resaltar} duracion={total * 0.5} tamano={horizontal ? 58 : 70} />
       </div>
     </AbsoluteFill>
   );
@@ -251,7 +268,8 @@ const Dibujo: React.FC<{ dibujo: DibujoPizarra; duracion: number }> = ({ dibujo,
   const balanceo = 1.2 * Math.sin(seg * 1.7) * vida;
   const centro = `${vx + vw / 2} ${vy + vh * 0.9}`;
   return (
-    <svg viewBox={vista} style={{ width: "100%", height: "100%", padding: "70px 40px 70px 90px", boxSizing: "border-box" }}>
+    <svg viewBox={vista} style={{ width: "100%", height: "100%" }}>
+      {trazos.length ? <ellipse cx={vx + vw / 2} cy={vy + vh - 40} rx={vw * 0.34} ry={vh * 0.025} fill="rgba(0,0,0,0.13)" /> : null}
       <g transform={`rotate(${balanceo} ${centro}) translate(${centro}) scale(${2 - respira} ${respira}) translate(${centro.split(" ").map((n) => -Number(n)).join(" ")})`}>
       {trazos.map((t, i) => {
         const largo = largos[i];
@@ -297,13 +315,13 @@ const Dibujo: React.FC<{ dibujo: DibujoPizarra; duracion: number }> = ({ dibujo,
 };
 
 // Texto que aparece palabra por palabra; las palabras de "resaltar" llevan marcador amarillo
-const Texto: React.FC<{ texto: string; resaltar?: string; duracion: number }> = ({ texto, resaltar, duracion }) => {
+const Texto: React.FC<{ texto: string; resaltar?: string; duracion: number; tamano?: number }> = ({ texto, resaltar, duracion, tamano = 76 }) => {
   const frame = useCurrentFrame();
   const palabras = texto.split(/\s+/);
   const limpia = (p: string) => p.toLowerCase().replace(/[¿?¡!.,:;…"«»]/g, "");
   const claves = new Set((resaltar ?? "").split(/\s+/).map(limpia).filter(Boolean));
   return (
-    <div style={{ fontFamily: "Mano", fontSize: 76, lineHeight: 1.25, color: "#1f1f1f", textAlign: "center" }}>
+    <div style={{ fontFamily: "Mano", fontSize: tamano, lineHeight: 1.25, color: "#1f1f1f", textAlign: "center" }}>
       {palabras.map((p, i) => {
         const aparece = (i / palabras.length) * duracion;
         const o = interpolate(frame, [aparece, aparece + 5], [0, 1], { extrapolateLeft: "clamp", extrapolateRight: "clamp" });
