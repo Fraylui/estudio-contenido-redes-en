@@ -74,8 +74,7 @@
         "dibujo": {
           "iconos": [
             [
-              "wallet",
-              "#ffadad"
+              "img:billetera"
             ]
           ],
           "personaje": "caricatura:lucia:preocupado:o:abajo"
@@ -216,8 +215,7 @@
         "dibujo": {
           "iconos": [
             [
-              "cup",
-              "#ffd6a5"
+              "img:cafe"
             ]
           ],
           "personaje": "caricatura:lucia:feliz:sonrisa:adelante"
@@ -286,8 +284,7 @@
         "dibujo": {
           "iconos": [
             [
-              "hormiga",
-              "#ffd6a5"
+              "img:hormiga"
             ]
           ]
         },
@@ -320,8 +317,7 @@
         "dibujo": {
           "iconos": [
             [
-              "hormiga",
-              "#ffd6a5"
+              "img:hormiga"
             ],
             [
               "coin",
@@ -785,8 +781,7 @@
         "dibujo": {
           "iconos": [
             [
-              "hormiga",
-              "#ffd6a5"
+              "img:hormiga"
             ]
           ]
         },
@@ -799,8 +794,7 @@
         "dibujo": {
           "iconos": [
             [
-              "hormiga",
-              "#ffd6a5"
+              "img:hormiga"
             ],
             [
               "arrow-big-down",
@@ -884,8 +878,7 @@
         "dibujo": {
           "iconos": [
             [
-              "cup",
-              "#ffd6a5"
+              "img:cafe"
             ]
           ]
         },
@@ -1677,8 +1670,7 @@
         "dibujo": {
           "iconos": [
             [
-              "cup",
-              "#ffd6a5"
+              "img:cafe"
             ],
             [
               "heart",
@@ -1695,12 +1687,11 @@
         "dibujo": {
           "iconos": [
             [
-              "chart-line",
-              "#caffbf"
+              "img:alcancia"
             ],
             [
-              "coin",
-              "#ffe14d"
+              "chart-line",
+              "#caffbf"
             ]
           ]
         },
@@ -1751,8 +1742,7 @@
         "dibujo": {
           "iconos": [
             [
-              "hormiga",
-              "#ffd6a5"
+              "img:hormiga"
             ],
             [
               "heart",

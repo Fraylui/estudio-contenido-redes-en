@@ -322,7 +322,9 @@ export const componer = (c: Composicion): DibujoPizarra => {
   const lugares = (tipo ? POSICIONES : POSICIONES_SOLAS)[Math.min(iconos.length, 4)] ?? [];
   iconos.slice(0, 4).forEach(([nombre, color], i) => {
     const [x, y, t] = lugares[i];
-    trazos.push(...icono(nombre, x, y, t, color ?? PASTELES[i % PASTELES.length]));
+    // "img:hormiga" → objeto 3D hecho con IA y recortado (public/assets/objetos-ia/hormiga.png)
+    if (nombre.startsWith("img:")) objetos.push({ img: `ia:${nombre.slice(4)}`, x, y, t: t * 1.15 });
+    else trazos.push(...icono(nombre, x, y, t, color ?? PASTELES[i % PASTELES.length]));
   });
   if (c.rotulo) {
     textos.push({ texto: c.rotulo, x: tipo ? 760 : 550, y: tipo ? 880 : 860, t: 100, color: c.colorRotulo ?? ROJO });
