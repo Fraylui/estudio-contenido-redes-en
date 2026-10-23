@@ -4,7 +4,7 @@
 import { readFileSync, writeFileSync } from "node:fs";
 
 const ICONOS = [
-  "wallet", "coin", "cash", "pig-money", "moneybag", "bulb", "brain", "notebook", "pencil", "home", "shopping-bag",
+  "world", "map-pin", "cpu", "rocket", "plane", "camera", "history", "telescope", "wallet", "coin", "cash", "pig-money", "moneybag", "bulb", "brain", "notebook", "pencil", "home", "shopping-bag",
   "coffee", "pizza", "ticket", "device-gamepad-2", "books", "headphones", "pill", "device-mobile", "calendar",
   "confetti", "question-mark", "trending-up", "trending-down", "receipt", "bus", "torii", "alarm", "sparkles",
   "check", "x", "shopping-cart", "clock", "zzz", "bed", "sun", "moon", "heart", "heart-broken", "mood-happy",
