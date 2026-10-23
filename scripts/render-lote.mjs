@@ -7,7 +7,8 @@
 //
 // Los videos quedan en out/<nombre-del-archivo>-<Tamaño>.mp4 (y las miniaturas en .png)
 import { execFileSync } from "node:child_process";
-import { existsSync, readdirSync, readFileSync, writeFileSync, mkdirSync, statSync } from "node:fs";
+import { createHash } from "node:crypto";
+import { existsSync, readdirSync, readFileSync, writeFileSync, mkdirSync } from "node:fs";
 import { join, basename } from "node:path";
 
 const args = process.argv.slice(2);
@@ -39,14 +40,19 @@ for (const archivo of archivos) {
     const audio = `public/voz/${nombre}.wav`;
     const json = join(carpeta, archivo);
     const python = "voz/.venv/bin/python";
-    const referencia = JSON.parse(readFileSync(json, "utf8")).voz?.referencia ?? "voz/referencias/xiomi.wav";
-    const desactualizada = !existsSync(audio) || statSync(audio).mtimeMs < statSync(json).mtimeMs;
+    const voz = JSON.parse(readFileSync(json, "utf8")).voz ?? {};
+    const referencia = voz.referencia ?? "voz/referencias/xiomi.wav";
+    // Solo se vuelve a narrar si cambió el texto narrado o la configuración de la voz (no cualquier cambio del JSON).
+    const huella = createHash("sha1").update(JSON.stringify({ narracion: props.narracion, voz })).digest("hex");
+    const datosVoz = `public/voz/${nombre}.json`;
+    const anterior = existsSync(datosVoz) ? JSON.parse(readFileSync(datosVoz, "utf8")) : null;
+    const desactualizada = !existsSync(audio) || anterior?.huella !== huella;
     if (desactualizada && (!existsSync(python) || !existsSync(referencia))) {
       // La voz es opcional: sin instalarla o sin grabación de referencia, el video sale sin narración
       console.log(`\n⚠️  ${archivo}: falta instalar voz/ o la referencia ${referencia}; se genera sin narración.`);
     } else if (desactualizada) {
       console.log(`\n🎙  Narrando ${archivo}…`);
-      execFileSync(python, ["voz/narrar.py", json, audio], { stdio: "inherit" });
+      execFileSync(python, ["voz/narrar.py", json, audio, huella], { stdio: "inherit" });
     }
   }
   if (props.narracion && existsSync(`public/voz/${nombre}.json`)) {

@@ -1,6 +1,7 @@
 """Narra la "narracion" de un archivo de contenido con una voz clonada (Chatterbox) en español latino.
 
-Uso:  voz/.venv/bin/python voz/narrar.py contenido/mi-video.json public/voz/mi-video.wav
+Uso:  voz/.venv/bin/python voz/narrar.py contenido/mi-video.json public/voz/mi-video.wav [huella]
+(npm run lote pasa la huella del texto narrado para no volver a narrar si no cambió.)
 
 En el JSON, dentro de "props":
   "narracion": [
@@ -83,8 +84,35 @@ def para_voz(texto, cfg):
     return seseo(texto) if cfg.get("seseo", True) else texto
 
 
+UNIDADES = ["cero", "uno", "dos", "tres", "cuatro", "cinco", "seis", "siete", "ocho", "nueve", "diez", "once", "doce",
+            "trece", "catorce", "quince", "dieciséis", "diecisiete", "dieciocho", "diecinueve", "veinte"]
+DECENAS = {30: "treinta", 40: "cuarenta", 50: "cincuenta", 60: "sesenta", 70: "setenta", 80: "ochenta", 90: "noventa"}
+
+
+def en_letras(n):
+    """Números hasta 100 en palabras, para comparar "5" con "cinco" al revisar la voz."""
+    if n <= 20:
+        return UNIDADES[n]
+    if n < 30:
+        return "veinti" + UNIDADES[n - 20]
+    if n < 100:
+        d, u = divmod(n, 10)
+        return DECENAS[d * 10] + ("" if u == 0 else " y " + UNIDADES[u])
+    return str(n)
+
+
 def normalizar_texto(x):
-    return re.sub(r"[^a-záéíóúñü0-9 ]", "", x.lower()).split()
+    x = re.sub(r"\d+", lambda m: en_letras(int(m.group())) if int(m.group()) <= 100 else m.group(), x.lower())
+    return re.sub(r"[^a-záéíóúñü0-9 ]", "", x).split()
+
+
+def recortar_cola(ruta, fin, margen=0.2):
+    """Corta lo que el modelo genera después de la última palabra (respiraciones y ruido) y desvanece el final."""
+    audio, sr = sf.read(str(ruta), dtype="float32")
+    audio = audio[: min(len(audio), int((fin + margen) * sr))].copy()
+    desv = min(int(0.08 * sr), len(audio))
+    audio[-desv:] *= np.linspace(1, 0, desv)
+    sf.write(str(ruta), audio, sr)
 
 
 def a_48k(origen, destino, tempo=1.0):
@@ -129,8 +157,13 @@ def main():
             a16 = tmp / "rev.wav"
             subprocess.run(["ffmpeg", "-loglevel", "error", "-y", "-i", str(crudo), "-ac", "1", "-ar", "16000", str(a16)],
                            check=True)
-            oido = " ".join(s.text for s in revisor.transcribe(sf.read(str(a16), dtype="float32")[0], language="es")[0])
+            segmentos = list(revisor.transcribe(sf.read(str(a16), dtype="float32")[0], language="es",
+                                                word_timestamps=True)[0])
+            oido = " ".join(s.text for s in segmentos)
             nota = difflib.SequenceMatcher(None, normalizar_texto(f["texto"]), normalizar_texto(oido)).ratio()
+            palabras = [w for s in segmentos for w in (s.words or [])]
+            if palabras:
+                recortar_cola(crudo, palabras[-1].end)
             if nota > mejor_nota:
                 mejor, mejor_nota = crudo, nota
             if nota >= 0.85:
@@ -152,8 +185,10 @@ def main():
     # Acabado de locución: el ecualizador automático corrige el balance y deja el volumen a -14 LUFS
     subprocess.run([sys.executable, str(Path(__file__).with_name("ecualizar.py")), str(crudo), str(salida)], check=True)
     crudo.unlink()
-    salida.with_suffix(".json").write_text(json.dumps({"duracion": round(len(total) / SR, 3), "frases": tiempos},
-                                                      ensure_ascii=False, indent=1), encoding="utf-8")
+    huella = sys.argv[3] if len(sys.argv) > 3 else None
+    salida.with_suffix(".json").write_text(json.dumps({"duracion": round(len(total) / SR, 3), "huella": huella,
+                                                       "frases": tiempos}, ensure_ascii=False, indent=1),
+                                           encoding="utf-8")
     print(f"Voz lista: {salida} ({len(total) / SR:.1f} s)")
 
 
