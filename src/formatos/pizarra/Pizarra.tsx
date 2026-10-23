@@ -5,8 +5,9 @@ import { getBoundingBox, getLength } from "@remotion/paths";
 import { loadFont } from "@remotion/fonts";
 import { useMemo } from "react";
 import { z } from "zod";
+import { lightLeak } from "@remotion/effects/light-leak";
 import {
-  AbsoluteFill, CalculateMetadataFunction, Easing, Img, interpolate, Sequence, spring, staticFile, useCurrentFrame, useVideoConfig,
+  AbsoluteFill, CalculateMetadataFunction, Easing, Img, interpolate, Solid, Sequence, spring, staticFile, useCurrentFrame, useVideoConfig,
 } from "remotion";
 import { composicionSchema, resolverDibujo, type DibujoPizarra } from "./dibujos";
 import type { Trazo } from "./trazos";
@@ -32,6 +33,8 @@ export const pizarraSchema = z.object({
       // Fondo de la escena: "papel", un color de la paleta ("cielo", "mostaza", "menta", "durazno", "lila", "blanco")
       // o un color #hex. Si no se indica, cambia solo de color en cada sección, como Aprendiz Financiero.
       fondo: z.string().optional(),
+      // Lluvia de confeti en esta escena (logros, resultados)
+      confeti: z.boolean().optional(),
     }),
   ),
   voz: z.string().optional(),
@@ -86,8 +89,16 @@ export const Pizarra: React.FC<Props> = ({ escenas, voz, musica }) => {
             {(() => {
               const nueva = e.etiqueta !== undefined && e.etiqueta !== etiqueta;
               etiqueta = e.etiqueta ?? etiqueta;
-              return etiqueta ? <Etiqueta texto={etiqueta} entra={nueva} /> : null;
+              return (
+                <>
+                  {etiqueta ? <Etiqueta texto={etiqueta} entra={nueva} /> : null}
+                  {nueva && i > 0 ? (
+                    <Sequence durationInFrames={24} layout="none"><Destello semilla={i} /></Sequence>
+                  ) : null}
+                </>
+              );
             })()}
+            {e.confeti ? <Confeti /> : null}
             {e.sonido ? <Efecto id={e.sonido} en={e.sonidoEn ?? 0.6} /> : null}
             {/* Ritmo de sonido como en los canales de alta retención: cada cambio y cada aparición suena, bajito y variado */}
             {i > 0 && !(e.sonido && (e.sonidoEn ?? 0.6) < 0.5) ? <Efecto id={WHOOSH[i % 3]} en={0.05} extraDb={-12} /> : null}
@@ -207,6 +218,37 @@ const Decorado: React.FC = () => (
     </g>
   </svg>
 );
+
+// Destello de luz de color al cambiar de sección (light leak de @remotion/effects)
+const Destello: React.FC<{ semilla: number }> = ({ semilla }) => {
+  const frame = useCurrentFrame();
+  const { width, height } = useVideoConfig();
+  return (
+    <Solid width={width} height={height} style={{ position: "absolute", inset: 0, mixBlendMode: "screen" }}
+      effects={[lightLeak({ seed: semilla, hueShift: (semilla * 47) % 360, progress: interpolate(frame, [0, 23], [0, 1], { extrapolateRight: "clamp" }) })]} />
+  );
+};
+
+// Confeti de colores que cae girando (hecho en código: sin archivos externos)
+const Confeti: React.FC = () => {
+  const frame = useCurrentFrame();
+  const { width, height } = useVideoConfig();
+  const colores = ["#ffe14d", "#ff5f7e", "#43d9a3", "#5ec8f2", "#a78bfa", "#ff8a3d"];
+  return (
+    <AbsoluteFill style={{ pointerEvents: "none" }}>
+      {Array.from({ length: 70 }, (_, k) => {
+        const azar = (n: number) => ((Math.sin(k * 127.1 + n * 311.7) * 43758.5453) % 1 + 1) % 1;
+        const t = frame - azar(1) * 12;
+        if (t < 0) return null;
+        const x = azar(2) * width + Math.sin(t / 9 + k) * 40;
+        const y = -40 + t * (9 + azar(3) * 9);
+        if (y > height + 40) return null;
+        return <div key={k} style={{ position: "absolute", left: x, top: y, width: 16, height: 26, background: colores[k % colores.length],
+          borderRadius: 3, rotate: `${t * (8 + azar(4) * 10)}deg`, scale: `${0.7 + azar(5) * 0.6} 1` }} />;
+      })}
+    </AbsoluteFill>
+  );
+};
 
 // Etiqueta de sección arriba a la izquierda, con una barra que se llena si dice "Paso N de M"
 const Etiqueta: React.FC<{ texto: string; entra: boolean }> = ({ texto, entra }) => {
@@ -356,10 +398,15 @@ const Dibujo: React.FC<{ dibujo: DibujoPizarra; duracion: number }> = ({ dibujo,
         const pop = spring({ frame: frame - inicio, fps, config: { damping: 12, stiffness: 170 } });
         if (frame < inicio) return null;
         return (
-          <text key={`t${i}`} x={e.x} y={e.y} textAnchor="middle" fontFamily="Mano" fontSize={e.t}
+          <g key={`t${i}`}>
+          <path d={`M ${e.x - e.texto.length * e.t * 0.34} ${e.y - e.t * 0.3} C ${e.x - e.texto.length * e.t * 0.36} ${e.y - e.t * 1.1}, ${e.x + e.texto.length * e.t * 0.38} ${e.y - e.t * 1.1}, ${e.x + e.texto.length * e.t * 0.36} ${e.y - e.t * 0.3} S ${e.x - e.texto.length * e.t * 0.2} ${e.y + e.t * 0.55}, ${e.x - e.texto.length * e.t * 0.38} ${e.y - e.t * 0.15}`}
+            fill="none" stroke={e.color ?? "#d7263d"} strokeWidth={7} strokeLinecap="round" pathLength={1} strokeDasharray={1}
+            strokeDashoffset={interpolate(frame, [inicio + 6, inicio + 20], [1, 0], { extrapolateLeft: "clamp", extrapolateRight: "clamp" })} />
+          <text x={e.x} y={e.y} textAnchor="middle" fontFamily="Mano" fontSize={e.t}
             fill={e.color ?? "#1f1f1f"} transform={`rotate(${e.rot ?? 0} ${e.x} ${e.y}) translate(${e.x} ${e.y}) scale(${pop}) translate(${-e.x} ${-e.y})`}>
             {e.texto}
           </text>
+          </g>
         );
       })}
     </svg>

@@ -743,7 +743,8 @@
         },
         "texto": "Ya no pospone la alarma.",
         "resaltar": "no pospone",
-        "fondo": "ia:cuarto-amanecer"
+        "fondo": "ia:cuarto-amanecer",
+        "confeti": true
       },
       {
         "dibujo": {
@@ -763,7 +764,8 @@
         "resaltar": "energía",
         "sonido": "ding",
         "sonidoEn": 1.0,
-        "fondo": "ia:cuarto-amanecer"
+        "fondo": "ia:cuarto-amanecer",
+        "confeti": true
       },
       {
         "dibujo": {
