@@ -45,6 +45,19 @@ export const pizarraSchema = z.object({
 type Props = z.infer<typeof pizarraSchema>;
 const FPS = 30;
 
+// Música de fondo que se aparta cuando habla la voz (ducking): baja bajo la voz y sube un poco en las pausas
+const MUSICA_PAUSA = 0.11; // ≈ −19 dB
+const MUSICA_VOZ = 0.045; // ≈ −27 dB: se siente, pero no tapa ni una palabra
+const volumenMusica = (f: number, frases: { inicio: number; fin: number }[], total: number) => {
+  const t = f / FPS;
+  const enVoz = frases.reduce(
+    (m, fr) => Math.max(m, interpolate(t, [fr.inicio - 0.3, fr.inicio, fr.fin, fr.fin + 0.5], [0, 1, 1, 0], { extrapolateLeft: "clamp", extrapolateRight: "clamp" })),
+    0,
+  );
+  const fundido = interpolate(f, [0, FPS, total - 2 * FPS, total], [0, 1, 1, 0], { extrapolateLeft: "clamp", extrapolateRight: "clamp" });
+  return (MUSICA_PAUSA + (MUSICA_VOZ - MUSICA_PAUSA) * enVoz) * fundido;
+};
+
 // Cada escena dura lo que su frase de la narración (escena 1 = frase 1, escena 2 = frase 2…)
 export const calcularPizarra: CalculateMetadataFunction<Props> = ({ props }) => {
   const f = props.frasesVoz;
@@ -61,7 +74,8 @@ export const calcularPizarra: CalculateMetadataFunction<Props> = ({ props }) => 
   };
 };
 
-export const Pizarra: React.FC<Props> = ({ escenas, voz, musica }) => {
+export const Pizarra: React.FC<Props> = ({ escenas, voz, frasesVoz, musica }) => {
+  const { durationInFrames } = useVideoConfig();
   let desde = 0;
   let etiqueta: string | undefined;
   // Color de cada escena: cambia con cada sección (o cada 4 escenas si el video no tiene secciones)
@@ -109,7 +123,9 @@ export const Pizarra: React.FC<Props> = ({ escenas, voz, musica }) => {
         );
       })}
       {voz ? <Audio src={staticFile(voz)} /> : null}
-      {musica ? <Audio src={staticFile(musica)} volume={0.08} loop /> : null}
+      {musica ? (
+        <Audio src={staticFile(musica)} loop volume={(f) => volumenMusica(f, frasesVoz ?? [], durationInFrames)} />
+      ) : null}
     </AbsoluteFill>
   );
 };
