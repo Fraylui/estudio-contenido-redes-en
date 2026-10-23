@@ -14,7 +14,7 @@ loadFont({
 
 export const marca = {
   nombre: "Tu Quipu",
-  usuario: "@tuquipu",
+  usuario: "@tu_quipu",
   colores: {
     fondo: "#0b1020",
     fondo2: "#1b2350",
