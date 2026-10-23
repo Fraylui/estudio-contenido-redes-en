@@ -2,6 +2,9 @@
 
 **Promesa:** "Lo que nadie te explicó, explicado fácil." Videos de pizarra con la mascota cerebro (Quipu) y la voz de Xiomi.
 
+## Regla de publicación
+**Todo se publica PÚBLICO**: el objetivo es monetizar. En Metricool, `privacy: "public"`, categoría Educación, no hecho para niños y voz con IA declarada.
+
 ## Series fijas
 Hay tres series, para que el algoritmo y la gente sepan qué esperar.
 

@@ -103,3 +103,6 @@ Haz una hoja de contacto con todas las escenas (un `still` por escena a `--scale
 - que cada dibujo diga lo mismo que la frase.
 
 Narrar un video de 4 minutos toma de 40 a 60 minutos, así que vale la pena revisar antes.
+
+## 6. Publicar
+Siempre **público** (el canal es para monetizar), con Metricool: solo YouTube, categoría Educación, `madeForKids: false`, `isAiGeneratedContent: true` (voz clonada) y capítulos en la descripción. El video se sube a la rama `publicaciones` del repositorio para que Metricool tenga un link público; nunca los videos de clientes.
