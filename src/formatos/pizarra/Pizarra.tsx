@@ -28,6 +28,9 @@ export const pizarraSchema = z.object({
       sonidoEn: z.number().optional(),
       // Etiqueta de sección ("Paso 2 de 5", "La ciencia"…): se queda arriba hasta que otra escena la cambie
       etiqueta: z.string().optional(),
+      // Fondo de la escena: "papel", un color de la paleta ("cielo", "mostaza", "menta", "durazno", "lila", "blanco")
+      // o un color #hex. Si no se indica, cambia solo de color en cada sección, como Aprendiz Financiero.
+      fondo: z.string().optional(),
     }),
   ),
   voz: z.string().optional(),
@@ -57,6 +60,17 @@ export const calcularPizarra: CalculateMetadataFunction<Props> = ({ props }) => 
 export const Pizarra: React.FC<Props> = ({ escenas, voz, musica }) => {
   let desde = 0;
   let etiqueta: string | undefined;
+  // Color de cada escena: cambia con cada sección (o cada 4 escenas si el video no tiene secciones)
+  const conSecciones = escenas.some((e) => e.etiqueta);
+  let seccion = 0;
+  let ultima: string | undefined;
+  const fondos = escenas.map((e, i) => {
+    if (conSecciones && e.etiqueta && e.etiqueta !== ultima) {
+      seccion++;
+      ultima = e.etiqueta;
+    }
+    return e.fondo ?? ORDEN_FONDOS[(conSecciones ? seccion : Math.floor(i / 4)) % ORDEN_FONDOS.length];
+  });
   return (
     <AbsoluteFill>
       <Papel />
@@ -66,6 +80,7 @@ export const Pizarra: React.FC<Props> = ({ escenas, voz, musica }) => {
         desde += duracion;
         return (
           <Sequence key={i} from={inicio} durationInFrames={duracion}>
+            <Fondo nombre={fondos[i]} />
             <Escena {...e} />
             {(() => {
               const nueva = e.etiqueta !== undefined && e.etiqueta !== etiqueta;
@@ -118,6 +133,24 @@ export const momentos = (d: DibujoPizarra, total: number) => {
   const objetosEn = objetos.map((o) => (o.img.startsWith("peep:") ? 2 : inicioDe(k++)));
   const textosEn = textos.map(() => inicioDe(k++));
   return { tiempoTrazos, objetosEn, textosEn, apariciones: [...objetosEn, ...textosEn].map(Math.round) };
+};
+
+// Fondos de color con piso, como los escenarios de Aprendiz Financiero: pared lisa con luz suave arriba
+// y un piso más oscuro con su línea. "papel" deja la textura de papel arrugado.
+const FONDOS: Record<string, [string, string]> = {
+  cielo: ["#a7dcef", "#b9a6d6"], mostaza: ["#e8c87e", "#c9a35c"], menta: ["#bfe8cf", "#8fc7a3"],
+  durazno: ["#f8c9ab", "#e39a7a"], lila: ["#d6c4f0", "#a993d3"], blanco: ["#ffffff", "#e9e9e9"],
+};
+const ORDEN_FONDOS = ["cielo", "mostaza", "menta", "durazno", "lila"];
+
+const Fondo: React.FC<{ nombre: string }> = ({ nombre }) => {
+  if (nombre === "papel") return null;
+  const [pared, piso] = FONDOS[nombre] ?? [nombre, "rgba(0,0,0,0.12)"];
+  return (
+    <AbsoluteFill style={{ background: `radial-gradient(ellipse at 50% 20%, rgba(255,255,255,0.45), rgba(255,255,255,0) 60%), ${pared}` }}>
+      <div style={{ position: "absolute", left: 0, right: 0, bottom: 0, height: "17%", background: piso, borderTop: "6px solid #1f1f1f" }} />
+    </AbsoluteFill>
+  );
 };
 
 // Etiqueta de sección arriba a la izquierda, con una barra que se llena si dice "Paso N de M"
