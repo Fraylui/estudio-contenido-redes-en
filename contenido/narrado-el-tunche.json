@@ -1,0 +1,63 @@
+{
+  "formato": "Narrado",
+  "props": {
+    "id": "el-tunche",
+    "estilo": "misterio",
+    "titulo": "El Tunche",
+    "subtitulo": "Leyenda de la Amazonía peruana",
+    "cta": "Sígueme para más leyendas",
+    "musica": "",
+    "escenas": [
+      {
+        "texto": "Si alguna vez estás en la selva peruana y escuchas un silbido en la oscuridad… nunca, nunca lo respondas.",
+        "prompt": "Dense Amazon rainforest at night, thick fog between giant trees, faint moonlight, a narrow muddy path disappearing into darkness, cinematic horror, muted teal and black tones, 35mm film grain",
+        "efecto": "acercar"
+      },
+      {
+        "texto": "En la Amazonía lo llaman el Tunche.",
+        "prompt": "Silhouette of a tall shadowy figure barely visible between jungle trees at night, glowing mist, no face visible, cinematic horror, dark green and black, volumetric light",
+        "efecto": "alejar"
+      },
+      {
+        "texto": "Dicen que es un espíritu que vaga entre los árboles cuando cae la noche, y que se anuncia con un silbido agudo y triste.",
+        "prompt": "Low angle view of enormous ceiba tree roots in the Amazon jungle at night, swirling fog, eerie blue moonlight filtering through leaves, cinematic, ominous atmosphere",
+        "efecto": "derecha"
+      },
+      {
+        "texto": "Algunos creen que es el alma de alguien que murió perdido en la selva. Otros, que es un brujo que nunca encontró descanso.",
+        "prompt": "Old abandoned wooden hut on stilts deep in the Amazon jungle, candle light flickering inside, mist, dark night, cinematic horror painting style",
+        "efecto": "acercar"
+      },
+      {
+        "texto": "Los ancianos cuentan que el Tunche no ataca a cualquiera. Busca a quienes se burlan de él, o a quienes le devuelven el silbido.",
+        "prompt": "Elderly Amazonian man telling a story by a small fire at night, warm firelight on his wrinkled face, dark jungle behind him, cinematic portrait, shallow depth of field",
+        "efecto": "izquierda"
+      },
+      {
+        "texto": "Una noche, cerca de Iquitos, un joven pescador escuchó el silbido junto al río. Riéndose, silbó de vuelta.",
+        "prompt": "Young fisherman standing on a wooden canoe on a dark Amazon river at night, holding a lantern, looking into the jungle, reflections on the water, fog, cinematic",
+        "efecto": "acercar"
+      },
+      {
+        "texto": "El silbido se detuvo. Y después… sonó justo detrás de él.",
+        "prompt": "Over the shoulder shot of a frightened young man on a riverbank at night, a dark blurred shape looming behind him in the fog, lantern light, cinematic horror, high tension",
+        "efecto": "acercar"
+      },
+      {
+        "texto": "A la mañana siguiente, solo encontraron su canoa, flotando vacía.",
+        "prompt": "Empty wooden canoe floating alone on a misty Amazon river at dawn, grey cold light, a lantern lying inside, silent and eerie, cinematic wide shot",
+        "efecto": "alejar"
+      },
+      {
+        "texto": "Hasta hoy, cuando la selva se queda en silencio y se escucha ese silbido, la gente apaga las luces… y espera.",
+        "prompt": "Small Amazonian village of wooden houses at night, one window light turning off, dark jungle surrounding, fog, stars, cinematic horror atmosphere",
+        "efecto": "derecha"
+      },
+      {
+        "texto": "¿En tu país también hay una leyenda así? Cuéntamela en los comentarios.",
+        "prompt": "Full moon above the Amazon rainforest canopy, mist rising from the trees, deep blue night, cinematic wide landscape, mysterious",
+        "efecto": "alejar"
+      }
+    ]
+  }
+}

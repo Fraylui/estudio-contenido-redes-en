@@ -1,0 +1,81 @@
+{
+  "formato": "Anuncio",
+  "props": {
+    "negocio": {
+      "logo": "clientes/quinuapata/logo.png",
+      "color": "#064ca1",
+      "acento": "#ffd400",
+      "eslogan": "Seguridad, garantía y confianza",
+      "whatsapp": "943 960 656",
+      "direccion": "Jr. César Vallejo 340 · Ayacucho",
+      "llamada": "Contáctanos y envía hoy"
+    },
+    "escenas": [
+      {
+        "tipo": "video",
+        "segundos": 3,
+        "archivo": "clientes/quinuapata/almacen.mp4",
+        "texto": "La mayoría cree que enviar al VRAEM *es complicado*"
+      },
+      {
+        "tipo": "video",
+        "segundos": 3.5,
+        "archivo": "clientes/quinuapata/carga.mp4",
+        "texto": "La recibimos, la *aseguramos* y la llevamos"
+      },
+      {
+        "tipo": "mapa",
+        "segundos": 5.5,
+        "archivo": "clientes/quinuapata/vraem.webp",
+        "texto": "Llegamos a *todo el VRAEM*",
+        "origen": "Ayacucho",
+        "destinos": [
+          "San Francisco",
+          "Pichari",
+          "Kimbiri",
+          "Palmapampa",
+          "Santa Rosa",
+          "Lobo Manitea",
+          "Malvinas",
+          "Progreso",
+          "Sirenachayocc",
+          "Chirumpiari",
+          "Rinconada",
+          "Pichiwillca",
+          "Tutumbaru"
+        ]
+      },
+      {
+        "tipo": "foto",
+        "segundos": 3,
+        "archivo": "clientes/quinuapata/encomiendas.webp",
+        "texto": "Envía lo que necesites, *del tamaño que sea*"
+      },
+      {
+        "tipo": "foto",
+        "segundos": 3,
+        "archivo": "clientes/quinuapata/encomiendas.webp",
+        "zoom": 2.2,
+        "centro": "52% 42%",
+        "texto": "Llega completo, *como lo enviaste*"
+      },
+      {
+        "tipo": "video",
+        "segundos": 3,
+        "archivo": "clientes/quinuapata/camioneta.mp4",
+        "encaje": "tarjeta",
+        "texto": "Tu encomienda, *en camino*"
+      },
+      {
+        "tipo": "foto",
+        "segundos": 2.5,
+        "archivo": "clientes/quinuapata/fachada.jpg",
+        "texto": "Jr. César Vallejo *340*"
+      },
+      {
+        "tipo": "cierre",
+        "segundos": 4.5
+      }
+    ]
+  }
+}

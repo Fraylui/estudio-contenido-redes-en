@@ -1,0 +1,117 @@
+{
+  "formato": "Anuncio",
+  "props": {
+    "negocio": {
+      "logo": "clientes/quinuapata/logo.png",
+      "color": "#064ca1",
+      "acento": "#ffd400",
+      "eslogan": "Seguridad, garantía y confianza",
+      "whatsapp": "943 960 656",
+      "direccion": "Jr. César Vallejo 340 · Ayacucho",
+      "llamada": "Contáctanos y envía hoy"
+    },
+    "escenas": [
+      {
+        "tipo": "video",
+        "segundos": 1.95,
+        "archivo": "clientes/quinuapata/gancho-skate.mp4",
+        "texto": "Tu encomienda sale *volando* al VRAEM"
+      },
+      {
+        "tipo": "video",
+        "segundos": 3.35,
+        "archivo": "clientes/quinuapata/listas.mp4",
+        "texto": "De Ayacucho al VRAEM *y del VRAEM a Ayacucho*"
+      },
+      {
+        "tipo": "video",
+        "segundos": 5.0,
+        "archivo": "clientes/quinuapata/carga.mp4",
+        "texto": "La recibimos, la *aseguramos* y la llevamos"
+      },
+      {
+        "tipo": "mapa",
+        "segundos": 4.1,
+        "archivo": "clientes/quinuapata/vraem.webp",
+        "origen": "Ayacucho",
+        "destinos": [
+          "San Francisco",
+          "Pichari",
+          "Kimbiri",
+          "Palmapampa",
+          "Santa Rosa",
+          "Lobo Manitea",
+          "Malvinas",
+          "Progreso",
+          "Sirenachayocc",
+          "Chirumpiari",
+          "Rinconada",
+          "Pichiwillca",
+          "Tutumbaru"
+        ],
+        "texto": "Llegamos a *todo el VRAEM*",
+        "cambio": 1.65,
+        "texto2": "Envía lo que necesites, *del tamaño que sea*"
+      },
+      {
+        "tipo": "foto",
+        "segundos": 2.3,
+        "archivo": "clientes/quinuapata/encomiendas.webp",
+        "zoom": 2.2,
+        "centro": "52% 42%",
+        "texto": "Llega completo, *como lo enviaste*"
+      },
+      {
+        "tipo": "video",
+        "segundos": 2.3,
+        "archivo": "clientes/quinuapata/camioneta.mp4",
+        "encaje": "tarjeta",
+        "texto": "Encuéntranos en *Jr. César Vallejo 340*"
+      },
+      {
+        "tipo": "foto",
+        "segundos": 1.95,
+        "archivo": "clientes/quinuapata/fachada.jpg",
+        "texto": "Ayacucho: Jr. César Vallejo *340*"
+      },
+      {
+        "tipo": "foto",
+        "segundos": 5.15,
+        "archivo": "clientes/quinuapata/encomiendas.webp",
+        "texto": "Seguridad, garantía *y confianza*"
+      },
+      {
+        "tipo": "cierre",
+        "segundos": 4.5
+      }
+    ],
+    "voz": "clientes/quinuapata/voz-c.m4a",
+    "efectos": [
+      {
+        "archivo": "sfx/viento-salto.wav",
+        "segundo": 0.15,
+        "volumen": 0.3
+      },
+      {
+        "archivo": "sfx/whoosh.wav",
+        "segundo": 0.25,
+        "volumen": 0.45
+      },
+      {
+        "archivo": "sfx/whip.wav",
+        "segundo": 1.85,
+        "volumen": 0.22
+      },
+      {
+        "archivo": "sfx/page-turn.wav",
+        "segundo": 10.25,
+        "volumen": 0.25
+      },
+      {
+        "archivo": "sfx/ding.wav",
+        "segundo": 26.15,
+        "volumen": 0.22
+      }
+    ]
+  }
+}

@@ -9,8 +9,10 @@
   },
   "private": true,
   "dependencies": {
+    "@remotion/captions": "4.0.537",
     "@remotion/cli": "4.0.537",
     "@remotion/fonts": "4.0.537",
+    "@remotion/install-whisper-cpp": "4.0.537",
     "@remotion/media": "4.0.537",
     "@remotion/transitions": "4.0.537",
     "@remotion/zod-types": "4.0.537",
@@ -32,7 +34,8 @@
     "build": "remotion bundle",
     "upgrade": "remotion upgrade",
     "lint": "eslint src && tsc",
-    "lote": "node scripts/render-lote.mjs"
+    "lote": "node scripts/render-lote.mjs",
+    "preparar": "node scripts/preparar-narrado.mjs"
   },
   "allowScripts": {
     "esbuild": false

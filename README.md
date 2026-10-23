@@ -18,6 +18,13 @@ Escribes el contenido en un archivo JSON y el proyecto genera el video con tu ma
 | `Frase` | Frases motivacionales que aparecen palabra por palabra | `contenido/frase-constancia.json` |
 | `DatosBarras` | Gráfico de barras animado con datos reales | `contenido/datos-poblacion-sudamerica.json` |
 
+Además está el formato **`Narrado`**, para videos con tu voz (ver más abajo), con dos estilos:
+
+| Estilo | Para qué canal | Ejemplo |
+|---|---|---|
+| `misterio` | Leyendas, terror, misterios: imágenes de cine, grano de película y viñeta oscura | `contenido/narrado-el-tunche.json` |
+| `dibujo` | Finanzas, explicaciones, curiosidades: fondo blanco con dibujos en cuadros, un **personaje narrador animado** con globo de diálogo y palabras clave grandes | `contenido/narrado-fin-de-mes.json` |
+
 Todos llevan tu @usuario arriba, una barra de progreso abajo (ayuda a que vean el video completo) y un cierre con llamada a la acción.
 
 ## Primeros pasos
@@ -65,6 +72,67 @@ Los videos quedan en `out/`.
 ### Música de fondo (opcional)
 Pon un `.mp3` en `public/musica/` y agrega `"musica": "nombre.mp3"` dentro de `props`. Usa solo música libre de derechos (por ejemplo, la Biblioteca de audio de YouTube); si no, te quitan la monetización de ese video.
 
+## Videos narrados con tu voz
+
+Necesitas además [ffmpeg](https://ffmpeg.org) (`winget install ffmpeg` en Windows, `brew install ffmpeg` en Mac).
+
+1. **Escribe el guion** en `contenido/narrado-<id>.json`: el texto de cada escena, el `prompt` de su imagen y su movimiento (`acercar`, `alejar`, `izquierda`, `derecha`). Hay guiones listos para leer en `guiones/`.
+2. **Graba tu voz** leyendo el guion y guárdala como `grabaciones/<id>.m4a` (o `.mp3`, `.wav`).
+3. **Pon las imágenes** en `public/imagenes/<id>/01.jpg`, `02.jpg`… (una por escena, en orden). Puedes crearlas con IA usando el `prompt` de cada escena. Sin imágenes, el video usa fondos provisionales.
+4. **Prepara el video:**
+   ```bash
+   npm run preparar -- el-tunche
+   ```
+   Este comando:
+   - **mejora tu voz**: quita ruido y retumbos, le da cuerpo y presencia, acorta las pausas demasiado largas y deja el volumen al nivel de redes;
+   - **genera los subtítulos** con Whisper, en tu computadora y gratis (la primera vez descarga unos 500 MB);
+   - **alinea tu voz con el guion**: los subtítulos salen sin faltas de ortografía y cada imagen aparece justo cuando dices su primera frase.
+5. **Revisa** con `npm run dev` y **genera** con `npm run lote -- el-tunche --ambos`.
+
+### Personaje, palabras clave y miniatura (estilo dibujo)
+
+En cada escena puedes agregar:
+
+| Campo | Qué hace | Valores |
+|---|---|---|
+| `emocion` | La cara y los brazos del personaje | `explica`, `senala`, `feliz`, `preocupado`, `sorprendido` |
+| `clave` | Palabra grande arriba del dibujo (como "CARO" o "BARATO") | cualquier texto corto |
+| `colorClave` | Color de esa palabra | `rojo`, `verde`, `amarillo`, `azul`, `negro` |
+
+El personaje mueve la boca solo cuando suena tu voz y parpadea. Su camiseta se cambia en `src/marca.ts` (`personaje.camisa`).
+
+Con el campo `miniatura` (`texto`, `color`, `texto2`, `color2`, `emocion`, `escena`), `npm run lote` también genera `out/<id>-miniatura.png`, la miniatura de YouTube en 1280x720.
+
+Opciones: `--modelo medium` (subtítulos más precisos, más lento) y `--pausas-naturales` (no acorta las pausas).
+
+Antes de grabar puedes abrir el Studio y ver el video con el ritmo estimado de narración, para revisar el guion.
+
+### Narración con voz clonada (opcional)
+Una narradora lee el texto que escribas, con voz clonada y en **español latino** (pronuncia la c y la z como s, y corrige nombres como Kimbiri o Huamanga).
+
+**Instalar una vez** (necesita [uv](https://docs.astral.sh/uv/) y [ffmpeg](https://ffmpeg.org); funciona sin tarjeta gráfica):
+
+```bash
+./voz/instalar.sh
+```
+
+Luego pon la grabación de la narradora en `voz/referencias/xiomi.wav` (ver `voz/referencias/LEEME.md`). **Esa grabación no se sube a GitHub**: con ella cualquiera podría clonar la voz. Usa solo la voz de alguien que te dio permiso.
+
+**Usar:** agrega `narracion` dentro de `props`:
+
+```json
+"narracion": [
+  { "texto": "¿Cuál es la capital de Australia?", "estilo": "pregunta" },
+  { "texto": "¡Es Canberra!", "estilo": "emocion", "en": 7.6 }
+]
+```
+
+- `estilo`: `normal`, `emocion`, `rapido`, `contando` o `pregunta` (si no lo pones, las frases con "?" van como pregunta).
+- `en`: segundo exacto en que empieza esa frase (para que coincida con lo que se ve).
+- Nombres mal pronunciados: agrega junto a `props` `"voz": { "pronunciacion": { "Pichari": "Pichári" } }`.
+
+`npm run lote` genera la voz antes del video (solo si cambiaste el texto), alarga el video si la narración es más larga y baja la música para que se entienda la voz. Cada frase se revisa con Whisper y se repite sola si salió mal. Tarda unos 8 segundos de cálculo por cada segundo de voz.
+
 ## Rutina sugerida para monetizar
 
 1. **Elige un nicho** y no lo cambies (curiosidades, datos de Latinoamérica, comida, motivación…).
@@ -79,9 +147,12 @@ Pon un `.mp3` en `public/musica/` y agrega `"musica": "nombre.mp3"` dentro de `p
 
 ```
 contenido/        ← tus videos, uno por archivo JSON
+guiones/          ← textos listos para grabar, con consejos
+grabaciones/      ← tus grabaciones de voz originales (no se suben a GitHub)
 public/fuentes/   ← fuentes tipográficas
 public/musica/    ← música de fondo
-scripts/          ← render-lote.mjs (genera todos los videos)
+scripts/          ← render-lote.mjs (genera videos) y preparar-narrado.mjs (voz y subtítulos)
+voz/              ← narración con voz clonada: instalar.sh, narrar.py, referencias/ (privadas)
 src/marca.ts      ← tu identidad: colores, fuentes, @usuario
 src/formatos/     ← las plantillas de video
 src/comun/        ← piezas compartidas (fondo, firma, música, animaciones)

@@ -1,0 +1,164 @@
+{
+  "formato": "Anuncio",
+  "voz": {
+    "referencia": "voz/referencias/xiomi.wav"
+  },
+  "props": {
+    "negocio": {
+      "logo": "clientes/quinuapata/logo.png",
+      "color": "#064ca1",
+      "acento": "#ffd400",
+      "eslogan": "Seguridad, garantía y confianza",
+      "whatsapp": "943 960 656",
+      "direccion": "Jr. César Vallejo 340 · Ayacucho",
+      "llamada": "Contáctanos y envía hoy"
+    },
+    "escenas": [
+      {
+        "tipo": "video",
+        "segundos": 2,
+        "archivo": "clientes/quinuapata/gancho-skate.mp4",
+        "texto": "Tu encomienda sale *volando* al VRAEM",
+        "frase": 1
+      },
+      {
+        "tipo": "video",
+        "segundos": 3.5,
+        "archivo": "clientes/quinuapata/listas.mp4",
+        "texto": "De Ayacucho al VRAEM *y del VRAEM a Ayacucho*",
+        "frase": 2
+      },
+      {
+        "tipo": "video",
+        "segundos": 4.5,
+        "archivo": "clientes/quinuapata/carga.mp4",
+        "texto": "La recibimos, la *aseguramos* y la llevamos",
+        "frase": 3
+      },
+      {
+        "tipo": "mapa",
+        "segundos": 4,
+        "archivo": "clientes/quinuapata/vraem.webp",
+        "origen": "Ayacucho",
+        "destinos": [
+          "San Francisco",
+          "Pichari",
+          "Kimbiri",
+          "Palmapampa",
+          "Santa Rosa",
+          "Lobo Manitea",
+          "Malvinas",
+          "Progreso",
+          "Sirenachayocc",
+          "Chirumpiari",
+          "Rinconada",
+          "Pichiwillca",
+          "Tutumbaru"
+        ],
+        "texto": "Llegamos a *todo el VRAEM*",
+        "frase": 4,
+        "texto2": "Envía lo que necesites, *del tamaño que sea*",
+        "cambio": 1.5,
+        "fraseCambio": 5
+      },
+      {
+        "tipo": "foto",
+        "segundos": 2.3,
+        "archivo": "clientes/quinuapata/encomiendas.webp",
+        "zoom": 2.2,
+        "centro": "52% 42%",
+        "texto": "Llega completo, *como lo enviaste*",
+        "frase": 6
+      },
+      {
+        "tipo": "foto",
+        "segundos": 3,
+        "archivo": "clientes/quinuapata/fachada.jpg",
+        "texto": "Encuéntranos en *Jr. César Vallejo 340*",
+        "frase": 7
+      },
+      {
+        "tipo": "foto",
+        "segundos": 4,
+        "archivo": "clientes/quinuapata/encomiendas.webp",
+        "texto": "Seguridad, garantía *y confianza*",
+        "frase": 8
+      },
+      {
+        "tipo": "cierre",
+        "segundos": 4,
+        "frase": 9
+      }
+    ],
+    "efectos": [
+      {
+        "archivo": "sfx/viento-salto.wav",
+        "segundo": 0.15,
+        "volumen": 0.3
+      },
+      {
+        "archivo": "sfx/whoosh.wav",
+        "segundo": 0.25,
+        "volumen": 0.45
+      },
+      {
+        "archivo": "sfx/whip.wav",
+        "segundo": -0.1,
+        "volumen": 0.22,
+        "escena": 2
+      },
+      {
+        "archivo": "sfx/page-turn.wav",
+        "segundo": -0.05,
+        "volumen": 0.25,
+        "escena": 4
+      },
+      {
+        "archivo": "sfx/ding.wav",
+        "segundo": 0.1,
+        "volumen": 0.22,
+        "escena": 8
+      }
+    ],
+    "narracion": [
+      {
+        "texto": "¡Tu encomienda sale volando al VRAEM!",
+        "estilo": "urgente"
+      },
+      {
+        "texto": "De Ayacucho a todo el VRAEM, y del VRAEM a Ayacucho.",
+        "estilo": "vendedor"
+      },
+      {
+        "texto": "En SD Quinuapata la recibimos, la aseguramos y la llevamos.",
+        "estilo": "vendedor"
+      },
+      {
+        "texto": "Llegamos a todo el VRAEM.",
+        "estilo": "feliz",
+        "pausa": 0.2
+      },
+      {
+        "texto": "Envía lo que necesites, del tamaño que sea,",
+        "estilo": "vendedor",
+        "pausa": 0.15
+      },
+      {
+        "texto": "y llega completo, como lo enviaste.",
+        "estilo": "calmado"
+      },
+      {
+        "texto": "Encuéntranos en el Jr. César Vallejo 340, en Ayacucho.",
+        "estilo": "normal"
+      },
+      {
+        "texto": "SD Quinuapata: seguridad, garantía y confianza.",
+        "estilo": "serio"
+      },
+      {
+        "texto": "Contáctanos al 943 960 656.",
+        "estilo": "vendedor"
+      }
+    ]
+  }
+}
