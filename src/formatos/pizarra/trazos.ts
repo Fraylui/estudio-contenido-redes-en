@@ -208,7 +208,7 @@ export const destellos = (x: number, y: number, s = 1) => [
   ...linea(x, y - 40 * s, x, y - 70 * s), ...linea(x + 30 * s, y - 30 * s, x + 52 * s, y - 52 * s), ...linea(x - 30 * s, y - 30 * s, x - 52 * s, y - 52 * s),
 ];
 
-// Quipu inca: cuerda principal con cuerdas de colores colgando y sus nudos (identidad del canal "Tu Quipu")
+// Quipu inca: cuerda principal con cuerdas de colores colgando y sus nudos (identidad del canal "Quipu")
 export const quipu = (x1: number, x2: number, y: number, { largo = 220, colores = ["#d7263d", "#f6c445", "#2e9e4f", "#4d8fe0", "#ff8fab", "#8b5a2b"] } = {}) => {
   const t: Trazo[] = [...camino(`M ${x1} ${y} Q ${(x1 + x2) / 2} ${y + 25} ${x2} ${y}`, { strokeWidth: 8, stroke: "#6e3b1f" })];
   const n = Math.max(3, Math.round((x2 - x1) / 45));
