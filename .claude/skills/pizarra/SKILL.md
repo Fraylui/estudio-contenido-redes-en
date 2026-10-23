@@ -90,7 +90,10 @@ Licencias:
 - Los objetos y rótulos entran con `spring()` y después flotan apenas.
 - El texto aparece palabra por palabra; las de `resaltar` llevan marcador amarillo.
 - Zoom lento de cámara y papel arrugado.
-- **Efectos de sonido solo en momentos clave** (8 a 12 por video), con `"sonido"` y `"sonidoEn"` en la escena, usando el catálogo de la skill video-sfx: `whoosh`, `whoosh_2` y `whoosh_3` al cambiar de sección; `caja_registradora` cuando aparece dinero; `ding` o `magic_reveal` en una revelación; `boom` en un dato impactante. **Nunca un sonido en cada escena**: cansa y se escucha barato.
+- **Ritmo de sonido automático (alta retención):** un whoosh suave en cada cambio de escena (alterna 3 variantes) y un pop bajito, con tono variado, por cada persona, objeto o rótulo que aparece. Va 12 a 13 dB por debajo para no tapar la voz.
+- **Golpes clave a mano** (8 a 12 por video) con `"sonido"` y `"sonidoEn"`: `magic_reveal` en revelaciones, `caja_registradora` con dinero, `boom` en datos impactantes, `ding` en conclusiones. Nunca el mismo sonido fuerte seguido.
+- **Punch-in:** la cámara da un pequeño golpe de zoom cuando aparece la palabra resaltada.
+- **Ritmo visual:** algo nuevo aparece cada 1 o 2 s (trazo, objeto, rótulo, palabra), y los dibujos respiran al terminar.
 
 ## 5. Antes de narrar
 

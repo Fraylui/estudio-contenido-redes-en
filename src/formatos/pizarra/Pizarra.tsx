@@ -65,6 +65,11 @@ export const Pizarra: React.FC<Props> = ({ escenas, voz, musica }) => {
           <Sequence key={i} from={inicio} durationInFrames={duracion}>
             <Escena {...e} />
             {e.sonido ? <Efecto id={e.sonido} en={e.sonidoEn ?? 0.6} /> : null}
+            {/* Ritmo de sonido como en los canales de alta retención: cada cambio y cada aparición suena, bajito y variado */}
+            {i > 0 && !(e.sonido && (e.sonidoEn ?? 0.6) < 0.5) ? <Efecto id={WHOOSH[i % 3]} en={0.05} extraDb={-12} /> : null}
+            {momentos(resolverDibujo(e.dibujo), duracion).apariciones.map((f, k) => (
+              <Efecto key={k} id="pop" en={f / FPS} extraDb={-13} velocidad={0.9 + ((i * 7 + k * 3) % 5) * 0.06} />
+            ))}
           </Sequence>
         );
       })}
@@ -79,14 +84,32 @@ const CATALOGO = catalogoSfx as Record<string, Sfx>;
 
 // El sonido se adelanta su punto de impacto para que el golpe caiga justo en "en". Va 6 dB más bajo que en
 // los anuncios: aquí acompaña a una narración tranquila.
-const Efecto: React.FC<{ id: string; en: number }> = ({ id, en }) => {
+const Efecto: React.FC<{ id: string; en: number; extraDb?: number; velocidad?: number }> = ({ id, en, extraDb = -6, velocidad = 1 }) => {
   const c = CATALOGO[id];
   if (!c) return null;
   return (
-    <Sequence from={Math.max(0, Math.round((en - c.impacto_s) * FPS))} layout="none">
-      <Audio src={staticFile(`sfx/efectos/${c.archivo}`)} volume={Math.pow(10, (c.ganancia_db_sugerida - 6) / 20)} />
+    <Sequence from={Math.max(0, Math.round((en - c.impacto_s / velocidad) * FPS))} layout="none">
+      <Audio src={staticFile(`sfx/efectos/${c.archivo}`)} volume={Math.pow(10, (c.ganancia_db_sugerida + extraDb) / 20)} playbackRate={velocidad} />
     </Sequence>
   );
+};
+
+const WHOOSH = ["whoosh", "whoosh_2", "whoosh_3"];
+
+// Calendario de una escena (en cuadros): cuánto tarda el trazo y cuándo aparece cada objeto o rótulo.
+// Las personas (peep) entran primero; el resto se reparte hasta el 75 % de la escena para que siempre pase algo.
+export const momentos = (d: DibujoPizarra, total: number) => {
+  const objetos = d.objetos ?? [];
+  const textos = d.textos ?? [];
+  const trazos = d.trazos ?? [];
+  const tiempoTrazos = trazos.length ? Math.min(total * 0.4, 1.8 * FPS) : 0;
+  const luego = [...objetos.filter((o) => !o.img.startsWith("peep:")), ...textos];
+  const fin = Math.max(tiempoTrazos + 12, total * 0.75);
+  const inicioDe = (k: number) => tiempoTrazos + (luego.length > 1 ? (k / (luego.length - 1)) * (fin - tiempoTrazos) * 0.8 : 0);
+  let k = 0;
+  const objetosEn = objetos.map((o) => (o.img.startsWith("peep:") ? 2 : inicioDe(k++)));
+  const textosEn = textos.map(() => inicioDe(k++));
+  return { tiempoTrazos, objetosEn, textosEn, apariciones: [...objetosEn, ...textosEn].map(Math.round) };
 };
 
 // Papel arrugado: textura de ruido con luz rasante, sin imágenes externas
@@ -109,12 +132,19 @@ const Escena: React.FC<Props["escenas"][number]> = ({ dibujo, texto, resaltar, s
   const { width, height } = useVideoConfig();
   const horizontal = width > height;
   const total = (segundos ?? 4) * FPS;
-  // Zoom lento de cámara, como en los videos de pizarra
-  const zoom = interpolate(frame, [0, total], [1, 1.05]);
+  // Zoom lento de cámara y un "punch-in" rápido cuando aparece la palabra clave (estilo alta retención)
+  const palabras = texto.split(/\s+/);
+  const limpia = (p: string) => p.toLowerCase().replace(/[¿?¡!.,:;…"«»]/g, "");
+  const claves = new Set((resaltar ?? "").split(/\s+/).map(limpia).filter(Boolean));
+  const primera = palabras.findIndex((p) => claves.has(limpia(p)));
+  const golpe = primera >= 0 ? (primera / palabras.length) * total * 0.5 : -1;
+  const punch = golpe >= 0 ? spring({ frame: frame - golpe, fps: FPS, config: { damping: 9, stiffness: 220 } }) : 0;
+  const rebote = golpe >= 0 && frame >= golpe ? Math.max(0, 1 - (frame - golpe) / 18) : 0;
+  const zoom = interpolate(frame, [0, total], [1, 1.05]) + 0.035 * punch * rebote;
   return (
     <AbsoluteFill style={{ flexDirection: horizontal ? "row" : "column", transform: `scale(${zoom})` }}>
       <div style={{ flex: horizontal ? 1.05 : 1.2, position: "relative" }}>
-        <Dibujo dibujo={resolverDibujo(dibujo)} duracion={Math.min(total * 0.6, 2.6 * FPS)} />
+        <Dibujo dibujo={resolverDibujo(dibujo)} duracion={total} />
       </div>
       <div style={{ flex: 1, display: "flex", alignItems: "center", justifyContent: "center", padding: horizontal ? "0 90px 0 0" : "0 70px 160px" }}>
         <Texto texto={texto} resaltar={resaltar} duracion={total * 0.5} />
@@ -146,8 +176,7 @@ const Dibujo: React.FC<{ dibujo: DibujoPizarra; duracion: number }> = ({ dibujo,
   }, [trazos, objetos, textos]);
   const totalLargo = largos.reduce((a, b) => a + b, 0) || 1;
   // Si hay objetos, las líneas usan el primer 65 % del tiempo y los objetos el resto
-  const extras = objetos.length + textos.length;
-  const tiempoTrazos = extras ? (trazos.length ? duracion * 0.65 : 0) : duracion;
+  const { tiempoTrazos, objetosEn, textosEn } = momentos(dibujo, duracion);
   const avance = interpolate(frame, [0, Math.max(1, tiempoTrazos)], [0, totalLargo], { extrapolateRight: "clamp" });
   let acumulado = 0;
   // Vida: cuando el dibujo ya está completo, respira y se balancea apenas, para que nunca quede congelado
@@ -176,7 +205,7 @@ const Dibujo: React.FC<{ dibujo: DibujoPizarra; duracion: number }> = ({ dibujo,
       })}
       </g>
       {objetos.map((o, i) => {
-        const inicio = tiempoTrazos + (i / extras) * (duracion - tiempoTrazos);
+        const inicio = objetosEn[i];
         const pop = spring({ frame: frame - inicio, fps, config: { damping: 11, stiffness: 160 } });
         if (frame < inicio) return null;
         // Flota apenas, para que el dibujo no se vea congelado
@@ -189,7 +218,7 @@ const Dibujo: React.FC<{ dibujo: DibujoPizarra; duracion: number }> = ({ dibujo,
       })}
       {textos.map((e, i) => {
         // Rótulos escritos a mano dentro del dibujo ("1904", "24 h"…)
-        const inicio = tiempoTrazos + ((objetos.length + i) / extras) * (duracion - tiempoTrazos);
+        const inicio = textosEn[i];
         const pop = spring({ frame: frame - inicio, fps, config: { damping: 12, stiffness: 170 } });
         if (frame < inicio) return null;
         return (
