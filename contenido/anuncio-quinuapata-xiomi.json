@@ -93,31 +93,52 @@
     ],
     "efectos": [
       {
+        "sonido": "flash_shock",
+        "segundo": 0.05
+      },
+      {
         "archivo": "sfx/viento-salto.wav",
-        "segundo": 0.15,
-        "volumen": 0.3
+        "segundo": 0.3,
+        "volumen": 0.25
       },
       {
-        "archivo": "sfx/whoosh.wav",
-        "segundo": 0.25,
-        "volumen": 0.45
-      },
-      {
-        "archivo": "sfx/whip.wav",
-        "segundo": -0.1,
-        "volumen": 0.22,
+        "sonido": "whoosh",
+        "segundo": 0,
         "escena": 2
       },
       {
-        "archivo": "sfx/page-turn.wav",
-        "segundo": -0.05,
-        "volumen": 0.25,
+        "sonido": "whoosh_2",
+        "segundo": 0,
+        "escena": 3
+      },
+      {
+        "sonido": "whoosh_3",
+        "segundo": 0,
         "escena": 4
       },
       {
-        "archivo": "sfx/ding.wav",
-        "segundo": 0.1,
-        "volumen": 0.22,
+        "sonido": "ding",
+        "segundo": 1.6,
+        "escena": 4
+      },
+      {
+        "sonido": "shutter",
+        "segundo": 0,
+        "escena": 5
+      },
+      {
+        "sonido": "whoosh",
+        "segundo": 0,
+        "escena": 6
+      },
+      {
+        "sonido": "pop",
+        "segundo": 0.15,
+        "escena": 7
+      },
+      {
+        "sonido": "magic_reveal",
+        "segundo": 0.35,
         "escena": 8
       }
     ],

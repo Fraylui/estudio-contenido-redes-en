@@ -53,7 +53,7 @@ ESTILOS = {
     "pregunta": {"exageracion": 0.50, "cfg": 0.30, "tempo": 1.00, "tono": "seria"},
 }
 # Nombres que el modelo acentúa mal: se le dan escritos como se pronuncian (el texto en pantalla no cambia).
-PRONUNCIACION = {"kimbiri": "Kimbíri", "huamanga": "Huamánga", "vraem": "Vráem", "pnp": "pe ene pe",
+PRONUNCIACION = {"kimbiri": "Kimbíri", "huamanga": "Huamánga", "vraem": "Vra em", "pnp": "pe ene pe",
                  "ugel": "úguel", "essalud": "es salúd", "sis": "ese i ese",
                  "pichari": "Pichári", "palmapampa": "Palmapámpa", "pichiwillca": "Pichiwílca",
                  "chirumpiari": "Chirumpiári", "tutumbaru": "Tutumbáru", "sirenachayocc": "Sirenachayók",

@@ -61,7 +61,7 @@ Y junto a `props`, si hace falta: `"voz": { "referencia": "voz/referencias/xiomi
 
 **Pronunciación latina (automática en `narrar.py`):**
 - seseo: la c ante e/i y la z suenan como s;
-- nombres del VRAEM con su acento escrito (Pichári, Kimbíri, Vráem, Kinuapáta…);
+- nombres del VRAEM con su acento escrito (Pichári, Kimbíri, "Vra em", Kinuapáta…);
 - siglas deletreadas (SD → "ese de", PNP → "pe ene pe");
 - "Jr." y "Av." sin pausa;
 - celulares dichos cifra por cifra, de tres en tres.
