@@ -1,4 +1,4 @@
-# La receta de cada video de Quipu
+# La receta de cada video de Khipu
 
 Es la lista que se cumple **en cada video, sin excepción**. El detalle está en los demás documentos de `docs/`.
 

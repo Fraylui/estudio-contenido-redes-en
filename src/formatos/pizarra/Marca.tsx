@@ -1,4 +1,4 @@
-// Identidad del canal "Quipu" (@tu_quipu): foto de perfil (800x800) y banner de YouTube (2560x1440).
+// Identidad del canal "Khipu" (@tu_quipu): foto de perfil (800x800) y banner de YouTube (2560x1440).
 // Usa la misma mascota cerebro y los mismos colores que los videos de pizarra.
 import { getBoundingBox } from "@remotion/paths";
 import { AbsoluteFill } from "remotion";
@@ -39,7 +39,7 @@ export const BannerCanal: React.FC = () => (
       <Dibujo trazos={cerebro(0, 0, { cara: "feliz", pose: "musculos" })} style={{ height: 340, width: 340, flexShrink: 0 }} />
       <div style={{ display: "flex", flexDirection: "column", gap: 18 }}>
         <div style={{ fontFamily: "Titulo", fontSize: 170, lineHeight: 0.95, color: "#1f1f1f", letterSpacing: 2 }}>
-          <span style={{ background: "#ffe14d", padding: "6px 22px 0", display: "inline-block", lineHeight: 1, transform: "rotate(-2deg)" }}>QUIPU</span>
+          <span style={{ background: "#ffe14d", padding: "6px 22px 0", display: "inline-block", lineHeight: 1, transform: "rotate(-2deg)" }}>KHIPU</span>
         </div>
         <div style={{ fontFamily: "Mano", fontSize: 56, color: "#1f1f1f" }}>Lo que nadie te explicó, explicado fácil.</div>
         <div style={{ fontFamily: "Mano", fontSize: 50, color: "#d7263d" }}>Mente · Dinero · Amor · Curiosidades</div>

@@ -1,4 +1,4 @@
-# Banco de ganchos de Quipu
+# Banco de ganchos de Khipu
 
 El gancho es lo que pasa en los **primeros 5 a 10 segundos**. Si falla, nadie ve el resto. Cada video usa **un gancho verbal + un gancho visual a la vez**.
 
@@ -39,4 +39,4 @@ El gancho es lo que pasa en los **primeros 5 a 10 segundos**. Si falla, nadie ve
 - "Método japonés para [resultado]" → de 482 k a 529 k.
 - "N señales de que [algo personal]" → estable en psicología.
 - "Tu cuerpo/cerebro cuando [situación]" → millones en CasiCreativo.
-- Terminar con "| explicado por Quipu", como hace Simio Alpha.
+- Terminar con "| explicado por Khipu", como hace Simio Alpha.

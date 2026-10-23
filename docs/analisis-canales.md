@@ -85,19 +85,19 @@ No se pudo leer "Historia, Explicada" y el @DOMINALO que aparece es otro canal; 
 4. **Marca en el título:** "explicado por SIMIO", "| Casi Creativo". Repetir el nombre crea hábito.
 5. **Los videos de consejos genéricos rinden poco** (1 k a 20 k). Explotan los que **resuelven algo concreto** o **hacen participar** al espectador.
 
-## Qué significa para Quipu
+## Qué significa para Khipu
 
 | Categoría | Por qué | Primer video |
 |---|---|---|
-| **🧠 Cerebro y hábitos** (la principal) | Sueño, memoria y estudio son lo más visto del nicho | "Cómo despertar temprano sin sentirte cansado \| explicado por Quipu" |
+| **🧠 Cerebro y hábitos** (la principal) | Sueño, memoria y estudio son lo más visto del nicho | "Cómo despertar temprano sin sentirte cansado \| explicado por Khipu" |
 | **💰 Dinero simple** | Paga más por vista; el Kakeibo ya está hecho | "Los gastos hormiga que te dejan pobre" |
 | **🎮 Retos para tu cerebro** | Formato interactivo: 1 M de vistas en DECIDO VIVIR MEJOR | "6 retos para poner a prueba tu memoria" |
 | **🫀 Tu cuerpo cuando…** | Lo que más vistas trae en CasiCreativo; la mascota encaja perfecto | "Tu cuerpo cuando no duermes" |
 | **❤️ Amor y psicología** | "N señales de que…" funciona estable | "6 señales de que te estás enamorando" |
 | **🏛️ Historias de los Andes** (después) | Muchas horas vistas, y le da identidad peruana al canal | "El secreto de los quipus incas" |
 
-**Reglas de Quipu desde ahora:**
+**Reglas de Khipu desde ahora:**
 - Videos de **8 a 12 min**.
-- Títulos con la fórmula del nicho más **"| explicado por Quipu"**.
-- Cada 5 o 6 videos, una **"Colección Quipu"** que los junte.
+- Títulos con la fórmula del nicho más **"| explicado por Khipu"**.
+- Cada 5 o 6 videos, una **"Colección Khipu"** que los junte.
 - Un **reto interactivo** cada 2 semanas.

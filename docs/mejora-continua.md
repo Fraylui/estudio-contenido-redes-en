@@ -1,4 +1,4 @@
-# Mejora continua de Quipu
+# Mejora continua de Khipu
 
 **Regla:** cada video nuevo estrena **al menos 1 o 2 técnicas visuales o de sonido** de esta lista, y cada 2 semanas se revisan los canales de referencia (`docs/analisis-canales.md`) para sumar ideas nuevas. Nunca se publica un video igual al anterior.
 
@@ -7,7 +7,7 @@
 |---|---|
 | Dibujos que se trazan solos (rough.js) | Video 1 |
 | Texto palabra por palabra con marcador amarillo | Video 1 |
-| Mascota cerebro Quipu con emociones | Video 1 |
+| Mascota cerebro Khipu con emociones | Video 1 |
 | Íconos redibujados a mano con mancha de color | Video 2 |
 | Caras de reacción (Open Peeps) | Video 2 |
 | Whoosh en cada escena, pops variados y golpes clave | Video 2 |

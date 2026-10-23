@@ -1,4 +1,4 @@
-# Inventario de herramientas de Quipu: qué podemos hacer y qué no
+# Inventario de herramientas de Khipu: qué podemos hacer y qué no
 
 Estado al 23 de octubre de 2026. ✅ en uso · 🟡 disponible pero sin usar · 🔒 necesita autorización o pago · ❌ no se puede aquí.
 
@@ -54,7 +54,7 @@ Estado al 23 de octubre de 2026. ✅ en uso · 🟡 disponible pero sin usar · 
 ## 5. Publicar y medir
 | Herramienta | Capacidad | Estado |
 |---|---|---|
-| **Metricool** (marca "Ecos del Camino", con YouTube Quipu y Facebook) | Programar en YouTube, Facebook, Instagram y TikTok; **mejor hora para publicar**; **estadísticas** | ✅ Publica · 🟡 Estadísticas y mejor hora |
+| **Metricool** (marca "Ecos del Camino", con YouTube Khipu y Facebook) | Programar en YouTube, Facebook, Instagram y TikTok; **mejor hora para publicar**; **estadísticas** | ✅ Publica · 🟡 Estadísticas y mejor hora |
 | Rama `publicaciones` en GitHub | Link público para que Metricool baje los videos | ✅ |
 | Tareas programadas | Revisiones automáticas (publicación, mejoras semanales) | ✅ |
 

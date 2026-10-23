@@ -1,6 +1,8 @@
-# Plan del canal Quipu (@tu_quipu)
+# Plan del canal Khipu (@tu_quipu)
 
-**Promesa:** "Lo que nadie te explicó, explicado fácil." Videos de pizarra con la mascota cerebro (Quipu) y la voz de Xiomi.
+**Nombre:** **Khipu**, como se escribe en quechua (el sistema de cuerdas con nudos de los incas). La voz lo pronuncia "Kípu" (`voz/narrar.py`). El usuario del canal sigue siendo @tu_quipu mientras no se cambie en YouTube.
+
+**Promesa:** "Lo que nadie te explicó, explicado fácil." Videos de pizarra con la mascota cerebro (Khipu) y la voz de Xiomi.
 
 ## Público
 - **Fase 1 (hasta monetizar): solo español.** Personas de 18 a 35 años de Latinoamérica (primero Perú, México, Colombia y Argentina) y de España, que quieren mejorar su dinero, su mente y sus hábitos. Un canal en dos idiomas confunde al algoritmo: no sabe a quién mostrarle los videos.

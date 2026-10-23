@@ -1,4 +1,4 @@
-# Cómo llegar a monetizar Quipu
+# Cómo llegar a monetizar Khipu
 
 Estado a octubre de 2026. Las cifras se confirman en la Ayuda oficial de YouTube ("Requisitos del Programa de socios").
 
@@ -15,7 +15,7 @@ Cuenta: 4 000 h = 240 000 min. Un video de 8 min visto al 50 % aporta 4 min por 
 Desde julio de 2025 YouTube llama así a lo **producido en masa, con plantilla y poca variación**. Es el motivo principal por el que rechazan canales con IA.
 La voz con IA **no** está prohibida; lo que se castiga es que todos los videos parezcan iguales y sin aporte propio.
 
-**Lo que hace Quipu para pasar la revisión:**
+**Lo que hace Khipu para pasar la revisión:**
 - Un **guion propio** en cada video, investigado y con fuentes en la descripción. Nunca se resume ni se copia el video de otro.
 - **Dibujos y personajes propios** (Mateo, Lucía, la mascota) y escenas hechas para ese tema. Nada de clips de stock repetidos.
 - Cada video estrena técnicas nuevas (`docs/mejora-continua.md`). Nunca dos videos con la misma estructura visual.
