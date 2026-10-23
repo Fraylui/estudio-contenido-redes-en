@@ -43,9 +43,9 @@ for (const archivo of archivos) {
     const voz = JSON.parse(readFileSync(json, "utf8")).voz ?? {};
     const referencia = voz.referencia ?? "voz/referencias/xiomi.wav";
     // Solo se vuelve a narrar si cambió el texto narrado o la configuración de la voz (no cualquier cambio del JSON).
-    // También cuenta el propio narrador: si cambia una pronunciación (por ejemplo "VRAEM"), hay que volver a narrar.
+    // También cuentan el narrador y el ecualizador: si cambia una pronunciación (por ejemplo "VRAEM") o el sonido, hay que volver a narrar.
     // Las frases que no cambian salen de la memoria de narrar.py, así que no se pierde tiempo.
-    const narrador = existsSync("voz/narrar.py") ? readFileSync("voz/narrar.py", "utf8") : "";
+    const narrador = ["voz/narrar.py", "voz/ecualizar.py"].map((f) => (existsSync(f) ? readFileSync(f, "utf8") : "")).join("");
     const huella = createHash("sha1").update(JSON.stringify({ narracion: props.narracion, voz, narrador })).digest("hex");
     const datosVoz = `public/voz/${nombre}.json`;
     const anterior = existsSync(datosVoz) ? JSON.parse(readFileSync(datosVoz, "utf8")) : null;

@@ -26,8 +26,8 @@ BANDAS = [  # (desde, hasta, centro del filtro, objetivo dB, máximo que se pued
     (500, 1000, 700, -6.5, 4),
     (1000, 2000, 1400, -9.0, 6),
     (2000, 4000, 2800, -12.0, 8),
-    (4000, 8000, 5600, -16.0, 6),
-    (8000, 16000, 11000, -27.0, 3),  # subir mucho aquí solo agrega soplido
+    (4000, 8000, 5600, -17.0, 4),  # más arriba suena áspera y con siseo
+    (8000, 16000, 11000, -30.0, 2),  # en la voz sintética aquí casi solo hay soplido del vocoder
 ]
 CORTE_MAX = -8.0  # lo máximo que se baja una banda
 
@@ -88,7 +88,8 @@ def main():
 
     # Antes de ecualizar: graves que no son voz, ruido de fondo suave y compresión pareja
     # Voz sintética (Chatterbox): no tiene ruido que quitar, y el reductor de ruido la vuelve metálica y robótica
-    ruido = "" if "--sintetica" in sys.argv else "afftdn=nr=8:nf=-50,"
+    # Chatterbox genera a 24 kHz: sobre 11 kHz no hay voz, solo el soplido del vocoder (suena a tele sin señal)
+    ruido = "lowpass=f=11000:poles=2," if "--sintetica" in sys.argv else "afftdn=nr=8:nf=-50,"
     base = f"highpass=f=85:poles=2,{ruido}acompressor=threshold=-26dB:ratio=2.5:attack=10:release=120:knee=6:makeup=2"
     x = leer(entrada, base)
     antes = medir(leer(entrada))
