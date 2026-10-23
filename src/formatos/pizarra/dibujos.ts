@@ -8,7 +8,8 @@ import { billeteraAbierta, caja, camino, caricatura, cerebro, icono, LUCIA, MATE
 
 export type Objeto = { img: string; x: number; y: number; t: number; rot?: number };
 export type Rotulo = { texto: string; x: number; y: number; t: number; color?: string; rot?: number };
-export type DibujoPizarra = { trazos?: Trazo[]; objetos?: Objeto[]; textos?: Rotulo[] };
+// "personaje": el personaje de la escena; aparece entero de una vez con un rebote (no trazo por trazo, que se ve lento y feo)
+export type DibujoPizarra = { trazos?: Trazo[]; personaje?: Trazo[]; objetos?: Objeto[]; textos?: Rotulo[] };
 
 const lucia = (x: number, y: number, cara: Parameters<typeof monigote>[2] = {}) => monigote(x, y, { pelo: true, ...cara });
 const ROJO = "#d7263d";
@@ -299,21 +300,22 @@ const POSICIONES_SOLAS: Record<number, [number, number, number][]> = {
 
 export const componer = (c: Composicion): DibujoPizarra => {
   const trazos: Trazo[] = [];
+  const personaje: Trazo[] = [];
   const objetos: Objeto[] = [];
   const textos: Rotulo[] = [];
   const [tipo, a, b] = (c.personaje ?? "").split(":");
   if (tipo === "peep") objetos.push({ img: `peep:${a}`, x: 290, y: 440, t: 480 });
-  else if (tipo === "cerebro") trazos.push(...cerebro(290, 430, { cara: (a || "feliz") as Cara, pose: (b || "abajo") as PoseCerebro }));
+  else if (tipo === "cerebro") personaje.push(...cerebro(290, 430, { cara: (a || "feliz") as Cara, pose: (b || "abajo") as PoseCerebro }));
   else if (tipo === "caricatura") {
     // "caricatura:mateo:dinero:abierta:adelante" → modelo, ojos, boca y brazos
     const [, modelo, ojos, boca, brazo] = (c.personaje ?? "").split(":");
-    trazos.push(...caricatura(290, 900, {
+    personaje.push(...caricatura(290, 900, {
       modelo: modelo === "lucia" ? LUCIA : MATEO,
       ojos: (ojos || "normal") as OjosCaricatura, boca: (boca || "sonrisa") as BocaCaricatura,
       brazo: (brazo || "abajo") as "abajo" | "arriba" | "adelante" | "cadera",
     }));
   } else if (tipo === "monigote" || tipo === "lucia") {
-    trazos.push(...monigote(290, 300, { cara: (a || "normal") as Cara, brazos: (b || "abajo") as Brazos, pelo: tipo === "lucia" }));
+    personaje.push(...monigote(290, 300, { cara: (a || "normal") as Cara, brazos: (b || "abajo") as Brazos, pelo: tipo === "lucia" }));
   }
   const iconos = c.iconos ?? [];
   const lugares = (tipo ? POSICIONES : POSICIONES_SOLAS)[Math.min(iconos.length, 4)] ?? [];
@@ -324,7 +326,7 @@ export const componer = (c: Composicion): DibujoPizarra => {
   if (c.rotulo) {
     textos.push({ texto: c.rotulo, x: tipo ? 760 : 550, y: tipo ? 880 : 860, t: 100, color: c.colorRotulo ?? ROJO });
   }
-  return { trazos, objetos, textos };
+  return { trazos, personaje, objetos, textos };
 };
 
 export const resolverDibujo = (d: string | Composicion): DibujoPizarra => (typeof d === "string" ? DIBUJOS[d] ?? {} : componer(d));

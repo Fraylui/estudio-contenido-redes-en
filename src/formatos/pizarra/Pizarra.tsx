@@ -268,6 +268,7 @@ const Dibujo: React.FC<{ dibujo: DibujoPizarra; duracion: number }> = ({ dibujo,
   const frame = useCurrentFrame();
   const { fps } = useVideoConfig();
   const trazos = useMemo(() => dibujo.trazos ?? [], [dibujo]);
+  const personaje = useMemo(() => dibujo.personaje ?? [], [dibujo]);
   const objetos = useMemo(() => dibujo.objetos ?? [], [dibujo]);
   const textos = useMemo(() => dibujo.textos ?? [], [dibujo]);
   const largos = useMemo(() => trazos.map((t) => getLength(t.d)), [trazos]);
@@ -275,6 +276,7 @@ const Dibujo: React.FC<{ dibujo: DibujoPizarra; duracion: number }> = ({ dibujo,
   const vista = useMemo(() => {
     const cajas = [
       ...trazos.map((t) => getBoundingBox(t.d)),
+      ...personaje.map((t) => getBoundingBox(t.d)),
       ...objetos.map((o) => ({ x1: o.x - o.t / 2, y1: o.y - o.t / 2, x2: o.x + o.t / 2, y2: o.y + o.t / 2 })),
       ...textos.map((e) => ({ x1: e.x - e.texto.length * e.t * 0.27, y1: e.y - e.t * 0.8, x2: e.x + e.texto.length * e.t * 0.27, y2: e.y + e.t * 0.3 })),
     ];
@@ -282,12 +284,13 @@ const Dibujo: React.FC<{ dibujo: DibujoPizarra; duracion: number }> = ({ dibujo,
     const x1 = Math.min(...cajas.map((c) => c.x1)), y1 = Math.min(...cajas.map((c) => c.y1));
     const x2 = Math.max(...cajas.map((c) => c.x2)), y2 = Math.max(...cajas.map((c) => c.y2));
     return `${x1 - 50} ${y1 - 50} ${x2 - x1 + 100} ${y2 - y1 + 100}`;
-  }, [trazos, objetos, textos]);
+  }, [trazos, personaje, objetos, textos]);
   const totalLargo = largos.reduce((a, b) => a + b, 0) || 1;
   // Si hay objetos, las líneas usan el primer 65 % del tiempo y los objetos el resto
   const { tiempoTrazos, objetosEn, textosEn } = momentos(dibujo, duracion);
   const avance = interpolate(frame, [0, Math.max(1, tiempoTrazos)], [0, totalLargo], { extrapolateRight: "clamp" });
   let acumulado = 0;
+  const entrada = spring({ frame: frame - 1, fps, config: { damping: 11, stiffness: 150 } });
   // Vida: cuando el dibujo ya está completo, respira y se balancea apenas, para que nunca quede congelado
   const [vx, vy, vw, vh] = vista.split(" ").map(Number);
   const seg = Math.max(0, frame - tiempoTrazos) / fps;
@@ -298,6 +301,16 @@ const Dibujo: React.FC<{ dibujo: DibujoPizarra; duracion: number }> = ({ dibujo,
   return (
     <svg viewBox={vista} style={{ width: "100%", height: "100%", filter: "drop-shadow(0 0 0 #fff) drop-shadow(5px 0 0 #fff) drop-shadow(-5px 0 0 #fff) drop-shadow(0 5px 0 #fff) drop-shadow(0 -5px 0 #fff) drop-shadow(0 18px 22px rgba(0,0,0,0.30))" }}>
       <g transform={`rotate(${balanceo} ${centro}) translate(${centro}) scale(${2 - respira} ${respira}) translate(${centro.split(" ").map((n) => -Number(n)).join(" ")})`}>
+      {personaje.length ? (
+        <g style={{ transformBox: "fill-box", transformOrigin: "50% 100%" }}
+          transform={`translate(0 ${(1 - entrada) * 120})`} opacity={Math.min(1, entrada * 2)}>
+          <g style={{ transformBox: "fill-box", transformOrigin: "50% 100%", scale: `${0.7 + 0.3 * entrada}` }}>
+            {personaje.map((t, i) => (t.stroke === "none"
+              ? <path key={`p${i}`} d={t.d} fill={t.fill} />
+              : <path key={`p${i}`} d={t.d} stroke={t.stroke} strokeWidth={t.strokeWidth} fill="none" strokeLinecap="round" strokeLinejoin="round" />))}
+          </g>
+        </g>
+      ) : null}
       {trazos.map((t, i) => {
         const largo = largos[i];
         const visible = Math.min(Math.max(avance - acumulado, 0), largo);
