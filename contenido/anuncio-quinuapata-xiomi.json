@@ -21,8 +21,13 @@
     "escenas": [
       {
         "tipo": "video",
-        "segundos": 2,
-        "archivo": "clientes/quinuapata/gancho-skate.mp4",
+        "segundos": 3.1,
+        "archivo": "clientes/quinuapata/gancho-skate.mp4"
+      },
+      {
+        "tipo": "video",
+        "segundos": 2.5,
+        "archivo": "clientes/quinuapata/camioneta.mp4",
         "texto": "Tu encomienda sale *volando* al VRAEM",
         "frase": 1
       },
@@ -108,49 +113,55 @@
       {
         "sonido": "whoosh",
         "segundo": 0,
-        "escena": 2
+        "escena": 3
       },
       {
         "sonido": "whoosh_2",
         "segundo": 0,
-        "escena": 3
+        "escena": 4
       },
       {
         "sonido": "whoosh_3",
         "segundo": 0,
-        "escena": 4
+        "escena": 5
       },
       {
         "sonido": "ding",
         "segundo": 1.6,
-        "escena": 4
+        "escena": 5
       },
       {
         "sonido": "shutter",
         "segundo": 0,
-        "escena": 5
+        "escena": 6
       },
       {
         "sonido": "whoosh",
         "segundo": 0,
-        "escena": 6
+        "escena": 7
       },
       {
         "sonido": "pop",
         "segundo": 0.15,
-        "escena": 7
+        "escena": 8
       },
       {
         "sonido": "magic_reveal",
         "segundo": 0.35,
-        "escena": 8
+        "escena": 9
+      },
+      {
+        "sonido": "whoosh_2",
+        "segundo": 0,
+        "escena": 2
       }
     ],
     "narracion": [
       {
         "texto": "¡Tu encomienda sale volando al VRAEM!",
         "estilo": "urgente",
-        "semilla": 6
+        "semilla": 6,
+        "en": 3.2
       },
       {
         "texto": "De Ayacucho a todo el VRAEM, y del VRAEM a Ayacucho.",
