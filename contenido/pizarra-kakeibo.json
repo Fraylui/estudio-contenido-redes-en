@@ -1,9 +1,7 @@
 {
   "formato": "Pizarra",
   "voz": {
-    "referencia": "voz/referencias/xiomi.wav",
-    "tono": "alegre",
-    "velocidad": 1.03,
+    "referencia": "voz/referencias/xiomi-clara.wav",
     "pausa": 0.22
   },
   "props": {
