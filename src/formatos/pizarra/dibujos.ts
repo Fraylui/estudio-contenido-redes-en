@@ -14,6 +14,16 @@ const ROJO = "#d7263d";
 const VERDE = "#2e9e4f";
 
 export const DIBUJOS: Record<string, DibujoPizarra> = {
+  // --- Miniaturas ---
+  "mini-kakeibo": {
+    trazos: cerebro(330, 420, { cara: "sorpresa", pose: "arriba", s: 1.25 }),
+    objetos: [
+      { img: "japon", x: 720, y: 200, t: 230 },
+      { img: "bolsa-dinero", x: 720, y: 560, t: 250, rot: 8 },
+      { img: "brillos", x: 860, y: 400, t: 110 },
+    ],
+  },
+
   // --- Mascota cerebro (videos de mente y hábitos) ---
   "cerebro-fuerte": { trazos: cerebro(500, 450, { cara: "feliz", pose: "musculos" }) },
   "cerebro-duda": { trazos: cerebro(500, 450, { cara: "duda", pose: "menton" }), objetos: [{ img: "pregunta", x: 780, y: 220, t: 150, rot: 12 }] },
