@@ -6,10 +6,9 @@ import { loadFont } from "@remotion/fonts";
 import { useMemo } from "react";
 import { z } from "zod";
 import {
-  AbsoluteFill, CalculateMetadataFunction, interpolate, Sequence, staticFile, useCurrentFrame, useVideoConfig,
+  AbsoluteFill, CalculateMetadataFunction, interpolate, Sequence, spring, staticFile, useCurrentFrame, useVideoConfig,
 } from "remotion";
-import { DIBUJOS } from "./dibujos";
-import type { Trazo } from "./trazos";
+import { DIBUJOS, type DibujoPizarra } from "./dibujos";
 
 loadFont({ family: "Mano", url: staticFile("fuentes/PatrickHand.woff2") });
 
@@ -94,7 +93,7 @@ const Escena: React.FC<Props["escenas"][number]> = ({ dibujo, texto, resaltar, s
   return (
     <AbsoluteFill style={{ flexDirection: horizontal ? "row" : "column", transform: `scale(${zoom})` }}>
       <div style={{ flex: horizontal ? 1.05 : 1.2, position: "relative" }}>
-        <Dibujo trazos={DIBUJOS[dibujo] ?? []} duracion={Math.min(total * 0.55, 2.2 * FPS)} />
+        <Dibujo dibujo={DIBUJOS[dibujo] ?? {}} duracion={Math.min(total * 0.6, 2.6 * FPS)} />
       </div>
       <div style={{ flex: 1, display: "flex", alignItems: "center", justifyContent: "center", padding: horizontal ? "0 90px 0 0" : "0 70px 160px" }}>
         <Texto texto={texto} resaltar={resaltar} duracion={total * 0.5} />
@@ -103,20 +102,30 @@ const Escena: React.FC<Props["escenas"][number]> = ({ dibujo, texto, resaltar, s
   );
 };
 
-// Traza cada línea en orden, como si una mano la dibujara
-const Dibujo: React.FC<{ trazos: Trazo[]; duracion: number }> = ({ trazos, duracion }) => {
+// Traza cada línea en orden, como si una mano la dibujara; los rellenos se pintan cuando su borde ya está.
+// Después aparecen los objetos ilustrados (public/objetos/), uno tras otro con un pequeño rebote.
+const Dibujo: React.FC<{ dibujo: DibujoPizarra; duracion: number }> = ({ dibujo, duracion }) => {
   const frame = useCurrentFrame();
+  const { fps } = useVideoConfig();
+  const trazos = useMemo(() => dibujo.trazos ?? [], [dibujo]);
+  const objetos = useMemo(() => dibujo.objetos ?? [], [dibujo]);
   const largos = useMemo(() => trazos.map((t) => getLength(t.d)), [trazos]);
   // El dibujo se ajusta solo al espacio disponible, sea grande o chico
   const vista = useMemo(() => {
-    const cajas = trazos.map((t) => getBoundingBox(t.d));
+    const cajas = [
+      ...trazos.map((t) => getBoundingBox(t.d)),
+      ...objetos.map((o) => ({ x1: o.x - o.t / 2, y1: o.y - o.t / 2, x2: o.x + o.t / 2, y2: o.y + o.t / 2 })),
+    ];
+    if (!cajas.length) return "0 0 100 100";
     const x1 = Math.min(...cajas.map((c) => c.x1)), y1 = Math.min(...cajas.map((c) => c.y1));
     const x2 = Math.max(...cajas.map((c) => c.x2)), y2 = Math.max(...cajas.map((c) => c.y2));
-    return trazos.length ? `${x1 - 50} ${y1 - 50} ${x2 - x1 + 100} ${y2 - y1 + 100}` : "0 0 100 100";
-  }, [trazos]);
+    return `${x1 - 50} ${y1 - 50} ${x2 - x1 + 100} ${y2 - y1 + 100}`;
+  }, [trazos, objetos]);
   const totalLargo = largos.reduce((a, b) => a + b, 0) || 1;
+  // Si hay objetos, las líneas usan el primer 65 % del tiempo y los objetos el resto
+  const tiempoTrazos = objetos.length ? (trazos.length ? duracion * 0.65 : 0) : duracion;
+  const avance = interpolate(frame, [0, Math.max(1, tiempoTrazos)], [0, totalLargo], { extrapolateRight: "clamp" });
   let acumulado = 0;
-  const avance = interpolate(frame, [0, duracion], [0, totalLargo], { extrapolateRight: "clamp" });
   return (
     <svg viewBox={vista} style={{ width: "100%", height: "100%", padding: "70px 40px 70px 90px", boxSizing: "border-box" }}>
       {trazos.map((t, i) => {
@@ -124,9 +133,25 @@ const Dibujo: React.FC<{ trazos: Trazo[]; duracion: number }> = ({ trazos, durac
         const visible = Math.min(Math.max(avance - acumulado, 0), largo);
         acumulado += largo;
         if (visible <= 0) return null;
+        if (t.stroke === "none") {
+          // Relleno de color: aparece suave mientras se dibuja su contorno
+          return <path key={i} d={t.d} fill={t.fill} opacity={visible / largo} />;
+        }
         return (
           <path key={i} d={t.d} stroke={t.stroke} strokeWidth={t.strokeWidth} fill="none"
             strokeLinecap="round" strokeLinejoin="round" strokeDasharray={largo} strokeDashoffset={largo - visible} />
+        );
+      })}
+      {objetos.map((o, i) => {
+        const inicio = tiempoTrazos + (i / objetos.length) * (duracion - tiempoTrazos);
+        const pop = spring({ frame: frame - inicio, fps, config: { damping: 11, stiffness: 160 } });
+        if (frame < inicio) return null;
+        // Flota apenas, para que el dibujo no se vea congelado
+        const flota = Math.sin((frame - inicio) / 14 + i) * 6;
+        return (
+          <g key={`o${i}`} transform={`translate(${o.x} ${o.y + flota}) rotate(${(o.rot ?? 0) + (1 - pop) * -25}) scale(${pop})`}>
+            <image href={staticFile(`objetos/${o.img}.svg`)} x={-o.t / 2} y={-o.t / 2} width={o.t} height={o.t} />
+          </g>
         );
       })}
     </svg>

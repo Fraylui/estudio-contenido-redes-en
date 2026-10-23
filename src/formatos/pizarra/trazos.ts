@@ -27,9 +27,7 @@ export const camino = (d: string, extra?: Options) => aTrazos(gen.path(d, o(extr
 // Relleno rayado a mano, como pintado con plumón
 export const pintado = (color: string): Options => ({
   fill: color,
-  fillStyle: "hachure",
-  hachureGap: 9,
-  fillWeight: 3.5,
+  fillStyle: "solid",
 });
 
 export type Cara = "normal" | "feliz" | "triste" | "sorpresa" | "duda" | "preocupada";
