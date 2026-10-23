@@ -2,7 +2,11 @@
   "formato": "Anuncio",
   "voz": {
     "referencia": "voz/referencias/xiomi.wav",
-    "velocidad": 1.1
+    "velocidad": 1.1,
+    "tono": "alegre",
+    "pronunciacion": {
+      "SD": "Señor de"
+    }
   },
   "props": {
     "negocio": {
@@ -166,7 +170,7 @@
       {
         "texto": "Envía lo que necesites, del tamaño que sea,",
         "estilo": "vendedor",
-        "pausa": 0.15
+        "pausa": 0.1
       },
       {
         "texto": "y llega completo, como lo enviaste.",

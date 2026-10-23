@@ -41,7 +41,11 @@ En el JSON de contenido, dentro de `props`:
 ]
 ```
 
-Y junto a `props`, si hace falta: `"voz": { "referencia": "voz/referencias/xiomi.wav", "pronunciacion": { "Satipo": "Satípo" } }`.
+Y junto a `props`, si hace falta: `"voz": { "referencia": "voz/referencias/xiomi.wav", "tono": "alegre", "velocidad": 1.1, "pronunciacion": { "Satipo": "Satípo", "SD": "Señor de" } }`.
+
+- `tono`: usa una sola referencia en todo el video. **En anuncios ponlo siempre**: si cada frase cambia de referencia, la voz cambia de una frase a otra y suena a recortes pegados.
+- `velocidad`: se aplica una sola vez por frase, junto con la del estilo, con rubberband (conserva el timbre). Nunca con `atempo` encima de otro `atempo`: entrecorta la voz.
+- Las siglas de cada negocio van en su JSON (`"SD": "Señor de"`), no en `narrar.py`: la misma sigla significa otra cosa en otro cliente.
 
 `npm run lote -- <nombre>` narra (solo si el JSON cambió), revisa cada frase con Whisper, la repite hasta 3 veces si no coincide con el texto y ecualiza el resultado a -14 LUFS. Para narrar sin generar el video: `voz/.venv/bin/python voz/narrar.py contenido/x.json public/voz/x.wav`. También escribe `public/voz/x.json` con el inicio y el fin de cada frase.
 
@@ -62,7 +66,7 @@ Y junto a `props`, si hace falta: `"voz": { "referencia": "voz/referencias/xiomi
 **Pronunciación latina (automática en `narrar.py`):**
 - seseo: la c ante e/i y la z suenan como s;
 - nombres del VRAEM con su acento escrito (Pichári, Kimbíri, Vráem, Kinuapáta…);
-- siglas deletreadas (SD → "ese de", PNP → "pe ene pe");
+- siglas comunes deletreadas (PNP → "pe ene pe");
 - "Jr." y "Av." sin pausa;
 - celulares dichos cifra por cifra, de tres en tres.
 
@@ -81,6 +85,7 @@ En `contenido/anuncio-*.json` cada escena puede indicar `"frase": n`, y entonces
 
 ## 6. Comprobar antes de entregar
 
+- Sin cortes: `narrar.py` descarta las tomas con silencios totales dentro de la voz (Chatterbox a veces deja agujeros de 40 a 100 ms), suaviza la entrada y la salida de cada frase y pone un fondo de sala muy bajo para que las pausas no caigan a silencio digital.
 - Whisper reconoce el texto completo, sin frases repetidas ni cortadas. Los nombres propios pueden fallar en Whisper sin que suenen mal.
 - Las bandas quedan cerca del objetivo de `ecualizar.py`, sobre todo 2–4 kHz.
 - El video final mide -14 ±0,5 LUFS con pico de -1 dBFS o menos: `ffmpeg -i out.mp4 -af ebur128=peak=true -f null -`.

@@ -8,7 +8,7 @@ En el JSON, dentro de "props":
     "Texto simple",
     {"texto": "Con estilo y momento exacto", "estilo": "emocion", "en": 7.5}
   ]
-Opcional, junto a "props":  "voz": {"referencia": "voz/referencias/xiomi.wav", "velocidad": 1.1,
+Opcional, junto a "props":  "voz": {"referencia": "voz/referencias/xiomi.wav", "velocidad": 1.1, "tono": "alegre",
                                     "pronunciacion": {"Pichari": "Pichári"}, "seseo": true}
 
 Estilos: normal, emocion, feliz, triste, serio, suspenso, urgente, calmado, vendedor, rapido, contando,
@@ -57,7 +57,7 @@ PRONUNCIACION = {"kimbiri": "Kimbíri", "huamanga": "Huamánga", "vraem": "Vráe
                  "ugel": "úguel", "essalud": "es salúd", "sis": "ese i ese",
                  "pichari": "Pichári", "palmapampa": "Palmapámpa", "pichiwillca": "Pichiwílca",
                  "chirumpiari": "Chirumpiári", "tutumbaru": "Tutumbáru", "sirenachayocc": "Sirenachayók",
-                 "quinuapata": "Kinuapáta", "sd": "ese de", "jr": "jirón", "av": "avenida"}
+                 "quinuapata": "Kinuapáta", "jr": "jirón", "av": "avenida"}
 DIGITOS = "cero uno dos tres cuatro cinco seis siete ocho nueve".split()
 
 
@@ -127,14 +127,37 @@ def recortar_cola(ruta, fin, margen=0.2):
 
 
 def a_48k(origen, destino, tempo=1.0):
-    filtro = ["-af", f"atempo={tempo}"] if abs(tempo - 1) > 0.005 else []
+    # rubberband conserva los formantes y no entrecorta la voz como atempo; la velocidad se aplica una sola vez
+    filtro = ["-af", f"rubberband=tempo={tempo:.4f}:formant=preserved:pitchq=quality"] if abs(tempo - 1) > 0.005 else []
     subprocess.run(["ffmpeg", "-loglevel", "error", "-y", "-i", str(origen), *filtro, "-ac", "1", "-ar", str(SR),
                     str(destino)], check=True)
     a, _ = sf.read(str(destino), dtype="float32")
     # Umbral bajo (-45 dBFS) y 35 ms de margen: no se come las "s", "f" o finales que se apagan
     voz = np.nonzero(np.abs(a) > 0.0056)[0]
     margen = int(0.035 * SR)
-    return a[max(voz[0] - margen, 0): voz[-1] + margen] if len(voz) else a
+    a = a[max(voz[0] - margen, 0): voz[-1] + margen].copy() if len(voz) else a
+    # Entrada y salida suaves: sin golpes al empezar ni cortes secos al terminar
+    entrada, salida = min(int(0.01 * SR), len(a)), min(int(0.04 * SR), len(a))
+    a[:entrada] *= np.linspace(0, 1, entrada)
+    a[len(a) - salida:] *= np.linspace(1, 0, salida)
+    return a
+
+
+def huecos(ruta):
+    """Milisegundos de silencio total dentro de la voz: el modelo a veces deja agujeros que suenan entrecortados."""
+    a, sr = sf.read(str(ruta), dtype="float32")
+    h = sr // 200
+    n = len(a) // h
+    db = 20 * np.log10(np.sqrt((a[: n * h].reshape(n, h) ** 2).mean(1)) + 1e-9)
+    voz = np.nonzero(db > -50)[0]
+    return int((db[voz[0]: voz[-1]] < -90).sum() * 5) if len(voz) else 0
+
+
+def ambiente(audio, db=-66.0):
+    """Un fondo de sala muy bajo bajo toda la voz: sin él, las pausas caen a silencio digital y suenan a corte."""
+    ruido = np.random.default_rng(0).standard_normal(len(audio)).astype(np.float32)
+    ruido = np.convolve(ruido, np.ones(8) / 8, mode="same")  # más suave, sin siseo
+    return audio + ruido / (np.sqrt(np.mean(ruido ** 2)) or 1) * 10 ** (db / 20)
 
 
 def nivelar(audio, objetivo_db=-20.0):
@@ -182,17 +205,21 @@ def main():
     memoria.mkdir(parents=True, exist_ok=True)
 
     tmp = Path(tempfile.mkdtemp())
+    # "velocidad" junto a "voz": acelera o frena toda la narración sin cambiar el tono (se suma a la de cada estilo)
+    velocidad = float(cfg.get("velocidad", 1.0))
+    # "tono" junto a "voz": usa una sola grabación de referencia en todo el video, para que la voz no cambie entre frases
+    tono = cfg.get("tono")
     partes, tiempos, t = [np.zeros(int(INICIO * SR), np.float32)], [], INICIO
     for n, f in enumerate(frases, start=1):
         estilo = f.get("estilo") or ("pregunta" if f["texto"].strip().endswith("?") else "normal")
         e = ESTILOS[estilo]
         alegre = referencia.with_name(f"{referencia.stem}-alegre{referencia.suffix}")
-        ref = alegre if e["tono"] == "alegre" and alegre.exists() else referencia
+        ref = alegre if (tono or e["tono"]) == "alegre" and alegre.exists() else referencia
         clave = hashlib.sha1(json.dumps([para_voz(f["texto"], cfg), estilo, ref.name, ref.stat().st_size,
-                                         f.get("semilla", 0)]).encode()).hexdigest()[:16]
+                                         f.get("semilla", 0), "toma"]).encode()).hexdigest()[:16]
         guardada = memoria / f"{clave}.wav"
         if guardada.exists():
-            audio, _ = sf.read(str(guardada), dtype="float32")
+            audio = nivelar(a_48k(guardada, tmp / f"{n}.wav", e["tempo"] * velocidad))
             print(f"[{n}/{len(frases)}] {estilo:8s} (ya generada)  {f['texto'][:50]}", flush=True)
             partes, tiempos, t = agregar(partes, tiempos, t, f, audio)
             continue
@@ -214,30 +241,22 @@ def main():
             palabras = [w for s in segmentos for w in (s.words or [])]
             if palabras:
                 recortar_cola(crudo, palabras[-1].end)
+            if huecos(crudo) >= 20:
+                nota -= 0.5  # una toma con agujeros se descarta aunque se entienda
             if nota > mejor_nota:
                 mejor, mejor_nota = crudo, nota
             if nota >= 0.85:
                 break
         print(f"[{n}/{len(frases)}] {estilo:8s} coincide {mejor_nota * 100:3.0f}%  {f['texto'][:50]}", flush=True)
-        audio = nivelar(a_48k(mejor, tmp / f"{n}.wav", e["tempo"]))
-        sf.write(str(guardada), audio, SR)
+        mejor.replace(guardada)
+        audio = nivelar(a_48k(guardada, tmp / f"{n}.wav", e["tempo"] * velocidad))
         partes, tiempos, t = agregar(partes, tiempos, t, f, audio)
 
-    total = np.concatenate(partes + [np.zeros(int(FINAL * SR), np.float32)])
+    total = ambiente(np.concatenate(partes + [np.zeros(int(FINAL * SR), np.float32)]))
     total = total / (np.abs(total).max() or 1) * 0.89
     salida.parent.mkdir(parents=True, exist_ok=True)
     crudo = salida.with_name(salida.stem + "-crudo.wav")
     sf.write(str(crudo), total, SR)
-    # "velocidad" junto a "voz" en el JSON: acelera o frena toda la narración sin cambiar el tono
-    velocidad = float(cfg.get("velocidad", 1.0))
-    if abs(velocidad - 1) > 0.005:
-        rapido = crudo.with_name(crudo.stem + "-v.wav")
-        subprocess.run(["ffmpeg", "-loglevel", "error", "-y", "-i", str(crudo), "-af", f"atempo={velocidad}",
-                        str(rapido)], check=True)
-        rapido.replace(crudo)
-        for x in tiempos:
-            x["inicio"], x["fin"] = round(x["inicio"] / velocidad, 3), round(x["fin"] / velocidad, 3)
-        total = sf.read(str(crudo), dtype="float32")[0]
     # Acabado de locución: el ecualizador automático corrige el balance y deja el volumen a -14 LUFS
     subprocess.run([sys.executable, str(Path(__file__).with_name("ecualizar.py")), str(crudo), str(salida)], check=True)
     crudo.unlink()
