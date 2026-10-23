@@ -88,6 +88,7 @@ En `contenido/anuncio-*.json` cada escena puede indicar `"frase": n`, y entonces
 ## 6. Comprobar antes de entregar
 
 - Sin cortes: `narrar.py` descarta las tomas con silencios totales dentro de la voz (Chatterbox a veces deja agujeros de 40 a 100 ms), suaviza la entrada y la salida de cada frase y pone un fondo de sala muy bajo para que las pausas no caigan a silencio digital.
+- Sin soplido de "tele sin señal": la compresión y el volumen final suben el ruido de fondo unos 10 dB. Por eso `narrar.py` pasa al final un expansor suave (`expandir`) que baja ese soplido entre palabras sin tocar la voz, y recién después pone el fondo de sala (−72 dB, grave). Nunca se pone el fondo de sala antes de ecualizar. Comprobación: en las pausas el nivel debe quedar por debajo de −65 dB.
 - Whisper reconoce el texto completo, sin frases repetidas ni cortadas. Los nombres propios pueden fallar en Whisper sin que suenen mal.
 - Las bandas quedan cerca del objetivo de `ecualizar.py`, sobre todo 2–4 kHz.
 - El video final mide -14 ±0,5 LUFS con pico de -1 dBFS o menos: `ffmpeg -i out.mp4 -af ebur128=peak=true -f null -`.

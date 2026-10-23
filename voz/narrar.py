@@ -161,11 +161,42 @@ def huecos(ruta):
     return int((db[voz[0]: voz[-1]] < -90).sum() * 5) if len(voz) else 0
 
 
-def ambiente(audio, db=-66.0):
-    """Un fondo de sala muy bajo bajo toda la voz: sin él, las pausas caen a silencio digital y suenan a corte."""
+def ambiente(audio, db=-72.0):
+    """Un fondo de sala muy bajo bajo toda la voz: sin él, las pausas caen a silencio digital y suenan a corte.
+
+    Va al final, después de la compresión y el volumen: si se pone antes, la cadena lo sube como soplido de tele sin señal.
+    """
     ruido = np.random.default_rng(0).standard_normal(len(audio)).astype(np.float32)
-    ruido = np.convolve(ruido, np.ones(8) / 8, mode="same")  # más suave, sin siseo
+    ruido = np.convolve(ruido, np.ones(24) / 24, mode="same")  # grave y suave, sin siseo
     return audio + ruido / (np.sqrt(np.mean(ruido ** 2)) or 1) * 10 ** (db / 20)
+
+
+def expandir(audio, rango_db=-20.0, debajo_db=22.0):
+    """Baja el soplido de fondo ("tele sin señal") que la compresión y el volumen final suben entre palabras.
+
+    Expansor suave: donde el nivel cae más de `debajo_db` por debajo de la voz, atenúa hasta `rango_db`.
+    Abre 15 ms antes de cada palabra (no corta el inicio) y cierra despacio (sin bombeo).
+    """
+    paso = SR // 200  # 5 ms
+    n = len(audio) // paso
+    if not n:
+        return audio
+    marcos = audio[: n * paso].reshape(n, paso)
+    nivel = 10 * np.log10(np.mean(marcos ** 2, axis=1) + 1e-12)
+    voz = nivel[nivel > nivel.max() - 35]
+    umbral = np.median(voz) - debajo_db
+    objetivo = np.clip((nivel - umbral) * 3, rango_db, 0)
+    # Mirar adelante: abrir antes de que empiece la palabra
+    adelante = 3
+    objetivo = np.max(np.lib.stride_tricks.sliding_window_view(np.pad(objetivo, (0, adelante), mode="edge"), adelante + 1), axis=1)
+    ganancia = np.empty(n)
+    g = objetivo[0]
+    soltar = np.exp(-1 / 24)  # ~120 ms para cerrar
+    for i, o in enumerate(objetivo):
+        g = o if o > g else soltar * g + (1 - soltar) * o
+        ganancia[i] = g
+    curva = np.interp(np.arange(len(audio)), np.arange(n) * paso + paso / 2, 10 ** (ganancia / 20))
+    return (audio * curva).astype(np.float32)
 
 
 def nivelar(audio, objetivo_db=-20.0):
@@ -267,7 +298,7 @@ def main():
         audio = nivelar(a_48k(guardada, tmp / f"{n}.wav", e["tempo"] * velocidad))
         partes, tiempos, t = agregar(partes, tiempos, t, f, audio)
 
-    total = ambiente(np.concatenate(partes + [np.zeros(int(FINAL * SR), np.float32)]))
+    total = np.concatenate(partes + [np.zeros(int(FINAL * SR), np.float32)])
     total = total / (np.abs(total).max() or 1) * 0.89
     salida.parent.mkdir(parents=True, exist_ok=True)
     crudo = salida.with_name(salida.stem + "-crudo.wav")
@@ -275,6 +306,9 @@ def main():
     # Acabado de locución: el ecualizador automático corrige el balance y deja el volumen a -14 LUFS
     subprocess.run([sys.executable, str(Path(__file__).with_name("ecualizar.py")), str(crudo), str(salida), "--sintetica"], check=True)
     crudo.unlink()
+    # La compresión y el volumen final suben el soplido de fondo: se limpia al final, con todo ya nivelado
+    final, _ = sf.read(str(salida), dtype="float32")
+    sf.write(str(salida), ambiente(expandir(final)), SR)
     huella = sys.argv[3] if len(sys.argv) > 3 else None
     salida.with_suffix(".json").write_text(json.dumps({"duracion": round(len(total) / SR, 3), "huella": huella,
                                                        "frases": tiempos}, ensure_ascii=False, indent=1),
