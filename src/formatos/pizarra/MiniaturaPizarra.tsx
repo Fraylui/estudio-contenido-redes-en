@@ -16,7 +16,8 @@ export const miniaturaPizarraSchema = z.object({
 
 // El dibujo completo y quieto (sin animación), ajustado a su caja
 const DibujoQuieto: React.FC<{ dibujo: DibujoPizarra }> = ({ dibujo }) => {
-  const trazos = dibujo.trazos ?? [];
+  // En la miniatura el personaje va dibujado completo, junto con los demás trazos
+  const trazos = [...(dibujo.personaje ?? []), ...(dibujo.trazos ?? [])];
   const objetos = dibujo.objetos ?? [];
   const textos = dibujo.textos ?? [];
   const cajas = [
