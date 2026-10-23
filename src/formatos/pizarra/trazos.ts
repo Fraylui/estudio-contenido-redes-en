@@ -34,7 +34,7 @@ export type Cara = "normal" | "feliz" | "triste" | "sorpresa" | "duda" | "preocu
 export type Brazos = "abajo" | "arriba" | "jarra" | "adelante" | "cabeza" | "menton";
 
 // Monigote de pizarra: cabeza, cuerpo, brazos y piernas. (x, y) es el centro de la cabeza.
-export const monigote = (x: number, y: number, { cara = "normal" as Cara, brazos = "abajo" as Brazos, escala = 1, pelo = false } = {}) => {
+export const monigote = (x: number, y: number, { cara = "normal" as Cara, brazos = "abajo" as Brazos, escala = 1, pelo = false, mono = false } = {}) => {
   const s = escala;
   const cuello = y + 55 * s;
   const cadera = y + 210 * s;
@@ -46,6 +46,11 @@ export const monigote = (x: number, y: number, { cara = "normal" as Cara, brazos
     t.push(...camino(`M ${x - 55 * s} ${y - 5 * s} Q ${x - 70 * s} ${y + 60 * s} ${x - 50 * s} ${y + 95 * s}`));
     t.push(...camino(`M ${x + 55 * s} ${y - 5 * s} Q ${x + 70 * s} ${y + 60 * s} ${x + 50 * s} ${y + 95 * s}`));
     t.push(...camino(`M ${x - 50 * s} ${y - 25 * s} Q ${x} ${y - 75 * s} ${x + 50 * s} ${y - 25 * s}`, pintado("#7a4a2a")));
+  }
+  if (mono) {
+    // Moño japonés tradicional (Hani Motoko, 1904)
+    t.push(...circulo(x, y - 75 * s, 55 * s, pintado("#2b2b2b")));
+    t.push(...camino(`M ${x - 52 * s} ${y - 10 * s} Q ${x} ${y - 70 * s} ${x + 52 * s} ${y - 10 * s}`, pintado("#2b2b2b")));
   }
   t.push(...cuerpoCara(x, y, cara, s));
   t.push(...linea(x, cuello, x, cadera));
@@ -114,6 +119,13 @@ export const billeteraAbierta = (x: number, y: number, s = 1) => {
     ...camino(`M ${P(420, -260)} L ${P(260, -110)} Q ${P(215, -70)} ${P(225, -30)} Q ${P(232, 0)} ${P(255, 0)} Q ${P(285, -10)} ${P(290, -60)} Q ${P(330, -100)} ${P(380, -110)} L ${P(470, -200)}`, pintado("#f1c9a5")),
   ];
 };
+
+// Caja de cartón abierta dibujada a mano (las 4 cajas del gasto)
+export const caja = (x: number, y: number, s = 1, color = "#e8c48f") => [
+  ...rect(x - 120 * s, y - 70 * s, 240 * s, 150 * s, pintado(color)),
+  ...camino(`M ${x - 120 * s} ${y - 70 * s} L ${x - 160 * s} ${y - 120 * s}`),
+  ...camino(`M ${x + 120 * s} ${y - 70 * s} L ${x + 160 * s} ${y - 120 * s}`),
+];
 
 // Polilla que sale de la billetera vacía (el clásico chiste)
 export const polilla = (x: number, y: number, s = 1) => [

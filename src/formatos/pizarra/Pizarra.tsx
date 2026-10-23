@@ -109,21 +109,24 @@ const Dibujo: React.FC<{ dibujo: DibujoPizarra; duracion: number }> = ({ dibujo,
   const { fps } = useVideoConfig();
   const trazos = useMemo(() => dibujo.trazos ?? [], [dibujo]);
   const objetos = useMemo(() => dibujo.objetos ?? [], [dibujo]);
+  const textos = useMemo(() => dibujo.textos ?? [], [dibujo]);
   const largos = useMemo(() => trazos.map((t) => getLength(t.d)), [trazos]);
   // El dibujo se ajusta solo al espacio disponible, sea grande o chico
   const vista = useMemo(() => {
     const cajas = [
       ...trazos.map((t) => getBoundingBox(t.d)),
       ...objetos.map((o) => ({ x1: o.x - o.t / 2, y1: o.y - o.t / 2, x2: o.x + o.t / 2, y2: o.y + o.t / 2 })),
+      ...textos.map((e) => ({ x1: e.x - e.texto.length * e.t * 0.27, y1: e.y - e.t * 0.8, x2: e.x + e.texto.length * e.t * 0.27, y2: e.y + e.t * 0.3 })),
     ];
     if (!cajas.length) return "0 0 100 100";
     const x1 = Math.min(...cajas.map((c) => c.x1)), y1 = Math.min(...cajas.map((c) => c.y1));
     const x2 = Math.max(...cajas.map((c) => c.x2)), y2 = Math.max(...cajas.map((c) => c.y2));
     return `${x1 - 50} ${y1 - 50} ${x2 - x1 + 100} ${y2 - y1 + 100}`;
-  }, [trazos, objetos]);
+  }, [trazos, objetos, textos]);
   const totalLargo = largos.reduce((a, b) => a + b, 0) || 1;
   // Si hay objetos, las líneas usan el primer 65 % del tiempo y los objetos el resto
-  const tiempoTrazos = objetos.length ? (trazos.length ? duracion * 0.65 : 0) : duracion;
+  const extras = objetos.length + textos.length;
+  const tiempoTrazos = extras ? (trazos.length ? duracion * 0.65 : 0) : duracion;
   const avance = interpolate(frame, [0, Math.max(1, tiempoTrazos)], [0, totalLargo], { extrapolateRight: "clamp" });
   let acumulado = 0;
   return (
@@ -143,7 +146,7 @@ const Dibujo: React.FC<{ dibujo: DibujoPizarra; duracion: number }> = ({ dibujo,
         );
       })}
       {objetos.map((o, i) => {
-        const inicio = tiempoTrazos + (i / objetos.length) * (duracion - tiempoTrazos);
+        const inicio = tiempoTrazos + (i / extras) * (duracion - tiempoTrazos);
         const pop = spring({ frame: frame - inicio, fps, config: { damping: 11, stiffness: 160 } });
         if (frame < inicio) return null;
         // Flota apenas, para que el dibujo no se vea congelado
@@ -154,6 +157,18 @@ const Dibujo: React.FC<{ dibujo: DibujoPizarra; duracion: number }> = ({ dibujo,
           </g>
         );
       })}
+      {textos.map((e, i) => {
+        // Rótulos escritos a mano dentro del dibujo ("1904", "24 h"…)
+        const inicio = tiempoTrazos + ((objetos.length + i) / extras) * (duracion - tiempoTrazos);
+        const pop = spring({ frame: frame - inicio, fps, config: { damping: 12, stiffness: 170 } });
+        if (frame < inicio) return null;
+        return (
+          <text key={`t${i}`} x={e.x} y={e.y} textAnchor="middle" fontFamily="Mano" fontSize={e.t}
+            fill={e.color ?? "#1f1f1f"} transform={`rotate(${e.rot ?? 0} ${e.x} ${e.y}) translate(${e.x} ${e.y}) scale(${pop}) translate(${-e.x} ${-e.y})`}>
+            {e.texto}
+          </text>
+        );
+      })}
     </svg>
   );
 };
@@ -162,8 +177,8 @@ const Dibujo: React.FC<{ dibujo: DibujoPizarra; duracion: number }> = ({ dibujo,
 const Texto: React.FC<{ texto: string; resaltar?: string; duracion: number }> = ({ texto, resaltar, duracion }) => {
   const frame = useCurrentFrame();
   const palabras = texto.split(/\s+/);
-  const claves = new Set((resaltar ?? "").toLowerCase().split(/\s+/).filter(Boolean));
-  const limpia = (p: string) => p.toLowerCase().replace(/[¿?¡!.,:;…"]/g, "");
+  const limpia = (p: string) => p.toLowerCase().replace(/[¿?¡!.,:;…"«»]/g, "");
+  const claves = new Set((resaltar ?? "").split(/\s+/).map(limpia).filter(Boolean));
   return (
     <div style={{ fontFamily: "Mano", fontSize: 76, lineHeight: 1.25, color: "#1f1f1f", textAlign: "center" }}>
       {palabras.map((p, i) => {

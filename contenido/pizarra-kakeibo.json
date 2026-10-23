@@ -22,6 +22,131 @@
         "dibujo": "metodo-japones",
         "texto": "Un método japonés de hace más de cien años te ayuda a ahorrar.",
         "resaltar": "japonés"
+      },
+      {
+        "dibujo": "lucia-sueldo",
+        "texto": "Lucía recibe su sueldo y se siente millonaria.",
+        "resaltar": "millonaria"
+      },
+      {
+        "dibujo": "lucia-gastos",
+        "texto": "Un cafecito, un delivery, una ofertita…",
+        "resaltar": "ofertita"
+      },
+      {
+        "dibujo": "mitad-de-mes",
+        "texto": "A mitad de mes: otra vez sin dinero.",
+        "resaltar": "otra vez"
+      },
+      {
+        "dibujo": "no-sabe",
+        "texto": "Ningún gasto parecía grande.",
+        "resaltar": "ninguno grande"
+      },
+      {
+        "dibujo": "motoko-1904",
+        "texto": "En 1904, Hani Motoko creó un cuaderno para los gastos del hogar.",
+        "resaltar": "1904"
+      },
+      {
+        "dibujo": "kakeibo",
+        "texto": "Kakeibo: libro de cuentas del hogar.",
+        "resaltar": "Kakeibo:"
+      },
+      {
+        "dibujo": "papel-lapiz",
+        "texto": "Nada de aplicaciones: papel y lápiz.",
+        "resaltar": "papel lápiz."
+      },
+      {
+        "dibujo": "a-mano",
+        "texto": "Escribir a mano hace que tu cerebro preste atención.",
+        "resaltar": "a mano"
+      },
+      {
+        "dibujo": "cuatro-preguntas",
+        "texto": "Cada mes, 4 preguntas.",
+        "resaltar": "4 preguntas."
+      },
+      {
+        "dibujo": "pregunta-1",
+        "texto": "1. ¿Cuánto dinero tengo?",
+        "resaltar": "¿Cuánto tengo?"
+      },
+      {
+        "dibujo": "pregunta-2",
+        "texto": "2. ¿Cuánto quiero ahorrar?",
+        "resaltar": "ahorrar?"
+      },
+      {
+        "dibujo": "pregunta-3",
+        "texto": "3. ¿Cuánto gasto de verdad?",
+        "resaltar": "de verdad?"
+      },
+      {
+        "dibujo": "pregunta-4",
+        "texto": "4. ¿Cómo puedo mejorar?",
+        "resaltar": "mejorar?"
+      },
+      {
+        "dibujo": "cuatro-cajas",
+        "texto": "Cada gasto va a una de 4 cajas.",
+        "resaltar": "4 cajas."
+      },
+      {
+        "dibujo": "necesidades",
+        "texto": "Necesidades: casa, comida, pasajes.",
+        "resaltar": "Necesidades:"
+      },
+      {
+        "dibujo": "gustos",
+        "texto": "Gustos: salidas, delivery, caprichos.",
+        "resaltar": "Gustos:"
+      },
+      {
+        "dibujo": "cultura",
+        "texto": "Cultura: lo que te hace crecer.",
+        "resaltar": "Cultura:"
+      },
+      {
+        "dibujo": "imprevistos",
+        "texto": "Imprevistos: lo que nadie planea.",
+        "resaltar": "Imprevistos:"
+      },
+      {
+        "dibujo": "la-mitad",
+        "texto": "En «gustos» se le iba casi la mitad.",
+        "resaltar": "la mitad."
+      },
+      {
+        "dibujo": "lo-necesito",
+        "texto": "¿Lo necesito… o solo lo quiero ahora?",
+        "resaltar": "¿Lo necesito"
+      },
+      {
+        "dibujo": "24-horas",
+        "texto": "Si lo quiere, espera 24 horas.",
+        "resaltar": "24 horas."
+      },
+      {
+        "dibujo": "ahorrado",
+        "texto": "Al tercer mes: su primer fondo de emergencia.",
+        "resaltar": "fondo de emergencia."
+      },
+      {
+        "dibujo": "mirar",
+        "texto": "No ganó más: empezó a mirar su dinero.",
+        "resaltar": "mirar"
+      },
+      {
+        "dibujo": "esta-semana",
+        "texto": "Esta semana: un cuaderno, 4 cajas, anota todo.",
+        "resaltar": "Esta semana:"
+      },
+      {
+        "dibujo": "suscribete",
+        "texto": "Suscríbete para que tu dinero te alcance.",
+        "resaltar": "Suscríbete"
       }
     ],
     "narracion": [
@@ -35,6 +160,106 @@
       },
       {
         "texto": "Hoy te cuento un método japonés de hace más de cien años, que te ayuda a ahorrar sin dejar de vivir.",
+        "estilo": "narrador"
+      },
+      {
+        "texto": "Ella es Lucía. Cada mes recibe su sueldo, y se siente millonaria.",
+        "estilo": "narrador"
+      },
+      {
+        "texto": "Pero un cafecito por aquí, un delivery por allá, una ofertita en el celular.",
+        "estilo": "narrador"
+      },
+      {
+        "texto": "Y a mitad de mes, otra vez sin dinero.",
+        "estilo": "narrador"
+      },
+      {
+        "texto": "Lo peor es que no sabe en qué lo gastó. Ningún gasto parecía grande.",
+        "estilo": "narrador"
+      },
+      {
+        "texto": "En mil novecientos cuatro, Hani Motoko, considerada la primera periodista de Japón, creó algo muy simple: un cuaderno para anotar los gastos de la casa.",
+        "estilo": "narrador"
+      },
+      {
+        "texto": "Lo llamó Kakeibo, que significa libro de cuentas del hogar.",
+        "estilo": "narrador"
+      },
+      {
+        "texto": "Nada de aplicaciones ni hojas de cálculo. Solo papel y lápiz.",
+        "estilo": "narrador"
+      },
+      {
+        "texto": "La clave es que, al escribir cada gasto a mano, tu cerebro le presta atención.",
+        "estilo": "narrador"
+      },
+      {
+        "texto": "A principio de mes, Lucía se hace cuatro preguntas.",
+        "estilo": "narrador"
+      },
+      {
+        "texto": "Uno: ¿cuánto dinero tengo este mes?",
+        "estilo": "narrador"
+      },
+      {
+        "texto": "Dos: ¿cuánto quiero ahorrar?",
+        "estilo": "narrador"
+      },
+      {
+        "texto": "Tres: ¿cuánto estoy gastando de verdad?",
+        "estilo": "narrador"
+      },
+      {
+        "texto": "Y cuatro: ¿cómo puedo mejorar?",
+        "estilo": "narrador"
+      },
+      {
+        "texto": "Después, cada gasto va a una de cuatro cajas.",
+        "estilo": "narrador"
+      },
+      {
+        "texto": "Necesidades: casa, comida y pasajes.",
+        "estilo": "narrador"
+      },
+      {
+        "texto": "Gustos: salidas, delivery y caprichos.",
+        "estilo": "narrador"
+      },
+      {
+        "texto": "Cultura: libros, cursos, lo que te hace crecer.",
+        "estilo": "narrador"
+      },
+      {
+        "texto": "E imprevistos: lo que nadie planea, como un celular roto o una medicina.",
+        "estilo": "narrador"
+      },
+      {
+        "texto": "Al final de la semana, Lucía mira sus cajas, y descubre que en gustos se le iba casi la mitad.",
+        "estilo": "narrador"
+      },
+      {
+        "texto": "Ahora, antes de comprar algo, se pregunta: ¿lo necesito, o solo lo quiero ahora?",
+        "estilo": "narrador"
+      },
+      {
+        "texto": "Y si lo quiere, espera veinticuatro horas. Casi siempre, el antojo se va solo.",
+        "estilo": "narrador"
+      },
+      {
+        "texto": "Al tercer mes, Lucía ya tenía ahorrado su primer fondo de emergencia.",
+        "estilo": "narrador"
+      },
+      {
+        "texto": "No ganó más dinero. Solo empezó a mirarlo.",
+        "estilo": "narrador"
+      },
+      {
+        "texto": "Pruébalo esta semana: un cuaderno, cuatro cajas, y anota todo.",
+        "estilo": "narrador"
+      },
+      {
+        "texto": "Si te sirvió, suscríbete. Aquí aprendemos a que el dinero nos alcance.",
         "estilo": "narrador"
       }
     ]
