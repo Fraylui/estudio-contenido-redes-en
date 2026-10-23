@@ -12,7 +12,7 @@ Opcional, junto a "props":  "voz": {"referencia": "voz/referencias/xiomi.wav", "
                                     "pronunciacion": {"Pichari": "Pichári"}, "seseo": true}
 
 Estilos: normal, emocion, feliz, triste, serio, suspenso, urgente, calmado, vendedor, rapido, contando,
-pregunta (si no se indica: "?" al final = pregunta). Los estilos alegres usan la referencia "<voz>-alegre.wav"
+pregunta, narrador (si no se indica: "?" al final = pregunta). Los estilos alegres usan la referencia "<voz>-alegre.wav"
 y los serios "<voz>.wav", si existen (por ejemplo xiomi-alegre.wav grabada leyendo un cuento).
 Cada frase se transcribe con Whisper y se vuelve a generar si no coincide con el texto.
 """
@@ -51,6 +51,9 @@ ESTILOS = {
     "rapido":   {"exageracion": 0.50, "cfg": 0.40, "tempo": 1.10, "tono": "alegre"},
     "contando": {"exageracion": 0.35, "cfg": 0.30, "tempo": 0.97, "tono": "alegre"},
     "pregunta": {"exageracion": 0.50, "cfg": 0.30, "tempo": 1.00, "tono": "seria"},
+    # Narradora de YouTube (pizarra, historias largas): emoción moderada y ritmo parejo, para que las frases
+    # suenen como una sola lectura fluida y no como pedazos con tonos distintos
+    "narrador": {"exageracion": 0.50, "cfg": 0.40, "tempo": 1.00, "tono": "alegre"},
 }
 # Nombres que el modelo acentúa mal: se le dan escritos como se pronuncian (el texto en pantalla no cambia).
 PRONUNCIACION = {"kimbiri": "Kimbíri", "huamanga": "Huamánga", "vraem": "Vráem", "pnp": "pe ene pe",
@@ -188,6 +191,9 @@ def main():
     datos = json.loads(entrada.read_text(encoding="utf-8"))
     cfg = datos.get("voz", {})
     frases = [{"texto": f} if isinstance(f, str) else f for f in datos["props"]["narracion"]]
+    # "pausa" junto a "voz": silencio entre frases para todo el video (en una frase, su "pausa" manda)
+    if "pausa" in cfg:
+        frases = [{"pausa": cfg["pausa"], **f} for f in frases]
     referencia = Path(cfg.get("referencia", "voz/referencias/xiomi.wav"))
     if not referencia.exists():
         sys.exit(f"Falta la voz de referencia {referencia}. Lee voz/referencias/LEEME.md")

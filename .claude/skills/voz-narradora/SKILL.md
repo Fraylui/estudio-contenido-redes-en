@@ -44,6 +44,7 @@ En el JSON de contenido, dentro de `props`:
 Y junto a `props`, si hace falta: `"voz": { "referencia": "voz/referencias/xiomi.wav", "tono": "alegre", "velocidad": 1.1, "pronunciacion": { "Satipo": "Satípo", "SD": "Señor de" } }`.
 
 - `tono`: usa una sola referencia en todo el video. **En anuncios ponlo siempre**: si cada frase cambia de referencia, la voz cambia de una frase a otra y suena a recortes pegados.
+- `pausa`: silencio entre frases para todo el video (0,2 s suena fluido en narraciones largas; 0,35 s por defecto).
 - `velocidad`: se aplica una sola vez por frase, junto con la del estilo, con rubberband (conserva el timbre). Nunca con `atempo` encima de otro `atempo`: entrecorta la voz.
 - Las siglas de cada negocio van en su JSON (`"SD": "Señor de"`), no en `narrar.py`: la misma sigla significa otra cosa en otro cliente.
 
@@ -62,6 +63,7 @@ Y junto a `props`, si hace falta: `"voz": { "referencia": "voz/referencias/xiomi
 | `vendedor` | anuncios, ofertas, llamados a la acción | alegre |
 | `urgente` | ganchos de los primeros 3 segundos | alegre |
 | `rapido`, `contando` | listas, ritmo de Reels, cuentos | alegre |
+| `narrador` | videos largos de pizarra o historias: **un solo estilo en todo el video** suena más fluido | alegre |
 
 **Pronunciación latina (automática en `narrar.py`):**
 - seseo: la c ante e/i y la z suenan como s;
