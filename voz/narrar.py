@@ -8,7 +8,7 @@ En el JSON, dentro de "props":
     "Texto simple",
     {"texto": "Con estilo y momento exacto", "estilo": "emocion", "en": 7.5}
   ]
-Opcional, junto a "props":  "voz": {"referencia": "voz/referencias/xiomi.wav",
+Opcional, junto a "props":  "voz": {"referencia": "voz/referencias/xiomi.wav", "velocidad": 1.1,
                                     "pronunciacion": {"Pichari": "Pichári"}, "seseo": true}
 
 Estilos: normal, emocion, feliz, triste, serio, suspenso, urgente, calmado, vendedor, rapido, contando,
@@ -17,12 +17,14 @@ y los serios "<voz>.wav", si existen (por ejemplo xiomi-alegre.wav grabada leyen
 Cada frase se transcribe con Whisper y se vuelve a generar si no coincide con el texto.
 """
 import difflib
+import hashlib
 import json
 import os
 import re
 import subprocess
 import sys
 import tempfile
+import unicodedata
 from pathlib import Path
 
 os.environ.setdefault("HF_ENDPOINT", os.environ.get("HF_ENDPOINT", "https://huggingface.co"))
@@ -73,8 +75,31 @@ def seseo(texto):
     return re.sub(r"C(?=[eiéíEIÉÍ])", "S", re.sub(r"c(?=[eiéí])", "s", t))
 
 
+UNIDADES = "cero uno dos tres cuatro cinco seis siete ocho nueve diez once doce trece catorce quince dieciséis diecisiete dieciocho diecinueve veinte veintiuno veintidós veintitrés veinticuatro veinticinco veintiséis veintisiete veintiocho veintinueve".split()
+DECENAS = "_ _ _ treinta cuarenta cincuenta sesenta setenta ochenta noventa".split()
+CENTENAS = "_ ciento doscientos trescientos cuatrocientos quinientos seiscientos setecientos ochocientos novecientos".split()
+
+
+def en_palabras(n):
+    """Números de 0 a 9999 en palabras: el modelo pronuncia mal las cifras (340 -> "treinta treinta")."""
+    if n < 30:
+        return UNIDADES[n]
+    if n < 100:
+        return DECENAS[n // 10] + ("" if n % 10 == 0 else " y " + UNIDADES[n % 10])
+    if n == 100:
+        return "cien"
+    if n < 1000:
+        return CENTENAS[n // 100] + ("" if n % 100 == 0 else " " + en_palabras(n % 100))
+    miles = "mil" if n // 1000 == 1 else en_palabras(n // 1000) + " mil"
+    return miles + ("" if n % 1000 == 0 else " " + en_palabras(n % 1000))
+
+
+def numeros(texto):
+    return re.sub(r"\b\d{1,4}\b", lambda m: en_palabras(int(m.group(0))), texto)
+
+
 def para_voz(texto, cfg):
-    texto = telefonos(texto)
+    texto = numeros(telefonos(texto))
     # Abreviaturas con punto: el punto no debe sonar como pausa
     texto = re.sub(r"\bJr\.\s*", "jirón ", texto, flags=re.IGNORECASE)
     texto = re.sub(r"\bAv\.\s*", "avenida ", texto, flags=re.IGNORECASE)
@@ -84,26 +109,12 @@ def para_voz(texto, cfg):
     return seseo(texto) if cfg.get("seseo", True) else texto
 
 
-UNIDADES = ["cero", "uno", "dos", "tres", "cuatro", "cinco", "seis", "siete", "ocho", "nueve", "diez", "once", "doce",
-            "trece", "catorce", "quince", "dieciséis", "diecisiete", "dieciocho", "diecinueve", "veinte"]
-DECENAS = {30: "treinta", 40: "cuarenta", 50: "cincuenta", 60: "sesenta", 70: "setenta", 80: "ochenta", 90: "noventa"}
-
-
-def en_letras(n):
-    """Números hasta 100 en palabras, para comparar "5" con "cinco" al revisar la voz."""
-    if n <= 20:
-        return UNIDADES[n]
-    if n < 30:
-        return "veinti" + UNIDADES[n - 20]
-    if n < 100:
-        d, u = divmod(n, 10)
-        return DECENAS[d * 10] + ("" if u == 0 else " y " + UNIDADES[u])
-    return str(n)
-
-
 def normalizar_texto(x):
-    x = re.sub(r"\d+", lambda m: en_letras(int(m.group())) if int(m.group()) <= 100 else m.group(), x.lower())
-    return re.sub(r"[^a-záéíóúñü0-9 ]", "", x).split()
+    # Cifras a palabras: "943" escrito y "nueve cuatro tres" oído cuentan como lo mismo al revisar la voz
+    x = numeros(telefonos(x)).lower()
+    # Sin tildes: Whisper a veces escribe "contactanos" por "contáctanos"
+    x = "".join(c for c in unicodedata.normalize("NFD", x) if unicodedata.category(c) != "Mn" or c == "̃")
+    return re.sub(r"[^a-zñ0-9 ]", "", unicodedata.normalize("NFC", x)).split()
 
 
 def recortar_cola(ruta, fin, margen=0.2):
@@ -126,6 +137,24 @@ def a_48k(origen, destino, tempo=1.0):
     return a[max(voz[0] - margen, 0): voz[-1] + margen] if len(voz) else a
 
 
+def nivelar(audio, objetivo_db=-20.0):
+    """Todas las frases al mismo volumen (RMS de las partes con voz), para que ninguna suene más fuerte."""
+    voz = audio[np.abs(audio) > 0.01]
+    if not len(voz):
+        return audio
+    rms = np.sqrt(np.mean(voz ** 2))
+    return audio * (10 ** (objetivo_db / 20) / rms)
+
+
+def agregar(partes, tiempos, t, f, audio):
+    if "en" in f and f["en"] > t:
+        partes.append(np.zeros(int((f["en"] - t) * SR), np.float32))
+        t = f["en"]
+    tiempos.append({"texto": f["texto"], "inicio": round(t, 3), "fin": round(t + len(audio) / SR, 3)})
+    partes = partes + [audio.astype(np.float32), np.zeros(int(f.get("pausa", PAUSA) * SR), np.float32)]
+    return partes, tiempos, t + len(audio) / SR + f.get("pausa", PAUSA)
+
+
 def main():
     entrada, salida = Path(sys.argv[1]), Path(sys.argv[2])
     datos = json.loads(entrada.read_text(encoding="utf-8"))
@@ -136,9 +165,21 @@ def main():
         sys.exit(f"Falta la voz de referencia {referencia}. Lee voz/referencias/LEEME.md")
 
     torch.set_num_threads(os.cpu_count())
-    modelo = ChatterboxMultilingualTTS.from_pretrained(device="cpu")
-    from faster_whisper import WhisperModel
-    revisor = WhisperModel("deepdml/faster-whisper-large-v3-turbo-ct2", device="cpu", compute_type="int8")
+    modelos = {}
+
+    def cargar():
+        # Los modelos se cargan solo si alguna frase no está ya generada
+        if not modelos:
+            from faster_whisper import WhisperModel
+            modelos["voz"] = ChatterboxMultilingualTTS.from_pretrained(device="cpu")
+            modelos["revisor"] = WhisperModel("deepdml/faster-whisper-large-v3-turbo-ct2", device="cpu",
+                                              compute_type="int8")
+        return modelos["voz"], modelos["revisor"]
+
+    # Memoria de frases: una frase ya generada con el mismo texto, estilo y voz no se vuelve a generar.
+    # Para repetir una que salió mal sin cambiar el texto, cámbiale la "semilla" en el JSON.
+    memoria = salida.parent / ".frases"
+    memoria.mkdir(parents=True, exist_ok=True)
 
     tmp = Path(tempfile.mkdtemp())
     partes, tiempos, t = [np.zeros(int(INICIO * SR), np.float32)], [], INICIO
@@ -147,9 +188,18 @@ def main():
         e = ESTILOS[estilo]
         alegre = referencia.with_name(f"{referencia.stem}-alegre{referencia.suffix}")
         ref = alegre if e["tono"] == "alegre" and alegre.exists() else referencia
+        clave = hashlib.sha1(json.dumps([para_voz(f["texto"], cfg), estilo, ref.name, ref.stat().st_size,
+                                         f.get("semilla", 0)]).encode()).hexdigest()[:16]
+        guardada = memoria / f"{clave}.wav"
+        if guardada.exists():
+            audio, _ = sf.read(str(guardada), dtype="float32")
+            print(f"[{n}/{len(frases)}] {estilo:8s} (ya generada)  {f['texto'][:50]}", flush=True)
+            partes, tiempos, t = agregar(partes, tiempos, t, f, audio)
+            continue
+        modelo, revisor = cargar()
         mejor, mejor_nota = None, -1
         for intento in range(1, 4):
-            torch.manual_seed(intento * 100 + n)
+            torch.manual_seed(intento * 100 + n + 1000 * f.get("semilla", 0))
             wav = modelo.generate(para_voz(f["texto"], cfg), language_id="es", audio_prompt_path=str(ref),
                                   exaggeration=e["exageracion"], cfg_weight=e["cfg"])
             crudo = tmp / f"{n}-{intento}.wav"
@@ -169,19 +219,25 @@ def main():
             if nota >= 0.85:
                 break
         print(f"[{n}/{len(frases)}] {estilo:8s} coincide {mejor_nota * 100:3.0f}%  {f['texto'][:50]}", flush=True)
-        audio = a_48k(mejor, tmp / f"{n}.wav", e["tempo"])
-        if "en" in f and f["en"] > t:
-            partes.append(np.zeros(int((f["en"] - t) * SR), np.float32))
-            t = f["en"]
-        tiempos.append({"texto": f["texto"], "inicio": round(t, 3), "fin": round(t + len(audio) / SR, 3)})
-        partes += [audio, np.zeros(int(f.get("pausa", PAUSA) * SR), np.float32)]
-        t += len(audio) / SR + f.get("pausa", PAUSA)
+        audio = nivelar(a_48k(mejor, tmp / f"{n}.wav", e["tempo"]))
+        sf.write(str(guardada), audio, SR)
+        partes, tiempos, t = agregar(partes, tiempos, t, f, audio)
 
     total = np.concatenate(partes + [np.zeros(int(FINAL * SR), np.float32)])
     total = total / (np.abs(total).max() or 1) * 0.89
     salida.parent.mkdir(parents=True, exist_ok=True)
     crudo = salida.with_name(salida.stem + "-crudo.wav")
     sf.write(str(crudo), total, SR)
+    # "velocidad" junto a "voz" en el JSON: acelera o frena toda la narración sin cambiar el tono
+    velocidad = float(cfg.get("velocidad", 1.0))
+    if abs(velocidad - 1) > 0.005:
+        rapido = crudo.with_name(crudo.stem + "-v.wav")
+        subprocess.run(["ffmpeg", "-loglevel", "error", "-y", "-i", str(crudo), "-af", f"atempo={velocidad}",
+                        str(rapido)], check=True)
+        rapido.replace(crudo)
+        for x in tiempos:
+            x["inicio"], x["fin"] = round(x["inicio"] / velocidad, 3), round(x["fin"] / velocidad, 3)
+        total = sf.read(str(crudo), dtype="float32")[0]
     # Acabado de locución: el ecualizador automático corrige el balance y deja el volumen a -14 LUFS
     subprocess.run([sys.executable, str(Path(__file__).with_name("ecualizar.py")), str(crudo), str(salida)], check=True)
     crudo.unlink()

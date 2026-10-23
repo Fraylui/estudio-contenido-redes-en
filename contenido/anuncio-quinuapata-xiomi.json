@@ -1,7 +1,8 @@
 {
   "formato": "Anuncio",
   "voz": {
-    "referencia": "voz/referencias/xiomi.wav"
+    "referencia": "voz/referencias/xiomi.wav",
+    "velocidad": 1.1
   },
   "props": {
     "negocio": {
@@ -157,7 +158,8 @@
       },
       {
         "texto": "Contáctanos al 943 960 656.",
-        "estilo": "vendedor"
+        "estilo": "vendedor",
+        "semilla": 1
       }
     ]
   }
