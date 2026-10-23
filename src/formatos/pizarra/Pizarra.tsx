@@ -46,8 +46,9 @@ type Props = z.infer<typeof pizarraSchema>;
 const FPS = 30;
 
 // Música de fondo que se aparta cuando habla la voz (ducking): baja bajo la voz y sube un poco en las pausas
-const MUSICA_PAUSA = 0.11; // ≈ −19 dB
-const MUSICA_VOZ = 0.045; // ≈ −27 dB: se siente, pero no tapa ni una palabra
+// Los MP3 se dejan a −20 LUFS (scripts/bajar-musica.sh); la voz está a −14 LUFS
+const MUSICA_PAUSA = 0.4; // ≈ −28 LUFS en las pausas
+const MUSICA_VOZ = 0.2; // ≈ −34 LUFS, 20 dB bajo la voz: se siente, pero no tapa ni una palabra
 const volumenMusica = (f: number, frases: { inicio: number; fin: number }[], total: number) => {
   const t = f / FPS;
   const enVoz = frases.reduce(

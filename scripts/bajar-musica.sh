@@ -5,7 +5,10 @@ set -euo pipefail
 cd "$(dirname "$0")/../public/musica"
 while IFS='|' read -r archivo titulo; do
   [ -f "$archivo" ] && continue
-  curl -sfL -o "$archivo" "https://incompetech.com/music/royalty-free/mp3-royaltyfree/${titulo// /%20}.mp3" && echo "✓ $archivo"
+  curl -sfL -o "tmp-$archivo" "https://incompetech.com/music/royalty-free/mp3-royaltyfree/${titulo// /%20}.mp3"
+  # Todas al mismo volumen (−20 LUFS): así el ducking de Pizarra.tsx suena igual con cualquier tema
+  ffmpeg -hide_banner -loglevel error -y -i "tmp-$archivo" -af loudnorm=I=-20:TP=-2 -ar 48000 -b:a 192k "$archivo"
+  rm "tmp-$archivo" && echo "✓ $archivo"
 done <<'LISTA'
 carefree.mp3|Carefree
 wallpaper.mp3|Wallpaper
