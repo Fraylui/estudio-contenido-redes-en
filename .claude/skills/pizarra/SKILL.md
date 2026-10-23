@@ -74,7 +74,8 @@ Licencias:
 - Los trazos se dibujan línea por línea en el primer 60 % de la escena. Los rellenos aparecen junto con su contorno.
 - Los objetos y rótulos entran con `spring()` y después flotan apenas.
 - El texto aparece palabra por palabra; las de `resaltar` llevan marcador amarillo.
-- Zoom lento de cámara, papel arrugado y sonido de lápiz en cada escena.
+- Zoom lento de cámara y papel arrugado.
+- **Efectos de sonido solo en momentos clave** (8 a 12 por video), con `"sonido"` y `"sonidoEn"` en la escena, usando el catálogo de la skill video-sfx: `whoosh`, `whoosh_2` y `whoosh_3` al cambiar de sección; `caja_registradora` cuando aparece dinero; `ding` o `magic_reveal` en una revelación; `boom` en un dato impactante. **Nunca un sonido en cada escena**: cansa y se escucha barato.
 
 ## 5. Antes de narrar
 

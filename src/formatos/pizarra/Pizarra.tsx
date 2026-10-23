@@ -9,6 +9,7 @@ import {
   AbsoluteFill, CalculateMetadataFunction, interpolate, Sequence, spring, staticFile, useCurrentFrame, useVideoConfig,
 } from "remotion";
 import { DIBUJOS, type DibujoPizarra } from "./dibujos";
+import catalogoSfx from "../../../public/sfx/efectos/sfx.json";
 
 loadFont({ family: "Mano", url: staticFile("fuentes/PatrickHand.woff2") });
 
@@ -20,6 +21,10 @@ export const pizarraSchema = z.object({
       // Palabra (o palabras) que se resaltan en amarillo
       resaltar: z.string().optional(),
       segundos: z.number().optional(),
+      // Efecto de sonido del catálogo (public/sfx/efectos/sfx.json) y el segundo de la escena en que golpea.
+      // Solo en momentos clave: un sonido en cada escena cansa al oído.
+      sonido: z.string().optional(),
+      sonidoEn: z.number().optional(),
     }),
   ),
   voz: z.string().optional(),
@@ -58,13 +63,28 @@ export const Pizarra: React.FC<Props> = ({ escenas, voz, musica }) => {
         return (
           <Sequence key={i} from={inicio} durationInFrames={duracion}>
             <Escena {...e} />
-            <Audio src={staticFile("sfx/lapiz.wav")} volume={0.35} />
+            {e.sonido ? <Efecto id={e.sonido} en={e.sonidoEn ?? 0.6} /> : null}
           </Sequence>
         );
       })}
       {voz ? <Audio src={staticFile(voz)} /> : null}
       {musica ? <Audio src={staticFile(musica)} volume={0.08} loop /> : null}
     </AbsoluteFill>
+  );
+};
+
+type Sfx = { archivo: string; impacto_s: number; ganancia_db_sugerida: number };
+const CATALOGO = catalogoSfx as Record<string, Sfx>;
+
+// El sonido se adelanta su punto de impacto para que el golpe caiga justo en "en". Va 6 dB más bajo que en
+// los anuncios: aquí acompaña a una narración tranquila.
+const Efecto: React.FC<{ id: string; en: number }> = ({ id, en }) => {
+  const c = CATALOGO[id];
+  if (!c) return null;
+  return (
+    <Sequence from={Math.max(0, Math.round((en - c.impacto_s) * FPS))} layout="none">
+      <Audio src={staticFile(`sfx/efectos/${c.archivo}`)} volume={Math.pow(10, (c.ganancia_db_sugerida - 6) / 20)} />
+    </Sequence>
   );
 };
 

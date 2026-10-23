@@ -9,7 +9,9 @@
       {
         "dibujo": "billetera-vacia",
         "texto": "Llega fin de mes… y tu billetera está vacía.",
-        "resaltar": "vacía"
+        "resaltar": "vacía",
+        "sonido": "whoosh",
+        "sonidoEn": 0.3
       },
       {
         "dibujo": "a-donde-se-va",
@@ -19,12 +21,16 @@
       {
         "dibujo": "metodo-japones",
         "texto": "Un método japonés de hace más de cien años te ayuda a ahorrar.",
-        "resaltar": "japonés"
+        "resaltar": "japonés",
+        "sonido": "magic_reveal",
+        "sonidoEn": 1.2
       },
       {
         "dibujo": "lucia-sueldo",
         "texto": "Lucía recibe su sueldo y se siente millonaria.",
-        "resaltar": "millonaria"
+        "resaltar": "millonaria",
+        "sonido": "caja_registradora",
+        "sonidoEn": 1.0
       },
       {
         "dibujo": "lucia-gastos",
@@ -44,12 +50,16 @@
       {
         "dibujo": "motoko-1904",
         "texto": "En 1904, Hani Motoko creó un cuaderno para los gastos del hogar.",
-        "resaltar": "1904"
+        "resaltar": "1904",
+        "sonido": "whoosh_2",
+        "sonidoEn": 0.2
       },
       {
         "dibujo": "kakeibo",
         "texto": "Kakeibo: libro de cuentas del hogar.",
-        "resaltar": "Kakeibo:"
+        "resaltar": "Kakeibo:",
+        "sonido": "ding",
+        "sonidoEn": 1.4
       },
       {
         "dibujo": "papel-lapiz",
@@ -64,7 +74,9 @@
       {
         "dibujo": "cuatro-preguntas",
         "texto": "Cada mes, 4 preguntas.",
-        "resaltar": "4 preguntas."
+        "resaltar": "4 preguntas.",
+        "sonido": "whoosh_3",
+        "sonidoEn": 0.2
       },
       {
         "dibujo": "pregunta-1",
@@ -89,7 +101,9 @@
       {
         "dibujo": "cuatro-cajas",
         "texto": "Cada gasto va a una de 4 cajas.",
-        "resaltar": "4 cajas."
+        "resaltar": "4 cajas.",
+        "sonido": "whoosh",
+        "sonidoEn": 0.2
       },
       {
         "dibujo": "necesidades",
@@ -114,12 +128,16 @@
       {
         "dibujo": "la-mitad",
         "texto": "En «gustos» se le iba casi la mitad.",
-        "resaltar": "la mitad."
+        "resaltar": "la mitad.",
+        "sonido": "boom",
+        "sonidoEn": 1.5
       },
       {
         "dibujo": "lo-necesito",
         "texto": "¿Lo necesito… o solo lo quiero ahora?",
-        "resaltar": "¿Lo necesito"
+        "resaltar": "¿Lo necesito",
+        "sonido": "whoosh_2",
+        "sonidoEn": 0.2
       },
       {
         "dibujo": "24-horas",
@@ -129,7 +147,9 @@
       {
         "dibujo": "ahorrado",
         "texto": "Al tercer mes: su primer fondo de emergencia.",
-        "resaltar": "fondo de emergencia."
+        "resaltar": "fondo de emergencia.",
+        "sonido": "caja_registradora",
+        "sonidoEn": 1.2
       },
       {
         "dibujo": "mirar",
@@ -144,7 +164,9 @@
       {
         "dibujo": "suscribete",
         "texto": "Suscríbete para que tu dinero te alcance.",
-        "resaltar": "Suscríbete"
+        "resaltar": "Suscríbete",
+        "sonido": "ding",
+        "sonidoEn": 1.2
       }
     ],
     "narracion": [
