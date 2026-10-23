@@ -120,6 +120,55 @@ export const billeteraAbierta = (x: number, y: number, s = 1) => {
   ];
 };
 
+// Cerebro mascota estilo kawaii (como en DECIDO VIVIR MEJOR o Simio Alpha): rosado, ojos grandes,
+// brazos y piernas de palito con zapatillas azules. (x, y) es el centro del cerebro.
+export type PoseCerebro = "musculos" | "abajo" | "menton" | "arriba";
+export const cerebro = (x: number, y: number, { cara = "feliz" as Cara, pose = "abajo" as PoseCerebro, s = 1 } = {}) => {
+  const P = (px: number, py: number) => `${x + px * s} ${y + py * s}`;
+  const rosa = pintado("#ff8fab");
+  const t: Trazo[] = [
+    // Contorno de nube con lóbulos
+    ...camino(`M ${P(-150, 30)} C ${P(-190, -10)} ${P(-160, -90)} ${P(-110, -95)} C ${P(-100, -150)} ${P(-20, -160)} ${P(10, -125)}
+      C ${P(50, -165)} ${P(130, -150)} ${P(130, -95)} C ${P(185, -85)} ${P(195, 5)} ${P(150, 35)}
+      C ${P(170, 90)} ${P(100, 125)} ${P(60, 100)} C ${P(20, 135)} ${P(-60, 130)} ${P(-80, 95)} C ${P(-140, 115)} ${P(-185, 70)} ${P(-150, 30)} Z`, rosa),
+    // Pliegues del cerebro
+    ...camino(`M ${P(-110, -60)} Q ${P(-80, -40)} ${P(-100, -10)}`, { strokeWidth: 3.5 }),
+    ...camino(`M ${P(90, -70)} Q ${P(60, -45)} ${P(95, -20)}`, { strokeWidth: 3.5 }),
+    ...camino(`M ${P(0, -120)} Q ${P(-15, -95)} ${P(5, -75)}`, { strokeWidth: 3.5 }),
+    ...camino(`M ${P(-120, 60)} Q ${P(-95, 45)} ${P(-75, 70)}`, { strokeWidth: 3.5 }),
+    ...camino(`M ${P(120, 50)} Q ${P(95, 40)} ${P(85, 70)}`, { strokeWidth: 3.5 }),
+  ];
+  // Ojos grandes: blanco con pupila
+  const ojo = (ox: number) => [...circulo(x + ox * s, y - 5 * s, 52 * s, pintado("#ffffff")), ...circulo(x + (ox + 4) * s, y - 2 * s, 20 * s, pintado("#1f1f1f"))];
+  if (cara === "feliz") {
+    t.push(...camino(`M ${P(-55, -5)} Q ${P(-38, -25)} ${P(-20, -5)}`), ...camino(`M ${P(20, -5)} Q ${P(38, -25)} ${P(55, -5)}`));
+  } else t.push(...ojo(-38), ...ojo(38));
+  t.push(...camino({
+    feliz: `M ${P(-25, 30)} Q ${P(0, 55)} ${P(25, 30)}`, normal: `M ${P(-15, 38)} Q ${P(0, 44)} ${P(15, 38)}`,
+    triste: `M ${P(-20, 48)} Q ${P(0, 30)} ${P(20, 48)}`, sorpresa: `M ${P(-12, 40)} Q ${P(0, 20)} ${P(12, 40)} Q ${P(0, 60)} ${P(-12, 40)}`,
+    duda: `M ${P(-18, 42)} L ${P(18, 36)}`, preocupada: `M ${P(-20, 42)} Q ${P(-10, 34)} ${P(0, 42)} Q ${P(10, 50)} ${P(20, 42)}`,
+  }[cara]));
+  // Mejillas
+  t.push(...circulo(x - 75 * s, y + 30 * s, 24 * s, pintado("#ff5c8a")), ...circulo(x + 75 * s, y + 30 * s, 24 * s, pintado("#ff5c8a")));
+  // Brazos según la pose
+  const brazos = {
+    musculos: [`M ${P(-155, 20)} Q ${P(-230, 10)} ${P(-225, -70)}`, `M ${P(155, 20)} Q ${P(230, 10)} ${P(225, -70)}`],
+    abajo: [`M ${P(-150, 40)} Q ${P(-190, 90)} ${P(-185, 150)}`, `M ${P(150, 40)} Q ${P(190, 90)} ${P(185, 150)}`],
+    menton: [`M ${P(-150, 40)} Q ${P(-190, 90)} ${P(-185, 150)}`, `M ${P(150, 40)} Q ${P(110, 120)} ${P(40, 70)}`],
+    arriba: [`M ${P(-150, -20)} Q ${P(-210, -80)} ${P(-200, -160)}`, `M ${P(150, -20)} Q ${P(210, -80)} ${P(200, -160)}`],
+  }[pose];
+  t.push(...camino(brazos[0], { strokeWidth: 6 }), ...camino(brazos[1], { strokeWidth: 6 }));
+  if (pose === "musculos") {
+    // Bíceps marcados
+    t.push(...circulo(x - 205 * s, y - 15 * s, 42 * s, rosa), ...circulo(x + 205 * s, y - 15 * s, 42 * s, rosa));
+  }
+  // Piernas con zapatillas azules
+  t.push(...linea(x - 45 * s, y + 110 * s, x - 55 * s, y + 210 * s, { strokeWidth: 6 }), ...linea(x + 45 * s, y + 105 * s, x + 55 * s, y + 210 * s, { strokeWidth: 6 }));
+  t.push(...camino(`M ${P(-95, 225)} Q ${P(-95, 195)} ${P(-55, 200)} Q ${P(-30, 205)} ${P(-30, 228)} Z`, pintado("#4d8fe0")));
+  t.push(...camino(`M ${P(30, 228)} Q ${P(30, 205)} ${P(55, 200)} Q ${P(95, 195)} ${P(95, 225)} Z`, pintado("#4d8fe0")));
+  return t;
+};
+
 // Caja de cartón abierta dibujada a mano (las 4 cajas del gasto)
 export const caja = (x: number, y: number, s = 1, color = "#e8c48f") => [
   ...rect(x - 120 * s, y - 70 * s, 240 * s, 150 * s, pintado(color)),

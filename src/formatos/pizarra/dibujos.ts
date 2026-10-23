@@ -3,7 +3,7 @@
 // "objetos": ilustraciones de public/objetos/ (Fluent Emoji, licencia MIT) con su centro (x, y) y tamaño t.
 // "textos": rótulos escritos a mano dentro del dibujo.
 // El conjunto se ajusta solo al espacio disponible, así que las coordenadas solo importan entre sí.
-import { billeteraAbierta, caja, monigote, type Trazo } from "./trazos";
+import { billeteraAbierta, caja, cerebro, monigote, type Trazo } from "./trazos";
 
 export type Objeto = { img: string; x: number; y: number; t: number; rot?: number };
 export type Rotulo = { texto: string; x: number; y: number; t: number; color?: string; rot?: number };
@@ -14,6 +14,12 @@ const ROJO = "#d7263d";
 const VERDE = "#2e9e4f";
 
 export const DIBUJOS: Record<string, DibujoPizarra> = {
+  // --- Mascota cerebro (videos de mente y hábitos) ---
+  "cerebro-fuerte": { trazos: cerebro(500, 450, { cara: "feliz", pose: "musculos" }) },
+  "cerebro-duda": { trazos: cerebro(500, 450, { cara: "duda", pose: "menton" }), objetos: [{ img: "pregunta", x: 780, y: 220, t: 150, rot: 12 }] },
+  "cerebro-idea": { trazos: cerebro(500, 450, { cara: "sorpresa", pose: "arriba" }), objetos: [{ img: "foco", x: 820, y: 190, t: 170 }] },
+  "cerebro-cansado": { trazos: cerebro(500, 450, { cara: "triste", pose: "abajo" }), objetos: [{ img: "reloj-arena", x: 820, y: 250, t: 150 }] },
+
   // --- Gancho ---
   "billetera-vacia": {
     trazos: billeteraAbierta(550, 560),
