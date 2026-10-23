@@ -35,14 +35,14 @@ export const BannerCanal: React.FC = () => (
     {/* Cuerdas de quipu de lado a lado, arriba (fuera de la zona segura: solo decoran en TV y escritorio) */}
     <Dibujo trazos={quipu(0, 2560, 30, { largo: 260 })} style={{ position: "absolute", top: 0, left: 0, width: 2560 }} />
     {/* Zona segura de YouTube: 1546x423 al centro; todo lo importante va ahí */}
-    <div style={{ position: "absolute", left: 507, top: 508, width: 1546, height: 423, display: "flex", alignItems: "center", gap: 50 }}>
-      <Dibujo trazos={cerebro(0, 0, { cara: "feliz", pose: "musculos" })} style={{ height: 400, width: 420, flexShrink: 0 }} />
+    <div style={{ position: "absolute", left: 507, top: 508, width: 1546, height: 423, display: "flex", alignItems: "center", justifyContent: "center", gap: 40 }}>
+      <Dibujo trazos={cerebro(0, 0, { cara: "feliz", pose: "musculos" })} style={{ height: 340, width: 340, flexShrink: 0 }} />
       <div style={{ display: "flex", flexDirection: "column", gap: 18 }}>
-        <div style={{ fontFamily: "Titulo", fontSize: 190, lineHeight: 0.95, color: "#1f1f1f", letterSpacing: 2 }}>
+        <div style={{ fontFamily: "Titulo", fontSize: 170, lineHeight: 0.95, color: "#1f1f1f", letterSpacing: 2 }}>
           <span style={{ background: "#ffe14d", padding: "6px 22px 0", display: "inline-block", lineHeight: 1, transform: "rotate(-2deg)" }}>QUIPU</span>
         </div>
-        <div style={{ fontFamily: "Mano", fontSize: 62, color: "#1f1f1f" }}>Lo que nadie te explicó, explicado fácil.</div>
-        <div style={{ fontFamily: "Mano", fontSize: 46, color: "#d7263d" }}>Mente · Dinero · Amor · Curiosidades · Nuevo video cada semana</div>
+        <div style={{ fontFamily: "Mano", fontSize: 56, color: "#1f1f1f" }}>Lo que nadie te explicó, explicado fácil.</div>
+        <div style={{ fontFamily: "Mano", fontSize: 50, color: "#d7263d" }}>Mente · Dinero · Amor · Curiosidades</div>
       </div>
     </div>
   </AbsoluteFill>
