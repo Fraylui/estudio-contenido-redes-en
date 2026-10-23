@@ -24,7 +24,10 @@ Estado al 23 de octubre de 2026. ✅ en uso · 🟡 disponible pero sin usar · 
 | Whisper (faster-whisper y whisper.cpp) | Transcripción, revisión de la voz, tiempos por palabra | ✅ |
 | DeepFilterNet | Quitar ruido de voces grabadas | ✅ Solo voz humana |
 | Skill `video-sfx` (14 efectos) | Whoosh, pop, ding, boom, magic reveal, caja registradora… | ✅ |
-| Música de fondo | Generar música original | 🔒 Abracadabrax (créditos). Gratis: la bajas tú de la Biblioteca de audio de YouTube y yo la mezclo |
+| Música de fondo | Generar música original | 🔒 Abracadabrax (créditos) |
+| **Música gratis y monetizable** | La bajo yo: **Mixkit** (licencia libre, sin atribución) e **Incompetech** de Kevin MacLeod (CC BY: se pone el crédito en la descripción). La bajas tú: **Biblioteca de audio de YouTube** (la más segura para monetizar). Con cuidado: Free Music Archive, solo CC BY o CC0, nunca "NC" (no comercial) | 🟡 |
+| **Música propia con IA local** | Stable Audio Open Small (licencia comunitaria de Stability, gratis bajo 1 M USD al año, como SD-Turbo). Requiere aceptar la licencia en Hugging Face con cuenta gratis | 🟡 Por instalar |
+| **Efectos de sonido gratis** | Freesound (filtrar por CC0), Mixkit SFX y el paquete gratuito de Sonniss (GDC) | 🟡 |
 
 ## 3. Imágenes y dibujos
 | Herramienta | Capacidad | Estado |
