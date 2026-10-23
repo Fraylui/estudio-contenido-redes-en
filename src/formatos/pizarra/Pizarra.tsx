@@ -26,6 +26,8 @@ export const pizarraSchema = z.object({
       // Solo en momentos clave: un sonido en cada escena cansa al oído.
       sonido: z.string().optional(),
       sonidoEn: z.number().optional(),
+      // Etiqueta de sección ("Paso 2 de 5", "La ciencia"…): se queda arriba hasta que otra escena la cambie
+      etiqueta: z.string().optional(),
     }),
   ),
   voz: z.string().optional(),
@@ -54,6 +56,7 @@ export const calcularPizarra: CalculateMetadataFunction<Props> = ({ props }) => 
 
 export const Pizarra: React.FC<Props> = ({ escenas, voz, musica }) => {
   let desde = 0;
+  let etiqueta: string | undefined;
   return (
     <AbsoluteFill>
       <Papel />
@@ -64,6 +67,11 @@ export const Pizarra: React.FC<Props> = ({ escenas, voz, musica }) => {
         return (
           <Sequence key={i} from={inicio} durationInFrames={duracion}>
             <Escena {...e} />
+            {(() => {
+              const nueva = e.etiqueta !== undefined && e.etiqueta !== etiqueta;
+              etiqueta = e.etiqueta ?? etiqueta;
+              return etiqueta ? <Etiqueta texto={etiqueta} entra={nueva} /> : null;
+            })()}
             {e.sonido ? <Efecto id={e.sonido} en={e.sonidoEn ?? 0.6} /> : null}
             {/* Ritmo de sonido como en los canales de alta retención: cada cambio y cada aparición suena, bajito y variado */}
             {i > 0 && !(e.sonido && (e.sonidoEn ?? 0.6) < 0.5) ? <Efecto id={WHOOSH[i % 3]} en={0.05} extraDb={-12} /> : null}
@@ -112,6 +120,25 @@ export const momentos = (d: DibujoPizarra, total: number) => {
   return { tiempoTrazos, objetosEn, textosEn, apariciones: [...objetosEn, ...textosEn].map(Math.round) };
 };
 
+// Etiqueta de sección arriba a la izquierda, con una barra que se llena si dice "Paso N de M"
+const Etiqueta: React.FC<{ texto: string; entra: boolean }> = ({ texto, entra }) => {
+  const frame = useCurrentFrame();
+  const pop = entra ? spring({ frame, fps: FPS, config: { damping: 12, stiffness: 180 } }) : 1;
+  const paso = texto.match(/(\d+)\s*de\s*(\d+)/i);
+  return (
+    <div style={{ position: "absolute", top: 40, left: 48, transform: `scale(${pop}) rotate(-2deg)`, transformOrigin: "left center" }}>
+      <div style={{ fontFamily: "Titulo", fontSize: 46, color: "#fff", background: "#1f1f1f", padding: "8px 22px 2px", letterSpacing: 1 }}>
+        {texto.toUpperCase()}
+      </div>
+      {paso ? (
+        <div style={{ height: 12, width: 260, background: "#ffffff", border: "3px solid #1f1f1f", marginTop: 8 }}>
+          <div style={{ height: "100%", width: `${(Number(paso[1]) / Number(paso[2])) * 100}%`, background: "#ffe14d" }} />
+        </div>
+      ) : null}
+    </div>
+  );
+};
+
 // Papel arrugado: textura de ruido con luz rasante, sin imágenes externas
 const Papel: React.FC = () => (
   <AbsoluteFill style={{ backgroundColor: "#f3efe6" }}>
@@ -127,7 +154,7 @@ const Papel: React.FC = () => (
   </AbsoluteFill>
 );
 
-const Escena: React.FC<Props["escenas"][number]> = ({ dibujo, texto, resaltar, segundos }) => {
+const Escena: React.FC<Props["escenas"][number]> = ({ dibujo, texto, resaltar, segundos, sonido, sonidoEn }) => {
   const frame = useCurrentFrame();
   const { width, height } = useVideoConfig();
   const horizontal = width > height;
@@ -141,8 +168,12 @@ const Escena: React.FC<Props["escenas"][number]> = ({ dibujo, texto, resaltar, s
   const punch = golpe >= 0 ? spring({ frame: frame - golpe, fps: FPS, config: { damping: 9, stiffness: 220 } }) : 0;
   const rebote = golpe >= 0 && frame >= golpe ? Math.max(0, 1 - (frame - golpe) / 18) : 0;
   const zoom = interpolate(frame, [0, total], [1, 1.05]) + 0.035 * punch * rebote;
+  // Sacudida de pantalla cuando suena un golpe fuerte
+  const t0 = sonido === "boom" ? (sonidoEn ?? 0.6) * FPS : -1;
+  const sacude = t0 >= 0 && frame >= t0 && frame < t0 + 12 ? (1 - (frame - t0) / 12) * 14 : 0;
+  const dx = sacude * Math.sin(frame * 2.7), dy = sacude * Math.cos(frame * 3.3);
   return (
-    <AbsoluteFill style={{ flexDirection: horizontal ? "row" : "column", transform: `scale(${zoom})` }}>
+    <AbsoluteFill style={{ flexDirection: horizontal ? "row" : "column", transform: `translate(${dx}px, ${dy}px) scale(${zoom})` }}>
       <div style={{ flex: horizontal ? 1.05 : 1.2, position: "relative" }}>
         <Dibujo dibujo={resolverDibujo(dibujo)} duracion={total} />
       </div>

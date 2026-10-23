@@ -100,6 +100,8 @@ Licencias:
 - Zoom lento de cámara y papel arrugado.
 - **Ritmo de sonido automático (alta retención):** un whoosh suave en cada cambio de escena (alterna 3 variantes) y un pop bajito, con tono variado, por cada persona, objeto o rótulo que aparece. Va 12 a 13 dB por debajo para no tapar la voz.
 - **Golpes clave a mano** (8 a 12 por video) con `"sonido"` y `"sonidoEn"`: `magic_reveal` en revelaciones, `caja_registradora` con dinero, `boom` en datos impactantes, `ding` en conclusiones. Nunca el mismo sonido fuerte seguido.
+- **Etiquetas de sección** con `"etiqueta"` en la escena ("La ciencia", "Paso 2 de 5"): se quedan arriba hasta la siguiente, y si dicen "Paso N de M" llevan una barra de progreso.
+- **Sacudida de pantalla** automática cuando la escena tiene `"sonido": "boom"`.
 - **Punch-in:** la cámara da un pequeño golpe de zoom cuando aparece la palabra resaltada.
 - **Ritmo visual:** algo nuevo aparece cada 1 o 2 s (trazo, objeto, rótulo, palabra), y los dibujos respiran al terminar.
 

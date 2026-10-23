@@ -108,7 +108,8 @@
         "texto": "Mateo se duerme viendo el celular.",
         "resaltar": "celular.",
         "sonido": "whoosh",
-        "sonidoEn": 0.2
+        "sonidoEn": 0.2,
+        "etiqueta": "La historia de Mateo"
       },
       {
         "dibujo": {
@@ -234,7 +235,8 @@
         "texto": "Un reloj interno de 24 horas.",
         "resaltar": "24",
         "sonido": "whoosh_2",
-        "sonidoEn": 0.2
+        "sonidoEn": 0.2,
+        "etiqueta": "La ciencia"
       },
       {
         "dibujo": {
@@ -472,7 +474,8 @@
         "texto": "5 pasos para despertar con energía.",
         "resaltar": "energía.",
         "sonido": "whoosh_3",
-        "sonidoEn": 0.2
+        "sonidoEn": 0.2,
+        "etiqueta": "5 pasos"
       },
       {
         "dibujo": {
@@ -489,7 +492,8 @@
           "rotulo": "1"
         },
         "texto": "1. Misma hora, todos los días.",
-        "resaltar": "Misma hora,"
+        "resaltar": "Misma hora,",
+        "etiqueta": "Paso 1 de 5"
       },
       {
         "dibujo": {
@@ -520,7 +524,8 @@
           "rotulo": "2"
         },
         "texto": "2. Luz natural apenas despiertes.",
-        "resaltar": "Luz natural"
+        "resaltar": "Luz natural",
+        "etiqueta": "Paso 2 de 5"
       },
       {
         "dibujo": {
@@ -551,7 +556,8 @@
           "rotulo": "3"
         },
         "texto": "3. Alarma lejos de la cama.",
-        "resaltar": "lejos"
+        "resaltar": "lejos",
+        "etiqueta": "Paso 3 de 5"
       },
       {
         "dibujo": {
@@ -585,7 +591,8 @@
           "rotulo": "4"
         },
         "texto": "4. Calcula tus ciclos.",
-        "resaltar": "ciclos."
+        "resaltar": "ciclos.",
+        "etiqueta": "Paso 4 de 5"
       },
       {
         "dibujo": {
@@ -634,7 +641,8 @@
           "rotulo": "5"
         },
         "texto": "5. Prepara la noche.",
-        "resaltar": "noche."
+        "resaltar": "noche.",
+        "etiqueta": "Paso 5 de 5"
       },
       {
         "dibujo": {
@@ -668,7 +676,8 @@
         "texto": "El truco: avanza de 15 en 15.",
         "resaltar": "15",
         "sonido": "whoosh",
-        "sonidoEn": 0.2
+        "sonidoEn": 0.2,
+        "etiqueta": "El truco"
       },
       {
         "dibujo": {
@@ -702,7 +711,8 @@
         "texto": "Mateo probó durante 3 semanas.",
         "resaltar": "3 semanas.",
         "sonido": "whoosh_2",
-        "sonidoEn": 0.2
+        "sonidoEn": 0.2,
+        "etiqueta": "El resultado"
       },
       {
         "dibujo": {
@@ -772,7 +782,8 @@
           "rotulo": "7 días"
         },
         "texto": "Reto: 7 días a la misma hora.",
-        "resaltar": "7 días"
+        "resaltar": "7 días",
+        "etiqueta": "Tu reto"
       },
       {
         "dibujo": {
