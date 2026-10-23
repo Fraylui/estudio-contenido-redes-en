@@ -150,8 +150,16 @@ const Dibujo: React.FC<{ dibujo: DibujoPizarra; duracion: number }> = ({ dibujo,
   const tiempoTrazos = extras ? (trazos.length ? duracion * 0.65 : 0) : duracion;
   const avance = interpolate(frame, [0, Math.max(1, tiempoTrazos)], [0, totalLargo], { extrapolateRight: "clamp" });
   let acumulado = 0;
+  // Vida: cuando el dibujo ya está completo, respira y se balancea apenas, para que nunca quede congelado
+  const [vx, vy, vw, vh] = vista.split(" ").map(Number);
+  const seg = Math.max(0, frame - tiempoTrazos) / fps;
+  const vida = Math.min(1, seg * 2);
+  const respira = 1 + 0.012 * Math.sin(seg * 3.2) * vida;
+  const balanceo = 1.2 * Math.sin(seg * 1.7) * vida;
+  const centro = `${vx + vw / 2} ${vy + vh * 0.9}`;
   return (
     <svg viewBox={vista} style={{ width: "100%", height: "100%", padding: "70px 40px 70px 90px", boxSizing: "border-box" }}>
+      <g transform={`rotate(${balanceo} ${centro}) translate(${centro}) scale(${2 - respira} ${respira}) translate(${centro.split(" ").map((n) => -Number(n)).join(" ")})`}>
       {trazos.map((t, i) => {
         const largo = largos[i];
         const visible = Math.min(Math.max(avance - acumulado, 0), largo);
@@ -166,6 +174,7 @@ const Dibujo: React.FC<{ dibujo: DibujoPizarra; duracion: number }> = ({ dibujo,
             strokeLinecap="round" strokeLinejoin="round" strokeDasharray={largo} strokeDashoffset={largo - visible} />
         );
       })}
+      </g>
       {objetos.map((o, i) => {
         const inicio = tiempoTrazos + (i / extras) * (duracion - tiempoTrazos);
         const pop = spring({ frame: frame - inicio, fps, config: { damping: 11, stiffness: 160 } });
