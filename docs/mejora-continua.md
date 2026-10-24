@@ -34,7 +34,7 @@ Las nuevas que vienen de lo aprendido en Infonimados, Academia Play y los anunci
 | N | Técnica | Inspirada en | Para qué sirve |
 |---|---|---|---|
 | A | **Personajes con objetos en la mano** (sobre de sueldo, celular) y **globos de diálogo** escritos a mano | Aprendiz Financiero | Contar la historia sin depender solo de la voz |
-| B | **Mano real dibujando** sobre la pizarra | Academia Play | Sensación artesanal y de "en vivo" |
+| B | ~~Mano real dibujando~~ | — | **Descartada por el usuario: no se usa** |
 | C | **Celular con la app y un círculo rojo** sobre el dato | Anuncios 2026 | Mostrar cifras y apps de forma creíble |
 | D | **Personajes caminando y entrando a la escena** | Infonimados | Más acción, menos personajes quietos |
 | E | **Escenarios con IA por cada sección** (cocina, oficina, calle andina) | Infonimados | Variedad de lugares |
