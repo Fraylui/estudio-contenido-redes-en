@@ -3,6 +3,7 @@
 Es la lista que se cumple **en cada video, sin excepción**. El detalle está en los demás documentos de `docs/`.
 
 ## 1. Elegir la idea (antes de escribir nada)
+- [ ] **Antes de todo, analizar el tipo de contenido en redes:** los videos más vistos del tema (`scripts/investigar-youtube.py`), los canales que mejor lo hacen (`scripts/analizar-canales.py` con esos canales) y qué formatos, ganchos y miniaturas les funcionan (`docs/patrones-creadores.md`).
 - [ ] **Demanda comprobada:** `scripts/investigar-youtube.py "<tema>"`. Hay videos de ese tema con más de 500 000 vistas.
 - [ ] **Ángulo propio:** algo que esos videos no dicen, o una forma más clara o más cercana (Perú, Latinoamérica).
 - [ ] **Encaja en una serie** (`docs/plan-quipu.md`), o abre una nueva. Cualquier tema vale: historias, lugares, curiosidades, dinero, tecnología, emociones…
