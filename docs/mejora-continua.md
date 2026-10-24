@@ -80,6 +80,18 @@ En las primeras 48 h, con 1 670 vistas en total:
 4. Los videos largos siguen (dan horas y profundidad), pero los Shorts traen a la gente nueva: cada Short apunta a su video largo.
 5. A los 7 días, comparar qué Shorts retienen mejor (el porcentaje que "decidió mirar") y repetir esos temas.
 
+## Análisis con datos (24 de octubre, `scripts/analizar-video.py`)
+| Short | Vistas | Cambios por minuto | Plano promedio |
+|---|---|---|---|
+| Despertar, "5 minutos más" | 1 000 | 10 | 5,2 s |
+| Kakeibo (fondo de papel blanco) | muy pocas | ~0 | 47 s |
+| Canales grandes | — | 20–40 | 1,5–3 s |
+
+**Mejoras que salen de estos datos:**
+1. Segunda toma automática a la mitad de cada escena, para duplicar el ritmo.
+2. Objetos protagonistas en 3D, sin íconos en "gomita".
+3. Nunca más el fondo de papel blanco plano.
+
 ## Lecciones del video 3 (para el video 4)
 - **Duración:** salió de 6:35. Para llegar a 8–12 min, el guion necesita unas 1 500 palabras (1 146 dieron 6:35): una sección más de historia o de ejemplos reales.
 - **Íconos de línea abierta** (gráfica, banco, vaso) todavía no se pintan por dentro: cerrar sus formas o cambiarlos por objetos 3D.

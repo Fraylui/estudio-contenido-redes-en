@@ -505,6 +505,9 @@ const Escena: React.FC<Props["escenas"][number] & { indice?: number }> = ({ dibu
   const golpe = primera >= 0 ? (primera / palabras.length) * total * 0.5 : -1;
   const punch = golpe >= 0 ? spring({ frame: frame - golpe, fps: FPS, config: { damping: 9, stiffness: 220 } }) : 0;
   const rebote = golpe >= 0 && frame >= golpe ? Math.max(0, 1 - (frame - golpe) / 18) : 0;
+  // Segunda toma dentro de la escena (como los cortes de los canales grandes, cada 1,5–3 s): a la mitad de las escenas
+  // de más de 2,6 s, la cámara salta a un encuadre más cerrado hacia los objetos. Duplica el ritmo sin tocar la voz.
+  const segundaToma = total > 2.6 * FPS && frame >= total * 0.5;
   const zoom = interpolate(frame, [0, total], [1, 1.05]) + 0.035 * punch * rebote;
   // Sacudida de pantalla cuando suena un golpe fuerte
   const t0 = sonido === "boom" ? (sonidoEn ?? 0.6) * FPS : -1;
@@ -520,6 +523,8 @@ const Escena: React.FC<Props["escenas"][number] & { indice?: number }> = ({ dibu
       <div style={{
         position: "absolute", left: horizontal ? 120 : 30, right: horizontal ? 120 : 30, top: horizontal ? 70 : 340, bottom: horizontal ? "16%" : "24%",
         // Silueta: negro hasta el 40 % de la escena y luego se revela (con el destello de abajo)
+        // La segunda toma solo acerca el dibujo (el subtítulo no se mueve)
+        transform: segundaToma ? `scale(1.16) translate(${horizontal ? -3 : 0}%, ${horizontal ? 2 : -2}%)` : undefined,
         filter: silueta ? `brightness(${interpolate(frame, [total * 0.4, total * 0.4 + 6], [0, 1], { extrapolateLeft: "clamp", extrapolateRight: "clamp" })})` : undefined,
       }}>
         {barras ? <Barras datos={barras} duracion={total} />
