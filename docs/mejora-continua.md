@@ -28,6 +28,11 @@
 | **Objetos 3D hechos con IA** y recortados (hormiga, café, billetera, alcancía) en escenas clave y miniatura | Video 3 |
 | **Números que cuentan solos** (0 → 78 000) | Video 3 |
 | Escenarios con IA por sección (cafetería, sala, tienda) | Video 3 |
+| Mapas animados, paneo, silueta, barras que crecen, partículas y sonido ambiente | Video 4 |
+| Íconos que entran enteros con rebote, 4 transiciones que se turnan y personaje que entra caminando | Video 4 |
+| Globos de diálogo, antes y después en pantalla dividida, tono de color con grano de película | Video 4 |
+| Título gancho fijo arriba en los Shorts | Shorts del video 3 |
+| Banco de escenarios con prompts de 7 capas | Video 4 |
 
 ## Próximas, por orden de impacto en la retención
 Las nuevas que vienen de lo aprendido en Infonimados, Academia Play y los anuncios de 2026:

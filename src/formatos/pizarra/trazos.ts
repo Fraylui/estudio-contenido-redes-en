@@ -272,7 +272,8 @@ export const icono = (nombre: string, x: number, y: number, t: number, color = "
   const caminos = ICONOS[nombre] ?? [];
   for (const d of caminos) for (const sub of cerradas(d)) trazos.push(...camino(a(sub), { fill: vivo, fillStyle: "solid", stroke: "none", roughness: 0.2 }));
   for (const d of caminos) trazos.push(...camino(a(d), { strokeWidth: Math.max(4.5, k * 1.7), roughness: 0.6 }));
-  return trazos;
+  // Marca de grupo: el ícono entra entero con un rebote (no trazo por trazo), centrado en (x, y)
+  return trazos.map((t) => ({ ...t, parte: `icono@${x},${y}` }));
 };
 
 // Personaje de caricatura estilo Aprendiz Financiero: contorno negro grueso, colores planos, ojos grandes.

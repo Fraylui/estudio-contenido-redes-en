@@ -113,6 +113,7 @@ Licencias:
   - **Subtítulos en negrita** (Montserrat 900, mayúsculas, contorno negro) con rebote palabra por palabra; la palabra clave va más grande en amarillo.
   - Los escenarios de cuarto siguen disponibles: `cuarto-cielo`, `cuarto-menta`, etc. También hay `blanco` y `papel`.
 - **Prompts profesionales:** `docs/prompts-profesionales.md` (7 capas: sujeto, lugar y época, encuadre, luz, paleta, estilo y exclusiones).
+- **Banco de escenarios** (`imagen/escenarios.json`, prompts de 7 capas): `bash imagen/generar-escenarios.sh <carpeta>` genera los que faltan; se elige la mejor variante y se guarda en `public/assets/ia/`.
 - **Fondos ilustrados con IA** (`"fondo": "ia:cuarto-amanecer"` → `public/assets/ia/<nombre>.jpg`): el modelo instalado (`imagen/generar.py`) da **escenarios muy buenos** si el prompt es preciso.
   - **Escena:** `--estilo escena --ancho 768 --alto 448 --pasos 4 --variantes 2`. Describe el lugar, la luz, los colores y 3 o 4 objetos concretos (*"cozy bedroom at sunrise, warm golden light through a big window, bed with blue blanket, alarm clock on a nightstand, plants"*). Sin personas: los personajes los ponemos nosotros encima.
   - Elige la mejor variante, escálala a 1920 con lanczos y un poco de nitidez, y guárdala como JPG.
@@ -123,6 +124,10 @@ Licencias:
   - **Paneo lateral:** `"fondo": "ia:<nombre>:paneo"` recorre el escenario de izquierda a derecha.
   - **Revelación por capas:** `"silueta": true` muestra primero la silueta negra y la revela con un destello al 40 % de la escena.
   - **Barras que crecen:** `"barras": [{"etiqueta": "1940", "valor": 7000000}, ...]`, con los números contando.
+  - **Globo de diálogo:** `"globo": "¡No puede ser!"` (lo que dice el personaje, estilo cómic).
+  - **Antes y después:** `"antesDespues": [<dibujo de antes>, <dibujo de después>]`, en pantalla dividida con línea que barre y rótulos ANTES y DESPUÉS.
+  - **Tono del video:** `"tono": "sepia" | "frio" | "calido" | "noche"` en las props (gradación de color, grano de película y viñeta). Sepia para historia antigua, frío para misterio, cálido para el Perú andino y noche para temas oscuros.
+  - **Automático:** los íconos entran enteros con rebote (no trazo por trazo), el personaje entra caminando y las escenas se turnan 4 entradas distintas (zoom con desenfoque, barrido lateral, apertura en círculo y golpe de escala).
   - **Sonido ambiente:** `"ambiente": "naturaleza/<efecto>"` (o `historia/…`, `tension/…`), en bucle y muy bajo durante la escena.
   - **Partículas en bucle:** `"particulas": "lluvia" | "polvo" | "chispas" | "nieve" | "brasas"`.
   - **Biblioteca de 334 efectos** (Mixkit, gratis y comercial; `scripts/bajar-sfx.py`): `"sonido": "hooks/big-cinematic-impact"`. Categorías: hooks, transiciones, historia, naturaleza, animacion, tension, tecnologia, dinero y reacciones. La lista está en `public/sfx/biblioteca/catalogo.json`. Jerarquía: la voz siempre clara, la música detrás y los efectos solo donde hay una acción o una revelación; un silencio breve antes del dato fuerte.

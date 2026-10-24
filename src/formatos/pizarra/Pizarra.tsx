@@ -9,7 +9,7 @@ import { lightLeak } from "@remotion/effects/light-leak";
 import {
   AbsoluteFill, CalculateMetadataFunction, Easing, Img, interpolate, Solid, Sequence, spring, staticFile, useCurrentFrame, useVideoConfig,
 } from "remotion";
-import { composicionSchema, resolverDibujo, type DibujoPizarra } from "./dibujos";
+import { composicionSchema, resolverDibujo, type Composicion, type DibujoPizarra } from "./dibujos";
 import { Mapa, mapaSchema } from "./Mapa";
 import type { Trazo } from "./trazos";
 import catalogoSfx from "../../../public/sfx/efectos/sfx.json";
@@ -45,6 +45,10 @@ export const pizarraSchema = z.object({
       // Gráfico de barras que crecen (economía, población, comparaciones)
       // Sonido ambiente de la biblioteca, en bucle y muy bajo durante la escena ("naturaleza/…", "historia/…")
       ambiente: z.string().optional(),
+      // Globo de diálogo (lo que dice el personaje), estilo cómic
+      globo: z.string().optional(),
+      // Antes y después en pantalla dividida: [dibujo de antes, dibujo de después]
+      antesDespues: z.tuple([z.union([z.string(), composicionSchema]), z.union([z.string(), composicionSchema])]).optional(),
       // Partículas en bucle sobre la escena: lluvia, polvo, chispas, nieve o brasas
       particulas: z.enum(["lluvia", "polvo", "chispas", "nieve", "brasas"]).optional(),
       barras: z.array(z.object({ etiqueta: z.string(), valor: z.number(), color: z.string().optional() })).optional(),
@@ -55,6 +59,8 @@ export const pizarraSchema = z.object({
   musica: z.string().optional(),
   // Shorts: título gancho fijo arriba durante todo el video ("¿POR QUÉ GASTAS MÁS CON TARJETA?")
   gancho: z.string().optional(),
+  // Color del video por tema (gradación + grano de película): "sepia" (historia antigua), "frio" (misterio), "calido" (Perú andino), "noche"
+  tono: z.enum(["sepia", "frio", "calido", "noche"]).optional(),
 });
 
 type Props = z.infer<typeof pizarraSchema>;
@@ -88,6 +94,77 @@ const Particulas: React.FC<{ tipo: keyof typeof PARTICULAS }> = ({ tipo }) => {
             : <circle key={i} cx={x} cy={y} r={t / 2} fill={p.color} opacity={brillo} style={{ filter: p.sube ? "blur(0.6px)" : undefined }} />;
         })}
       </svg>
+    </AbsoluteFill>
+  );
+};
+
+// 4 entradas de escena que se turnan, para que el corte nunca sea igual: zoom con desenfoque, barrido lateral,
+// apertura en círculo y golpe de escala
+const entradaEscena = (i: number, frame: number, width: number) => {
+  const t = interpolate(frame, [0, 9], [0, 1], { extrapolateRight: "clamp", easing: Easing.bezier(0.16, 1, 0.3, 1) });
+  const tipo = i % 4;
+  if (tipo === 1) return { dx: (1 - t) * width * 0.35, escala: 1, filter: `blur(${(1 - t) * 14}px)` };
+  if (tipo === 2) return { dx: 0, escala: 1, clipPath: `circle(${t * 120}% at 50% 45%)` };
+  if (tipo === 3) return { dx: 0, escala: 1 + (1 - t) * 0.25, filter: `blur(${(1 - t) * 6}px) brightness(${1 + (1 - t) * 0.6})` };
+  return { dx: 0, escala: 1 + (1 - t) * 0.12, filter: `blur(${(1 - t) * 10}px)` };
+};
+
+// Globo de diálogo de cómic, arriba a la derecha, con su colita hacia el personaje
+const Globo: React.FC<{ texto: string; frame: number; horizontal: boolean }> = ({ texto, frame, horizontal }) => {
+  const pop = spring({ frame: frame - 8, fps: FPS, config: { damping: 10, stiffness: 200 } });
+  if (frame < 8) return null;
+  return (
+    <div style={{ position: "absolute", top: horizontal ? 90 : 380, left: horizontal ? "34%" : "38%", maxWidth: horizontal ? 560 : 560, scale: `${pop}`, transformOrigin: "0% 100%" }}>
+      <div style={{ position: "relative", background: "#ffffff", border: "6px solid #111", borderRadius: 40, padding: "22px 30px",
+        fontFamily: "Texto", fontWeight: 800, fontSize: horizontal ? 42 : 46, color: "#111", boxShadow: "0 10px 0 rgba(0,0,0,0.25)" }}>
+        {texto}
+        <svg width="70" height="60" style={{ position: "absolute", left: 30, bottom: -54 }}>
+          <path d="M 4 0 L 18 52 L 52 0" fill="#ffffff" stroke="#111" strokeWidth={6} strokeLinejoin="round" />
+          <rect x="6" y="-4" width="44" height="10" fill="#ffffff" />
+        </svg>
+      </div>
+    </div>
+  );
+};
+
+// Antes y después: dos dibujos lado a lado, la línea divisoria barre y los rótulos entran con rebote
+const AntesDespues: React.FC<{ a: string | Composicion; b: string | Composicion; duracion: number }> = ({ a, b, duracion }) => {
+  const frame = useCurrentFrame();
+  const corte = interpolate(frame, [duracion * 0.35, duracion * 0.35 + 14], [100, 50], { extrapolateLeft: "clamp", extrapolateRight: "clamp", easing: Easing.inOut(Easing.cubic) });
+  const rotulo = (txt: string, color: string, t: number) => (
+    <div style={{ position: "absolute", top: 0, left: "50%", translate: "-50% 0", scale: `${spring({ frame: frame - t, fps: FPS, config: { damping: 10 } })}`,
+      background: color, color: "#fff", fontFamily: "Texto", fontWeight: 900, fontSize: 40, padding: "6px 22px", borderRadius: 12, border: "5px solid #111" }}>{txt}</div>
+  );
+  return (
+    <div style={{ position: "relative", width: "100%", height: "100%" }}>
+      <div style={{ position: "absolute", inset: 0, clipPath: `inset(0 ${100 - corte}% 0 0)` }}>
+        <div style={{ position: "absolute", left: 0, width: "50%", height: "100%" }}><Dibujo dibujo={resolverDibujo(a)} duracion={duracion} />{rotulo("ANTES", "#e02424", 4)}</div>
+      </div>
+      <div style={{ position: "absolute", right: 0, width: "50%", height: "100%", opacity: corte < 99 ? 1 : 0 }}>
+        <Dibujo dibujo={resolverDibujo(b)} duracion={duracion} />{rotulo("DESPUÉS", "#2e9e4f", duracion * 0.35 + 10)}
+      </div>
+      <div style={{ position: "absolute", top: 0, bottom: 0, left: `${corte}%`, width: 8, background: "#111", borderRadius: 4, opacity: corte < 99 ? 1 : 0 }} />
+    </div>
+  );
+};
+
+// Gradación de color por tema y grano de película que se mueve (da acabado de documental)
+const TONOS = {
+  sepia: { capa: "rgba(150,100,40,0.22)", filtro: "sepia(0.35) contrast(1.05)" },
+  frio: { capa: "rgba(30,70,140,0.20)", filtro: "saturate(0.85) contrast(1.08)" },
+  calido: { capa: "rgba(255,150,60,0.14)", filtro: "saturate(1.1)" },
+  noche: { capa: "rgba(10,20,60,0.35)", filtro: "brightness(0.85) saturate(0.9)" },
+} as const;
+const Tono: React.FC<{ tipo: keyof typeof TONOS }> = ({ tipo }) => {
+  const frame = useCurrentFrame();
+  return (
+    <AbsoluteFill style={{ pointerEvents: "none" }}>
+      <AbsoluteFill style={{ background: TONOS[tipo].capa, mixBlendMode: "multiply" }} />
+      <svg width="100%" height="100%" style={{ position: "absolute", opacity: 0.09, mixBlendMode: "overlay" }}>
+        <filter id="grano"><feTurbulence type="fractalNoise" baseFrequency="0.85" numOctaves={2} seed={frame % 12} /></filter>
+        <rect width="100%" height="100%" filter="url(#grano)" />
+      </svg>
+      <AbsoluteFill style={{ background: "radial-gradient(ellipse at center, rgba(0,0,0,0) 55%, rgba(0,0,0,0.35) 100%)" }} />
     </AbsoluteFill>
   );
 };
@@ -178,7 +255,7 @@ export const calcularPizarra: CalculateMetadataFunction<Props> = ({ props }) => 
   };
 };
 
-export const Pizarra: React.FC<Props> = ({ escenas, voz, frasesVoz, musica, gancho }) => {
+export const Pizarra: React.FC<Props> = ({ escenas, voz, frasesVoz, musica, gancho, tono }) => {
   const { durationInFrames, width, height } = useVideoConfig();
   let desde = 0;
   let etiqueta: string | undefined;
@@ -203,7 +280,7 @@ export const Pizarra: React.FC<Props> = ({ escenas, voz, frasesVoz, musica, ganc
         return (
           <Sequence key={i} from={inicio} durationInFrames={duracion}>
             {e.mapa ? <Mapa {...e.mapa} duracion={duracion} /> : <Fondo nombre={fondos[i]} />}
-            <Escena {...e} />
+            <Escena {...e} indice={i} />
             {(() => {
               const nueva = e.etiqueta !== undefined && e.etiqueta !== etiqueta;
               etiqueta = e.etiqueta ?? etiqueta;
@@ -231,6 +308,7 @@ export const Pizarra: React.FC<Props> = ({ escenas, voz, frasesVoz, musica, ganc
           </Sequence>
         );
       })}
+      {tono ? <Tono tipo={tono} /> : null}
       {gancho && height > width ? <Gancho texto={gancho} /> : null}
       {voz ? <Audio src={staticFile(voz)} /> : null}
       {musica ? (
@@ -414,7 +492,7 @@ const Papel: React.FC = () => (
   </AbsoluteFill>
 );
 
-const Escena: React.FC<Props["escenas"][number]> = ({ dibujo, texto, resaltar, segundos, sonido, sonidoEn, silueta, barras }) => {
+const Escena: React.FC<Props["escenas"][number] & { indice?: number }> = ({ dibujo, texto, resaltar, segundos, sonido, sonidoEn, silueta, barras, globo, antesDespues, indice = 0 }) => {
   const frame = useCurrentFrame();
   const { width, height } = useVideoConfig();
   const horizontal = width > height;
@@ -432,10 +510,11 @@ const Escena: React.FC<Props["escenas"][number]> = ({ dibujo, texto, resaltar, s
   const t0 = sonido === "boom" ? (sonidoEn ?? 0.6) * FPS : -1;
   const sacude = t0 >= 0 && frame >= t0 && frame < t0 + 12 ? (1 - (frame - t0) / 12) * 14 : 0;
   const dx = sacude * Math.sin(frame * 2.7), dy = sacude * Math.cos(frame * 3.3);
+  const entrada: { dx: number; escala: number; filter?: string; clipPath?: string } = entradaEscena(indice, frame, width);
   return (
     <AbsoluteFill style={{
-      transform: `translate(${dx}px, ${dy}px) scale(${zoom * interpolate(frame, [0, 8], [1.12, 1], { extrapolateRight: "clamp", easing: Easing.bezier(0.16, 1, 0.3, 1) })})`,
-      filter: `blur(${interpolate(frame, [0, 7], [10, 0], { extrapolateRight: "clamp" })}px)`,
+      filter: entrada.filter, clipPath: entrada.clipPath,
+      transform: `translate(${dx + entrada.dx}px, ${dy}px) scale(${zoom * entrada.escala})`,
     }}>
       {/* El dibujo ocupa toda la escena, parado sobre el piso; el texto va abajo como subtítulo */}
       <div style={{
@@ -443,8 +522,11 @@ const Escena: React.FC<Props["escenas"][number]> = ({ dibujo, texto, resaltar, s
         // Silueta: negro hasta el 40 % de la escena y luego se revela (con el destello de abajo)
         filter: silueta ? `brightness(${interpolate(frame, [total * 0.4, total * 0.4 + 6], [0, 1], { extrapolateLeft: "clamp", extrapolateRight: "clamp" })})` : undefined,
       }}>
-        {barras ? <Barras datos={barras} duracion={total} /> : <Dibujo dibujo={resolverDibujo(dibujo)} duracion={total} />}
+        {barras ? <Barras datos={barras} duracion={total} />
+          : antesDespues ? <AntesDespues a={antesDespues[0]} b={antesDespues[1]} duracion={total} />
+          : <Dibujo dibujo={resolverDibujo(dibujo)} duracion={total} />}
       </div>
+      {globo ? <Globo texto={globo} frame={frame} horizontal={horizontal} /> : null}
       {silueta ? (
         <AbsoluteFill style={{ backgroundColor: "#ffffff", pointerEvents: "none",
           opacity: interpolate(frame, [total * 0.4, total * 0.4 + 2, total * 0.4 + 12], [0, 0.85, 0], { extrapolateLeft: "clamp", extrapolateRight: "clamp" }) }} />
@@ -497,14 +579,34 @@ const Dibujo: React.FC<{ dibujo: DibujoPizarra; duracion: number }> = ({ dibujo,
       <g transform={`rotate(${balanceo} ${centro}) translate(${centro}) scale(${2 - respira} ${respira}) translate(${centro.split(" ").map((n) => -Number(n)).join(" ")})`}>
       {personaje.length ? (
         <g style={{ transformBox: "fill-box", transformOrigin: "50% 100%" }}
-          transform={`translate(0 ${(1 - entrada) * 120})`} opacity={Math.min(1, entrada * 2)}>
+          // Entra caminando desde la izquierda, con el paso marcado (rebote) hasta llegar a su lugar
+          transform={`translate(${(1 - entrada) * -420} ${-Math.abs(Math.sin(frame / 2.6)) * 26 * (1 - entrada)})`} opacity={Math.min(1, entrada * 3)}>
           <g style={{ transformBox: "fill-box", transformOrigin: "50% 100%", scale: `${0.7 + 0.3 * entrada}` }}>
             <PersonajeVivo trazos={personaje} frame={frame} fps={fps} />
           </g>
         </g>
       ) : null}
+      {(() => {
+        // Los íconos entran enteros, uno tras otro, con rebote y un giro corto (como en After Effects)
+        const grupos = [...new Set(trazos.map((t) => t.parte).filter((p): p is string => !!p?.startsWith("icono@")))];
+        return grupos.map((g, k) => {
+          const [cx, cy] = g.slice(6).split(",").map(Number);
+          const t0 = 2 + (grupos.length > 1 ? (k / grupos.length) * Math.max(8, tiempoTrazos * 0.7) : 0);
+          const pop = spring({ frame: frame - t0, fps, config: { damping: 9, stiffness: 190, mass: 0.7 } });
+          if (frame < t0) return null;
+          const flota = Math.sin((frame - t0) / 16 + k) * 5;
+          return (
+            <g key={g} transform={`translate(${cx} ${cy + flota}) rotate(${(1 - pop) * -18}) scale(${pop}) translate(${-cx} ${-cy})`}>
+              {trazos.map((t, i) => (t.parte !== g ? null : t.stroke === "none"
+                ? <path key={i} d={t.d} fill={t.fill} />
+                : <path key={i} d={t.d} stroke={t.stroke} strokeWidth={t.strokeWidth} fill="none" strokeLinecap="round" strokeLinejoin="round" />))}
+            </g>
+          );
+        });
+      })()}
       {trazos.map((t, i) => {
         const largo = largos[i];
+        if (t.parte?.startsWith("icono@")) return null;
         const visible = Math.min(Math.max(avance - acumulado, 0), largo);
         acumulado += largo;
         if (visible <= 0) return null;
