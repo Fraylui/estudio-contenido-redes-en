@@ -28,6 +28,11 @@ Todo cabe en Khipu, pero **el primer mes se prueban 3 líneas**, con el mismo es
 
 **Al terminar el mes:** comparar vistas, retención, suscriptores y horas por línea, y hacer más de lo que funcione, sin abandonar del todo las demás.
 
+## 1b. Lo que dicen los datos del canal (se actualiza cada semana)
+- **24 de octubre:** los Shorts sacaron 1 000 y 590 vistas en 48 h, y los videos largos 9 y 5. **Los Shorts son el motor de crecimiento ahora.**
+  - Ganador: "Por qué [algo que le pasa a todos]" + un personaje que lo vive + una respuesta que sorprende, en 30–40 s.
+  - Por eso: 2 Shorts al día con título gancho fijo arriba (`"gancho"` en las props del video vertical) y de 3 a 5 Shorts por cada video largo.
+
 ## 2. Cuánto publicar y a qué hora (Perú)
 | Etapa | Videos largos | Shorts |
 |---|---|---|

@@ -53,6 +53,28 @@ Y las que ya estaban en la lista:
 | 12 | **Gancho de texto fijo arriba en los Shorts** | Shorts virales | Retener los primeros 3 s |
 | 13 | **Pruebas A/B de miniaturas** (función gratis de YouTube) | Recomendación de YouTube | Saber qué miniatura atrae más clics |
 
+## Datos reales: los Shorts mandan (24 de octubre de 2026)
+En las primeras 48 h, con 1 670 vistas en total:
+| Video | Vistas |
+|---|---|
+| Short "Por qué los 5 minutos más te dejan MÁS cansado" | **1 000** |
+| Short "Por qué los lunes se sienten tan terribles" | **590** |
+| Video largo Kakeibo | 9 |
+| Video largo despertar | 5 |
+
+**Lo que tienen en común los dos Shorts que funcionaron:**
+- título con "**Por qué…**" sobre algo que le pasa a todos (la alarma, el lunes);
+- un personaje con quien identificarse (Mateo cansado);
+- de 30 a 40 s y una sola idea;
+- la respuesta sorprende ("te dejan MÁS cansado").
+
+**Decisiones:**
+1. Prioridad a los Shorts: **2 al día** (12:00 p. m. y 8:00 p. m.), cada uno con una sola idea.
+2. **Título gancho fijo arriba** en todos los Shorts (desde el video 3).
+3. De cada video largo salen de 3 a 5 Shorts, con temas de "Por qué…" de la vida diaria.
+4. Los videos largos siguen (dan horas y profundidad), pero los Shorts traen a la gente nueva: cada Short apunta a su video largo.
+5. A los 7 días, comparar qué Shorts retienen mejor (el porcentaje que "decidió mirar") y repetir esos temas.
+
 ## Lecciones del video 3 (para el video 4)
 - **Duración:** salió de 6:35. Para llegar a 8–12 min, el guion necesita unas 1 500 palabras (1 146 dieron 6:35): una sección más de historia o de ejemplos reales.
 - **Íconos de línea abierta** (gráfica, banco, vaso) todavía no se pintan por dentro: cerrar sus formas o cambiarlos por objetos 3D.

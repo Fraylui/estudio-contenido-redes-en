@@ -144,6 +144,12 @@ Haz una hoja de contacto con todas las escenas (un `still` por escena a `--scale
 
 Narrar un video de 4 minutos toma de 40 a 60 minutos, así que vale la pena revisar antes.
 
+## 5b. Shorts (hoy traen la mayoría de las vistas)
+- Se renderizan en vertical (`Pizarra-Vertical`) solo con los tramos elegidos: `--frames=a-b`, calculados con `frasesVoz` (inicio de la frase menos 0,1 s). Se unen con fundidos de 30 ms y se masterizan a −14 LUFS.
+- **Siempre con `"gancho"`** en las props: el título fijo arriba en mayúsculas, con la última palabra en rojo ("¿POR QUÉ GASTAS MÁS CON TARJETA?"). En vertical, la etiqueta de sección se oculta cuando hay gancho.
+- Una sola idea por Short, de 20 a 40 s; que empiece en la frase más fuerte y termine en la respuesta.
+- La descripción lleva "Video completo en el canal: <título>" y el crédito de la música.
+
 ## 6. Publicar
 Siempre **público** (el canal es para monetizar), con Metricool: solo YouTube, categoría Educación, `madeForKids: false`, `isAiGeneratedContent: true` (voz clonada) y capítulos en la descripción. El video se sube a la rama `publicaciones` del repositorio para que Metricool tenga un link público; nunca los videos de clientes.
 

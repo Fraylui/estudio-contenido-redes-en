@@ -47,10 +47,28 @@ export const pizarraSchema = z.object({
   voz: z.string().optional(),
   frasesVoz: z.array(z.object({ inicio: z.number(), fin: z.number() })).optional(),
   musica: z.string().optional(),
+  // Shorts: título gancho fijo arriba durante todo el video ("¿POR QUÉ GASTAS MÁS CON TARJETA?")
+  gancho: z.string().optional(),
 });
 
 type Props = z.infer<typeof pizarraSchema>;
 const FPS = 30;
+
+// Título gancho de los Shorts: caja blanca arriba con texto negro grueso y la última palabra en rojo, entra con rebote
+const Gancho: React.FC<{ texto: string }> = ({ texto }) => {
+  const frame = useCurrentFrame();
+  const pop = spring({ frame, fps: FPS, config: { damping: 10, stiffness: 180 } });
+  const palabras = texto.trim().split(/\s+/);
+  const ultima = palabras.pop();
+  return (
+    <div style={{ position: "absolute", top: 110, left: 50, right: 50, display: "flex", justifyContent: "center", scale: `${pop}`, rotate: "-1.5deg" }}>
+      <div style={{ background: "#ffffff", border: "8px solid #111", borderRadius: 26, padding: "18px 30px", boxShadow: "0 14px 0 #111",
+        fontFamily: "Texto", fontWeight: 900, fontSize: 64, lineHeight: 1.05, textAlign: "center", textTransform: "uppercase", color: "#111" }}>
+        {palabras.join(" ")} <span style={{ color: "#e02424" }}>{ultima}</span>
+      </div>
+    </div>
+  );
+};
 
 // Barras que crecen una tras otra, con su valor contando y la etiqueta debajo
 const Barras: React.FC<{ datos: { etiqueta: string; valor: number; color?: string }[]; duracion: number }> = ({ datos, duracion }) => {
@@ -122,8 +140,8 @@ export const calcularPizarra: CalculateMetadataFunction<Props> = ({ props }) => 
   };
 };
 
-export const Pizarra: React.FC<Props> = ({ escenas, voz, frasesVoz, musica }) => {
-  const { durationInFrames } = useVideoConfig();
+export const Pizarra: React.FC<Props> = ({ escenas, voz, frasesVoz, musica, gancho }) => {
+  const { durationInFrames, width, height } = useVideoConfig();
   let desde = 0;
   let etiqueta: string | undefined;
   // Color de cada escena: cambia con cada sección (o cada 4 escenas si el video no tiene secciones)
@@ -153,7 +171,7 @@ export const Pizarra: React.FC<Props> = ({ escenas, voz, frasesVoz, musica }) =>
               etiqueta = e.etiqueta ?? etiqueta;
               return (
                 <>
-                  {etiqueta ? <Etiqueta texto={etiqueta} entra={nueva} /> : null}
+                  {etiqueta && !(gancho && height > width) ? <Etiqueta texto={etiqueta} entra={nueva} /> : null}
                   {nueva && i > 0 ? (
                     <Sequence durationInFrames={24} layout="none"><Destello semilla={i} /></Sequence>
                   ) : null}
@@ -170,6 +188,7 @@ export const Pizarra: React.FC<Props> = ({ escenas, voz, frasesVoz, musica }) =>
           </Sequence>
         );
       })}
+      {gancho && height > width ? <Gancho texto={gancho} /> : null}
       {voz ? <Audio src={staticFile(voz)} /> : null}
       {musica ? (
         <Audio src={staticFile(musica)} loop volume={(f) => volumenMusica(f, frasesVoz ?? [], durationInFrames)} />
@@ -377,7 +396,7 @@ const Escena: React.FC<Props["escenas"][number]> = ({ dibujo, texto, resaltar, s
     }}>
       {/* El dibujo ocupa toda la escena, parado sobre el piso; el texto va abajo como subtítulo */}
       <div style={{
-        position: "absolute", left: horizontal ? 120 : 30, right: horizontal ? 120 : 30, top: horizontal ? 70 : 230, bottom: horizontal ? "16%" : "24%",
+        position: "absolute", left: horizontal ? 120 : 30, right: horizontal ? 120 : 30, top: horizontal ? 70 : 340, bottom: horizontal ? "16%" : "24%",
         // Silueta: negro hasta el 40 % de la escena y luego se revela (con el destello de abajo)
         filter: silueta ? `brightness(${interpolate(frame, [total * 0.4, total * 0.4 + 6], [0, 1], { extrapolateLeft: "clamp", extrapolateRight: "clamp" })})` : undefined,
       }}>
