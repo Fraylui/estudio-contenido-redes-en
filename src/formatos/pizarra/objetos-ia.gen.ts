@@ -1,2 +1,2 @@
 // Generado por scripts/listar-objetos-ia.mjs. No editar a mano.
-export const OBJETOS_IA = new Set<string>(["alcancia","billetera","cafe","hormiga"]);
+export const OBJETOS_IA = new Set<string>(["alarm","alarm-snooze","alcancia","basket","bed","bell-ringing","billetera","brain","brand-netflix","building-bank","bulb","cafe","calendar","camera","car","clock","coffee","coin","credit-card","cup","device-gamepad-2","device-mobile","glass-full","headphones","heart","heart-broken","home","hormiga","moneybag","motorbike","pig-money","pizza","plane","rocket","scale","school","shopping-cart","sparkles","target","telescope","truck-delivery","world"]);
