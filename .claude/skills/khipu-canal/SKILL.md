@@ -15,6 +15,24 @@ Documentos que completan esta skill:
 - `docs/psicologia-atencion.md`, `docs/ganchos.md`, `docs/empaquetado.md`, `docs/monetizacion.md`, `docs/mejora-continua.md`.
 - La producción técnica va en la skill `pizarra`.
 
+## 0. Las 14 categorías de Khipu
+1. Ciencia y curiosidades
+2. Hábitos y productividad
+3. Cuerpo humano y salud
+4. Psicología, emociones y amor
+5. Historia del Perú y Latinoamérica
+6. Historia mundial y guerras
+7. Finanzas personales
+8. Economía y negocios
+9. Tecnología e IA
+10. Personajes que cambiaron la historia
+11. Lugares y países
+12. Animales y naturaleza
+13. Misterios y enigmas
+14. Mundo antiguo y Biblia
+
+La rotación diaria (2 por día) está en `khipu-diario`. Cada categoría es una serie con su lista de reproducción y su color de miniatura.
+
 ## 1. Qué publicar: líneas temáticas
 Todo cabe en Khipu, pero **el primer mes se prueban 3 líneas**, con el mismo estilo de narración y animación para poder compararlas:
 

@@ -1,6 +1,6 @@
 ---
 name: khipu-diario
-description: Rutina diaria de producción y publicación del canal Khipu - cada día una categoría distinta (ciencia, cuerpo humano, historia, dinero, tecnología, lugares y animales, misterios y Biblia), 2 Shorts nativos al día a las 12:00 y 20:00 de Lima, video largo lunes y jueves, investigación previa, control de calidad y programación en Metricool. Usar cuando toque producir el contenido del día, cuando pregunten "qué sale hoy o mañana", o cuando corra la tarea programada diaria.
+description: Rutina diaria de producción y publicación del canal Khipu - 14 categorías rotando, 2 por día (ciencia, hábitos, cuerpo humano, psicología y emociones, historia del Perú, historia mundial y guerras, finanzas, economía, tecnología, personajes, lugares, animales, misterios, mundo antiguo y Biblia), 2 Shorts nativos al día a las 12:00 y 20:00 de Lima, video largo lunes y jueves, investigación previa, control de calidad y programación en Metricool. Usar cuando toque producir el contenido del día, cuando pregunten "qué sale hoy o mañana", o cuando corra la tarea programada diaria.
 ---
 
 # Rutina diaria de Khipu
@@ -8,18 +8,21 @@ description: Rutina diaria de producción y publicación del canal Khipu - cada 
 Objetivo: **cada día, contenido distinto y mejor que el anterior**, rotando categorías para descubrir qué funciona, sin bajar la calidad.
 La estrategia de fondo está en `khipu-canal`; la producción técnica, en `pizarra`; la voz, en `voz-narradora`.
 
-## 1. Qué categoría toca cada día
-| Día | Categoría del día | Video largo |
-|---|---|---|
-| Lunes | Ciencia y curiosidades | **Sí** (9 a. m. o 4 p. m.) |
-| Martes | Cuerpo humano y vida cotidiana | — |
-| Miércoles | Historia (Perú, Latinoamérica, mundo) | — |
-| Jueves | Dinero y comportamiento | **Sí** |
-| Viernes | Tecnología e IA | — |
-| Sábado | Lugares y animales | — |
-| Domingo | Misterios, mundo antiguo y Biblia | — (revisión de estadísticas y plan de la semana) |
+## 1. Qué categoría toca cada día (14 categorías, 2 por día)
+Inspiradas en los canales de referencia: Aprendiz Financiero (finanzas y hábitos), DOMINALO, DECIDO VIVIR MEJOR y Simio Alpha (hábitos y desarrollo personal), CasiCreativo (cuerpo y vida cotidiana), Inteligencia Emocional y Sapiencia Práctica (psicología y emociones), Infonimados, Academia Play y OverSimplified (historia y guerras), Kurzgesagt y CuriosaMente (ciencia), Zack D. Films (curiosidades en Shorts) y BibleProject (Biblia).
 
-- **Shorts:** 2 al día, a las **12:00 p. m. y 8:00 p. m.** (hora de Lima). Uno de la categoría del día y otro de la categoría que mejor esté funcionando según los datos.
+| Día | Short 12:00 | Short 20:00 | Video largo |
+|---|---|---|---|
+| Lunes | Ciencia y curiosidades | Hábitos y productividad | **Sí:** ciencia o hábitos (se alternan) |
+| Martes | Cuerpo humano y salud | Psicología, emociones y amor | — |
+| Miércoles | Historia del Perú y Latinoamérica | Historia mundial y guerras | — |
+| Jueves | Finanzas personales | Economía y negocios | **Sí:** finanzas o economía (se alternan) |
+| Viernes | Tecnología e IA | Personajes que cambiaron la historia | — |
+| Sábado | Lugares y países | Animales y naturaleza | — |
+| Domingo | Misterios y enigmas | Mundo antiguo y Biblia | — (revisión de estadísticas y plan de la semana) |
+
+- **Shorts:** 2 al día, a las **12:00 p. m. y 8:00 p. m.** (hora de Lima), cada uno de una categoría distinta.
+- Cada 2 semanas, el lunes o el jueves se reemplaza el largo por uno de las otras categorías (historia, psicología, tecnología, lugares), para probarlas también en formato largo.
 - Los temas salen de `docs/calendario-contenido.md`. Si se acaban, se investigan nuevos con el paso 2.
 - **Prioridad por datos:** hoy los Shorts traen casi todas las vistas (ver `docs/mejora-continua.md`). Si una categoría gana dos semanas seguidas, recibe más espacio.
 

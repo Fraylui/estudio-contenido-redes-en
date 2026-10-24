@@ -22,15 +22,22 @@ Khipu habla de **todo**: historias, lugares, curiosidades, viajes y visitas, din
 
 Para que YouTube aprenda a quién mostrar cada video y la gente vea uno tras otro, cada tema va en una **serie con su lista de reproducción**. Se pueden abrir series nuevas cuando haga falta:
 
-| Serie | Temas | Formato de título |
-|---|---|---|
-| **Historias que no conocías** | Historias reales, personajes, hechos | "La historia de ___" |
-| **Lugares increíbles** | Lugares del Perú y del mundo, visitas, viajes | "El lugar donde ___" |
-| **¿Por qué…?** | Curiosidades del cuerpo, el mundo, la ciencia | "¿Por qué ___?" |
-| **Dinero simple** | Ahorro, deudas, inversiones | "El método ___ para ___" |
-| **Tecnología explicada** | Apps, IA, inventos, cómo funciona | "Cómo funciona ___" |
-| **Tu mente y tus emociones** | Psicología, hábitos, amor, relaciones | "Por qué sientes ___" |
-| **Misterios** | Enigmas, casos sin resolver, leyendas | "El misterio de ___" |
+| Serie (categoría) | Formato de título |
+|---|---|
+| Ciencia y curiosidades | "¿Por qué ___?", "¿Qué pasaría si ___?" |
+| Hábitos y productividad | "La regla de ___", "Por qué no puedes ___" |
+| Cuerpo humano y salud | "Qué le pasa a tu cuerpo si ___" |
+| Psicología, emociones y amor | "Tu cerebro cuando ___", "Por qué sientes ___" |
+| Historia del Perú y Latinoamérica | "La historia de ___ en N minutos" |
+| Historia mundial y guerras | "La ___ en N minutos", "¿Por qué cayó ___?" |
+| Finanzas personales | "El método ___ para ___", "N errores que ___" |
+| Economía y negocios | "¿Por qué ___?" explicado fácil |
+| Tecnología e IA | "Cómo funciona ___" |
+| Personajes que cambiaron la historia | "Quién fue realmente ___" |
+| Lugares y países | "El lugar donde ___" |
+| Animales y naturaleza | "¿Por qué el ___ ___?" |
+| Misterios y enigmas | "El misterio de ___" |
+| Mundo antiguo y Biblia | "¿Existió ___?", "Cómo era ___" (relato y arqueología) |
 
 **Regla de crecimiento:** se rotan las series, pero se repite más la que mejor funcione en las estadísticas (la revisión de cada lunes lo decide).
 
