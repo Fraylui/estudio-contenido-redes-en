@@ -2,8 +2,10 @@
 // "trazos": líneas hechas a mano (monigotes, billetera, cajas…) que se dibujan solas.
 // "objetos": ilustraciones de public/objetos/ (Fluent Emoji, licencia MIT) con su centro (x, y) y tamaño t.
 // "textos": rótulos escritos a mano dentro del dibujo.
-// El conjunto se ajusta solo al espacio disponible, así que las coordenadas solo importan entre sí.
+// El conjunto se ajusta solo al espacio disponible, así que las coordenadas solo
+// importan entre sí.
 import { z } from "zod";
+import { OBJETOS_IA } from "./objetos-ia.gen";
 import { billeteraAbierta, caja, camino, caricatura, cerebro, icono, LUCIA, MATEO, monigote, type BocaCaricatura, type OjosCaricatura, type Brazos, type Cara, type PoseCerebro, type Trazo } from "./trazos";
 
 export type Objeto = { img: string; x: number; y: number; t: number; rot?: number };
@@ -324,6 +326,8 @@ export const componer = (c: Composicion): DibujoPizarra => {
     const [x, y, t] = lugares[i];
     // "img:hormiga" → objeto 3D hecho con IA y recortado (public/assets/objetos-ia/hormiga.png)
     if (nombre.startsWith("img:")) objetos.push({ img: `ia:${nombre.slice(4)}`, x, y, t: t * 1.15 });
+    // Si existe la versión 3D del ícono (public/assets/objetos-ia/<nombre>.png), se usa esa: se ve mucho más profesional
+    else if (OBJETOS_IA.has(nombre)) objetos.push({ img: `ia:${nombre}`, x, y, t: t * 1.15 });
     else trazos.push(...icono(nombre, x, y, t, color ?? PASTELES[i % PASTELES.length]));
   });
   if (c.rotulo) {

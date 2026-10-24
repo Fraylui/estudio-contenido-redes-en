@@ -262,13 +262,8 @@ export const icono = (nombre: string, x: number, y: number, t: number, color = "
   const k = t / 24;
   const vivo = VIVOS[color.toLowerCase()] ?? oscurecer(color, 0.8);
   const a = (d: string) => svgpath(d).scale(k).translate(x - t / 2, y - t / 2).toString();
-  const trazos: Trazo[] = [
-    // Sombra suave abajo a la derecha, mancha de color y brillo arriba a la izquierda
-    ...circulo(x + t * 0.1, y + t * 0.12, t * 0.84, { fill: oscurecer(color, 0.78), fillStyle: "solid", stroke: "none" }),
-    ...circulo(x + t * 0.04, y + t * 0.04, t * 0.84, { fill: color, fillStyle: "solid", stroke: "none" }),
-    ...camino(`M ${x - t * 0.3} ${y - t * 0.12} Q ${x - t * 0.28} ${y - t * 0.3} ${x - t * 0.1} ${y - t * 0.34}`,
-      { stroke: "#ffffff", strokeWidth: Math.max(5, k * 1.6), roughness: 0.3 }),
-  ];
+  // Sin la mancha redonda de fondo (se veía como "gomita"): solo el ícono pintado, con el borde blanco y la sombra del sticker
+  const trazos: Trazo[] = [];
   const caminos = ICONOS[nombre] ?? [];
   for (const d of caminos) for (const sub of cerradas(d)) trazos.push(...camino(a(sub), { fill: vivo, fillStyle: "solid", stroke: "none", roughness: 0.2 }));
   for (const d of caminos) trazos.push(...camino(a(d), { strokeWidth: Math.max(4.5, k * 1.7), roughness: 0.6 }));

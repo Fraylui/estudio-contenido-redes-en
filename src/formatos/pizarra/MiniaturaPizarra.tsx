@@ -4,6 +4,7 @@ import { getBoundingBox } from "@remotion/paths";
 import { z } from "zod";
 import { AbsoluteFill, staticFile } from "remotion";
 import { composicionSchema, resolverDibujo, type DibujoPizarra } from "./dibujos";
+import { CATEGORIAS } from "./categorias";
 import "../../marca";
 
 export const miniaturaPizarraSchema = z.object({
@@ -12,6 +13,8 @@ export const miniaturaPizarraSchema = z.object({
   // Palabra estrella, en blanco sobre rojo
   linea2: z.string(),
   fondo: z.string().optional(),
+  // Serie del video (ver categorias.ts): pone el color de fondo y la franja con el nombre arriba a la izquierda
+  categoria: z.string().optional(),
 });
 
 // El dibujo completo y quieto (sin animación), ajustado a su caja
@@ -46,16 +49,24 @@ const DibujoQuieto: React.FC<{ dibujo: DibujoPizarra }> = ({ dibujo }) => {
   );
 };
 
-export const MiniaturaPizarra: React.FC<z.infer<typeof miniaturaPizarraSchema>> = ({ dibujo, linea1, linea2, fondo }) => (
-  <AbsoluteFill style={{ backgroundColor: fondo ?? "#ffe14d", flexDirection: "row", alignItems: "center", padding: "30px 40px" }}>
+export const MiniaturaPizarra: React.FC<z.infer<typeof miniaturaPizarraSchema>> = ({ dibujo, linea1, linea2, fondo, categoria }) => {
+  const serie = categoria ? CATEGORIAS[categoria] : undefined;
+  const oscuro = serie?.fondo === "#3b3f63";
+  return (
+  <AbsoluteFill style={{ backgroundColor: fondo ?? serie?.fondo ?? "#ffe14d", flexDirection: "row", alignItems: "center", padding: "30px 40px" }}>
+    {serie ? (
+      <div style={{ position: "absolute", top: 26, left: 0, background: serie.franja, color: "#fff", fontFamily: "Texto", fontWeight: 900, fontSize: 34,
+        letterSpacing: 2, padding: "8px 26px 8px 34px", borderRadius: "0 14px 14px 0", boxShadow: "6px 6px 0 rgba(0,0,0,0.35)" }}>{serie.nombre}</div>
+    ) : null}
     <div style={{ width: 640, height: 640 }}>
       <DibujoQuieto dibujo={resolverDibujo(dibujo)} />
     </div>
     <div style={{ flex: 1, display: "flex", flexDirection: "column", alignItems: "center", gap: 18, fontFamily: "Titulo", textAlign: "center" }}>
-      <div style={{ fontSize: 118, lineHeight: 0.95, color: "#1f1f1f" }}>{linea1}</div>
+      <div style={{ fontSize: 118, lineHeight: 0.95, color: oscuro ? "#ffffff" : "#1f1f1f" }}>{linea1}</div>
       <div style={{ fontSize: 132, lineHeight: 1, color: "#ffffff", background: "#d7263d", padding: "10px 26px 0", transform: "rotate(-3deg)", boxShadow: "8px 8px 0 #1f1f1f" }}>
         {linea2}
       </div>
     </div>
   </AbsoluteFill>
-);
+  );
+};
