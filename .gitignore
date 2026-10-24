@@ -20,3 +20,8 @@ voz/referencias/*
 !voz/referencias/LEEME.md
 public/voz/
 __pycache__/
+
+# Generador de imágenes (SD-Turbo): entorno de Python
+imagen/.venv
+public/musica/*.mp3
+public/sfx/biblioteca/**/*.mp3

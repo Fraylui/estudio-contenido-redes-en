@@ -6,6 +6,7 @@ mide la energía por bandas, compara con una voz clara de referencia y calcula c
 Uso:
   python voz/ecualizar.py entrada.m4a salida.wav                 voz final para videos (-14 LUFS)
   python voz/ecualizar.py entrada.m4a salida.wav --referencia    voz para clonar con Chatterbox (-18 LUFS, 24 kHz)
+  python voz/ecualizar.py narracion.wav salida.wav --sintetica    voz de Chatterbox: sin reductor de ruido
   python voz/ecualizar.py entrada.m4a --medir                    solo muestra el análisis
 
 Cadena: filtro de graves, reducción de ruido suave, compresión, ecualización calculada,
@@ -25,8 +26,8 @@ BANDAS = [  # (desde, hasta, centro del filtro, objetivo dB, máximo que se pued
     (500, 1000, 700, -6.5, 4),
     (1000, 2000, 1400, -9.0, 6),
     (2000, 4000, 2800, -12.0, 8),
-    (4000, 8000, 5600, -16.0, 6),
-    (8000, 16000, 11000, -27.0, 3),  # subir mucho aquí solo agrega soplido
+    (4000, 8000, 5600, -17.0, 4),  # más arriba suena áspera y con siseo
+    (8000, 16000, 11000, -30.0, 2),  # en la voz sintética aquí casi solo hay soplido del vocoder
 ]
 CORTE_MAX = -8.0  # lo máximo que se baja una banda
 
@@ -86,7 +87,10 @@ def main():
     referencia = "--referencia" in sys.argv
 
     # Antes de ecualizar: graves que no son voz, ruido de fondo suave y compresión pareja
-    base = "highpass=f=85:poles=2,afftdn=nr=8:nf=-50,acompressor=threshold=-26dB:ratio=2.5:attack=10:release=120:knee=6:makeup=2"
+    # Voz sintética (Chatterbox): no tiene ruido que quitar, y el reductor de ruido la vuelve metálica y robótica
+    # Chatterbox genera a 24 kHz: sobre 11 kHz no hay voz, solo el soplido del vocoder (suena a tele sin señal)
+    ruido = "lowpass=f=11000:poles=2," if "--sintetica" in sys.argv else "afftdn=nr=8:nf=-50,"
+    base = f"highpass=f=85:poles=2,{ruido}acompressor=threshold=-26dB:ratio=2.5:attack=10:release=120:knee=6:makeup=2"
     x = leer(entrada, base)
     antes = medir(leer(entrada))
     ganancias = ecualizacion(x)

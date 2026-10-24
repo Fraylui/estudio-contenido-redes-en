@@ -5,6 +5,7 @@ import fraseEjemplo from "../contenido/frase-constancia.json";
 import finDeMes from "../contenido/narrado-fin-de-mes.json";
 import elTunche from "../contenido/narrado-el-tunche.json";
 import anuncioEjemplo from "../contenido/anuncio-quinuapata.json";
+import pizarraEjemplo from "../contenido/pizarra-kakeibo.json";
 import topEjemplo from "../contenido/top-5-platos-peruanos.json";
 import triviaEjemplo from "../contenido/trivia-capital-australia.json";
 import {
@@ -16,6 +17,9 @@ import { calcularFrase, Frase, fraseSchema } from "./formatos/Frase";
 import { calcularNarrado, Narrado, narradoSchema } from "./formatos/narrado/Narrado";
 import { Miniatura } from "./formatos/narrado/Miniatura";
 import { Anuncio, anuncioSchema, calcularAnuncio } from "./formatos/anuncio/Anuncio";
+import { calcularPizarra, Pizarra, pizarraSchema } from "./formatos/pizarra/Pizarra";
+import { BannerCanal, LogoCanal } from "./formatos/pizarra/Marca";
+import { MiniaturaPizarra, miniaturaPizarraSchema } from "./formatos/pizarra/MiniaturaPizarra";
 import { calcularTopLista, TopLista, topListaSchema } from "./formatos/TopLista";
 import { calcularTrivia, Trivia, triviaSchema } from "./formatos/Trivia";
 import { conDuracionVoz, conNarracion, vozSchema } from "./comun/Narracion";
@@ -37,6 +41,17 @@ const TAMANOS = [
 export const RemotionRoot: React.FC = () => {
   return (
     <>
+      {/* Identidad del canal de YouTube: foto de perfil y banner */}
+      <Still id="LogoCanal" component={LogoCanal} width={800} height={800} />
+      <Still id="BannerCanal" component={BannerCanal} width={2560} height={1440} />
+      <Still
+        id="MiniaturaPizarra"
+        component={MiniaturaPizarra}
+        schema={miniaturaPizarraSchema}
+        defaultProps={{ dibujo: "mini-kakeibo", linea1: "AHORRA COMO", linea2: "JAPONÉS" }}
+        width={1280}
+        height={720}
+      />
       {/* Miniaturas de YouTube para los videos narrados (imagen fija de 1280x720) */}
       <Folder name="Miniaturas">
         {[finDeMes, elTunche].map((n) => (
@@ -127,6 +142,18 @@ export const RemotionRoot: React.FC = () => {
             schema={anuncioSchema}
             defaultProps={anuncioEjemplo.props as z.infer<typeof anuncioSchema>}
             calculateMetadata={calcularAnuncio}
+            durationInFrames={900}
+            fps={30}
+            width={t.width}
+            height={t.height}
+          />
+          {/* Videos de pizarra estilo DOMINALO (contenido/pizarra-*.json); pensados para horizontal */}
+          <Composition
+            id={`Pizarra-${t.nombre}`}
+            component={Pizarra}
+            schema={pizarraSchema}
+            defaultProps={pizarraEjemplo.props as z.infer<typeof pizarraSchema>}
+            calculateMetadata={calcularPizarra}
             durationInFrames={900}
             fps={30}
             width={t.width}

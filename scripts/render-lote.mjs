@@ -43,7 +43,10 @@ for (const archivo of archivos) {
     const voz = JSON.parse(readFileSync(json, "utf8")).voz ?? {};
     const referencia = voz.referencia ?? "voz/referencias/xiomi.wav";
     // Solo se vuelve a narrar si cambió el texto narrado o la configuración de la voz (no cualquier cambio del JSON).
-    const huella = createHash("sha1").update(JSON.stringify({ narracion: props.narracion, voz })).digest("hex");
+    // También cuentan el narrador y el ecualizador: si cambia una pronunciación (por ejemplo "VRAEM") o el sonido, hay que volver a narrar.
+    // Las frases que no cambian salen de la memoria de narrar.py, así que no se pierde tiempo.
+    const narrador = ["voz/narrar.py", "voz/ecualizar.py"].map((f) => (existsSync(f) ? readFileSync(f, "utf8") : "")).join("");
+    const huella = createHash("sha1").update(JSON.stringify({ narracion: props.narracion, voz, narrador })).digest("hex");
     const datosVoz = `public/voz/${nombre}.json`;
     const anterior = existsSync(datosVoz) ? JSON.parse(readFileSync(datosVoz, "utf8")) : null;
     const desactualizada = !existsSync(audio) || anterior?.huella !== huella;
@@ -57,7 +60,7 @@ for (const archivo of archivos) {
   }
   if (props.narracion && existsSync(`public/voz/${nombre}.json`)) {
     // Anuncio y Narrado leen la voz con su ruta dentro de public/; los demás formatos, desde public/voz/
-    props.voz = formato === "Anuncio" || formato === "Narrado" ? `voz/${nombre}.wav` : `${nombre}.wav`;
+    props.voz = ["Anuncio", "Narrado", "Pizarra"].includes(formato) ? `voz/${nombre}.wav` : `${nombre}.wav`;
     const tiemposVoz = JSON.parse(readFileSync(`public/voz/${nombre}.json`, "utf8"));
     props.duracionVoz = tiemposVoz.duracion;
     // Los anuncios usan los tiempos de cada frase para sincronizar sus escenas
