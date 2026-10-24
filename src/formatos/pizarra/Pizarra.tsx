@@ -10,6 +10,7 @@ import {
   AbsoluteFill, CalculateMetadataFunction, Easing, Img, interpolate, Solid, Sequence, spring, staticFile, useCurrentFrame, useVideoConfig,
 } from "remotion";
 import { composicionSchema, resolverDibujo, type DibujoPizarra } from "./dibujos";
+import { Mapa, mapaSchema } from "./Mapa";
 import type { Trazo } from "./trazos";
 import catalogoSfx from "../../../public/sfx/efectos/sfx.json";
 
@@ -35,6 +36,12 @@ export const pizarraSchema = z.object({
       fondo: z.string().optional(),
       // Lluvia de confeti en esta escena (logros, resultados)
       confeti: z.boolean().optional(),
+      // Mapa animado en vez de fondo y dibujo (guerras, países, rutas, lugares): ver Mapa.tsx
+      mapa: mapaSchema.optional(),
+      // Revelación por capas: el dibujo aparece primero como silueta negra y se revela con un destello
+      silueta: z.boolean().optional(),
+      // Gráfico de barras que crecen (economía, población, comparaciones)
+      barras: z.array(z.object({ etiqueta: z.string(), valor: z.number(), color: z.string().optional() })).optional(),
     }),
   ),
   voz: z.string().optional(),
@@ -44,6 +51,33 @@ export const pizarraSchema = z.object({
 
 type Props = z.infer<typeof pizarraSchema>;
 const FPS = 30;
+
+// Barras que crecen una tras otra, con su valor contando y la etiqueta debajo
+const Barras: React.FC<{ datos: { etiqueta: string; valor: number; color?: string }[]; duracion: number }> = ({ datos, duracion }) => {
+  const frame = useCurrentFrame();
+  const maximo = Math.max(...datos.map((d) => d.valor)) || 1;
+  const colores = ["#4d9de8", "#ff6464", "#3fbf6f", "#ffc21a", "#9b7be0", "#ff9b3d"];
+  return (
+    <div style={{ width: "100%", height: "100%", display: "flex", alignItems: "flex-end", justifyContent: "center", gap: 60, paddingBottom: 70, position: "relative" }}>
+      {datos.map((d, i) => {
+        const inicio = (duracion * 0.5 * i) / datos.length;
+        const t = interpolate(frame, [inicio, inicio + 24], [0, 1], { extrapolateLeft: "clamp", extrapolateRight: "clamp", easing: Easing.out(Easing.back(1.4)) });
+        return (
+          <div key={i} style={{ display: "flex", flexDirection: "column", alignItems: "center", width: 200 }}>
+            <div style={{ fontFamily: "Texto", fontWeight: 900, fontSize: 52, color: "#ffffff", WebkitTextStroke: "8px #111", paintOrder: "stroke", opacity: t > 0 ? 1 : 0 }}>
+              {contar(d.valor.toString().replace(/\B(?=(\d{3})+(?!\d))/g, " "), frame - inicio, FPS)}
+            </div>
+            <div style={{ width: 170, height: `${(d.valor / maximo) * 560 * t}px`, background: d.color ?? colores[i % colores.length],
+              border: "6px solid #1f1f1f", borderRadius: "18px 18px 6px 6px", boxShadow: "0 18px 30px rgba(0,0,0,0.3), inset 0 -14px 0 rgba(0,0,0,0.15)" }} />
+            <div style={{ fontFamily: "Texto", fontWeight: 800, fontSize: 34, color: "#ffffff", WebkitTextStroke: "6px #111", paintOrder: "stroke", marginTop: 14, textAlign: "center" }}>
+              {d.etiqueta}
+            </div>
+          </div>
+        );
+      })}
+    </div>
+  );
+};
 
 // Números que cuentan solos, como en los videos de MrBeast: "1 800" sube de 0 a 1 800 en 0,9 s (también "+78 000", "12 %")
 const contar = (texto: string, f: number, fps: number) => {
@@ -112,7 +146,7 @@ export const Pizarra: React.FC<Props> = ({ escenas, voz, frasesVoz, musica }) =>
         desde += duracion;
         return (
           <Sequence key={i} from={inicio} durationInFrames={duracion}>
-            <Fondo nombre={fondos[i]} />
+            {e.mapa ? <Mapa {...e.mapa} duracion={duracion} /> : <Fondo nombre={fondos[i]} />}
             <Escena {...e} />
             {(() => {
               const nueva = e.etiqueta !== undefined && e.etiqueta !== etiqueta;
@@ -198,11 +232,15 @@ const Fondo: React.FC<{ nombre: string }> = ({ nombre }) => {
   // Fondo ilustrado con IA (public/assets/ia/<nombre>.jpg): un poco desenfocado y oscuro para dar profundidad
   // y que el personaje resalte, con un acercamiento lento de cámara (Ken Burns)
   if (nombre.startsWith("ia:")) {
+    const [, archivo, modo] = nombre.split(":");
+    const paneo = modo === "paneo";
     return (
       <AbsoluteFill style={{ overflow: "hidden", backgroundColor: "#1f1f1f" }}>
-        <Img src={staticFile(`assets/ia/${nombre.slice(3)}.jpg`)} style={{
+        <Img src={staticFile(`assets/ia/${archivo}.jpg`)} style={{
           width: "100%", height: "100%", objectFit: "cover", filter: "blur(3px) brightness(0.88) saturate(1.1)",
-          scale: `${interpolate(frame, [0, 300], [1.04, 1.12], { extrapolateRight: "clamp" })}`,
+          scale: paneo ? "1.22" : `${interpolate(frame, [0, 300], [1.04, 1.12], { extrapolateRight: "clamp" })}`,
+          // Paneo lateral: la cámara recorre el escenario, como en un documental
+          translate: paneo ? `${interpolate(frame, [0, 300], [8, -8], { extrapolateRight: "clamp" })}% 0` : undefined,
         }} />
         <AbsoluteFill style={{ background: "radial-gradient(ellipse at center, rgba(0,0,0,0) 50%, rgba(0,0,0,0.35) 100%)" }} />
       </AbsoluteFill>
@@ -314,7 +352,7 @@ const Papel: React.FC = () => (
   </AbsoluteFill>
 );
 
-const Escena: React.FC<Props["escenas"][number]> = ({ dibujo, texto, resaltar, segundos, sonido, sonidoEn }) => {
+const Escena: React.FC<Props["escenas"][number]> = ({ dibujo, texto, resaltar, segundos, sonido, sonidoEn, silueta, barras }) => {
   const frame = useCurrentFrame();
   const { width, height } = useVideoConfig();
   const horizontal = width > height;
@@ -338,9 +376,17 @@ const Escena: React.FC<Props["escenas"][number]> = ({ dibujo, texto, resaltar, s
       filter: `blur(${interpolate(frame, [0, 7], [10, 0], { extrapolateRight: "clamp" })}px)`,
     }}>
       {/* El dibujo ocupa toda la escena, parado sobre el piso; el texto va abajo como subtítulo */}
-      <div style={{ position: "absolute", left: horizontal ? 120 : 30, right: horizontal ? 120 : 30, top: horizontal ? 70 : 230, bottom: horizontal ? "16%" : "24%" }}>
-        <Dibujo dibujo={resolverDibujo(dibujo)} duracion={total} />
+      <div style={{
+        position: "absolute", left: horizontal ? 120 : 30, right: horizontal ? 120 : 30, top: horizontal ? 70 : 230, bottom: horizontal ? "16%" : "24%",
+        // Silueta: negro hasta el 40 % de la escena y luego se revela (con el destello de abajo)
+        filter: silueta ? `brightness(${interpolate(frame, [total * 0.4, total * 0.4 + 6], [0, 1], { extrapolateLeft: "clamp", extrapolateRight: "clamp" })})` : undefined,
+      }}>
+        {barras ? <Barras datos={barras} duracion={total} /> : <Dibujo dibujo={resolverDibujo(dibujo)} duracion={total} />}
       </div>
+      {silueta ? (
+        <AbsoluteFill style={{ backgroundColor: "#ffffff", pointerEvents: "none",
+          opacity: interpolate(frame, [total * 0.4, total * 0.4 + 2, total * 0.4 + 12], [0, 0.85, 0], { extrapolateLeft: "clamp", extrapolateRight: "clamp" }) }} />
+      ) : null}
       <div style={{ position: "absolute", left: 0, right: 0, bottom: horizontal ? 24 : 300, display: "flex", justifyContent: "center", padding: "0 80px" }}>
         <Texto texto={texto} resaltar={resaltar} duracion={total * 0.5} tamano={horizontal ? 64 : 76} />
       </div>

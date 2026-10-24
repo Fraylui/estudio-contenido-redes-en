@@ -158,7 +158,7 @@ Los primeros días importan poco: se necesitan de 8 a 12 videos para comparar. L
 | Ralentizar, congelar | 🟡 Con `Sequence` y `playbackRate` |
 | Desenfoque y profundidad | ✅ Fondos con IA desenfocados y entrada con desenfoque |
 | **Cámara:** zoom, punch-in, Ken Burns | ✅ |
-| Paneo y travelling | 🟡 Cámara que viaja por un lienzo grande (técnica 5 de mejora continua) |
+| Paneo y travelling | ✅ Paneo lateral sobre escenarios con IA (`ia:x:paneo`) · 🟡 cámara que viaja por un lienzo grande |
 | Órbita y 3D | 🟡 Three.js en Remotion (skill `remotion-markup`, 3D) |
 | **Personajes 2D animados** (parpadeo, boca, gestos) | ✅ Mateo, Lucía, la mascota y Open Peeps |
 | Personajes 3D con IA | ✅ Para miniaturas y escenas fijas (chibi 3D, estilo `objeto3d`) · ❌ animarlos con labios |
@@ -168,8 +168,9 @@ Los primeros días importan poco: se necesitan de 8 a 12 videos para comparar. L
 | Imágenes de archivo | 🟡 Solo con licencia libre (Wikimedia CC, dominio público) y su crédito |
 | **Textos y subtítulos** | ✅ Estilo CapCut con palabra clave |
 | Cifras que cuentan, flechas, círculos | ✅ |
-| **Mapas animados** | 🟡 Skill `remotion:remotion-maps`, lista para usar en "Lugares" e "Historia" |
-| Gráficos, diagramas, cronologías | 🟡 Barras y líneas por código; cronología por construir |
+| **Mapas animados** | ✅ `"mapa"` en la escena: países que se pintan, rutas con flecha, marcadores y etiquetas, en 2D plano y sin internet |
+| Gráficos, diagramas, cronologías | ✅ Barras que crecen con cifras que cuentan · 🟡 líneas y cronología por construir |
+| Revelación por capas (silueta → imagen) | ✅ `"silueta": true` |
 | Logo y marca | ✅ Logotipo khipu, banner y miniaturas |
 | Color y ambiente | ✅ Paletas por sección · 🟡 gradación de color o grano por efecto |
 | Edición y ritmo | ✅ Escenas sincronizadas con cada frase y transiciones |
@@ -180,7 +181,35 @@ Los primeros días importan poco: se necesitan de 8 a 12 videos para comparar. L
 
 **Regla:** un video profesional no es el que acumula más efectos, sino el que usa los elementos que cuentan mejor **su** historia. Por ejemplo: un pueblo de Ayacucho pide un mapa, sonido ambiente, fechas y fotos con permiso; un animal pide su comportamiento, sonidos naturales y un gráfico que lo explique.
 
-## 11. Producción por lotes
+## 11. Documental animado 2D (historia, países, guerras, personajes, Biblia)
+Referencias que hay que estudiar: **OverSimplified** (guerras y revoluciones con humor y caricaturas), **Simple History** (2D simple y reutilizable), **The Armchair Historian** (mapas y tropas), **History Matters** (una pregunta, pocos minutos), **Extra History** (series por episodios), **Geo History** (fronteras que cambian) y **BibleProject** (relatos bíblicos ilustrados).
+- **Los 8 movimientos que explican:**
+  1. Zoom a un rostro, una fecha o un lugar, y luego alejarse.
+  2. Paneo por el escenario.
+  3. Mapa que se pinta con rutas.
+  4. Personajes con gestos.
+  5. Objetos que se mueven (máquinas, humo, engranajes).
+  6. Antes y después.
+  7. Revelación por capas.
+  8. Gráficos que se construyen.
+- **Ganchos de historia:**
+  - misterio ("Durante siglos este lugar escondió…");
+  - contradicción ("Tenía enormes riquezas, pero su pueblo era pobre");
+  - pregunta ("¿Por qué estalló realmente…?");
+  - transformación ("Así era Lima antes de…");
+  - personaje ("Este hombre tomó una decisión que cambió el Perú");
+  - consecuencia;
+  - escenario hipotético ("¿Qué habría pasado si…?");
+  - detalle desconocido.
+- **Sonido:** la voz siempre se entiende. La música va por tema: documental, tensión o curiosidad, y nunca épica durante todo el video. Whoosh en desplazamientos, pop en gráficos, ambiente en escenarios y golpe sutil en revelaciones. Un silencio breve antes del dato fuerte.
+- **Temas sensibles** (política peruana, guerras, Biblia):
+  - neutralidad y fuentes serias;
+  - en las reformas y los gobiernos, contar los efectos distintos según la zona y la época;
+  - en la Biblia, distinguir el relato de fe de la evidencia histórica, con respeto;
+  - nunca inventar secretos, cifras ni conspiraciones.
+- **Diferencia de Khipu:** historia del Perú y de Latinoamérica (reforma agraria, gobiernos, fronteras, independencias) contada con las técnicas de los canales internacionales que casi no cubren estos temas.
+
+## 12. Producción por lotes
 1. Investigar y escribir 2 o 3 guiones juntos, con fuentes verificadas.
 2. Generar objetos, escenarios y personajes con IA para todos en una sola tanda.
 3. Narrar en lote: `npm run lote`, con la memoria de frases.

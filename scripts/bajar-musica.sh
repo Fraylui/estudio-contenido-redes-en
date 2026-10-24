@@ -18,4 +18,11 @@ investigations.mp3|Investigations
 sneaky-snitch.mp3|Sneaky Snitch
 fluffing-a-duck.mp3|Fluffing a Duck
 local-forecast.mp3|Local Forecast - Elevator
+guerra.mp3|Five Armies
+epica.mp3|Heroic Age
+documental.mp3|Echoes of Time v2
+antiguo.mp3|Ancient Rite
+industria.mp3|Crusade - Heavy Industry
+aventura.mp3|Lost Frontier
+ambiente.mp3|Long Note Four
 LISTA

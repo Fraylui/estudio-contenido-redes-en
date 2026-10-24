@@ -12,6 +12,13 @@ Todas de **Kevin MacLeod (incompetech.com)**, licencia **Creative Commons Atribu
 | sneaky-snitch.mp3 | Traviesa | Trampas, errores comunes |
 | fluffing-a-duck.mp3 | Cómica | Remates de humor, Shorts |
 | local-forecast.mp3 | Relajada, de ascensor | Listas, pasos |
+| guerra.mp3 ("Five Armies") | Épica, tensión | Guerras, batallas, conflictos |
+| epica.mp3 ("Heroic Age") | Heroica | Grandes hazañas, personajes históricos |
+| documental.mp3 ("Echoes of Time v2") | Documental, misterio | Historia de países, misterios |
+| antiguo.mp3 ("Ancient Rite") | Antigua, solemne | Civilizaciones antiguas, relatos bíblicos |
+| industria.mp3 ("Crusade - Heavy Industry") | Industrial, rítmica | Revolución Industrial, tecnología, fábricas |
+| aventura.mp3 ("Lost Frontier") | Aventura | Lugares, viajes, exploraciones |
+| ambiente.mp3 ("Long Note Four") | Ambiental, suave | Espacio, reflexión, momentos tranquilos |
 
 **Crédito para la descripción** (cambiar el título):
 

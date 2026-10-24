@@ -117,6 +117,12 @@ Licencias:
   - Elige la mejor variante, escálala a 1920 con lanczos y un poco de nitidez, y guárdala como JPG.
   - En el video va un poco desenfocada y con acercamiento lento, para que el personaje resalte.
   - **No sirve para personas ni para texto.** Para objetos usa `--estilo objeto --sin-fondo` y revísalos antes.
+- **Efectos de documental animado** (historia, guerras, países, lugares, Biblia):
+  - **Mapa animado:** `"mapa": {"centro": [lon, lat], "zoom": 5, "zoomFinal": 7, "paises": [{"nombre": "Peru", "color": "#ff6464", "en": 0.1}], "rutas": [{"de": [lon, lat], "a": [lon, lat], "en": 0.2}], "etiquetas": [{"texto": "Perú", "lugar": [lon, lat]}], "marcadores": [{"lugar": [lon, lat]}]}`. Reemplaza al fondo; países de Natural Earth con nombre en inglés; zoom 1 es el mundo, 4 un continente y 7 un país. Funciona sin internet.
+  - **Paneo lateral:** `"fondo": "ia:<nombre>:paneo"` recorre el escenario de izquierda a derecha.
+  - **Revelación por capas:** `"silueta": true` muestra primero la silueta negra y la revela con un destello al 40 % de la escena.
+  - **Barras que crecen:** `"barras": [{"etiqueta": "1940", "valor": 7000000}, ...]`, con los números contando.
+  - **Música por tema:** guerra, épica, documental, antiguo (Biblia y civilizaciones), industria, aventura y ambiente (ver `public/musica/CREDITOS.md`).
 - **Objetos 3D hechos con IA** (`"iconos": [["img:hormiga"]]` → `public/assets/objetos-ia/hormiga.png`): para los objetos protagonistas del tema.
   - `imagen/.venv/bin/python imagen/generar.py "<objeto con detalles: material, colores, qué tiene encima o adentro>" public/assets/objetos-ia/x.png --estilo objeto3d --sin-fondo --pasos 4 --variantes 3`
   - El prompt describe el objeto **con detalle** (ej.: *"a takeaway coffee cup with a brown cardboard sleeve and a white lid, steam rising"*). El estilo 3D de plastilina y el fondo blanco los pone `objeto3d`.
