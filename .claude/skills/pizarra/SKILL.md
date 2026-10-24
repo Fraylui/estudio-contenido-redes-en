@@ -1,9 +1,9 @@
 ---
 name: pizarra
-description: Hacer videos de YouTube estilo pizarra o doodle (como DOMINALO, DECIDO VIVIR MEJOR, Aprendiz Financiero o CasiCreativo) con Remotion. Monigotes y una mascota cerebro que se dibujan solos, objetos ilustrados, fondo de papel y texto con marcador amarillo. Usar cuando pidan un video de pizarra, doodle, whiteboard, "como esos canales", explicar un tema con dibujos, una escena con cerebro o monigote, o agregar dibujos nuevos a la biblioteca.
+description: Producción técnica de los videos animados 2D de Khipu (largos y Shorts) con Remotion - escenas desde un JSON sincronizadas con la voz, personajes que se mueven y hablan, íconos ilustrados, objetos y escenarios hechos con IA, mapas animados, barras, silueta, paneo, partículas, sonido ambiente, biblioteca de 334 efectos, música por tema, subtítulos estilo CapCut, título gancho en Shorts y miniaturas. Usar al armar, revisar, renderizar o publicar cualquier video o Short del canal, o al agregar dibujos y efectos a la biblioteca.
 ---
 
-# Videos de pizarra
+# Producción de videos de Khipu (formato pizarra animada)
 
 El formato vive en `src/formatos/pizarra/` y cada video es un `contenido/pizarra-*.json`. Se genera con:
 

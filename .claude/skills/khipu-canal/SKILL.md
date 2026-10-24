@@ -7,6 +7,8 @@ description: Estrategia completa del canal de YouTube Khipu (animación educativ
 
 Khipu es un canal de **animación educativa y entretenimiento**, multitemático, en español. Toma lo mejor de CasiCreativo (explicar lo cotidiano con humor y personajes), Kurzgesagt (preguntas científicas grandes contadas como historia), The Infographics Show (muchos temas con un formato reconocible), TED-Ed (guion didáctico y claro) y Zack D. Films (Shorts de una sola curiosidad). Los personajes, la narración, el estilo visual y los guiones son propios: nunca se copia un video.
 
+La rutina de cada día (qué categoría toca, qué se produce y a qué hora) está en la skill `khipu-diario`. El índice de todas las skills y las reglas que nunca cambian, en `CLAUDE.md`.
+
 Documentos que completan esta skill:
 - `docs/receta-video.md`: la lista de cada video, del paso 1 al 10.
 - `docs/patrones-creadores.md`: el análisis con datos de 8 canales.
