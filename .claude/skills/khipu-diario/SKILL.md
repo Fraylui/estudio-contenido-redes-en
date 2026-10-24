@@ -29,6 +29,7 @@ Inspiradas en los canales de referencia: Aprendiz Financiero (finanzas y hábito
 **Primero, revisar lo ya programado:** `getScheduledPosts` de Metricool para hoy y mañana. Si una hora ya tiene un Short o un video, no se duplica: se produce solo lo que falta, o se adelanta el trabajo del día siguiente.
 
 ## 2. Antes de producir (15 minutos)
+0. **Revisar el último video publicado** con la skill `khipu-revision` (`scripts/analizar-video.py` y sus estadísticas) y escribir 3 mejoras medibles para el de hoy.
 1. **Demanda:** `python3 scripts/investigar-youtube.py "<tema>"`. Vale si hay videos del tema con más de 500 000 vistas.
 2. **Ángulo propio:** qué no dicen esos videos, o un ejemplo peruano o latino.
 3. **Datos con fuente** (búsqueda web). Nada inventado.
