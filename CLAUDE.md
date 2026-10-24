@@ -20,7 +20,7 @@ Al usuario se le habla siempre **en español**, claro y sin tecnicismos.
 - **Canal:** `plan-quipu.md` (identidad, series, público), `calendario-contenido.md` (los próximos temas), `monetizacion.md`.
 - **Imágenes:** `prompts-profesionales.md` (7 capas), `prompts-imagenes.md`.
 - **Herramientas:** `herramientas.md` (inventario: qué es gratis y qué no).
-- **Aprendizaje:** `mejora-continua.md` (técnicas usadas, lecciones y datos reales de cada semana).
+- **Aprendizaje:** `mejora-continua.md` (técnicas usadas y datos reales de cada semana), `aprendizajes/` (una ficha por proyecto, hasta lo más mínimo) y `como-trabajan-los-creadores.md` (el método de MrBeast y Kurzgesagt).
 
 ## Reglas que nunca cambian
 1. **Todo se publica público** en Khipu (el objetivo es monetizar), por Metricool, con la IA declarada (`isAiGeneratedContent: true`).

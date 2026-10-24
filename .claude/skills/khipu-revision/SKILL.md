@@ -24,6 +24,19 @@ Regla: **nunca repetir lo básico**. Antes de cada video nuevo se analiza el ant
    - Qué hizo distinto el que funcionó: por ejemplo, el Short de 1 000 vistas tenía un personaje con emoción, colores vivos y "Por qué…", y el de pocas vistas, fondo de papel blanco plano.
 4. **Escribir 3 mejoras medibles** en `docs/mejora-continua.md` (ejemplo: "de 10 a 20 cortes por minuto", "primer corte antes de 2 s", "todos los objetos protagonistas en 3D").
 
+## 1b. Ficha de aprendizaje de cada proyecto (obligatoria)
+Al terminar cada video o Short se llena `docs/aprendizajes/<fecha>-<tema>.md` con la plantilla `docs/aprendizajes/PLANTILLA.md`, y se vuelve a abrir a los 7 días con los datos. Se anota todo, hasta lo más mínimo: qué funcionó, qué falló (detalle, dónde se notó, causa, arreglo), qué costó tiempo y 3 mejoras medibles. Antes de cada proyecto nuevo se leen las últimas 3 fichas.
+
+El método de los grandes (el manual de producción de MrBeast, el proceso de Kurzgesagt) está en `docs/como-trabajan-los-creadores.md`:
+- el primer minuto cumple la promesa;
+- reenganches en 1/3 y 2/3 del video;
+- final de golpe;
+- títulos con más fuerza;
+- escaleras de datos;
+- nunca el mismo formato dos veces seguidas;
+- metáforas visuales decididas antes de dibujar;
+- componente crítico revisado.
+
 ## 2. Metas contra las que se mide todo
 | Medida | Shorts | Videos largos |
 |---|---|---|
