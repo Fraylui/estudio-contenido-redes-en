@@ -23,6 +23,8 @@ La estrategia de fondo está en `khipu-canal`; la producción técnica, en `piza
 - Los temas salen de `docs/calendario-contenido.md`. Si se acaban, se investigan nuevos con el paso 2.
 - **Prioridad por datos:** hoy los Shorts traen casi todas las vistas (ver `docs/mejora-continua.md`). Si una categoría gana dos semanas seguidas, recibe más espacio.
 
+**Primero, revisar lo ya programado:** `getScheduledPosts` de Metricool para hoy y mañana. Si una hora ya tiene un Short o un video, no se duplica: se produce solo lo que falta, o se adelanta el trabajo del día siguiente.
+
 ## 2. Antes de producir (15 minutos)
 1. **Demanda:** `python3 scripts/investigar-youtube.py "<tema>"`. Vale si hay videos del tema con más de 500 000 vistas.
 2. **Ángulo propio:** qué no dicen esos videos, o un ejemplo peruano o latino.
