@@ -1,6 +1,7 @@
 """Videos más vistos de canales grandes: título, miniatura y los primeros 30 s de lo que dicen (gancho verbal).
 
 Uso: imagen/.venv/bin/python scripts/analizar-canales.py <carpeta>   (ver docs/patrones-creadores.md)
+"""
 import json
 import re
 import subprocess
