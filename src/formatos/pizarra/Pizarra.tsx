@@ -13,6 +13,8 @@ import { composicionSchema, resolverDibujo, type DibujoPizarra } from "./dibujos
 import { Mapa, mapaSchema } from "./Mapa";
 import type { Trazo } from "./trazos";
 import catalogoSfx from "../../../public/sfx/efectos/sfx.json";
+// Biblioteca grande de Mixkit (scripts/bajar-sfx.py): "hooks/cinematic-whoosh-deep-impact", "historia/…", "naturaleza/…"
+import bibliotecaSfx from "../../../public/sfx/biblioteca/catalogo.json";
 
 loadFont({ family: "Mano", url: staticFile("fuentes/PatrickHand.woff2") });
 
@@ -41,6 +43,10 @@ export const pizarraSchema = z.object({
       // Revelación por capas: el dibujo aparece primero como silueta negra y se revela con un destello
       silueta: z.boolean().optional(),
       // Gráfico de barras que crecen (economía, población, comparaciones)
+      // Sonido ambiente de la biblioteca, en bucle y muy bajo durante la escena ("naturaleza/…", "historia/…")
+      ambiente: z.string().optional(),
+      // Partículas en bucle sobre la escena: lluvia, polvo, chispas, nieve o brasas
+      particulas: z.enum(["lluvia", "polvo", "chispas", "nieve", "brasas"]).optional(),
       barras: z.array(z.object({ etiqueta: z.string(), valor: z.number(), color: z.string().optional() })).optional(),
     }),
   ),
@@ -53,6 +59,38 @@ export const pizarraSchema = z.object({
 
 type Props = z.infer<typeof pizarraSchema>;
 const FPS = 30;
+
+// Partículas en bucle (lluvia, polvo, chispas, nieve, brasas): cada una con semilla fija, cae o sube y vuelve a empezar
+const PARTICULAS = {
+  lluvia: { n: 140, vy: 38, vx: -6, tam: [3, 34], color: "rgba(200,225,255,0.55)", sube: false },
+  polvo: { n: 60, vy: 0.6, vx: 0.8, tam: [3, 7], color: "rgba(255,240,210,0.55)", sube: false },
+  chispas: { n: 50, vy: -5, vx: 0, tam: [4, 8], color: "rgba(255,210,90,0.95)", sube: true },
+  nieve: { n: 90, vy: 2.2, vx: 0.7, tam: [5, 11], color: "rgba(255,255,255,0.9)", sube: false },
+  brasas: { n: 45, vy: -2.6, vx: 0.5, tam: [4, 9], color: "rgba(255,120,40,0.9)", sube: true },
+} as const;
+const Particulas: React.FC<{ tipo: keyof typeof PARTICULAS }> = ({ tipo }) => {
+  const frame = useCurrentFrame();
+  const { width, height } = useVideoConfig();
+  const p = PARTICULAS[tipo];
+  const azar = (i: number, k: number) => { const x = Math.sin(i * 127.1 + k * 311.7) * 43758.5453; return x - Math.floor(x); };
+  return (
+    <AbsoluteFill style={{ pointerEvents: "none" }}>
+      <svg width={width} height={height}>
+        {Array.from({ length: p.n }, (_, i) => {
+          const v = 0.6 + azar(i, 1) * 0.8;
+          const y0 = azar(i, 2) * height, x0 = azar(i, 3) * width;
+          const y = (((y0 + p.vy * v * frame) % height) + height) % height;
+          const x = (((x0 + p.vx * frame + Math.sin(frame / 20 + i) * 12) % width) + width) % width;
+          const t = p.tam[0] + azar(i, 4) * (p.tam[1] - p.tam[0]);
+          const brillo = tipo === "chispas" || tipo === "brasas" ? 0.5 + 0.5 * Math.sin(frame / 4 + i) : 1;
+          return tipo === "lluvia"
+            ? <line key={i} x1={x} y1={y} x2={x + p.vx * 0.6} y2={y + t} stroke={p.color} strokeWidth={2.4} strokeLinecap="round" />
+            : <circle key={i} cx={x} cy={y} r={t / 2} fill={p.color} opacity={brillo} style={{ filter: p.sube ? "blur(0.6px)" : undefined }} />;
+        })}
+      </svg>
+    </AbsoluteFill>
+  );
+};
 
 // Título gancho de los Shorts: caja blanca arriba con texto negro grueso y la última palabra en rojo, entra con rebote
 const Gancho: React.FC<{ texto: string }> = ({ texto }) => {
@@ -179,6 +217,11 @@ export const Pizarra: React.FC<Props> = ({ escenas, voz, frasesVoz, musica, ganc
               );
             })()}
             {e.confeti ? <Confeti /> : null}
+            {e.particulas ? <Particulas tipo={e.particulas} /> : null}
+            {e.ambiente && CATALOGO[e.ambiente] ? (
+              <Audio src={staticFile(`sfx/${CATALOGO[e.ambiente].archivo}`)} loop
+                volume={(f) => 0.16 * interpolate(f, [0, 12, duracion - 12, duracion], [0, 1, 1, 0], { extrapolateLeft: "clamp", extrapolateRight: "clamp" })} />
+            ) : null}
             {e.sonido ? <Efecto id={e.sonido} en={e.sonidoEn ?? 0.6} /> : null}
             {/* Ritmo de sonido como en los canales de alta retención: cada cambio y cada aparición suena, bajito y variado */}
             {i > 0 && !(e.sonido && (e.sonidoEn ?? 0.6) < 0.5) ? <Efecto id={WHOOSH[i % 3]} en={0.05} extraDb={-12} /> : null}
@@ -198,7 +241,7 @@ export const Pizarra: React.FC<Props> = ({ escenas, voz, frasesVoz, musica, ganc
 };
 
 type Sfx = { archivo: string; impacto_s: number; ganancia_db_sugerida: number };
-const CATALOGO = catalogoSfx as Record<string, Sfx>;
+const CATALOGO = { ...(catalogoSfx as Record<string, Sfx>), ...(bibliotecaSfx as Record<string, Sfx>) };
 
 // El sonido se adelanta su punto de impacto para que el golpe caiga justo en "en". Va 6 dB más bajo que en
 // los anuncios: aquí acompaña a una narración tranquila.
@@ -207,7 +250,7 @@ const Efecto: React.FC<{ id: string; en: number; extraDb?: number; velocidad?: n
   if (!c) return null;
   return (
     <Sequence from={Math.max(0, Math.round((en - c.impacto_s / velocidad) * FPS))} layout="none">
-      <Audio src={staticFile(`sfx/efectos/${c.archivo}`)} volume={Math.pow(10, (c.ganancia_db_sugerida + extraDb) / 20)} playbackRate={velocidad} />
+      <Audio src={staticFile(c.archivo.includes("/") ? `sfx/${c.archivo}` : `sfx/efectos/${c.archivo}`)} volume={Math.pow(10, (c.ganancia_db_sugerida + extraDb) / 20)} playbackRate={velocidad} />
     </Sequence>
   );
 };
