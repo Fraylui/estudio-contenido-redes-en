@@ -112,6 +112,7 @@ Licencias:
   - **Entrada de cada escena con zoom y desenfoque**, como una transición de CapCut.
   - **Subtítulos en negrita** (Montserrat 900, mayúsculas, contorno negro) con rebote palabra por palabra; la palabra clave va más grande en amarillo.
   - Los escenarios de cuarto siguen disponibles: `cuarto-cielo`, `cuarto-menta`, etc. También hay `blanco` y `papel`.
+- **Prompts profesionales:** `docs/prompts-profesionales.md` (7 capas: sujeto, lugar y época, encuadre, luz, paleta, estilo y exclusiones).
 - **Fondos ilustrados con IA** (`"fondo": "ia:cuarto-amanecer"` → `public/assets/ia/<nombre>.jpg`): el modelo instalado (`imagen/generar.py`) da **escenarios muy buenos** si el prompt es preciso.
   - **Escena:** `--estilo escena --ancho 768 --alto 448 --pasos 4 --variantes 2`. Describe el lugar, la luz, los colores y 3 o 4 objetos concretos (*"cozy bedroom at sunrise, warm golden light through a big window, bed with blue blanket, alarm clock on a nightstand, plants"*). Sin personas: los personajes los ponemos nosotros encima.
   - Elige la mejor variante, escálala a 1920 con lanczos y un poco de nitidez, y guárdala como JPG.
@@ -122,6 +123,9 @@ Licencias:
   - **Paneo lateral:** `"fondo": "ia:<nombre>:paneo"` recorre el escenario de izquierda a derecha.
   - **Revelación por capas:** `"silueta": true` muestra primero la silueta negra y la revela con un destello al 40 % de la escena.
   - **Barras que crecen:** `"barras": [{"etiqueta": "1940", "valor": 7000000}, ...]`, con los números contando.
+  - **Sonido ambiente:** `"ambiente": "naturaleza/<efecto>"` (o `historia/…`, `tension/…`), en bucle y muy bajo durante la escena.
+  - **Partículas en bucle:** `"particulas": "lluvia" | "polvo" | "chispas" | "nieve" | "brasas"`.
+  - **Biblioteca de 334 efectos** (Mixkit, gratis y comercial; `scripts/bajar-sfx.py`): `"sonido": "hooks/big-cinematic-impact"`. Categorías: hooks, transiciones, historia, naturaleza, animacion, tension, tecnologia, dinero y reacciones. La lista está en `public/sfx/biblioteca/catalogo.json`. Jerarquía: la voz siempre clara, la música detrás y los efectos solo donde hay una acción o una revelación; un silencio breve antes del dato fuerte.
   - **Música por tema:** guerra, épica, documental, antiguo (Biblia y civilizaciones), industria, aventura y ambiente (ver `public/musica/CREDITOS.md`).
 - **Objetos 3D hechos con IA** (`"iconos": [["img:hormiga"]]` → `public/assets/objetos-ia/hormiga.png`): para los objetos protagonistas del tema.
   - `imagen/.venv/bin/python imagen/generar.py "<objeto con detalles: material, colores, qué tiene encima o adentro>" public/assets/objetos-ia/x.png --estilo objeto3d --sin-fondo --pasos 4 --variantes 3`
