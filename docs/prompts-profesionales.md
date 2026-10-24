@@ -37,3 +37,9 @@ Un prompt básico ("a factory") da una imagen genérica. Un prompt profesional d
 - Siempre 2 o 3 variantes, y quedarse con la que tenga menos detalles raros.
 - Si sale algo extraño (caras deformes, letras), quitarlo del prompt o agregar *"no [cosa]"* al final.
 - La misma capa 6 (estilo) en todo el video, para que las escenas se vean del mismo canal.
+
+## Lecciones del bucle de prompts (24 de octubre)
+- **Los objetos físicos salen muy bien en 3D:** comida, aparatos, vehículos, edificios, muebles, animales y herramientas.
+- **Los símbolos abstractos no salen** (✓, ✗, +, ?, flechas, sol de dibujo): la IA los deforma incluso en la segunda vuelta. Esos se quedan como íconos vectoriales pintados, sin mancha.
+- **Los fajos de billetes se recortan mal** (capas finas): usar la bolsa de dinero o la moneda.
+- Lo que más ayudó en la segunda vuelta: describir **la vista** (*"seen from the front"*, *"standing upright"*), **la cantidad exacta** (*"a single…"*, *"four bars"*) y **los materiales** (*"glass with wooden top"*, *"brown leather with stitching"*).
