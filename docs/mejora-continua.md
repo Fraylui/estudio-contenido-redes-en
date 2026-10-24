@@ -22,6 +22,12 @@
 | Entrada de escena con zoom y desenfoque | Video 2 |
 | Personajes en caricatura (Mateo y Lucía) que aparecen enteros con rebote | Video 2 |
 | **Personajes vivos:** parpadean, inclinan la cabeza, gesticulan y mueven la boca | Video 2 |
+| Música de fondo libre que se aparta cuando habla la voz | Video 2 |
+| Voz sin soplido ni efecto "con agua", calibrada banda por banda | Video 2 |
+| **Íconos como ilustración plana:** formas pintadas con color vivo, sombra y brillo | Video 3 |
+| **Objetos 3D hechos con IA** y recortados (hormiga, café, billetera, alcancía) en escenas clave y miniatura | Video 3 |
+| **Números que cuentan solos** (0 → 78 000) | Video 3 |
+| Escenarios con IA por sección (cafetería, sala, tienda) | Video 3 |
 
 ## Próximas, por orden de impacto en la retención
 Las nuevas que vienen de lo aprendido en Infonimados, Academia Play y los anuncios de 2026:
@@ -46,6 +52,14 @@ Y las que ya estaban en la lista:
 | 11 | **Pantalla final animada** con el siguiente video | Todos | Encadenar videos y sumar horas |
 | 12 | **Gancho de texto fijo arriba en los Shorts** | Shorts virales | Retener los primeros 3 s |
 | 13 | **Pruebas A/B de miniaturas** (función gratis de YouTube) | Recomendación de YouTube | Saber qué miniatura atrae más clics |
+
+## Lecciones del video 3 (para el video 4)
+- **Duración:** salió de 6:35. Para llegar a 8–12 min, el guion necesita unas 1 500 palabras (1 146 dieron 6:35): una sección más de historia o de ejemplos reales.
+- **Íconos de línea abierta** (gráfica, banco, vaso) todavía no se pintan por dentro: cerrar sus formas o cambiarlos por objetos 3D.
+- **Objetos 3D:** funcionan muy bien; generar de 6 a 8 propios de cada tema (no solo 4) y usarlos también en el gancho.
+- **En la miniatura**, el objeto junto al personaje queda chico: darle más tamaño al objeto principal.
+- **Rótulos de un solo carácter** ("+", "3") se ven como puntitos: no usarlos.
+- **Revisar con datos** a los 7 días (retención y CTR en YouTube Studio) y anotar aquí qué funcionó.
 
 ## Cómo se decide qué mejorar
 - **Retención a los 30 s por debajo del 60 %:** mejorar el gancho (técnicas 3, 9 y 12).
