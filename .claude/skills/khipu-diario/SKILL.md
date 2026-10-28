@@ -18,7 +18,7 @@ Decisión del usuario: **4 Shorts diarios (28 por semana) y 4 videos largos por 
 | Lunes | Ciencia y curiosidades | Hábitos y productividad | El universo / Sabiduría | Personajes (quién fue de verdad) | **Sí:** ciencia o universo |
 | Martes | Cuerpo humano y salud | Psicología, emociones y amor | Comida / Palabras | Lugares y arqueología (con mapa) | — |
 | Miércoles | Historia del Perú y Latinoamérica | Historia mundial y guerras | Mitos y leyendas | Historias explicadas | **Sí:** historia |
-| Jueves | Finanzas personales | Economía y negocios | Historia de marcas / Cómo funciona | Vida cotidiana (monedas, comida, oficios) | — |
+| Jueves | Historias del dinero | Economía y negocios | Historia de marcas / Cómo funciona | Vida cotidiana (monedas, comida, oficios) | — |
 | Viernes | Tecnología e IA | Personajes que cambiaron la historia | Deportes y récords / Arte y música | Profetas y reyes / palabras en hebreo o griego | **Sí:** personajes o tecnología |
 | Sábado | Lugares y países | Animales y naturaleza | Planeta Tierra / ¿Qué pasaría si…? | Mujeres de la Biblia / mapas y rutas | — |
 | Domingo | Misterios y enigmas | Mundo antiguo | La ganadora de la semana | Parábolas y enseñanza para la semana | **Sí:** Biblia (una historia completa con su contexto) |
@@ -45,6 +45,15 @@ Datos (Metricool, 27 oct): ganaron los Shorts de "por qué" con personaje (lunes
 
 
 **Primero, revisar lo ya programado:** `getScheduledPosts` de Metricool para hoy y mañana. Si una hora ya tiene un Short o un video, no se duplica: se produce solo lo que falta, o se adelanta el trabajo del día siguiente.
+
+## Cómo hablar de dinero sin que la gente se vaya (pedido del usuario, 28 oct)
+Nuestros Shorts de finanzas fueron los peores (de 27 a 442 vistas). El público se pierde con consejos, porcentajes y palabras de banco. Por eso **el dinero siempre se cuenta como historia**:
+- **Una persona, un problema y un giro:** Bansir no llegaba a fin de mes y el hombre más rico de Babilonia le enseñó una regla. Alemania imprimió billetes hasta que un pan costó 200 mil millones. Nunca "5 consejos para ahorrar".
+- **Cifras que se sienten:** "4 meses de sueldo" o "un pan, 200 mil millones", en vez de "una inflación de 29 500 %".
+- **Cero palabras técnicas:** nada de "activos", "pasivos", "tasa", "rentabilidad" ni "diversificar". Si hace falta la idea, se muestra con una imagen.
+- **Curiosidad antes que consejo:** "¿por qué…?", "el día que…", "el país donde…". El consejo, si lo hay, va al final y en una sola frase.
+- **Historias del dinero del mundo:** el chocolate como moneda, las piedras gigantes de Yap, la quiebra de Venezuela, la burbuja de los tulipanes, el hombre más rico de la historia (Mansa Musa).
+- La categoría "Finanzas" pasa a llamarse **"Historias del dinero"**.
 
 ## 2. Antes de producir (15 minutos)
 **Regla del usuario (28 oct): cada tema tiene que interesarle a cualquier persona del mundo hispanohablante, no solo al Perú.** Los datos de YouTube lo confirman: el público del mejor Short fue México 19 %, Bolivia 12 % y Costa Rica 8 %. Un tema peruano entra solo si el gancho es universal ("la bebida que le ganó a Coca-Cola", "un cuarto lleno de oro"), y siempre se explica sin dar nada por sabido. Prueba antes de elegir: ¿le daría curiosidad a alguien de México, España o Argentina que nunca oyó del tema?
