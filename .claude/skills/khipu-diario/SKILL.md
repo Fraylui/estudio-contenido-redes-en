@@ -23,7 +23,7 @@ Decisión del usuario: **4 Shorts diarios (28 por semana) y 4 videos largos por 
 | Sábado | Lugares y países | Animales y naturaleza | Planeta Tierra / ¿Qué pasaría si…? | Mujeres de la Biblia / mapas y rutas | — |
 | Domingo | Misterios y enigmas | Mundo antiguo | La ganadora de la semana | Parábolas y enseñanza para la semana | **Sí:** Biblia (una historia completa con su contexto) |
 
-- Las horas son de Lima. Cada video largo va con su categoría alternando semana a semana, y deja 1 o 2 de los Shorts de su día como avance (nativos, nunca recortes).
+- Las horas son de Lima. La semana A empieza el lunes 2 de noviembre de 2026, la B el 9, y así se alternan. Cada video largo va con su categoría alternando semana a semana, y deja 1 o 2 de los Shorts de su día como avance (nativos, nunca recortes).
 - **Ritmo de trabajo:** se produce con un día de adelanto (hoy se hace lo de mañana), para que una falla nunca deje un hueco. Cada proceso largo (voz, render) se lanza por separado, porque el servidor corta lo que pasa de 30 minutos.
 - **Cuidado con la "granja de contenido":** 4 Shorts al día está dentro de lo normal, pero solo si cada uno es distinto de verdad (tema, escenario, objetos, gancho y voz). Si dos se parecen, se cambia uno.
 - La voz de cada categoría está en `voz/voces.json`; el color de su miniatura, en `src/formatos/pizarra/categorias.ts`.
