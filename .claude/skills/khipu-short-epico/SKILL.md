@@ -29,6 +29,14 @@ Todo el proceso es **un comando**: `bash scripts/short-epico.sh <nombre>`. Hace 
 ```
 Una toma de otro video se reutiliza poniendo su nombre en `fondo`, sin repetirla aquí.
 
+## 1b. Investigar desde todas las perspectivas (antes de escribir una sola línea)
+1. **Los hechos:** 2 fuentes serias por cada dato central (enciclopedias, museos, universidades, la Biblia con su cita). Si no coinciden, se dice.
+2. **Las otras versiones:** qué dicen los historiadores que no están de acuerdo, qué es tradición y qué está comprobado.
+3. **La competencia:** qué videos del tema tienen más vistas (`scripts/investigar-youtube.py`), qué cuentan, y **qué no cuentan**. Ahí está nuestro ángulo.
+4. **El público:** qué preguntan en los comentarios de esos videos, y qué entiende o no entiende alguien de México, España o Argentina.
+5. **Lo visual:** qué imágenes reales existen con licencia libre (`scripts/imagen-libre.py`) y qué hay que crear.
+Se anota en el `_nota` de `imagen/tomas/<nombre>.json`: las fuentes, el ángulo elegido y lo que se descartó.
+
 ## 2. Reglas del guion (todas las pidió el usuario)
 - **Temas para todo el mundo hispanohablante**, no solo para el Perú: el gancho tiene que entenderlo alguien que nunca oyó del tema.
 - **Contar una historia:** personaje, conflicto, giro y desenlace. El dato va dentro de la historia y nunca debe confundir; por ejemplo, "Goliat medía 2 m" sin contexto hacía pensar que no era un gigante.

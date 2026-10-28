@@ -15,6 +15,7 @@ Repositorio de producción de videos con Remotion: el canal de YouTube **Khipu**
 | `video-sfx` | **Efectos de sonido** del catálogo básico (14) | Anuncios y golpes clave; la biblioteca grande está en `public/sfx/biblioteca/` |
 
 ## Documentos (en `docs/`)
+- **Qué se está haciendo ahora:** `tablero.md` (lo publicado, lo programado y la cola en orden).
 - **Cada video:** `receta-video.md` (la lista del 1 al 10).
 - **Atención:** `psicologia-atencion.md`, `ganchos.md`, `patrones-creadores.md` (análisis con datos de 8 canales grandes).
 - **Empaquetado:** `empaquetado.md` (miniaturas y títulos).
