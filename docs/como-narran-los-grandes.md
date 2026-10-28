@@ -243,6 +243,17 @@ Los dos comparten las técnicas: el anzuelo al cierre de cada parte, la imagen c
   - una sola palabra en mayúsculas.
 - **Para Khipu:** la Pizarra ya puede hacer la pantalla partida (dos fondos de color con un personaje de Open Peeps en cada lado). Se agrega como recurso para las comparaciones y los antes y después.
 
+**Short "Te disparan. ¿Y si tu grasa te salva?" (TrendLumEsp; vimos el título y 3 cuadros).**
+- **Título de dos golpes:** una situación extrema en segunda persona ("Te disparan.") + una pregunta absurda que da curiosidad ("¿Y si tu grasa te salva?"). Es la categoría "¿Qué pasaría si…?".
+- **Imagen 3D limpia con la cámara siguiendo al objeto:** la bala entra al cuerpo y viaja entre las células de grasa; el que mira va con ella.
+- **Datos como pantalla de un aparato:** etiquetas ("GRASA", "CÉLULA DE GRASA"), velocidad en vivo ("900 km/h") y una radiografía en un celular con un "?" que guarda la respuesta. Se siente científico y da un misterio visual.
+- **Subtítulo palabra por palabra, chico y arriba**; nunca tapa.
+- **Para Khipu ("¿Qué pasaría si…?" y Cuerpo):**
+  - contadores en vivo (velocidad, profundidad, temperatura) y etiquetas que apuntan a las cosas, que en Remotion son fáciles;
+  - el viaje siguiendo al objeto con la cámara 2.5D;
+  - un "?" en pantalla que se resuelve al final.
+  - Lo que se diga sobre heridas o violencia se dice sin sangre y con fuente médica.
+
 ## Búsqueda propia (28 oct): qué tiene millones de vistas ahora
 Con `scripts/investigar-youtube.py`. Desde este servidor, YouTube y Tactiq bloquean las transcripciones (piden demostrar que no es un robot), así que las transcripciones las pasa el usuario. Los títulos, las vistas y las duraciones sí se pueden buscar.
 - **Las "películas bíblicas" hechas con IA son lo que más crece:** "Las Crónicas de Enoc (Película 2026)", 7,7 M en 1 mes; otra de Enoc, 8,3 M en 3 meses; "El Libro de Enoc (2025)", 11 M. Duran de 55 min a 1 h 20 min. Es un formato en auge, y es nuestra serie fuerte.
