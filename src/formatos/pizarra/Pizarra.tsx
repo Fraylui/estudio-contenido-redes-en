@@ -507,7 +507,9 @@ const Escena: React.FC<Props["escenas"][number] & { indice?: number }> = ({ dibu
   const rebote = golpe >= 0 && frame >= golpe ? Math.max(0, 1 - (frame - golpe) / 18) : 0;
   // Segunda toma dentro de la escena (como los cortes de los canales grandes, cada 1,5–3 s): a la mitad de las escenas
   // de más de 2,6 s, la cámara salta a un encuadre más cerrado hacia los objetos. Duplica el ritmo sin tocar la voz.
-  const segundaToma = total > 2.6 * FPS && frame >= total * 0.5;
+  // Desde el 28 oct: una toma nueva cada 1,5 s (los Shorts de referencia cortan cada 0,9 a 2 s; los nuestros, cada 3,3 s)
+  const toma = total > 2.6 * FPS ? Math.floor(frame / (1.5 * FPS)) % 3 : 0;
+  const segundaToma = toma > 0;
   const zoom = interpolate(frame, [0, total], [1, 1.05]) + 0.035 * punch * rebote;
   // Sacudida de pantalla cuando suena un golpe fuerte
   const t0 = sonido === "boom" ? (sonidoEn ?? 0.6) * FPS : -1;
@@ -526,12 +528,12 @@ const Escena: React.FC<Props["escenas"][number] & { indice?: number }> = ({ dibu
         position: "absolute", left: horizontal ? 120 : 30, right: horizontal ? 120 : 30, top: horizontal ? 70 : 340, bottom: horizontal ? "16%" : "24%",
         // Silueta: negro hasta el 40 % de la escena y luego se revela (con el destello de abajo)
         // La segunda toma solo acerca el dibujo (el subtítulo no se mueve)
-        transform: segundaToma ? `scale(1.16) translate(${horizontal ? -3 : 0}%, ${horizontal ? 2 : -2}%)` : undefined,
+        transform: segundaToma ? (toma === 1 ? `scale(1.16) translate(${horizontal ? -3 : 0}%, ${horizontal ? 2 : -2}%)` : `scale(1.08) translate(${horizontal ? 3 : 4}%, 1%)`) : undefined,
         filter: silueta ? `brightness(${interpolate(frame, [total * 0.4, total * 0.4 + 6], [0, 1], { extrapolateLeft: "clamp", extrapolateRight: "clamp" })})` : undefined,
       }}>
         {barras ? <Barras datos={barras} duracion={total} />
           : antesDespues ? <AntesDespues a={antesDespues[0]} b={antesDespues[1]} duracion={total} />
-          : <Dibujo dibujo={resolverDibujo(dibujo)} duracion={total} adelanto={indice === 0 ? 45 : 0} />}
+          : <Dibujo dibujo={resolverDibujo(dibujo)} duracion={total} adelanto={indice === 0 ? 100000 : 0} />}
       </div>
       {globo ? <Globo texto={globo} frame={frame} horizontal={horizontal} /> : null}
       {silueta ? (
@@ -719,7 +721,7 @@ const Texto: React.FC<{ texto: string; resaltar?: string; duracion: number; tama
       {palabras.map((p, i) => {
         const aparece = (i / palabras.length) * duracion;
         const marcada = claves.has(limpia(p));
-        const pop = spring({ frame: frame - aparece, fps: FPS, config: { damping: 10, stiffness: 220 } });
+        const pop = duracion === 0 ? 1 : spring({ frame: frame - aparece, fps: FPS, config: { damping: 10, stiffness: 220 } });
         return (
           <span key={i} style={{
             display: "inline-block", margin: "0 12px", fontSize: marcada ? "1.2em" : "1em",

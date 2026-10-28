@@ -43,7 +43,7 @@
     },
     "texto": "\"Seis codos y un palmo\"",
     "resaltar": "Seis codos",
-    "fondo": "ia:jerusalen-antigua"
+    "fondo": "ia:templo-noche"
    },
    {
     "barras": [
@@ -60,13 +60,21 @@
     "texto": "Casi 3 metros.",
     "resaltar": "3 metros.",
     "sonido": "boom",
-    "sonidoEn": 0.4
+    "sonidoEn": 0.4,
+    "dibujo": {
+     "iconos": [
+      [
+       "img:casco-bronce"
+      ]
+     ]
+    },
+    "fondo": "ia:valle-ela"
    },
    {
     "dibujo": {
      "iconos": [
       [
-       "img:rollo-qumran"
+       "img:history"
       ]
      ]
     },
@@ -81,7 +89,7 @@
     "dibujo": {
      "iconos": [
       [
-       "img:rollo-qumran"
+       "img:history"
       ]
      ],
      "rotulo": "4 codos"
@@ -103,7 +111,15 @@
      }
     ],
     "texto": "Unos 2 metros.",
-    "resaltar": "2 metros."
+    "resaltar": "2 metros.",
+    "dibujo": {
+     "iconos": [
+      [
+       "img:casco-bronce"
+      ]
+     ]
+    },
+    "fondo": "ia:cuevas-qumran"
    },
    {
     "dibujo": {

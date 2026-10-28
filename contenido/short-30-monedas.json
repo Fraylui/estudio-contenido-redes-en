@@ -55,7 +55,7 @@
     "resaltar": "Tiro",
     "sonido": "magic_reveal",
     "sonidoEn": 0.4,
-    "fondo": "ia:jerusalen-antigua"
+    "fondo": "ia:templo-noche"
    },
    {
     "dibujo": {
@@ -73,7 +73,7 @@
     },
     "texto": "1 denario = 1 día de trabajo",
     "resaltar": "1 día",
-    "fondo": "ia:jerusalen-antigua"
+    "fondo": "ia:campo-alfarero"
    },
    {
     "barras": [
@@ -86,7 +86,15 @@
     "texto": "120 días de trabajo",
     "resaltar": "120 días",
     "sonido": "boom",
-    "sonidoEn": 0.5
+    "sonidoEn": 0.5,
+    "dibujo": {
+     "iconos": [
+      [
+       "img:monedas-plata"
+      ]
+     ]
+    },
+    "fondo": "ia:campo-alfarero"
    },
    {
     "dibujo": {
@@ -108,14 +116,14 @@
     "dibujo": {
      "iconos": [
       [
-       "img:rollo-qumran"
+       "img:history"
       ]
      ],
      "rotulo": "Zacarías 11:12"
     },
     "texto": "Zacarías ya lo había escrito",
     "resaltar": "Zacarías",
-    "fondo": "ia:jerusalen-antigua:paneo"
+    "fondo": "ia:cuevas-qumran:paneo"
    },
    {
     "dibujo": {

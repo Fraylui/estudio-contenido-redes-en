@@ -124,6 +124,28 @@ Datos de Metricool: vistas y tiempo promedio visto, y entre paréntesis el porce
 - Regla de gancho para Shorts: el primer cuadro tiene que entenderse sin sonido (escenario real, protagonista grande, título) y la primera frase pone en juego algo que le importa al que mira, en menos de 2 s.
 - **Meta:** pasar del 15–36 % visto en promedio a más del 60 %.
 
+## Videos de referencia que mandó el usuario (28 de octubre)
+Medidos con `scripts/analizar-video.py`:
+
+| Video | Estilo | Dura | Cortes por minuto | Plano promedio | Primer cambio | Palabras por minuto | Voz |
+|---|---|---|---|---|---|---|---|
+| Los 4 jinetes (uno tiene nombre) | Imágenes de IA realistas y épicas (tormenta, luz dorada), una palabra grande al centro | 44 s | 27 | 2,1 s | 3,6 s | 153 | Hombre, grave y lenta |
+| Jesús libera a los jinetes | Imágenes de IA doradas, una nueva casi cada segundo | 87 s | **69** | **0,9 s** | 4,3 s | 142 | Hombre, grave, tono de tráiler |
+| Agua en Arabia Saudita | Dibujo de monigotes con color plano, título fijo arriba | 294 s | 15 | 3,9 s | al instante | 178 | Hombre, narrador rápido |
+| **Nuestro Goliat (1.ª versión)** | Escenarios IA, objetos 3D, barras | 36 s | 17 | 3,3 s | 3,6 s | 174 | Mujer (Xiomi) |
+
+**Qué hacen ellos y nosotros todavía no:**
+1. **Una imagen nueva cada 1 a 2 s** en los Shorts de la Biblia: no mueven objetos sobre un fondo, cambian la imagen entera. Su fuerza es la imagen épica (luz, tormenta, escala), no el dibujo.
+2. **Gancho = misterio con nombre propio:** "De los cuatro jinetes, solo uno tiene nombre. Y viene con el infierno detrás de él." Primero la intriga y la respuesta al final.
+3. **Subtítulo de una o dos palabras**, grande y al centro (no la frase entera).
+4. **Voz de hombre grave y pausada**, con música de tráiler debajo.
+5. El de monigotes funciona con el **humor de la reacción** del personaje (la cara de sorpresa con el petróleo).
+
+**Lo que ya cambiamos:** una toma nueva cada 1,5 s en cada escena (antes era una a la mitad).
+**Pendiente (próximo contenido):** probar un Short de la Biblia con escenarios de IA a pantalla completa que cambian cada 1,5 s, y subtítulo de 1 o 2 palabras. Comparar el % visto contra el de Goliat.
+
+**El fondo `jerusalen-antigua` tiene una cúpula dorada**, como la del Domo de la Roca, que es del año 691: no sirve para escenas bíblicas. Desde ahora el estilo de los escenarios prohíbe cúpulas, cruces y mezquitas.
+
 ## Marcador: cada contenido tiene que superar al anterior
 Regla del usuario: **cada contenido nuevo mejora al anterior**. Antes de producir se leen las 3 mejoras que dejó el último. Al publicarlo se llena su fila, y a los 7 días se ponen sus datos reales.
 
