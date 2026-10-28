@@ -40,6 +40,7 @@ Cada tema: dato con fuente (en la Biblia, el pasaje citado) y una pregunta que c
 
 ## Banco de temas de la Biblia (serie)
 - **Enoc, el libro que quedó fuera (video largo, formato iceberg honesto):** quién era Enoc (Génesis 5:24), los vigilantes y los nefilim (1 Enoc 6-15), por qué solo Etiopía lo tiene en su Biblia, la cita en Judas 14-15, los manuscritos de Qumrán (cueva 4) y el calendario de 364 días. Al final, lo que se inventó después (anunnaki, ADN), dicho como invento.
+- **Lucifer (Short y video largo):** "Lucifer no aparece en la Biblia hebrea": Isaías 14:12 dice *Helel ben Shajar*, y Jerónimo lo tradujo "lucifer". Además, el mismo título se usa para Cristo en 2 Pedro 1:19 de la Vulgata. Ezequiel 28 está dirigido al rey de Tiro. Short aparte: "Miguel no es un nombre, es una pregunta: ¿Quién como Dios?". Sin rostro de Dios.
 - **Shorts de la misma línea:** "La burra que vio al ángel" (Números 22:21-33) · "El criado que vio el monte lleno de fuego" (2 Reyes 6:17) · "¿Por qué Etiopía tiene 81 libros en su Biblia?"
 **Los que más intriga dan (pedido del usuario, 28 oct):**
 - **Apocalipsis:** los 4 jinetes (solo uno tiene nombre: Muerte, Apocalipsis 6:8) · ¿Qué significa 666? (13:18; la lectura de muchos historiadores: el nombre de Nerón en números hebreos; en algunos manuscritos es 616) · Juan en la isla de Patmos (1:9) · Los 7 sellos · Armagedón es un lugar real (Meguido, Israel)

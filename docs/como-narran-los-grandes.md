@@ -82,6 +82,23 @@ Los dos comparten las técnicas: el anzuelo al cierre de cada parte, la imagen c
 - **Lección técnica (la única):** **los detalles concretos dan credibilidad.** Nosotros los usamos, pero solo si son reales y verificables. Si un dato no se puede comprobar en 2 fuentes, no entra.
 - **Riesgo:** YouTube castiga la desinformación y el contenido engañoso. Un canal así puede crecer rápido, pero no es nuestra línea.
 
+**"La historia jamás contada de la caída de Lucifer" (22 min): una buena historia, mal empaquetada.**
+- **Lo que funciona:**
+  - Es **una historia con personaje y conflicto interno**: el ángel perfecto que se enfría poco a poco ("todavía no había pecado").
+  - Tiene **diálogo** ("deseo serte fiel") y **un momento en cámara lenta** (el silencio y el "no" dicho dos veces).
+  - El **giro del más pequeño**: Miguel, de menor rango, grita "¿Quién como Dios?", y eso se vuelve su nombre.
+  - Un **remate** que da sentido a un nombre.
+- **Lo que falla:**
+  - Tarda 2 minutos en empezar, con promesas, "bienvenidos" y música.
+  - Lee versículos y luego los repite con otras palabras.
+  - Termina mendigando.
+  - **Mezcla la Biblia con una novela teológica** (el libro del padre Fortea, que es una narración especulativa) sin marcar bien dónde termina una y empieza la otra.
+  - **No da el contexto que más sorprende:**
+    - Ezequiel 28 está dirigido al rey de Tiro, e Isaías 14 al rey de Babilonia; la lectura que los aplica a Satanás es de la tradición posterior (Orígenes, Tertuliano).
+    - "Lucifer" es la palabra latina con que Jerónimo tradujo "Helel ben Shajar" (lucero, hijo de la aurora).
+    - En 2 Pedro 1:19 de la Vulgata, "lucifer" se refiere a Cristo.
+- **Para Khipu:** la historia dramatizada con diálogo sí funciona, pero se anuncia claramente ("así lo imagina la tradición" o "así lo novela un sacerdote") y se separa de lo que dice el texto. El contexto real es nuestro giro: es justo lo que esos videos no cuentan.
+
 ## Qué cambia en Khipu
 - **Videos largos de verdad:** este dura 31 minutos y retiene contando una cadena de historias. Nuestros largos tienen que pasar de 3 minutos a **8–12 minutos** (son los que suman horas para monetizar).
 - **Lista de revisión de cada guion largo:**
