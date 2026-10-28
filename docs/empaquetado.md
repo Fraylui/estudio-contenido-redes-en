@@ -42,3 +42,27 @@ Lo que se repite en las más vistas:
 - **Primeras 24 horas:** compartir en WhatsApp o Facebook, responder todos los comentarios y fijar uno con una pregunta.
 - **A las 48 horas:** si el CTR está por debajo del 4 o 5 %, **cambiar la miniatura**. Mejor aún, usar desde el inicio "Probar y comparar", la prueba A/B gratis de YouTube con 3 miniaturas.
 - **Tarjetas y pantalla final** que lleven al siguiente video de la misma serie.
+
+## Miniaturas de los 5 videos largos de referencia (28 oct)
+| Video | Qué tiene la miniatura |
+|---|---|
+| WW2 y WW1 "en 30 minutos" (Historia en Minutos) | **Dos rivales caricaturizados, uno en cada lado, mirándose**, con un mapa rojo contra azul detrás y banderas. Texto grande blanco con borde negro al centro: "WW2 EN 30 MINUTOS". **La misma plantilla en toda la serie.** |
+| Toda la Segunda Guerra Mundial (Te lo Pinto) | **Una sola cara enorme al centro mirando a cámara con enojo**, el fondo partido (fuego y nazis a un lado, aliados al otro) y **sin texto**. |
+| Los 4 jinetes (El DoQmentalista) | Una pintura épica en un solo color (rojo y naranja), con los jinetes arriba, **caras gritando abajo** y el título grande. |
+| Iceberg de Enoc (Relatos de André, 766 000) | **Partida en dos:** el iceberg (el concepto) contra una cara de terror (la emoción). Texto en blanco y amarillo con borde negro. |
+
+**Lo que se repite:**
+1. **Una cara con una emoción fuerte** (enojo, terror, grito).
+2. **El conflicto:** dos lados, dos rivales, dos colores.
+3. **De 0 a 4 palabras**, grandes y con borde negro.
+4. **Un color que domina** y mucho contraste.
+5. **La misma plantilla en toda la serie** (se reconoce el canal).
+
+**Títulos que suman millones:** comprimir el tiempo ("La Segunda Guerra Mundial en 17 minutos", 33 M; "en 20 minutos", 18,8 M), "Simplificada" (OverSimplified, 57 M), "Secretos que nadie se atreve a decir" (7,6 M).
+
+**Para Khipu:** las miniaturas de Atahualpa eran solo texto sobre una imagen, y eso es lo más débil. Desde Fleming:
+- una cara con emoción, que en la Biblia **nunca** es el rostro de Jesús ni de Dios: se usa a otro personaje, una silueta o la escena;
+- un conflicto o un contraste;
+- de 2 a 4 palabras;
+- la misma plantilla por serie.
+Se hacen 3 versiones para la prueba A/B de Studio.
