@@ -1,6 +1,6 @@
 # Calendario de contenido de Khipu
 
-Khipu trata todas las categorías (rotación en la skill `khipu-diario`); la Biblia es una serie fuerte. Cada Short tiene que dejar valor, con fuente. Shorts a las **12:00 p. m. y 8:00 p. m.**, y videos largos lunes y jueves (hora de Lima).
+Khipu trata todas las categorías (rotación en la skill `khipu-diario`); la Biblia es una serie fuerte. Cada Short tiene que dejar valor, con fuente. **4 Shorts al día** (7:00, 12:00, 16:00 y 20:00) y **4 videos largos por semana** (lunes, miércoles, viernes y domingo a las 10:00), hora de Lima. Rotación en la skill `khipu-diario`.
 Cada tema: dato con fuente (en la Biblia, el pasaje citado) y una pregunta que choque. Si un tema no pasa la investigación, se cambia por otro de la misma serie.
 
 ## Semana del 28 de octubre

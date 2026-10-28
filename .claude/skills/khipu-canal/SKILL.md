@@ -51,7 +51,7 @@ Todo cabe en Khipu, pero **el primer mes se prueban 3 líneas**, con el mismo es
 ## 1b. Lo que dicen los datos del canal (se actualiza cada semana)
 - **24 de octubre:** los Shorts sacaron 1 000 y 590 vistas en 48 h, y los videos largos 9 y 5. **Los Shorts son el motor de crecimiento ahora.**
   - Ganador: "Por qué [algo que le pasa a todos]" + un personaje que lo vive + una respuesta que sorprende, en 30–40 s.
-  - Por eso: 2 Shorts al día con título gancho fijo arriba (`"gancho"` en las props del video vertical) y de 3 a 5 Shorts por cada video largo.
+  - Por eso: 4 Shorts al día (decisión del usuario del 28 oct) y 4 videos largos por semana, con título gancho fijo arriba (`"gancho"` en las props del video vertical) y de 3 a 5 Shorts por cada video largo.
 
 ## 1c. Quién administra el canal
 Claude administra Khipu de punta a punta: elige los temas, investiga, produce, decide las horas y programa todo en Metricool (siempre público). El dueño del canal comparte, responde comentarios y hace en YouTube Studio lo que Metricool no permite (prueba A/B de miniaturas, banner). Cada decisión de horario se basa en los datos: en las estadísticas de la semana y en `getBestTimeToPostByNetwork` de Metricool.

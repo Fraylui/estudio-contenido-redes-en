@@ -21,7 +21,7 @@ La voz con IA **no** está prohibida; lo que se castiga es que todos los videos 
 - Cada video estrena técnicas nuevas (`docs/mejora-continua.md`). Nunca dos videos con la misma estructura visual.
 - **Opinión y criterio:** ejemplos peruanos y latinos, humor y un reto propio al final.
 - Se declara la IA (`isAiGeneratedContent`). Declararla no quita la monetización; ocultarla sí puede.
-- **Ritmo sostenible:** 2 o 3 videos largos por semana y un Short diario. Subir 10 videos al día parecería una granja de contenido.
+- **Ritmo sostenible:** 4 videos largos por semana y 4 Shorts al día (desde el 29 oct 2026), cada uno distinto de verdad. Subir 10 videos al día parecería una granja de contenido.
 
 ## 3. Lo que hacen los creadores que monetizan rápido
 1. **Todos los temas, ordenados en series.** Khipu no se limita a un nicho. Para que el algoritmo sepa a quién mostrar cada video, cada uno va en una serie con su lista de reproducción, y se repite más la serie que mejor funciona.
