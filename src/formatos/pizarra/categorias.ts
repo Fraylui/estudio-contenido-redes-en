@@ -1,4 +1,4 @@
-// Las 14 categorías de Khipu con su color de serie: se usan en las miniaturas para que cada serie se reconozca sin leer
+// Las 26 categorías de Khipu con su color de serie: se usan en las miniaturas para que cada serie se reconozca sin leer
 export const CATEGORIAS: Record<string, { nombre: string; fondo: string; franja: string }> = {
   ciencia: { nombre: "CIENCIA", fondo: "#7ec8ff", franja: "#1d4ed8" },
   habitos: { nombre: "HÁBITOS", fondo: "#b8f2c9", franja: "#15803d" },
@@ -14,4 +14,16 @@ export const CATEGORIAS: Record<string, { nombre: string; fondo: string; franja:
   animales: { nombre: "ANIMALES", fondo: "#d4f5a6", franja: "#3f6212" },
   misterios: { nombre: "MISTERIOS", fondo: "#3b3f63", franja: "#e11d48" },
   antiguo: { nombre: "MUNDO ANTIGUO", fondo: "#f3dfb6", franja: "#854d0e" },
+  biblia: { nombre: "LA BIBLIA", fondo: "#f5e6c4", franja: "#7c2d12" },
+  espacio: { nombre: "EL UNIVERSO", fondo: "#1e1b4b", franja: "#a78bfa" },
+  inventos: { nombre: "CÓMO FUNCIONA", fondo: "#fde68a", franja: "#b45309" },
+  marcas: { nombre: "HISTORIA DE MARCAS", fondo: "#fecaca", franja: "#991b1b" },
+  comida: { nombre: "COMIDA", fondo: "#fed7aa", franja: "#c2410c" },
+  leyendas: { nombre: "MITOS Y LEYENDAS", fondo: "#2e1065", franja: "#f59e0b" },
+  deportes: { nombre: "DEPORTES Y RÉCORDS", fondo: "#bbf7d0", franja: "#166534" },
+  tierra: { nombre: "PLANETA TIERRA", fondo: "#bae6fd", franja: "#075985" },
+  palabras: { nombre: "PALABRAS", fondo: "#fef9c3", franja: "#4d7c0f" },
+  arte: { nombre: "ARTE Y MÚSICA", fondo: "#fbcfe8", franja: "#9d174d" },
+  quepasaria: { nombre: "¿QUÉ PASARÍA SI…?", fondo: "#c7d2fe", franja: "#3730a3" },
+  sabiduria: { nombre: "SABIDURÍA", fondo: "#e7e5e4", franja: "#44403c" },
 };

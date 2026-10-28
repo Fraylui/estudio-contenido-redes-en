@@ -14,6 +14,19 @@ Cada tema: dato con fuente (en la Biblia, el pasaje citado) y una pregunta que c
 | Lun 2 | **Ciencia:** ¿Por qué los humanos somos tan inteligentes? | Ciencia: ¿Por qué el tiempo pasa más rápido cuando creces? | Hábitos: La regla de los 2 minutos |
 | Mar 3 | — | Cuerpo: Qué le pasa a tu cuerpo si duermes 5 horas | Psicología: ¿Por qué no puedes dejar de pensar en esa persona? |
 
+## Banco de temas de las categorías nuevas (28 oct)
+- **El universo:** ¿Qué hay dentro de un agujero negro? · ¿Por qué la Luna se aleja de la Tierra? · ¿Cuánto tardarías en llegar a Marte?
+- **Sabiduría:** Marco Aurelio y la regla de lo que depende de ti · Séneca: "No es que tengamos poco tiempo" · El experimento del malvavisco
+- **Comida:** ¿Por qué la papa salvó a Europa? (origen andino) · ¿Por qué el ají pica? · El cuy: de los Andes al mundo
+- **Palabras:** ¿Por qué decimos "OK"? · Palabras quechuas que usas sin saber (cancha, choclo, palta) · ¿De dónde viene "salario"? (sal)
+- **Mitos y leyendas:** El Tunche · La Pachamama · El Dorado: ¿existió? · La Llorona
+- **Historia de marcas:** Inca Kola contra Coca-Cola · Nokia: de papel a celulares · Por qué el logo de Apple tiene un mordisco
+- **Cómo funciona:** ¿Cómo sabe el GPS dónde estás? · ¿Por qué el avión no se cae? · ¿Cómo funciona el microondas?
+- **Deportes y récords:** El hombre más rápido de la historia · ¿Por qué el balón de fútbol tiene hexágonos? · El récord de Perú en el Mundial 1970
+- **Arte y música:** ¿Por qué la Mona Lisa es tan famosa? (la robaron en 1911) · La música que te eriza la piel (escalofrío musical)
+- **Planeta Tierra:** ¿Qué pasa dentro de un volcán? · El punto más profundo del océano · El Niño: por qué llueve en el desierto
+- **¿Qué pasaría si…?** …la Tierra dejara de girar · …no durmieras en 7 días · …todos saltáramos a la vez
+
 ## Banco de temas de la Biblia (serie)
 - **Personajes:** Sansón, Moisés de bebé en el Nilo, Pedro el pescador, Pablo antes de convertirse, Zaqueo el cobrador de impuestos, Herodes el Grande, Pilato (la piedra con su nombre).
 - **Lugares y arqueología:** Jerusalén en tiempos de Jesús, el estanque de Siloé (hallado en 2004), Belén, Nínive, el monte Sinaí (dónde estaría), Cafarnaúm.
