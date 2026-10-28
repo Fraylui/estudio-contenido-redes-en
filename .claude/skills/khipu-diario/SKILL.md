@@ -1,6 +1,6 @@
 ---
 name: khipu-diario
-description: Rutina diaria de producción y publicación del canal Khipu - 26 categorías, todas cada semana (ciencia, universo, hábitos, sabiduría, cuerpo, psicología, comida, palabras, historia del Perú, historia mundial, mitos y leyendas, Biblia, finanzas, economía, marcas, cómo funciona, tecnología, personajes, deportes, arte y música, lugares, animales, planeta Tierra, ¿qué pasaría si…?, misterios y mundo antiguo), cada Short con valor y fuente, 4 Shorts nativos al día (7:00, 12:00, 16:00 y 20:00 de Lima) y 4 videos largos por semana (lunes, miércoles, viernes y domingo a las 10:00), investigación previa, control de calidad y programación en Metricool. Usar cuando toque producir el contenido del día, cuando pregunten "qué sale hoy o mañana", o cuando corra la tarea programada diaria.
+description: Rutina diaria de producción y publicación del canal Khipu - 26 categorías, con un Short de la Biblia todos los días a las 20:00 (ciencia, universo, hábitos, sabiduría, cuerpo, psicología, comida, palabras, historia del Perú, historia mundial, mitos y leyendas, Biblia, finanzas, economía, marcas, cómo funciona, tecnología, personajes, deportes, arte y música, lugares, animales, planeta Tierra, ¿qué pasaría si…?, misterios y mundo antiguo), cada Short con valor y fuente, 4 Shorts nativos al día (7:00, 12:00, 16:00 y 20:00 de Lima) y 4 videos largos por semana (lunes, miércoles, viernes y domingo a las 10:00), investigación previa, control de calidad y programación en Metricool. Usar cuando toque producir el contenido del día, cuando pregunten "qué sale hoy o mañana", o cuando corra la tarea programada diaria.
 ---
 
 # Rutina diaria de Khipu
@@ -9,23 +9,25 @@ Objetivo: **cada día, contenido distinto y mejor que el anterior**, rotando cat
 La estrategia de fondo está en `khipu-canal`; la producción técnica, en `pizarra`; la voz, en `voz-narradora`.
 
 ## 1. Qué toca cada día: 4 Shorts al día y 4 videos largos por semana (desde el 29 oct 2026)
-Decisión del usuario: **4 Shorts diarios (28 por semana) y 4 videos largos por semana**. Con 28 turnos, las 26 categorías salen **todas, una vez por semana**, más la Biblia otra vez y la ganadora de la semana.
+Decisión del usuario: **4 Shorts diarios (28 por semana) y 4 videos largos por semana**. La Biblia tiene un Short **todos los días**; las otras 25 categorías salen al menos una vez cada 2 semanas.
 
-| Día | 07:00 | 12:00 | 16:00 | 20:00 | Video largo 10:00 |
+**La Biblia sale todos los días a las 20:00** (pedido del usuario: mínimo un Short de la Biblia al día), cada día con su serie. Las otras 25 categorías van a las 7:00, 12:00 y 16:00; la columna de las 16:00 cambia entre semana A y semana B para que entren todas.
+
+| Día | 07:00 | 12:00 | 16:00 (semana A / B) | 20:00 **Biblia** | Video largo 10:00 |
 |---|---|---|---|---|---|
-| Lunes | Ciencia y curiosidades | Hábitos y productividad | El universo | Sabiduría | **Sí:** ciencia o universo |
-| Martes | Cuerpo humano y salud | Psicología, emociones y amor | Comida | Palabras | — |
-| Miércoles | Historia del Perú y Latinoamérica | Historia mundial y guerras | Mitos y leyendas | **Biblia** | **Sí:** historia o Biblia |
-| Jueves | Finanzas personales | Economía y negocios | Historia de marcas | Cómo funciona | — |
-| Viernes | Tecnología e IA | Personajes que cambiaron la historia | Deportes y récords | Arte y música | **Sí:** personajes o tecnología |
-| Sábado | Lugares y países | Animales y naturaleza | Planeta Tierra | ¿Qué pasaría si…? | — |
-| Domingo | Misterios y enigmas | Mundo antiguo | **Biblia** | La categoría ganadora de la semana | **Sí:** misterios o la ganadora |
+| Lunes | Ciencia y curiosidades | Hábitos y productividad | El universo / Sabiduría | Personajes (quién fue de verdad) | **Sí:** ciencia o universo |
+| Martes | Cuerpo humano y salud | Psicología, emociones y amor | Comida / Palabras | Lugares y arqueología (con mapa) | — |
+| Miércoles | Historia del Perú y Latinoamérica | Historia mundial y guerras | Mitos y leyendas | Historias explicadas | **Sí:** historia |
+| Jueves | Finanzas personales | Economía y negocios | Historia de marcas / Cómo funciona | Vida cotidiana (monedas, comida, oficios) | — |
+| Viernes | Tecnología e IA | Personajes que cambiaron la historia | Deportes y récords / Arte y música | Profetas y reyes / palabras en hebreo o griego | **Sí:** personajes o tecnología |
+| Sábado | Lugares y países | Animales y naturaleza | Planeta Tierra / ¿Qué pasaría si…? | Mujeres de la Biblia / mapas y rutas | — |
+| Domingo | Misterios y enigmas | Mundo antiguo | La ganadora de la semana | Parábolas y enseñanza para la semana | **Sí:** Biblia (una historia completa con su contexto) |
 
 - Las horas son de Lima. Cada video largo va con su categoría alternando semana a semana, y deja 1 o 2 de los Shorts de su día como avance (nativos, nunca recortes).
 - **Ritmo de trabajo:** se produce con un día de adelanto (hoy se hace lo de mañana), para que una falla nunca deje un hueco. Cada proceso largo (voz, render) se lanza por separado, porque el servidor corta lo que pasa de 30 minutos.
 - **Cuidado con la "granja de contenido":** 4 Shorts al día está dentro de lo normal, pero solo si cada uno es distinto de verdad (tema, escenario, objetos, gancho y voz). Si dos se parecen, se cambia uno.
 - La voz de cada categoría está en `voz/voces.json`; el color de su miniatura, en `src/formatos/pizarra/categorias.ts`.
-- Cuando una categoría gana 2 semanas seguidas en % visto, gana el turno del domingo a las 20:00 y su video largo; la que pierde 3 veces seguidas se pausa y se reemplaza por una nueva.
+- Cuando una categoría gana 2 semanas seguidas en % visto, gana el turno del domingo a las 16:00 y su video largo; la que pierde 3 veces seguidas se pausa y se reemplaza por una nueva.
 
 **Khipu trata todas las categorías que existan** (lo confirmó el usuario el 28 de octubre). Lo que cambió el 27 de octubre es la exigencia: **cada Short tiene que dejar valor** (un dato que no se sabía, con fuente, o algo que se pueda aplicar), no solo curiosidad. La **Biblia** entra como serie fuerte: domingo a las 20:00 y, cuando no haya un buen tema de historia mundial, también el miércoles a las 20:00.
 Datos (Metricool, 27 oct): ganaron los Shorts de "por qué" con personaje (lunes 1 093 y 5 minutos más 1 295 vistas); los de dinero sacaron de 27 a 442.
