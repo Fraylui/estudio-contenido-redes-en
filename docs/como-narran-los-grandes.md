@@ -29,6 +29,18 @@ El mismo tema contado con otro estilo: **una sola idea central (una paradoja) qu
 19. **Mostrar el debate de los expertos:** "Incluso hoy, los historiadores discuten cuánto pesó cada uno."
 20. **Anunciar lo que viene sin contarlo:** "Tres lugares estaban a punto de revelar cuánto costaba realmente mantenerlo."
 
+## Tercer video: la Primera Guerra Mundial (33 min, mismo estilo que el segundo)
+21. **Marco que se cierra:** empieza en el último minuto de la historia ("11 de noviembre de 1918, faltan unos minutos para las 11…"), retrocede ("tenemos que regresar a otro verano: 1914") y al final vuelve exactamente a ese momento y a los andenes de 1914. Quien empezó el video quiere llegar a ese minuto.
+22. **Los sentidos, no solo los hechos:** "La tierra está húmeda. Los árboles ya no parecen árboles… el olor penetrante de la pólvora." "El ruido ya no llega como explosiones separadas: es un rugido continuo."
+23. **Un objeto como hilo de todo el video:** el tren y el horario ("una máquina extraordinariamente precisa… sin una forma sencilla de detenerla"), que vuelve al final: "la máquina todavía obedecía su horario".
+24. **Corregir la versión simple:** "No porque una alianza activara la siguiente como una fila de fichas de dominó. Hubo decisiones, hubo alternativas."
+25. **La anécdota pequeña que lo resume todo:** los taxis de París en el Marne ("pequeño en lo militar, perfecto como símbolo"); los emperadores primos que se escribían "Willy" y "Nicky" mientras sus ejércitos se movilizaban.
+26. **Un respiro humano en medio del horror:** la tregua de Navidad de 1914.
+27. **Una distinción que cambia todo:** "El soldado seguía dispuesto a luchar. Ya no estaba dispuesto a morir de cualquier manera."
+28. **Terminar con una pregunta de dos caras:** "¿Fue un accidente que destruyó el viejo mundo, o el viejo mundo llevando sus propios miedos hasta el final?"
+
+**Duración:** los tres videos de referencia duran de 28 a 33 minutos. Nuestra meta: primero de 8 a 12 minutos, y subir a 15–20 cuando la retención lo aguante.
+
 **Dos estilos para elegir según el tema:**
 - **Cronológico con remates** (video 1): para historias con muchos hechos y personajes (una guerra, una vida).
 - **Tesis-paradoja** (video 2): para explicar el porqué de algo (por qué cayó un imperio, por qué funciona un invento).
@@ -45,5 +57,7 @@ Los dos comparten las técnicas: el anzuelo al cierre de cada parte, la imagen c
   - [ ] ¿Hay un detalle humano?
   - [ ] ¿Hay un hilo que vuelve y un final que cierra el círculo?
   - [ ] ¿Se eligió el estilo (cronológico o tesis-paradoja), y la paradoja se dice en el primer minuto?
+  - [ ] ¿Empieza en un momento concreto, con detalles de los sentidos, y el final vuelve a ese momento?
+  - [ ] ¿Hay un objeto o un hilo que atraviesa todo el video?
   - [ ] ¿Hay un momento en segunda persona ("imagina que…") y una cifra enorme que se hace sentir?
 - **En los Shorts:** las técnicas 1, 4, 5 y 6 en miniatura (un dato que choca, una imagen concreta y un remate).
