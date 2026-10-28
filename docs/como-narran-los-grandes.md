@@ -174,6 +174,11 @@ Los dos comparten las técnicas: el anzuelo al cierre de cada parte, la imagen c
 - **Lo que falla:** no tiene gancho ni personaje; es una lista que se sostiene solo por el tema y las imágenes.
 - **Para Khipu:** una serie en cadena, **"Apocalipsis en 3 partes"** (los 7 sellos → las 7 trompetas → las 7 copas), donde cada una termina en la siguiente y todas llevan al video largo de los 4 jinetes. **Diseño de sonido:** en los momentos de silencio del texto se corta la música de verdad.
 
+**Short "Si él pierde interés, HAZ ESTO" (Psicología Práctica; solo vimos el título y el primer cuadro).**
+- **Título:** el problema del espectador + una orden con promesa ("HAZ ESTO:"). El canal repite el mismo título en 3 versiones: 211 000, 64 000 y 43 000 vistas.
+- **Imagen:** dibujo 2D simple, a mano, con **metáforas literales** (el amor que ella dio es una montaña de corazones sobre la que él está parado; ella le alcanza un frasco) y un **globo de diálogo** ("¿Estás loca?"). La idea abstracta se entiende sin leer nada.
+- **Para Khipu:** en psicología, hábitos y sabiduría usamos el formato Pizarra (Open Peeps) con una metáfora visual por escena y diálogos cortos en globo. Temas con el problema del espectador en el título ("Si no puedes dormir, haz esto").
+
 ## Búsqueda propia (28 oct): qué tiene millones de vistas ahora
 Con `scripts/investigar-youtube.py`. Desde este servidor, YouTube y Tactiq bloquean las transcripciones (piden demostrar que no es un robot), así que las transcripciones las pasa el usuario. Los títulos, las vistas y las duraciones sí se pueden buscar.
 - **Las "películas bíblicas" hechas con IA son lo que más crece:** "Las Crónicas de Enoc (Película 2026)", 7,7 M en 1 mes; otra de Enoc, 8,3 M en 3 meses; "El Libro de Enoc (2025)", 11 M. Duran de 55 min a 1 h 20 min. Es un formato en auge, y es nuestra serie fuerte.
