@@ -102,3 +102,14 @@ En `contenido/anuncio-*.json` cada escena puede indicar `"frase": n`, y entonces
 - Las bandas quedan cerca del objetivo de `ecualizar.py`, sobre todo 2–4 kHz.
 - El video final mide -14 ±0,5 LUFS con pico de -1 dBFS o menos: `ffmpeg -i out.mp4 -af ebur128=peak=true -f null -`.
 - Escúchalo con audífonos y pide a la persona que lo confirme. Ni Claude ni Whisper reemplazan un oído humano para juzgar la naturalidad.
+
+## Qué voz va en cada video (hipótesis del 28 oct, se confirma con datos)
+| Voz | Va en | Por qué |
+|---|---|---|
+| **Hombre grave y pausada** (Kokoro "Alex" o "Santa", o un clon de hombre con permiso) | Biblia épica, historia y guerras, misterios, personajes históricos, mundo antiguo | Los Shorts de referencia de la Biblia y de historia usan voz de hombre grave, tipo tráiler: da peso y suspenso |
+| **Mujer cálida y cercana** (Xiomi, Sayra) | Hábitos, psicología y emociones, cuerpo y salud, finanzas del día a día, animales, curiosidades de la vida diaria | Suena a alguien que te explica y te acompaña; nuestros 2 Shorts con más vistas (despertar, lunes) iban con Xiomi |
+| Cualquiera de las dos | Ciencia, tecnología, lugares, economía | Se prueban las dos y gana la de más % visto |
+
+- **Kokoro** (Apache 2.0, gratis y con uso comercial): `KPipeline(lang_code="e")`, voces `em_alex` y `em_santa` (hombre) y `ef_dora` (mujer). Instalación aparte: `uv venv -p 3.11` + `kokoro soundfile` + `espeak-ng`. Para que suene grave: `speed=0.85` y luego `rubberband=pitch=0.89:formant=preserved`.
+- **Truco:** la salida de Kokoro sirve como referencia de Chatterbox (`voz/referencias/kokoro-alex.wav`). Así la voz de hombre gana la expresión de Chatterbox sin copiar a ninguna persona real.
+- Cada voz se mide con el marcador de `docs/mejora-continua.md` (% visto) antes de volverla fija para una categoría.
