@@ -124,6 +124,17 @@ Datos de Metricool: vistas y tiempo promedio visto, y entre paréntesis el porce
 - Regla de gancho para Shorts: el primer cuadro tiene que entenderse sin sonido (escenario real, protagonista grande, título) y la primera frase pone en juego algo que le importa al que mira, en menos de 2 s.
 - **Meta:** pasar del 15–36 % visto en promedio a más del 60 %.
 
+## Marcador: cada contenido tiene que superar al anterior
+Regla del usuario: **cada contenido nuevo mejora al anterior**. Antes de producir se leen las 3 mejoras que dejó el último. Al publicarlo se llena su fila, y a los 7 días se ponen sus datos reales.
+
+| Contenido | Fecha | Estrenó | % visto en promedio | Vistas | 3 mejoras para el siguiente |
+|---|---|---|---|---|---|
+| Short Kakeibo | 23 oct | Primer Short | 26 % | 27 | Escenario real, personaje con emoción, más cambios visuales |
+| Shorts despertar (5 minutos, lunes) | 23 oct | Personaje con emoción y escenario de dormitorio | 36 % y 24 % | 1 295 y 1 093 | Título gancho arriba, menos de 30 s, ritmo |
+| Shorts gastos hormiga (tarjeta, 5 al día) | 24 oct | Título gancho fijo arriba | 15 % y 12 % | 442 y 158 | Primer cuadro ya armado, Shorts nativos, nunca fondo plano |
+| Short Goliat | 28 oct | Primer cuadro armado, objetos 3D de época, barras de altura, escenarios con IA nuevos | — | — | (se llena al publicar) |
+| Short 30 monedas | 28 oct | Lo mismo, con tono sepia y pasajes citados en pantalla | — | — | (se llena al publicar) |
+
 ## Cómo se decide qué mejorar
 - **Retención a los 30 s por debajo del 60 %:** mejorar el gancho (técnicas 3, 9 y 12).
 - **Caídas a mitad del video:** sumar ritmo (técnicas 1, 2, 7 y 8).

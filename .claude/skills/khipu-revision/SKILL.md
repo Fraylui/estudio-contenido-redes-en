@@ -5,7 +5,7 @@ description: Cómo Khipu mejora en cada video como un gran creador - analizar co
 
 # Revisión y mejora continua (nivel gran creador)
 
-Regla: **nunca repetir lo básico**. Antes de cada video nuevo se analiza el anterior con datos, y el nuevo tiene que superarlo en al menos 3 medidas.
+Regla: **nunca repetir lo básico; cada contenido mejora al anterior** (lo pidió el usuario). El marcador está en `docs/mejora-continua.md`: cada contenido tiene su fila y deja 3 mejoras para el siguiente. Antes de cada video nuevo se analiza el anterior con datos, y el nuevo tiene que superarlo en al menos 3 medidas.
 
 ## 1. Analizar el video anterior (antes de producir el siguiente)
 1. **Medir:** `voz/.venv/bin/python scripts/analizar-video.py <video.mp4> <carpeta>`, que da:
