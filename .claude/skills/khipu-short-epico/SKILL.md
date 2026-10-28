@@ -31,6 +31,8 @@ Una toma de otro video se reutiliza poniendo su nombre en `fondo`, sin repetirla
 
 ## 2. Reglas del guion (todas las pidió el usuario)
 - **Contar una historia:** personaje, conflicto, giro y desenlace. El dato va dentro de la historia y nunca debe confundir; por ejemplo, "Goliat medía 2 m" sin contexto hacía pensar que no era un gigante.
+- **Empezar en medio de la acción** (el momento más fuerte, no el contexto) y con un primer cuadro que sorprenda: la decisión de quedarse se toma en unos 2 s. Meta: "Visto vs. deslizado" de más de 70 %.
+- **Cada Short lleva a un video largo** del mismo tema: los Shorts casi no pagan, los largos sí (`docs/monetizacion.md`, 1c).
 - **El gancho en la primera frase:** algo en juego o un misterio con nombre propio. Nada de "hola" ni de presentaciones.
 - **Nunca mendigar:** ni "suscríbete" ni "comenta". El final es un remate fuerte que conecta con el inicio.
 - **Datos con fuente** en la descripción. Lo que viene de la tradición se dice así ("según la tradición…").

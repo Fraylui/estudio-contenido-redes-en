@@ -25,6 +25,19 @@ Cuenta: 4 000 h = 240 000 min. Un video de 8 min visto al 50 % aporta 4 min por 
 3. **Se mide cada semana el "Visto vs. deslizado"** con capturas que manda el usuario, porque Metricool no lo da. Meta: más del 70 % visto.
 4. **Nada de plantilla:** cada video cambia de escenario, objetos, gancho, voz y estructura (`khipu-diario`).
 
+## 1c. Shorts virales y monetizables (investigación del 28 oct, segunda parte)
+- **Los Shorts pagan muy poco por sí solos:** entre 0,03 y 0,10 dólares por cada 1 000 vistas según vidIQ, y menos del 2 % de lo que gana un canal según AIR Media-Tech (274 canales). **El dinero está en los videos largos.** Los Shorts sirven para que la gente nos descubra y vaya al video largo: cada Short tiene que llevar a uno.
+- **La meta del "Visto vs. deslizado":** en un estudio de 5 400 Shorts (Galloway y Gileta, 2023), los mejores tenían entre 70 y 90 %, y los de menos de 60 % casi nunca despegaban. **Meta de Khipu: más de 70 %.**
+- **La decisión se toma en unos 2 segundos.** Lo que más funciona en el arranque:
+  - **empezar en medio de la acción**, en el momento más fuerte de la historia, nunca en el contexto;
+  - un **primer cuadro que sorprenda** (algo enorme, algo raro, algo fuera de lugar);
+  - una **pregunta concreta escrita en pantalla**.
+- **El final:** cortar limpio apenas termina la idea (un segundo de más baja la retención) y, si se puede, que la última frase lleve de vuelta a la primera. Cuando la gente lo vuelve a ver, el % visto pasa del 100 %.
+- **Duración:** los datos no se ponen de acuerdo (algunos dan ventaja a los de 50–60 s y otros a los de menos de 30 s). Regla nuestra: la historia dura lo que necesita, sin relleno, y se mide con el % visto de nuestros propios Shorts.
+- **Música:** en los Shorts con música del catálogo de YouTube, parte del dinero va a la discográfica. Nuestra música va dentro del video, es de Kevin MacLeod y lleva crédito.
+
+Fuentes: [AIR Media-Tech, RPM de Shorts](https://air.io/en/air-data-findings/youtube-shorts-rpm-vs-long-form-how-much-do-shorts-earn-in-2026), [vidIQ, monetización de Shorts](https://vidiq.com/blog/post/youtube-shorts-monetization/), [Piktochart](https://piktochart.com/blog/how-long-youtube-shorts/), [Aibrify](https://aibrify.com/en/blog/youtube-shorts-retention-curve-playbook), [Eliro](https://eliro.pro/blog/short-form-video-hooks-script-guide-2026), [Toptal](https://www.toptal.com/creator/post/youtube-shorts-length).
+
 ## 2. El gran riesgo: "contenido no auténtico"
 Desde julio de 2025 YouTube llama así a lo **producido en masa, con plantilla y poca variación**. Es el motivo principal por el que rechazan canales con IA.
 La voz con IA **no** está prohibida; lo que se castiga es que todos los videos parezcan iguales y sin aporte propio.
