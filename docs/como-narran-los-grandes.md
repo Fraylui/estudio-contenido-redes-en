@@ -165,6 +165,19 @@ Los dos comparten las técnicas: el anzuelo al cierre de cada parte, la imagen c
   - Termina con un reto para compartir ("mándaselo al amigo que no sabe nombrar a los 12"). No pide suscripción, pero sí pide algo. Lo consultamos con el usuario antes de usarlo.
 - **Para Khipu:** el tema ya estaba en el banco de la Biblia, y esta es su estructura. **La fórmula "misterio prometido para el final + lista rápida con un detalle concreto por punto + remate en paradoja" sirve para cualquier categoría.**
 
+## Búsqueda propia (28 oct): qué tiene millones de vistas ahora
+Con `scripts/investigar-youtube.py`. Desde este servidor, YouTube y Tactiq bloquean las transcripciones (piden demostrar que no es un robot), así que las transcripciones las pasa el usuario. Los títulos, las vistas y las duraciones sí se pueden buscar.
+- **Las "películas bíblicas" hechas con IA son lo que más crece:** "Las Crónicas de Enoc (Película 2026)", 7,7 M en 1 mes; otra de Enoc, 8,3 M en 3 meses; "El Libro de Enoc (2025)", 11 M. Duran de 55 min a 1 h 20 min. Es un formato en auge, y es nuestra serie fuerte.
+- **Palabras de los títulos que funcionan:**
+  - "Excluido de la Biblia" (17,6 M);
+  - "El Iceberg de la Biblia" (9,8 M);
+  - "Misterios de México que nadie puede explicar" (6 M);
+  - "Secretos ocultos";
+  - "aún sin resolver: la ciencia no ha podido".
+  Es decir: lo prohibido, lo oculto, lo sin explicación, y el país en el título.
+- **Los apóstoles en video corto** ya tienen 6,6 M ("Así fue la muerte de los 12 apóstoles", 12 min): el tema está probado.
+- **Incas:** TED-Ed y CuriosaMente tienen de 3 a 4 M con 5 minutos. Hay hueco para una versión con historia y misterio ("25 misterios del Imperio inca" tiene 2 M).
+
 ## Qué cambia en Khipu
 - **Videos largos de verdad:** este dura 31 minutos y retiene contando una cadena de historias. Nuestros largos duran **lo que la historia necesite (8–12 min de base)** (son los que suman horas para monetizar).
 - **Lista de revisión de cada guion largo:**
