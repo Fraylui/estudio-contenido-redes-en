@@ -28,6 +28,8 @@ voz/.venv/bin/python voz/ecualizar.py nota.m4a voz/referencias/xiomi.wav --refer
 voz/.venv/bin/python voz/ecualizar.py cuento.m4a voz/referencias/xiomi-alegre.wav --referencia
 ```
 
+**Si la grabación viene de WhatsApp o tiene eco** (cuarto vacío, fondo opaco, picos recortados), límpiala antes: `voz/.venv/bin/python voz/limpiar.py nota.opus limpia.wav` repara los picos (adeclip), quita el eco con WPE y baja el ruido al 75 % con noisereduce; luego pasa `limpia.wav` por `ecualizar.py`, que le devuelve el brillo (las notas de WhatsApp llegan sin agudos: 2–4 kHz unos 11 dB por debajo). DeepFilterNet sería mejor, pero su modelo oficial está en GitHub y aquí no se puede bajar.
+
 Si la persona mandó una sola grabación larga, transcríbela, busca los tramos y recórtalos con `ffmpeg -ss <inicio> -t <duración>`. Elige tramos sin errores ni repeticiones, porque la referencia también contagia las muletillas.
 
 ## 3. Narrar
