@@ -29,7 +29,8 @@
     "resaltar": "Goliat?",
     "sonido": "flash_shock",
     "sonidoEn": 0.05,
-    "fondo": "ia:valle-ela"
+    "fondo": "ia:valle-ela",
+    "ambiente": "historia/big-army-crowd-marching"
    },
    {
     "dibujo": {
@@ -120,7 +121,8 @@
     "resaltar": "57 kg",
     "sonido": "boom",
     "sonidoEn": 0.3,
-    "fondo": "ia:valle-ela"
+    "fondo": "ia:valle-ela",
+    "ambiente": "naturaleza/wind-blowing-ambience"
    },
    {
     "dibujo": {
@@ -135,10 +137,11 @@
     },
     "texto": "Una honda y una piedra.",
     "resaltar": "una piedra.",
-    "sonido": "whoosh",
-    "sonidoEn": 0.2,
+    "sonido": "transiciones/short-wind-swoosh",
+    "sonidoEn": 0.3,
     "fondo": "ia:valle-ela:paneo",
-    "silueta": true
+    "silueta": true,
+    "ambiente": "naturaleza/wind-blowing-ambience"
    },
    {
     "dibujo": {
@@ -152,7 +155,8 @@
     },
     "texto": "¿2 o 3 metros?",
     "resaltar": "3 metros?",
-    "fondo": "ia:valle-ela"
+    "fondo": "ia:valle-ela",
+    "ambiente": "naturaleza/wind-blowing-ambience"
    }
   ],
   "narracion": [

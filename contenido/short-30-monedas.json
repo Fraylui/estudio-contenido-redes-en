@@ -26,7 +26,8 @@
     "resaltar": "30",
     "sonido": "flash_shock",
     "sonidoEn": 0.05,
-    "fondo": "ia:templo-noche"
+    "fondo": "ia:templo-noche",
+    "ambiente": "historia/restaurant-crowd-talking-ambience"
    },
    {
     "dibujo": {
@@ -39,7 +40,8 @@
     },
     "texto": "El pago a Judas",
     "resaltar": "Judas",
-    "fondo": "ia:templo-noche:paneo"
+    "fondo": "ia:templo-noche:paneo",
+    "ambiente": "historia/restaurant-crowd-talking-ambience"
    },
    {
     "dibujo": {
@@ -99,7 +101,8 @@
     "resaltar": "esclavo",
     "sonido": "boom",
     "sonidoEn": 1.6,
-    "fondo": "ia:templo-noche"
+    "fondo": "ia:templo-noche",
+    "ambiente": "historia/restaurant-crowd-talking-ambience"
    },
    {
     "dibujo": {
@@ -125,7 +128,8 @@
     "texto": "Un campo para extranjeros",
     "resaltar": "campo",
     "fondo": "ia:campo-alfarero:paneo",
-    "particulas": "polvo"
+    "particulas": "polvo",
+    "ambiente": "naturaleza/scary-graveyard-wind"
    },
    {
     "dibujo": {
@@ -141,7 +145,8 @@
     },
     "texto": "¿Lo sabías?",
     "resaltar": "sabías?",
-    "fondo": "ia:templo-noche"
+    "fondo": "ia:templo-noche",
+    "ambiente": "historia/restaurant-crowd-talking-ambience"
    }
   ],
   "narracion": [
