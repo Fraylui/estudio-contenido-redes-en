@@ -8,7 +8,7 @@
 // Los videos quedan en out/<nombre-del-archivo>-<Tamaño>.mp4 (y las miniaturas en .png)
 import { execFileSync } from "node:child_process";
 import { createHash } from "node:crypto";
-import { existsSync, readdirSync, readFileSync, writeFileSync, mkdirSync } from "node:fs";
+import { existsSync, readdirSync, readFileSync, renameSync, writeFileSync, mkdirSync } from "node:fs";
 import { join, basename } from "node:path";
 
 const args = process.argv.slice(2);
@@ -81,11 +81,26 @@ for (const archivo of archivos) {
   for (const tamano of tamanos) {
     const salida = `out/${nombre}-${tamano}.mp4`;
     console.log(`\n▶ ${archivo} → ${salida}`);
-    execFileSync(
-      "npx",
-      ["remotion", "render", `${formato}-${tamano}`, salida, `--props=${rutaProps}`],
-      { stdio: "inherit" },
-    );
+    if (!args.includes("--partes")) {
+      execFileSync("npx", ["remotion", "render", `${formato}-${tamano}`, salida, `--props=${rutaProps}`], { stdio: "inherit" });
+      continue;
+    }
+    // --partes: render en tramos de 20 s que se guardan uno por uno. Si el servidor se reinicia (pasa cada 20–40 min),
+    // al volver a correr solo se hacen los tramos que faltan. Al final se unen sin volver a codificar.
+    const total = Math.ceil((props.duracionVoz ?? 60) * 30) + 30;
+    const carpetaPartes = `out/partes/${nombre}-${tamano}`;
+    mkdirSync(carpetaPartes, { recursive: true });
+    const lista = [];
+    for (let a = 0; a < total; a += 600) {
+      const b = Math.min(a + 599, total - 1);
+      const parte = `${carpetaPartes}/${String(a).padStart(6, "0")}.mp4`;
+      lista.push(`file '${parte.split("/").pop()}'`);
+      if (existsSync(parte)) continue;
+      execFileSync("npx", ["remotion", "render", `${formato}-${tamano}`, `${parte}.tmp.mp4`, `--props=${rutaProps}`, `--frames=${a}-${b}`], { stdio: "inherit" });
+      renameSync(`${parte}.tmp.mp4`, parte);
+    }
+    writeFileSync(`${carpetaPartes}/lista.txt`, lista.join("\n") + "\n");
+    execFileSync("ffmpeg", ["-v", "error", "-y", "-f", "concat", "-safe", "0", "-i", `${carpetaPartes}/lista.txt`, "-c", "copy", salida], { stdio: "inherit" });
   }
 }
 
