@@ -18,10 +18,6 @@
      "iconos": [
       [
        "img:goliat"
-      ],
-      [
-       "question-mark",
-       "#ffe14d"
       ]
      ]
     },
@@ -126,9 +122,6 @@
      "iconos": [
       [
        "img:goliat"
-      ],
-      [
-       "img:casco-bronce"
       ]
      ],
      "rotulo": "57 kg"
@@ -162,9 +155,6 @@
    {
     "dibujo": {
      "iconos": [
-      [
-       "img:david"
-      ],
       [
        "img:goliat"
       ]
