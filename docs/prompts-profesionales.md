@@ -52,3 +52,10 @@ El usuario no entendió qué era el rollo de la Biblia: parecía un jabón o una
 - **Describir el objeto por sus partes reconocibles:** no "a scroll", sino "two dark carved wooden rollers at both ends, aged yellow parchment with faint columns of ink handwriting". Lo que hace que alguien lo reconozca tiene que estar en el prompt.
 - **Revisar siempre que no haya cosas fuera de época:** de 3 templos, uno salió con cúpula dorada y se descartó.
 - `objeto3d` (plastilina) queda solo para temas cotidianos y tiernos (hábitos, finanzas del día a día). Para historia, Biblia, misterios y ciencia se usa `objeto-epico`.
+
+## Imágenes sin deformaciones (el usuario lo pidió el 28 oct: "parecen distorsionadas")
+SD-Turbo es rápido pero chico: deforma **manos, caras pequeñas, multitudes y cualquier letra**. Reglas:
+1. **No pedir lo que deforma:** manos en primer plano, texto o monedas con inscripción, multitudes con caras, varios personajes tocándose. Mejor: objetos, lugares, una sola cara grande de frente, siluetas a media distancia.
+2. **Personas y lugares reales → imágenes reales libres** (fotos de época y pinturas de dominio público de Wikimedia Commons o NASA, con `scripts/imagen-libre.py` y su crédito) antes que inventarlas.
+3. **4 variantes por toma** en lugar de 2, y se descarta cualquiera con dedos, ojos o letras raras. Si ninguna sirve, se cambia el encuadre, no se acepta.
+4. **Probar un modelo mejor y gratis con licencia comercial** cuando la máquina y el disco lo permitan (el disco de la sesión es limitado; FLUX.1-schnell necesita unos 12 GB): comparar lado a lado con SD-Turbo y mostrárselo al usuario antes de cambiar.
