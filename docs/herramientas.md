@@ -92,3 +92,8 @@ Para que se vean cosas **reales**: el lugar como es hoy, un cuadro antiguo, un m
 - **Nunca** imágenes de Google sin revisar su licencia, ni capturas de otros videos o películas.
 - Cada imagen descargada se anota en `public/assets/ia/CREDITOS-LIBRES.md`, y su crédito va en la descripción del video.
 
+
+## Estilos para más adelante (el usuario los aprobó el 28 oct)
+- **Manhwa / webtoon semi-realista** (coreano: proporciones humanas, línea limpia, sombras suaves) y **anime moderno** (japonés).
+- **Para quién:** series con personajes que vuelven (historias, leyendas, psicología con personaje fijo) y Shorts para el público joven.
+- **Lo que falta:** SD-Turbo hace líneas sucias en 2D. Hay que probar un modelo de anime o manhwa **gratis y con licencia que permita uso comercial** (revisar la licencia de cada uno antes de usarlo; muchos son OpenRAIL o "Fair AI Public License" con condiciones), con el sistema de 4 capas: personaje sobre fondo blanco, ficha del personaje, fondo aparte y unión con capas. El disco y la máquina tienen que estar libres (un modelo XL ocupa unos 7 GB).
