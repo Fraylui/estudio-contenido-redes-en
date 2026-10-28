@@ -20,10 +20,11 @@ if [[ "$N" == largo-* ]]; then ANCHO=768; ALTO=448; FINAL=1920; LOTE="--horizont
 else ANCHO=448; ALTO=768; FINAL=1080; LOTE=""; SUF="Vertical"; fi
 log() { echo "[$N] $*"; }
 toca() { [[ -z "$SOLO" || "$SOLO" == "$1" ]]; }
-tomas() { python3 -c "import json,sys;[print(k) for k in json.load(open(sys.argv[1])) if not k.startswith('_')]" "$TOMAS"; }
+LISTA=$(python3 -c "import json,sys;[print(k) for k in json.load(open(sys.argv[1])) if not k.startswith('_')]" "$TOMAS")
+tomas() { echo "$LISTA"; }
 # Las escenas que reutilizan una toma de otro video no están en tomas.json: se revisa que exista
 for t in $(python3 -c "import json,sys;[print(e['fondo'].split(':')[1]) for e in json.load(open(sys.argv[1]))['props']['escenas'] if e.get('fondo','').startswith('ia:')]" "contenido/$N.json" | sort -u); do
-  grep -qx "$t" <(tomas) || [ -f "public/assets/ia/$t.jpg" ] || { log "falta la toma $t (ni en $TOMAS ni en public/assets/ia)"; exit 1; }
+  grep -qx "$t" <<< "$LISTA" || [ -f "public/assets/ia/$t.jpg" ] || { log "falta la toma $t (ni en $TOMAS ni en public/assets/ia)"; exit 1; }
 done
 
 if toca tomas; then
@@ -39,6 +40,7 @@ fi
 if toca hoja; then
   log "2/7 hoja para elegir → $REV/$N-tomas.jpg"
   faltan=$(for t in $(tomas); do [ -f "public/assets/ia/$t.jpg" ] || echo "$t"; done)
+  for t in $faltan; do [ -f "$VAR/$t-2.png" ] || { log "todavía faltan imágenes de $t: corre el paso tomas"; exit 2; }; done
   if [ -n "$faltan" ]; then
     entradas=(); filtro=""; i=0
     for t in $faltan; do for v in 1 2; do entradas+=(-i "$VAR/$t-$v.png"); filtro+="[$i]scale=-2:300,drawtext=text='$t $v':x=6:y=6:fontsize=16:fontcolor=white:box=1:boxcolor=black@0.6[v$i];"; i=$((i+1)); done; done
