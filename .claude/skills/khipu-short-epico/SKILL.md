@@ -20,7 +20,8 @@ Todo el proceso es **un comando**: `bash scripts/short-epico.sh <nombre>`. Hace 
 - **Una frase de narración = una escena = una toma.** Con `":paneo"` al final del fondo, la cámara se mueve más.
 - **Voz:** la copia de `voz/voces.json` según la categoría. Los videos largos van siempre con Xiomi.
 - **El video largo no lleva `gancho`.** Sus secciones se marcan con `"etiqueta"`.
-- **Extras por escena:** `particulas` (polvo, brasas, lluvia, chispas, nieve), `ambiente` (sonido de fondo de la biblioteca) y `sonido` + `sonidoEn` (golpe).
+- **Extras por escena:** `particulas` (polvo, brasas, lluvia, chispas, nieve, **niebla** que avanza, **rayos** de luz que respiran), `ambiente` (sonido de fondo de la biblioteca) y `sonido` + `sonidoEn` (golpe).
+- **Movimiento:** cada toma se mueve sola como filmada: la cámara se turna entre acercar, derecha, alejar, izquierda, subir y bajar, y la profundidad mueve lo cercano más que lo lejano. Se puede forzar con `"camara": "acercar"`. Úsalo con intención: `acercar` para revelar o dar tensión, `alejar` para mostrar escala, `subir` para lo enorme (Goliat, montañas) y los barridos para viajes y caminos.
 
 **`imagen/tomas/<nombre>.json`**, una toma por escena:
 ```json

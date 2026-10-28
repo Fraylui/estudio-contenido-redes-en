@@ -51,7 +51,9 @@ export const pizarraSchema = z.object({
       // Antes y después en pantalla dividida: [dibujo de antes, dibujo de después]
       antesDespues: z.tuple([z.union([z.string(), composicionSchema]), z.union([z.string(), composicionSchema])]).optional(),
       // Partículas en bucle sobre la escena: lluvia, polvo, chispas, nieve o brasas
-      particulas: z.enum(["lluvia", "polvo", "chispas", "nieve", "brasas"]).optional(),
+      particulas: z.enum(["lluvia", "polvo", "chispas", "nieve", "brasas", "niebla", "rayos"]).optional(),
+      // Movimiento de cámara sobre la toma (2.5D): si no se indica, se turnan solos para que ninguna escena se mueva igual
+      camara: z.enum(["acercar", "alejar", "izquierda", "derecha", "subir", "bajar"]).optional(),
       barras: z.array(z.object({ etiqueta: z.string(), valor: z.number(), color: z.string().optional() })).optional(),
     }),
   ),
@@ -75,7 +77,30 @@ const PARTICULAS = {
   nieve: { n: 90, vy: 2.2, vx: 0.7, tam: [5, 11], color: "rgba(255,255,255,0.9)", sube: false },
   brasas: { n: 45, vy: -2.6, vx: 0.5, tam: [4, 9], color: "rgba(255,120,40,0.9)", sube: true },
 } as const;
-const Particulas: React.FC<{ tipo: keyof typeof PARTICULAS }> = ({ tipo }) => {
+// Niebla que avanza despacio y rayos de luz que respiran: hacen que la imagen fija parezca viva
+const Atmosfera: React.FC<{ tipo: "niebla" | "rayos" }> = ({ tipo }) => {
+  const frame = useCurrentFrame();
+  if (tipo === "rayos") return (
+    <AbsoluteFill style={{ pointerEvents: "none", mixBlendMode: "screen", opacity: 0.35 + 0.15 * Math.sin(frame / 22),
+      background: `repeating-linear-gradient(${105 + 4 * Math.sin(frame / 60)}deg, rgba(255,220,160,0) 0px, rgba(255,220,160,0.22) 40px, rgba(255,220,160,0) 120px)`,
+      maskImage: "linear-gradient(to bottom, black 0%, transparent 75%)", WebkitMaskImage: "linear-gradient(to bottom, black 0%, transparent 75%)" }} />
+  );
+  return (
+    <AbsoluteFill style={{ pointerEvents: "none", overflow: "hidden" }}>
+      {[0, 1, 2, 3].map((k) => (
+        <div key={k} style={{ position: "absolute", width: "90%", height: "28%", borderRadius: "50%", filter: "blur(60px)",
+          background: "rgba(235,235,230,0.32)", top: `${[55, 68, 40, 78][k]}%`,
+          left: `${(((frame * (0.12 + k * 0.05) + k * 37) % 160) - 60)}%` }} />
+      ))}
+    </AbsoluteFill>
+  );
+};
+
+const Particulas: React.FC<{ tipo: keyof typeof PARTICULAS | "niebla" | "rayos" }> = ({ tipo }) => {
+  if (tipo === "niebla" || tipo === "rayos") return <Atmosfera tipo={tipo} />;
+  return <ParticulasSueltas tipo={tipo} />;
+};
+const ParticulasSueltas: React.FC<{ tipo: keyof typeof PARTICULAS }> = ({ tipo }) => {
   const frame = useCurrentFrame();
   const { width, height } = useVideoConfig();
   const p = PARTICULAS[tipo];
@@ -284,7 +309,7 @@ export const Pizarra: React.FC<Props> = ({ escenas, voz, frasesVoz, musica, ganc
         desde += duracion;
         return (
           <Sequence key={i} from={inicio} durationInFrames={duracion}>
-            {e.mapa ? <Mapa {...e.mapa} duracion={duracion} /> : <Fondo nombre={fondos[i]} />}
+            {e.mapa ? <Mapa {...e.mapa} duracion={duracion} /> : <Fondo nombre={fondos[i]} camara={e.camara ?? CAMARAS[i % CAMARAS.length]} duracion={duracion} />}
             <Escena {...e} indice={i} />
             {(() => {
               const nueva = e.etiqueta !== undefined && e.etiqueta !== etiqueta;
@@ -374,8 +399,13 @@ const MODERNOS: Record<string, [string, string, string]> = {
 // 2.5D: con el mapa de profundidad (Depth Anything), lo cercano se desplaza más que lo lejano mientras la cámara
 // avanza, como si la cámara se moviera dentro del escenario. Las imágenes de un <svg> no esperan a cargarse solas,
 // así que el render se detiene (delayRender) hasta que la foto y su profundidad están listas: sin esto salían cuadros negros.
-const FondoProfundo: React.FC<{ archivo: string; paneo: boolean }> = ({ archivo, paneo }) => {
+type Camara = "acercar" | "alejar" | "izquierda" | "derecha" | "subir" | "bajar";
+const CAMARAS: Camara[] = ["acercar", "derecha", "alejar", "izquierda", "subir", "bajar"];
+// La cámara se mueve de verdad (acercar, alejar, barrer, subir o bajar) y, a la vez, la profundidad desplaza lo cercano
+// más que lo lejano en la misma dirección: así la foto fija se ve como una toma filmada.
+const FondoProfundo: React.FC<{ archivo: string; camara: Camara; fuerte: boolean; duracion: number }> = ({ archivo, camara, fuerte, duracion }) => {
   const frame = useCurrentFrame();
+  const { width, height } = useVideoConfig();
   const foto = staticFile(`assets/ia/${archivo}.jpg`);
   const prof = staticFile(`assets/ia/${archivo}-prof.png`);
   const [espera] = useState(() => delayRender(`fondo 2.5D ${archivo}`));
@@ -387,17 +417,26 @@ const FondoProfundo: React.FC<{ archivo: string; paneo: boolean }> = ({ archivo,
       img.src = src;
     }))).then(() => continueRender(espera));
   }, [espera, foto, prof]);
-  const { width, height } = useVideoConfig();
+  const t = interpolate(frame, [0, Math.max(30, duracion)], [0, 1], { extrapolateRight: "clamp", easing: Easing.bezier(0.33, 0, 0.67, 1) });
+  const amp = fuerte ? 1.6 : 1;
+  const zoom = camara === "acercar" ? 1.1 + 0.16 * t : camara === "alejar" ? 1.26 - 0.16 * t : 1.2;
+  const dx = camara === "derecha" ? (4 - 8 * t) * amp : camara === "izquierda" ? (-4 + 8 * t) * amp : 0;
+  const dy = camara === "subir" ? 3 - 6 * t : camara === "bajar" ? -3 + 6 * t : 0;
+  // Dirección del paralaje: en los barridos, horizontal; al subir o bajar, vertical; al acercar o alejar, un poco de ambos
+  const [kx, ky] = dx ? [1, 0.15] : dy ? [0.15, 1] : [0.6, 0.6];
+  const s = (camara === "alejar" || camara === "izquierda" || camara === "bajar" ? -1 : 1) * interpolate(t, [0, 1], [-22, 22]) * amp;
   const id = `prof-${archivo}`;
-  const s = interpolate(frame, [0, 150], paneo ? [-28, 28] : [-16, 16], { extrapolateRight: "clamp" });
   return (
     <AbsoluteFill style={{ overflow: "hidden", backgroundColor: "#1f1f1f" }}>
       <svg viewBox={`0 0 ${width} ${height}`} preserveAspectRatio="xMidYMid slice" style={{ width: "100%", height: "100%",
-        scale: `${interpolate(frame, [0, 300], [1.12, 1.2], { extrapolateRight: "clamp" })}`, filter: "brightness(0.95) saturate(1.08)" }}>
+        scale: `${zoom}`, translate: `${dx}% ${dy}%`,
+        filter: `brightness(${0.95 + 0.025 * Math.sin(frame / 24)}) saturate(1.08)` }}>
         <defs>
           <filter id={id} x="0" y="0" width="100%" height="100%" colorInterpolationFilters="sRGB">
             <feImage href={prof} preserveAspectRatio="xMidYMid slice" result="prof" />
-            <feDisplacementMap in="SourceGraphic" in2="prof" scale={s} xChannelSelector="R" yChannelSelector="G" />
+            <feColorMatrix in="prof" type="matrix" result="dir"
+              values={`${kx} 0 0 0 ${(1 - kx) / 2}  0 ${ky} 0 0 ${(1 - ky) / 2}  0 0 1 0 0  0 0 0 1 0`} />
+            <feDisplacementMap in="SourceGraphic" in2="dir" scale={s} xChannelSelector="R" yChannelSelector="G" />
           </filter>
         </defs>
         <image href={foto} width={width} height={height} preserveAspectRatio="xMidYMid slice" filter={`url(#${id})`} />
@@ -407,7 +446,7 @@ const FondoProfundo: React.FC<{ archivo: string; paneo: boolean }> = ({ archivo,
   );
 };
 
-const Fondo: React.FC<{ nombre: string }> = ({ nombre }) => {
+const Fondo: React.FC<{ nombre: string; camara?: Camara; duracion?: number }> = ({ nombre, camara = "acercar", duracion = 150 }) => {
   const frame = useCurrentFrame();
   if (nombre === "papel") return null;
   // Fondo ilustrado con IA (public/assets/ia/<nombre>.jpg): un poco desenfocado y oscuro para dar profundidad
@@ -417,7 +456,7 @@ const Fondo: React.FC<{ nombre: string }> = ({ nombre }) => {
     const paneo = modo === "paneo";
     // 2.5D: con el mapa de profundidad (Depth Anything), lo cercano se desplaza más que lo lejano mientras la cámara
     // avanza, como si la cámara se moviera dentro del escenario. El desplazamiento recorre de −S a +S en la escena.
-    if (CON_PROFUNDIDAD.has(archivo)) return <FondoProfundo archivo={archivo} paneo={paneo} />;
+    if (CON_PROFUNDIDAD.has(archivo)) return <FondoProfundo archivo={archivo} camara={paneo ? "derecha" : camara} fuerte={paneo} duracion={duracion} />;
     return (
       <AbsoluteFill style={{ overflow: "hidden", backgroundColor: "#1f1f1f" }}>
         <Img src={staticFile(`assets/ia/${archivo}.jpg`)} style={{
