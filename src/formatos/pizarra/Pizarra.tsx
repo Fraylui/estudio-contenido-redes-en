@@ -54,6 +54,18 @@ export const pizarraSchema = z.object({
       particulas: z.enum(["lluvia", "polvo", "chispas", "nieve", "brasas", "niebla", "rayos"]).optional(),
       // Movimiento de cámara sobre la toma (2.5D): si no se indica, se turnan solos para que ninguna escena se mueva igual
       camara: z.enum(["acercar", "alejar", "izquierda", "derecha", "subir", "bajar"]).optional(),
+      // Animación por capas (títeres): personajes u objetos recortados (public/assets/objetos-ia/<img>.png) que se mueven
+      // sobre la toma. desde/hasta = [x %, y %, alto % de la pantalla, giro°]; inicio/fin = parte de la escena (0 a 1).
+      capas: z.array(z.object({
+        img: z.string(),
+        desde: z.tuple([z.number(), z.number(), z.number(), z.number()]),
+        hasta: z.tuple([z.number(), z.number(), z.number(), z.number()]).optional(),
+        inicio: z.number().optional(), fin: z.number().optional(),
+        curva: z.enum(["suave", "rebote", "caida", "lineal"]).optional(),
+        paso: z.boolean().optional(),      // sube y baja como si caminara o corriera
+        balanceo: z.number().optional(),   // grados de vaivén (camilla colgando, llama, bandera)
+        espejo: z.boolean().optional(),
+      })).optional(),
       barras: z.array(z.object({ etiqueta: z.string(), valor: z.number(), color: z.string().optional() })).optional(),
     }),
   ),
@@ -310,6 +322,7 @@ export const Pizarra: React.FC<Props> = ({ escenas, voz, frasesVoz, musica, ganc
         return (
           <Sequence key={i} from={inicio} durationInFrames={duracion}>
             {e.mapa ? <Mapa {...e.mapa} duracion={duracion} /> : <Fondo nombre={fondos[i]} camara={e.camara ?? CAMARAS[i % CAMARAS.length]} duracion={duracion} />}
+            {e.capas?.map((c, k) => <Capa key={k} {...c} duracion={duracion} />)}
             <Escena {...e} indice={i} />
             {(() => {
               const nueva = e.etiqueta !== undefined && e.etiqueta !== etiqueta;
@@ -399,6 +412,30 @@ const MODERNOS: Record<string, [string, string, string]> = {
 // 2.5D: con el mapa de profundidad (Depth Anything), lo cercano se desplaza más que lo lejano mientras la cámara
 // avanza, como si la cámara se moviera dentro del escenario. Las imágenes de un <svg> no esperan a cargarse solas,
 // así que el render se detiene (delayRender) hasta que la foto y su profundidad están listas: sin esto salían cuadros negros.
+// Una capa de la animación por capas: se mueve de "desde" a "hasta" con su curva, con sombra suave y luz parecida a la toma
+type CapaProps = NonNullable<Props["escenas"][number]["capas"]>[number] & { duracion: number };
+const CURVAS = {
+  suave: Easing.bezier(0.45, 0, 0.55, 1), lineal: Easing.linear, rebote: Easing.out(Easing.bounce), caida: Easing.in(Easing.quad),
+};
+const Capa: React.FC<CapaProps> = ({ img, desde, hasta, inicio = 0, fin = 1, curva = "suave", paso, balanceo, espejo, duracion }) => {
+  const frame = useCurrentFrame();
+  const { width, height } = useVideoConfig();
+  const t = interpolate(frame, [inicio * duracion, Math.max(inicio * duracion + 1, fin * duracion)], [0, 1],
+    { extrapolateLeft: "clamp", extrapolateRight: "clamp", easing: CURVAS[curva] });
+  const h = hasta ?? desde;
+  const [x, y, alto, giro] = desde.map((v, k) => v + (h[k] - v) * t);
+  const moviendo = t > 0 && t < 1;
+  const salto = paso && moviendo ? -Math.abs(Math.sin(frame / 3.2)) * height * 0.012 : 0;
+  const vaiven = balanceo ? balanceo * Math.sin(frame / 9) : 0;
+  return (
+    <Img src={staticFile(`assets/objetos-ia/${img}.png`)} style={{
+      position: "absolute", left: `${x}%`, top: (y / 100) * height + salto, height: (alto / 100) * height, width: "auto",
+      translate: "-50% -100%", rotate: `${giro + vaiven}deg`, transformOrigin: "50% 0%", scale: espejo ? "-1 1" : undefined,
+      filter: "drop-shadow(0 18px 18px rgba(0,0,0,0.55)) brightness(0.92) saturate(0.95) sepia(0.12)", maxWidth: width,
+    }} />
+  );
+};
+
 type Camara = "acercar" | "alejar" | "izquierda" | "derecha" | "subir" | "bajar";
 const CAMARAS: Camara[] = ["acercar", "derecha", "alejar", "izquierda", "subir", "bajar"];
 // La cámara se mueve de verdad (acercar, alejar, barrer, subir o bajar) y, a la vez, la profundidad desplaza lo cercano
