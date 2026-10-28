@@ -45,8 +45,9 @@ if toca hoja; then
     entradas=(); filtro=""; i=0
     for t in $faltan; do for v in 1 2; do entradas+=(-i "$VAR/$t-$v.png"); filtro+="[$i]scale=-2:300,drawtext=text='$t $v':x=6:y=6:fontsize=16:fontcolor=white:box=1:boxcolor=black@0.6[v$i];"; i=$((i+1)); done; done
     pila=""; for k in $(seq 0 $((i-1))); do pila+="[v$k]"; done
-    ffmpeg -v error -y "${entradas[@]}" -filter_complex "${filtro}${pila}xstack=inputs=$i:grid=$(( i < 10 ? i : 10 ))x$(( (i + 9) / 10 ))" "$REV/$N-tomas.jpg" 2>/dev/null \
-      || ffmpeg -v error -y "${entradas[@]}" -filter_complex "${filtro}${pila}hstack=inputs=$i" "$REV/$N-tomas.jpg"
+    # Cuadrícula que siempre cierra: 6, 4 o 2 columnas (cada toma tiene 2 variantes, así que i es par)
+    col=2; (( i % 6 == 0 )) && col=6; (( i % 6 != 0 && i % 4 == 0 )) && col=4
+    ffmpeg -v error -y "${entradas[@]}" -filter_complex "${filtro}${pila}xstack=inputs=$i:grid=${col}x$(( i / col ))" "$REV/$N-tomas.jpg"
     if [ ! -f "$ELEGIDAS" ]; then
       if [ "${KHIPU_AUTO:-0}" = 1 ]; then for t in $faltan; do echo "$t 1"; done > "$ELEGIDAS"
       else log "ALTO: mira $REV/$N-tomas.jpg y escribe $ELEGIDAS (\"<toma> <1|2>\" por línea; para rehacer una toma, bórrala de $VAR)"; exit 3; fi
