@@ -1,0 +1,197 @@
+{
+ "formato": "Pizarra",
+ "voz": {
+  "referencia": "voz/referencias/xiomi-clara.wav",
+  "pausa": 0.18,
+  "pronunciacion": {
+   "Qumrán": "Kumrán",
+   "Josefo": "Jozéfo"
+  }
+ },
+ "props": {
+  "gancho": "¿CUÁNTO MEDÍA GOLIAT?",
+  "musica": "musica/epica.mp3",
+  "tono": "calido",
+  "escenas": [
+   {
+    "dibujo": {
+     "iconos": [
+      [
+       "img:casco-bronce"
+      ],
+      [
+       "question-mark",
+       "#ffe14d"
+      ]
+     ]
+    },
+    "texto": "¿Cuánto medía Goliat?",
+    "resaltar": "Goliat?",
+    "sonido": "flash_shock",
+    "sonidoEn": 0.05,
+    "fondo": "ia:valle-ela"
+   },
+   {
+    "dibujo": {
+     "iconos": [
+      [
+       "img:history"
+      ]
+     ],
+     "rotulo": "1 Samuel 17:4"
+    },
+    "texto": "\"Seis codos y un palmo\"",
+    "resaltar": "Seis codos",
+    "fondo": "ia:jerusalen-antigua"
+   },
+   {
+    "barras": [
+     {
+      "etiqueta": "Tú (cm)",
+      "valor": 170
+     },
+     {
+      "etiqueta": "Goliat (cm)",
+      "valor": 290,
+      "color": "#ff6464"
+     }
+    ],
+    "texto": "Casi 3 metros.",
+    "resaltar": "3 metros.",
+    "sonido": "boom",
+    "sonidoEn": 0.4
+   },
+   {
+    "dibujo": {
+     "iconos": [
+      [
+       "img:rollo-qumran"
+      ]
+     ]
+    },
+    "texto": "Una copia 1 000 años más antigua",
+    "resaltar": "1 000 años",
+    "sonido": "magic_reveal",
+    "sonidoEn": 0.5,
+    "fondo": "ia:cuevas-qumran:paneo",
+    "particulas": "polvo"
+   },
+   {
+    "dibujo": {
+     "iconos": [
+      [
+       "img:rollo-qumran"
+      ]
+     ],
+     "rotulo": "4 codos"
+    },
+    "texto": "\"Cuatro codos y un palmo\"",
+    "resaltar": "Cuatro",
+    "fondo": "ia:cuevas-qumran"
+   },
+   {
+    "barras": [
+     {
+      "etiqueta": "Tú (cm)",
+      "valor": 170
+     },
+     {
+      "etiqueta": "Goliat (cm)",
+      "valor": 200,
+      "color": "#ff6464"
+     }
+    ],
+    "texto": "Unos 2 metros.",
+    "resaltar": "2 metros."
+   },
+   {
+    "dibujo": {
+     "iconos": [
+      [
+       "img:casco-bronce"
+      ],
+      [
+       "img:lanza"
+      ]
+     ],
+     "rotulo": "57 kg"
+    },
+    "texto": "Armadura de 57 kg",
+    "resaltar": "57 kg",
+    "sonido": "boom",
+    "sonidoEn": 0.3,
+    "fondo": "ia:valle-ela"
+   },
+   {
+    "dibujo": {
+     "iconos": [
+      [
+       "img:honda"
+      ],
+      [
+       "img:piedra"
+      ]
+     ]
+    },
+    "texto": "Una honda y una piedra.",
+    "resaltar": "una piedra.",
+    "sonido": "whoosh",
+    "sonidoEn": 0.2,
+    "fondo": "ia:valle-ela:paneo",
+    "silueta": true
+   },
+   {
+    "dibujo": {
+     "iconos": [
+      [
+       "question-mark",
+       "#ffe14d"
+      ]
+     ],
+     "rotulo": "¿2 o 3 m?"
+    },
+    "texto": "¿2 o 3 metros?",
+    "resaltar": "3 metros?",
+    "fondo": "ia:valle-ela"
+   }
+  ],
+  "narracion": [
+   {
+    "texto": "¿Cuánto medía Goliat? Depende de qué Biblia leas.",
+    "estilo": "narrador"
+   },
+   {
+    "texto": "En la mayoría de las Biblias, Primera de Samuel diecisiete dice: seis codos y un palmo.",
+    "estilo": "narrador"
+   },
+   {
+    "texto": "Eso es casi tres metros. Más alto que una puerta.",
+    "estilo": "narrador"
+   },
+   {
+    "texto": "Pero en las cuevas de Qumrán apareció una copia de Samuel mil años más antigua.",
+    "estilo": "narrador"
+   },
+   {
+    "texto": "Y ahí dice: cuatro codos y un palmo.",
+    "estilo": "narrador"
+   },
+   {
+    "texto": "Unos dos metros. La traducción griega más antigua y el historiador Josefo dicen lo mismo.",
+    "estilo": "narrador"
+   },
+   {
+    "texto": "Igual era un gigante, con una armadura de bronce de unos cincuenta y siete kilos.",
+    "estilo": "narrador"
+   },
+   {
+    "texto": "Y David lo venció con una honda y una piedra.",
+    "estilo": "narrador"
+   },
+   {
+    "texto": "¿Tú con cuál medida te quedas? Te leo en los comentarios.",
+    "estilo": "narrador"
+   }
+  ]
+ }
+}

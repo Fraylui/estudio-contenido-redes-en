@@ -1,13 +1,13 @@
 # Estudio de contenido: canal Khipu y clientes
 
-Repositorio de producción de videos con Remotion: el canal de YouTube **Khipu** (animación educativa y entretenimiento, en español) y anuncios para clientes.
+Repositorio de producción de videos con Remotion: el canal de YouTube **Khipu** (la Biblia explicada con animación, historia y mapas, en español) y anuncios para clientes.
 Al usuario se le habla siempre **en español**, claro y sin tecnicismos.
 
 ## Las skills (en `.claude/skills/`)
 | Skill | Para qué | Cuándo |
 |---|---|---|
 | `khipu-canal` | **Estrategia:** líneas temáticas, frecuencia, horas, duración, ganchos, retención, estructuras, métricas, monetización, documental 2D y mapa de capacidades | Planear, elegir temas, decidir horarios, revisar estadísticas |
-| `khipu-diario` | **Rutina de cada día:** qué categoría toca, qué se produce, cómo y a qué hora se publica | Cada día de producción y en la tarea programada diaria |
+| `khipu-diario` | **Rutina de cada día (canal de la Biblia desde el 28 oct 2026):** qué serie toca, qué se produce, cómo y a qué hora se publica | Cada día de producción y en la tarea programada diaria |
 | `khipu-revision` | **Mejorar como un gran creador:** analizar con datos el video anterior y las referencias, metas de ritmo, bucle de prompts y hoja de ruta | Antes de cada video nuevo, después de publicar, o si algo se ve básico |
 | `pizarra` | **Producción técnica** de videos largos y Shorts: JSON de escenas, personajes, íconos, objetos 3D, mapas, efectos, música y miniaturas | Al armar y renderizar un video |
 | `voz-narradora` | **Voz** de Xiomi (Chatterbox): estilos, pronunciación, calibración, sin soplido ni cortes | Al narrar o arreglar audio |

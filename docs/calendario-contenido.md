@@ -1,8 +1,30 @@
-# Calendario de contenido de Khipu
+# Calendario de contenido de Khipu: la Biblia
 
-Hay 14 categorías y cada día tocan 2, una por Short (ver la skill `khipu-diario`). Shorts a las **12:00 p. m. y 8:00 p. m.**, y videos largos lunes y jueves (hora de Lima).
-Antes de producir cada tema: demanda en YouTube, datos con fuente y ángulo propio. Si un tema no pasa la investigación, se cambia por otro de la misma categoría.
+Desde el 28 de octubre de 2026 el canal es **solo de la Biblia** (decisión del usuario; series por día en la skill `khipu-diario`). Shorts a las **12:00 p. m. y 8:00 p. m.**, y videos largos lunes y jueves (hora de Lima).
+Cada tema: pasaje citado, dato de historia o arqueología con fuente y una pregunta que choque. Si un tema no pasa la investigación, se cambia por otro de la misma serie.
 
+## Semana del 28 de octubre
+| Día | Video largo | Short 12:00 | Short 20:00 |
+|---|---|---|---|
+| Mié 28 | — | Personajes: ¿Cuánto medía Goliat? (2 o 3 m según el manuscrito) ✅ | Vida cotidiana: ¿Cuánto eran 30 monedas de plata? ✅ |
+| Jue 29 | **Historia completa:** David y Goliat: lo que pasó en el valle de Ela | Vida cotidiana: ¿Qué comía Jesús en un día normal? | Parábolas: El hijo pródigo: el detalle que casi nadie nota (el padre corre) |
+| Vie 30 | — | Datos: ¿Por qué la Biblia tiene 66 libros y la católica 73? (neutral) | Reyes: Salomón: ¿tan rico como dicen? (666 talentos, 1 Reyes 10:14) |
+| Sáb 31 | — | Mapas: La ruta del Éxodo (mapa) | Mujeres: Rut, la extranjera que es bisabuela de David |
+| Dom 1 | — | Enseñanza: "No se angustien por el mañana" (Mateo 6:34) | Cronología: ¿Cuántos años pasaron entre Abraham y Jesús? |
+| Lun 2 | **Historia completa:** Babilonia: el imperio que se llevó a Judá (mapa) | Personajes: ¿Quién era Nabucodonosor? | Historias: El horno de fuego: ¿cuánta temperatura? |
+| Mar 3 | — | Lugares: El mar de Galilea es un lago (mapa) | Palabras: "Amén" no significa "así sea" solamente |
+
+## Banco de temas por serie
+- **Personajes:** Sansón, Moisés de bebé en el Nilo, Pedro el pescador, Pablo antes de convertirse, Zaqueo el cobrador de impuestos, Herodes el Grande, Pilato (la piedra con su nombre).
+- **Lugares y arqueología:** Jerusalén en tiempos de Jesús, el estanque de Siloé (hallado en 2004), Belén, Nínive, el monte Sinaí (dónde estaría), Cafarnaúm.
+- **Palabras:** "Shalom", "Abba", "Mesías" y "Cristo", "Aleluya", "Evangelio".
+- **Vida cotidiana:** las casas de la época, los pescadores de Galilea, cómo se escribía, cuánto pesaba una cruz, qué era un publicano.
+- **Parábolas:** el buen samaritano (por qué un samaritano), el sembrador, la oveja perdida, los talentos (cuánto era un talento).
+- **Profetas y reyes:** Elías y el carro de fuego, Jonás y Nínive, Saúl, el rey Ezequías y su túnel (existe).
+- **Mujeres:** Ester, Débora, María Magdalena, Ana la madre de Samuel, la reina de Saba.
+- **Mapas y cronología:** los viajes de Pablo, las 12 tribus, los imperios que dominaron Israel, del Génesis al Apocalipsis en 60 s.
+
+## Antes del cambio (archivo)
 ## Semana del 26 de octubre
 | Día | Video largo | Short 12:00 | Short 20:00 |
 |---|---|---|---|

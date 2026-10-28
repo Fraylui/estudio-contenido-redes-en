@@ -1,0 +1,186 @@
+{
+ "formato": "Pizarra",
+ "voz": {
+  "referencia": "voz/referencias/xiomi-clara.wav",
+  "pausa": 0.18,
+  "pronunciacion": {
+   "Qumrán": "Kumrán",
+   "Josefo": "Jozéfo"
+  }
+ },
+ "props": {
+  "gancho": "¿CUÁNTO ERAN 30 MONEDAS DE PLATA?",
+  "musica": "musica/antiguo.mp3",
+  "tono": "sepia",
+  "escenas": [
+   {
+    "dibujo": {
+     "iconos": [
+      [
+       "img:monedas-plata"
+      ]
+     ],
+     "rotulo": "30"
+    },
+    "texto": "30 monedas de plata",
+    "resaltar": "30",
+    "sonido": "flash_shock",
+    "sonidoEn": 0.05,
+    "fondo": "ia:templo-noche"
+   },
+   {
+    "dibujo": {
+     "iconos": [
+      [
+       "img:bolsa-monedas"
+      ]
+     ],
+     "rotulo": "Mateo 26:15"
+    },
+    "texto": "El pago a Judas",
+    "resaltar": "Judas",
+    "fondo": "ia:templo-noche:paneo"
+   },
+   {
+    "dibujo": {
+     "iconos": [
+      [
+       "img:monedas-plata"
+      ]
+     ]
+    },
+    "texto": "Siclos de Tiro",
+    "resaltar": "Tiro",
+    "sonido": "magic_reveal",
+    "sonidoEn": 0.4,
+    "fondo": "ia:jerusalen-antigua"
+   },
+   {
+    "dibujo": {
+     "iconos": [
+      [
+       "coin",
+       "#d9d9d9"
+      ],
+      [
+       "calendar",
+       "#ffd6a5"
+      ]
+     ],
+     "rotulo": "1 = 4 días"
+    },
+    "texto": "1 denario = 1 día de trabajo",
+    "resaltar": "1 día",
+    "fondo": "ia:jerusalen-antigua"
+   },
+   {
+    "barras": [
+     {
+      "etiqueta": "Días de trabajo",
+      "valor": 120,
+      "color": "#c0c0c0"
+     }
+    ],
+    "texto": "120 días de trabajo",
+    "resaltar": "120 días",
+    "sonido": "boom",
+    "sonidoEn": 0.5
+   },
+   {
+    "dibujo": {
+     "iconos": [
+      [
+       "img:history"
+      ]
+     ],
+     "rotulo": "Éxodo 21:32"
+    },
+    "texto": "El precio de un esclavo",
+    "resaltar": "esclavo",
+    "sonido": "boom",
+    "sonidoEn": 1.6,
+    "fondo": "ia:templo-noche"
+   },
+   {
+    "dibujo": {
+     "iconos": [
+      [
+       "img:rollo-qumran"
+      ]
+     ],
+     "rotulo": "Zacarías 11:12"
+    },
+    "texto": "Zacarías ya lo había escrito",
+    "resaltar": "Zacarías",
+    "fondo": "ia:jerusalen-antigua:paneo"
+   },
+   {
+    "dibujo": {
+     "iconos": [
+      [
+       "img:monedas-plata"
+      ]
+     ]
+    },
+    "texto": "Un campo para extranjeros",
+    "resaltar": "campo",
+    "fondo": "ia:campo-alfarero:paneo",
+    "particulas": "polvo"
+   },
+   {
+    "dibujo": {
+     "iconos": [
+      [
+       "img:bolsa-monedas"
+      ],
+      [
+       "question-mark",
+       "#ffe14d"
+      ]
+     ]
+    },
+    "texto": "¿Lo sabías?",
+    "resaltar": "sabías?",
+    "fondo": "ia:templo-noche"
+   }
+  ],
+  "narracion": [
+   {
+    "texto": "Treinta monedas de plata. ¿Cuánto era eso de verdad?",
+    "estilo": "narrador"
+   },
+   {
+    "texto": "Mateo veintiséis cuenta que eso le pagaron a Judas por entregar a Jesús.",
+    "estilo": "narrador"
+   },
+   {
+    "texto": "Muchos historiadores creen que eran siclos de Tiro, la moneda de plata del templo.",
+    "estilo": "narrador"
+   },
+   {
+    "texto": "Un siclo valía unos cuatro denarios. Y un denario era el pago de un día de trabajo en el campo.",
+    "estilo": "narrador"
+   },
+   {
+    "texto": "Treinta siclos: unos ciento veinte días de trabajo. Cuatro meses de sueldo.",
+    "estilo": "narrador"
+   },
+   {
+    "texto": "Pero el detalle más fuerte está en Éxodo veintiuno: treinta siclos era lo que la ley mandaba pagar por la vida de un esclavo.",
+    "estilo": "narrador"
+   },
+   {
+    "texto": "Y siglos antes, el profeta Zacarías ya había hablado de treinta piezas de plata.",
+    "estilo": "narrador"
+   },
+   {
+    "texto": "Judas devolvió las monedas, y los sacerdotes compraron con ellas un campo para sepultar a los extranjeros.",
+    "estilo": "narrador"
+   },
+   {
+    "texto": "¿Conocías este detalle? Escríbelo en los comentarios.",
+    "estilo": "narrador"
+   }
+  ]
+ }
+}
