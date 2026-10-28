@@ -25,6 +25,8 @@ Además está el formato **`Narrado`**, para videos con tu voz (ver más abajo),
 | `misterio` | Leyendas, terror, misterios: imágenes de cine, grano de película y viñeta oscura | `contenido/narrado-el-tunche.json` |
 | `dibujo` | Finanzas, explicaciones, curiosidades: fondo blanco con dibujos en cuadros, un **personaje narrador animado** con globo de diálogo y palabras clave grandes | `contenido/narrado-fin-de-mes.json` |
 
+Y el formato **`Noticia`**, para Reels de noticias con videos y fotos reales (`contenido/noticia-ecotur-huaccoto.json`): tomas cortas con zoom y destello en cada corte, el titular grande solo mientras se dice el gancho, subtítulos chicos palabra por palabra, el logo fijo arriba a la derecha y la presentadora en una esquina moviendo la boca con la voz. Los videos, las fotos y la imagen de la presentadora van en `public/noticias/`, que no se sube a GitHub. Sale solo en vertical.
+
 Todos llevan tu @usuario arriba, una barra de progreso abajo (ayuda a que vean el video completo) y un cierre con llamada a la acción.
 
 ## Primeros pasos

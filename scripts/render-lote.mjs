@@ -4,6 +4,7 @@
 //   npm run lote -- --horizontal      → todos, en horizontal (YouTube)
 //   npm run lote -- --ambos           → todos, en los dos tamaños
 //   npm run lote -- trivia            → solo los archivos cuyo nombre contiene "trivia"
+//   (las noticia-*.json salen solo en vertical: son Reels)
 //
 // Los videos quedan en out/<nombre-del-archivo>-<Tamaño>.mp4 (y las miniaturas en .png)
 import { execFileSync } from "node:child_process";
@@ -56,12 +57,26 @@ for (const archivo of archivos) {
     }
   }
   if (props.narracion && existsSync(`public/voz/${nombre}.json`)) {
-    // Anuncio y Narrado leen la voz con su ruta dentro de public/; los demás formatos, desde public/voz/
-    props.voz = formato === "Anuncio" || formato === "Narrado" ? `voz/${nombre}.wav` : `${nombre}.wav`;
+    // Anuncio, Narrado y Noticia leen la voz con su ruta dentro de public/; los demás formatos, desde public/voz/
+    props.voz = ["Anuncio", "Narrado", "Noticia"].includes(formato) ? `voz/${nombre}.wav` : `${nombre}.wav`;
     const tiemposVoz = JSON.parse(readFileSync(`public/voz/${nombre}.json`, "utf8"));
     props.duracionVoz = tiemposVoz.duracion;
     // Los anuncios usan los tiempos de cada frase para sincronizar sus escenas
     props.frasesVoz = tiemposVoz.frases.map(({ inicio, fin }) => ({ inicio, fin }));
+    // Las noticias usan el tiempo de cada palabra (subtítulos) y el volumen (boca de la presentadora)
+    if (formato === "Noticia") {
+      props.palabrasVoz = tiemposVoz.palabras ?? [];
+      props.volumenVoz = tiemposVoz.volumen ?? [];
+    }
+  }
+  if (formato === "Noticia") {
+    // Medidas de cada video o foto, para encuadrarlos en vertical
+    props.tamanos = {};
+    for (const { video } of props.tomas) {
+      const [ancho, alto] = execFileSync("ffprobe", ["-v", "error", "-select_streams", "v:0", "-show_entries",
+        "stream=width,height", "-of", "csv=p=0", join("public", video)]).toString().trim().split(",").map(Number);
+      props.tamanos[video] = { ancho, alto };
+    }
   }
   const rutaProps = join("out/.props", archivo);
   writeFileSync(rutaProps, JSON.stringify(props));
@@ -75,7 +90,7 @@ for (const archivo of archivos) {
     });
   }
 
-  for (const tamano of tamanos) {
+  for (const tamano of formato === "Noticia" ? ["Vertical"] : tamanos) {
     const salida = `out/${nombre}-${tamano}.mp4`;
     console.log(`\n▶ ${archivo} → ${salida}`);
     execFileSync(
