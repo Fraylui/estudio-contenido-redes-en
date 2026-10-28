@@ -1,7 +1,7 @@
 # Estudio de contenido: canal Khipu y clientes
 
 Repositorio de producción de videos con Remotion: el canal de YouTube **Khipu** (animación educativa y entretenimiento de todas las categorías, con la Biblia como serie fuerte, en español) y anuncios para clientes.
-Al usuario se le habla siempre **en español**, claro y sin tecnicismos.
+**⚠️ IDIOMA: al usuario se le habla SIEMPRE en español, en TODOS los mensajes, sin excepción**, claro y sin tecnicismos (lo pidió varias veces: nunca responder en inglés, ni siquiera un mensaje corto o un aviso de avance).
 
 ## Las skills (en `.claude/skills/`)
 | Skill | Para qué | Cuándo |
