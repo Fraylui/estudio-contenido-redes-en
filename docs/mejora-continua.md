@@ -146,6 +146,25 @@ Medidos con `scripts/analizar-video.py`:
 
 **El fondo `jerusalen-antigua` tiene una cúpula dorada**, como la del Domo de la Roca, que es del año 691: no sirve para escenas bíblicas. Desde ahora el estilo de los escenarios prohíbe cúpulas, cruces y mezquitas.
 
+## Datos reales de YouTube Studio: Short "Por qué los 5 minutos más…" (capturas del usuario, 28 oct)
+| Dato | Valor | Qué significa |
+|---|---|---|
+| Vistas | 1 300 | Lo que YouTube cuenta apenas empieza |
+| Vistas interesadas | 519 (40 %) | Las que valen para monetizar |
+| **Se quedaron para mirar** | **36,9 %** (63,1 % deslizó) | **El problema principal.** La meta es más de 70 % |
+| Retención de los que se quedaron | 88,9 % (0:37 de 0:42) | **El contenido sí engancha**: empieza por encima del 100 % (lo vuelven a ver) y termina en ~62 % |
+| Usuarios nuevos | 99 % | Casi nadie vuelve todavía: falta una serie que la gente siga |
+| Países | México 19 %, Bolivia 12 %, Costa Rica 8 % | El público es de toda Latinoamérica, no solo del Perú |
+| Vida del Short | Pico el día 1, un segundo empujón el día 2, plano después | YouTube lo probó con dos grupos y lo frenó por el 63 % que deslizaba |
+
+**Conclusión:** lo que falla es **detener el dedo en el primer segundo**, no el resto del video. Los que se quedan lo miran casi entero.
+**Qué se hace:**
+- primer cuadro con lo más impactante (nunca contexto);
+- texto grande con una pregunta o una cifra desde el cuadro 1;
+- primera frase de menos de 2 s que choque;
+- temas que le interesen a toda Latinoamérica, no solo al Perú;
+- series con nombre fijo para que la gente vuelva.
+
 ## Marcador: cada contenido tiene que superar al anterior
 Regla del usuario: **cada contenido nuevo mejora al anterior**. Antes de producir se leen las 3 mejoras que dejó el último. Al publicarlo se llena su fila, y a los 7 días se ponen sus datos reales.
 
