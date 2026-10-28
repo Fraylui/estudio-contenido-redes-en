@@ -11,6 +11,20 @@ Estado a octubre de 2026. Las cifras se confirman en la Ayuda oficial de YouTube
 **Las horas salen de los videos largos**, no de los Shorts: los Shorts traen suscriptores y los largos traen horas.
 Cuenta: 4 000 h = 240 000 min. Un video de 8 min visto al 50 % aporta 4 min por vista, así que hacen falta unas 60 000 vistas en el año (unas 1 200 por semana).
 
+## 1b. Lo que hay que saber de YouTube (investigación del 28 de octubre de 2026)
+- **Vistas que cuentan:** desde marzo de 2025 un Short cuenta una vista apenas empieza, pero para monetizar solo valen las **vistas comprometidas**: las de quien se queda más allá de los primeros segundos, sin contar las repeticiones. Nuestras 3 000 vistas valen mucho menos de lo que parece si la gente se va en el segundo 3.
+- **Cómo reparte YouTube un Short:** se lo muestra a un grupo pequeño y, según cuántos lo miran en vez de deslizar, se lo muestra a más gente o lo frena. La primera señal es el **"Visto vs. deslizado"** (YouTube Studio → Estadísticas → Contenido → Shorts) y después el % visto. YouTube no publica una cifra meta: se compara con nuestros Shorts anteriores.
+- **Las horas y las vistas de Shorts no se suman:** hay que completar un camino entero, o 4 000 horas en videos largos o 10 millones de vistas comprometidas de Shorts en 90 días.
+- **⚠️ Cambio anunciado para el 1 de febrero de 2027** (lo reportan [Tubefilter](https://www.tubefilter.com/2026/08/10/youtube-partner-program-ad-eligibility-requirements-shorts/amp/), [AIR Media-Tech](https://air.io/en/monetization/youtube-partner-program-requirements-2026-the-complete-guide) y [Free Press Journal](https://www.freepressjournal.in/tech/youtube-doubles-watch-hour-requirement-for-creators-to-join-monetisation-programme-all-details); falta confirmarlo en la Ayuda de YouTube): los canales nuevos necesitarán **8 000 horas o 20 millones de vistas de Shorts**. Los que ya estén dentro se quedan con las reglas actuales. **Conviene entrar antes del 31 de enero de 2027.**
+- **Contenido con IA y sin rostro:** está permitido y se puede monetizar. Lo que YouTube castiga es lo **genérico, repetitivo o hecho con plantilla**: videos que parecen intercambiables entre sí. La revisión es del **canal completo** (mira el patrón de los últimos videos), no de un video suelto. En enero de 2026 cerraron 16 canales de este tipo con 35 millones de suscriptores en total. ([AIR Media-Tech](https://air.io/en/monetization/youtube-monetization-policy-changes-2026-a-complete-dated-timeline), [OutlierKit](https://outlierkit.com/blog/youtube-updates-july-2026))
+- **Lo que pide YouTube a un canal sin rostro:** guion propio, narración, investigación, edición o una forma de contar que se note. Khipu lo cumple con guiones investigados, pasajes y fuentes citadas, escenas hechas para cada tema y criterio propio.
+
+**Nuestro plan para entrar antes del 31 de enero de 2027:**
+1. **El camino más probable son las 4 000 horas** con los 4 videos largos por semana: 10 millones de vistas comprometidas de Shorts en 90 días son más de 110 000 al día.
+2. **Los Shorts traen suscriptores y gente a los videos largos:** cada Short lleva su video largo como "video relacionado".
+3. **Se mide cada semana el "Visto vs. deslizado"** con capturas que manda el usuario, porque Metricool no lo da. Meta: más del 70 % visto.
+4. **Nada de plantilla:** cada video cambia de escenario, objetos, gancho, voz y estructura (`khipu-diario`).
+
 ## 2. El gran riesgo: "contenido no auténtico"
 Desde julio de 2025 YouTube llama así a lo **producido en masa, con plantilla y poca variación**. Es el motivo principal por el que rechazan canales con IA.
 La voz con IA **no** está prohibida; lo que se castiga es que todos los videos parezcan iguales y sin aporte propio.
