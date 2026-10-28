@@ -60,3 +60,4 @@ Una toma de otro video se reutiliza poniendo su nombre en `fondo`, sin repetirla
 - Una toma: ~1 min por variante. La nitidez: ~1–2 min por toma. La voz: ~20–30 min por Short. El render: ~10 min.
 - **Un Short completo: ~1 h 30 min.** Por eso se trabaja con un día de adelanto: hoy se hace lo de mañana.
 - **Nunca se lanzan dos narraciones a la vez:** cada una usa 6 GB y la máquina tiene 16.
+- **Nunca editar `scripts/short-epico.sh` mientras corre:** bash lee el archivo a medida que avanza, y un cambio a mitad de camino lo rompe (pasó el 28 oct). Si hay que cambiarlo, primero se espera a que termine; o se corre una copia.
