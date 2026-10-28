@@ -123,7 +123,7 @@ Licencias:
   - **Mapa animado:** `"mapa": {"centro": [lon, lat], "zoom": 5, "zoomFinal": 7, "paises": [{"nombre": "Peru", "color": "#ff6464", "en": 0.1}], "rutas": [{"de": [lon, lat], "a": [lon, lat], "en": 0.2}], "etiquetas": [{"texto": "Perú", "lugar": [lon, lat]}], "marcadores": [{"lugar": [lon, lat]}]}`. Reemplaza al fondo; países de Natural Earth con nombre en inglés; zoom 1 es el mundo, 4 un continente y 7 un país. Funciona sin internet.
   - **Paneo lateral:** `"fondo": "ia:<nombre>:paneo"` recorre el escenario de izquierda a derecha.
   - **Revelación por capas:** `"silueta": true` muestra primero la silueta negra y la revela con un destello al 40 % de la escena.
-  - **Barras que crecen:** `"barras": [{"etiqueta": "1940", "valor": 7000000}, ...]`, con los números contando.
+  - **Barras que crecen:** `"barras": [{"etiqueta": "1940", "valor": 7000000}, ...]`, con los números contando. La escena igual necesita un `dibujo` (no se ve, pero sin él el render falla).
   - **Globo de diálogo:** `"globo": "¡No puede ser!"` (lo que dice el personaje, estilo cómic).
   - **Antes y después:** `"antesDespues": [<dibujo de antes>, <dibujo de después>]`, en pantalla dividida con línea que barre y rótulos ANTES y DESPUÉS.
   - **Tono del video:** `"tono": "sepia" | "frio" | "calido" | "noche"` en las props (gradación de color, grano de película y viñeta). Sepia para historia antigua, frío para misterio, cálido para el Perú andino y noche para temas oscuros.
