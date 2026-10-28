@@ -21,7 +21,7 @@
     },
     "texto": "Una habitación llena de oro",
     "resaltar": "oro",
-    "fondo": "ia:ata01-sala-oro",
+    "fondo": "ia:ata23-llenando",
     "sonido": "flash_shock",
     "sonidoEn": 0.05
    },
@@ -107,7 +107,7 @@
     },
     "texto": "Escondidos",
     "resaltar": "Escondidos",
-    "fondo": "ia:ata11-escondidos"
+    "fondo": "ia:ata09-pizarro:paneo"
    },
    {
     "dibujo": {
