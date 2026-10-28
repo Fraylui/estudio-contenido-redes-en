@@ -6,7 +6,7 @@ Cada tema: dato con fuente (en la Biblia, el pasaje citado) y una pregunta que c
 ## Semana del 28 de octubre
 | Día | Video largo | Short 12:00 | Short 20:00 |
 |---|---|---|---|
-| Mié 28 | — | Biblia: ¿Cuánto medía Goliat? (2 o 3 m según el manuscrito) ✅ | Biblia: ¿Cuánto eran 30 monedas de plata? ✅ |
+| Mié 28 | — | Biblia: Cómo cayó el gigante (David contra Goliat) ✅ | Biblia: ¿Cuánto eran 30 monedas de plata? ✅ |
 | Jue 29 | **Finanzas:** ¿Por qué compramos cosas que no necesitamos? | Finanzas: El método 50/30/20 en 30 segundos | Economía: ¿Por qué los precios terminan en ,90? |
 | Vie 30 | — | Tecnología: ¿Cómo aprende una inteligencia artificial? | Personajes: El científico que se tomó una bacteria para ganar el Nobel |
 | Sáb 31 | — | Lugares: ¿Cómo se construyó Machu Picchu sin cemento? | Animales: ¿Por qué los flamencos son rosados? |

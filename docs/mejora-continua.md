@@ -156,10 +156,10 @@ Cada contenido nuevo tiene que mejorar en **las 5 áreas**, no solo en una:
 | Kakeibo (23 oct) | "Llega fin de mes…" | Fondo de papel blanco | Dibujo a mano | Voz sola | 47 s, casi sin cortes | 26 % / 27 |
 | Despertar (23 oct) | "Suena la alarma y la apagas" | Escenario de dormitorio con IA, personaje con emoción | Personaje que se mueve | Música de fondo | 10 cambios por minuto | 36 % / 1 295 |
 | Gastos hormiga (24 oct) | Título fijo arriba, pero primer cuadro vacío | Fondos planos de color | Círculos en blanco al entrar | Golpes de sonido | Recorte del largo | 15 % / 442 |
-| **Goliat (28 oct)** | Primer cuadro ya armado: valle, casco y pregunta | Escenarios con IA de época, objetos 3D, tono cálido | Barras de altura, silueta, paneo, polvo | Música épica y golpe al inicio | Segunda toma, 9 escenas en 30 s | (al publicar) |
-| **30 monedas (28 oct)** | "30 monedas de plata, ¿cuánto era?" | Templo de noche, monedas 3D, tono sepia | Barra de 120 días, paneo | Música antigua | Igual que Goliat | (al publicar) |
+| **Goliat (28 oct, 12:00)** | "Un ejército entero temblaba por un solo hombre" + toma épica | **Historia narrada con 10 tomas épicas** (estilo `epico`, Real-ESRGAN) | **Cámara 2.5D** con Depth Anything, polvo | **Voz de hombre grave** (Kokoro + Chatterbox), música épica, ejército y viento | 11 escenas en 40 s, 16 cambios por minuto | (a los 7 días) |
+| **30 monedas (28 oct, 20:00)** | "Treinta monedas de plata. Ese fue el precio." | Historia de Judas con 10 tomas épicas, tono sepia | Cámara 2.5D, brasas y polvo | Voz de hombre grave, música antigua, viento | 10 escenas en 43 s | (a los 7 días) |
 
-**Lo que el siguiente contenido tiene que superar** (se actualiza con cada uno):
+**Lo que el siguiente contenido tiene que superar** (se actualiza con cada uno). Después de Goliat y las monedas: subir a **más de 20 cambios por minuto** (2 tomas por frase larga), subtítulo de 1 o 2 palabras grandes, y probar un final en bucle real.
 1. **Gancho:** primer cuadro que se entienda sin sonido y una pregunta con algo en juego. Probar un gancho visual de movimiento: que algo choque o caiga en el segundo 1.
 2. **Visual:** 6 o más objetos 3D propios del tema, ninguno repetido del video anterior. Probar el personaje histórico propio (hoja de ruta).
 3. **Efectos:** estrenar uno nuevo cada vez (ahora toca la boca que se mueve con la voz o el paralaje 2.5D) y medir si sube el % visto.
