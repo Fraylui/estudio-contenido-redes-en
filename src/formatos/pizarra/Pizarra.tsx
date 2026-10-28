@@ -3,11 +3,11 @@
 import { Audio } from "@remotion/media";
 import { getBoundingBox, getLength } from "@remotion/paths";
 import { loadFont } from "@remotion/fonts";
-import { useMemo } from "react";
+import { useEffect, useMemo, useState } from "react";
 import { z } from "zod";
 import { lightLeak } from "@remotion/effects/light-leak";
 import {
-  AbsoluteFill, CalculateMetadataFunction, Easing, Img, interpolate, Solid, Sequence, spring, staticFile, useCurrentFrame, useVideoConfig,
+  AbsoluteFill, CalculateMetadataFunction, continueRender, delayRender, Easing, Img, interpolate, Solid, Sequence, spring, staticFile, useCurrentFrame, useVideoConfig,
 } from "remotion";
 import { composicionSchema, resolverDibujo, type Composicion, type DibujoPizarra } from "./dibujos";
 import { Mapa, mapaSchema } from "./Mapa";
@@ -174,10 +174,14 @@ const Tono: React.FC<{ tipo: keyof typeof TONOS }> = ({ tipo }) => {
 const Gancho: React.FC<{ texto: string }> = ({ texto }) => {
   const frame = useCurrentFrame();
   const pop = spring({ frame: frame + 10, fps: FPS, config: { damping: 10, stiffness: 180 } }); // visible desde el cuadro 1
+  // Se queda 3 s (lo que dura la decisión de mirar o deslizar) y sale hacia arriba: después solo tapaba la imagen
+  const sale = interpolate(frame, [3 * FPS, 3.4 * FPS], [0, 1], { extrapolateLeft: "clamp", extrapolateRight: "clamp" });
+  if (sale >= 1) return null;
   const palabras = texto.trim().split(/\s+/);
   const ultima = palabras.pop();
   return (
-    <div style={{ position: "absolute", top: 110, left: 50, right: 50, display: "flex", justifyContent: "center", scale: `${pop}`, rotate: "-1.5deg" }}>
+    <div style={{ position: "absolute", top: 110, left: 50, right: 50, display: "flex", justifyContent: "center", scale: `${pop}`, rotate: "-1.5deg",
+      translate: `0 ${-sale * 300}px`, opacity: 1 - sale }}>
       <div style={{ background: "#ffffff", border: "8px solid #111", borderRadius: 26, padding: "18px 30px", boxShadow: "0 14px 0 #111",
         fontFamily: "Texto", fontWeight: 900, fontSize: 64, lineHeight: 1.05, textAlign: "center", textTransform: "uppercase", color: "#111" }}>
         {palabras.join(" ")} <span style={{ color: "#e02424" }}>{ultima}</span>
@@ -367,6 +371,41 @@ const MODERNOS: Record<string, [string, string, string]> = {
   lila: ["#a78bfa", "#6d42d9", "#e3d4ff"], noche: ["#283a8f", "#120f3a", "#5b6cff"],
 };
 
+// 2.5D: con el mapa de profundidad (Depth Anything), lo cercano se desplaza más que lo lejano mientras la cámara
+// avanza, como si la cámara se moviera dentro del escenario. Las imágenes de un <svg> no esperan a cargarse solas,
+// así que el render se detiene (delayRender) hasta que la foto y su profundidad están listas: sin esto salían cuadros negros.
+const FondoProfundo: React.FC<{ archivo: string; paneo: boolean }> = ({ archivo, paneo }) => {
+  const frame = useCurrentFrame();
+  const foto = staticFile(`assets/ia/${archivo}.jpg`);
+  const prof = staticFile(`assets/ia/${archivo}-prof.png`);
+  const [espera] = useState(() => delayRender(`fondo 2.5D ${archivo}`));
+  useEffect(() => {
+    Promise.all([foto, prof].map((src) => new Promise<void>((listo) => {
+      const img = new Image();
+      img.onload = () => img.decode().then(() => listo(), () => listo());
+      img.onerror = () => listo();
+      img.src = src;
+    }))).then(() => continueRender(espera));
+  }, [espera, foto, prof]);
+  const id = `prof-${archivo}`;
+  const s = interpolate(frame, [0, 150], paneo ? [-28, 28] : [-16, 16], { extrapolateRight: "clamp" });
+  return (
+    <AbsoluteFill style={{ overflow: "hidden", backgroundColor: "#1f1f1f" }}>
+      <svg viewBox="0 0 1080 1920" preserveAspectRatio="xMidYMid slice" style={{ width: "100%", height: "100%",
+        scale: `${interpolate(frame, [0, 300], [1.12, 1.2], { extrapolateRight: "clamp" })}`, filter: "brightness(0.95) saturate(1.08)" }}>
+        <defs>
+          <filter id={id} x="0" y="0" width="100%" height="100%" colorInterpolationFilters="sRGB">
+            <feImage href={prof} preserveAspectRatio="xMidYMid slice" result="prof" />
+            <feDisplacementMap in="SourceGraphic" in2="prof" scale={s} xChannelSelector="R" yChannelSelector="G" />
+          </filter>
+        </defs>
+        <image href={foto} width="1080" height="1920" preserveAspectRatio="xMidYMid slice" filter={`url(#${id})`} />
+      </svg>
+      <AbsoluteFill style={{ background: "radial-gradient(ellipse at center, rgba(0,0,0,0) 50%, rgba(0,0,0,0.35) 100%)" }} />
+    </AbsoluteFill>
+  );
+};
+
 const Fondo: React.FC<{ nombre: string }> = ({ nombre }) => {
   const frame = useCurrentFrame();
   if (nombre === "papel") return null;
@@ -377,25 +416,7 @@ const Fondo: React.FC<{ nombre: string }> = ({ nombre }) => {
     const paneo = modo === "paneo";
     // 2.5D: con el mapa de profundidad (Depth Anything), lo cercano se desplaza más que lo lejano mientras la cámara
     // avanza, como si la cámara se moviera dentro del escenario. El desplazamiento recorre de −S a +S en la escena.
-    if (CON_PROFUNDIDAD.has(archivo)) {
-      const id = `prof-${archivo}`;
-      const s = interpolate(frame, [0, 150], paneo ? [-70, 70] : [-40, 40], { extrapolateRight: "clamp" });
-      return (
-        <AbsoluteFill style={{ overflow: "hidden", backgroundColor: "#1f1f1f" }}>
-          <svg viewBox="0 0 1080 1920" preserveAspectRatio="xMidYMid slice" style={{ width: "100%", height: "100%",
-            scale: `${interpolate(frame, [0, 300], [1.12, 1.2], { extrapolateRight: "clamp" })}`, filter: "blur(1.5px) brightness(0.9) saturate(1.12)" }}>
-            <defs>
-              <filter id={id} x="0" y="0" width="100%" height="100%" colorInterpolationFilters="sRGB">
-                <feImage href={staticFile(`assets/ia/${archivo}-prof.png`)} preserveAspectRatio="xMidYMid slice" result="prof" />
-                <feDisplacementMap in="SourceGraphic" in2="prof" scale={s} xChannelSelector="R" yChannelSelector="G" />
-              </filter>
-            </defs>
-            <image href={staticFile(`assets/ia/${archivo}.jpg`)} width="1080" height="1920" preserveAspectRatio="xMidYMid slice" filter={`url(#${id})`} />
-          </svg>
-          <AbsoluteFill style={{ background: "radial-gradient(ellipse at center, rgba(0,0,0,0) 50%, rgba(0,0,0,0.35) 100%)" }} />
-        </AbsoluteFill>
-      );
-    }
+    if (CON_PROFUNDIDAD.has(archivo)) return <FondoProfundo archivo={archivo} paneo={paneo} />;
     return (
       <AbsoluteFill style={{ overflow: "hidden", backgroundColor: "#1f1f1f" }}>
         <Img src={staticFile(`assets/ia/${archivo}.jpg`)} style={{
@@ -539,6 +560,7 @@ const Escena: React.FC<Props["escenas"][number] & { indice?: number }> = ({ dibu
   const dx = sacude * Math.sin(frame * 2.7), dy = sacude * Math.cos(frame * 3.3);
   // La primera escena arranca ya armada (sin entrada, dibujo completo y frase entera): en los Shorts el primer cuadro es la
   // miniatura del feed y quien ve un fondo vacío o círculos en blanco pasa de largo (retención de 12 a 36 % hasta el 27 oct)
+  const esToma = typeof dibujo === "object" && !(dibujo.iconos?.length) && !dibujo.personaje && !barras && !antesDespues;
   const entrada: { dx: number; escala: number; filter?: string; clipPath?: string } = indice === 0 ? { dx: 0, escala: 1 } : entradaEscena(indice, frame, width);
   return (
     <AbsoluteFill style={{
@@ -562,8 +584,11 @@ const Escena: React.FC<Props["escenas"][number] & { indice?: number }> = ({ dibu
         <AbsoluteFill style={{ backgroundColor: "#ffffff", pointerEvents: "none",
           opacity: interpolate(frame, [total * 0.4, total * 0.4 + 2, total * 0.4 + 12], [0, 0.85, 0], { extrapolateLeft: "clamp", extrapolateRight: "clamp" }) }} />
       ) : null}
-      <div style={{ position: "absolute", left: 0, right: 0, bottom: horizontal ? 24 : 300, display: "flex", justifyContent: "center", padding: "0 80px" }}>
-        <Texto texto={texto} resaltar={resaltar} duracion={indice === 0 ? 0 : total * 0.5} tamano={horizontal ? 64 : 76} />
+      {/* Toma épica (escena sin íconos ni personaje): el subtítulo va más chico y abajo, sobre una franja oscura suave,
+          para no tapar la imagen (pedido del usuario, 28 oct) */}
+      {esToma ? <AbsoluteFill style={{ background: "linear-gradient(to top, rgba(0,0,0,0.55) 0%, rgba(0,0,0,0) 22%)", pointerEvents: "none" }} /> : null}
+      <div style={{ position: "absolute", left: 0, right: 0, bottom: horizontal ? 24 : esToma ? 150 : 300, display: "flex", justifyContent: "center", padding: "0 80px" }}>
+        <Texto texto={texto} resaltar={resaltar} duracion={indice === 0 ? 0 : total * 0.5} tamano={horizontal ? 64 : esToma ? 58 : 76} />
       </div>
     </AbsoluteFill>
   );
