@@ -179,6 +179,19 @@ Los dos comparten las técnicas: el anzuelo al cierre de cada parte, la imagen c
 - **Imagen:** dibujo 2D simple, a mano, con **metáforas literales** (el amor que ella dio es una montaña de corazones sobre la que él está parado; ella le alcanza un frasco) y un **globo de diálogo** ("¿Estás loca?"). La idea abstracta se entiende sin leer nada.
 - **Para Khipu:** en psicología, hábitos y sabiduría usamos el formato Pizarra (Open Peeps) con una metáfora visual por escena y diálogos cortos en globo. Temas con el problema del espectador en el título ("Si no puedes dormir, haz esto").
 
+**Short "El primer hijo es la prueba más difícil para tu relación" (Psicología aplicada; vimos el título y 3 cuadros).**
+- **Mismo estilo que el anterior:** fondo crema, dibujo 2D simple y **siempre la misma pareja de personajes** (el público los reconoce).
+- **El color cuenta la emoción:**
+  - en gris, con nubes de tormenta, va el "así va a ser SIEMPRE" (la angustia);
+  - el color vuelve con "y es TEMPORAL" (aparece un reloj de arena);
+  - termina en un consejo concreto: "un CAFÉ mientras duerme".
+- **El texto nunca tapa el dibujo:** va en una franja limpia arriba, con **una sola palabra en rojo**. Es justo lo que el usuario pidió ("las letras tapan las imágenes").
+- **Estructura:** el miedo del espectador, luego un giro que alivia y al final un consejo pequeño y concreto.
+- **Para Khipu:**
+  1. Probar en la Pizarra **los subtítulos en una franja de arriba, con una palabra clave en rojo**, en vez de sobre la imagen. En las tomas épicas, dejar aire arriba en el prompt ("empty sky at top").
+  2. **El color como emoción:** pasar de desaturado a color en el giro. Se puede hacer con un filtro de saturación animado.
+  3. **Personajes que se repiten** en la serie de psicología y hábitos.
+
 ## Búsqueda propia (28 oct): qué tiene millones de vistas ahora
 Con `scripts/investigar-youtube.py`. Desde este servidor, YouTube y Tactiq bloquean las transcripciones (piden demostrar que no es un robot), así que las transcripciones las pasa el usuario. Los títulos, las vistas y las duraciones sí se pueden buscar.
 - **Las "películas bíblicas" hechas con IA son lo que más crece:** "Las Crónicas de Enoc (Película 2026)", 7,7 M en 1 mes; otra de Enoc, 8,3 M en 3 meses; "El Libro de Enoc (2025)", 11 M. Duran de 55 min a 1 h 20 min. Es un formato en auge, y es nuestra serie fuerte.
