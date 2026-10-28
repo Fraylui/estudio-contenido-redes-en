@@ -1,0 +1,600 @@
+{
+ "formato": "Pizarra",
+ "voz": {
+  "referencia": "voz/referencias/xiomi-clara.wav",
+  "pausa": 0.22,
+  "tono": "alegre",
+  "pronunciacion": {
+   "Fleming": "Fléming",
+   "Penicillium": "Penicílium",
+   "Florey": "Flóri",
+   "Chain": "Chéin",
+   "Peoria": "Pióría",
+   "Saint Mary": "Seint Méri",
+   "The Lancet": "de Lánset",
+   "Oxford": "Óxford"
+  }
+ },
+ "props": {
+  "musica": "musica/documental.mp3",
+  "tono": "calido",
+  "escenas": [
+   {
+    "dibujo": {
+     "iconos": []
+    },
+    "texto": "Un descuido",
+    "resaltar": "descuido",
+    "fondo": "ia:fle01-laboratorio",
+    "sonido": "flash_shock",
+    "sonidoEn": 0.05
+   },
+   {
+    "dibujo": {
+     "iconos": []
+    },
+    "texto": "El moho que cambió la medicina",
+    "resaltar": "moho",
+    "fondo": "ia:fle02-moho"
+   },
+   {
+    "dibujo": {
+     "iconos": []
+    },
+    "texto": "Un rasguño podía matarte",
+    "resaltar": "matarte",
+    "fondo": "ia:fle03-rasguno",
+    "etiqueta": "Un mundo sin antibióticos"
+   },
+   {
+    "dibujo": {
+     "iconos": []
+    },
+    "texto": "Antes de 1940",
+    "resaltar": "1940",
+    "fondo": "ia:fle04-hospital-viejo"
+   },
+   {
+    "dibujo": {
+     "iconos": []
+    },
+    "texto": "Sin armas contra las bacterias",
+    "resaltar": "bacterias",
+    "fondo": "ia:fle05-bacterias"
+   },
+   {
+    "dibujo": {
+     "iconos": []
+    },
+    "texto": "Escocia, 1881",
+    "resaltar": "1881",
+    "fondo": "ia:fle06-granja"
+   },
+   {
+    "dibujo": {
+     "iconos": []
+    },
+    "texto": "Primera Guerra Mundial",
+    "resaltar": "Guerra",
+    "fondo": "ia:fle07-guerra",
+    "particulas": "lluvia"
+   },
+   {
+    "dibujo": {
+     "iconos": []
+    },
+    "texto": "Morían por las heridas",
+    "resaltar": "heridas",
+    "fondo": "ia:fle08-soldados"
+   },
+   {
+    "dibujo": {
+     "iconos": []
+    },
+    "texto": "Antisépticos que dañaban",
+    "resaltar": "dañaban",
+    "fondo": "ia:fle09-antisepticos"
+   },
+   {
+    "dibujo": {
+     "iconos": []
+    },
+    "texto": "Una obsesión",
+    "resaltar": "obsesión",
+    "fondo": "ia:fle10-obsesion",
+    "etiqueta": "La obsesión"
+   },
+   {
+    "dibujo": {
+     "iconos": []
+    },
+    "texto": "Hospital de Saint Mary, 1928",
+    "resaltar": "1928",
+    "fondo": "ia:fle11-saint-mary"
+   },
+   {
+    "dibujo": {
+     "iconos": []
+    },
+    "texto": "Famoso por su desorden",
+    "resaltar": "desorden",
+    "fondo": "ia:fle12-desorden"
+   },
+   {
+    "dibujo": {
+     "iconos": []
+    },
+    "texto": "Se fue de vacaciones",
+    "resaltar": "vacaciones",
+    "fondo": "ia:fle13-vacaciones"
+   },
+   {
+    "dibujo": {
+     "iconos": []
+    },
+    "texto": "Algo le llamó la atención",
+    "resaltar": "atención",
+    "fondo": "ia:fle14-vuelve",
+    "etiqueta": "El hallazgo",
+    "sonido": "magic_reveal",
+    "sonidoEn": 1.5
+   },
+   {
+    "dibujo": {
+     "iconos": []
+    },
+    "texto": "Un moho verde azulado",
+    "resaltar": "moho",
+    "fondo": "ia:fle15-moho-plato"
+   },
+   {
+    "dibujo": {
+     "iconos": []
+    },
+    "texto": "Las bacterias desaparecieron",
+    "resaltar": "desaparecieron",
+    "fondo": "ia:fle16-circulo",
+    "sonido": "boom",
+    "sonidoEn": 0.5
+   },
+   {
+    "dibujo": {
+     "iconos": []
+    },
+    "texto": "“Qué curioso”",
+    "resaltar": "curioso",
+    "fondo": "ia:fle17-curioso"
+   },
+   {
+    "dibujo": {
+     "iconos": []
+    },
+    "texto": "Penicilina",
+    "resaltar": "Penicilina",
+    "fondo": "ia:fle18-penicilina"
+   },
+   {
+    "dibujo": {
+     "iconos": []
+    },
+    "texto": "Mataba bacterias, no células",
+    "resaltar": "bacterias",
+    "fondo": "ia:fle19-prueba"
+   },
+   {
+    "dibujo": {
+     "iconos": []
+    },
+    "texto": "1929: casi nada",
+    "resaltar": "nada",
+    "fondo": "ia:fle20-publica"
+   },
+   {
+    "dibujo": {
+     "iconos": []
+    },
+    "texto": "Imposible de purificar",
+    "resaltar": "purificar",
+    "fondo": "ia:fle21-dificil"
+   },
+   {
+    "dibujo": {
+     "iconos": []
+    },
+    "texto": "10 años olvidada",
+    "resaltar": "olvidada",
+    "fondo": "ia:fle22-olvidado"
+   },
+   {
+    "dibujo": {
+     "iconos": []
+    },
+    "texto": "Oxford, 1939",
+    "resaltar": "Oxford",
+    "fondo": "ia:fle23-oxford",
+    "etiqueta": "Oxford"
+   },
+   {
+    "dibujo": {
+     "iconos": []
+    },
+    "texto": "Florey y Chain",
+    "resaltar": "Florey",
+    "fondo": "ia:fle24-florey-chain"
+   },
+   {
+    "dibujo": {
+     "iconos": []
+    },
+    "texto": "Bañeras y botellas de leche",
+    "resaltar": "Bañeras",
+    "fondo": "ia:fle25-banos"
+   },
+   {
+    "dibujo": {
+     "iconos": []
+    },
+    "texto": "Los ratones vivieron",
+    "resaltar": "vivieron",
+    "fondo": "ia:fle26-ratones",
+    "sonido": "boom",
+    "sonidoEn": 2.5
+   },
+   {
+    "dibujo": {
+     "iconos": []
+    },
+    "texto": "Faltaba un ser humano",
+    "resaltar": "humano",
+    "fondo": "ia:fle27-humano"
+   },
+   {
+    "dibujo": {
+     "iconos": []
+    },
+    "texto": "Albert Alexander, 1941",
+    "resaltar": "1941",
+    "fondo": "ia:fle28-alexander",
+    "etiqueta": "El primer paciente"
+   },
+   {
+    "dibujo": {
+     "iconos": []
+    },
+    "texto": "La fiebre bajó",
+    "resaltar": "bajó",
+    "fondo": "ia:fle29-mejora"
+   },
+   {
+    "dibujo": {
+     "iconos": []
+    },
+    "texto": "La sacaban de su orina",
+    "resaltar": "orina",
+    "fondo": "ia:fle30-poca"
+   },
+   {
+    "dibujo": {
+     "iconos": []
+    },
+    "texto": "Se acabó",
+    "resaltar": "acabó",
+    "fondo": "ia:fle31-murio"
+   },
+   {
+    "dibujo": {
+     "iconos": []
+    },
+    "texto": "El problema: fabricarla",
+    "resaltar": "fabricarla",
+    "fondo": "ia:fle32-fabricar",
+    "etiqueta": "Fabricarla"
+   },
+   {
+    "dibujo": {
+     "iconos": []
+    },
+    "texto": "Rumbo a Estados Unidos",
+    "resaltar": "Estados Unidos",
+    "fondo": "ia:fle33-eeuu"
+   },
+   {
+    "dibujo": {
+     "iconos": []
+    },
+    "texto": "Un melón con moho",
+    "resaltar": "melón",
+    "fondo": "ia:fle34-melon",
+    "sonido": "magic_reveal",
+    "sonidoEn": 1.0
+   },
+   {
+    "dibujo": {
+     "iconos": []
+    },
+    "texto": "Normandía, 1944",
+    "resaltar": "1944",
+    "fondo": "ia:fle35-normandia",
+    "particulas": "polvo"
+   },
+   {
+    "dibujo": {
+     "iconos": []
+    },
+    "texto": "Heridas que se curaban",
+    "resaltar": "curaban",
+    "fondo": "ia:fle36-curan"
+   },
+   {
+    "dibujo": {
+     "iconos": []
+    },
+    "texto": "Premio Nobel, 1945",
+    "resaltar": "Nobel",
+    "fondo": "ia:fle37-nobel",
+    "etiqueta": "El Nobel"
+   },
+   {
+    "dibujo": {
+     "iconos": []
+    },
+    "texto": "Una advertencia",
+    "resaltar": "advertencia",
+    "fondo": "ia:fle38-discurso"
+   },
+   {
+    "dibujo": {
+     "iconos": []
+    },
+    "texto": "Las bacterias aprenderían",
+    "resaltar": "aprenderían",
+    "fondo": "ia:fle39-advertencia",
+    "sonido": "boom",
+    "sonidoEn": 2.0
+   },
+   {
+    "dibujo": {
+     "iconos": []
+    },
+    "texto": "Bacterias resistentes",
+    "resaltar": "resistentes",
+    "fondo": "ia:fle40-resistentes",
+    "etiqueta": "La advertencia"
+   },
+   {
+    "dibujo": {
+     "iconos": []
+    },
+    "texto": "Más de 1 millón de muertes (2019)",
+    "resaltar": "1 millón",
+    "fondo": "ia:fle41-lancet"
+   },
+   {
+    "dibujo": {
+     "iconos": []
+    },
+    "texto": "Solo con receta",
+    "resaltar": "receta",
+    "fondo": "ia:fle42-receta"
+   },
+   {
+    "dibujo": {
+     "iconos": []
+    },
+    "texto": "Un plato olvidado",
+    "resaltar": "olvidado",
+    "fondo": "ia:fle43-plato"
+   },
+   {
+    "dibujo": {
+     "iconos": []
+    },
+    "texto": "“Lo encontré por accidente”",
+    "resaltar": "accidente",
+    "fondo": "ia:fle44-naturaleza"
+   },
+   {
+    "dibujo": {
+     "iconos": []
+    },
+    "texto": "Se detuvo a mirar",
+    "resaltar": "mirar",
+    "fondo": "ia:fle45-mirar"
+   },
+   {
+    "dibujo": {
+     "iconos": []
+    },
+    "texto": "Lo que otros habrían tirado",
+    "resaltar": "tirado",
+    "fondo": "ia:fle46-final"
+   }
+  ],
+  "narracion": [
+   {
+    "texto": "Un científico se fue de vacaciones y dejó su laboratorio desordenado. Ese descuido terminó salvando cientos de millones de vidas.",
+    "estilo": "narrador"
+   },
+   {
+    "texto": "Esta es la historia de Alexander Fleming, y del moho que cambió la medicina.",
+    "estilo": "narrador"
+   },
+   {
+    "texto": "Imagina un mundo donde un rasguño podía matarte.",
+    "estilo": "narrador"
+   },
+   {
+    "texto": "Antes de mil novecientos cuarenta, una infección en una herida, una neumonía o una muela mal curada eran muchas veces una sentencia de muerte.",
+    "estilo": "narrador"
+   },
+   {
+    "texto": "Los médicos no tenían cómo matar a las bacterias dentro del cuerpo.",
+    "estilo": "narrador"
+   },
+   {
+    "texto": "Alexander Fleming nació en mil ochocientos ochenta y uno, en una granja de Escocia.",
+    "estilo": "narrador"
+   },
+   {
+    "texto": "Estudió medicina en Londres. Y en la Primera Guerra Mundial lo enviaron a los hospitales de campaña en Francia.",
+    "estilo": "narrador"
+   },
+   {
+    "texto": "Ahí vio algo que nunca olvidó: miles de soldados sobrevivían a las balas, pero morían después por las heridas infectadas.",
+    "estilo": "narrador"
+   },
+   {
+    "texto": "Y los antisépticos que usaban hacían más daño que bien: mataban también las defensas del cuerpo.",
+    "estilo": "narrador"
+   },
+   {
+    "texto": "Fleming volvió a Londres con una obsesión: encontrar algo que matara a las bacterias sin dañar a la persona.",
+    "estilo": "narrador"
+   },
+   {
+    "texto": "En mil novecientos veintiocho trabajaba en el hospital de Saint Mary, en Londres, cultivando bacterias en pequeños platos de vidrio.",
+    "estilo": "narrador"
+   },
+   {
+    "texto": "Era brillante. Pero también, famoso por su desorden.",
+    "estilo": "narrador"
+   },
+   {
+    "texto": "En agosto se fue de vacaciones con su familia. Y dejó los platos con bacterias amontonados en su mesa.",
+    "estilo": "narrador"
+   },
+   {
+    "texto": "Volvió a fines de septiembre. Empezó a limpiar, y algo le llamó la atención.",
+    "estilo": "narrador"
+   },
+   {
+    "texto": "En uno de los platos había crecido un moho verde azulado.",
+    "estilo": "narrador"
+   },
+   {
+    "texto": "Y alrededor del moho, las bacterias habían desaparecido. Era como si algo las hubiera disuelto.",
+    "estilo": "narrador"
+   },
+   {
+    "texto": "Cuentan que Fleming solo dijo: qué curioso.",
+    "estilo": "narrador"
+   },
+   {
+    "texto": "El moho era un Penicillium. Y a la sustancia que mataba a las bacterias, la llamó penicilina.",
+    "estilo": "narrador"
+   },
+   {
+    "texto": "La probó: mataba a muchas bacterias peligrosas, y no dañaba a los glóbulos blancos.",
+    "estilo": "narrador"
+   },
+   {
+    "texto": "Publicó su descubrimiento en mil novecientos veintinueve. Y entonces… no pasó casi nada.",
+    "estilo": "narrador"
+   },
+   {
+    "texto": "La penicilina era muy difícil de purificar. Se descomponía en pocos días, y Fleming no era químico.",
+    "estilo": "narrador"
+   },
+   {
+    "texto": "Durante diez años, el descubrimiento quedó casi olvidado.",
+    "estilo": "narrador"
+   },
+   {
+    "texto": "Hasta que en mil novecientos treinta y nueve, en Oxford, dos científicos encontraron su artículo.",
+    "estilo": "narrador"
+   },
+   {
+    "texto": "Howard Florey y Ernst Chain decidieron intentar lo que nadie había logrado: sacar la penicilina pura.",
+    "estilo": "narrador"
+   },
+   {
+    "texto": "Era plena Segunda Guerra Mundial. No tenían equipos, así que usaron bañeras, botellas de leche y bacinicas de hospital para cultivar el moho.",
+    "estilo": "narrador"
+   },
+   {
+    "texto": "En mayo de mil novecientos cuarenta probaron con ratones infectados. Los que no recibieron penicilina murieron. Los que la recibieron, vivieron.",
+    "estilo": "narrador"
+   },
+   {
+    "texto": "Faltaba lo más difícil: un ser humano.",
+    "estilo": "narrador"
+   },
+   {
+    "texto": "En febrero de mil novecientos cuarenta y uno, un policía llamado Albert Alexander estaba muriendo por una infección que empezó con un rasguño.",
+    "estilo": "narrador"
+   },
+   {
+    "texto": "Le dieron penicilina. En pocos días la fiebre bajó. Parecía un milagro.",
+    "estilo": "narrador"
+   },
+   {
+    "texto": "Pero había tan poca, que la recuperaban de su orina para volver a usarla.",
+    "estilo": "narrador"
+   },
+   {
+    "texto": "Y se acabó. La infección volvió, y Albert Alexander murió.",
+    "estilo": "narrador"
+   },
+   {
+    "texto": "La penicilina funcionaba. El problema era fabricarla.",
+    "estilo": "narrador"
+   },
+   {
+    "texto": "Florey viajó a Estados Unidos, y los laboratorios de ese país empezaron a buscar un moho que produjera más.",
+    "estilo": "narrador"
+   },
+   {
+    "texto": "La respuesta apareció en un mercado de Peoria: un melón con moho que producía muchísima más penicilina.",
+    "estilo": "narrador"
+   },
+   {
+    "texto": "Para el desembarco de Normandía, en mil novecientos cuarenta y cuatro, ya había millones de dosis para los soldados.",
+    "estilo": "narrador"
+   },
+   {
+    "texto": "Heridas que antes eran mortales empezaron a curarse.",
+    "estilo": "narrador"
+   },
+   {
+    "texto": "En mil novecientos cuarenta y cinco, Fleming, Florey y Chain recibieron el Premio Nobel de Medicina.",
+    "estilo": "narrador"
+   },
+   {
+    "texto": "Y en su discurso, Fleming dio una advertencia que hoy parece una profecía.",
+    "estilo": "narrador"
+   },
+   {
+    "texto": "Dijo que si la penicilina se usaba mal, en dosis pequeñas o sin necesidad, las bacterias aprenderían a resistirla.",
+    "estilo": "narrador"
+   },
+   {
+    "texto": "Tenía razón. Hoy existen bacterias resistentes a casi todos los antibióticos.",
+    "estilo": "narrador"
+   },
+   {
+    "texto": "Un estudio publicado en la revista The Lancet calculó que en dos mil diecinueve, más de un millón de personas murieron por infecciones resistentes.",
+    "estilo": "narrador"
+   },
+   {
+    "texto": "Por eso los médicos insisten: los antibióticos solo con receta, y siempre hasta terminar el tratamiento.",
+    "estilo": "narrador"
+   },
+   {
+    "texto": "Todo empezó con un plato olvidado sobre una mesa.",
+    "estilo": "narrador"
+   },
+   {
+    "texto": "Fleming diría después: yo no inventé la penicilina. La naturaleza la hizo. Yo solo la encontré por accidente.",
+    "estilo": "narrador"
+   },
+   {
+    "texto": "Pero hizo algo que muchos no hacen: en vez de tirar el plato a la basura, se detuvo a mirar.",
+    "estilo": "narrador"
+   },
+   {
+    "texto": "A veces, el descubrimiento más grande está en lo que todos los demás habrían tirado.",
+    "estilo": "narrador"
+   }
+  ]
+ }
+}
