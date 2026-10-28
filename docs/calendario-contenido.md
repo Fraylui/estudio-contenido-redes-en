@@ -28,6 +28,13 @@ Cada tema: dato con fuente (en la Biblia, el pasaje citado) y una pregunta que c
 - **¿Qué pasaría si…?** …la Tierra dejara de girar · …no durmieras en 7 días · …todos saltáramos a la vez
 
 ## Banco de temas de la Biblia (serie)
+**Los que más intriga dan (pedido del usuario, 28 oct):**
+- **Apocalipsis:** los 4 jinetes (solo uno tiene nombre: Muerte, Apocalipsis 6:8) · ¿Qué significa 666? (13:18; la lectura de muchos historiadores: el nombre de Nerón en números hebreos; en algunos manuscritos es 616) · Juan en la isla de Patmos (1:9) · Los 7 sellos · Armagedón es un lugar real (Meguido, Israel)
+- **Juan el Bautista:** comía langostas y miel silvestre (Mateo 3:4) · Su cabeza en una bandeja: la historia de Herodías y Salomé (Marcos 6:17-29; Josefo también lo menciona)
+- **Cómo murieron los apóstoles:** Santiago, el único cuya muerte cuenta la Biblia (Hechos 12:2) · Pedro crucificado cabeza abajo (**tradición**: Eusebio, siglo IV) · Juan, el único que habría muerto de viejo (**tradición**) · Pablo en Roma (**tradición**: Clemente de Roma, Eusebio)
+- **Más:** ¿Quiénes eran los Reyes Magos y cuántos eran? (Mateo 2 no dice que fueran tres) · Matusalén vivió 969 años (Génesis 5:27) · El arca de Noé: sus medidas en metros (Génesis 6:15) · Lázaro y los 4 días (Juan 11) · ¿Qué escribió Jesús en el suelo? (Juan 8:6) · Judas Iscariote: dos relatos de su muerte (Mateo 27 y Hechos 1) · Barrabás · Los Nefilim (Génesis 6:4) · Sansón y su pelo · Las 10 plagas, una por una · La mujer de Lot y la sal
+- **Regla:** cuando la fuente es la tradición y no el texto bíblico, se dice en voz y en pantalla ("según la tradición…").
+
 - **Personajes:** Sansón, Moisés de bebé en el Nilo, Pedro el pescador, Pablo antes de convertirse, Zaqueo el cobrador de impuestos, Herodes el Grande, Pilato (la piedra con su nombre).
 - **Lugares y arqueología:** Jerusalén en tiempos de Jesús, el estanque de Siloé (hallado en 2004), Belén, Nínive, el monte Sinaí (dónde estaría), Cafarnaúm.
 - **Palabras:** "Shalom", "Abba", "Mesías" y "Cristo", "Aleluya", "Evangelio".

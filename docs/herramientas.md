@@ -69,3 +69,18 @@ Estado al 23 de octubre de 2026. ✅ en uso · 🟡 disponible pero sin usar · 
 3. **`it-reelsmaker`:** Shorts más dinámicos a partir de cada video.
 4. **Música libre** mezclada con la voz.
 5. **Escenarios con IA en cada sección**, más objetos en la mano y globos de diálogo.
+
+## Radar de herramientas gratis (se revisa cada semana con la tarea de aprendizaje)
+Regla del usuario: **adaptarnos a cualquier herramienta gratis que dé mejores resultados**. Antes de usarla se revisa su licencia: tiene que permitir uso comercial, porque el canal es para monetizar.
+
+| Herramienta | Para qué | Licencia | Estado |
+|---|---|---|---|
+| Kokoro-82M | Voces de hombre y mujer en español sin copiar a nadie | Apache 2.0 ✅ | **En uso** desde el 28 oct (`voz/voces.json`) |
+| nara_wpe + noisereduce | Quitar eco y ruido a grabaciones de celular | MIT ✅ | **En uso** (`voz/limpiar.py`) |
+| Depth Anything V2 Small | Mapa de profundidad para movimiento 2.5D (paralaje) de los escenarios | Apache 2.0 ✅ (solo el modelo Small) | Por probar: siguiente efecto nuevo |
+| FLUX.1-schnell | Imágenes mucho más realistas y épicas que SD-Turbo (como los Shorts de referencia) | Apache 2.0 ✅ | Por probar; en CPU es lento: 1 imagen por escena clave |
+| Real-ESRGAN | Agrandar las imágenes de SD-Turbo sin que se vean borrosas | BSD ✅ | Por probar |
+| RIFE | Movimiento más suave entre cuadros | MIT ✅ | Por probar |
+| DeepFilterNet | Mejor reductor de ruido de voz | MIT/Apache ✅ | El modelo oficial está en GitHub y aquí no se puede bajar |
+| Wav2Lip, MusicGen, Stable Audio Open | Labios sincronizados, música con IA | ❌ No comercial o con límites | **No usar** |
+

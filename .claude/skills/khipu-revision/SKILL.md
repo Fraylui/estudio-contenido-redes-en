@@ -80,6 +80,8 @@ Cuando se toma una idea de otro canal (un gancho, un efecto, un formato), antes 
 5. **Probarlo en una escena**, revisarlo en una imagen fija y recién después usarlo en todo el video.
 
 ## 5. Habilidades que todavía faltan (hoja de ruta, en orden)
+Cada contenido estrena algo **visual, sonoro o de efectos**. Las herramientas gratis por probar y su licencia están en el radar de `docs/herramientas.md`; cuando aparezca una mejor, se prueba en una escena y, si mejora el % visto, se adopta.
+
 1. **Boca sincronizada con la voz:** mover la boca con la intensidad del audio de cada frase (se puede: el WAV está en `public/voz/`).
 2. **Movimiento 2.5D (paralaje):** separar el escenario en capas con un modelo de profundidad gratis en CPU y mover la cámara entre ellas.
 3. **Personajes 3D consistentes:** el mismo personaje en varias poses (semilla y prompt fijos) para miniaturas e historias.
