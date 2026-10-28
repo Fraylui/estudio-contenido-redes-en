@@ -118,3 +118,6 @@ Cada tema: dato con fuente (en la Biblia, el pasaje citado) y una pregunta que c
 
 ## Serie "Dinero práctico" (estilo doodle, consejos chiquitos; jueves 7:00 junto a "Historias del dinero")
 - Los gastos hormiga (la hormiga con la moneda) · Cómo ahorrar si ganas poco · 4 errores que te dejan sin dinero sin darte cuenta · El método de los sobres. Nada de inversiones ni productos: solo hábitos.
+
+## Serie "Efectos y paradojas de la mente" (Psicología; estilo doodle, con estudio de fuente)
+- El efecto Zeigarnik (Bluma Zeigarnik, 1927) · La paradoja de Abilene (Jerry Harvey, 1974) · El efecto Dunning-Kruger (1999) · El efecto Pratfall (Aronson, 1966) · El efecto Ben Franklin

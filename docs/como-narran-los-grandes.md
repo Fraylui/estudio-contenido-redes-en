@@ -265,6 +265,19 @@ Los dos comparten las técnicas: el anzuelo al cierre de cada parte, la imagen c
 - **Lista que se nota ("LA TERCERA:")**, un globo de pensamiento con el recuerdo, y objetos-símbolo en las manos (el anillo y la foto).
 - **Para Khipu:** títulos que provocan con algo prohibido y contenido que gira hacia lo útil o lo verdadero ("Cómo hacerte rico en una noche" → la historia real de quien lo intentó).
 
+**Psicología Práctica, 2 más: "La Paradoja del Gato:" y "Los hombres que prosperan SIEMPRE cometen este ERROR:".**
+- **Un concepto con nombre como título** ("La paradoja de…", "El efecto…"): suena a secreto que se aprende en 30 s, se guarda y se comparte.
+- **"FUNCIONA ASÍ:"** + una escena dentro de una pantalla de video (como un tutorial). La idea se resume en una frase arriba con una palabra en rojo y una flecha que apunta al dibujo.
+- **Un diagrama como escena:** la "escalera social" vertical con pisos rotulados (baja-baja … 1 %) y el personaje subiendo. Una estructura dibujada explica lo que tomaría 5 frases.
+- **Un chiste de contraste social** ("Mi perro es más fino…").
+- **Ojo:** el segundo usa la polémica hombre/mujer ("Cuidado con las Mujeres"). Da comentarios, pero divide y puede espantar anunciantes. Khipu no entra en guerras de género (neutralidad).
+- **Para Khipu (Psicología):** una serie de **efectos y paradojas con nombre y fuente**:
+  - el efecto Zeigarnik (por qué no olvidas lo que dejaste a medias);
+  - la paradoja de Abilene;
+  - el efecto Dunning-Kruger;
+  - el efecto Pratfall.
+  Formato: "FUNCIONA ASÍ:" + un diagrama dibujado + un caso de la vida diaria.
+
 ## Búsqueda propia (28 oct): qué tiene millones de vistas ahora
 Con `scripts/investigar-youtube.py`. Desde este servidor, YouTube y Tactiq bloquean las transcripciones (piden demostrar que no es un robot), así que las transcripciones las pasa el usuario. Los títulos, las vistas y las duraciones sí se pueden buscar.
 - **Las "películas bíblicas" hechas con IA son lo que más crece:** "Las Crónicas de Enoc (Película 2026)", 7,7 M en 1 mes; otra de Enoc, 8,3 M en 3 meses; "El Libro de Enoc (2025)", 11 M. Duran de 55 min a 1 h 20 min. Es un formato en auge, y es nuestra serie fuerte.
