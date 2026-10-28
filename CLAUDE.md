@@ -9,6 +9,7 @@ Al usuario se le habla siempre **en español**, claro y sin tecnicismos.
 | `khipu-canal` | **Estrategia:** líneas temáticas, frecuencia, horas, duración, ganchos, retención, estructuras, métricas, monetización, documental 2D y mapa de capacidades | Planear, elegir temas, decidir horarios, revisar estadísticas |
 | `khipu-diario` | **Rutina de cada día:** qué categoría toca (todas, con la serie Biblia), qué se produce, cómo y a qué hora se publica | Cada día de producción y en la tarea programada diaria |
 | `khipu-revision` | **Mejorar como un gran creador:** analizar con datos el video anterior y las referencias, metas de ritmo, bucle de prompts y hoja de ruta | Antes de cada video nuevo, después de publicar, o si algo se ve básico |
+| `khipu-short-epico` | **Hacer un Short o video largo de corrido** (historia con tomas épicas): un comando que se retoma solo, del guion a Metricool | Cada Short o video largo nuevo |
 | `pizarra` | **Producción técnica** de videos largos y Shorts: JSON de escenas, personajes, íconos, objetos 3D, mapas, efectos, música y miniaturas | Al armar y renderizar un video |
 | `voz-narradora` | **Voz** de Xiomi (Chatterbox): estilos, pronunciación, calibración, sin soplido ni cortes | Al narrar o arreglar audio |
 | `video-sfx` | **Efectos de sonido** del catálogo básico (14) | Anuncios y golpes clave; la biblioteca grande está en `public/sfx/biblioteca/` |

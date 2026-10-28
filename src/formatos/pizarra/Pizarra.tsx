@@ -387,11 +387,12 @@ const FondoProfundo: React.FC<{ archivo: string; paneo: boolean }> = ({ archivo,
       img.src = src;
     }))).then(() => continueRender(espera));
   }, [espera, foto, prof]);
+  const { width, height } = useVideoConfig();
   const id = `prof-${archivo}`;
   const s = interpolate(frame, [0, 150], paneo ? [-28, 28] : [-16, 16], { extrapolateRight: "clamp" });
   return (
     <AbsoluteFill style={{ overflow: "hidden", backgroundColor: "#1f1f1f" }}>
-      <svg viewBox="0 0 1080 1920" preserveAspectRatio="xMidYMid slice" style={{ width: "100%", height: "100%",
+      <svg viewBox={`0 0 ${width} ${height}`} preserveAspectRatio="xMidYMid slice" style={{ width: "100%", height: "100%",
         scale: `${interpolate(frame, [0, 300], [1.12, 1.2], { extrapolateRight: "clamp" })}`, filter: "brightness(0.95) saturate(1.08)" }}>
         <defs>
           <filter id={id} x="0" y="0" width="100%" height="100%" colorInterpolationFilters="sRGB">
@@ -399,7 +400,7 @@ const FondoProfundo: React.FC<{ archivo: string; paneo: boolean }> = ({ archivo,
             <feDisplacementMap in="SourceGraphic" in2="prof" scale={s} xChannelSelector="R" yChannelSelector="G" />
           </filter>
         </defs>
-        <image href={foto} width="1080" height="1920" preserveAspectRatio="xMidYMid slice" filter={`url(#${id})`} />
+        <image href={foto} width={width} height={height} preserveAspectRatio="xMidYMid slice" filter={`url(#${id})`} />
       </svg>
       <AbsoluteFill style={{ background: "radial-gradient(ellipse at center, rgba(0,0,0,0) 50%, rgba(0,0,0,0.35) 100%)" }} />
     </AbsoluteFill>
