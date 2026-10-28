@@ -205,3 +205,26 @@ Cada contenido nuevo tiene que mejorar en **las 5 áreas**, no solo en una:
 5. **Las figuras son chiquitas en paisajes grandes** (de espaldas, siluetas): en el celular no se leen. → Más primeros planos de caras, manos y objetos.
 6. **Todo tiene el mismo color café y naranja.** → El color cuenta la emoción (frío en la amenaza, cálido en la victoria, gris al pasar al color en el giro).
 7. **Las miniaturas son solo letras.** → Una cara con emoción, un conflicto y de 2 a 4 palabras (ver `empaquetado.md`).
+
+## Diagnóstico de sonido y efectos (28 oct, datos del informe del Short de Goliat)
+**Sonido:**
+1. **La voz no siempre se entiende:** Whisper oyó "texto de **Oreo**" donde decía "texto hebreo", y "salió **el vaya** gritar". Si la máquina no lo entiende, parte del público tampoco. → Revisar cada frase con `analizar-voz.py` y reescribir o volver a narrar las que Whisper oiga mal.
+2. **Solo 5 golpes de sonido en 11 escenas** (4 escenas mudas, y el `boom` repetido 2 veces). → Cada escena con el sonido de **lo que se ve** (foley): la honda girando, la piedra cortando el aire, el golpe seco, el ejército que ahoga un grito, el metal de la armadura. Nunca el mismo golpe dos veces.
+3. **La música es una sola pista pareja de principio a fin.** → Darle forma:
+   - un sonido que sube (riser) antes de la revelación;
+   - un golpe grave en la revelación;
+   - **silencio total de 0,5–1 s en el momento más fuerte** (lo del Short de los 7 sellos);
+   - la música vuelve en el remate;
+   - la música baja sola cuando habla la voz.
+4. **Solo 1 silencio en 40 s.** → Una pausa de suspenso justo antes del dato fuerte.
+5. **El primer segundo:** el golpe de sonido, la voz y la imagen fuerte deben entrar juntos en el cuadro 0.
+
+**Efectos:**
+1. **Cortes:** 16 por minuto (los grandes hacen de 20 a 40), primer corte a los 3,3 s y un plano de 6,7 s. → Primer cambio antes de los 2 s; nada quieto más de 3 s.
+2. **Faltan efectos que acompañen el golpe:**
+   - la pantalla tiembla cuando suena el boom;
+   - un destello blanco de 2 cuadros en el impacto;
+   - un zoom rápido en la palabra clave;
+   - un barrido con desenfoque entre escenas.
+3. **El texto entra sin sonido:** cada palabra clave que aparece, con un "pop" o un "whoosh" suave.
+4. **Las transiciones son siempre cortes secos iguales.** → Que cada transición tenga motivo: un barrido para el viaje, un destello para la revelación, un fundido a negro para la muerte o el silencio.
