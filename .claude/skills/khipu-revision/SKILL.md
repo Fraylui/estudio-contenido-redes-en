@@ -79,6 +79,14 @@ Cuando se toma una idea de otro canal (un gancho, un efecto, un formato), antes 
 4. **Cómo adaptarlo a Khipu sin copiarlo:** con nuestros personajes, colores y voz, y para nuestro tema.
 5. **Probarlo en una escena**, revisarlo en una imagen fija y recién después usarlo en todo el video.
 
+## 4b. Cuando el usuario pasa un video o una transcripción (todo es para aprender)
+El usuario manda videos de otros canales para que Khipu aprenda de ellos. Con cada uno:
+1. **Las técnicas que retienen** (gancho, promesa, misterios abiertos, segunda persona, escenas, diálogo, capítulos, cierre): qué hace y en qué minuto.
+2. **Por qué tiene vistas** (tema, empaquetado, duración, tono), aunque tenga errores. Lo que funciona se copia sin miedo.
+3. **Lo que no copiamos:** fuentes inventadas y mendigar. Los errores se señalan, pero sin despreciar el video.
+4. **Ideas de temas** que salen de él, con nuestro ángulo (lo que no cuenta, o el lado hispano).
+5. Todo se anota en `docs/como-narran-los-grandes.md` y en el calendario, y **se aplica en el siguiente guion** (cambiar la skill si hace falta). Al usuario se le responde corto: qué aprendimos y qué cambia.
+
 ## 5. Habilidades que todavía faltan (hoja de ruta, en orden)
 Cada contenido estrena algo **visual, sonoro o de efectos**. Las herramientas gratis por probar y su licencia están en el radar de `docs/herramientas.md`; cuando aparezca una mejor, se prueba en una escena y, si mejora el % visto, se adopta.
 
