@@ -51,6 +51,25 @@ Se anota en el `_nota` de `imagen/tomas/<nombre>.json`: las fuentes, el ángulo 
 - **Biblia:** se cita el pasaje y nunca se muestra el rostro de Jesús ni de Dios (luz, silueta de espaldas).
 - **Short:** de 30 a 45 s y de 9 a 11 escenas. **Video largo:** de 8 a 12 min (de 1 200 a 1 800 palabras), con capítulos con título, una promesa en el primer minuto que se paga al final y un reenganche al cierre de cada capítulo.
 
+## 2b. Lo aprendido de 25 videos de referencia (28 oct), revisarlo en cada guion
+1. **Gancho:** algo que el espectador vivió, o una situación extrema en segunda persona, o una confusión que todos tienen. Más un misterio que se promete para el final ("te lo digo al final"), y la primera duda se paga enseguida.
+2. **Título:** el problema del espectador + una promesa ("Si ganas poco…", "Evita ESTO…"), un concepto con nombre ("La paradoja de…"), algo prohibido que gira a lo verdadero, o un paréntesis que defiende al espectador.
+3. **Lista con números grandes o cuenta regresiva**, que va de menos a más, con un detalle concreto por punto.
+4. **Escenas, personajes y diálogo**, no definiciones; los personajes se repiten en la serie.
+5. **El texto arriba, en una franja limpia, con una palabra en rojo; nunca tapa la imagen.**
+6. **Imágenes que explican sin palabras:**
+   - dichos y metáforas dibujados al pie de la letra (la hormiga con la moneda);
+   - lo invisible hecho visible;
+   - pantalla partida para comparar o para el antes y después;
+   - el color para la emoción (de gris a color);
+   - diagramas como escena;
+   - etiquetas y contadores en vivo.
+7. **Sonido:** el silencio también se usa (en el momento más fuerte se corta la música).
+8. **Final:** un remate en paradoja, que vuelve al inicio, o una comparación o pregunta que provoque comentarios sin pedirlos. Si es una serie, abre la siguiente parte.
+9. **Honestidad:** "dice el texto / la tradición / la ciencia". Violencia sin sangre. Nunca fuentes inventadas ni estereotipos.
+10. **Un video largo da 2 o 3 Shorts recortados** con un marco de marca.
+Detalle y ejemplos: `docs/como-narran-los-grandes.md`.
+
 ## 3. Reglas de los prompts de las tomas
 - **Describir lo que hace reconocible cada cosa:** no "a scroll", sino "two dark carved wooden rollers, aged parchment with columns of ink".
 - **El personaje siempre igual:** misma descripción en todas sus tomas (Goliat: "giant Philistine warrior, bronze helmet, bronze scale armor, thick black beard, huge spear").
