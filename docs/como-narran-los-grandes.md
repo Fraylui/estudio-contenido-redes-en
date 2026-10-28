@@ -230,6 +230,19 @@ Los dos comparten las técnicas: el anzuelo al cierre de cada parte, la imagen c
   - una serie de dinero práctico en este estilo, solo con consejos generales (nada de inversiones ni productos);
   - un estilo de imagen nuevo, "doodle plano" (líneas gruesas, colores planos, fondo liso), para los dibujos literales que no estén en Open Peeps.
 
+**Aprendiz Financiero, 2 más: "Qué hacer para SIEMPRE tener dinero" y "Evita hacer ESTO antes de dormir (para no arruinar tu sueño)".**
+- **Pantalla partida para comparar:**
+  - una decisión: "Tranquilidad" contra "Popularidad", dos mitades de color, y el personaje camina hacia una;
+  - el antes y el después: el mismo personaje agotado a las 7:57 y con energía a las 7:00.
+  Se entiende la comparación en 1 segundo.
+- **La consecuencia como chiste:** el que presume ropa de marca y auto contra el sencillo; el auto con la llanta pinchada.
+- **Un mismo estilo para varios temas:** el canal de "finanzas" también hace sueño y hábitos. Lo que el público reconoce es el estilo y el personaje, no el tema. Igual que Khipu con sus categorías.
+- **Fórmulas de título:**
+  - "Qué hacer para SIEMPRE…";
+  - "Evita hacer ESTO… (para no arruinar…)" (una prohibición + la consecuencia entre paréntesis);
+  - una sola palabra en mayúsculas.
+- **Para Khipu:** la Pizarra ya puede hacer la pantalla partida (dos fondos de color con un personaje de Open Peeps en cada lado). Se agrega como recurso para las comparaciones y los antes y después.
+
 ## Búsqueda propia (28 oct): qué tiene millones de vistas ahora
 Con `scripts/investigar-youtube.py`. Desde este servidor, YouTube y Tactiq bloquean las transcripciones (piden demostrar que no es un robot), así que las transcripciones las pasa el usuario. Los títulos, las vistas y las duraciones sí se pueden buscar.
 - **Las "películas bíblicas" hechas con IA son lo que más crece:** "Las Crónicas de Enoc (Película 2026)", 7,7 M en 1 mes; otra de Enoc, 8,3 M en 3 meses; "El Libro de Enoc (2025)", 11 M. Duran de 55 min a 1 h 20 min. Es un formato en auge, y es nuestra serie fuerte.
