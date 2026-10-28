@@ -54,6 +54,7 @@ Datos (Metricool, 27 oct): ganaron los Shorts de "por qué" con personaje (lunes
 4. **Gancho:** escribirlo primero, eligiendo uno de los 6 tipos de `docs/patrones-creadores.md` o una fórmula de `khipu-canal`. Para Shorts, la frase de los primeros 2 s y el título fijo de arriba.
 
 ## 3. Short nativo (diseñado para entenderse solo)
+- **Nunca mendigar** (regla del usuario, 28 oct): nada de "suscríbete", "comenta", "dale like" ni "te leo en los comentarios". Baja la calidad percibida y la retención. El final es un remate fuerte que **conecta con la primera frase** (bucle): la última línea lleva de vuelta a la pregunta del inicio.
 - **Voz según la categoría:** se copia de `voz/voces.json` (hombre grave en Biblia, historia, misterios y personajes; mujer cálida en hábitos, finanzas y animales; Sayra en cuerpo y psicología; en las de "prueba" se alternan y gana la que más retiene).
 - De 20 a 40 s, **una sola idea**, de 6 a 9 escenas (una por frase), en `contenido/short-<tema>.json` y renderizado en vertical:
   `npm run lote -- short-<tema>` (la composición vertical usa `Pizarra-Vertical`).

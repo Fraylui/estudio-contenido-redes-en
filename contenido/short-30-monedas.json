@@ -1,12 +1,10 @@
 {
  "formato": "Pizarra",
  "voz": {
-  "referencia": "voz/referencias/xiomi-clara.wav",
-  "pausa": 0.18,
-  "pronunciacion": {
-   "Qumrán": "Kumrán",
-   "Josefo": "Jozéfo"
-  }
+  "referencia": "voz/referencias/kokoro-alex.wav",
+  "pausa": 0.25,
+  "velocidad": 0.95,
+  "tono": "serio"
  },
  "props": {
   "gancho": "¿CUÁNTO ERAN 30 MONEDAS DE PLATA?",
@@ -147,8 +145,8 @@
      ],
      "rotulo": "¿Lo sabías?"
     },
-    "texto": "¿Lo sabías?",
-    "resaltar": "sabías?",
+    "texto": "El precio de un esclavo.",
+    "resaltar": "esclavo.",
     "fondo": "ia:templo-noche",
     "ambiente": "historia/restaurant-crowd-talking-ambience"
    }
@@ -187,7 +185,7 @@
     "estilo": "narrador"
    },
    {
-    "texto": "¿Conocías este detalle? Escríbelo en los comentarios.",
+    "texto": "Treinta monedas de plata: el precio de un esclavo.",
     "estilo": "narrador"
    }
   ]

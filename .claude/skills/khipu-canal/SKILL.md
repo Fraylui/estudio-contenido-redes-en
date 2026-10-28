@@ -15,6 +15,8 @@ Documentos que completan esta skill:
 - `docs/psicologia-atencion.md`, `docs/ganchos.md`, `docs/empaquetado.md`, `docs/monetizacion.md`, `docs/mejora-continua.md`.
 - La producción técnica va en la skill `pizarra`.
 
+**Regla del usuario (28 oct): nunca mendigar** suscripciones, likes ni comentarios en el video ni en el texto; el final es un remate en bucle con el inicio.
+
 ## 0. Las 14 categorías de Khipu
 1. Ciencia y curiosidades
 2. Hábitos y productividad
@@ -123,7 +125,7 @@ Nunca se rellena para llegar a 8 minutos: un video de 5 minutos que retiene vale
 | **Revelación progresiva** | Descubrir por etapas, sin ocultar datos esenciales de forma engañosa |
 | **Recontextualización** | Un dato que cambia lo que se vio antes ("los gastos hormiga son pasivos disfrazados") |
 | **Ritmo** | Alternar explicación, acción, pausa y descubrimiento. No hace falta un efecto por segundo: el exceso cansa |
-| **Llamada a la acción** | Al final: un reto concreto, una pregunta para comentar y el siguiente video |
+| **Cierre** | Un remate fuerte y el siguiente video que continúa la historia (pantalla final). Nunca pedir suscripciones, likes ni comentarios |
 
 ## 6. Estructuras
 **Video largo de unos 8 minutos** (orientativo; si la respuesta llega antes, se entrega antes):
@@ -134,7 +136,7 @@ Nunca se rellena para llegar a 8 minutos: un video de 5 minutos que retiene vale
 | 0:45–2:30 | Contexto: el problema con un personaje y ejemplos |
 | 2:30–5:30 | Desarrollo: 2 o 3 ideas, con microganchos cada 20–40 s |
 | 5:30–7:30 | La revelación prometida: se conecta todo |
-| 7:30–8:00 | Cierre: resumen, reto, pregunta y siguiente video. Sin despedidas largas |
+| 7:30–8:00 | Cierre: la última revelación y el siguiente video, sin pedir nada. Sin despedidas largas |
 
 **Cadena de preguntas** (la técnica más importante): cada respuesta abre la siguiente pregunta. Por ejemplo: ¿por qué tanta tecnología? → ¿fue solo por tener un cerebro grande? → lenguaje, cooperación y herramientas → ¿qué ventaja dio pasar el conocimiento entre generaciones? → conclusión.
 
