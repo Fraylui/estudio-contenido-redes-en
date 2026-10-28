@@ -27,6 +27,17 @@ Cada tema: dato con fuente (en la Biblia, el pasaje citado) y una pregunta que c
 - **Planeta Tierra:** ¿Qué pasa dentro de un volcán? · El punto más profundo del océano · El Niño: por qué llueve en el desierto
 - **¿Qué pasaría si…?** …la Tierra dejara de girar · …no durmieras en 7 días · …todos saltáramos a la vez
 
+## Banco de temas de México (el país que más nos ve, 28 oct)
+- **El asteroide que mató a los dinosaurios cayó en México** (cráter de Chicxulub, Yucatán) · Planeta Tierra / misterios
+- **Tenochtitlan:** una ciudad sobre un lago, más grande que casi todas las de Europa en 1519 · Historia mundial
+- **El chocolate era dinero:** los mexicas pagaban con granos de cacao · Economía / comida
+- **La Ciudad de México se hunde** varios centímetros cada año · ¿Qué pasaría si…? / Tierra
+- **El maíz lo inventaron en México:** de una hierba silvestre (el teocinte) hace unos 9 000 años · Comida / ciencia
+- **El eco de Chichén Itzá:** un aplauso frente a la pirámide suena como el canto de un ave · Lugares / misterios
+- **Las momias de Guanajuato** · Misterios
+- **Por qué el chile pica, y por qué en México lo aman** · Comida
+(Cada uno se verifica con fuentes antes de producirlo.)
+
 ## Banco de temas de la Biblia (serie)
 **Los que más intriga dan (pedido del usuario, 28 oct):**
 - **Apocalipsis:** los 4 jinetes (solo uno tiene nombre: Muerte, Apocalipsis 6:8) · ¿Qué significa 666? (13:18; la lectura de muchos historiadores: el nombre de Nerón en números hebreos; en algunos manuscritos es 616) · Juan en la isla de Patmos (1:9) · Los 7 sellos · Armagedón es un lugar real (Meguido, Israel)
