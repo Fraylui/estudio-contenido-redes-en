@@ -59,3 +59,7 @@ SD-Turbo es rápido pero chico: deforma **manos, caras pequeñas, multitudes y c
 2. **Personas y lugares reales → imágenes reales libres** (fotos de época y pinturas de dominio público de Wikimedia Commons o NASA, con `scripts/imagen-libre.py` y su crédito) antes que inventarlas.
 3. **4 variantes por toma** en lugar de 2, y se descarta cualquiera con dedos, ojos o letras raras. Si ninguna sirve, se cambia el encuadre, no se acepta.
 4. **Probar un modelo mejor y gratis con licencia comercial** cuando la máquina y el disco lo permitan (el disco de la sesión es limitado; FLUX.1-schnell necesita unos 12 GB): comparar lado a lado con SD-Turbo y mostrárselo al usuario antes de cambiar.
+5. **Consistencia de personajes:** SD-Turbo no sabe poner a dos personajes descritos en una misma imagen (probado el 28 oct: sale gente cualquiera). Solución: crear **una imagen buena de cada personaje** y reutilizarla:
+   - **pantalla partida** (los dos recortes lado a lado, como en `babi03-pregunta-3`);
+   - **capas** (recortar con rembg y mover sobre un fondo).
+   Nunca pedirle al modelo una escena nueva con el mismo personaje esperando que salga igual.
