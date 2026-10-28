@@ -28,7 +28,14 @@ voz/.venv/bin/python voz/ecualizar.py nota.m4a voz/referencias/xiomi.wav --refer
 voz/.venv/bin/python voz/ecualizar.py cuento.m4a voz/referencias/xiomi-alegre.wav --referencia
 ```
 
-**Si la grabación viene de WhatsApp o tiene eco** (cuarto vacío, fondo opaco, picos recortados), límpiala antes: `voz/.venv/bin/python voz/limpiar.py nota.opus limpia.wav` repara los picos (adeclip), quita el eco con WPE y baja el ruido al 75 % con noisereduce; luego pasa `limpia.wav` por `ecualizar.py`, que le devuelve el brillo (las notas de WhatsApp llegan sin agudos: 2–4 kHz unos 11 dB por debajo). DeepFilterNet sería mejor, pero su modelo oficial está en GitHub y aquí no se puede bajar.
+**Antes de limpiar, escuchar todo el audio con datos:** `voz/.venv/bin/python scripts/analizar-voz.py nota.opus informe.md` mide cada frase (volumen, voz contra ruido, picos recortados, brillo, eco al final de la frase y confianza de Whisper) y les pone nota. Con eso se decide qué arreglar y qué tramos usar. Caso Sayra (28 oct 2026, nota de WhatsApp hablando bajito):
+- el ruido **no** era el problema (voz 36–44 dB sobre el fondo): el reductor de ruido con IA sobraba y podía borrar consonantes;
+- lo que fallaba era el **brillo**: de 4 a 6 kHz estaba 50 dB por debajo de los graves (hablar bajito + micrófono del celular) y nada por encima de 9 kHz;
+- y unas pocas frases tenían **picos recortados** (hasta 165 en una frase): esas se descartan.
+Receta de ingeniero para ese caso: elegir las 3 frases con mejor nota, sin recortes y con caída de cola de más de 30 dB (poco eco); ponerlas en orden, la mejor primero, porque Chatterbox se fija sobre todo en los primeros 10 s; y luego aplicar
+`highpass=f=90,adeclip,equalizer=f=250:t=q:w=1:g=-3,equalizer=f=3000:t=q:w=1.2:g=6,highshelf=f=3500:g=10,equalizer=f=5500:t=q:w=1:g=5,lowpass=f=9500,acompressor=threshold=-24dB:ratio=2.5:attack=8:release=120:makeup=2,deesser=i=0.3`
+y terminar con `ecualizar.py --referencia`. El lowpass a 9,5 kHz evita subir el siseo donde ya no hay voz.
+**Si sí hay eco o ruido fuerte** (voz a menos de 30 dB del fondo): `voz/limpiar.py` (adeclip, WPE contra el eco y noisereduce al 75 %) antes de ecualizar. DeepFilterNet sería mejor, pero su modelo oficial está en GitHub y aquí no se puede bajar.
 
 Si la persona mandó una sola grabación larga, transcríbela, busca los tramos y recórtalos con `ffmpeg -ss <inicio> -t <duración>`. Elige tramos sin errores ni repeticiones, porque la referencia también contagia las muletillas.
 
