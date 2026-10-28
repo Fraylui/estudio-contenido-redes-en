@@ -60,7 +60,12 @@ if toca instalar; then
   for t in $(tomas); do
     [ -f "public/assets/ia/$t.jpg" ] && continue
     v=$(awk -v t="$t" '$1==t{print $2}' "$ELEGIDAS" 2>/dev/null); v="${v:-1}"
-    flock /tmp/khipu-imagenes.lock imagen/.venv/bin/python imagen/nitidez.py "$VAR/$t-$v.png" "public/assets/ia/$t.jpg" $FINAL 2>&1 | grep listo
+    if [ "${KHIPU_RAPIDO:-0}" = 1 ]; then
+      # Modo rápido (sin Real-ESRGAN, segundos por imagen): agrandar con lanczos y enfocar. Solo cuando no hay tiempo.
+      ffmpeg -v error -y -i "$VAR/$t-$v.png" -vf "scale=$FINAL:-2:flags=lanczos,unsharp=5:5:0.8" -q:v 2 "public/assets/ia/$t.jpg" && echo "listo (rápido) $t"
+    else
+      flock /tmp/khipu-imagenes.lock imagen/.venv/bin/python imagen/nitidez.py "$VAR/$t-$v.png" "public/assets/ia/$t.jpg" $FINAL 2>&1 | grep listo
+    fi
   done
   sinprof=$(for t in $(tomas); do [ -f "public/assets/ia/$t-prof.png" ] || echo "$t"; done)
   [ -n "$sinprof" ] && flock /tmp/khipu-imagenes.lock imagen/.venv/bin/python imagen/profundidad.py $sinprof 2>&1 | grep -c listo
@@ -74,7 +79,8 @@ fi
 
 if toca video; then
   log "5/7 video"
-  flock /tmp/khipu-imagenes.lock npm run lote -- "$N" $LOTE > "$REV/$N-render.log" 2>&1
+  # --partes: render en tramos de 20 s; si el servidor se reinicia, al volver solo se hacen los que faltan
+  flock /tmp/khipu-imagenes.lock npm run lote -- "$N" $LOTE --partes > "$REV/$N-render.log" 2>&1
   ffmpeg -v error -y -i "out/$N-$SUF.mp4" -c:v copy -af loudnorm=I=-14:TP=-1.5:LRA=11 -ar 48000 -c:a aac -b:a 192k "out/$N-final.mp4"
   tam=$(stat -c %s "out/$N-final.mp4"); [ "$tam" -lt 100000000 ] || { log "pesa más de 100 MB: re-codificar con crf 24"; exit 1; }
 fi
