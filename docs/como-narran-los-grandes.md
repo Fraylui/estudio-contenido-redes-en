@@ -154,6 +154,17 @@ Los dos comparten las técnicas: el anzuelo al cierre de cada parte, la imagen c
 
   Se cierra con un dato que sorprende o con una pregunta que provoque comentarios ("¿tú cuál usas?").
 
+**Short "El final trágico de los 12 apóstoles" (2 min): el Short de Biblia mejor armado de los que vimos.**
+- **Lo que funciona:**
+  - **Imagen que choca + un misterio con fecha de pago:** "uno murió cabeza abajo… y solo uno llegó a viejo: te lo digo al final". Esa promesa sostiene los 2 minutos.
+  - **Paga la primera duda enseguida** (era Pedro), y así el espectador confía en que la segunda también se paga.
+  - **Una frase por apóstol, cada una con un detalle concreto:** "duró dos días predicando", "su tumba está a 4 000 km", "su tumba se descubrió en 2011", "sobrevivió a la caída, pero no a la multitud".
+  - **Dice de dónde viene cada dato:** "según la tradición", "se dice", "según la leyenda", y solo la muerte de Santiago la cuenta la Biblia. Es nuestra regla y no le quita fuerza.
+  - **Lenguaje cuidado con la violencia** ("la estructura de madera", "el castigo más cruel"): no describe sangre, así que YouTube no le limita los anuncios.
+  - **Remate en paradoja:** "el que estuvo más cerca del peligro fue el único que se salvó".
+  - Termina con un reto para compartir ("mándaselo al amigo que no sabe nombrar a los 12"). No pide suscripción, pero sí pide algo. Lo consultamos con el usuario antes de usarlo.
+- **Para Khipu:** el tema ya estaba en el banco de la Biblia, y esta es su estructura. **La fórmula "misterio prometido para el final + lista rápida con un detalle concreto por punto + remate en paradoja" sirve para cualquier categoría.**
+
 ## Qué cambia en Khipu
 - **Videos largos de verdad:** este dura 31 minutos y retiene contando una cadena de historias. Nuestros largos duran **lo que la historia necesite (8–12 min de base)** (son los que suman horas para monetizar).
 - **Lista de revisión de cada guion largo:**

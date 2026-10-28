@@ -44,6 +44,8 @@ Se anota en el `_nota` de `imagen/tomas/<nombre>.json`: las fuentes, el ángulo 
 - **Empezar en medio de la acción** (el momento más fuerte, no el contexto) y con un primer cuadro que sorprenda: la decisión de quedarse se toma en unos 2 s. Meta: "Visto vs. deslizado" de más de 70 %.
 - **Cada Short lleva a un video largo** del mismo tema: los Shorts casi no pagan, los largos sí (`docs/monetizacion.md`, 1c).
 - **El gancho en la primera frase:** algo en juego o un misterio con nombre propio. Nada de "hola" ni de presentaciones.
+- **Violencia sin sangre:** nunca se describe la herida ("la estructura de madera", "el castigo más cruel"), así YouTube no le limita los anuncios.
+- **Fórmula lista:** misterio prometido para el final, la primera duda pagada enseguida, un detalle concreto por punto y un remate en paradoja.
 - **Nunca mendigar:** ni "suscríbete" ni "comenta". El final es un remate fuerte que conecta con el inicio.
 - **Datos con fuente** en la descripción. Lo que viene de la tradición se dice así ("según la tradición…").
 - **Biblia:** se cita el pasaje y nunca se muestra el rostro de Jesús ni de Dios (luz, silueta de espaldas).
