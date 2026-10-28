@@ -74,7 +74,30 @@
     "resaltar": "Bajaron",
     "fondo": "ia:tech07-bajan",
     "sonido": "magic_reveal",
-    "sonidoEn": 1.4
+    "sonidoEn": 1.4,
+    "capas": [
+     {
+      "img": "camilla-colgando",
+      "desde": [
+       50,
+       -2,
+       13,
+       0
+      ],
+      "hasta": [
+       50,
+       58,
+       13,
+       0
+      ],
+      "inicio": 0.05,
+      "fin": 0.9,
+      "curva": "suave",
+      "cuerdas": 24,
+      "balanceo": 3
+     }
+    ],
+    "particulas": "rayos"
    },
    {
     "dibujo": {
@@ -92,7 +115,28 @@
     "resaltar": "caminando",
     "fondo": "ia:tech09-camina",
     "sonido": "boom",
-    "sonidoEn": 0.6
+    "sonidoEn": 0.6,
+    "capas": [
+     {
+      "img": "hombre-camina-camilla",
+      "desde": [
+       22,
+       92,
+       46,
+       0
+      ],
+      "hasta": [
+       70,
+       92,
+       46,
+       0
+      ],
+      "inicio": 0,
+      "fin": 1,
+      "curva": "lineal",
+      "paso": true
+     }
+    ]
    },
    {
     "dibujo": {
