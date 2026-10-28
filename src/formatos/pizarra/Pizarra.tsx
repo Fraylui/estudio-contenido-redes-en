@@ -172,7 +172,7 @@ const Tono: React.FC<{ tipo: keyof typeof TONOS }> = ({ tipo }) => {
 // Título gancho de los Shorts: caja blanca arriba con texto negro grueso y la última palabra en rojo, entra con rebote
 const Gancho: React.FC<{ texto: string }> = ({ texto }) => {
   const frame = useCurrentFrame();
-  const pop = spring({ frame, fps: FPS, config: { damping: 10, stiffness: 180 } });
+  const pop = spring({ frame: frame + 10, fps: FPS, config: { damping: 10, stiffness: 180 } }); // visible desde el cuadro 1
   const palabras = texto.trim().split(/\s+/);
   const ultima = palabras.pop();
   return (
@@ -513,7 +513,9 @@ const Escena: React.FC<Props["escenas"][number] & { indice?: number }> = ({ dibu
   const t0 = sonido === "boom" ? (sonidoEn ?? 0.6) * FPS : -1;
   const sacude = t0 >= 0 && frame >= t0 && frame < t0 + 12 ? (1 - (frame - t0) / 12) * 14 : 0;
   const dx = sacude * Math.sin(frame * 2.7), dy = sacude * Math.cos(frame * 3.3);
-  const entrada: { dx: number; escala: number; filter?: string; clipPath?: string } = entradaEscena(indice, frame, width);
+  // La primera escena arranca ya armada (sin entrada, dibujo completo y frase entera): en los Shorts el primer cuadro es la
+  // miniatura del feed y quien ve un fondo vacío o círculos en blanco pasa de largo (retención de 12 a 36 % hasta el 27 oct)
+  const entrada: { dx: number; escala: number; filter?: string; clipPath?: string } = indice === 0 ? { dx: 0, escala: 1 } : entradaEscena(indice, frame, width);
   return (
     <AbsoluteFill style={{
       filter: entrada.filter, clipPath: entrada.clipPath,
@@ -529,7 +531,7 @@ const Escena: React.FC<Props["escenas"][number] & { indice?: number }> = ({ dibu
       }}>
         {barras ? <Barras datos={barras} duracion={total} />
           : antesDespues ? <AntesDespues a={antesDespues[0]} b={antesDespues[1]} duracion={total} />
-          : <Dibujo dibujo={resolverDibujo(dibujo)} duracion={total} />}
+          : <Dibujo dibujo={resolverDibujo(dibujo)} duracion={total} adelanto={indice === 0 ? 45 : 0} />}
       </div>
       {globo ? <Globo texto={globo} frame={frame} horizontal={horizontal} /> : null}
       {silueta ? (
@@ -537,7 +539,7 @@ const Escena: React.FC<Props["escenas"][number] & { indice?: number }> = ({ dibu
           opacity: interpolate(frame, [total * 0.4, total * 0.4 + 2, total * 0.4 + 12], [0, 0.85, 0], { extrapolateLeft: "clamp", extrapolateRight: "clamp" }) }} />
       ) : null}
       <div style={{ position: "absolute", left: 0, right: 0, bottom: horizontal ? 24 : 300, display: "flex", justifyContent: "center", padding: "0 80px" }}>
-        <Texto texto={texto} resaltar={resaltar} duracion={total * 0.5} tamano={horizontal ? 64 : 76} />
+        <Texto texto={texto} resaltar={resaltar} duracion={indice === 0 ? 0 : total * 0.5} tamano={horizontal ? 64 : 76} />
       </div>
     </AbsoluteFill>
   );
@@ -545,8 +547,8 @@ const Escena: React.FC<Props["escenas"][number] & { indice?: number }> = ({ dibu
 
 // Traza cada línea en orden, como si una mano la dibujara; los rellenos se pintan cuando su borde ya está.
 // Después aparecen los objetos ilustrados (public/objetos/), uno tras otro con un pequeño rebote.
-const Dibujo: React.FC<{ dibujo: DibujoPizarra; duracion: number }> = ({ dibujo, duracion }) => {
-  const frame = useCurrentFrame();
+const Dibujo: React.FC<{ dibujo: DibujoPizarra; duracion: number; adelanto?: number }> = ({ dibujo, duracion, adelanto = 0 }) => {
+  const frame = useCurrentFrame() + adelanto;
   const { fps } = useVideoConfig();
   const trazos = useMemo(() => dibujo.trazos ?? [], [dibujo]);
   const personaje = useMemo(() => dibujo.personaje ?? [], [dibujo]);

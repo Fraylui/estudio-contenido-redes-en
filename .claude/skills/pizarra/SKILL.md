@@ -156,7 +156,8 @@ Haz una hoja de contacto con todas las escenas (un `still` por escena a `--scale
 Narrar un video de 4 minutos toma de 40 a 60 minutos, así que vale la pena revisar antes.
 
 ## 5b. Shorts (hoy traen la mayoría de las vistas)
-- Se renderizan en vertical (`Pizarra-Vertical`) solo con los tramos elegidos: `--frames=a-b`, calculados con `frasesVoz` (inicio de la frase menos 0,1 s). Se unen con fundidos de 30 ms y se masterizan a −14 LUFS.
+- **Siempre nativos:** cada Short tiene su propio JSON (`contenido/short-<tema>.json`). Recortar el video largo dejaba el primer cuadro vacío o con la escena anterior, y la gente se iba en 3 s (análisis del 28 oct en `docs/mejora-continua.md`).
+- **El primer cuadro es la miniatura del feed:** la escena 1 arranca ya armada (lo hace solo `Pizarra.tsx`). Debe llevar escenario real (`ia:`), protagonista grande (personaje con emoción u objeto 3D) y una frase que se entienda sin sonido. Nunca un fondo plano.
 - **Siempre con `"gancho"`** en las props: el título fijo arriba en mayúsculas, con la última palabra en rojo ("¿POR QUÉ GASTAS MÁS CON TARJETA?"). En vertical, la etiqueta de sección se oculta cuando hay gancho.
 - Una sola idea por Short, de 20 a 40 s; que empiece en la frase más fuerte y termine en la respuesta.
 - La descripción lleva "Video completo en el canal: <título>" y el crédito de la música.

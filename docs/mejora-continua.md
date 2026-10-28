@@ -100,6 +100,30 @@ En las primeras 48 h, con 1 670 vistas en total:
 - **Rótulos de un solo carácter** ("+", "3") se ven como puntitos: no usarlos.
 - **Revisar con datos** a los 7 días (retención y CTR en YouTube Studio) y anotar aquí qué funcionó.
 
+## Por qué los Shorts no enganchan (análisis del 28 de octubre)
+Datos de Metricool: vistas y tiempo promedio visto, y entre paréntesis el porcentaje del Short que se ve en promedio.
+
+| Short | Dura | Vistas | Visto en promedio |
+|---|---|---|---|
+| 5 minutos más te dejan más cansado | 42 s | 1 295 | 15 s (36 %) |
+| Por qué los lunes se sienten terribles | 29 s | 1 093 | 7 s (24 %) |
+| ¿Por qué gastas más con tarjeta? | 26 s | 442 | 4 s (15 %) |
+| 5 al día = 36 000 | 25 s | 158 | 3 s (12 %) |
+| Kakeibo | 47 s | 27 | 12 s (26 %) |
+
+**La gente se va en los primeros 3 o 4 segundos.** Revisando cuadro por cuadro los primeros 4 s (cada medio segundo):
+1. **El primer cuadro está vacío o es de otra escena.** Los Shorts recortados del video largo empiezan en la escena anterior ("6. Compras por impulso"), en un dormitorio vacío o con un personaje blanco a medio aparecer. El primer cuadro es lo que se ve en el feed antes de deslizar.
+2. **Círculos en blanco:** los objetos entran con rebote y durante medio segundo solo se ve un círculo vacío.
+3. **El subtítulo sale palabra por palabra** ("EL" … "EL DOLOR"): 1 a 2 s sin decir nada.
+4. **Fondos planos** (degradado naranja o azul) en los dos que peor fueron; los dos que ganaron tenían un escenario real (el dormitorio) y un personaje con emoción.
+5. **Gancho verbal débil:** "Solo 5 al día" no promete nada. "Suena la alarma y la apagas" (el que ganó) es una escena que todos viven.
+
+**Cambios hechos:**
+- La primera escena de todo video arranca **ya armada**: sin entrada, con el dibujo y los objetos completos y la frase entera desde el cuadro 1. El título gancho también se ve desde el cuadro 1 (`Pizarra.tsx`).
+- **Los Shorts se hacen nativos** (su propio JSON), ya no recortados del largo.
+- Regla de gancho para Shorts: el primer cuadro tiene que entenderse sin sonido (escenario real, protagonista grande, título) y la primera frase pone en juego algo que le importa al que mira, en menos de 2 s.
+- **Meta:** pasar del 15–36 % visto en promedio a más del 60 %.
+
 ## Cómo se decide qué mejorar
 - **Retención a los 30 s por debajo del 60 %:** mejorar el gancho (técnicas 3, 9 y 12).
 - **Caídas a mitad del video:** sumar ritmo (técnicas 1, 2, 7 y 8).
