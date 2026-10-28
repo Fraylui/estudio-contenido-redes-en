@@ -7,6 +7,7 @@ import elTunche from "../contenido/narrado-el-tunche.json";
 import anuncioEjemplo from "../contenido/anuncio-quinuapata.json";
 import topEjemplo from "../contenido/top-5-platos-peruanos.json";
 import triviaEjemplo from "../contenido/trivia-capital-australia.json";
+import noticiaEjemplo from "../contenido/noticia-ecotur-huaccoto.json";
 import {
   calcularDatosBarras,
   DatosBarras,
@@ -16,6 +17,7 @@ import { calcularFrase, Frase, fraseSchema } from "./formatos/Frase";
 import { calcularNarrado, Narrado, narradoSchema } from "./formatos/narrado/Narrado";
 import { Miniatura } from "./formatos/narrado/Miniatura";
 import { Anuncio, anuncioSchema, calcularAnuncio } from "./formatos/anuncio/Anuncio";
+import { calcularNoticia, Noticia, noticiaSchema } from "./formatos/noticia/Noticia";
 import { calcularTopLista, TopLista, topListaSchema } from "./formatos/TopLista";
 import { calcularTrivia, Trivia, triviaSchema } from "./formatos/Trivia";
 import { conDuracionVoz, conNarracion, vozSchema } from "./comun/Narracion";
@@ -132,6 +134,20 @@ export const RemotionRoot: React.FC = () => {
             width={t.width}
             height={t.height}
           />
+          {/* Noticias con videos reales para Reels (contenido/noticia-*.json); solo vertical */}
+          {t.nombre === "Vertical" ? (
+            <Composition
+              id="Noticia-Vertical"
+              component={Noticia}
+              schema={noticiaSchema}
+              defaultProps={noticiaEjemplo.props as z.infer<typeof noticiaSchema>}
+              calculateMetadata={calcularNoticia}
+              durationInFrames={900}
+              fps={30}
+              width={t.width}
+              height={t.height}
+            />
+          ) : null}
           {/* Plantilla genérica que usa "npm run lote" para cualquier narrado-*.json */}
           <Composition
             id={`Narrado-${t.nombre}`}

@@ -20,3 +20,6 @@ voz/referencias/*
 !voz/referencias/LEEME.md
 public/voz/
 __pycache__/
+
+# Noticias: videos de terceros y la imagen de la presentadora (solo en tu computadora)
+public/noticias/

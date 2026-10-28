@@ -126,6 +126,39 @@ def a_48k(origen, destino, tempo=1.0):
     return a[max(voz[0] - margen, 0): voz[-1] + margen] if len(voz) else a
 
 
+def palabras_con_tiempo(revisor, audio, tiempos):
+    """Momento en que se dice cada palabra del texto (para subtítulos palabra por palabra).
+    Whisper da los tiempos; el texto que se muestra es siempre el original, no lo que entendió Whisper."""
+    a16 = Path(tempfile.mkdtemp()) / "final.wav"
+    subprocess.run(["ffmpeg", "-loglevel", "error", "-y", "-i", str(audio), "-ac", "1", "-ar", "16000", str(a16)],
+                   check=True)
+    oidas = [w for s in revisor.transcribe(sf.read(str(a16), dtype="float32")[0], language="es",
+                                           word_timestamps=True)[0] for w in (s.words or [])]
+    resultado = []
+    for f in tiempos:
+        texto = f["texto"].split()
+        dentro = [w for w in oidas if f["inicio"] - 0.15 <= (w.start + w.end) / 2 <= f["fin"] + 0.15]
+        if len(dentro) == len(texto):
+            marcas = [(max(w.start, f["inicio"]), min(w.end, f["fin"])) for w in dentro]
+        else:
+            # Si Whisper juntó o separó palabras, se reparte la frase según el largo de cada palabra
+            letras, t, marcas = sum(len(p) for p in texto), f["inicio"], []
+            for p in texto:
+                d = (f["fin"] - f["inicio"]) * len(p) / letras
+                marcas.append((t, t + d))
+                t += d
+        resultado += [{"p": p, "i": round(i, 3), "f": round(fin, 3)} for p, (i, fin) in zip(texto, marcas)]
+    return resultado
+
+
+def volumen_por_cuadro(audio, fps=30):
+    """Volumen de la voz en cada cuadro (0 a 1), para mover la boca de la presentadora."""
+    paso = SR // fps
+    rms = [float(np.sqrt(np.mean(audio[i:i + paso] ** 2))) for i in range(0, len(audio), paso)]
+    tope = np.percentile(rms, 95) or 1
+    return [round(min(v / tope, 1), 2) for v in rms]
+
+
 def main():
     entrada, salida = Path(sys.argv[1]), Path(sys.argv[2])
     datos = json.loads(entrada.read_text(encoding="utf-8"))
@@ -186,8 +219,12 @@ def main():
     subprocess.run([sys.executable, str(Path(__file__).with_name("ecualizar.py")), str(crudo), str(salida)], check=True)
     crudo.unlink()
     huella = sys.argv[3] if len(sys.argv) > 3 else None
+    final, _ = sf.read(str(salida), dtype="float32")
     salida.with_suffix(".json").write_text(json.dumps({"duracion": round(len(total) / SR, 3), "huella": huella,
-                                                       "frases": tiempos}, ensure_ascii=False, indent=1),
+                                                       "frases": tiempos,
+                                                       "palabras": palabras_con_tiempo(revisor, salida, tiempos),
+                                                       "volumen": volumen_por_cuadro(final)},
+                                                      ensure_ascii=False, indent=1),
                                            encoding="utf-8")
     print(f"Voz lista: {salida} ({len(total) / SR:.1f} s)")
 

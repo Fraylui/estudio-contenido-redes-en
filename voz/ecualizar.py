@@ -101,6 +101,9 @@ def main():
     salida = args[1]
     volumen = "-18" if referencia else "-14"
     cadena = f"{base},{cadena_eq(ganancias)},deesser=i=0.4"
+    if not referencia:
+        # La voz final va en estéreo y se mide así: en mono, al sonar por los dos canales del video, quedaría 3 dB más fuerte
+        cadena += ",aformat=channel_layouts=stereo"
     medicion = subprocess.run(
         ["ffmpeg", "-hide_banner", "-i", entrada, "-af", f"{cadena},loudnorm=I={volumen}:TP=-1.5:LRA=9:print_format=json",
          "-f", "null", "-"], capture_output=True, text=True).stderr
@@ -108,7 +111,7 @@ def main():
     loud = (f"loudnorm=I={volumen}:TP=-1.5:LRA=9:measured_I={m['input_i']}:measured_TP={m['input_tp']}"
             f":measured_LRA={m['input_lra']}:measured_thresh={m['input_thresh']}:offset={m['target_offset']}:linear=true")
     tasa = "24000" if referencia else "48000"
-    subprocess.run(["ffmpeg", "-v", "error", "-y", "-i", entrada, "-af", f"{cadena},{loud}", "-ac", "1", "-ar", tasa, salida],
+    subprocess.run(["ffmpeg", "-v", "error", "-y", "-i", entrada, "-af", f"{cadena},{loud}", "-ac", "1" if referencia else "2", "-ar", tasa, salida],
                    check=True)
     print(f"Listo: {salida} ({volumen} LUFS)")
 
