@@ -165,6 +165,15 @@ Los dos comparten las técnicas: el anzuelo al cierre de cada parte, la imagen c
   - Termina con un reto para compartir ("mándaselo al amigo que no sabe nombrar a los 12"). No pide suscripción, pero sí pide algo. Lo consultamos con el usuario antes de usarlo.
 - **Para Khipu:** el tema ya estaba en el banco de la Biblia, y esta es su estructura. **La fórmula "misterio prometido para el final + lista rápida con un detalle concreto por punto + remate en paradoja" sirve para cualquier categoría.**
 
+**Short "Apocalipsis: 7 sellos y el juicio final" (43 s): cuenta regresiva y final que pide la parte 2.**
+- **Lo que funciona:**
+  - **Números del 1 al 7:** el que mira sabe cuánto falta y quiere llegar al 7.
+  - **Fiel al texto** (Apocalipsis 6 y 8:1), con imágenes concretas: "el sol se oscurece como tela negra".
+  - **Contraste final:** después del caos, **silencio en el cielo por media hora**. Es el momento más fuerte, y en el video hay que hacerlo sonar: cortar la música y dejar 1 s de silencio real.
+  - **Termina abriendo lo siguiente** ("las trompetas del juicio"): así nace una serie que la gente sigue Short tras Short.
+- **Lo que falla:** no tiene gancho ni personaje; es una lista que se sostiene solo por el tema y las imágenes.
+- **Para Khipu:** una serie en cadena, **"Apocalipsis en 3 partes"** (los 7 sellos → las 7 trompetas → las 7 copas), donde cada una termina en la siguiente y todas llevan al video largo de los 4 jinetes. **Diseño de sonido:** en los momentos de silencio del texto se corta la música de verdad.
+
 ## Búsqueda propia (28 oct): qué tiene millones de vistas ahora
 Con `scripts/investigar-youtube.py`. Desde este servidor, YouTube y Tactiq bloquean las transcripciones (piden demostrar que no es un robot), así que las transcripciones las pasa el usuario. Los títulos, las vistas y las duraciones sí se pueden buscar.
 - **Las "películas bíblicas" hechas con IA son lo que más crece:** "Las Crónicas de Enoc (Película 2026)", 7,7 M en 1 mes; otra de Enoc, 8,3 M en 3 meses; "El Libro de Enoc (2025)", 11 M. Duran de 55 min a 1 h 20 min. Es un formato en auge, y es nuestra serie fuerte.
