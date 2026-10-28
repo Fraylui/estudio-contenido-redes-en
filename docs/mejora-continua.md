@@ -196,3 +196,12 @@ Cada contenido nuevo tiene que mejorar en **las 5 áreas**, no solo en una:
 - **Retención a los 30 s por debajo del 60 %:** mejorar el gancho (técnicas 3, 9 y 12).
 - **Caídas a mitad del video:** sumar ritmo (técnicas 1, 2, 7 y 8).
 - **CTR por debajo del 5 %:** cambiar la miniatura (técnica 13).
+
+## Diagnóstico visual de nuestros Shorts contra lo aprendido (28 oct, hojas de Goliat y chasqui)
+1. **El primer cuadro no tiene a nadie:** Goliat abre con acantilados vacíos y el chasqui con unos arcos vacíos ("Pescado fresco en los Andes" y no se ve ningún pescado). → El primer cuadro debe mostrar **una cara o una acción con emoción, y lo que dice el texto**.
+2. **La imagen no explica lo que dice la voz:** "casi 3 metros" sin nada que compare el tamaño, "30 000 km de caminos" con un valle, "en 2 días" sin contador. → Comparar tamaños (Goliat junto a un hombre y una puerta), mapas con la ruta que se dibuja, contadores en vivo, etiquetas.
+3. **La misma imagen dura demasiado:** de 5 a 7 cuadros seguidos iguales (de 7 a 10 s). → Una imagen nueva cada 2–3 s o un cambio claro de encuadre.
+4. **El personaje cambia de cara en cada toma** (el casco de Goliat, la cara del chasqui). → Un personaje fijo por historia: la misma descripción y una imagen de referencia recortada que se reutiliza.
+5. **Las figuras son chiquitas en paisajes grandes** (de espaldas, siluetas): en el celular no se leen. → Más primeros planos de caras, manos y objetos.
+6. **Todo tiene el mismo color café y naranja.** → El color cuenta la emoción (frío en la amenaza, cálido en la victoria, gris al pasar al color en el giro).
+7. **Las miniaturas son solo letras.** → Una cara con emoción, un conflicto y de 2 a 4 palabras (ver `empaquetado.md`).
