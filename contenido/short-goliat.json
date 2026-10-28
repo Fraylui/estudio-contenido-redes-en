@@ -4,202 +4,164 @@
   "referencia": "voz/referencias/kokoro-alex.wav",
   "pausa": 0.25,
   "velocidad": 0.95,
-  "tono": "serio"
+  "tono": "serio",
+  "pronunciacion": {
+   "Goliat": "Goliát"
+  }
  },
  "props": {
-  "gancho": "¿CUÁNTO MEDÍA GOLIAT?",
+  "gancho": "¿CÓMO CAYÓ EL GIGANTE?",
   "musica": "musica/epica.mp3",
   "tono": "calido",
   "escenas": [
    {
     "dibujo": {
-     "iconos": [
-      [
-       "img:goliat"
-      ]
-     ]
+     "iconos": []
     },
-    "texto": "¿Cuánto medía Goliat?",
-    "resaltar": "Goliat?",
+    "texto": "Un ejército temblaba…",
+    "resaltar": "temblaba…",
+    "fondo": "ia:g01-ejercito",
     "sonido": "flash_shock",
     "sonidoEn": 0.05,
-    "fondo": "ia:valle-ela",
     "ambiente": "historia/big-army-crowd-marching"
    },
    {
     "dibujo": {
-     "iconos": [
-      [
-       "img:rollo"
-      ]
-     ],
-     "rotulo": "1 Samuel 17:4"
+     "iconos": []
     },
-    "texto": "\"Seis codos y un palmo\"",
-    "resaltar": "Seis codos",
-    "fondo": "ia:templo-noche"
-   },
-   {
-    "barras": [
-     {
-      "etiqueta": "Tú (cm)",
-      "valor": 170
-     },
-     {
-      "etiqueta": "Goliat (cm)",
-      "valor": 290,
-      "color": "#ff6464"
-     }
-    ],
-    "texto": "Casi 3 metros.",
-    "resaltar": "3 metros.",
+    "texto": "Casi 3 metros",
+    "resaltar": "3 metros",
+    "fondo": "ia:g02-goliat:paneo",
     "sonido": "boom",
-    "sonidoEn": 0.4,
-    "dibujo": {
-     "iconos": [
-      [
-       "img:casco-bronce"
-      ]
-     ]
-    },
-    "fondo": "ia:valle-ela"
-   },
-   {
-    "dibujo": {
-     "iconos": [
-      [
-       "img:rollo"
-      ]
-     ]
-    },
-    "texto": "Una copia 1 000 años más antigua",
-    "resaltar": "1 000 años",
-    "sonido": "magic_reveal",
-    "sonidoEn": 0.5,
-    "fondo": "ia:cuevas-qumran:paneo",
+    "sonidoEn": 1.4,
     "particulas": "polvo"
    },
    {
     "dibujo": {
-     "iconos": [
-      [
-       "img:rollo"
-      ]
-     ],
-     "rotulo": "4 codos"
+     "iconos": []
     },
-    "texto": "\"Cuatro codos y un palmo\"",
-    "resaltar": "Cuatro",
-    "fondo": "ia:cuevas-qumran"
-   },
-   {
-    "barras": [
-     {
-      "etiqueta": "Tú (cm)",
-      "valor": 170
-     },
-     {
-      "etiqueta": "Goliat (cm)",
-      "valor": 200,
-      "color": "#ff6464"
-     }
-    ],
-    "texto": "Unos 2 metros.",
-    "resaltar": "2 metros.",
-    "dibujo": {
-     "iconos": [
-      [
-       "img:casco-bronce"
-      ]
-     ]
-    },
-    "fondo": "ia:cuevas-qumran"
-   },
-   {
-    "dibujo": {
-     "iconos": [
-      [
-       "img:goliat"
-      ]
-     ],
-     "rotulo": "57 kg"
-    },
-    "texto": "Armadura de 57 kg",
-    "resaltar": "57 kg",
-    "sonido": "boom",
-    "sonidoEn": 0.3,
-    "fondo": "ia:valle-ela",
+    "texto": "40 días gritando",
+    "resaltar": "40 días",
+    "fondo": "ia:g03-grito",
     "ambiente": "naturaleza/wind-blowing-ambience"
    },
    {
     "dibujo": {
-     "iconos": [
-      [
-       "img:david"
-      ],
-      [
-       "img:honda"
-      ]
-     ]
+     "iconos": []
     },
-    "texto": "Una honda y una piedra.",
-    "resaltar": "una piedra.",
+    "texto": "Nadie se atrevió.",
+    "resaltar": "Nadie",
+    "fondo": "ia:g04-miedo"
+   },
+   {
+    "dibujo": {
+     "iconos": []
+    },
+    "texto": "Un joven pastor",
+    "resaltar": "pastor",
+    "fondo": "ia:g05-pastor:paneo",
+    "sonido": "magic_reveal",
+    "sonidoEn": 0.3
+   },
+   {
+    "dibujo": {
+     "iconos": []
+    },
+    "texto": "David",
+    "resaltar": "David",
+    "fondo": "ia:g06-david"
+   },
+   {
+    "dibujo": {
+     "iconos": []
+    },
+    "texto": "5 piedras lisas",
+    "resaltar": "5 piedras",
+    "fondo": "ia:g07-piedras"
+   },
+   {
+    "dibujo": {
+     "iconos": []
+    },
+    "texto": "Se burló de él.",
+    "resaltar": "burló",
+    "fondo": "ia:g08-burla",
+    "ambiente": "naturaleza/wind-blowing-ambience"
+   },
+   {
+    "dibujo": {
+     "iconos": []
+    },
+    "texto": "Giró su honda…",
+    "resaltar": "honda…",
+    "fondo": "ia:g09-honda:paneo",
     "sonido": "transiciones/short-wind-swoosh",
-    "sonidoEn": 0.3,
-    "fondo": "ia:valle-ela:paneo",
-    "silueta": true,
-    "ambiente": "naturaleza/wind-blowing-ambience"
+    "sonidoEn": 1.2,
+    "particulas": "polvo"
    },
    {
     "dibujo": {
-     "iconos": [
-      [
-       "img:goliat"
-      ]
-     ],
-     "rotulo": "¿2 o 3 m?"
+     "iconos": []
     },
-    "texto": "Cayó con una sola piedra.",
-    "resaltar": "una sola piedra.",
-    "fondo": "ia:valle-ela",
-    "ambiente": "naturaleza/wind-blowing-ambience"
+    "texto": "Y el gigante cayó.",
+    "resaltar": "cayó.",
+    "fondo": "ia:g10-cae",
+    "sonido": "boom",
+    "sonidoEn": 1.3,
+    "particulas": "polvo"
+   },
+   {
+    "dibujo": {
+     "iconos": []
+    },
+    "texto": "David contra Goliat",
+    "resaltar": "Goliat",
+    "fondo": "ia:g06-david:paneo"
    }
   ],
   "narracion": [
    {
-    "texto": "¿Cuánto medía Goliat? Depende de qué Biblia leas.",
+    "texto": "Un ejército entero temblaba por un solo hombre.",
     "estilo": "narrador"
    },
    {
-    "texto": "En la mayoría de las Biblias, Primera de Samuel diecisiete dice: seis codos y un palmo.",
+    "texto": "Se llamaba Goliat. Según el texto hebreo, medía casi tres metros.",
     "estilo": "narrador"
    },
    {
-    "texto": "Eso es casi tres metros. Más alto que una puerta.",
+    "texto": "Durante cuarenta días salió al valle a gritar: elijan a un hombre que pelee conmigo.",
     "estilo": "narrador"
    },
    {
-    "texto": "Pero en las cuevas de Qumrán apareció una copia de Samuel mil años más antigua.",
+    "texto": "Nadie se atrevió.",
     "estilo": "narrador"
    },
    {
-    "texto": "Y ahí dice: cuatro codos y un palmo.",
+    "texto": "Hasta que llegó un joven pastor, que solo traía pan y queso para sus hermanos.",
     "estilo": "narrador"
    },
    {
-    "texto": "Unos dos metros. La traducción griega más antigua y el historiador Josefo dicen lo mismo.",
+    "texto": "Se llamaba David.",
     "estilo": "narrador"
    },
    {
-    "texto": "Igual era un gigante, con una armadura de bronce de unos cincuenta y siete kilos.",
+    "texto": "Rechazó la armadura del rey. Bajó al arroyo, y escogió cinco piedras lisas.",
     "estilo": "narrador"
    },
    {
-    "texto": "Y David lo venció con una honda y una piedra.",
+    "texto": "Goliat se burló de él.",
     "estilo": "narrador"
    },
    {
-    "texto": "Dos metros o tres, cayó con una sola piedra. Entonces, ¿cuánto medía Goliat?",
+    "texto": "David corrió hacia el gigante, y giró su honda.",
+    "estilo": "narrador"
+   },
+   {
+    "texto": "Una sola piedra. Y el gigante cayó.",
+    "estilo": "narrador"
+   },
+   {
+    "texto": "Por eso, cuando alguien enfrenta algo imposible, todavía decimos: es David contra Goliat.",
     "estilo": "narrador"
    }
   ]

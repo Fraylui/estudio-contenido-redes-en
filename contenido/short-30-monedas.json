@@ -4,184 +4,144 @@
   "referencia": "voz/referencias/kokoro-alex.wav",
   "pausa": 0.25,
   "velocidad": 0.95,
-  "tono": "serio"
+  "tono": "serio",
+  "pronunciacion": {
+   "Goliat": "Goliát"
+  }
  },
  "props": {
-  "gancho": "¿CUÁNTO ERAN 30 MONEDAS DE PLATA?",
+  "gancho": "¿CUÁNTO VALÍAN 30 MONEDAS?",
   "musica": "musica/antiguo.mp3",
   "tono": "sepia",
   "escenas": [
    {
     "dibujo": {
-     "iconos": [
-      [
-       "img:monedas-plata"
-      ]
-     ],
-     "rotulo": "30"
+     "iconos": []
     },
     "texto": "30 monedas de plata",
     "resaltar": "30",
+    "fondo": "ia:m01-monedas",
     "sonido": "flash_shock",
-    "sonidoEn": 0.05,
-    "fondo": "ia:templo-noche",
+    "sonidoEn": 0.05
+   },
+   {
+    "dibujo": {
+     "iconos": []
+    },
+    "texto": "Una noche, Judas…",
+    "resaltar": "Judas…",
+    "fondo": "ia:m02-judas:paneo",
+    "particulas": "brasas"
+   },
+   {
+    "dibujo": {
+     "iconos": []
+    },
+    "texto": "¿Cuánto me darán?",
+    "resaltar": "¿Cuánto",
+    "fondo": "ia:m03-sacerdotes",
     "ambiente": "historia/restaurant-crowd-talking-ambience"
    },
    {
     "dibujo": {
-     "iconos": [
-      [
-       "img:bolsa-monedas"
-      ]
-     ],
-     "rotulo": "Mateo 26:15"
+     "iconos": []
     },
-    "texto": "El pago a Judas",
-    "resaltar": "Judas",
-    "fondo": "ia:templo-noche:paneo",
-    "ambiente": "historia/restaurant-crowd-talking-ambience"
-   },
-   {
-    "dibujo": {
-     "iconos": [
-      [
-       "img:monedas-plata"
-      ]
-     ]
-    },
-    "texto": "Siclos de Tiro",
-    "resaltar": "Tiro",
-    "sonido": "magic_reveal",
-    "sonidoEn": 0.4,
-    "fondo": "ia:templo-noche"
-   },
-   {
-    "dibujo": {
-     "iconos": [
-      [
-       "img:monedas-plata"
-      ],
-      [
-       "calendar",
-       "#ffd6a5"
-      ]
-     ],
-     "rotulo": "1 = 4 días"
-    },
-    "texto": "1 denario = 1 día de trabajo",
-    "resaltar": "1 día",
-    "fondo": "ia:campo-alfarero"
-   },
-   {
-    "barras": [
-     {
-      "etiqueta": "Días de trabajo",
-      "valor": 120,
-      "color": "#c0c0c0"
-     }
-    ],
-    "texto": "120 días de trabajo",
-    "resaltar": "120 días",
+    "texto": "30 piezas de plata",
+    "resaltar": "30",
+    "fondo": "ia:m04-balanza",
     "sonido": "boom",
-    "sonidoEn": 0.5,
-    "dibujo": {
-     "iconos": [
-      [
-       "img:monedas-plata"
-      ]
-     ]
-    },
-    "fondo": "ia:campo-alfarero"
+    "sonidoEn": 0.8
    },
    {
     "dibujo": {
-     "iconos": [
-      [
-       "img:rollo"
-      ]
-     ],
-     "rotulo": "Éxodo 21:32"
+     "iconos": []
+    },
+    "texto": "4 meses de trabajo",
+    "resaltar": "4 meses",
+    "fondo": "ia:m05-campo:paneo"
+   },
+   {
+    "dibujo": {
+     "iconos": []
     },
     "texto": "El precio de un esclavo",
     "resaltar": "esclavo",
+    "fondo": "ia:m06-esclavo",
     "sonido": "boom",
-    "sonidoEn": 1.6,
-    "fondo": "ia:templo-noche",
-    "ambiente": "historia/restaurant-crowd-talking-ambience"
+    "sonidoEn": 2.6
    },
    {
     "dibujo": {
-     "iconos": [
-      [
-       "img:rollo"
-      ]
-     ],
-     "rotulo": "Zacarías 11:12"
+     "iconos": []
     },
-    "texto": "Zacarías ya lo había escrito",
+    "texto": "Zacarías 11:12",
     "resaltar": "Zacarías",
-    "fondo": "ia:cuevas-qumran:paneo"
+    "fondo": "ia:m07-profeta"
    },
    {
     "dibujo": {
-     "iconos": [
-      [
-       "img:monedas-plata"
-      ]
-     ]
+     "iconos": []
     },
-    "texto": "Un campo para extranjeros",
-    "resaltar": "campo",
-    "fondo": "ia:campo-alfarero:paneo",
-    "particulas": "polvo",
-    "ambiente": "naturaleza/scary-graveyard-wind"
+    "texto": "Arrojó las monedas",
+    "resaltar": "Arrojó",
+    "fondo": "ia:m08-arrepentido",
+    "sonido": "transiciones/short-wind-swoosh",
+    "sonidoEn": 1.5
    },
    {
     "dibujo": {
-     "iconos": [
-      [
-       "img:bolsa-monedas"
-      ]
-     ],
-     "rotulo": "¿Lo sabías?"
+     "iconos": []
+    },
+    "texto": "El campo de sangre",
+    "resaltar": "sangre",
+    "fondo": "ia:m09-alfarero:paneo",
+    "ambiente": "naturaleza/scary-graveyard-wind",
+    "particulas": "polvo"
+   },
+   {
+    "dibujo": {
+     "iconos": []
     },
     "texto": "El precio de un esclavo.",
     "resaltar": "esclavo.",
-    "fondo": "ia:templo-noche",
-    "ambiente": "historia/restaurant-crowd-talking-ambience"
+    "fondo": "ia:m10-final"
    }
   ],
   "narracion": [
    {
-    "texto": "Treinta monedas de plata. ¿Cuánto era eso de verdad?",
+    "texto": "Treinta monedas de plata. Ese fue el precio.",
     "estilo": "narrador"
    },
    {
-    "texto": "Mateo veintiséis cuenta que eso le pagaron a Judas por entregar a Jesús.",
+    "texto": "Una noche, Judas fue a ver a los jefes de los sacerdotes.",
     "estilo": "narrador"
    },
    {
-    "texto": "Muchos historiadores creen que eran siclos de Tiro, la moneda de plata del templo.",
+    "texto": "Y les preguntó: ¿cuánto me darán si se lo entrego?",
     "estilo": "narrador"
    },
    {
-    "texto": "Un siclo valía unos cuatro denarios. Y un denario era el pago de un día de trabajo en el campo.",
+    "texto": "Le dieron treinta piezas de plata.",
     "estilo": "narrador"
    },
    {
-    "texto": "Treinta siclos: unos ciento veinte días de trabajo. Cuatro meses de sueldo.",
+    "texto": "Muchos historiadores creen que eran siclos de Tiro: unos cuatro meses de trabajo en el campo.",
     "estilo": "narrador"
    },
    {
-    "texto": "Pero el detalle más fuerte está en Éxodo veintiuno: treinta siclos era lo que la ley mandaba pagar por la vida de un esclavo.",
+    "texto": "Y en la ley de Moisés, treinta siclos era lo que se pagaba por la vida de un esclavo.",
     "estilo": "narrador"
    },
    {
-    "texto": "Y siglos antes, el profeta Zacarías ya había hablado de treinta piezas de plata.",
+    "texto": "Siglos antes, el profeta Zacarías ya había escrito sobre treinta piezas de plata.",
     "estilo": "narrador"
    },
    {
-    "texto": "Judas devolvió las monedas, y los sacerdotes compraron con ellas un campo para sepultar a los extranjeros.",
+    "texto": "Cuando Judas vio lo que había hecho, arrojó las monedas en el templo.",
+    "estilo": "narrador"
+   },
+   {
+    "texto": "Con ellas, los sacerdotes compraron un campo para enterrar extranjeros. Lo llamaron el campo de sangre.",
     "estilo": "narrador"
    },
    {
