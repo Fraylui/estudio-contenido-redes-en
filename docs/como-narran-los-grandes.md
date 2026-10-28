@@ -289,6 +289,11 @@ Los dos comparten las técnicas: el anzuelo al cierre de cada parte, la imagen c
 - **No copiamos** los estereotipos ("la fea usa este truco").
 - **Conclusión de los 8 Shorts de este estilo:** el patrón ya está aprendido. Es hora de **probarlo en un Short nuestro** y medir.
 
+**Psicología Práctica: "Cómo responder a un INSULTO:".** Lo nuevo:
+- **Promete la frase exacta** ("Si alguien te insulta… Dile ESTO:"). El que mira se lleva algo que puede repetir mañana, y por eso lo guarda y lo comparte.
+- **El insulto dibujado como un chorro verde** que sale de una boca y entra en el otro: lo invisible (las palabras que dañan) se vuelve una cosa que se ve.
+- **Para Khipu:** en Psicología y Sabiduría, cerrar con **una frase lista para usar** (una cita con su autor, por ejemplo de Séneca o de Marco Aurelio).
+
 ## Búsqueda propia (28 oct): qué tiene millones de vistas ahora
 Con `scripts/investigar-youtube.py`. Desde este servidor, YouTube y Tactiq bloquean las transcripciones (piden demostrar que no es un robot), así que las transcripciones las pasa el usuario. Los títulos, las vistas y las duraciones sí se pueden buscar.
 - **Las "películas bíblicas" hechas con IA son lo que más crece:** "Las Crónicas de Enoc (Película 2026)", 7,7 M en 1 mes; otra de Enoc, 8,3 M en 3 meses; "El Libro de Enoc (2025)", 11 M. Duran de 55 min a 1 h 20 min. Es un formato en auge, y es nuestra serie fuerte.
