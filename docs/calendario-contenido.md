@@ -101,3 +101,8 @@ Cada tema: dato con fuente (en la Biblia, el pasaje citado) y una pregunta que c
 - **"El imperio donde nunca se ponía el sol": la historia completa del Imperio español** (de Carlos V a 1898). La frase nació con España antes que con Inglaterra. Capítulos con título, de 20 a 40 min.
 - **"Toda la historia del Imperio británico, contada desde América Latina"**: los piratas en el Caribe, las Malvinas, Belice y el asedio de Cartagena de Indias (1741).
 - **"Toda la historia del Imperio inca"** y **"Toda la historia de los aztecas"**, con fuentes de cronistas y arqueología.
+
+## Banco "orgullo de país" (Shorts; cada país comenta)
+- "¿Contra cuántos ejércitos peleó tu país?": México, Perú, Argentina, Colombia y Chile, uno por Short, cerrando con una comparación.
+- **El Escuadrón 201: los aviadores mexicanos que pelearon contra Japón en Filipinas (1945)** · Short de historia.
+- "Lo que [país] le dio al mundo" (la papa del Perú, el chocolate y el maíz de México…) · Short de comida e historia.

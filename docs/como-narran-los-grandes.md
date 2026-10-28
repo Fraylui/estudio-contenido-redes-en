@@ -122,6 +122,22 @@ Los dos comparten las técnicas: el anzuelo al cierre de cada parte, la imagen c
 - **Para Khipu:** sí haremos videos largos cronológicos de "toda la historia", porque son los que más horas suman. Pero cada fecha y cada cifra se revisa en 2 fuentes, cada capítulo abre con una escena, y hay una metáfora que vuelve al final.
 - **Ángulo para el público hispano:** la frase "el imperio donde nunca se pone el sol" se dijo primero del Imperio español de Carlos V y Felipe II. Es un gancho perfecto para un video nuestro.
 
+**Short "México contra 9 ejércitos extranjeros" (1 min 13 s): el orgullo de país como gancho.**
+- **Lo que funciona:**
+  - **"¿Sabías que…?" + superlativo + país:** habla directo al público que más nos ve (México, 19 %).
+  - **Una lista que escala** (España → EE. UU. → Francia → "incluso polacos" → Japón), donde cada punto sorprende más que el anterior.
+  - **Un número que paga la lista:** "nueve países".
+  - **Termina comparando con otro país** (Argentina, 8), y eso provoca comentarios solos ("¿y Perú?", "¿y Colombia?"). **Es la forma de conseguir comentarios sin mendigar:** el contenido invita al debate.
+- **Lo que falla:**
+  - Errores: era el Escuadrón 201, no "2011", y los "regimientos arginos" eran tropas egipcio-sudanesas.
+  - El superlativo ("el que más") no tiene fuente.
+  - El final se corta con un "Yeah".
+- **Para Khipu:**
+  1. **Serie por país:** el mismo formato para México, Perú, Argentina, Colombia y España. Cada país se siente aludido y comenta.
+  2. **Cerrar con una comparación o una pregunta implícita** que la gente quiera responder, sin pedir que comenten.
+  3. **Las historias dentro de la lista dan Shorts propios:** el Escuadrón 201 en Filipinas o la Legión belga en México.
+  4. El superlativo solo se usa si tiene fuente; si no, "uno de los que más".
+
 ## Qué cambia en Khipu
 - **Videos largos de verdad:** este dura 31 minutos y retiene contando una cadena de historias. Nuestros largos duran **lo que la historia necesite (8–12 min de base)** (son los que suman horas para monetizar).
 - **Lista de revisión de cada guion largo:**
