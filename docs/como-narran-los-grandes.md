@@ -192,6 +192,13 @@ Los dos comparten las técnicas: el anzuelo al cierre de cada parte, la imagen c
   2. **El color como emoción:** pasar de desaturado a color en el giro. Se puede hacer con un filtro de saturación animado.
   3. **Personajes que se repiten** en la serie de psicología y hábitos.
 
+**Short "Primer día caminando 10 000 pasos" (CasiCreativo; vimos el título y 3 cuadros).**
+- **Personificación:** cada órgano es un personaje con cara y emoción (el hueso feliz, los pulmones riendo, el músculo sudando y quejándose). El cuerpo se vuelve una comedia, y el dato entra por la emoción.
+- **Formato "Primer día haciendo X":** un reto que cualquiera imagina ("¿y si yo lo hago?"), contado por las reacciones de cada parte del cuerpo. Se presta para serie (día 1, día 30…).
+- **Para Khipu (categoría Cuerpo y Hábitos):**
+  - una serie "Lo que le pasa a tu cuerpo si…" con órganos personaje, hechos con SD-Turbo (estilo objeto, "cute cartoon bone character with big eyes") y recortados con rembg, que se mueven como capas sobre un fondo;
+  - nuestro giro con dato real: **la meta de los 10 000 pasos nació de un podómetro japonés de 1965 llamado "manpo-kei" ("medidor de 10 000 pasos")**, y los estudios recientes (Lancet Public Health, 2022) ven el mayor beneficio entre 6 000 y 8 000 pasos en mayores de 60 años. Verificarlo antes de usarlo.
+
 ## Búsqueda propia (28 oct): qué tiene millones de vistas ahora
 Con `scripts/investigar-youtube.py`. Desde este servidor, YouTube y Tactiq bloquean las transcripciones (piden demostrar que no es un robot), así que las transcripciones las pasa el usuario. Los títulos, las vistas y las duraciones sí se pueden buscar.
 - **Las "películas bíblicas" hechas con IA son lo que más crece:** "Las Crónicas de Enoc (Película 2026)", 7,7 M en 1 mes; otra de Enoc, 8,3 M en 3 meses; "El Libro de Enoc (2025)", 11 M. Duran de 55 min a 1 h 20 min. Es un formato en auge, y es nuestra serie fuerte.

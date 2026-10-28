@@ -112,3 +112,6 @@ Cada tema: dato con fuente (en la Biblia, el pasaje citado) y una pregunta que c
 
 ## Serie en cadena "Apocalipsis en 3 partes" (Shorts de la Biblia, 20:00)
 1. Los 7 sellos (Apocalipsis 6–8:1), con el silencio de media hora sonando de verdad · 2. Las 7 trompetas (Apocalipsis 8–11) · 3. Las 7 copas (Apocalipsis 16). Cada uno termina en el siguiente; los tres llevan al video largo "Los 4 jinetes".
+
+## Serie "Lo que le pasa a tu cuerpo si…" (órganos personaje; Cuerpo y Hábitos)
+- …caminas 10 000 pasos (y de dónde salió ese número: el manpo-kei de 1965) · …no duermes una noche · …dejas el azúcar 30 días · …tomas agua al despertar (verificar cada dato con 2 fuentes médicas)
