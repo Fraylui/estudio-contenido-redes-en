@@ -1,0 +1,649 @@
+{
+ "formato": "Pizarra",
+ "voz": {
+  "referencia": "voz/referencias/xiomi-clara.wav",
+  "pausa": 0.22,
+  "tono": "alegre",
+  "pronunciacion": {
+   "Patmos": "Pátmos",
+   "Domiciano": "Domiciáno",
+   "Ireneo": "Irenéo",
+   "Carras": "Cárras",
+   "Craso": "Cráso",
+   "cloros": "clóros",
+   "Hades": "Ádes",
+   "Durero": "Duréro"
+  }
+ },
+ "props": {
+  "musica": "musica/antiguo.mp3",
+  "tono": "calido",
+  "escenas": [
+   {
+    "dibujo": {
+     "iconos": []
+    },
+    "texto": "Patmos, año 95",
+    "resaltar": "Patmos",
+    "fondo": "ia:jin01-patmos",
+    "sonido": "flash_shock",
+    "sonidoEn": 0.05,
+    "particulas": "niebla"
+   },
+   {
+    "dibujo": {
+     "iconos": []
+    },
+    "texto": "2 000 años de miedo",
+    "resaltar": "miedo",
+    "fondo": "ia:jin02-anciano"
+   },
+   {
+    "dibujo": {
+     "iconos": []
+    },
+    "texto": "4 jinetes",
+    "resaltar": "jinetes",
+    "fondo": "ia:jin03-cuatro"
+   },
+   {
+    "dibujo": {
+     "iconos": []
+    },
+    "texto": "No está en la Biblia",
+    "resaltar": "no está",
+    "fondo": "ia:jin04-paradoja"
+   },
+   {
+    "dibujo": {
+     "iconos": []
+    },
+    "texto": "Más histórico de lo que crees",
+    "resaltar": "histórico",
+    "fondo": "ia:jin05-peliculas"
+   },
+   {
+    "dibujo": {
+     "iconos": []
+    },
+    "texto": "¿Quiénes eran de verdad?",
+    "resaltar": "¿Quiénes",
+    "fondo": "ia:jin06-pregunta"
+   },
+   {
+    "dibujo": {
+     "iconos": []
+    },
+    "texto": "Apocalipsis 1:9",
+    "resaltar": "Patmos",
+    "fondo": "ia:jin07-desterrado"
+   },
+   {
+    "dibujo": {
+     "iconos": []
+    },
+    "texto": "El mundo era de Roma",
+    "resaltar": "Roma",
+    "fondo": "ia:jin08-roma"
+   },
+   {
+    "dibujo": {
+     "iconos": []
+    },
+    "texto": "¿Domiciano o Nerón?",
+    "resaltar": "Domiciano",
+    "fondo": "ia:jin09-domiciano"
+   },
+   {
+    "dibujo": {
+     "iconos": []
+    },
+    "texto": "Hablaba de su mundo",
+    "resaltar": "su mundo",
+    "fondo": "ia:jin10-cristianos"
+   },
+   {
+    "dibujo": {
+     "iconos": []
+    },
+    "texto": "Apocalipsis = revelación",
+    "resaltar": "revelación",
+    "fondo": "ia:jin11-apocalipsis"
+   },
+   {
+    "dibujo": {
+     "iconos": []
+    },
+    "texto": "7 sellos",
+    "resaltar": "siete sellos",
+    "fondo": "ia:jin12-trono"
+   },
+   {
+    "dibujo": {
+     "iconos": []
+    },
+    "texto": "Aparece un Cordero",
+    "resaltar": "Cordero",
+    "fondo": "ia:jin13-nadie"
+   },
+   {
+    "dibujo": {
+     "iconos": []
+    },
+    "texto": "“Ven”",
+    "resaltar": "Ven",
+    "fondo": "ia:jin14-cordero"
+   },
+   {
+    "dibujo": {
+     "iconos": []
+    },
+    "texto": "Sale un jinete",
+    "resaltar": "jinete",
+    "fondo": "ia:jin15-umbral",
+    "sonido": "boom",
+    "sonidoEn": 0.3
+   },
+   {
+    "dibujo": {
+     "iconos": []
+    },
+    "texto": "Caballo blanco",
+    "resaltar": "blanco",
+    "fondo": "ia:jin16-blanco",
+    "etiqueta": "Primer sello",
+    "sonido": "magic_reveal",
+    "sonidoEn": 0.4
+   },
+   {
+    "dibujo": {
+     "iconos": []
+    },
+    "texto": "El texto no dice “peste”",
+    "resaltar": "peste",
+    "fondo": "ia:jin17-mito-peste"
+   },
+   {
+    "dibujo": {
+     "iconos": []
+    },
+    "texto": "Ireneo: ¿Cristo?",
+    "resaltar": "Cristo",
+    "fondo": "ia:jin18-cristo"
+   },
+   {
+    "dibujo": {
+     "iconos": []
+    },
+    "texto": "¿Un impostor?",
+    "resaltar": "impostor",
+    "fondo": "ia:jin19-anticristo"
+   },
+   {
+    "dibujo": {
+     "iconos": []
+    },
+    "texto": "La pista del arco",
+    "resaltar": "arco",
+    "fondo": "ia:jin20-partos"
+   },
+   {
+    "dibujo": {
+     "iconos": []
+    },
+    "texto": "Los partos",
+    "resaltar": "partos",
+    "fondo": "ia:jin21-arqueros"
+   },
+   {
+    "dibujo": {
+     "iconos": []
+    },
+    "texto": "Roma humillada",
+    "resaltar": "humillada",
+    "fondo": "ia:jin22-carras"
+   },
+   {
+    "dibujo": {
+     "iconos": []
+    },
+    "texto": "El miedo del este",
+    "resaltar": "miedo",
+    "fondo": "ia:jin23-amenaza"
+   },
+   {
+    "dibujo": {
+     "iconos": []
+    },
+    "texto": "Caballo rojo",
+    "resaltar": "rojo",
+    "fondo": "ia:jin24-rojo",
+    "etiqueta": "Segundo sello",
+    "sonido": "boom",
+    "sonidoEn": 0.5,
+    "particulas": "brasas"
+   },
+   {
+    "dibujo": {
+     "iconos": []
+    },
+    "texto": "Pax romana",
+    "resaltar": "paz",
+    "fondo": "ia:jin25-pax"
+   },
+   {
+    "dibujo": {
+     "iconos": []
+    },
+    "texto": "69: el año de los 4 emperadores",
+    "resaltar": "4 emperadores",
+    "fondo": "ia:jin26-guerra-civil"
+   },
+   {
+    "dibujo": {
+     "iconos": []
+    },
+    "texto": "Jerusalén, año 70",
+    "resaltar": "Jerusalén",
+    "fondo": "ia:jin27-jerusalen"
+   },
+   {
+    "dibujo": {
+     "iconos": []
+    },
+    "texto": "Caballo negro",
+    "resaltar": "negro",
+    "fondo": "ia:jin28-negro",
+    "particulas": "brasas"
+   },
+   {
+    "dibujo": {
+     "iconos": []
+    },
+    "texto": "Trigo por un denario",
+    "resaltar": "denario",
+    "fondo": "ia:jin29-precio",
+    "etiqueta": "Tercer sello"
+   },
+   {
+    "dibujo": {
+     "iconos": []
+    },
+    "texto": "1 día de trabajo = 1 día de comida",
+    "resaltar": "1 día",
+    "fondo": "ia:jin30-denario"
+   },
+   {
+    "dibujo": {
+     "iconos": []
+    },
+    "texto": "8 a 16 veces más caro",
+    "resaltar": "16 veces",
+    "fondo": "ia:jin31-hambre"
+   },
+   {
+    "dibujo": {
+     "iconos": []
+    },
+    "texto": "“No dañes el vino”",
+    "resaltar": "vino",
+    "fondo": "ia:jin32-vino"
+   },
+   {
+    "dibujo": {
+     "iconos": []
+    },
+    "texto": "El edicto de las viñas",
+    "resaltar": "viñas",
+    "fondo": "ia:jin33-edicto"
+   },
+   {
+    "dibujo": {
+     "iconos": []
+    },
+    "texto": "Pan escaso, lujo intacto",
+    "resaltar": "lujo",
+    "fondo": "ia:jin34-ricos"
+   },
+   {
+    "dibujo": {
+     "iconos": []
+    },
+    "texto": "Falta uno",
+    "resaltar": "uno",
+    "fondo": "ia:jin35-pausa"
+   },
+   {
+    "dibujo": {
+     "iconos": []
+    },
+    "texto": "Verde pálido",
+    "resaltar": "pálido",
+    "fondo": "ia:jin36-cuarto"
+   },
+   {
+    "dibujo": {
+     "iconos": []
+    },
+    "texto": "Su nombre: Muerte",
+    "resaltar": "Muerte",
+    "fondo": "ia:jin37-muerte",
+    "etiqueta": "Cuarto sello",
+    "particulas": "niebla",
+    "sonido": "boom",
+    "sonidoEn": 0.8
+   },
+   {
+    "dibujo": {
+     "iconos": []
+    },
+    "texto": "El único con nombre",
+    "resaltar": "nombre",
+    "fondo": "ia:jin38-nombre",
+    "particulas": "niebla"
+   },
+   {
+    "dibujo": {
+     "iconos": []
+    },
+    "texto": "La cuarta parte de la tierra",
+    "resaltar": "cuarta parte",
+    "fondo": "ia:jin39-cuarta"
+   },
+   {
+    "dibujo": {
+     "iconos": []
+    },
+    "texto": "Aquí sí está la peste",
+    "resaltar": "peste",
+    "fondo": "ia:jin40-peste-real"
+   },
+   {
+    "dibujo": {
+     "iconos": []
+    },
+    "texto": "Imagina ser ellos",
+    "resaltar": "Imagina",
+    "fondo": "ia:jin41-imagina"
+   },
+   {
+    "dibujo": {
+     "iconos": []
+    },
+    "texto": "Reconoces tu mundo",
+    "resaltar": "tu mundo",
+    "fondo": "ia:jin42-reconoce",
+    "etiqueta": "El mensaje"
+   },
+   {
+    "dibujo": {
+     "iconos": []
+    },
+    "texto": "Cada siglo los vio",
+    "resaltar": "siglo",
+    "fondo": "ia:jin43-siglos"
+   },
+   {
+    "dibujo": {
+     "iconos": []
+    },
+    "texto": "Durero, 1498",
+    "resaltar": "Durero",
+    "fondo": "ia:jin44-durero",
+    "etiqueta": "Lo que no te contaron"
+   },
+   {
+    "dibujo": {
+     "iconos": []
+    },
+    "texto": "Uno por uno",
+    "resaltar": "uno por uno",
+    "fondo": "ia:jin45-juntos"
+   },
+   {
+    "dibujo": {
+     "iconos": []
+    },
+    "texto": "No son el final",
+    "resaltar": "comienzo",
+    "fondo": "ia:jin46-quinto"
+   },
+   {
+    "dibujo": {
+     "iconos": []
+    },
+    "texto": "“Ya no habrá llanto”",
+    "resaltar": "llanto",
+    "fondo": "ia:jin47-esperanza"
+   },
+   {
+    "dibujo": {
+     "iconos": []
+    },
+    "texto": "El mal no tiene la última palabra",
+    "resaltar": "última palabra",
+    "fondo": "ia:jin48-mensaje",
+    "particulas": "rayos"
+   },
+   {
+    "dibujo": {
+     "iconos": []
+    },
+    "texto": "De vuelta en Patmos",
+    "resaltar": "Patmos",
+    "fondo": "ia:jin49-vuelta"
+   },
+   {
+    "dibujo": {
+     "iconos": []
+    },
+    "texto": "¿Y los de nuestro tiempo?",
+    "resaltar": "nuestro tiempo",
+    "fondo": "ia:jin50-cierre",
+    "particulas": "niebla"
+   }
+  ],
+  "narracion": [
+   {
+    "texto": "Una isla de piedra en el mar Egeo, hacia el año noventa y cinco. El viento huele a sal. En una cueva, un anciano desterrado escribe lo que dice haber visto.",
+    "estilo": "narrador"
+   },
+   {
+    "texto": "Lo que escribe esa mañana va a asustar a la humanidad durante dos mil años.",
+    "estilo": "narrador"
+   },
+   {
+    "texto": "Cuatro jinetes. Un caballo blanco, uno rojo, uno negro y uno de un color que casi nadie traduce bien.",
+    "estilo": "narrador"
+   },
+   {
+    "texto": "Y aquí está lo curioso: casi todo lo que creemos saber de ellos no está en la Biblia.",
+    "estilo": "narrador"
+   },
+   {
+    "texto": "Viene de pinturas, de películas y de siglos de miedo. El texto real es más extraño, y mucho más histórico.",
+    "estilo": "narrador"
+   },
+   {
+    "texto": "Entonces, ¿quiénes eran de verdad los cuatro jinetes? Y, sobre todo, ¿qué veían los primeros que leyeron esto?",
+    "estilo": "narrador"
+   },
+   {
+    "texto": "El hombre de la cueva se llamaba Juan. Él mismo cuenta que estaba en la isla de Patmos por la palabra de Dios: probablemente desterrado por su fe.",
+    "estilo": "narrador"
+   },
+   {
+    "texto": "Afuera, el mundo era de Roma. Un imperio que se extendía por tres continentes, y que no aceptaba otro señor que el emperador.",
+    "estilo": "narrador"
+   },
+   {
+    "texto": "Según escritores de los primeros siglos, gobernaba Domiciano. Otros estudiosos creen que el libro es de unos años antes, de la época de Nerón. Todavía se discute.",
+    "estilo": "narrador"
+   },
+   {
+    "texto": "Para los cristianos de aquel tiempo, que eran pocos y a veces perseguidos, ese libro no hablaba de un futuro lejano. Hablaba de su mundo.",
+    "estilo": "narrador"
+   },
+   {
+    "texto": "De hecho, la palabra apocalipsis no significa fin del mundo. Significa revelación: quitar el velo.",
+    "estilo": "narrador"
+   },
+   {
+    "texto": "En su visión, Juan ve un trono en el cielo, y en una mano, un rollo escrito por dentro y por fuera, cerrado con siete sellos.",
+    "estilo": "narrador"
+   },
+   {
+    "texto": "Nadie es digno de abrirlo. Juan llora. Hasta que aparece un Cordero.",
+    "estilo": "narrador"
+   },
+   {
+    "texto": "Para los cristianos, el Cordero es Cristo. Y cuando rompe cada uno de los primeros cuatro sellos, una voz dice: ven.",
+    "estilo": "narrador"
+   },
+   {
+    "texto": "Y sale un jinete.",
+    "estilo": "narrador"
+   },
+   {
+    "texto": "Primer sello. Un caballo blanco. Su jinete lleva un arco. Le dan una corona, y sale venciendo, y para vencer.",
+    "estilo": "narrador"
+   },
+   {
+    "texto": "Seguro lo has escuchado: es la Peste. Pero el texto no dice eso. En ningún lugar de la Biblia el blanco es el color de una enfermedad.",
+    "estilo": "narrador"
+   },
+   {
+    "texto": "Hace casi mil novecientos años, Ireneo de Lyon, uno de los primeros grandes maestros cristianos, creía que este jinete era Cristo mismo, que sale a vencer.",
+    "estilo": "narrador"
+   },
+   {
+    "texto": "Otros piensan lo contrario: que es un impostor que imita a Cristo, porque al final del libro Cristo también llega en un caballo blanco.",
+    "estilo": "narrador"
+   },
+   {
+    "texto": "Y hay una tercera pista, histórica, que los primeros lectores entendían al instante: el arco.",
+    "estilo": "narrador"
+   },
+   {
+    "texto": "Los soldados romanos no usaban arco a caballo. Pero había un pueblo que sí: los partos, al este del imperio. Los únicos que habían humillado a Roma.",
+    "estilo": "narrador"
+   },
+   {
+    "texto": "En la batalla de Carras derrotaron al general Craso. Y en el año sesenta y dos obligaron a un ejército romano entero a rendirse.",
+    "estilo": "narrador"
+   },
+   {
+    "texto": "Para alguien que vivía en el imperio, un jinete con arco era la invasión que todos temían. El enemigo que venía del este.",
+    "estilo": "narrador"
+   },
+   {
+    "texto": "Segundo sello. Un caballo rojo como el fuego. A su jinete le dan una gran espada, y el poder de quitar la paz de la tierra, para que se maten unos a otros.",
+    "estilo": "narrador"
+   },
+   {
+    "texto": "Y eso, en tiempos de Roma, era terrible. Porque Roma presumía de algo: la paz romana. La pax romana.",
+    "estilo": "narrador"
+   },
+   {
+    "texto": "Pero esa paz se había roto. En el año sesenta y nueve, Roma tuvo cuatro emperadores en un solo año, y sus ejércitos se mataron entre ellos.",
+    "estilo": "narrador"
+   },
+   {
+    "texto": "Y un año después, las legiones arrasaron Jerusalén y su templo. Para judíos y cristianos, aquello fue el fin de un mundo.",
+    "estilo": "narrador"
+   },
+   {
+    "texto": "Tercer sello. Un caballo negro. Su jinete lleva una balanza en la mano.",
+    "estilo": "narrador"
+   },
+   {
+    "texto": "Y una voz grita un precio: una medida de trigo por un denario, y tres de cebada por un denario.",
+    "estilo": "narrador"
+   },
+   {
+    "texto": "Ese detalle es oro para los historiadores. Una medida de trigo era lo que comía una persona en un día. Y un denario era el pago de un día entero de trabajo.",
+    "estilo": "narrador"
+   },
+   {
+    "texto": "O sea: trabajas todo el día, y solo alcanza para tu pan. Nada para tu familia. Según los cálculos de los estudiosos, el trigo costaba entre ocho y dieciséis veces más que lo normal.",
+    "estilo": "narrador"
+   },
+   {
+    "texto": "Pero la voz agrega algo extraño: no dañes el aceite ni el vino.",
+    "estilo": "narrador"
+   },
+   {
+    "texto": "Algunos historiadores lo relacionan con un hecho real: Domiciano ordenó arrancar viñedos para sembrar trigo. Y tuvo que echarse atrás.",
+    "estilo": "narrador"
+   },
+   {
+    "texto": "La lectura es dura: el pan de los pobres escasea, mientras el lujo de los ricos sigue intacto.",
+    "estilo": "narrador"
+   },
+   {
+    "texto": "Hasta aquí, tres jinetes sin nombre. Conquista, guerra y hambre. Pero falta uno. Y ese sí tiene nombre.",
+    "estilo": "narrador"
+   },
+   {
+    "texto": "Cuarto sello. Un caballo de un color que en griego se dice cloros: verde pálido. El color de un cadáver.",
+    "estilo": "narrador"
+   },
+   {
+    "texto": "Y Juan escribe: el que estaba montado sobre él tenía por nombre Muerte. Y el Hades le seguía.",
+    "estilo": "narrador"
+   },
+   {
+    "texto": "Es el único de los cuatro que tiene nombre. Y no viene solo.",
+    "estilo": "narrador"
+   },
+   {
+    "texto": "Reciben poder sobre la cuarta parte de la tierra, para matar con espada, con hambre, con mortandad, y con las fieras.",
+    "estilo": "narrador"
+   },
+   {
+    "texto": "Aquí sí aparece la peste: escondida dentro del cuarto jinete, no del primero.",
+    "estilo": "narrador"
+   },
+   {
+    "texto": "Ahora imagina ser uno de esos primeros lectores. Has visto la guerra civil. Has oído de Jerusalén en llamas. Conoces el miedo a los partos y el precio del pan.",
+    "estilo": "narrador"
+   },
+   {
+    "texto": "Cuando escuchas leer este pasaje, no imaginas el año tres mil. Reconoces tu propio mundo.",
+    "estilo": "narrador"
+   },
+   {
+    "texto": "Y lo mismo pasó en cada siglo. Cada generación que vivió una guerra, una hambruna o una peste, creyó ver a los jinetes.",
+    "estilo": "narrador"
+   },
+   {
+    "texto": "En mil cuatrocientos noventa y ocho, el artista alemán Alberto Durero grabó la imagen que todos tenemos en la cabeza: los cuatro jinetes galopando juntos sobre la gente.",
+    "estilo": "narrador"
+   },
+   {
+    "texto": "Pero en el texto no galopan juntos. Salen uno por uno. Cada sello, un golpe.",
+    "estilo": "narrador"
+   },
+   {
+    "texto": "Y después de ellos vienen tres sellos más, y el libro sigue con muchos capítulos. Los jinetes no son el final. Son el comienzo.",
+    "estilo": "narrador"
+   },
+   {
+    "texto": "Porque el Apocalipsis, que tanto miedo da, termina con algo que casi nadie recuerda: un cielo nuevo y una tierra nueva, donde ya no habrá llanto.",
+    "estilo": "narrador"
+   },
+   {
+    "texto": "Para sus primeros lectores, el mensaje no era: el mundo se acaba. Era: aunque todo esto pase, el mal no tiene la última palabra.",
+    "estilo": "narrador"
+   },
+   {
+    "texto": "Y aquel anciano de Patmos, que escribía en una cueva mientras el imperio más poderoso del mundo lo tenía desterrado…",
+    "estilo": "narrador"
+   },
+   {
+    "texto": "nunca imaginó que, dos mil años después, seguiríamos preguntándonos lo mismo: ¿quiénes son los jinetes de nuestro tiempo?",
+    "estilo": "narrador"
+   }
+  ]
+ }
+}

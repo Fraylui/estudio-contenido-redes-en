@@ -13,7 +13,7 @@ Se actualiza en cada paso. Una sola cola: primero lo que sale antes, después lo
 ## Cola (en este orden)
 1. **Largo del viernes 30, 10:00:** Fleming y la penicilina. Voz de Xiomi y 46 tomas en proceso.
 2. **Shorts del jueves 29:** Babilonia (7:00), hiperinflación (12:00), Inca Kola (16:00) y el techo de Cafarnaúm (20:00, con la animación por capas).
-3. **Largo del domingo 1, 10:00:** por investigar (misterios o Biblia).
+3. **Largo del domingo 1, 10:00:** los 4 jinetes del Apocalipsis, con su historia real (guion listo, 50 escenas, ~7 min).
 4. **Shorts del viernes 30.**
 
 ## Reglas de orden
