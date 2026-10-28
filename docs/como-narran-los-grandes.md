@@ -254,6 +254,17 @@ Los dos comparten las técnicas: el anzuelo al cierre de cada parte, la imagen c
   - un "?" en pantalla que se resuelve al final.
   - Lo que se diga sobre heridas o violencia se dice sin sangre y con fuente médica.
 
+**Short "¿Por qué hay gente que se desmaya solo con ver sangre (no es que sean unos flojos)?" (duocare).**
+- **Título que defiende al espectador:** la pregunta + un paréntesis que lo valida ("no es que sean unos flojos"). Quien se desmaya se siente comprendido y lo comparte.
+- **Un solo plano del cuerpo que cuenta el proceso con la luz:** una silueta anatómica que brilla sobre un fondo oscuro con rayos de luz; la sangre se ilumina, luego se apaga arriba y se junta en las piernas (síncope vasovagal). Es el mismo cuadro; solo cambia qué brilla. Es barato y se entiende perfecto.
+- **Subtítulo de una sola palabra a la vez**, grande y en el centro del cuerpo ("repente", "último", "piernas").
+- **Para Khipu (Cuerpo):** una imagen anatómica brillante hecha con SD-Turbo, sobre la que Remotion enciende y apaga zonas (máscaras con brillo animado). Un plano, muchas escenas.
+
+**Short "Cómo vengar una INFIDELIDAD:" (Psicología Práctica).**
+- **Título provocador con giro:** promete venganza y (por el formato del canal) entrega una respuesta sana. La curiosidad entra por lo prohibido y el valor sale por lo útil. Es ético porque cumple lo que el que mira necesita, aunque no lo que esperaba.
+- **Lista que se nota ("LA TERCERA:")**, un globo de pensamiento con el recuerdo, y objetos-símbolo en las manos (el anillo y la foto).
+- **Para Khipu:** títulos que provocan con algo prohibido y contenido que gira hacia lo útil o lo verdadero ("Cómo hacerte rico en una noche" → la historia real de quien lo intentó).
+
 ## Búsqueda propia (28 oct): qué tiene millones de vistas ahora
 Con `scripts/investigar-youtube.py`. Desde este servidor, YouTube y Tactiq bloquean las transcripciones (piden demostrar que no es un robot), así que las transcripciones las pasa el usuario. Los títulos, las vistas y las duraciones sí se pueden buscar.
 - **Las "películas bíblicas" hechas con IA son lo que más crece:** "Las Crónicas de Enoc (Película 2026)", 7,7 M en 1 mes; otra de Enoc, 8,3 M en 3 meses; "El Libro de Enoc (2025)", 11 M. Duran de 55 min a 1 h 20 min. Es un formato en auge, y es nuestra serie fuerte.
