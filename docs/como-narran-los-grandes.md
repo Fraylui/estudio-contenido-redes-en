@@ -99,6 +99,29 @@ Los dos comparten las técnicas: el anzuelo al cierre de cada parte, la imagen c
     - En 2 Pedro 1:19 de la Vulgata, "lucifer" se refiere a Cristo.
 - **Para Khipu:** la historia dramatizada con diálogo sí funciona, pero se anuncia claramente ("así lo imagina la tradición" o "así lo novela un sacerdote") y se separa de lo que dice el texto. El contexto real es nuestro giro: es justo lo que esos videos no cuentan.
 
+**"Toda la historia del Imperio británico" (3 h 15 min): el formato que más horas suma, con errores que nosotros no podemos tener.**
+- **Lo que funciona:**
+  - **Una cifra enorme en la primera frase** ("un imperio con una cuarta parte de la Tierra").
+  - **Capítulos con título** (Jamestown, la guerra del opio, la Segunda Guerra Mundial…), que en YouTube se vuelven marcadores.
+  - **Mini escenas con un detalle concreto:** el gato hidráulico que salvó al Mayflower, Gandhi levantando un puñado de sal.
+  - **Remates morales** ("el azúcar no siempre tiene un sabor tan dulce").
+  - **Una metáfora que atraviesa todo:** "el sol nunca se pone" se convierte al final en "el sol se ponía" (cierra el círculo).
+  - Muestra las dos caras: los logros y las masacres.
+  - Para monetizar, un video así suma horas como 50 Shorts.
+- **Lo que falla:**
+  - Es una lista de batallas con frases de relleno repetidas ("los cañones rugieron", "el fatídico día").
+  - **Tiene errores de bulto:**
+    - "Enrique VI" en lugar de Enrique VII y Enrique VIII;
+    - la Revolución Gloriosa fue en 1688, no en 1668;
+    - Gibraltar y Menorca están en el Mediterráneo, no en el Caribe;
+    - Cook no "descubrió" Australia: los holandeses llegaron en 1606, y los aborígenes viven allí desde hace más de 50 000 años;
+    - Isandlwana dejó más de 1 300 británicos muertos, no 13;
+    - en Amritsar las cifras oficiales hablan de 379 muertos, no de 100;
+    - Leisler fue el rebelde, no el gobernador católico.
+  - Además, opina como si fuera un hecho ("necesitaban una guerra mundial").
+- **Para Khipu:** sí haremos videos largos cronológicos de "toda la historia", porque son los que más horas suman. Pero cada fecha y cada cifra se revisa en 2 fuentes, cada capítulo abre con una escena, y hay una metáfora que vuelve al final.
+- **Ángulo para el público hispano:** la frase "el imperio donde nunca se pone el sol" se dijo primero del Imperio español de Carlos V y Felipe II. Es un gancho perfecto para un video nuestro.
+
 ## Qué cambia en Khipu
 - **Videos largos de verdad:** este dura 31 minutos y retiene contando una cadena de historias. Nuestros largos tienen que pasar de 3 minutos a **8–12 minutos** (son los que suman horas para monetizar).
 - **Lista de revisión de cada guion largo:**

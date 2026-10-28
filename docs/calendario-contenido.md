@@ -96,3 +96,8 @@ Cada tema: dato con fuente (en la Biblia, el pasaje citado) y una pregunta que c
 - **Animales y naturaleza:** ¿Por qué el pulpo es tan inteligente? · El animal más fuerte del mundo · ¿Cómo duermen los delfines?
 - **Misterios y enigmas:** El misterio de Paititi · El triángulo de las Bermudas (lo que dicen los datos) · Las cabezas de la Isla de Pascua
 - **Mundo antiguo y Biblia:** ¿Existió la torre de Babel? (relato y arqueología) · El camino del Éxodo en el mapa · Cómo era Jerusalén en tiempos de Jesús
+
+## Banco de videos largos "Toda la historia de…" (suman horas para monetizar)
+- **"El imperio donde nunca se ponía el sol": la historia completa del Imperio español** (de Carlos V a 1898). La frase nació con España antes que con Inglaterra. Capítulos con título, de 20 a 40 min.
+- **"Toda la historia del Imperio británico, contada desde América Latina"**: los piratas en el Caribe, las Malvinas, Belice y el asedio de Cartagena de Indias (1741).
+- **"Toda la historia del Imperio inca"** y **"Toda la historia de los aztecas"**, con fuentes de cronistas y arqueología.
