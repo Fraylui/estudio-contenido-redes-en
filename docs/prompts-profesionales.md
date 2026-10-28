@@ -63,3 +63,7 @@ SD-Turbo es rápido pero chico: deforma **manos, caras pequeñas, multitudes y c
    - **pantalla partida** (los dos recortes lado a lado, como en `babi03-pregunta-3`);
    - **capas** (recortar con rembg y mover sobre un fondo).
    Nunca pedirle al modelo una escena nueva con el mismo personaje esperando que salga igual.
+6. **Cuerpos y objetos fundidos** (el usuario lo vio el 28 oct: "personajes que se sobreponen"): en el chasqui, un sombrero pegado al pecho; en Fleming, soldados fundidos con las camas. Reglas:
+   - **una sola figura principal por imagen**, con fondo simple;
+   - nada de "un hombre con X en la mano" (el objeto se pega al cuerpo);
+   - **antes de elegir, mirar cada imagen en grande** (no solo la hoja chica) buscando cuerpos que se juntan, miembros de más y objetos pegados; si aparece, se descarta.
