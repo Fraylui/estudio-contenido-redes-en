@@ -218,6 +218,18 @@ Los dos comparten las técnicas: el anzuelo al cierre de cada parte, la imagen c
   - **Nosotros lo contamos como historia, no como consejo:** "Los sobres de la abuela: el método que salvó a miles de familias en la Gran Depresión" (verificar el origen antes).
   - Pasos numerados solo si la historia los tiene.
 
+**Dos Shorts más de Aprendiz Financiero: "4 errores que te dejan sin dinero (sin darte cuenta)" y "Cómo ahorrar si ganas poco dinero".**
+- **Títulos:**
+  - número + miedo a perder + "sin darte cuenta" (te pasa ahora mismo);
+  - el problema real del público ("si ganas poco"): la mayoría de la gente se ve ahí.
+- **Dichos dibujados al pie de la letra:** los "gastos hormiga" son una hormiga cargando una moneda, con un matamoscas encima. Los dichos de nuestro idioma se entienden en todo el mundo hispano y hacen reír.
+- **Un color de fondo liso distinto por escena** (amarillo, verde, blanco): da ritmo sin gastar en fondos.
+- **Personajes como tipos que todos conocen:** el estresado con un billete, la que llena el carrito de cosas que no necesita, la orgullosa con su alcancía, y dos amigas donde una le explica a la otra.
+- **La respuesta a "¿cómo hablar de dinero sin que la gente se pierda?":** consejos chiquitos y prácticos para quien gana poco, cada uno con un dibujo literal. Sin cifras de inversión ni palabras técnicas.
+- **Para Khipu:**
+  - una serie de dinero práctico en este estilo, solo con consejos generales (nada de inversiones ni productos);
+  - un estilo de imagen nuevo, "doodle plano" (líneas gruesas, colores planos, fondo liso), para los dibujos literales que no estén en Open Peeps.
+
 ## Búsqueda propia (28 oct): qué tiene millones de vistas ahora
 Con `scripts/investigar-youtube.py`. Desde este servidor, YouTube y Tactiq bloquean las transcripciones (piden demostrar que no es un robot), así que las transcripciones las pasa el usuario. Los títulos, las vistas y las duraciones sí se pueden buscar.
 - **Las "películas bíblicas" hechas con IA son lo que más crece:** "Las Crónicas de Enoc (Película 2026)", 7,7 M en 1 mes; otra de Enoc, 8,3 M en 3 meses; "El Libro de Enoc (2025)", 11 M. Duran de 55 min a 1 h 20 min. Es un formato en auge, y es nuestra serie fuerte.

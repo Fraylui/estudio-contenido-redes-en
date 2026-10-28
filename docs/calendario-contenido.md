@@ -115,3 +115,6 @@ Cada tema: dato con fuente (en la Biblia, el pasaje citado) y una pregunta que c
 
 ## Serie "Lo que le pasa a tu cuerpo si…" (órganos personaje; Cuerpo y Hábitos)
 - …caminas 10 000 pasos (y de dónde salió ese número: el manpo-kei de 1965) · …no duermes una noche · …dejas el azúcar 30 días · …tomas agua al despertar (verificar cada dato con 2 fuentes médicas)
+
+## Serie "Dinero práctico" (estilo doodle, consejos chiquitos; jueves 7:00 junto a "Historias del dinero")
+- Los gastos hormiga (la hormiga con la moneda) · Cómo ahorrar si ganas poco · 4 errores que te dejan sin dinero sin darte cuenta · El método de los sobres. Nada de inversiones ni productos: solo hábitos.
