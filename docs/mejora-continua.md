@@ -165,6 +165,13 @@ Medidos con `scripts/analizar-video.py`:
 - temas que le interesen a toda Latinoamérica, no solo al Perú;
 - series con nombre fijo para que la gente vuelva.
 
+## Primer día del estilo nuevo (capturas en tiempo real, 28 oct a las 14:38)
+- **Chasqui: 1 100 vistas en unas 4 h y media.** Casi igual que el mejor Short anterior, que hizo 1 300 en 4 días. En la última hora seguía en 591 vistas por hora: YouTube lo sigue empujando.
+- **Goliat: 434 en unas 2 h y media**, subiendo.
+- Canal: 1 793 vistas en 48 h, casi todas de estas últimas horas. 5 400 vistas, 14,3 horas y +7 suscriptores en 28 días.
+- **Lectura:** el estilo nuevo (historia narrada, tomas épicas, cámara 2.5D, primer cuadro armado, texto que no tapa) ya rinde más rápido que todo lo anterior. A los 3 días se revisa su "Se quedaron para mirar" contra el 37 % de antes.
+- **Dato a seguir:** el chasqui es un tema peruano y aun así fue el que más rindió. Su gancho era universal ("pescado fresco a 3 000 metros… ¿cómo llegaba?").
+
 ## Marcador: cada contenido tiene que superar al anterior
 Regla del usuario: **cada contenido nuevo mejora al anterior**. Antes de producir se leen las 3 mejoras que dejó el último. Al publicarlo se llena su fila, y a los 7 días se ponen sus datos reales.
 
