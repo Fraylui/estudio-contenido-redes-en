@@ -61,8 +61,7 @@
     "dibujo": {
      "iconos": [
       [
-       "coin",
-       "#d9d9d9"
+       "img:monedas-plata"
       ],
       [
        "calendar",
@@ -144,12 +143,9 @@
      "iconos": [
       [
        "img:bolsa-monedas"
-      ],
-      [
-       "question-mark",
-       "#ffe14d"
       ]
-     ]
+     ],
+     "rotulo": "¿Lo sabías?"
     },
     "texto": "¿Lo sabías?",
     "resaltar": "sabías?",
