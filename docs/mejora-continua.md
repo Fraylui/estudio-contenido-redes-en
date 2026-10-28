@@ -228,3 +228,13 @@ Cada contenido nuevo tiene que mejorar en **las 5 áreas**, no solo en una:
    - un barrido con desenfoque entre escenas.
 3. **El texto entra sin sonido:** cada palabra clave que aparece, con un "pop" o un "whoosh" suave.
 4. **Las transiciones son siempre cortes secos iguales.** → Que cada transición tenga motivo: un barrido para el viaje, un destello para la revelación, un fundido a negro para la muerte o el silencio.
+
+## Plan de evolución (desde el 29 oct): 3 mejoras por video, medidas
+Regla: **cada Short estrena 3 mejoras de los diagnósticos de arriba** (no todas a la vez, para saber cuál funcionó) y se mide a los 7 días ("Visto vs. deslizado", retención, vistas). Lo que sube se queda para siempre; lo que no, se cambia.
+| Etapa | Mejoras | Se mide con |
+|---|---|---|
+| 1 (vie 30 oct – dom 1 nov) | Primer cuadro con cara o acción que coincide con el texto · Un sonido de lo que se ve en cada escena · Silencio en el momento más fuerte | Visto vs. deslizado |
+| 2 (lun 2 – dom 8 nov) | Nada quieto más de 3 s · Comparaciones, mapas y contadores · Temblor y destello en los golpes | Retención al 50 % |
+| 3 (lun 9 – dom 15 nov) | Personaje fijo por historia · El color como emoción · Texto arriba con palabra en rojo | Retención y comentarios |
+| 4 (desde el 16 nov) | Estilo doodle para psicología y dinero · Miniaturas con cara y conflicto · Shorts recortados de los largos | Vistas por video y CTR |
+Cada video nuevo que mande el usuario se analiza y lo útil entra en la etapa que toque.

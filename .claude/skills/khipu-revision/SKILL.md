@@ -87,6 +87,9 @@ El usuario manda videos de otros canales para que Khipu **aprenda a hacer conten
 4. **Ideas de temas** que salen de él, con nuestro ángulo (lo que no cuenta, o el lado hispano).
 5. Todo se anota en `docs/como-narran-los-grandes.md` y en el calendario, y **se aplica en el siguiente guion** (cambiar la skill si hace falta). Al usuario se le responde corto: qué aprendimos y qué cambia.
 
+## 4c. Evolucionar sin parar
+Khipu está empezando: todo lo analizado es para evolucionar. Antes de cada video se mira el **plan de evolución** de `docs/mejora-continua.md` y se aplican las 3 mejoras de la etapa en curso. A los 7 días se mide si sirvieron.
+
 ## 5. Habilidades que todavía faltan (hoja de ruta, en orden)
 Cada contenido estrena algo **visual, sonoro o de efectos**. Las herramientas gratis por probar y su licencia están en el radar de `docs/herramientas.md`; cuando aparezca una mejor, se prueba en una escena y, si mejora el % visto, se adopta.
 
