@@ -87,7 +87,8 @@ for (const archivo of archivos) {
     }
     // --partes: render en tramos de 20 s que se guardan uno por uno. Si el servidor se reinicia (pasa cada 20–40 min),
     // al volver a correr solo se hacen los tramos que faltan. Al final se unen sin volver a codificar.
-    const total = Math.ceil((props.duracionVoz ?? 60) * 30) + 30;
+    // Largo estimado por la voz; el último tramo va abierto ("5400-") hasta el final real de la composición
+    const total = Math.ceil((props.duracionVoz ?? 60) * 30);
     const carpetaPartes = `out/partes/${nombre}-${tamano}`;
     mkdirSync(carpetaPartes, { recursive: true });
     const lista = [];
@@ -96,7 +97,8 @@ for (const archivo of archivos) {
       const parte = `${carpetaPartes}/${String(a).padStart(6, "0")}.mp4`;
       lista.push(`file '${parte.split("/").pop()}'`);
       if (existsSync(parte)) continue;
-      execFileSync("npx", ["remotion", "render", `${formato}-${tamano}`, `${parte}.tmp.mp4`, `--props=${rutaProps}`, `--frames=${a}-${b}`], { stdio: "inherit" });
+      const rango = a + 600 >= total ? `${a}-` : `${a}-${b}`;
+      execFileSync("npx", ["remotion", "render", `${formato}-${tamano}`, `${parte}.tmp.mp4`, `--props=${rutaProps}`, `--frames=${rango}`], { stdio: "inherit" });
       renameSync(`${parte}.tmp.mp4`, parte);
     }
     writeFileSync(`${carpetaPartes}/lista.txt`, lista.join("\n") + "\n");
