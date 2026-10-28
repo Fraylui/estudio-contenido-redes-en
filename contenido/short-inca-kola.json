@@ -1,0 +1,134 @@
+{
+ "formato": "Pizarra",
+ "voz": {
+  "referencia": "voz/referencias/kokoro-santa.wav",
+  "pausa": 0.2,
+  "tono": "serio",
+  "pronunciacion": {
+   "Lindley": "Líndley"
+  }
+ },
+ "props": {
+  "gancho": "LA BEBIDA QUE LE GANÓ A COCA-COLA",
+  "musica": "musica/aventura.mp3",
+  "tono": "calido",
+  "escenas": [
+   {
+    "dibujo": {
+     "iconos": []
+    },
+    "texto": "Coca-Cola no pudo ganar",
+    "resaltar": "no pudo",
+    "fondo": "ia:inca01-peru",
+    "sonido": "flash_shock",
+    "sonidoEn": 0.05
+   },
+   {
+    "dibujo": {
+     "iconos": []
+    },
+    "texto": "Los Lindley, 1911",
+    "resaltar": "1911",
+    "fondo": "ia:inca02-lindley"
+   },
+   {
+    "dibujo": {
+     "iconos": []
+    },
+    "texto": "Amarilla, de hierba luisa",
+    "resaltar": "hierba luisa.",
+    "fondo": "ia:inca03-amarilla",
+    "sonido": "magic_reveal",
+    "sonidoEn": 0.6
+   },
+   {
+    "dibujo": {
+     "iconos": []
+    },
+    "texto": "Inca Kola",
+    "resaltar": "Inca Kola",
+    "fondo": "ia:inca04-nombre"
+   },
+   {
+    "dibujo": {
+     "iconos": []
+    },
+    "texto": "En cada mesa",
+    "resaltar": "mesa.",
+    "fondo": "ia:inca05-mesa"
+   },
+   {
+    "dibujo": {
+     "iconos": []
+    },
+    "texto": "Millones en publicidad",
+    "resaltar": "Millones",
+    "fondo": "ia:inca06-publicidad"
+   },
+   {
+    "dibujo": {
+     "iconos": []
+    },
+    "texto": "Hizo lo que nunca hace",
+    "resaltar": "nunca",
+    "fondo": "ia:inca07-giro",
+    "sonido": "boom",
+    "sonidoEn": 1.2
+   },
+   {
+    "dibujo": {
+     "iconos": []
+    },
+    "texto": "Si no puedes vencerla, cómprala",
+    "resaltar": "cómprala",
+    "fondo": "ia:inca08-compra"
+   },
+   {
+    "dibujo": {
+     "iconos": []
+    },
+    "texto": "La del orgullo",
+    "resaltar": "orgullo.",
+    "fondo": "ia:inca09-final"
+   }
+  ],
+  "narracion": [
+   {
+    "texto": "Hay un solo país donde Coca-Cola no pudo ganar. Y es el Perú.",
+    "estilo": "narrador"
+   },
+   {
+    "texto": "En mil novecientos once, la familia Lindley llegó de Inglaterra al Rímac y empezó a hacer gaseosas.",
+    "estilo": "narrador"
+   },
+   {
+    "texto": "En mil novecientos treinta y cinco crearon una bebida amarilla, con sabor a hierba luisa.",
+    "estilo": "narrador"
+   },
+   {
+    "texto": "La llamaron Inca Kola: el sabor del Perú.",
+    "estilo": "narrador"
+   },
+   {
+    "texto": "Combinaba con la comida peruana, y se volvió parte de cada mesa.",
+    "estilo": "narrador"
+   },
+   {
+    "texto": "Coca-Cola gastó millones en publicidad durante décadas. Y aun así, no la pudo superar.",
+    "estilo": "narrador"
+   },
+   {
+    "texto": "Hasta que en mil novecientos noventa y nueve, hizo lo que nunca hace.",
+    "estilo": "narrador"
+   },
+   {
+    "texto": "Si no puedes vencerla, cómprala: se quedó con casi la mitad de la marca.",
+    "estilo": "narrador"
+   },
+   {
+    "texto": "Hoy las dos se venden juntas. Pero en el Perú, la amarilla sigue siendo la del orgullo.",
+    "estilo": "narrador"
+   }
+  ]
+ }
+}

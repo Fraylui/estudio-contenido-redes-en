@@ -1,0 +1,149 @@
+{
+ "formato": "Pizarra",
+ "voz": {
+  "referencia": "voz/referencias/kokoro-alex.wav",
+  "pausa": 0.25,
+  "velocidad": 0.95,
+  "tono": "serio",
+  "pronunciacion": {
+   "Cafarnaúm": "Cafarnaúm"
+  }
+ },
+ "props": {
+  "gancho": "ROMPIERON EL TECHO POR UN AMIGO",
+  "musica": "musica/antiguo.mp3",
+  "tono": "calido",
+  "escenas": [
+   {
+    "dibujo": {
+     "iconos": []
+    },
+    "texto": "Rompieron el techo",
+    "resaltar": "techo",
+    "fondo": "ia:tech01-techo",
+    "sonido": "flash_shock",
+    "sonidoEn": 0.05
+   },
+   {
+    "dibujo": {
+     "iconos": []
+    },
+    "texto": "Marcos 2:1-12",
+    "resaltar": "Marcos 2",
+    "fondo": "ia:tech02-cafarnaum"
+   },
+   {
+    "dibujo": {
+     "iconos": []
+    },
+    "texto": "No se podía pasar",
+    "resaltar": "pasar",
+    "fondo": "ia:tech03-multitud",
+    "ambiente": "historia/restaurant-crowd-talking-ambience"
+   },
+   {
+    "dibujo": {
+     "iconos": []
+    },
+    "texto": "Un amigo paralítico",
+    "resaltar": "paralítico",
+    "fondo": "ia:tech04-camilla"
+   },
+   {
+    "dibujo": {
+     "iconos": []
+    },
+    "texto": "Los techos de entonces",
+    "resaltar": "techos",
+    "fondo": "ia:tech05-como"
+   },
+   {
+    "dibujo": {
+     "iconos": []
+    },
+    "texto": "Ramas y barro",
+    "resaltar": "barro",
+    "fondo": "ia:tech06-barro",
+    "particulas": "polvo"
+   },
+   {
+    "dibujo": {
+     "iconos": []
+    },
+    "texto": "Bajaron la camilla",
+    "resaltar": "Bajaron",
+    "fondo": "ia:tech07-bajan",
+    "sonido": "magic_reveal",
+    "sonidoEn": 1.4
+   },
+   {
+    "dibujo": {
+     "iconos": []
+    },
+    "texto": "La fe de sus amigos",
+    "resaltar": "amigos.",
+    "fondo": "ia:tech08-fe"
+   },
+   {
+    "dibujo": {
+     "iconos": []
+    },
+    "texto": "Salió caminando",
+    "resaltar": "caminando",
+    "fondo": "ia:tech09-camina",
+    "sonido": "boom",
+    "sonidoEn": 0.6
+   },
+   {
+    "dibujo": {
+     "iconos": []
+    },
+    "texto": "Rompieron el techo por él",
+    "resaltar": "techo",
+    "fondo": "ia:tech10-final"
+   }
+  ],
+  "narracion": [
+   {
+    "texto": "Cuatro amigos subieron al techo de una casa, y empezaron a romperlo.",
+    "estilo": "narrador"
+   },
+   {
+    "texto": "Pasó en Cafarnaúm, y lo cuenta Marcos, capítulo dos.",
+    "estilo": "narrador"
+   },
+   {
+    "texto": "Abajo, la casa estaba tan llena que no se podía ni pasar por la puerta.",
+    "estilo": "narrador"
+   },
+   {
+    "texto": "Traían a un amigo paralítico, acostado en una camilla.",
+    "estilo": "narrador"
+   },
+   {
+    "texto": "Pero los techos de entonces no eran como los de hoy.",
+    "estilo": "narrador"
+   },
+   {
+    "texto": "Eran vigas de madera, ramas y barro aplastado. Se podían abrir con las manos.",
+    "estilo": "narrador"
+   },
+   {
+    "texto": "Abrieron un hueco, y bajaron la camilla con cuerdas, justo frente a Jesús.",
+    "estilo": "narrador"
+   },
+   {
+    "texto": "Marcos dice que Jesús vio la fe de ellos. No la del enfermo: la de sus amigos.",
+    "estilo": "narrador"
+   },
+   {
+    "texto": "Y el hombre se levantó, tomó su camilla, y salió caminando delante de todos.",
+    "estilo": "narrador"
+   },
+   {
+    "texto": "A veces, lo que alguien necesita es que sus amigos rompan el techo por él.",
+    "estilo": "narrador"
+   }
+  ]
+ }
+}

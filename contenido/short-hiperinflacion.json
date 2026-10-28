@@ -1,0 +1,142 @@
+{
+ "formato": "Pizarra",
+ "voz": {
+  "referencia": "voz/referencias/kokoro-santa.wav",
+  "pausa": 0.2,
+  "tono": "serio"
+ },
+ "props": {
+  "gancho": "UN PAN COSTABA 200 MIL MILLONES",
+  "musica": "musica/documental.mp3",
+  "tono": "sepia",
+  "escenas": [
+   {
+    "dibujo": {
+     "iconos": []
+    },
+    "texto": "200 000 000 000 marcos",
+    "resaltar": "200 000 000 000",
+    "fondo": "ia:hipe01-pan",
+    "sonido": "flash_shock",
+    "sonidoEn": 0.05
+   },
+   {
+    "dibujo": {
+     "iconos": []
+    },
+    "texto": "Un año antes: 160",
+    "resaltar": "160",
+    "fondo": "ia:hipe02-antes"
+   },
+   {
+    "dibujo": {
+     "iconos": []
+    },
+    "texto": "Debía pagar la guerra",
+    "resaltar": "guerra",
+    "fondo": "ia:hipe03-guerra",
+    "particulas": "polvo"
+   },
+   {
+    "dibujo": {
+     "iconos": []
+    },
+    "texto": "Imprimir billetes",
+    "resaltar": "billetes.",
+    "fondo": "ia:hipe04-imprenta",
+    "sonido": "boom",
+    "sonidoEn": 1.4
+   },
+   {
+    "dibujo": {
+     "iconos": []
+    },
+    "texto": "Corrían a gastar",
+    "resaltar": "Corrían",
+    "fondo": "ia:hipe05-obreros"
+   },
+   {
+    "dibujo": {
+     "iconos": []
+    },
+    "texto": "Carretillas de billetes",
+    "resaltar": "Carretillas",
+    "fondo": "ia:hipe06-carretilla"
+   },
+   {
+    "dibujo": {
+     "iconos": []
+    },
+    "texto": "Valían menos que el papel",
+    "resaltar": "papel.",
+    "fondo": "ia:hipe07-ninos"
+   },
+   {
+    "dibujo": {
+     "iconos": []
+    },
+    "texto": "Ahorros de toda una vida",
+    "resaltar": "vida",
+    "fondo": "ia:hipe08-ahorros"
+   },
+   {
+    "dibujo": {
+     "iconos": []
+    },
+    "texto": "Que suban despacio",
+    "resaltar": "despacio.",
+    "fondo": "ia:hipe09-banco"
+   },
+   {
+    "dibujo": {
+     "iconos": []
+    },
+    "texto": "Cada billete vale menos",
+    "resaltar": "menos.",
+    "fondo": "ia:hipe10-final"
+   }
+  ],
+  "narracion": [
+   {
+    "texto": "En mil novecientos veintitrés, en Alemania, un pan llegó a costar doscientos mil millones de marcos.",
+    "estilo": "narrador"
+   },
+   {
+    "texto": "Un año antes, el mismo pan costaba ciento sesenta.",
+    "estilo": "narrador"
+   },
+   {
+    "texto": "Alemania había perdido la guerra y debía pagar enormes reparaciones.",
+    "estilo": "narrador"
+   },
+   {
+    "texto": "Así que el gobierno hizo lo más fácil: imprimir billetes.",
+    "estilo": "narrador"
+   },
+   {
+    "texto": "Los precios subían cada hora. A los obreros les pagaban dos veces al día, y corrían a gastar antes de que su sueldo no valiera nada.",
+    "estilo": "narrador"
+   },
+   {
+    "texto": "La gente iba al mercado con carretillas llenas de billetes.",
+    "estilo": "narrador"
+   },
+   {
+    "texto": "Los niños jugaban con fajos de dinero, y había quien empapelaba su casa con ellos, porque valían menos que el papel.",
+    "estilo": "narrador"
+   },
+   {
+    "texto": "Los ahorros de toda una vida desaparecieron en meses.",
+    "estilo": "narrador"
+   },
+   {
+    "texto": "Por eso hoy, los bancos centrales cuidan que los precios suban despacio.",
+    "estilo": "narrador"
+   },
+   {
+    "texto": "Imprimir dinero no crea riqueza. Solo hace que cada billete valga menos.",
+    "estilo": "narrador"
+   }
+  ]
+ }
+}
