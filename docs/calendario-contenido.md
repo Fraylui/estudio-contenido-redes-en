@@ -106,3 +106,6 @@ Cada tema: dato con fuente (en la Biblia, el pasaje citado) y una pregunta que c
 - "¿Contra cuántos ejércitos peleó tu país?": México, Perú, Argentina, Colombia y Chile, uno por Short, cerrando con una comparación.
 - **El Escuadrón 201: los aviadores mexicanos que pelearon contra Japón en Filipinas (1945)** · Short de historia.
 - "Lo que [país] le dio al mundo" (la papa del Perú, el chocolate y el maíz de México…) · Short de comida e historia.
+
+## Banco "¿Cuál es la diferencia?" (Shorts atemporales que se buscan; mapa animado)
+- Latinoamérica, Hispanoamérica e Iberoamérica · Holanda o Países Bajos · La Biblia católica (73 libros) y la protestante (66) · ¿Aztecas o mexicas? · Antiguo y Nuevo Testamento · Virus y bacteria · Clima y tiempo

@@ -138,6 +138,22 @@ Los dos comparten las técnicas: el anzuelo al cierre de cada parte, la imagen c
   3. **Las historias dentro de la lista dan Shorts propios:** el Escuadrón 201 en Filipinas o la Legión belga en México.
   4. El superlativo solo se usa si tiene fuente; si no, "uno de los que más".
 
+**Short "Gran Bretaña, Reino Unido e Inglaterra" (1 min): resolver una confusión que todos tienen.**
+- **Lo que funciona:**
+  - **Gancho de confusión:** "probablemente lo conoces como A, B o C… ¿cuál es correcto?". Todos dudaron alguna vez, y nadie quiere seguir equivocado.
+  - **Va de lo pequeño a lo grande con un mapa** (país → isla → Estado → archipiélago): cada nombre se pinta sobre el mapa.
+  - **Cierra con un dato que sorprende** ("más de 6 000 islas").
+  - **Es atemporal y se busca en Google y YouTube:** sigue trayendo vistas años después. Eso responde al problema de que nuestros videos "mueren" al día siguiente.
+- **Lo que falla:** cero emoción y cero historia. Funciona por la duda, no por la narración.
+- **Para Khipu, la serie "¿Cuál es la diferencia?"**, con nuestros mapas de Natural Earth:
+  - Latinoamérica, Hispanoamérica e Iberoamérica;
+  - Holanda o Países Bajos;
+  - la Biblia católica (73 libros) y la protestante (66);
+  - inca e incaico, azteca y mexica;
+  - España, Castilla y Reino de España.
+
+  Se cierra con un dato que sorprende o con una pregunta que provoque comentarios ("¿tú cuál usas?").
+
 ## Qué cambia en Khipu
 - **Videos largos de verdad:** este dura 31 minutos y retiene contando una cadena de historias. Nuestros largos duran **lo que la historia necesite (8–12 min de base)** (son los que suman horas para monetizar).
 - **Lista de revisión de cada guion largo:**
