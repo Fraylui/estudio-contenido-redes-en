@@ -208,6 +208,16 @@ Los dos comparten las técnicas: el anzuelo al cierre de cada parte, la imagen c
   1. **De cada video largo, 2 o 3 Shorts recortados** con un marco de marca (logo de Khipu arriba, @khipu abajo, franjas de color). Se hace con ffmpeg y su enlace lleva al video completo.
   2. Probar **títulos en voz de personaje** en la serie del cuerpo.
 
+**Short "Haz ESTO para administrar mejor tu dinero" (Aprendiz Financiero; vimos el título y 3 cuadros).**
+- **El dinero hecho objeto:** el método de los sobres se dibuja como sobres de verdad, y cada gasto tiene su ícono (un autobús para el transporte, una zanahoria para la comida, una casa para el hogar). Cero palabras técnicas: se entiende mirando.
+- **Pasos numerados grandes** (3, 4…), en letra a mano, arriba y sin tapar el dibujo. El que mira sabe en qué paso va.
+- **Cierra con el "sistema" en círculo** y un segundo personaje llorando (el que no lo hace): el contraste antes/después.
+- **Mismo estilo que los de psicología:** fondo crema, personaje fijo, texto arriba. Este estilo domina los Shorts de consejos.
+- **Para Khipu ("Historias del dinero"):** responde a la duda del usuario sobre cómo hablar de dinero sin que la gente se pierda.
+  - Cada idea se dibuja como un objeto físico (sobres, alcancías, monedas).
+  - **Nosotros lo contamos como historia, no como consejo:** "Los sobres de la abuela: el método que salvó a miles de familias en la Gran Depresión" (verificar el origen antes).
+  - Pasos numerados solo si la historia los tiene.
+
 ## Búsqueda propia (28 oct): qué tiene millones de vistas ahora
 Con `scripts/investigar-youtube.py`. Desde este servidor, YouTube y Tactiq bloquean las transcripciones (piden demostrar que no es un robot), así que las transcripciones las pasa el usuario. Los títulos, las vistas y las duraciones sí se pueden buscar.
 - **Las "películas bíblicas" hechas con IA son lo que más crece:** "Las Crónicas de Enoc (Película 2026)", 7,7 M en 1 mes; otra de Enoc, 8,3 M en 3 meses; "El Libro de Enoc (2025)", 11 M. Duran de 55 min a 1 h 20 min. Es un formato en auge, y es nuestra serie fuerte.
