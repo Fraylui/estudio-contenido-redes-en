@@ -65,6 +65,7 @@ export const pizarraSchema = z.object({
         paso: z.boolean().optional(),      // sube y baja como si caminara o corriera
         balanceo: z.number().optional(),   // grados de vaivén (camilla colgando, llama, bandera)
         espejo: z.boolean().optional(),
+        cuerdas: z.number().optional(),    // dos cuerdas desde arriba hasta la capa, separadas este % del ancho (camilla, balde)
       })).optional(),
       barras: z.array(z.object({ etiqueta: z.string(), valor: z.number(), color: z.string().optional() })).optional(),
     }),
@@ -417,7 +418,7 @@ type CapaProps = NonNullable<Props["escenas"][number]["capas"]>[number] & { dura
 const CURVAS = {
   suave: Easing.bezier(0.45, 0, 0.55, 1), lineal: Easing.linear, rebote: Easing.out(Easing.bounce), caida: Easing.in(Easing.quad),
 };
-const Capa: React.FC<CapaProps> = ({ img, desde, hasta, inicio = 0, fin = 1, curva = "suave", paso, balanceo, espejo, duracion }) => {
+const Capa: React.FC<CapaProps> = ({ img, desde, hasta, inicio = 0, fin = 1, curva = "suave", paso, balanceo, espejo, cuerdas, duracion }) => {
   const frame = useCurrentFrame();
   const { width, height } = useVideoConfig();
   const t = interpolate(frame, [inicio * duracion, Math.max(inicio * duracion + 1, fin * duracion)], [0, 1],
@@ -427,12 +428,24 @@ const Capa: React.FC<CapaProps> = ({ img, desde, hasta, inicio = 0, fin = 1, cur
   const moviendo = t > 0 && t < 1;
   const salto = paso && moviendo ? -Math.abs(Math.sin(frame / 3.2)) * height * 0.012 : 0;
   const vaiven = balanceo ? balanceo * Math.sin(frame / 9) : 0;
+  const arriba = (y - alto * 0.85) / 100 * height;
+  // Con cuerdas, todo (cuerdas y capa) cuelga de lo alto de la pantalla y se balancea junto, como un péndulo
   return (
+    <AbsoluteFill style={{ pointerEvents: "none", rotate: cuerdas ? `${vaiven}deg` : undefined, transformOrigin: `${x}% 0%` }}>
+    {cuerdas ? (
+      <svg width={width} height={height} style={{ position: "absolute", inset: 0 }}>
+        {[-1, 1].map((l) => (
+          <line key={l} x1={(x + (l * cuerdas) / 2) / 100 * width} y1={0} x2={(x + (l * cuerdas) / 2) / 100 * width} y2={arriba}
+            stroke="#8a6a44" strokeWidth={7} strokeLinecap="round" style={{ filter: "drop-shadow(0 6px 6px rgba(0,0,0,0.5))" }} />
+        ))}
+      </svg>
+    ) : null}
     <Img src={staticFile(`assets/objetos-ia/${img}.png`)} style={{
       position: "absolute", left: `${x}%`, top: (y / 100) * height + salto, height: (alto / 100) * height, width: "auto",
-      translate: "-50% -100%", rotate: `${giro + vaiven}deg`, transformOrigin: "50% 0%", scale: espejo ? "-1 1" : undefined,
+      translate: "-50% -100%", rotate: `${giro + (cuerdas ? 0 : vaiven)}deg`, transformOrigin: "50% 0%", scale: espejo ? "-1 1" : undefined,
       filter: "drop-shadow(0 18px 18px rgba(0,0,0,0.55)) brightness(0.92) saturate(0.95) sepia(0.12)", maxWidth: width,
     }} />
+    </AbsoluteFill>
   );
 };
 
