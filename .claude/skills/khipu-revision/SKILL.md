@@ -80,7 +80,7 @@ Cuando se toma una idea de otro canal (un gancho, un efecto, un formato), antes 
 5. **Probarlo en una escena**, revisarlo en una imagen fija y recién después usarlo en todo el video.
 
 ## 4b. Cuando el usuario pasa un video o una transcripción (todo es para aprender)
-El usuario manda videos de otros canales para que Khipu aprenda de ellos. Con cada uno:
+El usuario manda videos de otros canales para que Khipu **aprenda a hacer contenido**: cómo cuentan, cómo enganchan y cómo eligen el tema. No es para copiar su formato ni su duración. Con cada uno:
 1. **Las técnicas que retienen** (gancho, promesa, misterios abiertos, segunda persona, escenas, diálogo, capítulos, cierre): qué hace y en qué minuto.
 2. **Por qué tiene vistas** (tema, empaquetado, duración, tono), aunque tenga errores. Lo que funciona se copia sin miedo.
 3. **Lo que no copiamos:** fuentes inventadas y mendigar. Los errores se señalan, pero sin despreciar el video.

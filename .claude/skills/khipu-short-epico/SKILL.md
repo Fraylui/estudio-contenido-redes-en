@@ -38,7 +38,7 @@ Una toma de otro video se reutiliza poniendo su nombre en `fondo`, sin repetirla
 Se anota en el `_nota` de `imagen/tomas/<nombre>.json`: las fuentes, el ángulo elegido y lo que se descartó.
 
 ## 2. Reglas del guion (todas las pidió el usuario)
-- **Cómo narrar:** las 12 técnicas y la lista de revisión de `docs/como-narran-los-grandes.md` (arranque con 3 datos que chocan, un anzuelo al cierre de cada parte, una pregunta por minuto, imágenes concretas, remates, un hilo que vuelve y un final que cierra el círculo). Los videos largos duran de **15 a 25 minutos** (los de "toda la historia", más).
+- **Cómo narrar:** las 12 técnicas y la lista de revisión de `docs/como-narran-los-grandes.md` (arranque con 3 datos que chocan, un anzuelo al cierre de cada parte, una pregunta por minuto, imágenes concretas, remates, un hilo que vuelve y un final que cierra el círculo). Los videos largos duran **lo que la historia necesite** (base: de 8 a 12 minutos). Nunca se estira con relleno: lo que importa es que cada minuto enganche.
 - **Temas para todo el mundo hispanohablante**, no solo para el Perú: el gancho tiene que entenderlo alguien que nunca oyó del tema.
 - **Contar una historia:** personaje, conflicto, giro y desenlace. El dato va dentro de la historia y nunca debe confundir; por ejemplo, "Goliat medía 2 m" sin contexto hacía pensar que no era un gigante.
 - **Empezar en medio de la acción** (el momento más fuerte, no el contexto) y con un primer cuadro que sorprenda: la decisión de quedarse se toma en unos 2 s. Meta: "Visto vs. deslizado" de más de 70 %.
@@ -47,7 +47,7 @@ Se anota en el `_nota` de `imagen/tomas/<nombre>.json`: las fuentes, el ángulo 
 - **Nunca mendigar:** ni "suscríbete" ni "comenta". El final es un remate fuerte que conecta con el inicio.
 - **Datos con fuente** en la descripción. Lo que viene de la tradición se dice así ("según la tradición…").
 - **Biblia:** se cita el pasaje y nunca se muestra el rostro de Jesús ni de Dios (luz, silueta de espaldas).
-- **Short:** de 30 a 45 s y de 9 a 11 escenas. **Video largo:** de 15 a 25 min y de 2 200 a 3 700 palabras, con capítulos con título, una promesa en el primer minuto que se paga al final y un reenganche al cierre de cada capítulo.
+- **Short:** de 30 a 45 s y de 9 a 11 escenas. **Video largo:** de 8 a 12 min (de 1 200 a 1 800 palabras), con capítulos con título, una promesa en el primer minuto que se paga al final y un reenganche al cierre de cada capítulo.
 
 ## 3. Reglas de los prompts de las tomas
 - **Describir lo que hace reconocible cada cosa:** no "a scroll", sino "two dark carved wooden rollers, aged parchment with columns of ink".

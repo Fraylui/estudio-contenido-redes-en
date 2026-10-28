@@ -39,7 +39,7 @@ El mismo tema contado con otro estilo: **una sola idea central (una paradoja) qu
 27. **Una distinción que cambia todo:** "El soldado seguía dispuesto a luchar. Ya no estaba dispuesto a morir de cualquier manera."
 28. **Terminar con una pregunta de dos caras:** "¿Fue un accidente que destruyó el viejo mundo, o el viejo mundo llevando sus propios miedos hasta el final?"
 
-**Duración:** los tres videos de referencia duran de 28 a 33 minutos. Nuestra meta (decidida el 28 oct): de 15 a 25 minutos, y más en los de "toda la historia".
+**Duración:** los tres videos de referencia duran de 28 a 33 minutos. Nuestra meta: la que pida la historia (base de 8 a 12 minutos). El usuario aclaró el 28 oct que lo que se busca es aprender a hacer contenido, no alargar.
 
 **Dos estilos para elegir según el tema:**
 - **Cronológico con remates** (video 1): para historias con muchos hechos y personajes (una guerra, una vida).
@@ -123,7 +123,7 @@ Los dos comparten las técnicas: el anzuelo al cierre de cada parte, la imagen c
 - **Ángulo para el público hispano:** la frase "el imperio donde nunca se pone el sol" se dijo primero del Imperio español de Carlos V y Felipe II. Es un gancho perfecto para un video nuestro.
 
 ## Qué cambia en Khipu
-- **Videos largos de verdad:** este dura 31 minutos y retiene contando una cadena de historias. Nuestros largos tienen que pasar a **15–25 minutos** (son los que suman horas para monetizar).
+- **Videos largos de verdad:** este dura 31 minutos y retiene contando una cadena de historias. Nuestros largos duran **lo que la historia necesite (8–12 min de base)** (son los que suman horas para monetizar).
 - **Lista de revisión de cada guion largo:**
   - [ ] ¿Abre con 3 datos que chocan y una pregunta?
   - [ ] ¿Cada parte cierra con un anzuelo?
