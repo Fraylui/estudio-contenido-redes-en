@@ -71,6 +71,17 @@ Los dos comparten las técnicas: el anzuelo al cierre de cada parte, la imagen c
   - Termina con una teoría de conspiración ("la iglesia lo quitó para tenerlos tranquilos") y **mendigando** comentarios y suscripciones.
 - **Regla para Khipu:** técnica de este video, honestidad nuestra. Cada afirmación lleva su etiqueta: "dice el texto", "dice la tradición", "dice la ciencia" o "esto nadie lo puede comprobar". Así se mantiene el misterio sin engañar, y YouTube no nos marca como desinformación.
 
+**"El Anticristo buscará a seis tipos de personas" (28 min): ejemplo de lo que nunca se hace.**
+- **Es casi todo inventado, pero con apariencia de documento:**
+  - 1 Enoc 46 tiene 8 versículos, no 21.
+  - La sección de las Parábolas (capítulos 37 a 71) **no aparece en Qumrán**, así que el fragmento 4Q204 no puede contener el capítulo 46.
+  - El canon 59 de Laodicea no nombra a Enoc.
+  - No encontré a la traductora "Nadia Voss", ni la revista, ni el artículo retirado de Groninga.
+  - Lo único real es el decorado: James Bruce (1773), Laurence (1821), Laodicea y 4Q204.
+- **El truco:** detalles de archivo (bóveda 7B, número de catálogo, "nota al margen", palabras en ge'ez) para que parezca investigación, y una conspiración ("nadie lo ha traducido jamás").
+- **Lección técnica (la única):** **los detalles concretos dan credibilidad.** Nosotros los usamos, pero solo si son reales y verificables. Si un dato no se puede comprobar en 2 fuentes, no entra.
+- **Riesgo:** YouTube castiga la desinformación y el contenido engañoso. Un canal así puede crecer rápido, pero no es nuestra línea.
+
 ## Qué cambia en Khipu
 - **Videos largos de verdad:** este dura 31 minutos y retiene contando una cadena de historias. Nuestros largos tienen que pasar de 3 minutos a **8–12 minutos** (son los que suman horas para monetizar).
 - **Lista de revisión de cada guion largo:**
