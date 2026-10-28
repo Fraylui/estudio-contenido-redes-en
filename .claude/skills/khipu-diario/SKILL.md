@@ -47,6 +47,8 @@ Datos (Metricool, 27 oct): ganaron los Shorts de "por qué" con personaje (lunes
 **Primero, revisar lo ya programado:** `getScheduledPosts` de Metricool para hoy y mañana. Si una hora ya tiene un Short o un video, no se duplica: se produce solo lo que falta, o se adelanta el trabajo del día siguiente.
 
 ## 2. Antes de producir (15 minutos)
+**Regla del usuario (28 oct): cada tema tiene que interesarle a cualquier persona del mundo hispanohablante, no solo al Perú.** Los datos de YouTube lo confirman: el público del mejor Short fue México 19 %, Bolivia 12 % y Costa Rica 8 %. Un tema peruano entra solo si el gancho es universal ("la bebida que le ganó a Coca-Cola", "un cuarto lleno de oro"), y siempre se explica sin dar nada por sabido. Prueba antes de elegir: ¿le daría curiosidad a alguien de México, España o Argentina que nunca oyó del tema?
+
 0. **Revisar el último video publicado** con la skill `khipu-revision` (`scripts/analizar-video.py` y sus estadísticas) y escribir 3 mejoras medibles para el de hoy.
 1. **Demanda:** `python3 scripts/investigar-youtube.py "<tema>"`. Vale si hay videos del tema con más de 500 000 vistas.
 2. **Ángulo propio:** qué no dicen esos videos, o un ejemplo peruano o latino.
