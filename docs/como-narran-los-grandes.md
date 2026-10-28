@@ -199,6 +199,15 @@ Los dos comparten las técnicas: el anzuelo al cierre de cada parte, la imagen c
   - una serie "Lo que le pasa a tu cuerpo si…" con órganos personaje, hechos con SD-Turbo (estilo objeto, "cute cartoon bone character with big eyes") y recortados con rembg, que se mueven como capas sobre un fondo;
   - nuestro giro con dato real: **la meta de los 10 000 pasos nació de un podómetro japonés de 1965 llamado "manpo-kei" ("medidor de 10 000 pasos")**, y los estudios recientes (Lancet Public Health, 2022) ven el mayor beneficio entre 6 000 y 8 000 pasos en mayores de 60 años. Verificarlo antes de usarlo.
 
+**Short "Tenemos que correr 10 minutitos" (CasiCreativo; vimos el título y 3 cuadros).**
+- **Es un clip de un video horizontal metido en un marco vertical:** logo del canal arriba, @usuario abajo, color de marca en las franjas. Un video largo da varios Shorts sin producir nada nuevo, y cada uno lleva gente al largo.
+- **La marca está siempre visible**, así que el que desliza reconoce el canal antes de oír nada.
+- **El título es una frase del personaje** ("Tenemos que correr 10 minutitos"), en diminutivo y con humor: suena a una persona, no a un documental.
+- **Los personajes son muy simples** (un muñeco de palitos y un corazón con cara cansada); la gracia está en la expresión.
+- **Para Khipu:**
+  1. **De cada video largo, 2 o 3 Shorts recortados** con un marco de marca (logo de Khipu arriba, @khipu abajo, franjas de color). Se hace con ffmpeg y su enlace lleva al video completo.
+  2. Probar **títulos en voz de personaje** en la serie del cuerpo.
+
 ## Búsqueda propia (28 oct): qué tiene millones de vistas ahora
 Con `scripts/investigar-youtube.py`. Desde este servidor, YouTube y Tactiq bloquean las transcripciones (piden demostrar que no es un robot), así que las transcripciones las pasa el usuario. Los títulos, las vistas y las duraciones sí se pueden buscar.
 - **Las "películas bíblicas" hechas con IA son lo que más crece:** "Las Crónicas de Enoc (Película 2026)", 7,7 M en 1 mes; otra de Enoc, 8,3 M en 3 meses; "El Libro de Enoc (2025)", 11 M. Duran de 55 min a 1 h 20 min. Es un formato en auge, y es nuestra serie fuerte.
