@@ -67,3 +67,14 @@ SD-Turbo es rápido pero chico: deforma **manos, caras pequeñas, multitudes y c
    - **una sola figura principal por imagen**, con fondo simple;
    - nada de "un hombre con X en la mano" (el objeto se pega al cuerpo);
    - **antes de elegir, mirar cada imagen en grande** (no solo la hoja chica) buscando cuerpos que se juntan, miembros de más y objetos pegados; si aparece, se descarta.
+
+## Sistema de 4 capas (guía que pasó el usuario el 28 oct) adaptado a nuestras herramientas
+1. **Personaje** (edad + rasgos fijos + ropa con material y color + pose) · 2. **Objeto** (solo si hay; material, estado, dónde está) · 3. **Lugar** (sitio + hora + clima, "fondo desenfocado, espacio negativo, sin personas extra") · 4. **Acabado** (estilo + luz + lente + calidad).
+**Límites de SD-Turbo que cambian la guía:**
+- **No acepta lista negativa** ("--no overlapping…"): trabaja sin guía (`guidance_scale=0`). Lo que no queremos se evita **no nombrándolo** y pidiendo lo contrario ("one person only, empty plain background").
+- **Solo lee unas 75 palabras-ficha (tokens) del prompt (CLIP de 77):** lo que va al final se pierde. Las capas se escriben **cortas y en orden de importancia** (personaje primero, acabado al final y breve).
+**La regla de oro sí se aplica (y es la solución de fondo):** generar por separado:
+1. **El personaje solo, sobre fondo blanco liso**, con 4 variantes; elegir uno y guardarlo como **ficha del personaje** (`public/assets/personajes/<historia>-<nombre>.png`, recortado con rembg).
+2. **El fondo solo, sin personas** ("empty, no people").
+3. **Unirlos en Remotion con `capas`** (el personaje recortado encima del fondo, con sombra suave y el mismo color de luz). Mismo personaje en todas las escenas = consistencia total.
+4. Para otras poses o emociones del mismo personaje: **img2img desde su ficha** (fuerza baja, 0,35–0,5), así no cambia la cara.
