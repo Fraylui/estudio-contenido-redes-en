@@ -46,6 +46,31 @@ El mismo tema contado con otro estilo: **una sola idea central (una paradoja) qu
 - **Tesis-paradoja** (video 2): para explicar el porqué de algo (por qué cayó un imperio, por qué funciona un invento).
 Los dos comparten las técnicas: el anzuelo al cierre de cada parte, la imagen concreta y el final que cierra el círculo.
 
+## Quinto y sexto video: el libro de Enoc (dos formas de contar lo mismo)
+**"El iceberg del libro de Enoc" (18 min):** el formato iceberg (niveles del 1 al 5, de lo conocido a lo más raro) es bueno porque **cada nivel es una promesa** ("lo más extraño viene abajo"). Pero aquí está mal hecho: cada punto es una definición de enciclopedia, se repite (vigilantes, nefilim y prisión aparecen 3 veces), no hay ni una escena ni un personaje, el nivel 5 mezcla teorías sin base (anunnaki, ADN) con lo histórico, y termina mendigando y con 30 s de música.
+- **Lo que tomamos:** la escalera de niveles como estructura, con un anzuelo antes de cada nivel. Cada nivel tiene una escena, no una definición. Lo que no tiene base se dice claramente ("esto no tiene respaldo; lo cuento porque circula").
+
+**"Los animales pueden ver lo que lo sigue" (23 min):** **la mejor técnica de los 6 videos, con el contenido menos confiable.**
+- **Técnicas que funcionan:**
+  - Arranca con **una escena que todos vivieron:** el perro que le gruñe a un pasillo vacío.
+  - Habla de **usted** todo el tiempo ("detrás de su hombro"), así que el tema pasa a ser la vida del que mira.
+  - **Promete en el minuto 1 tres respuestas** ("al final sabrá cómo es, por qué su animal la ve y qué ley la obliga a retroceder") y las va pagando.
+  - Encadena **misterios abiertos:** "hay una razón inquietante… la veremos enseguida".
+  - Mete **una historia completa** (la burra de Balaam, Números 22: tres veces, cada vez más estrecho el camino) y **una cifra que se siente** (Jubileos 10: 9 de cada 10 espíritus atados; lo que queda es solo el 10 %).
+  - Usa **un hilo que vuelve** (el perro) y **cierra el círculo** con un remate ("usted es la única criatura de esa habitación que camina a ciegas").
+- **Lo que hace mal (y nosotros nunca):**
+  - **Mezcla fuentes reales con invento.** Son reales:
+    - Berajot 6a (Abba Biniamín, Rav Huna con los mil y los diez mil);
+    - Bava Kama 60b (los perros y el ángel de la muerte o Elías);
+    - 1 Enoc 15:8-12, 89 y 90:6;
+    - Jubileos 10;
+    - Rashi sobre Números 22 (siglo XI, no X).
+  - Pero la "figura alta envuelta en sombras" se la inventa: la tapa con "según esta lectura".
+  - **Ciencia estirada:** el estudio de Douglas y Jeffery (2014) es real (muchos mamíferos ven ultravioleta), pero ver ultravioleta no es ver espíritus.
+  - **Asusta, no informa:** la parálisis del sueño la vende como un demonio.
+  - Termina con una teoría de conspiración ("la iglesia lo quitó para tenerlos tranquilos") y **mendigando** comentarios y suscripciones.
+- **Regla para Khipu:** técnica de este video, honestidad nuestra. Cada afirmación lleva su etiqueta: "dice el texto", "dice la tradición", "dice la ciencia" o "esto nadie lo puede comprobar". Así se mantiene el misterio sin engañar, y YouTube no nos marca como desinformación.
+
 ## Qué cambia en Khipu
 - **Videos largos de verdad:** este dura 31 minutos y retiene contando una cadena de historias. Nuestros largos tienen que pasar de 3 minutos a **8–12 minutos** (son los que suman horas para monetizar).
 - **Lista de revisión de cada guion largo:**
@@ -59,5 +84,7 @@ Los dos comparten las técnicas: el anzuelo al cierre de cada parte, la imagen c
   - [ ] ¿Se eligió el estilo (cronológico o tesis-paradoja), y la paradoja se dice en el primer minuto?
   - [ ] ¿Empieza en un momento concreto, con detalles de los sentidos, y el final vuelve a ese momento?
   - [ ] ¿Hay un objeto o un hilo que atraviesa todo el video?
+  - [ ] ¿Promete en el primer minuto lo que el espectador sabrá al final, y lo paga?
+  - [ ] ¿Cada afirmación rara dice si es texto, tradición, ciencia o especulación?
   - [ ] ¿Hay un momento en segunda persona ("imagina que…") y una cifra enorme que se hace sentir?
 - **En los Shorts:** las técnicas 1, 4, 5 y 6 en miniatura (un dato que choca, una imagen concreta y un remate).
