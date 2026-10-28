@@ -15,6 +15,7 @@ import type { Trazo } from "./trazos";
 import catalogoSfx from "../../../public/sfx/efectos/sfx.json";
 // Biblioteca grande de Mixkit (scripts/bajar-sfx.py): "hooks/cinematic-whoosh-deep-impact", "historia/…", "naturaleza/…"
 import bibliotecaSfx from "../../../public/sfx/biblioteca/catalogo.json";
+import { CON_PROFUNDIDAD } from "./profundidad.gen";
 
 loadFont({ family: "Mano", url: staticFile("fuentes/PatrickHand.woff2") });
 
@@ -374,6 +375,27 @@ const Fondo: React.FC<{ nombre: string }> = ({ nombre }) => {
   if (nombre.startsWith("ia:")) {
     const [, archivo, modo] = nombre.split(":");
     const paneo = modo === "paneo";
+    // 2.5D: con el mapa de profundidad (Depth Anything), lo cercano se desplaza más que lo lejano mientras la cámara
+    // avanza, como si la cámara se moviera dentro del escenario. El desplazamiento recorre de −S a +S en la escena.
+    if (CON_PROFUNDIDAD.has(archivo)) {
+      const id = `prof-${archivo}`;
+      const s = interpolate(frame, [0, 150], paneo ? [-70, 70] : [-40, 40], { extrapolateRight: "clamp" });
+      return (
+        <AbsoluteFill style={{ overflow: "hidden", backgroundColor: "#1f1f1f" }}>
+          <svg viewBox="0 0 1080 1920" preserveAspectRatio="xMidYMid slice" style={{ width: "100%", height: "100%",
+            scale: `${interpolate(frame, [0, 300], [1.12, 1.2], { extrapolateRight: "clamp" })}`, filter: "blur(1.5px) brightness(0.9) saturate(1.12)" }}>
+            <defs>
+              <filter id={id} x="0" y="0" width="100%" height="100%" colorInterpolationFilters="sRGB">
+                <feImage href={staticFile(`assets/ia/${archivo}-prof.png`)} preserveAspectRatio="xMidYMid slice" result="prof" />
+                <feDisplacementMap in="SourceGraphic" in2="prof" scale={s} xChannelSelector="R" yChannelSelector="G" />
+              </filter>
+            </defs>
+            <image href={staticFile(`assets/ia/${archivo}.jpg`)} width="1080" height="1920" preserveAspectRatio="xMidYMid slice" filter={`url(#${id})`} />
+          </svg>
+          <AbsoluteFill style={{ background: "radial-gradient(ellipse at center, rgba(0,0,0,0) 50%, rgba(0,0,0,0.35) 100%)" }} />
+        </AbsoluteFill>
+      );
+    }
     return (
       <AbsoluteFill style={{ overflow: "hidden", backgroundColor: "#1f1f1f" }}>
         <Img src={staticFile(`assets/ia/${archivo}.jpg`)} style={{

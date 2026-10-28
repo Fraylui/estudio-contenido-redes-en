@@ -43,3 +43,12 @@ Un prompt básico ("a factory") da una imagen genérica. Un prompt profesional d
 - **Los símbolos abstractos no salen** (✓, ✗, +, ?, flechas, sol de dibujo): la IA los deforma incluso en la segunda vuelta. Esos se quedan como íconos vectoriales pintados, sin mancha.
 - **Los fajos de billetes se recortan mal** (capas finas): usar la bolsa de dinero o la moneda.
 - Lo que más ayudó en la segunda vuelta: describir **la vista** (*"seen from the front"*, *"standing upright"*), **la cantidad exacta** (*"a single…"*, *"four bars"*) y **los materiales** (*"glass with wooden top"*, *"brown leather with stitching"*).
+
+## Lección del 28 de octubre: el estilo "plastilina" se veía de juguete
+El usuario no entendió qué era el rollo de la Biblia: parecía un jabón o una toalla. La causa era el sufijo `objeto3d` ("cute 3d clay render, pastel colors"), que convierte todo en juguete.
+- **Nuevo estilo `objeto-epico`:** "highly detailed realistic 3d render, physically based materials, rich textures, dramatic studio rim light". El mismo rollo salió con rodillos de madera y pergamino escrito, y se entiende al instante.
+- **Nuevo estilo `epico` para escenarios:** "epic cinematic matte painting, dramatic volumetric lighting, god rays, atmospheric haze". Es el look de los Shorts de referencia de la Biblia.
+- **Escenarios en vertical** (`--ancho 448 --alto 768`) para Shorts: llenan la pantalla sin recortar, y luego `imagen/nitidez.py` (Real-ESRGAN) los lleva a 1080 de ancho, nítidos.
+- **Describir el objeto por sus partes reconocibles:** no "a scroll", sino "two dark carved wooden rollers at both ends, aged yellow parchment with faint columns of ink handwriting". Lo que hace que alguien lo reconozca tiene que estar en el prompt.
+- **Revisar siempre que no haya cosas fuera de época:** de 3 templos, uno salió con cúpula dorada y se descartó.
+- `objeto3d` (plastilina) queda solo para temas cotidianos y tiernos (hábitos, finanzas del día a día). Para historia, Biblia, misterios y ciencia se usa `objeto-epico`.

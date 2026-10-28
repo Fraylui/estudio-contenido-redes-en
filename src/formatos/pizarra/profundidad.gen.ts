@@ -1,0 +1,2 @@
+// Generado por scripts/listar-objetos-ia.mjs. No editar a mano.
+export const CON_PROFUNDIDAD = new Set<string>(["amazonia","andes-condor","aula","babilonia","banco","cafeteria","campo-alfarero","campo-batalla","ciudad-antigua","ciudad-moderna","cuarto-amanecer","cuarto-noche","cuerpo-humano","cuevas-qumran","desierto-nasca","espacio-tierra","fabrica-engranajes","hacienda-andina","jerusalen-antigua","laboratorio","lima-colonial","machu-picchu","oficina-noche","revolucion-industrial","sala","templo-noche","tienda","titicaca","valle-ela"]);

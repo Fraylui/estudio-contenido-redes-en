@@ -37,6 +37,12 @@ ESTILOS = {
     "objeto3d": ("{p}, single object, centered, isolated on a pure white background, cute 3d clay render, soft rounded shapes, "
                  "glossy plastic material, soft studio lighting, gentle shadow under the object, pastel colors, high detail, "
                  "no text, no letters"),
+    # Desde el 28 oct (el usuario pidió imágenes "al máximo", como los Shorts épicos de referencia):
+    # objeto realista con materiales de verdad (no plastilina) y escenario cinematográfico tipo pintura mate
+    "objeto-epico": ("{p}, single object, centered, isolated on a pure white background, highly detailed realistic 3d render, "
+                     "physically based materials, rich textures, dramatic studio rim light, sharp focus, no text, no letters"),
+    "epico": ("{p}, epic cinematic matte painting, dramatic volumetric lighting, god rays, atmospheric haze, highly detailed, "
+              "realistic, rich warm colors, strong depth, no text, no letters, no watermark"),
     "foto": "{p}, photo, natural light, high detail",
     "ninguno": "{p}",
 }
