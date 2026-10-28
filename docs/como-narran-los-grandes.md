@@ -278,6 +278,17 @@ Los dos comparten las técnicas: el anzuelo al cierre de cada parte, la imagen c
   - el efecto Pratfall.
   Formato: "FUNCIONA ASÍ:" + un diagrama dibujado + un caso de la vida diaria.
 
+**Psicología Práctica, 2 más: "NO es poliamor" y "Deja de ser tan fácil".** Las técnicas ya se repiten. Lo nuevo:
+- **El texto de arriba se queda fijo como encabezado** ("NO cometas ESTE error:") mientras los dibujos cambian debajo: es el ancla del tema.
+- **Metáforas visuales nuevas:**
+  - la silueta punteada vacía para alguien que falta;
+  - los hilos de marioneta para la manipulación;
+  - el calendario con la fecha marcada en rojo para la cita.
+- **Un elenco fijo** de 6 a 8 personajes que vuelven en todos los videos del canal.
+- **Títulos de 3 a 5 palabras, en habla de la calle** ("Deja de ser tan fácil").
+- **No copiamos** los estereotipos ("la fea usa este truco").
+- **Conclusión de los 8 Shorts de este estilo:** el patrón ya está aprendido. Es hora de **probarlo en un Short nuestro** y medir.
+
 ## Búsqueda propia (28 oct): qué tiene millones de vistas ahora
 Con `scripts/investigar-youtube.py`. Desde este servidor, YouTube y Tactiq bloquean las transcripciones (piden demostrar que no es un robot), así que las transcripciones las pasa el usuario. Los títulos, las vistas y las duraciones sí se pueden buscar.
 - **Las "películas bíblicas" hechas con IA son lo que más crece:** "Las Crónicas de Enoc (Película 2026)", 7,7 M en 1 mes; otra de Enoc, 8,3 M en 3 meses; "El Libro de Enoc (2025)", 11 M. Duran de 55 min a 1 h 20 min. Es un formato en auge, y es nuestra serie fuerte.
