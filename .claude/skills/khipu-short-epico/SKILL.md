@@ -38,6 +38,7 @@ Una toma de otro video se reutiliza poniendo su nombre en `fondo`, sin repetirla
 Se anota en el `_nota` de `imagen/tomas/<nombre>.json`: las fuentes, el ángulo elegido y lo que se descartó.
 
 ## 2. Reglas del guion (todas las pidió el usuario)
+- **Cómo narrar:** las 12 técnicas y la lista de revisión de `docs/como-narran-los-grandes.md` (arranque con 3 datos que chocan, un anzuelo al cierre de cada parte, una pregunta por minuto, imágenes concretas, remates, un hilo que vuelve y un final que cierra el círculo). Los videos largos duran de **8 a 12 minutos**.
 - **Temas para todo el mundo hispanohablante**, no solo para el Perú: el gancho tiene que entenderlo alguien que nunca oyó del tema.
 - **Contar una historia:** personaje, conflicto, giro y desenlace. El dato va dentro de la historia y nunca debe confundir; por ejemplo, "Goliat medía 2 m" sin contexto hacía pensar que no era un gigante.
 - **Empezar en medio de la acción** (el momento más fuerte, no el contexto) y con un primer cuadro que sorprenda: la decisión de quedarse se toma en unos 2 s. Meta: "Visto vs. deslizado" de más de 70 %.

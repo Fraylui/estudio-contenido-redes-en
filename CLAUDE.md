@@ -17,7 +17,7 @@ Repositorio de producción de videos con Remotion: el canal de YouTube **Khipu**
 ## Documentos (en `docs/`)
 - **Qué se está haciendo ahora:** `tablero.md` (lo publicado, lo programado y la cola en orden).
 - **Cada video:** `receta-video.md` (la lista del 1 al 10).
-- **Atención:** `psicologia-atencion.md`, `ganchos.md`, `patrones-creadores.md` (análisis con datos de 8 canales grandes).
+- **Atención:** `como-narran-los-grandes.md` (las 12 técnicas de narración), `psicologia-atencion.md`, `ganchos.md`, `patrones-creadores.md` (análisis con datos de 8 canales grandes).
 - **Empaquetado:** `empaquetado.md` (miniaturas y títulos).
 - **Canal:** `plan-quipu.md` (identidad, series, público), `calendario-contenido.md` (los próximos temas), `monetizacion.md`.
 - **Imágenes:** `prompts-profesionales.md` (7 capas), `prompts-imagenes.md`.
