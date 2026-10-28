@@ -17,7 +17,7 @@
     "dibujo": {
      "iconos": [
       [
-       "img:casco-bronce"
+       "img:goliat"
       ],
       [
        "question-mark",
@@ -125,10 +125,10 @@
     "dibujo": {
      "iconos": [
       [
-       "img:casco-bronce"
+       "img:goliat"
       ],
       [
-       "img:lanza"
+       "img:casco-bronce"
       ]
      ],
      "rotulo": "57 kg"
@@ -144,10 +144,10 @@
     "dibujo": {
      "iconos": [
       [
-       "img:honda"
+       "img:david"
       ],
       [
-       "img:piedra"
+       "img:honda"
       ]
      ]
     },
@@ -163,8 +163,10 @@
     "dibujo": {
      "iconos": [
       [
-       "question-mark",
-       "#ffe14d"
+       "img:david"
+      ],
+      [
+       "img:goliat"
       ]
      ],
      "rotulo": "¿2 o 3 m?"
