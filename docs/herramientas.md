@@ -84,3 +84,11 @@ Regla del usuario: **adaptarnos a cualquier herramienta gratis que dé mejores r
 | DeepFilterNet | Mejor reductor de ruido de voz | MIT/Apache ✅ | El modelo oficial está en GitHub y aquí no se puede bajar |
 | Wav2Lip, MusicGen, Stable Audio Open | Labios sincronizados, música con IA | ❌ No comercial o con límites | **No usar** |
 
+## Imágenes reales con licencia libre (`scripts/imagen-libre.py`)
+Para que se vean cosas **reales**: el lugar como es hoy, un cuadro antiguo, un mapa de época o una foto del espacio. Suman autenticidad, que es lo que YouTube pide a los canales con IA.
+- **Wikimedia Commons:** solo dominio público, CC0 o CC BY (con crédito). **CC BY-SA no**, porque obligaría a compartir el video con esa misma licencia. Sirve para pinturas clásicas de escenas bíblicas (casi todas en dominio público), fotos de lugares (Cuarto del Rescate, Qumrán, Guatavita) y mapas antiguos. El 28 oct respondió "demasiadas consultas" (error 429) a este servidor; la herramienta reintenta sola.
+- **NASA:** dominio público (funciona). Planetas, nebulosas, la Tierra.
+- **Pexels, Pixabay y Unsplash** también permiten uso comercial sin crédito, pero no tienen una forma de buscar desde aquí sin una clave. Se usan si el usuario manda los enlaces.
+- **Nunca** imágenes de Google sin revisar su licencia, ni capturas de otros videos o películas.
+- Cada imagen descargada se anota en `public/assets/ia/CREDITOS-LIBRES.md`, y su crédito va en la descripción del video.
+
