@@ -1,5 +1,5 @@
 {
-  "_nota": "Qué voz narra cada categoría de Khipu. narrar.py usa el campo 'voz' del JSON del video; al crear un video se copia de aquí según su categoría. Las referencias están en voz/referencias/ (no se suben a GitHub). 'prueba' = se alternan las dos y gana la de más % visto (marcador en docs/mejora-continua.md).",
+  "_nota": "Qué voz narra cada categoría de Khipu. narrar.py usa el campo 'voz' del JSON del video; al crear un video se copia de aquí según su categoría. Las referencias están en voz/referencias/ (no se suben a GitHub). 'prueba' = se alternan las dos y gana la de más % visto (marcador en docs/mejora-continua.md). Los videos largos van siempre con la voz de Xiomi (mujer-calida), pedido del usuario del 28 oct; las categorías aplican a los Shorts.",
   "voces": {
     "mujer-calida": {
       "referencia": "voz/referencias/xiomi-clara.wav",
@@ -111,5 +111,6 @@
     "sabiduria": [
       "hombre-grave"
     ]
-  }
+  },
+  "videos_largos": "mujer-calida"
 }

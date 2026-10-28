@@ -76,6 +76,7 @@ Datos (Metricool, 27 oct): ganaron los Shorts de "por qué" con personaje (lunes
 - También valen los recortes de un video largo, siempre que se entiendan solos y lleven `"gancho"` (ver `pizarra`, sección 5b).
 
 ## 4. Video largo (lunes, miércoles, viernes y domingo)
+- **Voz: siempre Xiomi** (pedido del usuario, 28 oct), sea cual sea la categoría. El mapa de voces por categoría es solo para los Shorts.
 Se sigue completo `docs/receta-video.md`:
 - de 6 a 10 minutos, entre 1 200 y 1 800 palabras;
 - 3 miniaturas;
