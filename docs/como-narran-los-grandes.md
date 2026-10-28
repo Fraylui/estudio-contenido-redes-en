@@ -18,6 +18,22 @@ Transcripción que mandó el usuario el 28 oct (31 min, YouTube `emL_SWDpl1Y`). 
 Además, el ritmo: frases largas que se cortan con una de 2 o 3 palabras ("Nunca tuvo que enviarla."). Y pasa al presente en los momentos clave ("Hitler es nombrado canciller", "se pega un tiro").
 **Lo que no copiamos:** el "suscríbanse" del final (regla del usuario: nunca mendigar).
 
+## Segundo video: "Toda la historia de la Segunda Guerra Mundial explicada" (28 min)
+El mismo tema contado con otro estilo: **una sola idea central (una paradoja) que ordena todo el video.** Técnicas nuevas:
+13. **Empezar en el punto más alto y volver atrás:** "En el verano de 1942, si hubieras desplegado un mapa sobre una mesa… el Eje estaba ganando." Después: "Para entender cómo llegaron hasta allí, debemos retroceder."
+14. **Una tesis-paradoja que se repite y se cierra al final:** "Nunca parecieron tan poderosos. Y nunca habían estado tan cerca de la trampa que ellos mismos construyeron." Todo el video la demuestra, y el final la convierte en pregunta: "¿Cuántas veces puede una potencia confundir expansión con seguridad…?"
+15. **Meter al espectador dentro (segunda persona):** "Imagina que conduces un camión alemán detrás del frente. El polvo entra en el motor…", "Tú ya no combates por kilómetros, combates por una escalera", "Ahora observa el mapa".
+16. **Lo abstracto como personaje:** "La distancia comenzaba a convertirse en un enemigo." "No era un general: era una fábrica." "La aritmética no obedeció."
+17. **Listas con ritmo y repeticiones:** "Necesita petróleo, necesita barcos, necesita locomotoras…", "Cada kilómetro… cada nueva costa… cada ejército…".
+18. **Hacer sentir una cifra enorme:** "Seis millones puede anestesiar la imaginación. Piensa en una sola mesa vacía. Ahora repítela millones de veces."
+19. **Mostrar el debate de los expertos:** "Incluso hoy, los historiadores discuten cuánto pesó cada uno."
+20. **Anunciar lo que viene sin contarlo:** "Tres lugares estaban a punto de revelar cuánto costaba realmente mantenerlo."
+
+**Dos estilos para elegir según el tema:**
+- **Cronológico con remates** (video 1): para historias con muchos hechos y personajes (una guerra, una vida).
+- **Tesis-paradoja** (video 2): para explicar el porqué de algo (por qué cayó un imperio, por qué funciona un invento).
+Los dos comparten las técnicas: el anzuelo al cierre de cada parte, la imagen concreta y el final que cierra el círculo.
+
 ## Qué cambia en Khipu
 - **Videos largos de verdad:** este dura 31 minutos y retiene contando una cadena de historias. Nuestros largos tienen que pasar de 3 minutos a **8–12 minutos** (son los que suman horas para monetizar).
 - **Lista de revisión de cada guion largo:**
@@ -28,4 +44,6 @@ Además, el ritmo: frases largas que se cortan con una de 2 o 3 palabras ("Nunca
   - [ ] ¿Hay remates, grupos de tres y un mito desmentido?
   - [ ] ¿Hay un detalle humano?
   - [ ] ¿Hay un hilo que vuelve y un final que cierra el círculo?
+  - [ ] ¿Se eligió el estilo (cronológico o tesis-paradoja), y la paradoja se dice en el primer minuto?
+  - [ ] ¿Hay un momento en segunda persona ("imagina que…") y una cifra enorme que se hace sentir?
 - **En los Shorts:** las técnicas 1, 4, 5 y 6 en miniatura (un dato que choca, una imagen concreta y un remate).
