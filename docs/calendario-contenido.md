@@ -1,20 +1,20 @@
-# Calendario de contenido de Khipu: la Biblia
+# Calendario de contenido de Khipu
 
-Desde el 28 de octubre de 2026 el canal es **solo de la Biblia** (decisión del usuario; series por día en la skill `khipu-diario`). Shorts a las **12:00 p. m. y 8:00 p. m.**, y videos largos lunes y jueves (hora de Lima).
-Cada tema: pasaje citado, dato de historia o arqueología con fuente y una pregunta que choque. Si un tema no pasa la investigación, se cambia por otro de la misma serie.
+Khipu trata todas las categorías (rotación en la skill `khipu-diario`); la Biblia es una serie fuerte. Cada Short tiene que dejar valor, con fuente. Shorts a las **12:00 p. m. y 8:00 p. m.**, y videos largos lunes y jueves (hora de Lima).
+Cada tema: dato con fuente (en la Biblia, el pasaje citado) y una pregunta que choque. Si un tema no pasa la investigación, se cambia por otro de la misma serie.
 
 ## Semana del 28 de octubre
 | Día | Video largo | Short 12:00 | Short 20:00 |
 |---|---|---|---|
-| Mié 28 | — | Personajes: ¿Cuánto medía Goliat? (2 o 3 m según el manuscrito) ✅ | Vida cotidiana: ¿Cuánto eran 30 monedas de plata? ✅ |
-| Jue 29 | **Historia completa:** David y Goliat: lo que pasó en el valle de Ela | Vida cotidiana: ¿Qué comía Jesús en un día normal? | Parábolas: El hijo pródigo: el detalle que casi nadie nota (el padre corre) |
-| Vie 30 | — | Datos: ¿Por qué la Biblia tiene 66 libros y la católica 73? (neutral) | Reyes: Salomón: ¿tan rico como dicen? (666 talentos, 1 Reyes 10:14) |
-| Sáb 31 | — | Mapas: La ruta del Éxodo (mapa) | Mujeres: Rut, la extranjera que es bisabuela de David |
-| Dom 1 | — | Enseñanza: "No se angustien por el mañana" (Mateo 6:34) | Cronología: ¿Cuántos años pasaron entre Abraham y Jesús? |
-| Lun 2 | **Historia completa:** Babilonia: el imperio que se llevó a Judá (mapa) | Personajes: ¿Quién era Nabucodonosor? | Historias: El horno de fuego: ¿cuánta temperatura? |
-| Mar 3 | — | Lugares: El mar de Galilea es un lago (mapa) | Palabras: "Amén" no significa "así sea" solamente |
+| Mié 28 | — | Biblia: ¿Cuánto medía Goliat? (2 o 3 m según el manuscrito) ✅ | Biblia: ¿Cuánto eran 30 monedas de plata? ✅ |
+| Jue 29 | **Finanzas:** ¿Por qué compramos cosas que no necesitamos? | Finanzas: El método 50/30/20 en 30 segundos | Economía: ¿Por qué los precios terminan en ,90? |
+| Vie 30 | — | Tecnología: ¿Cómo aprende una inteligencia artificial? | Personajes: El científico que se tomó una bacteria para ganar el Nobel |
+| Sáb 31 | — | Lugares: ¿Cómo se construyó Machu Picchu sin cemento? | Animales: ¿Por qué los flamencos son rosados? |
+| Dom 1 | — | Misterios: El misterio de las líneas de Nasca | Biblia: Salomón, ¿tan rico como dicen? (1 Reyes 10:14) |
+| Lun 2 | **Ciencia:** ¿Por qué los humanos somos tan inteligentes? | Ciencia: ¿Por qué el tiempo pasa más rápido cuando creces? | Hábitos: La regla de los 2 minutos |
+| Mar 3 | — | Cuerpo: Qué le pasa a tu cuerpo si duermes 5 horas | Psicología: ¿Por qué no puedes dejar de pensar en esa persona? |
 
-## Banco de temas por serie
+## Banco de temas de la Biblia (serie)
 - **Personajes:** Sansón, Moisés de bebé en el Nilo, Pedro el pescador, Pablo antes de convertirse, Zaqueo el cobrador de impuestos, Herodes el Grande, Pilato (la piedra con su nombre).
 - **Lugares y arqueología:** Jerusalén en tiempos de Jesús, el estanque de Siloé (hallado en 2004), Belén, Nínive, el monte Sinaí (dónde estaría), Cafarnaúm.
 - **Palabras:** "Shalom", "Abba", "Mesías" y "Cristo", "Aleluya", "Evangelio".

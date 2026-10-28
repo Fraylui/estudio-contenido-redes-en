@@ -1,6 +1,6 @@
 ---
 name: khipu-diario
-description: Rutina diaria de producción y publicación del canal Khipu, dedicado a la Biblia desde el 28 de octubre de 2026 (personajes, historias, lugares y arqueología, palabras en hebreo y griego, vida cotidiana, parábolas, profetas, mujeres, mapas y cronología), 2 Shorts nativos al día a las 12:00 y 20:00 de Lima, video largo lunes y jueves, investigación previa, control de calidad y programación en Metricool. Usar cuando toque producir el contenido del día, cuando pregunten "qué sale hoy o mañana", o cuando corra la tarea programada diaria.
+description: Rutina diaria de producción y publicación del canal Khipu - todas las categorías rotando, 2 por día (ciencia, hábitos, cuerpo humano, psicología y emociones, historia del Perú, historia mundial y guerras, finanzas, economía, tecnología, personajes, lugares, animales, misterios y la serie Biblia), cada Short con valor y fuente, 2 Shorts nativos al día a las 12:00 y 20:00 de Lima, video largo lunes y jueves, investigación previa, control de calidad y programación en Metricool. Usar cuando toque producir el contenido del día, cuando pregunten "qué sale hoy o mañana", o cuando corra la tarea programada diaria.
 ---
 
 # Rutina diaria de Khipu
@@ -8,29 +8,33 @@ description: Rutina diaria de producción y publicación del canal Khipu, dedica
 Objetivo: **cada día, contenido distinto y mejor que el anterior**, rotando categorías para descubrir qué funciona, sin bajar la calidad.
 La estrategia de fondo está en `khipu-canal`; la producción técnica, en `pizarra`; la voz, en `voz-narradora`.
 
-## 1. Qué toca cada día: Khipu es ahora un canal de la Biblia
-**Decisión del usuario (27 de octubre de 2026):** los Shorts de hábitos y finanzas no dejaban valor. Desde el 28 de octubre todo el contenido es de la **Biblia**, explicada con historia, arqueología, mapas y contexto, al estilo de BibleProject pero en Shorts animados. Las otras 13 categorías quedan pausadas.
-Datos de antes del cambio (Metricool, 27 oct): los Shorts de "por qué" con personaje (lunes 1 093 y 5 minutos más 1 295 vistas) ganaron; los de dinero, 27 a 442. Lo que se lleva al nuevo tema: **"Por qué…", personaje con emoción, colores vivos y un dato que choca**.
+## 1. Qué categoría toca cada día (14 categorías, 2 por día)
+Inspiradas en los canales de referencia: Aprendiz Financiero (finanzas y hábitos), DOMINALO, DECIDO VIVIR MEJOR y Simio Alpha (hábitos y desarrollo personal), CasiCreativo (cuerpo y vida cotidiana), Inteligencia Emocional y Sapiencia Práctica (psicología y emociones), Infonimados, Academia Play y OverSimplified (historia y guerras), Kurzgesagt y CuriosaMente (ciencia), Zack D. Films (curiosidades en Shorts) y BibleProject (Biblia).
 
 | Día | Short 12:00 | Short 20:00 | Video largo |
 |---|---|---|---|
-| Lunes | Personajes (quién fue de verdad) | Historias explicadas | **Sí:** una historia completa con su contexto |
-| Martes | Lugares y arqueología (con mapa) | Palabras en hebreo o griego que cambian el sentido | — |
-| Miércoles | Personajes | Lugares y arqueología | — |
-| Jueves | Vida cotidiana en tiempos bíblicos (monedas, comida, oficios) | Parábolas y enseñanzas para hoy | **Sí:** un libro, un imperio o una época |
-| Viernes | Datos que casi nadie sabe | Profetas y reyes | — |
-| Sábado | Mapas y rutas (Éxodo, viajes de Pablo) | Mujeres de la Biblia | — |
-| Domingo | Enseñanza para la semana (ansiedad, perdón, esperanza) | Cronología (qué pasó antes y después) | — (estadísticas y plan) |
+| Lunes | Ciencia y curiosidades | Hábitos y productividad | **Sí:** ciencia o hábitos (se alternan) |
+| Martes | Cuerpo humano y salud | Psicología, emociones y amor | — |
+| Miércoles | Historia del Perú y Latinoamérica | Historia mundial y guerras (o **Biblia**) | — |
+| Jueves | Finanzas personales | Economía y negocios | **Sí:** finanzas o economía (se alternan) |
+| Viernes | Tecnología e IA | Personajes que cambiaron la historia | — |
+| Sábado | Lugares y países | Animales y naturaleza | — |
+| Domingo | Misterios y enigmas | **Biblia** | — (revisión de estadísticas y plan de la semana) |
 
-**Reglas de la serie (nunca cambian):**
+**Khipu trata todas las categorías que existan** (lo confirmó el usuario el 28 de octubre). Lo que cambió el 27 de octubre es la exigencia: **cada Short tiene que dejar valor** (un dato que no se sabía, con fuente, o algo que se pueda aplicar), no solo curiosidad. La **Biblia** entra como serie fuerte: domingo a las 20:00 y, cuando no haya un buen tema de historia mundial, también el miércoles a las 20:00.
+Datos (Metricool, 27 oct): ganaron los Shorts de "por qué" con personaje (lunes 1 093 y 5 minutos más 1 295 vistas); los de dinero sacaron de 27 a 442.
+
+- **Shorts:** 2 al día, a las **12:00 p. m. y 8:00 p. m.** (hora de Lima).
+- Los temas salen de `docs/calendario-contenido.md` (también el banco de la Biblia). Si se acaban, se investigan nuevos con el paso 2.
+
+### Serie Biblia
+**Reglas (nunca cambian):**
 - **Cita siempre el pasaje** (libro, capítulo y versículo) en pantalla y en la descripción. Los versículos se citan de la **Reina-Valera 1909** (dominio público) o se parafrasean; nunca se copia una traducción con derechos.
 - **Separar tres cosas:** lo que dice el texto, lo que dice la historia o la arqueología (con fuente) y lo que es tradición. Si los expertos discuten algo, se dice ("según…", "otros creen…").
 - **Respeto y neutralidad:** para católicos, evangélicos y curiosos; nada de pelear doctrinas ni de burlarse.
 - Escenarios con IA del mundo antiguo (`ia:jerusalen-antigua`, `ia:babilonia`, `ia:ciudad-antigua`), mapas del Medio Oriente, objetos 3D de época y `"tono": "sepia"` o `"calido"`. Nunca dibujar el rostro de Jesús ni de Dios: se usa luz, silueta de espaldas o símbolos.
 - Música: `epica`, `antiguo` o `documental` de la biblioteca.
 
-- **Shorts:** 2 al día, a las **12:00 p. m. y 8:00 p. m.** (hora de Lima).
-- Los temas salen de `docs/calendario-contenido.md` (banco de temas de la Biblia). Si se acaban, se investigan nuevos con el paso 2.
 
 **Primero, revisar lo ya programado:** `getScheduledPosts` de Metricool para hoy y mañana. Si una hora ya tiene un Short o un video, no se duplica: se produce solo lo que falta, o se adelanta el trabajo del día siguiente.
 
