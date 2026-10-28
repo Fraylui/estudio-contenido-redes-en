@@ -127,13 +127,22 @@ Datos de Metricool: vistas y tiempo promedio visto, y entre paréntesis el porce
 ## Marcador: cada contenido tiene que superar al anterior
 Regla del usuario: **cada contenido nuevo mejora al anterior**. Antes de producir se leen las 3 mejoras que dejó el último. Al publicarlo se llena su fila, y a los 7 días se ponen sus datos reales.
 
-| Contenido | Fecha | Estrenó | % visto en promedio | Vistas | 3 mejoras para el siguiente |
-|---|---|---|---|---|---|
-| Short Kakeibo | 23 oct | Primer Short | 26 % | 27 | Escenario real, personaje con emoción, más cambios visuales |
-| Shorts despertar (5 minutos, lunes) | 23 oct | Personaje con emoción y escenario de dormitorio | 36 % y 24 % | 1 295 y 1 093 | Título gancho arriba, menos de 30 s, ritmo |
-| Shorts gastos hormiga (tarjeta, 5 al día) | 24 oct | Título gancho fijo arriba | 15 % y 12 % | 442 y 158 | Primer cuadro ya armado, Shorts nativos, nunca fondo plano |
-| Short Goliat | 28 oct | Primer cuadro armado, objetos 3D de época, barras de altura, escenarios con IA nuevos | — | — | (se llena al publicar) |
-| Short 30 monedas | 28 oct | Lo mismo, con tono sepia y pasajes citados en pantalla | — | — | (se llena al publicar) |
+Cada contenido nuevo tiene que mejorar en **las 5 áreas**, no solo en una:
+
+| Contenido | Gancho (primeros 2 s) | Visual | Efectos y movimiento | Sonido | Ritmo | % visto / vistas |
+|---|---|---|---|---|---|---|
+| Kakeibo (23 oct) | "Llega fin de mes…" | Fondo de papel blanco | Dibujo a mano | Voz sola | 47 s, casi sin cortes | 26 % / 27 |
+| Despertar (23 oct) | "Suena la alarma y la apagas" | Escenario de dormitorio con IA, personaje con emoción | Personaje que se mueve | Música de fondo | 10 cambios por minuto | 36 % / 1 295 |
+| Gastos hormiga (24 oct) | Título fijo arriba, pero primer cuadro vacío | Fondos planos de color | Círculos en blanco al entrar | Golpes de sonido | Recorte del largo | 15 % / 442 |
+| **Goliat (28 oct)** | Primer cuadro ya armado: valle, casco y pregunta | Escenarios con IA de época, objetos 3D, tono cálido | Barras de altura, silueta, paneo, polvo | Música épica y golpe al inicio | Segunda toma, 9 escenas en 30 s | (al publicar) |
+| **30 monedas (28 oct)** | "30 monedas de plata, ¿cuánto era?" | Templo de noche, monedas 3D, tono sepia | Barra de 120 días, paneo | Música antigua | Igual que Goliat | (al publicar) |
+
+**Lo que el siguiente contenido tiene que superar** (se actualiza con cada uno):
+1. **Gancho:** primer cuadro que se entienda sin sonido y una pregunta con algo en juego. Probar un gancho visual de movimiento: que algo choque o caiga en el segundo 1.
+2. **Visual:** 6 o más objetos 3D propios del tema, ninguno repetido del video anterior. Probar el personaje histórico propio (hoja de ruta).
+3. **Efectos:** estrenar uno nuevo cada vez (ahora toca la boca que se mueve con la voz o el paralaje 2.5D) y medir si sube el % visto.
+4. **Sonido:** cada cambio de escena con su golpe y un ambiente que acompañe al lugar (viento, ciudad, templo).
+5. **Ritmo:** más de 20 cambios por minuto, ningún plano quieto por más de 3 s y final que conecte con el inicio (bucle).
 
 ## Cómo se decide qué mejorar
 - **Retención a los 30 s por debajo del 60 %:** mejorar el gancho (técnicas 3, 9 y 12).
