@@ -20,3 +20,5 @@ Se actualiza en cada paso. Una sola cola: primero lo que sale antes, después lo
 - Antes de empezar algo nuevo se revisa este tablero, y al terminar se actualiza.
 - Si el servidor se reinicia, se relanza la cola (`/tmp/claude-0/hoy.sh`), que sigue donde quedó.
 - No se editan los scripts mientras corren.
+
+**Decisión del 29 oct:** no se rehace nada de lo anterior. Lo que ya está en producción (los Shorts del jueves y Fleming) sale como está. **Todo contenido nuevo, desde los Shorts del viernes 30, se hace con el flujo mejorado:** FLUX, manhwa o anime para historias con personajes, ficha de personaje, 4 capas, primer cuadro con cara, sonido en cada escena, silencio en el clímax y nada quieto más de 3 s.
