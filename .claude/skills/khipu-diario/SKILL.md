@@ -58,6 +58,7 @@ Nuestros Shorts de finanzas fueron los peores (de 27 a 442 vistas). El público 
 - La categoría "Finanzas" pasa a llamarse **"Historias del dinero"**.
 
 ## 2. Antes de producir (15 minutos)
+**Desde el 30 oct manda `docs/plan-nuevo-formato.md`:** fondos FLUX sin personas + personaje fijo de Khipu dibujado en código, serie «Tú en la historia» para los largos y Shorts con temas de lo que ya pegó.
 **Regla del usuario (28 oct): cada tema tiene que interesarle a cualquier persona del mundo hispanohablante, no solo al Perú.** Los datos de YouTube lo confirman: el público del mejor Short fue México 19 %, Bolivia 12 % y Costa Rica 8 %. Un tema peruano entra solo si el gancho es universal ("la bebida que le ganó a Coca-Cola", "un cuarto lleno de oro"), y siempre se explica sin dar nada por sabido. Prueba antes de elegir: ¿le daría curiosidad a alguien de México, España o Argentina que nunca oyó del tema?
 
 0. **Revisar el último video publicado** con la skill `khipu-revision` (`scripts/analizar-video.py` y sus estadísticas) y escribir 3 mejoras medibles para el de hoy.
