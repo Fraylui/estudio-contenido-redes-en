@@ -27,4 +27,4 @@ Transcripción pegada por el usuario (Tactiq), 29 oct.
 9. Volvió a casa después de 11 años: lo habían dado por muerto, su esposa se había vuelto a casar y sus parientes se habían repartido sus bienes.
 10. ¿Tú habrías esperado 8 años más?
 
-Fuentes: Wikipedia «Guillaume Le Gentil»; Royal Museums Greenwich, «Transits of Venus»; Smithsonian Magazine, «The Unluckiest Astronomer».
+Fuentes por comprobar antes de grabar (cada dato y cada fecha): Wikipedia «Guillaume Le Gentil»; Royal Museums Greenwich, «Transits of Venus»; Smithsonian Magazine, «The Unluckiest Astronomer».
