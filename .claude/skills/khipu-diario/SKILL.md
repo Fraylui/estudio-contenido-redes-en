@@ -8,6 +8,8 @@ description: Rutina diaria de producción y publicación del canal Khipu - 26 ca
 Objetivo: **cada día, contenido distinto y mejor que el anterior**, rotando categorías para descubrir qué funciona, sin bajar la calidad.
 La estrategia de fondo está en `khipu-canal`; la producción técnica, en `pizarra`; la voz, en `voz-narradora`.
 
+> **Ritmo desde el sábado 31 oct (decidido con el usuario el 29 oct):** 2 Shorts nuevos al día (12:00 y 20:00; la Biblia siempre a las 20:00), 2 videos largos por semana (miércoles y domingo a las 10:00, de 8 a 12 min) y 2 o 3 Shorts recortados de cada largo (marco de marca) en las 7:00 o 16:00. Motivo: la cuota gratis de FLUX (~80 imágenes/día, se reinicia a las 19:00 de Lima), el límite semanal de Claude del usuario y que YouTube premia la calidad. Se evalúa a las 2 semanas con los datos de Studio. La producción diaria corre a las 19:07 de Lima. Las tablas de abajo con 4 Shorts y 4 largos quedan como banco de categorías.
+
 ## 1. Qué toca cada día: 4 Shorts al día y 4 videos largos por semana (desde el 29 oct 2026)
 Decisión del usuario: **4 Shorts diarios (28 por semana) y 4 videos largos por semana**. La Biblia tiene un Short **todos los días**; las otras 25 categorías salen al menos una vez cada 2 semanas.
 
