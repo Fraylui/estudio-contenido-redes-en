@@ -16,6 +16,7 @@ import catalogoSfx from "../../../public/sfx/efectos/sfx.json";
 // Biblioteca grande de Mixkit (scripts/bajar-sfx.py): "hooks/cinematic-whoosh-deep-impact", "historia/…", "naturaleza/…"
 import bibliotecaSfx from "../../../public/sfx/biblioteca/catalogo.json";
 import { CON_PROFUNDIDAD } from "./profundidad.gen";
+import { Khipu } from "../../personajes/Khipu";
 
 loadFont({ family: "Mano", url: staticFile("fuentes/PatrickHand.woff2") });
 
@@ -70,6 +71,14 @@ export const pizarraSchema = z.object({
         cuerdas: z.number().optional(),    // dos cuerdas desde arriba hasta la capa, separadas este % del ancho (camilla, balde)
       })).optional(),
       barras: z.array(z.object({ etiqueta: z.string(), valor: z.number(), color: z.string().optional() })).optional(),
+      // Protagonista fijo del canal (src/personajes/Khipu.tsx, aprobado el 29 oct) parado sobre la toma.
+      // x = centro en % del ancho (por defecto 30), alto = % del alto de la pantalla (por defecto 45)
+      khipu: z.object({
+        cara: z.enum(["normal", "feliz", "asustado", "enojado", "triste", "decidido", "sorprendido"]).optional(),
+        pose: z.enum(["abajo", "senala", "arriba", "pensando", "cadera"]).optional(),
+        vestuario: z.enum(["base", "romano", "inca", "biblico", "explorador"]).optional(),
+        x: z.number().optional(), alto: z.number().optional(), espejo: z.boolean().optional(),
+      }).optional(),
     }),
   ),
   voz: z.string().optional(),
@@ -658,7 +667,7 @@ const Papel: React.FC = () => (
   </AbsoluteFill>
 );
 
-const Escena: React.FC<Props["escenas"][number] & { indice?: number }> = ({ dibujo, texto, resaltar, segundos, sonido, sonidoEn, silueta, barras, globo, antesDespues, indice = 0 }) => {
+const Escena: React.FC<Props["escenas"][number] & { indice?: number }> = ({ dibujo, texto, resaltar, segundos, sonido, sonidoEn, silueta, barras, globo, antesDespues, khipu, indice = 0 }) => {
   const frame = useCurrentFrame();
   const { width, height } = useVideoConfig();
   const horizontal = width > height;
@@ -702,6 +711,16 @@ const Escena: React.FC<Props["escenas"][number] & { indice?: number }> = ({ dibu
           : antesDespues ? <AntesDespues a={antesDespues[0]} b={antesDespues[1]} duracion={total} />
           : <Dibujo dibujo={resolverDibujo(dibujo)} duracion={total} adelanto={indice === 0 ? 100000 : 0} />}
       </div>
+      {khipu ? (
+        // Entra subiendo con rebote (salvo en la primera escena, que ya arranca armada) y cambia de encuadre con la toma
+        <div style={{
+          position: "absolute", left: `${khipu.x ?? 30}%`, bottom: horizontal ? "6%" : "17%",
+          transform: `translateX(-50%) translateY(${indice === 0 ? 0 : interpolate(spring({ frame, fps: FPS, config: { damping: 12 } }), [0, 1], [height * 0.5, 0])}px) scale(${segundaToma ? 1.08 : 1})`,
+          transformOrigin: "bottom center", filter: "drop-shadow(0 0 3px rgba(255,255,255,0.75))",
+        }}>
+          <Khipu cara={khipu.cara} pose={khipu.pose} vestuario={khipu.vestuario} espejo={khipu.espejo} alto={(height * (khipu.alto ?? 45)) / 100} />
+        </div>
+      ) : null}
       {globo ? <Globo texto={globo} frame={frame} horizontal={horizontal} /> : null}
       {silueta ? (
         <AbsoluteFill style={{ backgroundColor: "#ffffff", pointerEvents: "none",

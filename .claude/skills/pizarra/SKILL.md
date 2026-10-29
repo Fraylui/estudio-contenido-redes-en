@@ -168,3 +168,12 @@ Siempre **público** (el canal es para monetizar), con Metricool: solo YouTube, 
 **Música de fondo:** en las props, `"musica": "musica/<archivo>.mp3"` (biblioteca y ánimos en `public/musica/CREDITOS.md`; si faltan los MP3, `scripts/bajar-musica.sh`). Se aparta sola cuando habla la voz (20 dB bajo la voz y 14 dB bajo la voz en las pausas; los MP3 quedan a −20 LUFS) y entra y sale con fundido. Elige la música por el ánimo del tema y **pon el crédito de Kevin MacLeod en la descripción** (licencia CC BY 4.0). Nunca uses música con derechos ni licencias "NC" (no comercial).
 
 **Miniaturas:** cada video sale con 3 variantes (`MiniaturaPizarra`). La más fuerte va en `videoThumbnailUrl` de Metricool (PNG en la rama `publicaciones`), así el video ya se publica con miniatura. Metricool no hace pruebas A/B: las otras 2 se le envían al usuario para "Probar y comparar" en YouTube Studio (desde la computadora o Chrome en modo computadora).
+
+## Personaje fijo de Khipu (aprobado por el usuario el 29 oct)
+- Protagonista de todos los videos nuevos: `src/personajes/Khipu.tsx` (ficha: Still `FichaKhipu`). Siempre idéntico; su sello es la bufanda-quipu.
+- En una escena: `"khipu": {"cara": "asustado", "pose": "senala", "vestuario": "inca", "x": 30, "alto": 45, "espejo": false}`.
+  - Caras: normal, feliz, sorprendido, asustado, enojado, triste, decidido.
+  - Poses: abajo, senala, arriba, pensando, cadera.
+  - Vestuarios: base, romano, inca, biblico, explorador. Se agregan más en `Khipu.tsx` cuando la historia lo pida.
+- Fondo: `"fondo": "ia:<nombre>"`, hecho con `imagen/generar.py --estilo fondo2d` (sin personas, 1 variante). El mismo fondo se repite en varias escenas cambiando cara, pose, lado (`x`, `espejo`) y encuadre: un corte cada 2-3 s sin gastar cuota.
+- Para mostrar a Jesús o a Dios nunca se usa una cara: luz o silueta de espaldas.

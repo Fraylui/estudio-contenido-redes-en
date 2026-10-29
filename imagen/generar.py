@@ -56,6 +56,10 @@ ESTILOS = {
     # Ficha de personaje: solo, cuerpo entero, fondo liso magenta para recortarlo perfecto
     "ficha": ("{p}, full body character sheet, standing, front view, centered, isolated on a flat solid magenta background, "
               "clean closed lineart, soft cel shading, no shadows on background, no text"),
+    # Fondo para el personaje fijo de Khipu (plan del 29 oct, estilo Axen/Ifverse): escenario 2D plano y sin nadie,
+    # el personaje lo pone Remotion encima. Una sola variante: sin personas FLUX no falla.
+    "fondo2d": ("{p}, flat 2D cartoon background illustration, clean bold outlines, bright saturated colors, simple shapes, "
+                "wide empty scene, no people, no characters, no animals, no text"),
     "foto": "{p}, photo, natural light, high detail",
     "ninguno": "{p}",
 }
