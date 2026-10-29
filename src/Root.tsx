@@ -1,5 +1,6 @@
 import { z } from "zod";
 import { Composition, Folder, Still } from "remotion";
+import { FichaKhipu, KhipuEnEscena } from "./personajes/FichaKhipu";
 import datosEjemplo from "../contenido/datos-poblacion-sudamerica.json";
 import fraseEjemplo from "../contenido/frase-constancia.json";
 import finDeMes from "../contenido/narrado-fin-de-mes.json";
@@ -42,6 +43,11 @@ export const RemotionRoot: React.FC = () => {
   return (
     <>
       {/* Identidad del canal de YouTube: foto de perfil y banner */}
+      {/* Protagonista fijo del canal (plan del 29 oct) */}
+      <Folder name="Personaje">
+        <Still id="FichaKhipu" component={FichaKhipu} width={1920} height={1080} />
+        <Still id="KhipuEnEscena" component={KhipuEnEscena} width={1080} height={1920} />
+      </Folder>
       <Still id="LogoCanal" component={LogoCanal} width={800} height={800} />
       <Still id="BannerCanal" component={BannerCanal} width={2560} height={1440} />
       <Still
