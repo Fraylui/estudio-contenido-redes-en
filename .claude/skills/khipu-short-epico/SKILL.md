@@ -89,6 +89,9 @@ Detalle y ejemplos: `docs/como-narran-los-grandes.md`.
    - En los videos largos va `videoThumbnailUrl` con la mejor de las 3 miniaturas.
 6. Llena su fila en el marcador de `docs/mejora-continua.md` y marca el tema con ✅ en el calendario.
 
+## 4b. Recortes de cada video largo (obligatorio)
+Cuando un video largo queda listo: elegir 2 o 3 momentos fuertes de 25 a 50 s que se entiendan solos (mirar los tiempos en `public/voz/<nombre>.json`), y correr `bash scripts/recortar-short.sh out/<nombre>-final.mp4 <inicio> <fin> out/recortes/<x>.mp4 "<GANCHO>"`. Subirlos a publicaciones y programarlos a las 7:00 o 16:00 de los días siguientes, con "La historia completa está en el canal" en la descripción. No gastan imágenes de FLUX.
+
 ## 5. Tiempos reales (CPU de 4 núcleos)
 - Una toma: ~1 min por variante. La nitidez: ~1–2 min por toma. La voz: ~20–30 min por Short. El render: ~10 min.
 - **Un Short completo: ~1 h 30 min.** Por eso se trabaja con un día de adelanto: hoy se hace lo de mañana.
