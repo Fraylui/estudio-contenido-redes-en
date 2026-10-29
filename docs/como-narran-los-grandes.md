@@ -294,6 +294,16 @@ Los dos comparten las técnicas: el anzuelo al cierre de cada parte, la imagen c
 - **El insulto dibujado como un chorro verde** que sale de una boca y entra en el otro: lo invisible (las palabras que dañan) se vuelve una cosa que se ve.
 - **Para Khipu:** en Psicología y Sabiduría, cerrar con **una frase lista para usar** (una cita con su autor, por ejemplo de Séneca o de Marco Aurelio).
 
+**CasiCreativo, "Tu relación con el dinero" (video largo; título, miniatura y 3 cuadros).**
+- **El dinero como personaje:** billetes con cara que corren, se escapan o se toman de la mano con el protagonista. El dinero se cuenta como una relación de pareja (emoción, no números).
+- **Collage de medios mezclados:** personajes de caricatura sobre fondos de foto real (una vereda, un desierto) y hasta una foto real recortada. Es barato, gracioso y muy reconocible.
+- **Miniatura:** el protagonista con ojos enormes y el billete-personaje de la mano, fondo rojo con estallido radial y signos de dólar. Sin texto, solo el logo.
+- **Sus videos con más vistas siguen una fórmula:** "Tu estómago en la cena de Navidad" (42,9 M) y "Tus órganos cuando estás embarazada" (40,6 M). Es decir, **"Tu ___ cuando ___"**: segunda persona, el cuerpo o la vida propia, y muchas veces **una fecha del año** (Navidad).
+- **Para Khipu:**
+  1. **Collage** para "Historias del dinero" y "Cuerpo": fondos de FLUX realistas con personajes u objetos de caricatura recortados encima, en capas.
+  2. **Títulos "Tu ___ cuando ___"** en la serie del cuerpo.
+  3. **Calendario por fechas:** preparar desde noviembre Shorts y un largo de Navidad y Año Nuevo, que son búsquedas que se repiten cada año.
+
 ## Búsqueda propia (28 oct): qué tiene millones de vistas ahora
 Con `scripts/investigar-youtube.py`. Desde este servidor, YouTube y Tactiq bloquean las transcripciones (piden demostrar que no es un robot), así que las transcripciones las pasa el usuario. Los títulos, las vistas y las duraciones sí se pueden buscar.
 - **Las "películas bíblicas" hechas con IA son lo que más crece:** "Las Crónicas de Enoc (Película 2026)", 7,7 M en 1 mes; otra de Enoc, 8,3 M en 3 meses; "El Libro de Enoc (2025)", 11 M. Duran de 55 min a 1 h 20 min. Es un formato en auge, y es nuestra serie fuerte.

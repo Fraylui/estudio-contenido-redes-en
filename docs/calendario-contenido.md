@@ -121,3 +121,6 @@ Cada tema: dato con fuente (en la Biblia, el pasaje citado) y una pregunta que c
 
 ## Serie "Efectos y paradojas de la mente" (Psicología; estilo doodle, con estudio de fuente)
 - El efecto Zeigarnik (Bluma Zeigarnik, 1927) · La paradoja de Abilene (Jerry Harvey, 1974) · El efecto Dunning-Kruger (1999) · El efecto Pratfall (Aronson, 1966) · El efecto Ben Franklin
+
+## Banco de temporada (preparar en noviembre; se buscan cada año)
+- Diciembre: "Tu estómago en la cena de Navidad" (Cuerpo, órganos personaje) · "¿Por qué el 25 de diciembre?" (Biblia e historia, neutral) · "La tregua de Navidad de 1914" (Historia) · "Las 12 uvas: de dónde viene la costumbre" (Palabras y costumbres) · "Tu relación con el dinero en diciembre" (Dinero práctico).
