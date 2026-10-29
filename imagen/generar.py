@@ -50,6 +50,9 @@ ESTILOS = {
                "soft cel shading, limited color palette, cinematic composition, one clear subject, no text"),
     "anime": ("{p}, modern japanese anime illustration, detailed expressive eyes, clean closed lineart, soft cel shading, "
               "vibrant colors, studio quality key visual, one clear subject, no text"),
+    # 2D tradicional de cine (cel animation de los 90): plano, sin volumen. Nunca nombrar películas ni personajes con dueño.
+    "2d-clasico": ("{p}, classic 1990s hand-drawn 2D cel animation still, flat colors, bold clean ink outlines, "
+                   "painted watercolor background, expressive cartoon character, no 3d, no text"),
     # Ficha de personaje: solo, cuerpo entero, fondo liso magenta para recortarlo perfecto
     "ficha": ("{p}, full body character sheet, standing, front view, centered, isolated on a flat solid magenta background, "
               "clean closed lineart, soft cel shading, no shadows on background, no text"),
