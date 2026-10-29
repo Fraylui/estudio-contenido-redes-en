@@ -1,6 +1,7 @@
 import { z } from "zod";
 import { Composition, Folder, Still } from "remotion";
 import { FichaKhipu, KhipuEnEscena } from "./personajes/FichaKhipu";
+import { MiniaturaKhipu, miniaturaKhipuSchema } from "./personajes/MiniaturaKhipu";
 import datosEjemplo from "../contenido/datos-poblacion-sudamerica.json";
 import fraseEjemplo from "../contenido/frase-constancia.json";
 import finDeMes from "../contenido/narrado-fin-de-mes.json";
@@ -47,6 +48,8 @@ export const RemotionRoot: React.FC = () => {
       <Folder name="Personaje">
         <Still id="FichaKhipu" component={FichaKhipu} width={1920} height={1080} />
         <Still id="KhipuEnEscena" component={KhipuEnEscena} width={1080} height={1920} />
+        <Still id="MiniaturaKhipu" component={MiniaturaKhipu} schema={miniaturaKhipuSchema} width={1280} height={720}
+          defaultProps={{ fondo: "ata05-caminos", texto: "¿25 AÑOS?", cara: "asustado", pose: "arriba", vestuario: "romano" }} />
       </Folder>
       <Still id="LogoCanal" component={LogoCanal} width={800} height={800} />
       <Still id="BannerCanal" component={BannerCanal} width={2560} height={1440} />
