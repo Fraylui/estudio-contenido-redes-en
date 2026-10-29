@@ -324,3 +324,11 @@ Con `scripts/investigar-youtube.py`. Desde este servidor, YouTube y Tactiq bloqu
   - [ ] ¿Cada afirmación rara dice si es texto, tradición, ciencia o especulación?
   - [ ] ¿Hay un momento en segunda persona ("imagina que…") y una cifra enorme que se hace sentir?
 - **En los Shorts:** las técnicas 1, 4, 5 y 6 en miniatura (un dato que choca, una imagen concreta y un remate).
+
+## Lo que tomamos del 2D tradicional (29 oct)
+- **Animación limitada como la del anime:** poses fijas que cambian cada 2 o 3 cuadros + **golpes de sonido fuertes** ("pak", "boom", "shing") que hacen sentir el movimiento que no se dibuja. Es la fórmula que mejor nos queda con capas.
+- **Squash and stretch** en las capas: el personaje se aplasta y se estira 1 o 2 cuadros al caer, saltar o recibir un golpe (escala animada en Remotion).
+- **Smear y desenfoque de movimiento** en los movimientos rápidos.
+- **Multiplano:** fondo, plano medio y primer plano a distintas velocidades. Ya lo hace la cámara 2.5D; con capas se puede separar más.
+- **Efectos en hojas aparte:** fuego, humo, polvo y destellos como capas encima, nunca pintados dentro de la imagen.
+- **Sonido:** foley (pasos, ropa), golpes y música que acompaña la emoción; la voz se graba primero y se anima sobre ella (es lo que ya hacemos).
