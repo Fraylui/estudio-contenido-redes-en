@@ -238,3 +238,9 @@ Regla: **cada Short estrena 3 mejoras de los diagnósticos de arriba** (no todas
 | 3 (lun 9 – dom 15 nov) | Personaje fijo por historia · El color como emoción · Texto arriba con palabra en rojo | Retención y comentarios |
 | 4 (desde el 16 nov) | Estilo doodle para psicología y dinero · Miniaturas con cara y conflicto · Shorts recortados de los largos | Vistas por video y CTR |
 Cada video nuevo que mande el usuario se analiza y lo útil entra en la etapa que toque.
+
+## Diagnóstico 29 oct: "se estancó" (datos de Metricool, videos del 23 al 26 oct)
+- **Shorts:** se ven de 3 a 7 segundos en promedio, de 40 a 48 s que duran (8-15 %). El mejor ("5 minutos más", 1 302 vistas) llegó a 15 s.
+- **Largos:** se ven de 1:20 a 2:15 minutos y tienen de 5 a 55 vistas. Además duran 3-4 min (Atahualpa 3:05, Fleming 4:21), no los 8-12 acordados.
+- **Temas:** los que pasan de 1 000 vistas son de la vida diaria del espectador (lunes, despertar, 5 minutos más). Historia y Biblia sin conexión con el que mira se quedan en decenas.
+- **Qué falta:** (1) el primer segundo: imagen + frase que el espectador ya vivió, sin introducción; (2) Shorts de 25-35 s; (3) largos de 8-12 min de verdad, con miniatura de cara + conflicto; (4) cada historia empieza por "tú" (qué tiene que ver con tu vida); (5) un cambio visual cada 1-2 s en los Shorts.
