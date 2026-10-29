@@ -1,0 +1,249 @@
+{
+ "formato": "Pizarra",
+ "voz": {
+  "referencia": "voz/referencias/kokoro-alex.wav",
+  "pausa": 0.25,
+  "velocidad": 0.95,
+  "tono": "serio",
+  "pronunciacion": {
+   "Exiguo": "Exíguo"
+  }
+ },
+ "props": {
+  "gancho": "NACIÓ ANTES DE CRISTO",
+  "musica": "musica/noche-lightless-dawn.mp3",
+  "tono": "calido",
+  "narracion": [
+   {
+    "texto": "Jesús nació… antes de Cristo.",
+    "estilo": "narrador"
+   },
+   {
+    "texto": "Según la mayoría de los historiadores, nació unos años antes del año uno.",
+    "estilo": "narrador"
+   },
+   {
+    "texto": "¿Cómo es posible? Por un cálculo hecho hace casi mil quinientos años.",
+    "estilo": "narrador"
+   },
+   {
+    "texto": "En el año quinientos veinticinco, un monje llamado Dionisio el Exiguo contó los años para ordenar el calendario que usas hoy.",
+    "estilo": "narrador"
+   },
+   {
+    "texto": "Pero el relato del nacimiento menciona al rey Herodes.",
+    "estilo": "narrador"
+   },
+   {
+    "texto": "Y según el historiador Flavio Josefo, Herodes murió hacia el año cuatro antes de Cristo.",
+    "estilo": "narrador"
+   },
+   {
+    "texto": "Así que Jesús tuvo que nacer antes.",
+    "estilo": "narrador"
+   },
+   {
+    "texto": "¿Y fuera de la Biblia, alguien habla de él?",
+    "estilo": "narrador"
+   },
+   {
+    "texto": "Sí. Hacia el año ciento dieciséis, el historiador romano Tácito escribió que Cristo fue ejecutado en tiempos de Poncio Pilato.",
+    "estilo": "narrador"
+   },
+   {
+    "texto": "Y el mismo Flavio Josefo menciona a Santiago, el hermano de Jesús.",
+    "estilo": "narrador"
+   },
+   {
+    "texto": "Por eso casi todos los historiadores, creyentes o no, coinciden en que Jesús existió.",
+    "estilo": "narrador"
+   },
+   {
+    "texto": "Y tu calendario lleva casi mil quinientos años con ese desfase. ¿Lo sabías?",
+    "estilo": "narrador"
+   }
+  ],
+  "escenas": [
+   {
+    "dibujo": {
+     "iconos": []
+    },
+    "texto": "Nació antes de Cristo",
+    "resaltar": "antes",
+    "fondo": "ia:jes-belen",
+    "khipu": {
+     "cara": "sorprendido",
+     "pose": "abajo",
+     "vestuario": "biblico",
+     "x": 30
+    },
+    "sonido": "historia/cinematic-church-bell-hit",
+    "sonidoEn": 0.05
+   },
+   {
+    "dibujo": {
+     "iconos": []
+    },
+    "texto": "Unos años antes del año 1",
+    "resaltar": "año 1",
+    "fondo": "ia:jes-belen",
+    "khipu": {
+     "cara": "pensando",
+     "pose": "pensando",
+     "vestuario": "biblico",
+     "x": 68,
+     "espejo": true
+    }
+   },
+   {
+    "dibujo": {
+     "iconos": []
+    },
+    "texto": "Un cálculo de hace 1 500 años",
+    "resaltar": "1 500",
+    "fondo": "ia:jes-monasterio",
+    "khipu": {
+     "cara": "sorprendido",
+     "pose": "senala",
+     "vestuario": "biblico",
+     "x": 30
+    }
+   },
+   {
+    "dibujo": {
+     "iconos": []
+    },
+    "texto": "Dionisio el Exiguo, año 525",
+    "resaltar": "525",
+    "fondo": "ia:jes-monasterio",
+    "khipu": {
+     "cara": "normal",
+     "pose": "pensando",
+     "vestuario": "biblico",
+     "x": 70,
+     "espejo": true
+    },
+    "ambiente": "naturaleza/campfire-crackles"
+   },
+   {
+    "dibujo": {
+     "iconos": []
+    },
+    "texto": "El rey Herodes",
+    "resaltar": "Herodes",
+    "fondo": "ia:jes-palacio",
+    "khipu": {
+     "cara": "decidido",
+     "pose": "cadera",
+     "vestuario": "biblico",
+     "x": 30
+    }
+   },
+   {
+    "dibujo": {
+     "iconos": []
+    },
+    "texto": "Murió hacia el 4 a. C.",
+    "resaltar": "4 a. C.",
+    "fondo": "ia:jes-palacio",
+    "khipu": {
+     "cara": "sorprendido",
+     "pose": "arriba",
+     "vestuario": "biblico",
+     "x": 68,
+     "espejo": true
+    },
+    "sonido": "hooks/short-bass-hit",
+    "sonidoEn": 1.5
+   },
+   {
+    "dibujo": {
+     "iconos": []
+    },
+    "texto": "Nació antes",
+    "resaltar": "antes",
+    "fondo": "ia:jes-belen",
+    "khipu": {
+     "cara": "feliz",
+     "pose": "senala",
+     "vestuario": "biblico",
+     "x": 30
+    }
+   },
+   {
+    "dibujo": {
+     "iconos": []
+    },
+    "texto": "¿Y fuera de la Biblia?",
+    "resaltar": "fuera",
+    "fondo": "ia:jes-biblioteca",
+    "khipu": {
+     "cara": "pensando",
+     "pose": "pensando",
+     "vestuario": "biblico",
+     "x": 68,
+     "espejo": true
+    }
+   },
+   {
+    "dibujo": {
+     "iconos": []
+    },
+    "texto": "Tácito, año 116",
+    "resaltar": "Tácito",
+    "fondo": "ia:jes-biblioteca",
+    "khipu": {
+     "cara": "decidido",
+     "pose": "senala",
+     "vestuario": "biblico",
+     "x": 30
+    }
+   },
+   {
+    "dibujo": {
+     "iconos": []
+    },
+    "texto": "Santiago, hermano de Jesús",
+    "resaltar": "Santiago",
+    "fondo": "ia:jes-jerusalen",
+    "khipu": {
+     "cara": "sorprendido",
+     "pose": "abajo",
+     "vestuario": "biblico",
+     "x": 65,
+     "espejo": true
+    }
+   },
+   {
+    "dibujo": {
+     "iconos": []
+    },
+    "texto": "Creyentes o no: existió",
+    "resaltar": "existió",
+    "fondo": "ia:jes-jerusalen",
+    "khipu": {
+     "cara": "feliz",
+     "pose": "arriba",
+     "vestuario": "biblico",
+     "x": 30
+    },
+    "silencio": true
+   },
+   {
+    "dibujo": {
+     "iconos": []
+    },
+    "texto": "¿Lo sabías?",
+    "resaltar": "sabías",
+    "fondo": "ia:jes-monasterio",
+    "khipu": {
+     "cara": "feliz",
+     "pose": "senala",
+     "vestuario": "biblico",
+     "x": 68,
+     "espejo": true
+    }
+   }
+  ]
+ }
+}

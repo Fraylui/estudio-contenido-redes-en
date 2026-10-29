@@ -20,6 +20,8 @@ if [[ "$N" == largo-* ]]; then ANCHO=768; ALTO=448; FINAL=1920; LOTE="--horizont
 else ANCHO=448; ALTO=768; FINAL=1080; LOTE=""; SUF="Vertical"; fi
 log() { echo "[$N] $*"; }
 toca() { [[ -z "$SOLO" || "$SOLO" == "$1" ]]; }
+# Estilo de las tomas: "_estilo" en tomas.json (desde el 29 oct, "fondo2d" para videos con el personaje fijo)
+ESTILO=$(python3 -c "import json,sys;print(json.load(open(sys.argv[1])).get('_estilo','epico'))" "$TOMAS")
 LISTA=$(python3 -c "import json,sys;[print(k) for k in json.load(open(sys.argv[1])) if not k.startswith('_')]" "$TOMAS")
 tomas() { echo "$LISTA"; }
 # Las escenas que reutilizan una toma de otro video no están en tomas.json: se revisa que exista
@@ -33,7 +35,7 @@ if toca tomas; then
     [ -f "public/assets/ia/$t.jpg" ] || [ -f "$VAR/$t-2.png" ] && continue
     p=$(python3 -c "import json,sys;print(json.load(open(sys.argv[1]))[sys.argv[2]])" "$TOMAS" "$t")
     flock /tmp/khipu-imagenes.lock nice -n 5 imagen/.venv/bin/python imagen/generar.py "$p" "$VAR/$t.png" \
-      --estilo epico --ancho $ANCHO --alto $ALTO --pasos 4 --variantes 2 2>&1 | grep -v -i "warn\|resource" | tail -1
+      --estilo $ESTILO --ancho $ANCHO --alto $ALTO --pasos 4 --variantes 2 2>&1 | grep -v -i "warn\|resource" | tail -1
   done
 fi
 
