@@ -369,3 +369,9 @@ Con `scripts/investigar-youtube.py`. Desde este servidor, YouTube y Tactiq bloqu
 - Su método es el mismo que adoptamos: canal ganador → video más popular → transcripción + capturas como referencia → guion propio → imágenes en lote → montaje automático.
 - **Consistencia:** le pasan al generador de imágenes (Google Flow) **capturas de referencia** para que todo salga con el mismo estilo. Nosotros lo resolvemos con el personaje dibujado en código y fondos FLUX con un prompt de estilo fijo.
 - **Técnica nueva:** a la mitad del video, una pregunta en pantalla ("Pero antes de seguir, una pregunta rápida: ¿crees que…?"). Despierta al que se estaba yendo y provoca comentarios. Para usar en los largos.
+
+## Axen (@AxenCool, 65 100 suscriptores, en inglés; 29 oct)
+- Videos de 8 a 13 min, uno por semana, sobre la **vida diaria de los humanos antiguos**: "¿Qué hacían realmente los humanos antiguos durante toda la noche?", "¿Cómo combatían el aburrimiento?", "¿Qué comían antes de la agricultura?", "¿Cómo tenían privacidad?", "¿Cómo sobrevivieron a los inviernos mortales?".
+- **Fórmula del título:** "¿Qué / cómo + algo de TU vida diaria (dormir, comer, aburrirse, privacidad) + en el pasado?" Junta dos cosas que funcionan: lo cotidiano y la historia.
+- Los títulos aparecen traducidos al español: YouTube muestra el video en otros idiomas (títulos y doblaje automático). Es una vía para que Khipu llegue también al público en inglés.
+- Pedir la transcripción al usuario para estudiar cómo lo cuenta por dentro.
