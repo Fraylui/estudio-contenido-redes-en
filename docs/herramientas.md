@@ -102,3 +102,4 @@ Para que se vean cosas **reales**: el lugar como es hoy, un cuadro antiguo, un m
 - El uso gratis diario (10 000 "neuronas") alcanzó para **unas 80 imágenes** de 1024×1024 a 4 pasos, no 170 como decía la calculadora.
 - **Se reinicia a las 00:00 UTC = 19:00 de Lima.** Planificar: las imágenes del día siguiente se generan apenas se reinicia.
 - Presupuesto por día: 4 Shorts × 10 tomas × 2 variantes = 80 → **no alcanza también para un video largo el mismo día**. El video largo (50 tomas) usa la cuota de otro día, o 1 variante por toma en las de objetos y paisajes.
+- **Regla de reparto (desde el 29 oct):** `imagen/generar.py` hace 2 variantes solo si el prompt tiene personas o animales y 1 para objetos, paisajes y edificios. Los 4 Shorts del viernes usan **65 de 80**; las ~15 que sobran son para rehacer las que salgan mal. El video largo de 50 tomas va en el día siguiente (unas 75 imágenes).
