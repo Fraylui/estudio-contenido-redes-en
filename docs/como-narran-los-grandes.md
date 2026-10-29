@@ -342,3 +342,8 @@ Con `scripts/investigar-youtube.py`. Desde este servidor, YouTube y Tactiq bloqu
 - **Multiplano:** fondo, plano medio y primer plano a distintas velocidades. Ya lo hace la cámara 2.5D; con capas se puede separar más.
 - **Efectos en hojas aparte:** fuego, humo, polvo y destellos como capas encima, nunca pintados dentro de la imagen.
 - **Sonido:** foley (pasos, ropa), golpes y música que acompaña la emoción; la voz se graba primero y se anima sobre ella (es lo que ya hacemos).
+
+## TikToks de "automatizar YouTube" (29 oct, enviados por el usuario)
+- Son videos que venden herramientas ("comenta video"); sus cifras no están verificadas. El canal "wiz ard" (inglés, nicho gym/memes): 4 videos, 10 000 suscriptores y 800 000 vistas en 2 semanas, según el TikTok; no dice que esté monetizado.
+- **Lo útil:** (1) los temas no se inventan: se busca en canales del mismo nicho el video que tiene muchas más vistas que el resto y se hace nuestra versión; (2) un personaje fijo que se repite en todas las escenas (Genius History); (3) comparación con "tú": "el dientes de sable pesaba 300 kilos… tú pesas 70, no tienes garras" con una imagen de escala (humano pequeño frente al animal); (4) personajes con cara, arma y carácter (las células de Kurzgesagt).
+- Nuestro proceso ya hace lo mismo (guion → imágenes en lote → montaje automático con la voz). Lo que nos falta es lo de arriba.
