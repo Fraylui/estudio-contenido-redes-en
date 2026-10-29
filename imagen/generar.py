@@ -73,7 +73,7 @@ def generar_flux(prompt: str, salida: Path, args) -> None:
     proporcion = args.ancho / args.alto
     for i in range(args.variantes):
         t0 = time.time()
-        cuerpo = json.dumps({"prompt": prompt, "steps": 8, "seed": args.semilla * 1000 + i + 1}).encode()
+        cuerpo = json.dumps({"prompt": prompt, "steps": 4, "seed": args.semilla * 1000 + i + 1}).encode()
         pedido = urllib.request.Request(url, data=cuerpo, headers={
             "Authorization": f"Bearer {os.environ['CLOUDFLARE_API_TOKEN']}", "Content-Type": "application/json"})
         with urllib.request.urlopen(pedido, timeout=120) as r:
