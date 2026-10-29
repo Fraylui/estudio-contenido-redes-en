@@ -1,0 +1,13 @@
+{
+ "_nota": "Fuentes: Silver et al., Nature 529 (2016) 'Mastering the game of Go with deep neural networks and tree search' (30 millones de posiciones de partidas humanas); documental AlphaGo (2017); DeepMind, blog 'AlphaGo' (probabilidad 1/10 000 de la jugada 37); el número de posiciones legales del Go (~2,1×10^170) supera los átomos del universo observable (~10^80). Sin rostro de Lee Sedol (persona real): se muestra el tablero, la sala y comentaristas genéricos.",
+ "ia37-01-caras": "close-up of three shocked professional Go commentators in suits looking at a monitor off-screen, eyes wide, one with hand over mouth, dark TV studio, dramatic blue light, faces in focus",
+ "ia37-02-sala": "a quiet tournament hall in Seoul in 2016, a single Go board on a low table under a spotlight, rows of journalists and cameras in the dark background, no faces close",
+ "ia37-03-tablero": "top view of a wooden Go board covered with black and white stones forming complex patterns, dramatic side light, a faint galaxy of stars reflected over it, magical realism",
+ "ia37-04-datos": "thousands of tiny glowing Go boards floating in a dark digital space like a river of data, blue and gold light, abstract futuristic",
+ "ia37-05-espejo": "a glowing translucent humanoid figure made of blue light playing Go against an identical mirrored copy of itself across a board, dark background, futuristic",
+ "ia37-06-piedra": "extreme close-up of a single black Go stone being placed on the board by a robotic arm tip, dramatic spotlight, shallow depth of field",
+ "ia37-07-pantalla": "a dark control room screen showing a Go board with one glowing highlighted stone and probability curves, blue interface light, no readable text",
+ "ia37-08-victoria": "wide view of a Go board at the end of a game, black stones surrounding a large territory, one stone glowing gold in the middle, dramatic light",
+ "ia37-09-red": "an artificial neural network visualized as a glowing brain made of connected light nodes, some connections lighting up in gold, dark background",
+ "ia37-10-final": "an ancient Chinese scholar's hand-carved wooden Go board in an old temple next to a modern glowing computer chip, warm and blue light mixing, symbolic"
+}

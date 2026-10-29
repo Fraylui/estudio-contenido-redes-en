@@ -1,0 +1,152 @@
+{
+ "formato": "Pizarra",
+ "voz": {
+  "referencia": "voz/referencias/xiomi-clara.wav",
+  "pausa": 0.18,
+  "tono": "intrigante"
+ },
+ "props": {
+  "gancho": "LA JUGADA QUE NINGÚN HUMANO HARÍA",
+  "musica": "musica/investigations.mp3",
+  "tono": "calido",
+  "narracion": [
+   {
+    "texto": "Los mejores jugadores del mundo vieron la jugada y pensaron que la máquina se había equivocado.",
+    "estilo": "narrador"
+   },
+   {
+    "texto": "Seúl, marzo de dos mil dieciséis. Una inteligencia artificial llamada AlphaGo jugaba Go contra el campeón Lee Sedol.",
+    "estilo": "narrador"
+   },
+   {
+    "texto": "El Go es un juego chino de hace más de dos mil quinientos años. Tiene más posiciones posibles que átomos en el universo.",
+    "estilo": "narrador"
+   },
+   {
+    "texto": "AlphaGo no aprendió con reglas escritas. Estudió treinta millones de jugadas humanas.",
+    "estilo": "narrador"
+   },
+   {
+    "texto": "Y después jugó contra sí misma, millones de partidas, aprendiendo de cada error.",
+    "estilo": "narrador"
+   },
+   {
+    "texto": "En la partida dos llegó la jugada treinta y siete. Una piedra en un lugar que nadie usaría.",
+    "estilo": "narrador"
+   },
+   {
+    "texto": "La propia máquina calculó que un humano la jugaría una vez en diez mil.",
+    "estilo": "narrador"
+   },
+   {
+    "texto": "Cien jugadas después, esa piedra decidió la partida. AlphaGo ganó cuatro a uno.",
+    "estilo": "narrador"
+   },
+   {
+    "texto": "Así aprende una inteligencia artificial: no le enseñan la respuesta. Le dan ejemplos, y prueba hasta encontrar la suya.",
+    "estilo": "narrador"
+   },
+   {
+    "texto": "Y a veces encuentra una que a ningún humano se le ocurrió en dos mil quinientos años.",
+    "estilo": "narrador"
+   }
+  ],
+  "escenas": [
+   {
+    "dibujo": {
+     "iconos": []
+    },
+    "texto": "Pensaron que era un error",
+    "resaltar": "error",
+    "fondo": "ia:ia37-01-caras",
+    "sonido": "hooks/cinematic-glass-hit-suspense",
+    "sonidoEn": 0.05
+   },
+   {
+    "dibujo": {
+     "iconos": []
+    },
+    "texto": "Seúl, 2016",
+    "resaltar": "2016",
+    "fondo": "ia:ia37-02-sala",
+    "ambiente": "historia/restaurant-crowd-talking-ambience"
+   },
+   {
+    "dibujo": {
+     "iconos": []
+    },
+    "texto": "Más posiciones que átomos",
+    "resaltar": "átomos",
+    "fondo": "ia:ia37-03-tablero",
+    "sonido": "hooks/cinematic-whoosh-deep-impact",
+    "sonidoEn": 0.05
+   },
+   {
+    "dibujo": {
+     "iconos": []
+    },
+    "texto": "30 millones de jugadas",
+    "resaltar": "30 millones",
+    "fondo": "ia:ia37-04-datos",
+    "sonido": "animacion/typing-on-a-laptop-keyboard",
+    "sonidoEn": 0.05
+   },
+   {
+    "dibujo": {
+     "iconos": []
+    },
+    "texto": "Contra sí misma",
+    "resaltar": "sí misma",
+    "fondo": "ia:ia37-05-espejo",
+    "sonido": "hooks/cinematic-transition-swoosh-heartbeat-trailer",
+    "sonidoEn": 0.05
+   },
+   {
+    "dibujo": {
+     "iconos": []
+    },
+    "texto": "La jugada 37",
+    "resaltar": "37",
+    "fondo": "ia:ia37-06-piedra",
+    "sonido": "hooks/big-cinematic-impact",
+    "sonidoEn": 0.05
+   },
+   {
+    "dibujo": {
+     "iconos": []
+    },
+    "texto": "1 en 10 000",
+    "resaltar": "10 000",
+    "fondo": "ia:ia37-07-pantalla"
+   },
+   {
+    "dibujo": {
+     "iconos": []
+    },
+    "texto": "Ganó 4 a 1",
+    "resaltar": "4 a 1",
+    "fondo": "ia:ia37-08-victoria",
+    "sonido": "hooks/deep-heartbeat-impact",
+    "sonidoEn": 0.05
+   },
+   {
+    "dibujo": {
+     "iconos": []
+    },
+    "texto": "Prueba hasta encontrar",
+    "resaltar": "encontrar",
+    "fondo": "ia:ia37-09-red"
+   },
+   {
+    "dibujo": {
+     "iconos": []
+    },
+    "texto": "2500 años",
+    "resaltar": "2500",
+    "fondo": "ia:ia37-10-final",
+    "sonido": "hooks/angelic-swell-presentation",
+    "sonidoEn": 0.05
+   }
+  ]
+ }
+}

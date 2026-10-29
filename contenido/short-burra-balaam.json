@@ -1,0 +1,152 @@
+{
+ "formato": "Pizarra",
+ "voz": {
+  "referencia": "voz/referencias/kokoro-alex.wav",
+  "pausa": 0.25,
+  "velocidad": 0.95,
+  "tono": "serio",
+  "pronunciacion": {
+   "Balaam": "Balaám"
+  }
+ },
+ "props": {
+  "gancho": "LA BURRA QUE VIO AL ÁNGEL",
+  "musica": "musica/antiguo.mp3",
+  "tono": "calido",
+  "narracion": [
+   {
+    "texto": "Una burra vio lo que un profeta no podía ver.",
+    "estilo": "narrador"
+   },
+   {
+    "texto": "Balaam era un adivino famoso. Un rey le pagó para que maldijera al pueblo de Israel.",
+    "estilo": "narrador"
+   },
+   {
+    "texto": "Iba montado en su burra, cuando en el camino apareció un ángel con una espada.",
+    "estilo": "narrador"
+   },
+   {
+    "texto": "Balaam no veía nada. Pero la burra sí, y se salió del camino.",
+    "estilo": "narrador"
+   },
+   {
+    "texto": "Más adelante, entre dos muros de piedra, la burra apretó el pie de Balaam contra la pared.",
+    "estilo": "narrador"
+   },
+   {
+    "texto": "La tercera vez no había por dónde pasar. La burra se echó al suelo. Y Balaam la golpeó otra vez.",
+    "estilo": "narrador"
+   },
+   {
+    "texto": "Entonces la burra habló: ¿Qué te he hecho, para que me golpees tres veces?",
+    "estilo": "narrador"
+   },
+   {
+    "texto": "Y a Balaam se le abrieron los ojos. Vio al ángel, con la espada en la mano.",
+    "estilo": "narrador"
+   },
+   {
+    "texto": "El ángel le dijo: si ella no se hubiera apartado, tú ya estarías muerto. Lo cuenta Números, capítulo veintidós.",
+    "estilo": "narrador"
+   },
+   {
+    "texto": "Ese día, la que vio más claro no fue el profeta. Fue la burra.",
+    "estilo": "narrador"
+   }
+  ],
+  "escenas": [
+   {
+    "dibujo": {
+     "iconos": []
+    },
+    "texto": "Lo que el profeta no vio",
+    "resaltar": "profeta",
+    "fondo": "ia:bal-01-burra",
+    "sonido": "hooks/cinematic-glass-hit-suspense",
+    "sonidoEn": 0.05
+   },
+   {
+    "dibujo": {
+     "iconos": []
+    },
+    "texto": "Le pagaron para maldecir",
+    "resaltar": "maldecir",
+    "fondo": "ia:bal-02-balaam",
+    "ambiente": "naturaleza/wind-blowing-ambience"
+   },
+   {
+    "dibujo": {
+     "iconos": []
+    },
+    "texto": "Un ángel con espada",
+    "resaltar": "espada",
+    "fondo": "ia:bal-03-angel",
+    "sonido": "historia/medieval-metal-sword-blade",
+    "sonidoEn": 0.05
+   },
+   {
+    "dibujo": {
+     "iconos": []
+    },
+    "texto": "La burra sí lo vio",
+    "resaltar": "burra",
+    "fondo": "ia:bal-04-campo"
+   },
+   {
+    "dibujo": {
+     "iconos": []
+    },
+    "texto": "Entre dos muros",
+    "resaltar": "muros",
+    "fondo": "ia:bal-05-muros",
+    "sonido": "hooks/deep-heartbeat-impact",
+    "sonidoEn": 0.05
+   },
+   {
+    "dibujo": {
+     "iconos": []
+    },
+    "texto": "La golpeó tres veces",
+    "resaltar": "tres veces",
+    "fondo": "ia:bal-06-suelo",
+    "sonido": "hooks/big-cinematic-impact",
+    "sonidoEn": 0.05
+   },
+   {
+    "dibujo": {
+     "iconos": []
+    },
+    "texto": "¿Qué te he hecho?",
+    "resaltar": "hecho",
+    "fondo": "ia:bal-07-habla"
+   },
+   {
+    "dibujo": {
+     "iconos": []
+    },
+    "texto": "Se le abrieron los ojos",
+    "resaltar": "ojos",
+    "fondo": "ia:bal-08-ve",
+    "sonido": "hooks/angelic-swell-presentation",
+    "sonidoEn": 0.05
+   },
+   {
+    "dibujo": {
+     "iconos": []
+    },
+    "texto": "Números 22",
+    "resaltar": "22",
+    "fondo": "ia:bal-09-luz"
+   },
+   {
+    "dibujo": {
+     "iconos": []
+    },
+    "texto": "Fue la burra",
+    "resaltar": "burra",
+    "fondo": "ia:bal-10-final"
+   }
+  ]
+ }
+}
