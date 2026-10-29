@@ -7,7 +7,11 @@
   "pronunciacion": {
    "optio": "óptio",
    "Craso": "Cráso",
-   "Septimio Severo": "Septímio Sevéro"
+   "Septimio Severo": "Septímio Sevéro",
+   "Emerita Augusta": "Emérita Augústa",
+   "Britania": "Británia",
+   "Vegecio": "Vejésio",
+   "Lucilio": "Lucílio"
   }
  },
  "props": {
@@ -119,6 +123,18 @@
     "estilo": "narrador"
    },
    {
+    "texto": "Y hay una prueba más que muchos no esperan: aprender a nadar.",
+    "estilo": "narrador"
+   },
+   {
+    "texto": "Vegecio lo explica simple: los ríos no siempre tienen puentes. Y un ejército que huye, o que persigue, termina en el agua.",
+    "estilo": "narrador"
+   },
+   {
+    "texto": "Si no aprendes, en la primera campaña te lleva la corriente.",
+    "estilo": "narrador"
+   },
+   {
     "texto": "Nivel tres: la primera campaña.",
     "estilo": "narrador"
    },
@@ -148,6 +164,18 @@
    },
    {
     "texto": "Duermes en una tienda de cuero con otros siete hombres. Ellos son tu familia ahora.",
+    "estilo": "narrador"
+   },
+   {
+    "texto": "Tu día empieza antes del amanecer, con el sonido de la trompeta.",
+    "estilo": "narrador"
+   },
+   {
+    "texto": "Pasan lista, revisan tus armas, y te dan tu tarea: guardia, leña, agua, o cavar.",
+    "estilo": "narrador"
+   },
+   {
+    "texto": "Y la noche se divide en cuatro turnos de guardia. Alguno siempre te toca a ti.",
     "estilo": "narrador"
    },
    {
@@ -188,6 +216,14 @@
    },
    {
     "texto": "Y cada pocos minutos, la primera fila descansa y la de atrás pasa adelante.",
+    "estilo": "narrador"
+   },
+   {
+    "texto": "Y si del cielo caen flechas y piedras, forman la tortuga: escudos al frente, a los lados y encima de las cabezas.",
+    "estilo": "narrador"
+   },
+   {
+    "texto": "Desde fuera parecen un caparazón de metal que camina.",
     "estilo": "narrador"
    },
    {
@@ -247,6 +283,22 @@
     "estilo": "narrador"
    },
    {
+    "texto": "Porque un soldado romano no solo peleaba: también construía.",
+    "estilo": "narrador"
+   },
+   {
+    "texto": "Caminos, puentes, acueductos, fuertes… y hasta murallas enteras.",
+    "estilo": "narrador"
+   },
+   {
+    "texto": "En el año ciento veintidós, en Britania, tres legiones empezaron un muro de ciento diecisiete kilómetros de largo.",
+    "estilo": "narrador"
+   },
+   {
+    "texto": "Unos quince mil soldados lo levantaron, en unos seis años. El Muro de Adriano todavía se puede recorrer hoy.",
+    "estilo": "narrador"
+   },
+   {
     "texto": "Pero hay algo que vale más que cualquier oficio: saber leer y escribir.",
     "estilo": "narrador"
    },
@@ -287,6 +339,22 @@
     "estilo": "narrador"
    },
    {
+    "texto": "El historiador Tácito cuenta de un centurión llamado Lucilio, que rompía su bastón en la espalda de sus soldados.",
+    "estilo": "narrador"
+   },
+   {
+    "texto": "Y cada vez que se le rompía, gritaba: ¡dame otro! Así lo apodaron sus hombres.",
+    "estilo": "narrador"
+   },
+   {
+    "texto": "Cuando sus soldados se rebelaron, fue de los primeros en morir.",
+    "estilo": "narrador"
+   },
+   {
+    "texto": "Tú decides qué clase de centurión vas a ser.",
+    "estilo": "narrador"
+   },
+   {
     "texto": "Ahora mandas a ochenta hombres. Ganas varias veces lo que gana un soldado.",
     "estilo": "narrador"
    },
@@ -324,6 +392,22 @@
    },
    {
     "texto": "Muchos ya tenían una familia esperándolos. Una familia que la ley no reconocía.",
+    "estilo": "narrador"
+   },
+   {
+    "texto": "Muchos veteranos se quedaban a vivir juntos, en tierras que les daba Roma. Y así nacieron ciudades.",
+    "estilo": "narrador"
+   },
+   {
+    "texto": "Una de ellas está en España: Mérida. Fue fundada para soldados retirados de dos legiones.",
+    "estilo": "narrador"
+   },
+   {
+    "texto": "Su nombre romano era Emerita Augusta. Emérito: así llamaban al soldado que ya había cumplido.",
+    "estilo": "narrador"
+   },
+   {
+    "texto": "Por eso hoy decimos profesor emérito. La palabra viene de los soldados de Roma.",
     "estilo": "narrador"
    },
    {
@@ -734,6 +818,50 @@
     "dibujo": {
      "iconos": []
     },
+    "texto": "Aprender a nadar",
+    "resaltar": "nadar",
+    "fondo": "ia:rom-rio",
+    "khipu": {
+     "cara": "sorprendido",
+     "pose": "abajo",
+     "vestuario": "romano",
+     "x": 30
+    }
+   },
+   {
+    "dibujo": {
+     "iconos": []
+    },
+    "texto": "Los ríos no tienen puentes",
+    "resaltar": "puentes",
+    "fondo": "ia:rom-rio",
+    "khipu": {
+     "cara": "decidido",
+     "pose": "senala",
+     "vestuario": "romano",
+     "x": 65,
+     "espejo": true
+    },
+    "ambiente": "naturaleza/river-in-the-forest-with-birds"
+   },
+   {
+    "dibujo": {
+     "iconos": []
+    },
+    "texto": "Te lleva la corriente",
+    "resaltar": "corriente",
+    "fondo": "ia:rom-rio",
+    "khipu": {
+     "cara": "asustado",
+     "pose": "arriba",
+     "vestuario": "romano",
+     "x": 30
+    }
+   },
+   {
+    "dibujo": {
+     "iconos": []
+    },
     "texto": "NIVEL 3: CAMPAÑA",
     "resaltar": "NIVEL 3",
     "fondo": "ia:rom-campamento",
@@ -850,6 +978,51 @@
      "pose": "abajo",
      "vestuario": "romano",
      "x": 50
+    }
+   },
+   {
+    "dibujo": {
+     "iconos": []
+    },
+    "texto": "La trompeta",
+    "resaltar": "trompeta",
+    "fondo": "ia:rom-campamento",
+    "khipu": {
+     "cara": "asustado",
+     "pose": "arriba",
+     "vestuario": "romano",
+     "x": 30
+    },
+    "sonido": "historia/cinematic-church-bell-hit",
+    "sonidoEn": 0.3
+   },
+   {
+    "dibujo": {
+     "iconos": []
+    },
+    "texto": "Guardia, leña, agua o cavar",
+    "resaltar": "cavar",
+    "fondo": "ia:rom-campamento",
+    "khipu": {
+     "cara": "normal",
+     "pose": "cadera",
+     "vestuario": "romano",
+     "x": 65,
+     "espejo": true
+    }
+   },
+   {
+    "dibujo": {
+     "iconos": []
+    },
+    "texto": "4 turnos de guardia",
+    "resaltar": "4",
+    "fondo": "ia:rom-noche",
+    "khipu": {
+     "cara": "triste",
+     "pose": "abajo",
+     "vestuario": "romano",
+     "x": 30
     }
    },
    {
@@ -1000,6 +1173,37 @@
      "pose": "senala",
      "vestuario": "romano",
      "x": 30
+    }
+   },
+   {
+    "dibujo": {
+     "iconos": []
+    },
+    "texto": "La tortuga",
+    "resaltar": "tortuga",
+    "fondo": "ia:rom-muro",
+    "khipu": {
+     "cara": "decidido",
+     "pose": "arriba",
+     "vestuario": "romano",
+     "x": 30
+    },
+    "sonido": "historia/metal-hit-woosh",
+    "sonidoEn": 2.5
+   },
+   {
+    "dibujo": {
+     "iconos": []
+    },
+    "texto": "Un caparazón que camina",
+    "resaltar": "caparazón",
+    "fondo": "ia:rom-muro",
+    "khipu": {
+     "cara": "feliz",
+     "pose": "senala",
+     "vestuario": "romano",
+     "x": 65,
+     "espejo": true
     }
    },
    {
@@ -1218,6 +1422,66 @@
     "dibujo": {
      "iconos": []
     },
+    "texto": "También construía",
+    "resaltar": "construía",
+    "fondo": "ia:rom-muralla",
+    "khipu": {
+     "cara": "sorprendido",
+     "pose": "senala",
+     "vestuario": "romano",
+     "x": 30
+    }
+   },
+   {
+    "dibujo": {
+     "iconos": []
+    },
+    "texto": "Caminos, puentes, murallas",
+    "resaltar": "murallas",
+    "fondo": "ia:rom-camino",
+    "khipu": {
+     "cara": "feliz",
+     "pose": "arriba",
+     "vestuario": "romano",
+     "x": 65,
+     "espejo": true
+    }
+   },
+   {
+    "dibujo": {
+     "iconos": []
+    },
+    "texto": "Un muro de 117 km",
+    "resaltar": "117 km",
+    "fondo": "ia:rom-muralla",
+    "khipu": {
+     "cara": "sorprendido",
+     "pose": "arriba",
+     "vestuario": "romano",
+     "x": 30
+    },
+    "sonido": "hooks/movie-trailer-epic-impact",
+    "sonidoEn": 2.0
+   },
+   {
+    "dibujo": {
+     "iconos": []
+    },
+    "texto": "Todavía existe",
+    "resaltar": "existe",
+    "fondo": "ia:rom-muralla",
+    "khipu": {
+     "cara": "feliz",
+     "pose": "senala",
+     "vestuario": "romano",
+     "x": 65,
+     "espejo": true
+    }
+   },
+   {
+    "dibujo": {
+     "iconos": []
+    },
     "texto": "Saber escribir",
     "resaltar": "escribir",
     "fondo": "ia:rom-tablilla",
@@ -1369,6 +1633,66 @@
     "dibujo": {
      "iconos": []
     },
+    "texto": "El centurión Lucilio",
+    "resaltar": "Lucilio",
+    "fondo": "ia:rom-casco",
+    "khipu": {
+     "cara": "enojado",
+     "pose": "cadera",
+     "vestuario": "romano",
+     "x": 30
+    }
+   },
+   {
+    "dibujo": {
+     "iconos": []
+    },
+    "texto": "¡Dame otro!",
+    "resaltar": "otro",
+    "fondo": "ia:rom-casco",
+    "khipu": {
+     "cara": "enojado",
+     "pose": "senala",
+     "vestuario": "romano",
+     "x": 65,
+     "espejo": true
+    },
+    "sonido": "hooks/wood-hard-hit",
+    "sonidoEn": 1.2
+   },
+   {
+    "dibujo": {
+     "iconos": []
+    },
+    "texto": "Fue de los primeros",
+    "resaltar": "primeros",
+    "fondo": "ia:rom-noche",
+    "khipu": {
+     "cara": "asustado",
+     "pose": "abajo",
+     "vestuario": "romano",
+     "x": 30
+    },
+    "silencio": true
+   },
+   {
+    "dibujo": {
+     "iconos": []
+    },
+    "texto": "¿Qué centurión serás?",
+    "resaltar": "centurión",
+    "fondo": "ia:rom-casco",
+    "khipu": {
+     "cara": "normal",
+     "pose": "pensando",
+     "vestuario": "romano",
+     "x": 50
+    }
+   },
+   {
+    "dibujo": {
+     "iconos": []
+    },
     "texto": "80 hombres a tu cargo",
     "resaltar": "80",
     "fondo": "ia:rom-fuerte",
@@ -1512,6 +1836,66 @@
      "x": 65,
      "espejo": true
     }
+   },
+   {
+    "dibujo": {
+     "iconos": []
+    },
+    "texto": "Así nacieron ciudades",
+    "resaltar": "ciudades",
+    "fondo": "ia:rom-ciudad",
+    "khipu": {
+     "cara": "sorprendido",
+     "pose": "senala",
+     "vestuario": "romano",
+     "x": 30
+    }
+   },
+   {
+    "dibujo": {
+     "iconos": []
+    },
+    "texto": "Mérida, España",
+    "resaltar": "Mérida",
+    "fondo": "ia:rom-ciudad",
+    "khipu": {
+     "cara": "feliz",
+     "pose": "arriba",
+     "vestuario": "romano",
+     "x": 65,
+     "espejo": true
+    }
+   },
+   {
+    "dibujo": {
+     "iconos": []
+    },
+    "texto": "Emérito = retirado",
+    "resaltar": "Emérito",
+    "fondo": "ia:rom-ciudad",
+    "khipu": {
+     "cara": "feliz",
+     "pose": "pensando",
+     "vestuario": "romano",
+     "x": 30
+    }
+   },
+   {
+    "dibujo": {
+     "iconos": []
+    },
+    "texto": "Profesor emérito",
+    "resaltar": "emérito",
+    "fondo": "ia:rom-tablilla",
+    "khipu": {
+     "cara": "sorprendido",
+     "pose": "senala",
+     "vestuario": "romano",
+     "x": 65,
+     "espejo": true
+    },
+    "sonido": "hooks/short-bass-hit",
+    "sonidoEn": 1.0
    },
    {
     "dibujo": {
