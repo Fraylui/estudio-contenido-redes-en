@@ -383,6 +383,14 @@
     "estilo": "narrador"
    },
    {
+    "texto": "En tiempos de Augusto, el premio de retiro era de unos tres mil denarios.",
+    "estilo": "narrador"
+   },
+   {
+    "texto": "Haz la cuenta: más de trece años de sueldo, de golpe. Por eso tantos aguantaban.",
+    "estilo": "narrador"
+   },
+   {
     "texto": "Tienes cuarenta y dos años. Las rodillas destrozadas, cicatrices en todo el cuerpo.",
     "estilo": "narrador"
    },
@@ -416,6 +424,18 @@
    },
    {
     "texto": "Veinticinco años de marchas, batallas y castigos.",
+    "estilo": "narrador"
+   },
+   {
+    "texto": "Recluta a los diecisiete. Treinta kilómetros por día con veinte kilos en la espalda.",
+    "estilo": "narrador"
+   },
+   {
+    "texto": "Una ciudad nueva cada noche. Un muro de escudos al amanecer.",
+    "estilo": "narrador"
+   },
+   {
+    "texto": "Uno de cada diez sorteado para morir. Uno de cada ochenta y tantos llegando a centurión.",
     "estilo": "narrador"
    },
    {
@@ -1797,6 +1817,37 @@
     "dibujo": {
      "iconos": []
     },
+    "texto": "3 000 denarios",
+    "resaltar": "3 000",
+    "fondo": "ia:rom-tesoro",
+    "khipu": {
+     "cara": "sorprendido",
+     "pose": "arriba",
+     "vestuario": "romano",
+     "x": 65,
+     "espejo": true
+    },
+    "sonido": "dinero/clinking-coins",
+    "sonidoEn": 1.0
+   },
+   {
+    "dibujo": {
+     "iconos": []
+    },
+    "texto": "13 años de sueldo",
+    "resaltar": "13 años",
+    "fondo": "ia:rom-tesoro",
+    "khipu": {
+     "cara": "feliz",
+     "pose": "senala",
+     "vestuario": "romano",
+     "x": 30
+    }
+   },
+   {
+    "dibujo": {
+     "iconos": []
+    },
     "texto": "42 años y cicatrices",
     "resaltar": "cicatrices",
     "fondo": "ia:rom-granja",
@@ -1923,6 +1974,49 @@
      "pose": "pensando",
      "vestuario": "romano",
      "x": 50
+    }
+   },
+   {
+    "dibujo": {
+     "iconos": []
+    },
+    "texto": "Recluta: 30 km, 20 kilos",
+    "resaltar": "Recluta",
+    "fondo": "ia:rom-camino",
+    "khipu": {
+     "cara": "normal",
+     "pose": "abajo",
+     "vestuario": "romano",
+     "x": 30
+    }
+   },
+   {
+    "dibujo": {
+     "iconos": []
+    },
+    "texto": "Campamento y batalla",
+    "resaltar": "batalla",
+    "fondo": "ia:rom-campamento",
+    "khipu": {
+     "cara": "decidido",
+     "pose": "cadera",
+     "vestuario": "romano",
+     "x": 65,
+     "espejo": true
+    }
+   },
+   {
+    "dibujo": {
+     "iconos": []
+    },
+    "texto": "1 de cada 10 · 1 de cada 80",
+    "resaltar": "1 de cada",
+    "fondo": "ia:rom-tribunal",
+    "khipu": {
+     "cara": "asustado",
+     "pose": "abajo",
+     "vestuario": "romano",
+     "x": 30
     }
    },
    {
