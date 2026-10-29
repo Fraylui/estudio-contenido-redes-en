@@ -363,3 +363,9 @@ Con `scripts/investigar-youtube.py`. Desde este servidor, YouTube y Tactiq bloqu
 - Grabación real de lombrices en tierra, narrada como un drama humano: mayoría de edad, hermanos de sangre, trampa, comida compartida, pelea, cada uno por su lado. Texto fijo arriba con el gancho.
 - **Técnica: humanizar.** Lo que hace el animal se cuenta con emociones de persona ("fingía estar esforzándose", "eructó para no arruinar la hermandad"). Preguntas abiertas a la mitad ("¿Podría esta amistad durar mucho tiempo?"), giros cada 10-15 s y el peligro al final.
 - **Para Khipu** (no tenemos grabaciones propias de animales y no reusamos las ajenas): narrar así a nuestros personajes FLUX de animales, células o bacterias ("Esta bacteria acaba de nacer… y ya tiene enemigos"), estilo Kurzgesagt con cara y carácter.
+
+## TikTok de @katirelabs sobre «Homo Curioso» (29 oct)
+- Vende una herramienta (otra vez "comenta la palabra"). Muestra el canal **Homo Curioso**: prehistoria con un cavernícola de palitos, 15 000 suscriptores y unas 800 000 vistas en una semana; el TikTok dice que gana casi 3 000 dólares al mes (no verificado). Títulos: "¿Y si no te bañas?", "Sin ropa…", "¿El invierno no acaba?", "¿Primer país?".
+- Su método es el mismo que adoptamos: canal ganador → video más popular → transcripción + capturas como referencia → guion propio → imágenes en lote → montaje automático.
+- **Consistencia:** le pasan al generador de imágenes (Google Flow) **capturas de referencia** para que todo salga con el mismo estilo. Nosotros lo resolvemos con el personaje dibujado en código y fondos FLUX con un prompt de estilo fijo.
+- **Técnica nueva:** a la mitad del video, una pregunta en pantalla ("Pero antes de seguir, una pregunta rápida: ¿crees que…?"). Despierta al que se estaba yendo y provoca comentarios. Para usar en los largos.
