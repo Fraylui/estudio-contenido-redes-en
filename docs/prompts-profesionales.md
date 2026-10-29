@@ -87,3 +87,4 @@ SD-Turbo es rápido pero chico: deforma **manos, caras pequeñas, multitudes y c
   3. **Escenas con acción** del personaje: misma descripción fija + pose nueva; si la cara cambia, se usa la ficha recortada en `capas` encima del fondo.
   4. Revisar en grande: manos, cuerpos fundidos, letras, que sea el mismo personaje.
 - **Dónde se usa:** historias con personajes (leyendas, Biblia sin rostro de Jesús ni de Dios, historia, psicología con personaje fijo). Los temas épicos y de objetos siguen en `epico`.
+7. **Control final en tamaño real (lección del 29 oct: la abuela de Inca Kola pasó con dedos fundidos, letras en el vaso y manos de más abajo):** cada imagen elegida se mira **sola y a tamaño completo**, no en la hoja chica. Cualquier mano visible se revisa dedo por dedo; si hay duda, se descarta. En los prompts: "hands out of frame" o "hands resting out of view", y vasos y botellas "plain, no label".
