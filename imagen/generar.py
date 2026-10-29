@@ -83,7 +83,14 @@ def generar_flux(prompt: str, salida: Path, args) -> None:
     url = (f"https://api.cloudflare.com/client/v4/accounts/{os.environ['CLOUDFLARE_ACCOUNT_ID']}"
            "/ai/run/@cf/black-forest-labs/flux-1-schnell")
     proporcion = args.ancho / args.alto
-    for i in range(args.variantes):
+    # Cuota gratis ≈ 80 imágenes/día: 2 variantes solo si hay personas o animales (donde FLUX falla);
+    # objetos, paisajes y edificios salen bien a la primera → 1 sola, copiada como variante 2 para la hoja.
+    import re, shutil
+    vivos = re.search(r"\b(man|men|woman|women|people|person|crowd|child|children|boy|girl|face|faces|doctor|player|players|"
+                      r"soldier|soldiers|worker|family|friends|commentators|fans|figure|rider|donkey|horse|baker|businessmen|"
+                      r"grandmother|scholar|portrait|hands?)\b", prompt, re.I)
+    n = args.variantes if vivos else 1
+    for i in range(n):
         t0 = time.time()
         cuerpo = json.dumps({"prompt": prompt, "steps": 4, "seed": args.semilla * 1000 + i + 1}).encode()
         pedido = urllib.request.Request(url, data=cuerpo, headers={
@@ -107,6 +114,10 @@ def generar_flux(prompt: str, salida: Path, args) -> None:
         destino.parent.mkdir(parents=True, exist_ok=True)
         img.save(destino)
         print(f"{destino} ({time.time() - t0:.0f} s, FLUX)", flush=True)
+    if n < args.variantes:
+        primera = salida.with_name(f"{salida.stem}-1{salida.suffix}")
+        for i in range(n, args.variantes):
+            shutil.copy(primera, salida.with_name(f"{salida.stem}-{i + 1}{salida.suffix}"))
 
 
 def main():
