@@ -78,3 +78,12 @@ SD-Turbo es rápido pero chico: deforma **manos, caras pequeñas, multitudes y c
 2. **El fondo solo, sin personas** ("empty, no people").
 3. **Unirlos en Remotion con `capas`** (el personaje recortado encima del fondo, con sombra suave y el mismo color de luz). Mismo personaje en todas las escenas = consistencia total.
 4. Para otras poses o emociones del mismo personaje: **img2img desde su ficha** (fuerza baja, 0,35–0,5), así no cambia la cara.
+
+## Estilos 2D que suben de nivel: manhwa y anime (decidido el 29 oct, con FLUX)
+- `--estilo manhwa` (coreano semi-realista) y `--estilo anime` (japonés moderno) en `imagen/generar.py`. Solo con FLUX: SD-Turbo los ensucia.
+- **Flujo por historia (4 capas + generar por separado):**
+  1. **Ficha de cada personaje** con `--estilo ficha` (cuerpo entero, fondo magenta que se vuelve transparente solo). 4 variantes, elegir 1 y guardarla en `public/assets/personajes/`. Su descripción fija (edad, rasgos, ropa con color y material) se copia igual en todos sus prompts.
+  2. **Fondos sin personas** con `--estilo manhwa` o `anime` ("empty scene, no people").
+  3. **Escenas con acción** del personaje: misma descripción fija + pose nueva; si la cara cambia, se usa la ficha recortada en `capas` encima del fondo.
+  4. Revisar en grande: manos, cuerpos fundidos, letras, que sea el mismo personaje.
+- **Dónde se usa:** historias con personajes (leyendas, Biblia sin rostro de Jesús ni de Dios, historia, psicología con personaje fijo). Los temas épicos y de objetos siguen en `epico`.

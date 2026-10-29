@@ -44,6 +44,15 @@ ESTILOS = {
                      "physically based materials, rich textures, dramatic studio rim light, sharp focus, no text, no letters"),
     "epico": ("{p}, epic cinematic matte painting, dramatic volumetric lighting, god rays, atmospheric haze, highly detailed, "
               "realistic, rich warm colors, strong depth, no text, no letters, no watermark"),
+    # 2D que "sube de nivel" (pedido del usuario el 29 oct; usar con FLUX, SD-Turbo los ensucia).
+    # Sistema de 4 capas: {p} = personaje (rasgos fijos + ropa + pose) + objeto + lugar; aquí va el acabado.
+    "manhwa": ("{p}, korean manhwa webtoon illustration, semi-realistic human proportions, clean closed lineart, "
+               "soft cel shading, limited color palette, cinematic composition, one clear subject, no text"),
+    "anime": ("{p}, modern japanese anime illustration, detailed expressive eyes, clean closed lineart, soft cel shading, "
+              "vibrant colors, studio quality key visual, one clear subject, no text"),
+    # Ficha de personaje: solo, cuerpo entero, fondo liso magenta para recortarlo perfecto
+    "ficha": ("{p}, full body character sheet, standing, front view, centered, isolated on a flat solid magenta background, "
+              "clean closed lineart, soft cel shading, no shadows on background, no text"),
     "foto": "{p}, photo, natural light, high detail",
     "ninguno": "{p}",
 }
@@ -84,7 +93,12 @@ def generar_flux(prompt: str, salida: Path, args) -> None:
             nw = round(h * proporcion); img = img.crop(((w - nw) // 2, 0, (w - nw) // 2 + nw, h))
         elif proporcion > 1:
             nh = round(w / proporcion); img = img.crop((0, (h - nh) // 2, w, (h - nh) // 2 + nh))
-        if args.sin_fondo:
+        if args.estilo == "ficha":  # fondo magenta → transparente (recorte limpio del personaje)
+            a = np.array(img.convert("RGBA"))
+            magenta = (a[..., 0] > 170) & (a[..., 2] > 170) & (a[..., 1] < 110)
+            a[magenta, 3] = 0
+            img = Image.fromarray(a)
+        elif args.sin_fondo:
             img = quitar_fondo(img)
         destino = salida if args.variantes == 1 else salida.with_name(f"{salida.stem}-{i + 1}{salida.suffix}")
         destino.parent.mkdir(parents=True, exist_ok=True)
