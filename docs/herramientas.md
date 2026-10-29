@@ -97,3 +97,8 @@ Para que se vean cosas **reales**: el lugar como es hoy, un cuadro antiguo, un m
 - **Manhwa / webtoon semi-realista** (coreano: proporciones humanas, línea limpia, sombras suaves) y **anime moderno** (japonés).
 - **Para quién:** series con personajes que vuelven (historias, leyendas, psicología con personaje fijo) y Shorts para el público joven.
 - **Lo que falta:** SD-Turbo hace líneas sucias en 2D. Hay que probar un modelo de anime o manhwa **gratis y con licencia que permita uso comercial** (revisar la licencia de cada uno antes de usarlo; muchos son OpenRAIL o "Fair AI Public License" con condiciones), con el sistema de 4 capas: personaje sobre fondo blanco, ficha del personaje, fondo aparte y unión con capas. El disco y la máquina tienen que estar libres (un modelo XL ocupa unos 7 GB).
+
+## FLUX en Cloudflare: límite real (medido el 29 oct)
+- El uso gratis diario (10 000 "neuronas") alcanzó para **unas 80 imágenes** de 1024×1024 a 4 pasos, no 170 como decía la calculadora.
+- **Se reinicia a las 00:00 UTC = 19:00 de Lima.** Planificar: las imágenes del día siguiente se generan apenas se reinicia.
+- Presupuesto por día: 4 Shorts × 10 tomas × 2 variantes = 80 → **no alcanza también para un video largo el mismo día**. El video largo (50 tomas) usa la cuota de otro día, o 1 variante por toma en las de objetos y paisajes.
