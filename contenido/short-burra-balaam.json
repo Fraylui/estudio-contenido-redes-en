@@ -129,7 +129,8 @@
     "resaltar": "ojos",
     "fondo": "ia:bal-08-ve",
     "sonido": "hooks/angelic-swell-presentation",
-    "sonidoEn": 0.05
+    "sonidoEn": 0.05,
+    "silencio": true
    },
    {
     "dibujo": {

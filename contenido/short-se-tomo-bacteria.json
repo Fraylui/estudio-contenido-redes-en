@@ -99,7 +99,8 @@
     "resaltar": "él mismo",
     "fondo": "ia:bm-05-espejo",
     "sonido": "hooks/deep-heartbeat-impact",
-    "sonidoEn": 0.05
+    "sonidoEn": 0.05,
+    "silencio": true
    },
    {
     "dibujo": {

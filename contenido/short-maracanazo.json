@@ -116,7 +116,8 @@
     },
     "texto": "Silencio",
     "resaltar": "Silencio",
-    "fondo": "ia:mar-07-mudo"
+    "fondo": "ia:mar-07-mudo",
+    "silencio": true
    },
    {
     "dibujo": {

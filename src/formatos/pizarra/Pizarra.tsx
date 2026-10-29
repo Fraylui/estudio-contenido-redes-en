@@ -32,6 +32,8 @@ export const pizarraSchema = z.object({
       // Solo en momentos clave: un sonido en cada escena cansa al oído.
       sonido: z.string().optional(),
       sonidoEn: z.number().optional(),
+      // El momento más fuerte: la música se corta del todo durante la escena (lección del Short de los 7 sellos)
+      silencio: z.boolean().optional(),
       // Etiqueta de sección ("Paso 2 de 5", "La ciencia"…): se queda arriba hasta que otra escena la cambie
       etiqueta: z.string().optional(),
       // Fondo de la escena: "papel", un color de la paleta ("cielo", "mostaza", "menta", "durazno", "lila", "blanco")
@@ -269,11 +271,34 @@ const contar = (texto: string, f: number, fps: number) => {
 };
 
 // Música de fondo que se aparta cuando habla la voz (ducking): baja bajo la voz y sube un poco en las pausas
+// Golpe: cuando suena un impacto, toda la escena (fondo incluido) tiembla 12 cuadros y hay un destello blanco de 3 cuadros
+const esGolpe = (id: string) => id === "boom" || /impact|hit|explosion/.test(id);
+const Golpe: React.FC<{ en: number; children: React.ReactNode }> = ({ en, children }) => {
+  const frame = useCurrentFrame();
+  const t0 = en >= 0 ? Math.round(en * FPS) : -1;
+  const k = t0 >= 0 && frame >= t0 && frame < t0 + 12 ? 1 - (frame - t0) / 12 : 0;
+  const destello = t0 >= 0 && frame >= t0 && frame < t0 + 3 ? 0.55 * (1 - (frame - t0) / 3) : 0;
+  return (
+    <AbsoluteFill style={{ translate: `${k * 16 * Math.sin(frame * 2.7)}px ${k * 16 * Math.cos(frame * 3.3)}px`, scale: `${1 + 0.03 * k}` }}>
+      {children}
+      {destello > 0 ? <AbsoluteFill style={{ backgroundColor: "white", opacity: destello }} /> : null}
+    </AbsoluteFill>
+  );
+};
+
 // Los MP3 se dejan a −20 LUFS (scripts/bajar-musica.sh); la voz está a −14 LUFS
 const MUSICA_PAUSA = 0.4; // ≈ −28 LUFS en las pausas
 const MUSICA_VOZ = 0.2; // ≈ −34 LUFS, 20 dB bajo la voz: se siente, pero no tapa ni una palabra
-const volumenMusica = (f: number, frases: { inicio: number; fin: number }[], total: number) => {
+const volumenMusica = (f: number, frases: { inicio: number; fin: number }[], total: number, silencios: [number, number][] = []) => {
   const t = f / FPS;
+  const callado = silencios.reduce(
+    (m, [a, b]) => Math.max(m, interpolate(t, [a - 0.15, a, b - 0.1, b + 0.4], [0, 1, 1, 0], { extrapolateLeft: "clamp", extrapolateRight: "clamp" })),
+    0,
+  );
+  if (callado > 0) return volumenMusicaBase(t, frases, f, total) * (1 - callado);
+  return volumenMusicaBase(t, frases, f, total);
+};
+const volumenMusicaBase = (t: number, frases: { inicio: number; fin: number }[], f: number, total: number) => {
   const enVoz = frases.reduce(
     (m, fr) => Math.max(m, interpolate(t, [fr.inicio - 0.3, fr.inicio, fr.fin, fr.fin + 0.5], [0, 1, 1, 0], { extrapolateLeft: "clamp", extrapolateRight: "clamp" })),
     0,
@@ -313,6 +338,12 @@ export const Pizarra: React.FC<Props> = ({ escenas, voz, frasesVoz, musica, ganc
     }
     return e.fondo ?? ORDEN_FONDOS[(conSecciones ? seccion : Math.floor(i / 4)) % ORDEN_FONDOS.length];
   });
+  const silencios: [number, number][] = [];
+  escenas.reduce((t, e) => {
+    const s = e.segundos ?? 4;
+    if (e.silencio) silencios.push([t, t + s]);
+    return t + s;
+  }, 0);
   return (
     <AbsoluteFill>
       <Papel />
@@ -322,9 +353,11 @@ export const Pizarra: React.FC<Props> = ({ escenas, voz, frasesVoz, musica, ganc
         desde += duracion;
         return (
           <Sequence key={i} from={inicio} durationInFrames={duracion}>
-            {e.mapa ? <Mapa {...e.mapa} duracion={duracion} /> : <Fondo nombre={fondos[i]} camara={e.camara ?? CAMARAS[i % CAMARAS.length]} duracion={duracion} />}
-            {e.capas?.map((c, k) => <Capa key={k} {...c} duracion={duracion} />)}
-            <Escena {...e} indice={i} />
+            <Golpe en={e.sonido && esGolpe(e.sonido) ? (e.sonidoEn ?? 0.6) : -1}>
+              {e.mapa ? <Mapa {...e.mapa} duracion={duracion} /> : <Fondo nombre={fondos[i]} camara={e.camara ?? CAMARAS[i % CAMARAS.length]} duracion={duracion} />}
+              {e.capas?.map((c, k) => <Capa key={k} {...c} duracion={duracion} />)}
+              <Escena {...e} indice={i} />
+            </Golpe>
             {(() => {
               const nueva = e.etiqueta !== undefined && e.etiqueta !== etiqueta;
               etiqueta = e.etiqueta ?? etiqueta;
@@ -356,7 +389,7 @@ export const Pizarra: React.FC<Props> = ({ escenas, voz, frasesVoz, musica, ganc
       {gancho && height > width ? <Gancho texto={gancho} /> : null}
       {voz ? <Audio src={staticFile(voz)} /> : null}
       {musica ? (
-        <Audio src={staticFile(musica)} loop volume={(f) => volumenMusica(f, frasesVoz ?? [], durationInFrames)} />
+        <Audio src={staticFile(musica)} loop volume={(f) => volumenMusica(f, frasesVoz ?? [], durationInFrames, silencios)} />
       ) : null}
     </AbsoluteFill>
   );

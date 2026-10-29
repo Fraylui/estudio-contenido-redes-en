@@ -109,7 +109,8 @@
     "resaltar": "37",
     "fondo": "ia:ia37-06-piedra",
     "sonido": "hooks/big-cinematic-impact",
-    "sonidoEn": 0.05
+    "sonidoEn": 0.05,
+    "silencio": true
    },
    {
     "dibujo": {
