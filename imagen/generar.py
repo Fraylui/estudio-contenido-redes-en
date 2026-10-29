@@ -16,6 +16,7 @@ Los prompts van en inglés: el modelo los entiende mucho mejor.
 Licencia: Stability AI Community License (ver imagen/instalar.sh).
 """
 import argparse
+import os
 import time
 from pathlib import Path
 
@@ -64,6 +65,33 @@ def quitar_fondo(img: Image.Image, tolerancia: int = 38) -> Image.Image:
     return Image.fromarray(rgba, "RGBA")
 
 
+def generar_flux(prompt: str, salida: Path, args) -> None:
+    """FLUX devuelve 1024x1024: se recorta al formato pedido (vertical u horizontal) sin bajar la resolución."""
+    import base64, io, json, urllib.request
+    url = (f"https://api.cloudflare.com/client/v4/accounts/{os.environ['CLOUDFLARE_ACCOUNT_ID']}"
+           "/ai/run/@cf/black-forest-labs/flux-1-schnell")
+    proporcion = args.ancho / args.alto
+    for i in range(args.variantes):
+        t0 = time.time()
+        cuerpo = json.dumps({"prompt": prompt, "steps": 8, "seed": args.semilla * 1000 + i + 1}).encode()
+        pedido = urllib.request.Request(url, data=cuerpo, headers={
+            "Authorization": f"Bearer {os.environ['CLOUDFLARE_API_TOKEN']}", "Content-Type": "application/json"})
+        with urllib.request.urlopen(pedido, timeout=120) as r:
+            datos = json.load(r)
+        img = Image.open(io.BytesIO(base64.b64decode(datos["result"]["image"]))).convert("RGB")
+        w, h = img.size
+        if proporcion < 1:
+            nw = round(h * proporcion); img = img.crop(((w - nw) // 2, 0, (w - nw) // 2 + nw, h))
+        elif proporcion > 1:
+            nh = round(w / proporcion); img = img.crop((0, (h - nh) // 2, w, (h - nh) // 2 + nh))
+        if args.sin_fondo:
+            img = quitar_fondo(img)
+        destino = salida if args.variantes == 1 else salida.with_name(f"{salida.stem}-{i + 1}{salida.suffix}")
+        destino.parent.mkdir(parents=True, exist_ok=True)
+        img.save(destino)
+        print(f"{destino} ({time.time() - t0:.0f} s, FLUX)", flush=True)
+
+
 def main():
     ap = argparse.ArgumentParser()
     ap.add_argument("prompt")
@@ -77,10 +105,14 @@ def main():
     ap.add_argument("--alto", type=int, default=512)
     args = ap.parse_args()
 
-    torch.set_num_threads(torch.get_num_threads())
-    pipe = AutoPipelineForText2Image.from_pretrained("stabilityai/sd-turbo", torch_dtype=torch.float32)
     prompt = ESTILOS[args.estilo].format(p=args.prompt)
     salida = Path(args.salida)
+    # FLUX.1 [schnell] (Apache 2.0) en Cloudflare Workers AI: mucho mejor en manos, caras y cuerpos.
+    # Se usa solo si están CLOUDFLARE_ACCOUNT_ID y CLOUDFLARE_API_TOKEN; KHIPU_MOTOR=sd fuerza SD-Turbo.
+    if os.environ.get("CLOUDFLARE_API_TOKEN") and os.environ.get("KHIPU_MOTOR") != "sd":
+        return generar_flux(prompt, salida, args)
+    torch.set_num_threads(torch.get_num_threads())
+    pipe = AutoPipelineForText2Image.from_pretrained("stabilityai/sd-turbo", torch_dtype=torch.float32)
     for i in range(args.variantes):
         t0 = time.time()
         img = pipe(prompt=prompt, num_inference_steps=args.pasos, guidance_scale=0.0, width=args.ancho,
