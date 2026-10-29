@@ -29,3 +29,21 @@ http://creativecommons.org/licenses/by/4.0/
 ```
 
 Los MP3 no se suben al repositorio (pesan): se bajan con `scripts/bajar-musica.sh`.
+| suspenso-crypto.mp3 ("Crypto") | Suspenso | Misterios, experimentos arriesgados |
+| oscuro-darkest-child.mp3 ("Darkest Child") | Oscuro | Leyendas de terror, Apocalipsis |
+| tension-volatile.mp3 ("Volatile Reaction") | Tensión creciente | Persecuciones, cuentas regresivas |
+| misterio-hidden-agenda.mp3 ("Hidden Agenda") | Intriga | Secretos, conspiraciones históricas |
+| triste-anguish.mp3 ("Anguish") | Triste | Tragedias, muertes |
+| emotivo-dreams.mp3 ("Dreams Become Real") | Emotivo, esperanza | Finales que inspiran |
+| emotivo-healing.mp3 ("Healing") | Calma emotiva | Fe, superación, cuerpo y salud |
+| inspirador-inspired.mp3 ("Inspired") | Inspirador | Personajes, descubrimientos |
+| solemne-rites.mp3 ("Rites") | Solemne, antiguo | Biblia, rituales, mundo antiguo |
+| epico-prelude-action.mp3 ("Prelude and Action") | Épica con acción | Deportes, batallas, hazañas |
+| aventura-sneaky.mp3 ("Sneaky Adventure") | Aventura traviesa | Animales, curiosidades |
+| suave-gymnopedie.mp3 ("Gymnopedie No 1", Satie) | Muy suave | Psicología, reflexión |
+| tranquilo-enchanted-valley.mp3 ("Enchanted Valley") | Tranquilo, mágico | Lugares, naturaleza |
+| alegre-wholesome.mp3 ("Wholesome") | Alegre | Hábitos, comida, marcas |
+| noche-lightless-dawn.mp3 ("Lightless Dawn") | Nocturno, misterio | Universo, noche, misterios |
+| ciencia-ice-flow.mp3 ("Ice Flow") | Moderno, fluido | Ciencia, tecnología, IA |
+
+**Regla:** no repetir el mismo tema dos veces el mismo día ni en Shorts seguidos de la misma serie.
