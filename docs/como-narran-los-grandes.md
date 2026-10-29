@@ -358,3 +358,8 @@ Con `scripts/investigar-youtube.py`. Desde este servidor, YouTube y Tactiq bloqu
   - Ifverse publica uno cada 2 días, de 6 a 12 min. Cuando un tema pega, saca la secuela ("500 de IQ" → "500 de IQ para desaparecer" → "500 de IQ para salvar a tu hermana"). Junta las partes en una "película completa" de 21-24 min y ahora repite los mismos videos en inglés. "Reacción 10× más rápida": 4,2 M; "500 de IQ": 1,1 M.
   - Gorrito Sobrevive hace videos de 16 a 51 min con el tiempo o el lugar en el título ("24 horas para salir del megamercado", "30 días hasta que se derrita la nieve") y temas de temporada (Black Friday, Halloween).
   - Del video largo no se puede leer el contenido desde el servidor: hay que pedir la transcripción al usuario.
+
+## «Esta lombriz recién cumplió 18 años» (TikTok, 3:51, 29 oct; llegó cortado, solo los primeros 1:47)
+- Grabación real de lombrices en tierra, narrada como un drama humano: mayoría de edad, hermanos de sangre, trampa, comida compartida, pelea, cada uno por su lado. Texto fijo arriba con el gancho.
+- **Técnica: humanizar.** Lo que hace el animal se cuenta con emociones de persona ("fingía estar esforzándose", "eructó para no arruinar la hermandad"). Preguntas abiertas a la mitad ("¿Podría esta amistad durar mucho tiempo?"), giros cada 10-15 s y el peligro al final.
+- **Para Khipu** (no tenemos grabaciones propias de animales y no reusamos las ajenas): narrar así a nuestros personajes FLUX de animales, células o bacterias ("Esta bacteria acaba de nacer… y ya tiene enemigos"), estilo Kurzgesagt con cara y carácter.
