@@ -13,8 +13,7 @@ ffmpeg -v error -y -ss "$A" -t "$D" -i "$ENT" -filter_complex "\
 [a]scale=1080:1920:force_original_aspect_ratio=increase,crop=1080:1920,boxblur=28:4,eq=brightness=-0.28:saturation=0.8[fondo];\
 [b]scale=1080:-2,setsar=1[centro];\
 [fondo][centro]overlay=0:(H-h)/2,\
-drawbox=x=0:y=0:w=1080:h=150:color=0xC8961E@0.95:t=fill,\
-drawtext=fontfile=$F:text='KHIPU':fontsize=64:fontcolor=white:x=(w-tw)/2:y=42,\
+drawtext=fontfile=$F:text='KHIPU':fontsize=46:fontcolor=white@0.85:borderw=3:bordercolor=black@0.6:x=(w-tw)/2:y=150,\
 drawtext=fontfile=$F:text='$G1':fontsize=78:fontcolor=white:borderw=6:bordercolor=black:x=(w-tw)/2:y=330,\
 drawtext=fontfile=$F:text='$G2':fontsize=78:fontcolor=0xFFD23F:borderw=6:bordercolor=black:x=(w-tw)/2:y=430,\
 drawtext=fontfile=$F:text='Historia completa en el canal':fontsize=44:fontcolor=white:borderw=4:bordercolor=black:x=(w-tw)/2:y=1500,\
