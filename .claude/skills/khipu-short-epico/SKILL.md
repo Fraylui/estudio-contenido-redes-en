@@ -3,6 +3,7 @@ name: khipu-short-epico
 description: Hacer de corrido un Short o un video largo de Khipu (fondos 2D de FLUX + personaje fijo de Khipu dibujado en código, cámara 2.5D, voz según la categoría) con un solo comando que se puede retomar - guion, fondos, elegir, nitidez, profundidad, voz, render, control de calidad, subir y programar en Metricool. Usar para cada Short o video largo nuevo, en la tarea diaria, o cuando haya que rehacer uno.
 ---
 
+**Biblioteca de fondos:** `python3 scripts/biblioteca-fondos.py <palabras>` busca fondos ya hechos para reusarlos (ahorra cuota de FLUX); `docs/biblioteca-fondos.md` tiene la lista.
 **Obligatorio: repasar `docs/lista-de-control.md` antes del guion y antes de programar (resume todo lo analizado).**
 
 # Short o video largo de corrido

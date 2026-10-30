@@ -19,6 +19,7 @@ Se revisa ANTES de escribir el guion y OTRA VEZ antes de programar. Viene del an
 - [ ] Shorts: 25-45 s (una historia en escalera hasta 60-70 s). Largos: 8-12 min.
 
 ## 3. Imagen (2D, nada realista)
+- [ ] Antes de pedir fondos nuevos: `python3 scripts/biblioteca-fondos.py <palabras>` y reusar los 2D que sirvan (lugares genéricos: cielo, mar, desierto, biblioteca). Nunca copiar la misma secuencia de escenas de otro video. Al terminar, regenerar `docs/biblioteca-fondos.md`.
 - [ ] Fondos FLUX `fondo2d`: colores vivos, una paleta por video. Solo describir lo que SÍ va (nombrar lo prohibido hace que FLUX lo dibuje) y no nombrar lugares famosos con imagen moderna (Jerusalén, Belén).
 - [ ] Protagonista fijo de Khipu con cara, pose y vestuario según el momento, pisando el piso del fondo (que no flote).
 - [ ] Escenas con varios personajes o acciones: monitos simples dibujados por FLUX dentro de la escena (en prueba desde el 30 oct).
