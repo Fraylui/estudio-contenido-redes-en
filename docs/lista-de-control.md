@@ -35,6 +35,10 @@ Se revisa ANTES de escribir el guion y OTRA VEZ antes de programar. Viene del an
 - [ ] Objetos de la época: si el personaje lleva lanza en el camino, la sigue llevando en la escena siguiente del mismo lugar.
 - [ ] Revisar la hoja completa de fondos junta: si uno desentona en estilo o color, se rehace.
 
+### Marcas en miniaturas y primer cuadro (pedido del usuario, 30 oct)
+- [ ] Si el video es de una marca conocida, se tiene que reconocer al instante: sus colores, la forma del producto y el nombre escrito grande con nuestra tipografía (Inca Kola amarilla contra Coca-Cola oscura, frente a frente).
+- [ ] No pegar los logos oficiales tal cual: son obras protegidas y podrían traer reclamos o problemas con la monetización. Se nombra la marca con texto propio y se dibuja el producto genérico (uso informativo).
+
 ## 4. Sonido
 - [ ] Música de Kevin MacLeod distinta en cada video del día, bajo la voz.
 - [ ] Golpe de sonido al gancho, silencio en el clímax, ambiente en las escenas de lugar.
