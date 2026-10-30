@@ -25,6 +25,13 @@ Se revisa ANTES de escribir el guion y OTRA VEZ antes de programar. Viene del an
 - [ ] Una imagen nueva cada 2-3 s (mismo fondo, otro encuadre, pose o lado).
 - [ ] Revisar cada imagen a tamaño completo: sin letras inventadas, sin cosas de otra época (cúpulas, cruces, uniformes, monedas), sin cuerpos deformes.
 
+### Consistencia visual (pedido del usuario, 30 oct)
+- [ ] `"_paleta"` en imagen/tomas/<n>.json: la misma paleta, luz y grosor de contorno en todos los fondos del video (se agrega sola a cada prompt).
+- [ ] Mismo lugar = mismo fondo (no generar dos versiones distintas del mismo sitio); la hora del día sigue la historia (no salta de noche a mediodía sin motivo).
+- [ ] El personaje siempre igual (código) y del mismo tamaño en la misma escena; los compañeros más chicos (36 %) y sin bufanda-quipu.
+- [ ] Objetos de la época: si el personaje lleva lanza en el camino, la sigue llevando en la escena siguiente del mismo lugar.
+- [ ] Revisar la hoja completa de fondos junta: si uno desentona en estilo o color, se rehace.
+
 ## 4. Sonido
 - [ ] Música de Kevin MacLeod distinta en cada video del día, bajo la voz.
 - [ ] Golpe de sonido al gancho, silencio en el clímax, ambiente en las escenas de lugar.

@@ -33,7 +33,8 @@ if toca tomas; then
   log "1/7 tomas"
   for t in $(tomas); do
     [ -f "public/assets/ia/$t.jpg" ] || [ -f "$VAR/$t-2.png" ] && continue
-    p=$(python3 -c "import json,sys;print(json.load(open(sys.argv[1]))[sys.argv[2]])" "$TOMAS" "$t")
+    # "_paleta" (30 oct): la misma paleta y luz en todos los fondos del video, para que se vean como una sola historia
+    p=$(python3 -c "import json,sys;d=json.load(open(sys.argv[1]));print(d[sys.argv[2]]+(', '+d['_paleta'] if d.get('_paleta') else ''))" "$TOMAS" "$t")
     flock /tmp/khipu-imagenes.lock nice -n 5 imagen/.venv/bin/python imagen/generar.py "$p" "$VAR/$t.png" \
       --estilo $ESTILO --ancho $ANCHO --alto $ALTO --pasos 4 --variantes 2 2>&1 | grep -v -i "warn\|resource" | tail -1
   done
