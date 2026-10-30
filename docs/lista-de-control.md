@@ -2,6 +2,7 @@
 Se revisa ANTES de escribir el guion y OTRA VEZ antes de programar. Viene del análisis de CuriosaMente, Infonimados, Ifverse, Axen, Gorrito Sobrevive, Homo Curioso, la mafia por niveles, las lombrices, Kurzgesagt y Origen en Trazos (detalle en `como-narran-los-grandes.md`), y de nuestros propios datos (`mejora-continua.md`).
 
 ## 1. Tema
+- [ ] Fechas del año: Todos los Santos y Día de Muertos (1-2 nov), Navidad, Año Nuevo, Semana Santa, fiestas patrias. Publicar 1-3 días antes.
 - [ ] Sale de algo que ya pegó (`scripts/buscar-pegados.py` o enlace del usuario) y se leyó su transcripción. Se copia el tema, nunca el guion.
 - [ ] Tiene que ver con la vida diaria del espectador o la pone en una situación ("¿Y si…?", "Tú en…", "¿Qué hacían los antiguos cuando…?").
 - [ ] Ángulo propio: tema latino, bíblico o dato que los otros no cuentan (no ser otra copia, como Origen en Trazos con 16 suscriptores).
@@ -39,7 +40,7 @@ Se revisa ANTES de escribir el guion y OTRA VEZ antes de programar. Viene del an
 
 ## 5. Miniatura y título (largos)
 - [ ] Personaje grande con emoción fuerte, 0-3 palabras gigantes, colores vivos, un contraste que se entienda sin leer (peligro/seguridad, antiguo/moderno). 3 versiones para la prueba de YouTube.
-- [ ] Título con lo que la gente busca, como pregunta o paradoja ("Si X, ¿por qué Y?").
+- [ ] Título con lo que la gente busca (`python3 scripts/buscar-titulos.py "<tema>"`: sugerencias reales del buscador de YouTube), como pregunta o paradoja ("Si X, ¿por qué Y?").
 
 ## 6. Después de publicar
 - [ ] 2-3 recortes de cada largo que lleven al video completo; recordar al usuario enlazarlos como "video relacionado".
