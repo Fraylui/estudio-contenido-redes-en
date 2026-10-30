@@ -96,7 +96,8 @@ def generar_flux(prompt: str, salida: Path, args) -> None:
     n = args.variantes if vivos else 1
     for i in range(n):
         t0 = time.time()
-        cuerpo = json.dumps({"prompt": prompt, "steps": 4, "seed": args.semilla * 1000 + i + 1}).encode()
+        # Desde el 29 oct Cloudflare rechaza "seed" (error 5006): cada pedido sale distinto por sí solo
+        cuerpo = json.dumps({"prompt": prompt, "steps": 4}).encode()
         pedido = urllib.request.Request(url, data=cuerpo, headers={
             "Authorization": f"Bearer {os.environ['CLOUDFLARE_API_TOKEN']}", "Content-Type": "application/json"})
         with urllib.request.urlopen(pedido, timeout=120) as r:
