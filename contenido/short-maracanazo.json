@@ -77,7 +77,7 @@
     },
     "texto": "Ya eran campeones",
     "resaltar": "campeones",
-    "fondo": "ia:mar-03-diarios"
+    "fondo": "ia:mar-02-estadio"
    },
    {
     "dibujo": {
@@ -96,7 +96,7 @@
     },
     "texto": "Ghiggia corrió",
     "resaltar": "Ghiggia",
-    "fondo": "ia:mar-05-carrera",
+    "fondo": "ia:mar-06-pelota",
     "sonido": "hooks/cinematic-transition-swoosh-heartbeat-trailer",
     "sonidoEn": 0.05
    },

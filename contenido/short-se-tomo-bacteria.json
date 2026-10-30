@@ -89,7 +89,7 @@
     },
     "texto": "Nadie le creyó",
     "resaltar": "creyó",
-    "fondo": "ia:bm-04-rechazo"
+    "fondo": "ia:bm-02-lab"
    },
    {
     "dibujo": {
@@ -134,7 +134,7 @@
     },
     "texto": "Nobel 2005",
     "resaltar": "Nobel",
-    "fondo": "ia:bm-09-nobel",
+    "fondo": "ia:bm-10-final",
     "sonido": "hooks/angelic-swell-presentation",
     "sonidoEn": 0.05
    },
