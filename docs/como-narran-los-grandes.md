@@ -382,3 +382,8 @@ Con `scripts/investigar-youtube.py`. Desde este servidor, YouTube y Tactiq bloqu
 - **16 suscriptores** aunque sube **un video de 12 a 14 min todos los días** desde hace semanas. Copia a Axen en todo: prehistoria, monigote cavernícola, miniatura con cara exagerada y pregunta amarilla ("¿EL PRIMER PAN?").
 - **Lección:** copiar el formato no basta, y publicar mucho tampoco. El nicho de la prehistoria con monigotes ya tiene imitadores en español. Lo que nos diferencia: personaje propio, temas latinos (incas, Andes, Amazonía), datos con fuente, ganchos con "tú" y medir lo que pega antes de repetirlo.
 - Fórmula de título que vale la pena: la **paradoja** "Si X, ¿por qué Y?" ("Si un elefante da tanta carne, ¿por qué criamos vacas?", "Si conquistar daba tanta riqueza, ¿por qué los imperios se arruinaban?").
+
+## «Ink Explainer» (@Inkexplainer96, inglés, 30 oct)
+- **154 000 suscriptores con solo 19 videos**, de 9 a 15 min, uno cada 1-2 semanas. Mismo nicho y estilo que Axen (vida diaria de los humanos antiguos, monigote cavernícola, miniatura «NO JOBS» con el personaje relajado y 2 palabras amarillas).
+- Comparado con Origen en Trazos (copia en español, 16 suscriptores con un video diario): **el nicho funciona, y ganan los que lo hacen con calidad y pocos videos muy cuidados, no los que suben mucho**. Ink Explainer publica poco y cada video es largo y pulido.
+- Para Khipu: la calidad de cada video largo vale más que la cantidad. Confirma el plan de 2 largos por semana bien hechos. Y el público en inglés de este nicho es enorme: a futuro, versión en inglés de nuestros largos que peguen.
