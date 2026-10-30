@@ -50,6 +50,9 @@ export const RemotionRoot: React.FC = () => {
         <Still id="KhipuEnEscena" component={KhipuEnEscena} width={1080} height={1920} />
         <Still id="MiniaturaKhipu" component={MiniaturaKhipu} schema={miniaturaKhipuSchema} width={1280} height={720}
           defaultProps={{ fondo: "ata05-caminos", texto: "¿25 AÑOS?", cara: "asustado", pose: "arriba", vestuario: "romano" }} />
+        {/* Portada vertical de un Short (para subirla en la app de YouTube si deja cambiarla) */}
+        <Still id="MiniaturaShortKhipu" component={MiniaturaKhipu} schema={miniaturaKhipuSchema} width={1080} height={1920}
+          defaultProps={{ fondo: "ata05-caminos", texto: "INCA KOLA vs COCA-COLA", cara: "sorprendido", pose: "arriba", vestuario: "base" }} />
       </Folder>
       <Still id="LogoCanal" component={LogoCanal} width={800} height={800} />
       <Still id="BannerCanal" component={BannerCanal} width={2560} height={1440} />
