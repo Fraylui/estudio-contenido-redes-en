@@ -3,6 +3,8 @@ name: khipu-short-epico
 description: Hacer de corrido un Short o un video largo de Khipu en formato "tomas épicas" (una historia narrada con una imagen épica por momento, cámara 2.5D, voz según la categoría) con un solo comando que se puede retomar - guion, tomas, elegir, nitidez, profundidad, voz, render, control de calidad, subir y programar en Metricool. Usar para cada Short o video largo nuevo, en la tarea diaria, o cuando haya que rehacer uno.
 ---
 
+**Obligatorio: repasar `docs/lista-de-control.md` antes del guion y antes de programar (resume todo lo analizado).**
+
 # Short épico de corrido
 
 Todo el proceso es **un comando**: `bash scripts/short-epico.sh <nombre>`. Hace solo los pasos que faltan, así que si el servidor se reinicia se vuelve a correr igual. Los pasos pesados usan candados: nunca hay dos generadores de imágenes ni dos voces a la vez.
