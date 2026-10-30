@@ -177,3 +177,9 @@ Siempre **público** (el canal es para monetizar), con Metricool: solo YouTube, 
   - Vestuarios: base, romano, inca, biblico, explorador. Se agregan más en `Khipu.tsx` cuando la historia lo pida.
 - Fondo: `"fondo": "ia:<nombre>"`, hecho con `imagen/generar.py --estilo fondo2d` (sin personas, 1 variante). El mismo fondo se repite en varias escenas cambiando cara, pose, lado (`x`, `espejo`) y encuadre: un corte cada 2-3 s sin gastar cuota.
 - Para mostrar a Jesús o a Dios nunca se usa una cara: luz o silueta de espaldas.
+- **Más capacidades del personaje (30 oct):**
+  - `"accion"`: `camina` (avanza con las piernas en tijera), `corre` (más rápido e inclinado), `tiembla` (miedo), `salta` (alegría).
+  - `"objeto"`: lanza, espada, escudo, pergamino, antorcha o bolsa en la mano.
+  - **Boca con la voz:** render-lote calcula el volumen de la voz por cuadro (`bocaVoz`) y el protagonista abre la boca al ritmo de la narración (`"habla": false` para callarlo).
+  - `"extras"`: otros personajes en la misma escena (soldados, familia, multitud), con el mismo dibujo pero sin la bufanda-quipu, que es solo del protagonista: `[{"x": 70, "vestuario": "romano", "cara": "decidido", "objeto": "escudo", "accion": "camina"}]`.
+  - Todos pisan el piso (abajo al 11 % en vertical y al 4 % en horizontal).

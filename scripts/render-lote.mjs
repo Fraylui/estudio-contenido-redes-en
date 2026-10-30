@@ -65,6 +65,19 @@ for (const archivo of archivos) {
     props.duracionVoz = tiemposVoz.duracion;
     // Los anuncios usan los tiempos de cada frase para sincronizar sus escenas
     props.frasesVoz = tiemposVoz.frases.map(({ inicio, fin }) => ({ inicio, fin }));
+    // Boca del personaje: volumen de la voz por cuadro (30 fps), de 0 a 1, para que hable al ritmo de la narración
+    if (formato === "Pizarra") {
+      const pcm = execFileSync("ffmpeg", ["-v", "error", "-i", `public/voz/${nombre}.wav`, "-ac", "1", "-ar", "9000", "-f", "s16le", "-"], { maxBuffer: 1 << 30 });
+      const muestras = new Int16Array(pcm.buffer, pcm.byteOffset, Math.floor(pcm.length / 2));
+      const porCuadro = 300, boca = [];
+      for (let i = 0; i < muestras.length; i += porCuadro) {
+        let suma = 0;
+        for (let j = i; j < Math.min(i + porCuadro, muestras.length); j++) suma += muestras[j] * muestras[j];
+        boca.push(Math.sqrt(suma / porCuadro) / 32768);
+      }
+      const tope = [...boca].sort((a, b) => a - b)[Math.floor(boca.length * 0.95)] || 1;
+      props.bocaVoz = boca.map((v) => Math.round(Math.min(1, v / tope) * 100) / 100);
+    }
   }
   const rutaProps = join("out/.props", archivo);
   writeFileSync(rutaProps, JSON.stringify(props));

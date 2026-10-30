@@ -3,7 +3,7 @@
 import { Audio } from "@remotion/media";
 import { getBoundingBox, getLength } from "@remotion/paths";
 import { loadFont } from "@remotion/fonts";
-import { useEffect, useMemo, useState } from "react";
+import { createContext, useContext, useEffect, useMemo, useState } from "react";
 import { z } from "zod";
 import { lightLeak } from "@remotion/effects/light-leak";
 import {
@@ -16,7 +16,7 @@ import catalogoSfx from "../../../public/sfx/efectos/sfx.json";
 // Biblioteca grande de Mixkit (scripts/bajar-sfx.py): "hooks/cinematic-whoosh-deep-impact", "historia/…", "naturaleza/…"
 import bibliotecaSfx from "../../../public/sfx/biblioteca/catalogo.json";
 import { CON_PROFUNDIDAD } from "./profundidad.gen";
-import { Khipu } from "../../personajes/Khipu";
+import { Khipu, type CaraKhipu, type ObjetoKhipu, type PoseKhipu, type VestuarioKhipu } from "../../personajes/Khipu";
 
 loadFont({ family: "Mano", url: staticFile("fuentes/PatrickHand.woff2") });
 
@@ -78,11 +78,26 @@ export const pizarraSchema = z.object({
         pose: z.enum(["abajo", "senala", "arriba", "pensando", "cadera"]).optional(),
         vestuario: z.enum(["base", "romano", "inca", "biblico", "explorador"]).optional(),
         x: z.number().optional(), alto: z.number().optional(), espejo: z.boolean().optional(),
+        // Movimiento en la escena (30 oct): caminar, correr, temblar de miedo o saltar de alegría
+        accion: z.enum(["quieto", "camina", "corre", "tiembla", "salta"]).optional(),
+        objeto: z.enum(["lanza", "escudo", "pergamino", "antorcha", "bolsa", "espada"]).optional(),
+        habla: z.boolean().optional(), // por defecto habla (boca con la voz); false si en la escena "no es él" quien narra
       }).optional(),
+      // Otros personajes de la escena (soldados, familia, multitud): mismo dibujo sin la bufanda-quipu
+      extras: z.array(z.object({
+        cara: z.enum(["normal", "feliz", "asustado", "enojado", "triste", "decidido", "sorprendido"]).optional(),
+        pose: z.enum(["abajo", "senala", "arriba", "pensando", "cadera"]).optional(),
+        vestuario: z.enum(["base", "romano", "inca", "biblico", "explorador"]).optional(),
+        objeto: z.enum(["lanza", "escudo", "pergamino", "antorcha", "bolsa", "espada"]).optional(),
+        x: z.number(), alto: z.number().optional(), espejo: z.boolean().optional(),
+        accion: z.enum(["quieto", "camina", "corre", "tiembla", "salta"]).optional(),
+      })).optional(),
     }),
   ),
   voz: z.string().optional(),
   frasesVoz: z.array(z.object({ inicio: z.number(), fin: z.number() })).optional(),
+  // Volumen de la voz por cuadro (0-1, lo calcula render-lote): el personaje mueve la boca al ritmo de la narración
+  bocaVoz: z.array(z.number()).optional(),
   musica: z.string().optional(),
   // Shorts: título gancho fijo arriba durante todo el video ("¿POR QUÉ GASTAS MÁS CON TARJETA?")
   gancho: z.string().optional(),
@@ -92,6 +107,7 @@ export const pizarraSchema = z.object({
 
 type Props = z.infer<typeof pizarraSchema>;
 const FPS = 30;
+const BocaVoz = createContext<{ boca: number[]; inicio: number }>({ boca: [], inicio: 0 });
 
 // Partículas en bucle (lluvia, polvo, chispas, nieve, brasas): cada una con semilla fija, cae o sube y vuelve a empezar
 const PARTICULAS = {
@@ -332,7 +348,7 @@ export const calcularPizarra: CalculateMetadataFunction<Props> = ({ props }) => 
   };
 };
 
-export const Pizarra: React.FC<Props> = ({ escenas, voz, frasesVoz, musica, gancho, tono }) => {
+export const Pizarra: React.FC<Props> = ({ escenas, voz, frasesVoz, bocaVoz, musica, gancho, tono }) => {
   const { durationInFrames, width, height } = useVideoConfig();
   let desde = 0;
   let etiqueta: string | undefined;
@@ -365,7 +381,7 @@ export const Pizarra: React.FC<Props> = ({ escenas, voz, frasesVoz, musica, ganc
             <Golpe en={e.sonido && esGolpe(e.sonido) ? (e.sonidoEn ?? 0.6) : -1}>
               {e.mapa ? <Mapa {...e.mapa} duracion={duracion} /> : <Fondo nombre={fondos[i]} camara={e.camara ?? CAMARAS[i % CAMARAS.length]} duracion={duracion} />}
               {e.capas?.map((c, k) => <Capa key={k} {...c} duracion={duracion} />)}
-              <Escena {...e} indice={i} />
+              <BocaVoz.Provider value={{ boca: bocaVoz ?? [], inicio }}><Escena {...e} indice={i} /></BocaVoz.Provider>
             </Golpe>
             {(() => {
               const nueva = e.etiqueta !== undefined && e.etiqueta !== etiqueta;
@@ -667,7 +683,7 @@ const Papel: React.FC = () => (
   </AbsoluteFill>
 );
 
-const Escena: React.FC<Props["escenas"][number] & { indice?: number }> = ({ dibujo, texto, resaltar, segundos, sonido, sonidoEn, silueta, barras, globo, antesDespues, khipu, indice = 0 }) => {
+const Escena: React.FC<Props["escenas"][number] & { indice?: number }> = ({ dibujo, texto, resaltar, segundos, sonido, sonidoEn, silueta, barras, globo, antesDespues, khipu, extras, indice = 0 }) => {
   const frame = useCurrentFrame();
   const { width, height } = useVideoConfig();
   const horizontal = width > height;
@@ -711,16 +727,10 @@ const Escena: React.FC<Props["escenas"][number] & { indice?: number }> = ({ dibu
           : antesDespues ? <AntesDespues a={antesDespues[0]} b={antesDespues[1]} duracion={total} />
           : <Dibujo dibujo={resolverDibujo(dibujo)} duracion={total} adelanto={indice === 0 ? 100000 : 0} />}
       </div>
-      {khipu ? (
-        // Entra subiendo con rebote (salvo en la primera escena, que ya arranca armada) y cambia de encuadre con la toma
-        <div style={{
-          position: "absolute", left: `${khipu.x ?? 30}%`, bottom: horizontal ? "6%" : "17%",
-          transform: `translateX(-50%) translateY(${indice === 0 ? 0 : interpolate(spring({ frame, fps: FPS, config: { damping: 12 } }), [0, 1], [height * 0.5, 0])}px) scale(${segundaToma ? 1.08 : 1})`,
-          transformOrigin: "bottom center", filter: "drop-shadow(0 0 3px rgba(255,255,255,0.75))",
-        }}>
-          <Khipu cara={khipu.cara} pose={khipu.pose} vestuario={khipu.vestuario} espejo={khipu.espejo} alto={(height * (khipu.alto ?? 45)) / 100} />
-        </div>
-      ) : null}
+      {extras?.map((x, k) => (
+        <Actor key={k} {...x} frame={frame} total={total} indice={indice} horizontal={horizontal} height={height} segundaToma={segundaToma} secundario />
+      ))}
+      {khipu ? <Actor {...khipu} x={khipu.x ?? 30} frame={frame} total={total} indice={indice} horizontal={horizontal} height={height} segundaToma={segundaToma} habla={khipu.habla !== false} /> : null}
       {globo ? <Globo texto={globo} frame={frame} horizontal={horizontal} /> : null}
       {silueta ? (
         <AbsoluteFill style={{ backgroundColor: "#ffffff", pointerEvents: "none",
@@ -733,6 +743,35 @@ const Escena: React.FC<Props["escenas"][number] & { indice?: number }> = ({ dibu
         <Texto texto={texto} resaltar={resaltar} duracion={indice === 0 ? 0 : total * 0.5} tamano={horizontal ? 64 : esToma ? 58 : 76} />
       </div>
     </AbsoluteFill>
+  );
+};
+
+// Un personaje parado sobre el piso del fondo: entra con rebote, camina, corre, tiembla o salta, y mueve la boca con la voz
+const Actor: React.FC<{
+  cara?: CaraKhipu; pose?: PoseKhipu; vestuario?: VestuarioKhipu; objeto?: ObjetoKhipu; x: number; alto?: number; espejo?: boolean;
+  accion?: "quieto" | "camina" | "corre" | "tiembla" | "salta"; frame: number; total: number; indice: number; horizontal: boolean;
+  height: number; segundaToma: boolean; secundario?: boolean; habla?: boolean;
+}> = ({ cara, pose, vestuario, objeto, x, alto, espejo, accion = "quieto", frame, total, indice, horizontal, height, segundaToma, secundario, habla }) => {
+  const { boca, inicio } = useContext(BocaVoz);
+  const abre = habla && !secundario ? boca[inicio + frame] ?? 0 : 0;
+  const entra = indice === 0 ? 1 : spring({ frame, fps: FPS, config: { damping: 12 } });
+  const anda = accion === "camina" || accion === "corre";
+  const vel = accion === "corre" ? 0.55 : 0.28;
+  const recorrido = accion === "corre" ? 30 : accion === "camina" ? 14 : 0; // % del ancho que avanza en la escena
+  const dir = espejo ? -1 : 1;
+  const dx = interpolate(frame, [0, total], [-recorrido / 2, recorrido / 2]) * dir;
+  const rebote = anda ? -Math.abs(Math.sin(frame * vel)) * (accion === "corre" ? 22 : 10)
+    : accion === "salta" ? -Math.abs(Math.sin(frame * 0.18)) * 90 : 0;
+  const tiembla = accion === "tiembla" ? Math.sin(frame * 2.3) * 5 : 0;
+  return (
+    <div style={{
+      position: "absolute", left: `${x + dx}%`, bottom: horizontal ? "4%" : "11%",
+      transform: `translateX(-50%) translate(${tiembla}px, ${interpolate(entra, [0, 1], [height * 0.5, 0]) + rebote}px) rotate(${accion === "corre" ? 6 * dir : 0}deg) scale(${segundaToma ? 1.08 : 1})`,
+      transformOrigin: "bottom center", filter: "drop-shadow(0 0 3px rgba(255,255,255,0.75))",
+    }}>
+      <Khipu cara={cara} pose={pose} vestuario={vestuario} objeto={objeto} espejo={espejo} secundario={secundario}
+        alto={(height * (alto ?? (secundario ? 36 : 45))) / 100} habla={abre} paso={anda ? frame * vel : undefined} />
+    </div>
   );
 };
 

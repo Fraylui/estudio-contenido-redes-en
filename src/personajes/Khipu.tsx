@@ -7,6 +7,7 @@ import { interpolate, useCurrentFrame } from "remotion";
 export type CaraKhipu = "normal" | "feliz" | "asustado" | "enojado" | "triste" | "decidido" | "sorprendido";
 export type PoseKhipu = "abajo" | "senala" | "arriba" | "pensando" | "cadera";
 export type VestuarioKhipu = "base" | "romano" | "inca" | "biblico" | "explorador";
+export type ObjetoKhipu = "lanza" | "escudo" | "pergamino" | "antorcha" | "bolsa" | "espada";
 
 const TINTA = "#1d1b1a";
 const T = 7; // grosor del contorno
@@ -19,7 +20,7 @@ const ROPA: Record<VestuarioKhipu, { tunica: string; borde: string }> = {
   explorador: { tunica: "#8a6a3d", borde: "#6b512c" },
 };
 
-const Cara: React.FC<{ cara: CaraKhipu; parpadeo: number }> = ({ cara, parpadeo }) => {
+const Cara: React.FC<{ cara: CaraKhipu; parpadeo: number; habla: number }> = ({ cara, parpadeo, habla }) => {
   const ojoY = 98;
   const ojos = (() => {
     if (cara === "feliz")
@@ -69,9 +70,14 @@ const Cara: React.FC<{ cara: CaraKhipu; parpadeo: number }> = ({ cara, parpadeo 
     <g>
       {ojos}
       <path d={cejas[cara]} stroke={TINTA} strokeWidth={6} strokeLinecap="round" fill="none" />
-      <g stroke={TINTA} strokeWidth={5} strokeLinecap="round" fill="none">
-        {bocas[cara]}
-      </g>
+      {/* Mientras habla, la boca se abre según el volumen de la voz (no en las caras que ya tienen la boca abierta) */}
+      {habla > 0.08 && cara !== "asustado" && cara !== "sorprendido" ? (
+        <ellipse cx={100} cy={130} rx={8 + habla * 6} ry={3 + habla * 11} fill={TINTA} />
+      ) : (
+        <g stroke={TINTA} strokeWidth={5} strokeLinecap="round" fill="none">
+          {bocas[cara]}
+        </g>
+      )}
       {cara === "asustado" && <path d="M150 74 q8 14 0 20 q-8 -6 0 -20" fill="#7cc4f0" stroke={TINTA} strokeWidth={3} />}
       {cara === "triste" && <path d="M78 110 q5 10 0 14 q-5 -4 0 -14" fill="#7cc4f0" stroke={TINTA} strokeWidth={3} />}
       {(cara === "feliz" || cara === "normal") && (
@@ -140,6 +146,17 @@ const Sombrero: React.FC<{ v: VestuarioKhipu }> = ({ v }) => {
   return null;
 };
 
+// Objeto en la mano derecha (coordenadas de la mano de cada pose)
+const Objeto: React.FC<{ o: ObjetoKhipu; x: number; y: number }> = ({ o, x, y }) => {
+  const g = { stroke: TINTA, strokeWidth: 5, strokeLinejoin: "round" as const };
+  if (o === "lanza") return <g {...g}><path d={`M${x} ${y + 90} L${x} ${y - 150}`} strokeWidth={8} /><path d={`M${x - 12} ${y - 140} L${x} ${y - 185} L${x + 12} ${y - 140} z`} fill="#c9ccd1" /></g>;
+  if (o === "espada") return <g {...g}><path d={`M${x} ${y} L${x + 8} ${y - 95}`} strokeWidth={11} stroke="#c9ccd1" /><path d={`M${x - 16} ${y - 4} L${x + 18} ${y - 8}`} strokeWidth={8} /></g>;
+  if (o === "escudo") return <g {...g}><rect x={x - 38} y={y - 60} width={76} height={110} rx={12} fill="#b3262b" /><circle cx={x} cy={y - 5} r={13} fill="#d9a63a" /></g>;
+  if (o === "pergamino") return <g {...g}><rect x={x - 26} y={y - 34} width={52} height={60} fill="#f1e2bd" /><rect x={x - 32} y={y - 40} width={64} height={11} rx={5} fill="#c9a66b" /><rect x={x - 32} y={y + 22} width={64} height={11} rx={5} fill="#c9a66b" /></g>;
+  if (o === "antorcha") return <g {...g}><path d={`M${x} ${y + 40} L${x} ${y - 40}`} strokeWidth={10} stroke="#6b4a2b" /><path d={`M${x} ${y - 90} q-24 30 0 50 q24 -20 0 -50`} fill="#ff9a1f" /></g>;
+  return <g {...g}><path d={`M${x - 24} ${y + 4} q24 -30 48 0 l6 44 q-30 12 -60 0 z`} fill="#a07c48" /><path d={`M${x - 12} ${y - 2} h24`} /></g>;
+};
+
 export const Khipu: React.FC<{
   cara?: CaraKhipu;
   pose?: PoseKhipu;
@@ -147,7 +164,11 @@ export const Khipu: React.FC<{
   alto?: number; // alto en píxeles
   animado?: boolean; // respira y parpadea
   espejo?: boolean; // mira a la izquierda
-}> = ({ cara = "normal", pose = "abajo", vestuario = "base", alto = 600, animado = true, espejo = false }) => {
+  habla?: number; // 0-1: apertura de la boca según el volumen de la voz
+  paso?: number; // fase de caminar (radianes); undefined = quieto
+  objeto?: ObjetoKhipu;
+  secundario?: boolean; // otro personaje de la escena: sin la bufanda-quipu (esa es solo del protagonista)
+}> = ({ cara = "normal", pose = "abajo", vestuario = "base", alto = 600, animado = true, espejo = false, habla = 0, paso, objeto, secundario = false }) => {
   const f = useCurrentFrame();
   const respira = animado ? Math.sin(f / 14) * 3 : 0;
   const parpadeo = animado ? interpolate(f % 96, [0, 3, 6], [1, 0.1, 1], { extrapolateRight: "clamp" }) : 1;
@@ -157,14 +178,15 @@ export const Khipu: React.FC<{
     <svg viewBox="-50 -20 300 460" height={alto} style={{ overflow: "visible", transform: espejo ? "scaleX(-1)" : undefined }}>
       <ellipse cx={100} cy={420} rx={70} ry={12} fill="#000" opacity={0.22} />
       {/* piernas */}
-      <g stroke={TINTA} strokeWidth={14} strokeLinecap="round" fill="none">
-        <path d="M84 320 l-8 92" />
-        <path d="M116 320 l8 92" />
-      </g>
-      <g fill={vestuario === "romano" || vestuario === "inca" ? "#5a3f1f" : TINTA}>
-        <ellipse cx={70} cy={414} rx={18} ry={9} />
-        <ellipse cx={130} cy={414} rx={18} ry={9} />
-      </g>
+      {[[84, -8, 1], [116, 8, -1]].map(([x, dx, lado], i) => {
+        const giro = paso === undefined ? 0 : Math.sin(paso) * 26 * lado; // piernas en tijera al caminar
+        return (
+          <g key={i} transform={`rotate(${giro} ${x} 320)`}>
+            <path d={`M${x} 320 l${dx} 92`} stroke={TINTA} strokeWidth={14} strokeLinecap="round" fill="none" />
+            <ellipse cx={x + dx * 1.75} cy={414} rx={18} ry={9} fill={vestuario === "romano" || vestuario === "inca" ? "#5a3f1f" : TINTA} />
+          </g>
+        );
+      })}
       <g transform={`translate(0 ${respira})`}>
         {/* túnica */}
         <path
@@ -184,7 +206,7 @@ export const Khipu: React.FC<{
           </g>
         )}
         {/* bufanda-quipu: el sello del personaje en todas las épocas */}
-        <g stroke={TINTA} strokeWidth={4}>
+        <g stroke={TINTA} strokeWidth={4} opacity={secundario ? 0 : 1}>
           <path d="M70 182 q30 14 60 0 l2 12 q-32 16 -64 0 z" fill="#d63a2f" />
           {[
             [92, "#d63a2f"],
@@ -203,12 +225,13 @@ export const Khipu: React.FC<{
           <path d={bi} />
           <path d={bd} />
         </g>
+        {objeto ? <Objeto o={objeto} x={MANOS[pose][1][0]} y={MANOS[pose][1][1]} /> : null}
         {MANOS[pose].map(([x, y], i) => (
           <circle key={i} cx={x} cy={y} r={11} fill="#fff" stroke={TINTA} strokeWidth={5} />
         ))}
         {/* cabeza */}
         <circle cx={100} cy={100} r={68} fill="#fffaf2" stroke={TINTA} strokeWidth={T} />
-        <Cara cara={cara} parpadeo={parpadeo} />
+        <Cara cara={cara} parpadeo={parpadeo} habla={habla} />
         <Sombrero v={vestuario} />
       </g>
     </svg>
