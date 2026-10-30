@@ -35,7 +35,7 @@ import torchaudio as ta
 from chatterbox.mtl_tts import ChatterboxMultilingualTTS
 
 SR = 48000
-INICIO, PAUSA, FINAL = 0.3, 0.35, 0.5
+INICIO, PAUSA, FINAL = 0.05, 0.35, 0.5  # 30 oct: la voz arranca en el primer cuadro (el 58 % deslizaba en el primer instante)
 # exageracion: intensidad de la emoción · cfg: más alto = más pausado y fiel al texto · tempo: velocidad final
 # tono: qué grabación de referencia usar ("alegre" o "seria")
 ESTILOS = {
