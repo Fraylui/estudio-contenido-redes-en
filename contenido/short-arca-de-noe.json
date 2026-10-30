@@ -12,56 +12,64 @@
   }
  },
  "props": {
-  "gancho": "¿CUÁNTO MEDÍA EL ARCA?",
+  "gancho": "DESPIERTAS Y ERES NOÉ",
   "musica": "musica/solemne-rites.mp3",
   "tono": "calido",
   "narracion": [
    {
-    "texto": "Si el arca de Noé existiera hoy, no cabría en una cancha de fútbol.",
+    "texto": "Despiertas… y eres Noé.",
     "estilo": "narrador"
    },
    {
-    "texto": "El Génesis da sus medidas: trescientos codos de largo, cincuenta de ancho y treinta de alto.",
+    "texto": "Según el Génesis, te llega una orden: construye un arca, porque va a llover como nunca.",
     "estilo": "narrador"
    },
    {
-    "texto": "Un codo era la distancia del codo a la punta de los dedos: unos cuarenta y cinco centímetros.",
+    "texto": "Y te dan las medidas exactas: trescientos codos de largo, cincuenta de ancho y treinta de alto.",
     "estilo": "narrador"
    },
    {
-    "texto": "Haz la cuenta: unos ciento treinta y cinco metros de largo.",
+    "texto": "Mides con tu brazo: un codo va del codo a la punta de los dedos. Unos cuarenta y cinco centímetros.",
     "estilo": "narrador"
    },
    {
-    "texto": "Más largo que una cancha de fútbol profesional, que mide unos ciento cinco.",
+    "texto": "Haces la cuenta… ciento treinta y cinco metros de largo. Más que una cancha de fútbol.",
     "estilo": "narrador"
    },
    {
-    "texto": "Y unos trece metros de alto: como un edificio de cuatro pisos.",
+    "texto": "Cortas árboles, levantas andamios, y tu arca crece hasta la altura de un edificio de cuatro pisos.",
     "estilo": "narrador"
    },
    {
-    "texto": "Es casi la mitad del Titanic, uno de los barcos más grandes de su época.",
+    "texto": "Tus vecinos te miran construir un barco gigante… en tierra seca.",
     "estilo": "narrador"
    },
    {
-    "texto": "Y su forma no era la de un barco: era una caja enorme, hecha para flotar, no para navegar.",
+    "texto": "Y no es un barco para navegar: es una caja enorme, hecha solo para flotar.",
     "estilo": "narrador"
    },
    {
-    "texto": "En Kentucky, Estados Unidos, construyeron una réplica de tamaño real. Mide ciento cincuenta y cinco metros.",
+    "texto": "Llega el día. Subes a tu familia, y a los animales, de dos en dos.",
     "estilo": "narrador"
    },
    {
-    "texto": "Según el relato, dentro iban Noé, su familia y parejas de animales.",
+    "texto": "Cierras la puerta. Y empieza a llover.",
     "estilo": "narrador"
    },
    {
-    "texto": "Y entonces empezó a llover.",
+    "texto": "Según el relato, llueve cuarenta días y cuarenta noches.",
     "estilo": "narrador"
    },
    {
-    "texto": "Dime: ¿tú habrías subido… o te habrías quedado mirando?",
+    "texto": "Miles de años después, en Kentucky, alguien construyó tu arca en tamaño real: ciento cincuenta y cinco metros.",
+    "estilo": "narrador"
+   },
+   {
+    "texto": "Casi la mitad del Titanic.",
+    "estilo": "narrador"
+   },
+   {
+    "texto": "Ahora dime: si fueras Noé… ¿le habrías hecho caso?",
     "estilo": "narrador"
    }
   ],
@@ -70,17 +78,32 @@
     "dibujo": {
      "iconos": []
     },
-    "texto": "No cabe en una cancha",
-    "resaltar": "cancha",
-    "fondo": "ia:arca-cancha",
+    "texto": "Despiertas y eres Noé",
+    "resaltar": "Noé",
+    "fondo": "ia:arca-amanecer",
     "khipu": {
      "cara": "sorprendido",
-     "pose": "senala",
+     "pose": "abajo",
      "vestuario": "biblico",
      "x": 30
     },
     "sonido": "hooks/cinematic-glass-hit-suspense",
     "sonidoEn": 0.05
+   },
+   {
+    "dibujo": {
+     "iconos": []
+    },
+    "texto": "Construye un arca",
+    "resaltar": "arca",
+    "fondo": "ia:arca-amanecer",
+    "khipu": {
+     "cara": "asustado",
+     "pose": "arriba",
+     "vestuario": "biblico",
+     "x": 65,
+     "espejo": true
+    }
    },
    {
     "dibujo": {
@@ -93,8 +116,8 @@
      "cara": "normal",
      "pose": "pensando",
      "vestuario": "biblico",
-     "x": 65,
-     "espejo": true
+     "x": 30,
+     "objeto": "pergamino"
     }
    },
    {
@@ -102,13 +125,14 @@
      "iconos": []
     },
     "texto": "1 codo ≈ 45 cm",
-    "resaltar": "45 cm",
+    "resaltar": "45",
     "fondo": "ia:arca-taller",
     "khipu": {
      "cara": "decidido",
      "pose": "senala",
      "vestuario": "biblico",
-     "x": 30
+     "x": 65,
+     "espejo": true
     }
    },
    {
@@ -117,30 +141,15 @@
     },
     "texto": "135 metros",
     "resaltar": "135",
-    "fondo": "ia:arca-construccion",
+    "fondo": "ia:arca-cancha",
     "khipu": {
      "cara": "sorprendido",
      "pose": "arriba",
      "vestuario": "biblico",
-     "x": 65,
-     "espejo": true
+     "x": 30
     },
     "sonido": "hooks/short-bass-hit",
-    "sonidoEn": 1.0
-   },
-   {
-    "dibujo": {
-     "iconos": []
-    },
-    "texto": "Más que 105 m",
-    "resaltar": "105",
-    "fondo": "ia:arca-cancha",
-    "khipu": {
-     "cara": "feliz",
-     "pose": "senala",
-     "vestuario": "biblico",
-     "x": 30
-    }
+    "sonidoEn": 2.0
    },
    {
     "dibujo": {
@@ -150,52 +159,54 @@
     "resaltar": "4 pisos",
     "fondo": "ia:arca-construccion",
     "khipu": {
-     "cara": "asustado",
-     "pose": "arriba",
+     "cara": "decidido",
+     "pose": "cadera",
      "vestuario": "biblico",
-     "x": 30
+     "x": 65,
+     "espejo": true,
+     "accion": "camina"
     }
    },
    {
     "dibujo": {
      "iconos": []
     },
-    "texto": "La mitad del Titanic",
-    "resaltar": "Titanic",
-    "fondo": "ia:arca-titanic",
+    "texto": "Un barco en tierra seca",
+    "resaltar": "tierra seca",
+    "fondo": "ia:arca-construccion",
     "khipu": {
-     "cara": "sorprendido",
+     "cara": "triste",
      "pose": "abajo",
      "vestuario": "biblico",
-     "x": 65,
-     "espejo": true
-    }
+     "x": 30
+    },
+    "extras": [
+     {
+      "cara": "feliz",
+      "pose": "senala",
+      "vestuario": "biblico",
+      "x": 64
+     },
+     {
+      "cara": "feliz",
+      "pose": "cadera",
+      "vestuario": "biblico",
+      "x": 84,
+      "espejo": true
+     }
+    ]
    },
    {
     "dibujo": {
      "iconos": []
     },
-    "texto": "Una caja que flota",
-    "resaltar": "caja",
-    "fondo": "ia:arca-mar",
+    "texto": "Una caja para flotar",
+    "resaltar": "flotar",
+    "fondo": "ia:arca-construccion",
     "khipu": {
-     "cara": "pensando",
+     "cara": "normal",
      "pose": "pensando",
      "vestuario": "biblico",
-     "x": 30
-    }
-   },
-   {
-    "dibujo": {
-     "iconos": []
-    },
-    "texto": "Réplica: 155 m",
-    "resaltar": "155",
-    "fondo": "ia:arca-replica",
-    "khipu": {
-     "cara": "feliz",
-     "pose": "arriba",
-     "vestuario": "biblico",
      "x": 65,
      "espejo": true
     }
@@ -204,8 +215,8 @@
     "dibujo": {
      "iconos": []
     },
-    "texto": "Familia y animales",
-    "resaltar": "animales",
+    "texto": "De dos en dos",
+    "resaltar": "dos",
     "fondo": "ia:arca-animales",
     "khipu": {
      "cara": "feliz",
@@ -222,7 +233,7 @@
      },
      {
       "cara": "normal",
-      "pose": "cadera",
+      "pose": "abajo",
       "vestuario": "biblico",
       "x": 82,
       "espejo": true
@@ -233,7 +244,7 @@
     "dibujo": {
      "iconos": []
     },
-    "texto": "Y empezó a llover",
+    "texto": "Y empieza a llover",
     "resaltar": "llover",
     "fondo": "ia:arca-lluvia",
     "khipu": {
@@ -244,14 +255,62 @@
     },
     "silencio": true,
     "particulas": "lluvia",
-    "ambiente": "naturaleza/rain-and-thunder-storm"
+    "ambiente": "naturaleza/rain-and-thunder-storm",
+    "sonido": "naturaleza/strong-close-thunder-explosion",
+    "sonidoEn": 1.4
    },
    {
     "dibujo": {
      "iconos": []
     },
-    "texto": "¿Subes o miras?",
-    "resaltar": "Subes",
+    "texto": "40 días y 40 noches",
+    "resaltar": "40",
+    "fondo": "ia:arca-mar",
+    "khipu": {
+     "cara": "triste",
+     "pose": "abajo",
+     "vestuario": "biblico",
+     "x": 65,
+     "espejo": true
+    },
+    "particulas": "lluvia",
+    "ambiente": "naturaleza/rain-long-loop"
+   },
+   {
+    "dibujo": {
+     "iconos": []
+    },
+    "texto": "Tu arca, en Kentucky",
+    "resaltar": "Kentucky",
+    "fondo": "ia:arca-replica",
+    "khipu": {
+     "cara": "feliz",
+     "pose": "arriba",
+     "vestuario": "biblico",
+     "x": 30
+    }
+   },
+   {
+    "dibujo": {
+     "iconos": []
+    },
+    "texto": "La mitad del Titanic",
+    "resaltar": "Titanic",
+    "fondo": "ia:arca-titanic",
+    "khipu": {
+     "cara": "sorprendido",
+     "pose": "senala",
+     "vestuario": "biblico",
+     "x": 65,
+     "espejo": true
+    }
+   },
+   {
+    "dibujo": {
+     "iconos": []
+    },
+    "texto": "¿Le habrías hecho caso?",
+    "resaltar": "caso",
     "fondo": "ia:arca-lluvia",
     "khipu": {
      "cara": "normal",
