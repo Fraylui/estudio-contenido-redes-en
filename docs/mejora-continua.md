@@ -244,3 +244,9 @@ Cada video nuevo que mande el usuario se analiza y lo útil entra en la etapa qu
 - **Largos:** se ven de 1:20 a 2:15 minutos y tienen de 5 a 55 vistas. Además duran 3-4 min (Atahualpa 3:05, Fleming 4:21), no los 8-12 acordados.
 - **Temas:** los que pasan de 1 000 vistas son de la vida diaria del espectador (lunes, despertar, 5 minutos más). Historia y Biblia sin conexión con el que mira se quedan en decenas.
 - **Qué falta:** (1) el primer segundo: imagen + frase que el espectador ya vivió, sin introducción; (2) Shorts de 25-35 s; (3) largos de 8-12 min de verdad, con miniatura de cara + conflicto; (4) cada historia empieza por "tú" (qué tiene que ver con tu vida); (5) un cambio visual cada 1-2 s en los Shorts.
+
+## Cómo responder comentarios (29 oct, con el usuario)
+- Responder todos los comentarios las primeras 24 h: la conversación hace que YouTube muestre más el video. Las respuestas las redacta Claude y el usuario las publica (no tenemos acceso a responder desde el servidor).
+- Siempre sobre el tema de nuestro video: corto (2-3 líneas), un dato con fuente y, si cabe, una pregunta que siga la charla.
+- Si el comentario se va a otro tema, una respuesta breve y amable que lo conecte con el video. Política y religión: neutral, sin discutir. Nunca pedir "suscríbete".
+- Si alguien corrige un dato y tiene razón, se reconoce y se agradece.
