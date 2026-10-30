@@ -91,7 +91,9 @@
      "cara": "feliz",
      "pose": "senala",
      "vestuario": "explorador",
-     "x": 30
+     "x": 30,
+     "objeto": "bolsa",
+     "accion": "camina"
     }
    },
    {
@@ -119,7 +121,8 @@
      "cara": "asustado",
      "pose": "arriba",
      "vestuario": "explorador",
-     "x": 35
+     "x": 35,
+     "accion": "tiembla"
     },
     "ambiente": "naturaleza/rough-sea-waves-loop"
    },
@@ -136,7 +139,16 @@
      "vestuario": "explorador",
      "x": 70,
      "espejo": true
-    }
+    },
+    "extras": [
+     {
+      "cara": "enojado",
+      "pose": "cadera",
+      "vestuario": "base",
+      "x": 30,
+      "objeto": "lanza"
+     }
+    ]
    },
    {
     "dibujo": {
@@ -150,7 +162,8 @@
      "pose": "abajo",
      "vestuario": "explorador",
      "x": 65,
-     "espejo": true
+     "espejo": true,
+     "accion": "tiembla"
     },
     "ambiente": "naturaleza/rough-sea-waves-loop"
    },
@@ -194,7 +207,8 @@
      "cara": "feliz",
      "pose": "arriba",
      "vestuario": "explorador",
-     "x": 30
+     "x": 30,
+     "accion": "salta"
     }
    },
    {
@@ -208,7 +222,8 @@
      "cara": "asustado",
      "pose": "arriba",
      "vestuario": "explorador",
-     "x": 35
+     "x": 35,
+     "accion": "tiembla"
     },
     "silencio": true,
     "sonido": "naturaleza/distant-thunder-explosion",
@@ -239,7 +254,9 @@
      "cara": "triste",
      "pose": "abajo",
      "vestuario": "explorador",
-     "x": 50
+     "x": 50,
+     "accion": "camina",
+     "objeto": "bolsa"
     }
    },
    {

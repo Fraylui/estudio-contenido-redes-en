@@ -106,7 +106,8 @@
      "cara": "sorprendido",
      "pose": "senala",
      "vestuario": "biblico",
-     "x": 30
+     "x": 30,
+     "objeto": "pergamino"
     }
    },
    {
@@ -121,7 +122,8 @@
      "pose": "pensando",
      "vestuario": "biblico",
      "x": 70,
-     "espejo": true
+     "espejo": true,
+     "objeto": "pergamino"
     },
     "ambiente": "naturaleza/campfire-crackles"
    },
@@ -167,7 +169,8 @@
      "cara": "feliz",
      "pose": "senala",
      "vestuario": "biblico",
-     "x": 30
+     "x": 30,
+     "accion": "salta"
     }
    },
    {
@@ -182,7 +185,8 @@
      "pose": "pensando",
      "vestuario": "biblico",
      "x": 68,
-     "espejo": true
+     "espejo": true,
+     "objeto": "pergamino"
     }
    },
    {
@@ -196,7 +200,8 @@
      "cara": "decidido",
      "pose": "senala",
      "vestuario": "biblico",
-     "x": 30
+     "x": 30,
+     "objeto": "pergamino"
     }
    },
    {
@@ -241,7 +246,8 @@
      "pose": "senala",
      "vestuario": "biblico",
      "x": 68,
-     "espejo": true
+     "espejo": true,
+     "objeto": "pergamino"
     }
    }
   ]
