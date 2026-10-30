@@ -27,3 +27,10 @@ Se actualiza en cada paso. Una sola cola: primero lo que sale antes, después lo
 - Vie 30: 7:00 jugada 37 (410749501) · 10:00 Fleming largo · 12:00 bacteria (410749532) · 16:00 Maracanazo (410749566) · **20:00 Jesús nació antes de Cristo** (410749592, primer Short con el personaje; reemplaza a Balaam, que se quedó sin cuota FLUX).
 - Sáb 31: 7:00 y 16:00 recortes · **12:00 Esperó 8 años (Le Gentil)** (410749632, personaje) · **20:00 burra de Balaam**: falta, se hace el viernes 19:07 con la cuota nueva.
 - Dom 1: 10:00 «Tú en el ejército romano» (largo-legionario: guion y voz listos, 7:58; faltan 20 fondos con la cuota del viernes) + recortes 7:00 y 16:00.
+
+## Cola para la cuota del viernes 30 (19:07 Lima), en este orden
+1. short-burra-balaam (2D, ~10 fondos) → sábado 20:00.
+2. short-dia-de-muertos (2D, 6 fondos, voz lista) → domingo 12:00.
+3. largo-legionario (2D, 20 fondos, voz lista, compañeros y objetos) → domingo 10:00. Título: «Cómo era ser soldado romano: de recluta a centurión» (lo más buscado). 3 miniaturas con MiniaturaKhipu.
+4. Si sobra cuota: prueba de escenas con monitos dibujados por FLUX (4 imágenes) para mostrar al usuario.
+Domingo 20:00 (Biblia) y lunes: pendientes de tema (buscar-pegados).
