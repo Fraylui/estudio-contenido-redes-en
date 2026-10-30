@@ -64,7 +64,14 @@
     "resaltar": "profeta",
     "fondo": "ia:bal-01-burra",
     "sonido": "hooks/cinematic-glass-hit-suspense",
-    "sonidoEn": 0.05
+    "sonidoEn": 0.05,
+    "khipu": {
+     "cara": "asustado",
+     "pose": "senala",
+     "vestuario": "biblico",
+     "x": 65,
+     "espejo": true
+    }
    },
    {
     "dibujo": {
@@ -73,7 +80,13 @@
     "texto": "Le pagaron para maldecir",
     "resaltar": "maldecir",
     "fondo": "ia:bal-02-balaam",
-    "ambiente": "naturaleza/wind-blowing-ambience"
+    "ambiente": "naturaleza/wind-blowing-ambience",
+    "khipu": {
+     "cara": "decidido",
+     "pose": "cadera",
+     "vestuario": "biblico",
+     "x": 30
+    }
    },
    {
     "dibujo": {
@@ -83,7 +96,13 @@
     "resaltar": "espada",
     "fondo": "ia:bal-03-angel",
     "sonido": "historia/medieval-metal-sword-blade",
-    "sonidoEn": 0.05
+    "sonidoEn": 0.05,
+    "khipu": {
+     "cara": "normal",
+     "pose": "abajo",
+     "vestuario": "biblico",
+     "x": 30
+    }
    },
    {
     "dibujo": {
@@ -91,7 +110,14 @@
     },
     "texto": "La burra sí lo vio",
     "resaltar": "burra",
-    "fondo": "ia:bal-04-campo"
+    "fondo": "ia:bal-04-campo",
+    "khipu": {
+     "cara": "enojado",
+     "pose": "senala",
+     "vestuario": "biblico",
+     "x": 65,
+     "espejo": true
+    }
    },
    {
     "dibujo": {
@@ -101,7 +127,13 @@
     "resaltar": "muros",
     "fondo": "ia:bal-05-muros",
     "sonido": "hooks/deep-heartbeat-impact",
-    "sonidoEn": 0.05
+    "sonidoEn": 0.05,
+    "khipu": {
+     "cara": "asustado",
+     "pose": "arriba",
+     "vestuario": "biblico",
+     "x": 30
+    }
    },
    {
     "dibujo": {
@@ -111,7 +143,14 @@
     "resaltar": "tres veces",
     "fondo": "ia:bal-06-suelo",
     "sonido": "hooks/big-cinematic-impact",
-    "sonidoEn": 0.05
+    "sonidoEn": 0.05,
+    "khipu": {
+     "cara": "enojado",
+     "pose": "cadera",
+     "vestuario": "biblico",
+     "x": 65,
+     "espejo": true
+    }
    },
    {
     "dibujo": {
@@ -119,7 +158,13 @@
     },
     "texto": "¿Qué te he hecho?",
     "resaltar": "hecho",
-    "fondo": "ia:bal-07-habla"
+    "fondo": "ia:bal-07-habla",
+    "khipu": {
+     "cara": "sorprendido",
+     "pose": "arriba",
+     "vestuario": "biblico",
+     "x": 30
+    }
    },
    {
     "dibujo": {
@@ -130,7 +175,14 @@
     "fondo": "ia:bal-08-ve",
     "sonido": "hooks/angelic-swell-presentation",
     "sonidoEn": 0.05,
-    "silencio": true
+    "silencio": true,
+    "khipu": {
+     "cara": "asustado",
+     "pose": "abajo",
+     "vestuario": "biblico",
+     "x": 65,
+     "espejo": true
+    }
    },
    {
     "dibujo": {
@@ -138,7 +190,13 @@
     },
     "texto": "Números 22",
     "resaltar": "22",
-    "fondo": "ia:bal-09-luz"
+    "fondo": "ia:bal-09-luz",
+    "khipu": {
+     "cara": "triste",
+     "pose": "pensando",
+     "vestuario": "biblico",
+     "x": 30
+    }
    },
    {
     "dibujo": {
@@ -146,7 +204,14 @@
     },
     "texto": "Fue la burra",
     "resaltar": "burra",
-    "fondo": "ia:bal-10-final"
+    "fondo": "ia:bal-10-final",
+    "khipu": {
+     "cara": "normal",
+     "pose": "pensando",
+     "vestuario": "biblico",
+     "x": 65,
+     "espejo": true
+    }
    }
   ]
  }

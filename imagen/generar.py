@@ -59,7 +59,7 @@ ESTILOS = {
     # Fondo para el personaje fijo de Khipu (plan del 29 oct, estilo Axen/Ifverse): escenario 2D plano y sin nadie,
     # el personaje lo pone Remotion encima. Una sola variante: sin personas FLUX no falla.
     "fondo2d": ("{p}, flat 2D cartoon background illustration, clean bold outlines, bright saturated colors, simple shapes, "
-                "wide empty scene, no people, no characters, no animals, no text"),
+                "wide scene, no people, no text"),
     "foto": "{p}, photo, natural light, high detail",
     "ninguno": "{p}",
 }

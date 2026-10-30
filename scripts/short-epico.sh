@@ -20,8 +20,8 @@ if [[ "$N" == largo-* ]]; then ANCHO=768; ALTO=448; FINAL=1920; LOTE="--horizont
 else ANCHO=448; ALTO=768; FINAL=1080; LOTE=""; SUF="Vertical"; fi
 log() { echo "[$N] $*"; }
 toca() { [[ -z "$SOLO" || "$SOLO" == "$1" ]]; }
-# Estilo de las tomas: "_estilo" en tomas.json (desde el 29 oct, "fondo2d" para videos con el personaje fijo)
-ESTILO=$(python3 -c "import json,sys;print(json.load(open(sys.argv[1])).get('_estilo','epico'))" "$TOMAS")
+# Estilo de las tomas: "_estilo" en tomas.json. Desde el 30 oct todo es "fondo2d" (pedido del usuario: nada realista)
+ESTILO=$(python3 -c "import json,sys;print(json.load(open(sys.argv[1])).get('_estilo','fondo2d'))" "$TOMAS")
 LISTA=$(python3 -c "import json,sys;[print(k) for k in json.load(open(sys.argv[1])) if not k.startswith('_')]" "$TOMAS")
 tomas() { echo "$LISTA"; }
 # Las escenas que reutilizan una toma de otro video no están en tomas.json: se revisa que exista

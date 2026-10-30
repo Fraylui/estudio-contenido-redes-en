@@ -32,3 +32,4 @@ Repositorio de producción de videos con Remotion: el canal de YouTube **Khipu**
 5. **Archivos de clientes y voces de referencia** nunca se suben (están en `.gitignore`); el repositorio es público. Una voz solo se clona con permiso.
 6. Los videos se suben a la rama `publicaciones` (menos de 100 MB) solo para que Metricool los descargue; nunca los de clientes.
 7. **Aprender siempre:** cada video estrena algo y deja lecciones en `docs/mejora-continua.md`.
+8. **Estilo visual (desde el 30 oct):** nada realista. Todo en 2D plano: fondos FLUX `fondo2d` y el personaje fijo de Khipu (`src/personajes/Khipu.tsx`). SD-Turbo no se usa.

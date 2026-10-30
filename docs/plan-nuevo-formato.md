@@ -28,3 +28,5 @@ Por qué: los Shorts se ven 3-7 s, los "largos" duraban 3-4 min y las imágenes 
 1. Viernes (cuota de las 19:00): los 4 Shorts del viernes ya en camino + **el personaje fijo de Khipu** en código + fondos de los Shorts del sábado.
 2. Sábado: Shorts Le Gentil (12:00) y Jesús histórico (20:00); guion y fondos del ejército romano.
 3. Domingo 10:00: «Tú en el ejército romano» + 2-3 recortes para la semana.
+
+**30 oct, regla del usuario:** desde ahora ningún video lleva imágenes realistas; todo es 2D plano (fondos `fondo2d` + personaje fijo). `short-epico.sh` usa `fondo2d` por defecto.
