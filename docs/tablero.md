@@ -34,3 +34,5 @@ Se actualiza en cada paso. Una sola cola: primero lo que sale antes, después lo
 3. largo-legionario (2D, 20 fondos, voz lista, compañeros y objetos) → domingo 10:00. Título: «Cómo era ser soldado romano: de recluta a centurión» (lo más buscado). 3 miniaturas con MiniaturaKhipu.
 4. Si sobra cuota: prueba de escenas con monitos dibujados por FLUX (4 imágenes) para mostrar al usuario.
 Domingo 20:00 (Biblia) y lunes: pendientes de tema (buscar-pegados).
+- Al lanzar la cola del viernes: `setsid nohup bash /tmp/claude-0/viernes-noche.sh` (Balaam, Día de Muertos, legionario, Noé, ibuprofeno, Jonás, sin dormir; ~75 fondos). Si se recrea el contenedor y falta el script, reescribirlo con ese orden.
+- Voces listas: Jonás (lun 20:00, 68,5 s) y «17 años sin dormir» (mar 12:00, 61,7 s), ya sin silencio inicial.
