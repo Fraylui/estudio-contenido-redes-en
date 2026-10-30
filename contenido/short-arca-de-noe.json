@@ -1,0 +1,266 @@
+{
+ "formato": "Pizarra",
+ "voz": {
+  "referencia": "voz/referencias/kokoro-alex.wav",
+  "pausa": 0.25,
+  "velocidad": 0.95,
+  "tono": "serio",
+  "pronunciacion": {
+   "Génesis": "Jénesis",
+   "Kentucky": "Kentáki",
+   "Titanic": "Titánic"
+  }
+ },
+ "props": {
+  "gancho": "¿CUÁNTO MEDÍA EL ARCA?",
+  "musica": "musica/solemne-rites.mp3",
+  "tono": "calido",
+  "narracion": [
+   {
+    "texto": "Si el arca de Noé existiera hoy, no cabría en una cancha de fútbol.",
+    "estilo": "narrador"
+   },
+   {
+    "texto": "El Génesis da sus medidas: trescientos codos de largo, cincuenta de ancho y treinta de alto.",
+    "estilo": "narrador"
+   },
+   {
+    "texto": "Un codo era la distancia del codo a la punta de los dedos: unos cuarenta y cinco centímetros.",
+    "estilo": "narrador"
+   },
+   {
+    "texto": "Haz la cuenta: unos ciento treinta y cinco metros de largo.",
+    "estilo": "narrador"
+   },
+   {
+    "texto": "Más largo que una cancha de fútbol profesional, que mide unos ciento cinco.",
+    "estilo": "narrador"
+   },
+   {
+    "texto": "Y unos trece metros de alto: como un edificio de cuatro pisos.",
+    "estilo": "narrador"
+   },
+   {
+    "texto": "Es casi la mitad del Titanic, uno de los barcos más grandes de su época.",
+    "estilo": "narrador"
+   },
+   {
+    "texto": "Y su forma no era la de un barco: era una caja enorme, hecha para flotar, no para navegar.",
+    "estilo": "narrador"
+   },
+   {
+    "texto": "En Kentucky, Estados Unidos, construyeron una réplica de tamaño real. Mide ciento cincuenta y cinco metros.",
+    "estilo": "narrador"
+   },
+   {
+    "texto": "Según el relato, dentro iban Noé, su familia y parejas de animales.",
+    "estilo": "narrador"
+   },
+   {
+    "texto": "Y entonces empezó a llover.",
+    "estilo": "narrador"
+   },
+   {
+    "texto": "Dime: ¿tú habrías subido… o te habrías quedado mirando?",
+    "estilo": "narrador"
+   }
+  ],
+  "escenas": [
+   {
+    "dibujo": {
+     "iconos": []
+    },
+    "texto": "No cabe en una cancha",
+    "resaltar": "cancha",
+    "fondo": "ia:arca-cancha",
+    "khipu": {
+     "cara": "sorprendido",
+     "pose": "senala",
+     "vestuario": "biblico",
+     "x": 30
+    },
+    "sonido": "hooks/cinematic-glass-hit-suspense",
+    "sonidoEn": 0.05
+   },
+   {
+    "dibujo": {
+     "iconos": []
+    },
+    "texto": "300 × 50 × 30 codos",
+    "resaltar": "codos",
+    "fondo": "ia:arca-taller",
+    "khipu": {
+     "cara": "normal",
+     "pose": "pensando",
+     "vestuario": "biblico",
+     "x": 65,
+     "espejo": true
+    }
+   },
+   {
+    "dibujo": {
+     "iconos": []
+    },
+    "texto": "1 codo ≈ 45 cm",
+    "resaltar": "45 cm",
+    "fondo": "ia:arca-taller",
+    "khipu": {
+     "cara": "decidido",
+     "pose": "senala",
+     "vestuario": "biblico",
+     "x": 30
+    }
+   },
+   {
+    "dibujo": {
+     "iconos": []
+    },
+    "texto": "135 metros",
+    "resaltar": "135",
+    "fondo": "ia:arca-construccion",
+    "khipu": {
+     "cara": "sorprendido",
+     "pose": "arriba",
+     "vestuario": "biblico",
+     "x": 65,
+     "espejo": true
+    },
+    "sonido": "hooks/short-bass-hit",
+    "sonidoEn": 1.0
+   },
+   {
+    "dibujo": {
+     "iconos": []
+    },
+    "texto": "Más que 105 m",
+    "resaltar": "105",
+    "fondo": "ia:arca-cancha",
+    "khipu": {
+     "cara": "feliz",
+     "pose": "senala",
+     "vestuario": "biblico",
+     "x": 30
+    }
+   },
+   {
+    "dibujo": {
+     "iconos": []
+    },
+    "texto": "4 pisos de alto",
+    "resaltar": "4 pisos",
+    "fondo": "ia:arca-construccion",
+    "khipu": {
+     "cara": "asustado",
+     "pose": "arriba",
+     "vestuario": "biblico",
+     "x": 30
+    }
+   },
+   {
+    "dibujo": {
+     "iconos": []
+    },
+    "texto": "La mitad del Titanic",
+    "resaltar": "Titanic",
+    "fondo": "ia:arca-titanic",
+    "khipu": {
+     "cara": "sorprendido",
+     "pose": "abajo",
+     "vestuario": "biblico",
+     "x": 65,
+     "espejo": true
+    }
+   },
+   {
+    "dibujo": {
+     "iconos": []
+    },
+    "texto": "Una caja que flota",
+    "resaltar": "caja",
+    "fondo": "ia:arca-mar",
+    "khipu": {
+     "cara": "pensando",
+     "pose": "pensando",
+     "vestuario": "biblico",
+     "x": 30
+    }
+   },
+   {
+    "dibujo": {
+     "iconos": []
+    },
+    "texto": "Réplica: 155 m",
+    "resaltar": "155",
+    "fondo": "ia:arca-replica",
+    "khipu": {
+     "cara": "feliz",
+     "pose": "arriba",
+     "vestuario": "biblico",
+     "x": 65,
+     "espejo": true
+    }
+   },
+   {
+    "dibujo": {
+     "iconos": []
+    },
+    "texto": "Familia y animales",
+    "resaltar": "animales",
+    "fondo": "ia:arca-animales",
+    "khipu": {
+     "cara": "feliz",
+     "pose": "senala",
+     "vestuario": "biblico",
+     "x": 30
+    },
+    "extras": [
+     {
+      "cara": "feliz",
+      "pose": "abajo",
+      "vestuario": "biblico",
+      "x": 62
+     },
+     {
+      "cara": "normal",
+      "pose": "cadera",
+      "vestuario": "biblico",
+      "x": 82,
+      "espejo": true
+     }
+    ]
+   },
+   {
+    "dibujo": {
+     "iconos": []
+    },
+    "texto": "Y empezó a llover",
+    "resaltar": "llover",
+    "fondo": "ia:arca-lluvia",
+    "khipu": {
+     "cara": "asustado",
+     "pose": "arriba",
+     "vestuario": "biblico",
+     "x": 30
+    },
+    "silencio": true,
+    "particulas": "lluvia",
+    "ambiente": "naturaleza/rain-and-thunder-storm"
+   },
+   {
+    "dibujo": {
+     "iconos": []
+    },
+    "texto": "¿Subes o miras?",
+    "resaltar": "Subes",
+    "fondo": "ia:arca-lluvia",
+    "khipu": {
+     "cara": "normal",
+     "pose": "pensando",
+     "vestuario": "biblico",
+     "x": 50
+    },
+    "particulas": "lluvia"
+   }
+  ]
+ }
+}
