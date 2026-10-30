@@ -250,3 +250,8 @@ Cada video nuevo que mande el usuario se analiza y lo útil entra en la etapa qu
 - Siempre sobre el tema de nuestro video: corto (2-3 líneas), un dato con fuente y, si cabe, una pregunta que siga la charla.
 - Si el comentario se va a otro tema, una respuesta breve y amable que lo conecte con el video. Política y religión: neutral, sin discutir. Nunca pedir "suscríbete".
 - Si alguien corrige un dato y tiene razón, se reconoce y se agradece.
+
+## Primeros datos de los Shorts con FLUX (jueves 29 oct, capturas del usuario)
+- «La bebida que le ganó a Coca-Cola» (43 s): 434 vistas en 3 h, **44,9 % de reproducción promedio (~19 s)**, puesto 5 de 10. Antes los Shorts se veían 3-7 s.
+- «Un pan costaba 200 mil millones»: 379 vistas en 7 h, 18 me gusta, 1 comentario. «La regla del hombre más rico de Babilonia»: 206 en 12 h. «Las 30 monedas» (imágenes viejas): 38 en 9 h.
+- Conclusión: mejores imágenes + gancho con dato sorprendente ≈ 10× vistas. Seguir y medir el personaje fijo desde el sábado.
