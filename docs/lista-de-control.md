@@ -9,7 +9,7 @@ Se revisa ANTES de escribir el guion y OTRA VEZ antes de programar. Viene del an
 - [ ] Cuando un tema pega (3× nuestras vistas normales): parte 2 esa semana; con 3 partes, "película completa".
 
 ## 2. Guion
-- [ ] Primer segundo: promesa o dato que choca, con "tú" (nunca un nombre difícil al inicio).
+- [ ] Primer segundo: promesa o dato que choca, con "tú" (nunca un nombre difícil al inicio). Gancho escrito = contradicción o dato imposible que se entiende en 1 s («Pescado fresco en los Andes»: 62 % se quedó), nunca una pregunta de sí o no («¿Existió El Dorado?»: 42 %). Meta: más de 60 % en «se quedaron para mirar».
 - [ ] Escalera: cada escalón peor, más alto o más raro (niveles, días, desgracias). Un giro cada 10-15 s.
 - [ ] Humanizar: animales, células y objetos con emociones de persona.
 - [ ] Palabras de hoy para cosas antiguas ("la sensación del momento").
