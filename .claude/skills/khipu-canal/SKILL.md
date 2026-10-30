@@ -53,7 +53,7 @@ Todo cabe en Khipu, pero **el primer mes se prueban 3 líneas**, con el mismo es
 ## 1b. Lo que dicen los datos del canal (se actualiza cada semana)
 - **24 de octubre:** los Shorts sacaron 1 000 y 590 vistas en 48 h, y los videos largos 9 y 5. **Los Shorts son el motor de crecimiento ahora.**
   - Ganador: "Por qué [algo que le pasa a todos]" + un personaje que lo vive + una respuesta que sorprende, en 30–40 s.
-  - Por eso: 4 Shorts al día (decisión del usuario del 28 oct) y 4 videos largos por semana, con título gancho fijo arriba (`"gancho"` en las props del video vertical) y de 3 a 5 Shorts por cada video largo.
+  - Por eso (ritmo vigente desde el 31 oct): 2 Shorts nuevos al día + 2-3 recortes de cada largo, y 2 videos largos por semana (miércoles y domingo), con título gancho fijo arriba (`"gancho"` en las props del video vertical) y de 3 a 5 Shorts por cada video largo.
 
 ## 1c. Quién administra el canal
 Claude administra Khipu de punta a punta: elige los temas, investiga, produce, decide las horas y programa todo en Metricool (siempre público). El dueño del canal comparte, responde comentarios y hace en YouTube Studio lo que Metricool no permite (prueba A/B de miniaturas, banner). Cada decisión de horario se basa en los datos: en las estadísticas de la semana y en `getBestTimeToPostByNetwork` de Metricool.
@@ -194,7 +194,7 @@ Los primeros días importan poco: se necesitan de 8 a 12 videos para comparar. L
 | Personajes 3D con IA | ✅ Para miniaturas y escenas fijas (chibi 3D, estilo `objeto3d`) · ❌ animarlos con labios |
 | Animales y criaturas | 🟡 Objeto 3D con IA o dibujo nuevo en la biblioteca |
 | **Objetos** | ✅ Íconos ilustrados (Tabler, más de 5 000) y objetos 3D con IA recortados |
-| **Escenarios** (lugares, épocas, día y noche) | ✅ SD-Turbo con prompt preciso · ❌ fotos reales de un lugar concreto (pedirlas o usarlas con licencia) |
+| **Escenarios** (lugares, épocas, día y noche) | ✅ FLUX `fondo2d` (2D plano, sin personas; SD-Turbo prohibido desde el 29 oct) · ❌ fotos reales de un lugar concreto (pedirlas o usarlas con licencia) |
 | Imágenes de archivo | 🟡 Solo con licencia libre (Wikimedia CC, dominio público) y su crédito |
 | **Textos y subtítulos** | ✅ Estilo CapCut con palabra clave |
 | Cifras que cuentan, flechas, círculos | ✅ |

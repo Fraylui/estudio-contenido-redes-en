@@ -1,6 +1,6 @@
 ---
 name: khipu-diario
-description: Rutina diaria de producción y publicación del canal Khipu - 26 categorías, con un Short de la Biblia todos los días a las 20:00 (ciencia, universo, hábitos, sabiduría, cuerpo, psicología, comida, palabras, historia del Perú, historia mundial, mitos y leyendas, Biblia, finanzas, economía, marcas, cómo funciona, tecnología, personajes, deportes, arte y música, lugares, animales, planeta Tierra, ¿qué pasaría si…?, misterios y mundo antiguo), cada Short con valor y fuente, 4 Shorts nativos al día (7:00, 12:00, 16:00 y 20:00 de Lima) y 4 videos largos por semana (lunes, miércoles, viernes y domingo a las 10:00), investigación previa, control de calidad y programación en Metricool. Usar cuando toque producir el contenido del día, cuando pregunten "qué sale hoy o mañana", o cuando corra la tarea programada diaria.
+description: Rutina diaria de producción y publicación del canal Khipu - 2 Shorts nuevos al día (12:00 y 20:00 de Lima, la Biblia siempre a las 20:00), 2 videos largos por semana (miércoles y domingo 10:00, 8-12 min) y 2-3 recortes de cada largo (7:00 o 16:00); temas sacados de lo que ya pegó, todo en 2D con el personaje fijo, lista de control obligatoria, control de calidad y programación en Metricool. Usar cuando toque producir el contenido del día, cuando pregunten "qué sale hoy o mañana", o cuando corra la tarea programada diaria.
 ---
 
 # Rutina diaria de Khipu
@@ -10,7 +10,7 @@ La estrategia de fondo está en `khipu-canal`; la producción técnica, en `piza
 
 > **Ritmo desde el sábado 31 oct (decidido con el usuario el 29 oct):** 2 Shorts nuevos al día (12:00 y 20:00; la Biblia siempre a las 20:00), 2 videos largos por semana (miércoles y domingo a las 10:00, de 8 a 12 min) y 2 o 3 Shorts recortados de cada largo (marco de marca) en las 7:00 o 16:00. Motivo: la cuota gratis de FLUX (~80 imágenes/día, se reinicia a las 19:00 de Lima), el límite semanal de Claude del usuario y que YouTube premia la calidad. Se evalúa a las 2 semanas con los datos de Studio. La producción diaria corre a las 19:07 de Lima. Las tablas de abajo con 4 Shorts y 4 largos quedan como banco de categorías.
 
-## 1. Qué toca cada día: 4 Shorts al día y 4 videos largos por semana (desde el 29 oct 2026)
+## 1. Qué toca cada día (historial: el ritmo vigente es el del aviso de arriba; las categorías siguen sirviendo para rotar temas)
 Decisión del usuario: **4 Shorts diarios (28 por semana) y 4 videos largos por semana**. La Biblia tiene un Short **todos los días**; las otras 25 categorías salen al menos una vez cada 2 semanas.
 
 **La Biblia sale todos los días a las 20:00** (pedido del usuario: mínimo un Short de la Biblia al día), cada día con su serie. Las otras 25 categorías van a las 7:00, 12:00 y 16:00; la columna de las 16:00 cambia entre semana A y semana B para que entren todas.
@@ -34,7 +34,7 @@ Decisión del usuario: **4 Shorts diarios (28 por semana) y 4 videos largos por 
 **Khipu trata todas las categorías que existan** (lo confirmó el usuario el 28 de octubre). Lo que cambió el 27 de octubre es la exigencia: **cada Short tiene que dejar valor** (un dato que no se sabía, con fuente, o algo que se pueda aplicar), no solo curiosidad. La **Biblia** entra como serie fuerte: domingo a las 20:00 y, cuando no haya un buen tema de historia mundial, también el miércoles a las 20:00.
 Datos (Metricool, 27 oct): ganaron los Shorts de "por qué" con personaje (lunes 1 093 y 5 minutos más 1 295 vistas); los de dinero sacaron de 27 a 442.
 
-- **Shorts:** 4 al día, a las **7:00, 12:00, 16:00 y 20:00** (hora de Lima).
+- **Shorts:** 2 nuevos al día a las **12:00 y 20:00**; las **7:00 y 16:00** son para recortes de los largos (hora de Lima).
 - Los temas salen de `docs/calendario-contenido.md` (también el banco de la Biblia). Si se acaban, se investigan nuevos con el paso 2.
 
 ### Serie Biblia
@@ -72,7 +72,7 @@ Nuestros Shorts de finanzas fueron los peores (de 27 a 442 vistas). El público 
 ## 3. Short nativo (diseñado para entenderse solo)
 - **Se hace con la skill `khipu-short-epico`** (`bash scripts/short-epico.sh <nombre>`): ahí están el formato del guion, las reglas de los prompts y la publicación.
 - **Contar historias, no listar datos** (pedido del usuario, 28 oct): personajes, conflicto y desenlace ("un ejército temblaba… hasta que llegó un joven pastor… una sola piedra"). El dato va dentro de la historia. Nunca un dato que confunda: "Goliat medía 2 metros" sin contexto hizo pensar que no era gigante.
-- **Formato "tomas épicas"** (el de los Shorts de la Biblia que más se ven): una imagen épica vertical por cada momento de la historia, con cámara 2.5D. Detalle en la skill `khipu-short-epico`.
+- **Formato (desde el 30 oct): todo en 2D** — fondos FLUX `fondo2d` + personaje fijo de Khipu; nada realista. (Antes: "tomas épicas") (el de los Shorts de la Biblia que más se ven): una imagen épica vertical por cada momento de la historia, con cámara 2.5D. Detalle en la skill `khipu-short-epico`.
 - **Cada escena se hace al máximo:** si un momento se puede mostrar mejor con una toma propia, se hace la toma; los objetos 3D solos son para datos y explicaciones, no para historias.
 - **Nunca mendigar** (regla del usuario, 28 oct): nada de "suscríbete", "comenta", "dale like" ni "te leo en los comentarios". Baja la calidad percibida y la retención. El final es un remate fuerte que **conecta con la primera frase** (bucle): la última línea lleva de vuelta a la pregunta del inicio.
 - **Voz según la categoría:** se copia de `voz/voces.json` (hombre grave en Biblia, historia, misterios y personajes; mujer cálida en hábitos, finanzas y animales; Sayra en cuerpo y psicología; en las de "prueba" se alternan y gana la que más retiene).
@@ -92,7 +92,7 @@ Nuestros Shorts de finanzas fueron los peores (de 27 a 442 vistas). El público 
 - **Título:** "Por qué…", "¿Qué pasaría si…?" o "El truco para…", más `#shorts`. **Descripción:** 1 línea, enlace al video largo relacionado si hay, crédito de la música y fuentes.
 - También valen los recortes de un video largo, siempre que se entiendan solos y lleven `"gancho"` (ver `pizarra`, sección 5b).
 
-## 4. Video largo (lunes, miércoles, viernes y domingo)
+## 4. Video largo (miércoles y domingo a las 10:00, 8-12 min)
 - **Voz: siempre Xiomi** (pedido del usuario, 28 oct), sea cual sea la categoría. El mapa de voces por categoría es solo para los Shorts.
 Se sigue completo `docs/receta-video.md`:
 - de 6 a 10 minutos, entre 1 200 y 1 800 palabras;

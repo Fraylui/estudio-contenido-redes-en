@@ -1,11 +1,13 @@
 ---
 name: khipu-short-epico
-description: Hacer de corrido un Short o un video largo de Khipu en formato "tomas épicas" (una historia narrada con una imagen épica por momento, cámara 2.5D, voz según la categoría) con un solo comando que se puede retomar - guion, tomas, elegir, nitidez, profundidad, voz, render, control de calidad, subir y programar en Metricool. Usar para cada Short o video largo nuevo, en la tarea diaria, o cuando haya que rehacer uno.
+description: Hacer de corrido un Short o un video largo de Khipu (fondos 2D de FLUX + personaje fijo de Khipu dibujado en código, cámara 2.5D, voz según la categoría) con un solo comando que se puede retomar - guion, fondos, elegir, nitidez, profundidad, voz, render, control de calidad, subir y programar en Metricool. Usar para cada Short o video largo nuevo, en la tarea diaria, o cuando haya que rehacer uno.
 ---
 
 **Obligatorio: repasar `docs/lista-de-control.md` antes del guion y antes de programar (resume todo lo analizado).**
 
-# Short épico de corrido
+# Short o video largo de corrido
+
+> **Desde el 30 oct todo es 2D (regla del usuario):** `_estilo: "fondo2d"` (por defecto en el script), fondos sin personas y el personaje fijo en cada escena con el campo `khipu` (ver skill `pizarra`). Lo que abajo dice "épico" o "realista" es historial.
 
 Todo el proceso es **un comando**: `bash scripts/short-epico.sh <nombre>`. Hace solo los pasos que faltan, así que si el servidor se reinicia se vuelve a correr igual. Los pasos pesados usan candados: nunca hay dos generadores de imágenes ni dos voces a la vez.
 
@@ -77,7 +79,7 @@ Detalle y ejemplos: `docs/como-narran-los-grandes.md`.
 - **El personaje siempre igual:** misma descripción en todas sus tomas (Goliat: "giant Philistine warrior, bronze helmet, bronze scale armor, thick black beard, huge spear").
 - **Encuadres variados:** plano general, contrapicado para lo enorme, primer plano de manos u objetos, silueta a contraluz.
 - **Nada fuera de época:** ni cúpulas, ni cruces, ni armas de fuego en historias antiguas. Revisarlo en la hoja.
-- El estilo `epico` ya agrega la luz cinematográfica (ver `docs/prompts-profesionales.md`).
+- El estilo `fondo2d` ya agrega el acabado 2D plano. En los prompts, solo describir lo que SÍ va: nombrar lo prohibido hace que FLUX lo dibuje (ver `docs/prompts-profesionales.md`). FLUX ya no acepta `seed` (29 oct).
 
 ## 4. Correr, elegir y publicar
 1. Primero `bash scripts/short-epico.sh <nombre>`. Se detiene en el paso **hoja**: mira `out/revision/<nombre>-tomas.jpg` (cada imagen dice su toma y su variante).
