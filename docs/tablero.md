@@ -24,8 +24,8 @@ Se actualiza en cada paso. Una sola cola: primero lo que sale antes, después lo
 **Decisión del 29 oct:** no se rehace nada de lo anterior. Lo que ya está en producción (los Shorts del jueves y Fleming) sale como está. **Todo contenido nuevo, desde los Shorts del viernes 30, se hace con el flujo mejorado:** FLUX, manhwa o anime para historias con personajes, ficha de personaje, 4 capas, primer cuadro con cara, sonido en cada escena, silencio en el clímax y nada quieto más de 3 s.
 
 ## Programado el 29 oct en la noche (Metricool)
-- Vie 30: 7:00 jugada 37 (410749501) · 10:00 Fleming largo · 12:00 bacteria (410749532) · 16:00 Maracanazo (410749566) · **20:00 Jesús nació antes de Cristo** (410749592, primer Short con el personaje; reemplaza a Balaam, que se quedó sin cuota FLUX).
-- Sáb 31: 7:00 y 16:00 recortes · **12:00 Esperó 8 años (Le Gentil)** (410749632, personaje) · **20:00 burra de Balaam**: falta, se hace el viernes 19:07 con la cuota nueva.
+- Vie 30: 7:00 jugada 37 (410749501) · 10:00 Fleming largo · 12:00 bacteria (410749532) · 16:00 Maracanazo (410749566) · **20:00 Jesús nació antes de Cristo** (411345683, primer Short con el personaje; rehecho el 30 oct con boca, acciones y objetos; reemplaza a Balaam, que se quedó sin cuota FLUX).
+- Sáb 31: 7:00 y 16:00 recortes · **12:00 Esperó 8 años (Le Gentil)** (411345792, personaje; rehecho el 30 oct) · **20:00 burra de Balaam**: falta, se hace el viernes 19:07 con la cuota nueva.
 - Dom 1: 10:00 «Tú en el ejército romano» (largo-legionario: guion y voz listos, 7:58; faltan 20 fondos con la cuota del viernes) + recortes 7:00 y 16:00.
 
 ## Cola para la cuota del viernes 30 (19:07 Lima), en este orden
