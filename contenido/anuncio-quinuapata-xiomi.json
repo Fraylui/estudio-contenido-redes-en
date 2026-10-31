@@ -1,7 +1,12 @@
 {
   "formato": "Anuncio",
   "voz": {
-    "referencia": "voz/referencias/xiomi.wav"
+    "referencia": "voz/referencias/xiomi.wav",
+    "velocidad": 1.1,
+    "tono": "alegre",
+    "pronunciacion": {
+      "SD": "Señor de"
+    }
   },
   "props": {
     "negocio": {
@@ -16,8 +21,13 @@
     "escenas": [
       {
         "tipo": "video",
-        "segundos": 2,
-        "archivo": "clientes/quinuapata/gancho-skate.mp4",
+        "segundos": 3.1,
+        "archivo": "clientes/quinuapata/gancho-skate.mp4"
+      },
+      {
+        "tipo": "video",
+        "segundos": 2.5,
+        "archivo": "clientes/quinuapata/camioneta.mp4",
         "texto": "Tu encomienda sale *volando* al VRAEM",
         "frase": 1
       },
@@ -92,56 +102,87 @@
     ],
     "efectos": [
       {
+        "sonido": "flash_shock",
+        "segundo": 0.05
+      },
+      {
         "archivo": "sfx/viento-salto.wav",
-        "segundo": 0.15,
-        "volumen": 0.3
+        "segundo": 0.3,
+        "volumen": 0.25
       },
       {
-        "archivo": "sfx/whoosh.wav",
-        "segundo": 0.25,
-        "volumen": 0.45
+        "sonido": "whoosh",
+        "segundo": 0,
+        "escena": 3
       },
       {
-        "archivo": "sfx/whip.wav",
-        "segundo": -0.1,
-        "volumen": 0.22,
-        "escena": 2
-      },
-      {
-        "archivo": "sfx/page-turn.wav",
-        "segundo": -0.05,
-        "volumen": 0.25,
+        "sonido": "whoosh_2",
+        "segundo": 0,
         "escena": 4
       },
       {
-        "archivo": "sfx/ding.wav",
-        "segundo": 0.1,
-        "volumen": 0.22,
+        "sonido": "whoosh_3",
+        "segundo": 0,
+        "escena": 5
+      },
+      {
+        "sonido": "ding",
+        "segundo": 1.6,
+        "escena": 5
+      },
+      {
+        "sonido": "shutter",
+        "segundo": 0,
+        "escena": 6
+      },
+      {
+        "sonido": "whoosh",
+        "segundo": 0,
+        "escena": 7
+      },
+      {
+        "sonido": "pop",
+        "segundo": 0.15,
         "escena": 8
+      },
+      {
+        "sonido": "magic_reveal",
+        "segundo": 0.35,
+        "escena": 9
+      },
+      {
+        "sonido": "whoosh_2",
+        "segundo": 0,
+        "escena": 2
       }
     ],
     "narracion": [
       {
         "texto": "¡Tu encomienda sale volando al VRAEM!",
-        "estilo": "urgente"
+        "estilo": "urgente",
+        "semilla": 6,
+        "en": 3.2
       },
       {
         "texto": "De Ayacucho a todo el VRAEM, y del VRAEM a Ayacucho.",
-        "estilo": "vendedor"
+        "estilo": "vendedor",
+        "semilla": 5
       },
       {
         "texto": "En SD Quinuapata la recibimos, la aseguramos y la llevamos.",
-        "estilo": "vendedor"
+        "estilo": "vendedor",
+        "semilla": 1
       },
       {
         "texto": "Llegamos a todo el VRAEM.",
         "estilo": "feliz",
-        "pausa": 0.2
+        "pausa": 0.2,
+        "semilla": 2
       },
       {
         "texto": "Envía lo que necesites, del tamaño que sea,",
         "estilo": "vendedor",
-        "pausa": 0.15
+        "pausa": 0.1
       },
       {
         "texto": "y llega completo, como lo enviaste.",
@@ -153,11 +194,13 @@
       },
       {
         "texto": "SD Quinuapata: seguridad, garantía y confianza.",
-        "estilo": "serio"
+        "estilo": "serio",
+        "semilla": 1
       },
       {
         "texto": "Contáctanos al 943 960 656.",
-        "estilo": "vendedor"
+        "estilo": "vendedor",
+        "semilla": 1
       }
     ]
   }

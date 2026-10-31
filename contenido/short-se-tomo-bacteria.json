@@ -1,0 +1,151 @@
+{
+ "formato": "Pizarra",
+ "voz": {
+  "referencia": "voz/referencias/kokoro-alex.wav",
+  "pausa": 0.25,
+  "velocidad": 0.95,
+  "tono": "intrigante"
+ },
+ "props": {
+  "gancho": "SE TOMÓ UNA BACTERIA",
+  "musica": "musica/suspenso-crypto.mp3",
+  "tono": "calido",
+  "narracion": [
+   {
+    "texto": "Un médico llenó un vaso con millones de bacterias, y se lo tomó.",
+    "estilo": "narrador"
+   },
+   {
+    "texto": "Australia, mil novecientos ochenta y cuatro. Barry Marshall estaba seguro de algo que nadie le creía.",
+    "estilo": "narrador"
+   },
+   {
+    "texto": "Que las úlceras del estómago no las causaba el estrés, sino una bacteria.",
+    "estilo": "narrador"
+   },
+   {
+    "texto": "Las revistas médicas rechazaron su idea. Decían que ninguna bacteria sobrevive en el ácido del estómago.",
+    "estilo": "narrador"
+   },
+   {
+    "texto": "No podía probarlo en personas. Así que lo probó en él mismo.",
+    "estilo": "narrador"
+   },
+   {
+    "texto": "A los pocos días tenía náuseas, vómitos y el estómago inflamado.",
+    "estilo": "narrador"
+   },
+   {
+    "texto": "Y en su estómago encontraron la bacteria: Helicobacter pylori.",
+    "estilo": "narrador"
+   },
+   {
+    "texto": "Con antibióticos se curó. Y millones de enfermos pudieron curarse igual, sin años de dolor.",
+    "estilo": "narrador"
+   },
+   {
+    "texto": "En dos mil cinco, él y su colega Robin Warren recibieron el Premio Nobel de Medicina.",
+    "estilo": "narrador"
+   },
+   {
+    "texto": "Todo empezó con un vaso, y con alguien dispuesto a demostrar lo que nadie le creía.",
+    "estilo": "narrador"
+   }
+  ],
+  "escenas": [
+   {
+    "dibujo": {
+     "iconos": []
+    },
+    "texto": "Se la tomó",
+    "resaltar": "tomó",
+    "fondo": "ia:bm-01-vaso",
+    "sonido": "hooks/cinematic-glass-hit-suspense",
+    "sonidoEn": 0.05
+   },
+   {
+    "dibujo": {
+     "iconos": []
+    },
+    "texto": "Australia, 1984",
+    "resaltar": "1984",
+    "fondo": "ia:bm-02-lab",
+    "sonido": "historia/restaurant-crowd-talking-ambience",
+    "sonidoEn": 0.05
+   },
+   {
+    "dibujo": {
+     "iconos": []
+    },
+    "texto": "No era el estrés",
+    "resaltar": "bacteria",
+    "fondo": "ia:bm-03-estomago",
+    "sonido": "hooks/cinematic-whoosh-deep-impact",
+    "sonidoEn": 0.05
+   },
+   {
+    "dibujo": {
+     "iconos": []
+    },
+    "texto": "Nadie le creyó",
+    "resaltar": "creyó",
+    "fondo": "ia:bm-02-lab"
+   },
+   {
+    "dibujo": {
+     "iconos": []
+    },
+    "texto": "En él mismo",
+    "resaltar": "él mismo",
+    "fondo": "ia:bm-05-espejo",
+    "sonido": "hooks/deep-heartbeat-impact",
+    "sonidoEn": 0.05,
+    "silencio": true
+   },
+   {
+    "dibujo": {
+     "iconos": []
+    },
+    "texto": "Náuseas y vómitos",
+    "resaltar": "inflamado",
+    "fondo": "ia:bm-06-enfermo"
+   },
+   {
+    "dibujo": {
+     "iconos": []
+    },
+    "texto": "Helicobacter pylori",
+    "resaltar": "pylori",
+    "fondo": "ia:bm-07-micro",
+    "sonido": "hooks/big-cinematic-impact",
+    "sonidoEn": 0.05
+   },
+   {
+    "dibujo": {
+     "iconos": []
+    },
+    "texto": "Millones curados",
+    "resaltar": "Millones",
+    "fondo": "ia:bm-08-pacientes"
+   },
+   {
+    "dibujo": {
+     "iconos": []
+    },
+    "texto": "Nobel 2005",
+    "resaltar": "Nobel",
+    "fondo": "ia:bm-10-final",
+    "sonido": "hooks/angelic-swell-presentation",
+    "sonidoEn": 0.05
+   },
+   {
+    "dibujo": {
+     "iconos": []
+    },
+    "texto": "Lo que nadie creía",
+    "resaltar": "creía",
+    "fondo": "ia:bm-10-final"
+   }
+  ]
+ }
+}

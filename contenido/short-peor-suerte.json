@@ -1,0 +1,278 @@
+{
+ "formato": "Pizarra",
+ "voz": {
+  "referencia": "voz/referencias/kokoro-santa.wav",
+  "pausa": 0.2,
+  "tono": "epico"
+ },
+ "props": {
+  "gancho": "ESPERÓ 8 AÑOS PARA NADA",
+  "musica": "musica/aventura-sneaky.mp3",
+  "tono": "calido",
+  "narracion": [
+   {
+    "texto": "Imagina esperar ocho años para ver algo que dura seis horas… y perdértelo.",
+    "estilo": "narrador"
+   },
+   {
+    "texto": "En mil setecientos sesenta, el astrónomo francés Guillaume Le Gentil zarpó rumbo a la India.",
+    "estilo": "narrador"
+   },
+   {
+    "texto": "Su misión: ver a Venus pasar delante del Sol, para calcular la distancia entre la Tierra y el Sol.",
+    "estilo": "narrador"
+   },
+   {
+    "texto": "Pero estalló una guerra entre Francia y Gran Bretaña, y el viento desvió su barco durante cinco semanas.",
+    "estilo": "narrador"
+   },
+   {
+    "texto": "Cuando por fin llegó, los británicos ya habían tomado la ciudad. No pudo desembarcar.",
+    "estilo": "narrador"
+   },
+   {
+    "texto": "El gran día, el cielo estaba despejado… pero él seguía en el barco, que se movía tanto que no pudo medir nada.",
+    "estilo": "narrador"
+   },
+   {
+    "texto": "Entonces tomó una decisión loca: esperar el siguiente paso de Venus. Ocho años después.",
+    "estilo": "narrador"
+   },
+   {
+    "texto": "Quiso esperarlo en Manila, pero los españoles desconfiaron de él y tuvo que irse.",
+    "estilo": "narrador"
+   },
+   {
+    "texto": "Volvió a la India, construyó su propio observatorio y esperó más de un año.",
+    "estilo": "narrador"
+   },
+   {
+    "texto": "Llegó el día. Amaneció despejado… y justo entonces, las nubes taparon el Sol.",
+    "estilo": "narrador"
+   },
+   {
+    "texto": "¿Y en Manila, de donde lo echaron? Cielo perfecto.",
+    "estilo": "narrador"
+   },
+   {
+    "texto": "El siguiente paso de Venus sería en más de cien años. Volvió a Francia once años después de partir… sin haber visto nada.",
+    "estilo": "narrador"
+   },
+   {
+    "texto": "¿Tú habrías esperado ocho años más?",
+    "estilo": "narrador"
+   }
+  ],
+  "escenas": [
+   {
+    "dibujo": {
+     "iconos": []
+    },
+    "texto": "8 años para perderlo",
+    "resaltar": "8 años",
+    "fondo": "ia:leg-nubes",
+    "khipu": {
+     "cara": "asustado",
+     "pose": "abajo",
+     "vestuario": "explorador",
+     "x": 30
+    },
+    "sonido": "hooks/cinematic-glass-hit-suspense",
+    "sonidoEn": 0.05
+   },
+   {
+    "dibujo": {
+     "iconos": []
+    },
+    "texto": "Francia, 1760",
+    "resaltar": "1760",
+    "fondo": "ia:leg-puerto",
+    "khipu": {
+     "cara": "feliz",
+     "pose": "senala",
+     "vestuario": "explorador",
+     "x": 30,
+     "objeto": "bolsa",
+     "accion": "camina"
+    }
+   },
+   {
+    "dibujo": {
+     "iconos": []
+    },
+    "texto": "Venus frente al Sol",
+    "resaltar": "Venus",
+    "fondo": "ia:leg-venus",
+    "khipu": {
+     "cara": "sorprendido",
+     "pose": "pensando",
+     "vestuario": "explorador",
+     "x": 25
+    }
+   },
+   {
+    "dibujo": {
+     "iconos": []
+    },
+    "texto": "Guerra y 5 semanas perdido",
+    "resaltar": "5 semanas",
+    "fondo": "ia:leg-barco",
+    "khipu": {
+     "cara": "asustado",
+     "pose": "arriba",
+     "vestuario": "explorador",
+     "x": 35,
+     "accion": "tiembla"
+    },
+    "ambiente": "naturaleza/rough-sea-waves-loop"
+   },
+   {
+    "dibujo": {
+     "iconos": []
+    },
+    "texto": "La ciudad ya era británica",
+    "resaltar": "británica",
+    "fondo": "ia:leg-fortaleza",
+    "khipu": {
+     "cara": "enojado",
+     "pose": "cadera",
+     "vestuario": "explorador",
+     "x": 70,
+     "espejo": true
+    },
+    "extras": [
+     {
+      "cara": "enojado",
+      "pose": "cadera",
+      "vestuario": "base",
+      "x": 30,
+      "objeto": "lanza"
+     }
+    ]
+   },
+   {
+    "dibujo": {
+     "iconos": []
+    },
+    "texto": "Cielo despejado… desde el barco",
+    "resaltar": "barco",
+    "fondo": "ia:leg-barco",
+    "khipu": {
+     "cara": "triste",
+     "pose": "abajo",
+     "vestuario": "explorador",
+     "x": 65,
+     "espejo": true,
+     "accion": "tiembla"
+    },
+    "ambiente": "naturaleza/rough-sea-waves-loop"
+   },
+   {
+    "dibujo": {
+     "iconos": []
+    },
+    "texto": "Esperar 8 años más",
+    "resaltar": "8 años",
+    "fondo": "ia:leg-puerto",
+    "khipu": {
+     "cara": "decidido",
+     "pose": "cadera",
+     "vestuario": "explorador",
+     "x": 30
+    }
+   },
+   {
+    "dibujo": {
+     "iconos": []
+    },
+    "texto": "Manila lo echó",
+    "resaltar": "Manila",
+    "fondo": "ia:leg-manila",
+    "khipu": {
+     "cara": "sorprendido",
+     "pose": "abajo",
+     "vestuario": "explorador",
+     "x": 70,
+     "espejo": true
+    }
+   },
+   {
+    "dibujo": {
+     "iconos": []
+    },
+    "texto": "Su propio observatorio",
+    "resaltar": "observatorio",
+    "fondo": "ia:leg-observatorio",
+    "khipu": {
+     "cara": "feliz",
+     "pose": "arriba",
+     "vestuario": "explorador",
+     "x": 30,
+     "accion": "salta"
+    }
+   },
+   {
+    "dibujo": {
+     "iconos": []
+    },
+    "texto": "Y llegaron las nubes",
+    "resaltar": "nubes",
+    "fondo": "ia:leg-nubes",
+    "khipu": {
+     "cara": "asustado",
+     "pose": "arriba",
+     "vestuario": "explorador",
+     "x": 35,
+     "accion": "tiembla"
+    },
+    "silencio": true,
+    "sonido": "naturaleza/distant-thunder-explosion",
+    "sonidoEn": 2.2
+   },
+   {
+    "dibujo": {
+     "iconos": []
+    },
+    "texto": "Manila: cielo perfecto",
+    "resaltar": "perfecto",
+    "fondo": "ia:leg-manila",
+    "khipu": {
+     "cara": "enojado",
+     "pose": "senala",
+     "vestuario": "explorador",
+     "x": 28
+    }
+   },
+   {
+    "dibujo": {
+     "iconos": []
+    },
+    "texto": "11 años para nada",
+    "resaltar": "11 años",
+    "fondo": "ia:leg-paris",
+    "khipu": {
+     "cara": "triste",
+     "pose": "abajo",
+     "vestuario": "explorador",
+     "x": 50,
+     "accion": "camina",
+     "objeto": "bolsa"
+    }
+   },
+   {
+    "dibujo": {
+     "iconos": []
+    },
+    "texto": "¿Tú habrías esperado?",
+    "resaltar": "esperado",
+    "fondo": "ia:leg-venus",
+    "khipu": {
+     "cara": "normal",
+     "pose": "pensando",
+     "vestuario": "explorador",
+     "x": 30
+    }
+   }
+  ]
+ }
+}

@@ -1,0 +1,138 @@
+{
+ "formato": "Pizarra",
+ "voz": {
+  "referencia": "voz/referencias/kokoro-santa.wav",
+  "pausa": 0.2,
+  "tono": "serio",
+  "pronunciacion": {
+   "chasqui": "cháski",
+   "chasquis": "cháskis",
+   "pututo": "pututo",
+   "Qhapaq Ñan": "Kápak Ñan"
+  }
+ },
+ "props": {
+  "gancho": "PESCADO FRESCO EN LOS ANDES",
+  "musica": "musica/aventura.mp3",
+  "tono": "calido",
+  "escenas": [
+   {
+    "dibujo": {
+     "iconos": []
+    },
+    "texto": "Pescado fresco… en los Andes",
+    "resaltar": "fresco…",
+    "fondo": "ia:chas01-pescado",
+    "sonido": "flash_shock",
+    "sonidoEn": 0.05
+   },
+   {
+    "dibujo": {
+     "iconos": []
+    },
+    "texto": "Corriendo",
+    "resaltar": "Corriendo.",
+    "fondo": "ia:chas02-corriendo",
+    "sonido": "boom",
+    "sonidoEn": 0.5
+   },
+   {
+    "dibujo": {
+     "iconos": []
+    },
+    "texto": "Los chasquis",
+    "resaltar": "chasquis",
+    "fondo": "ia:chas03-chasqui"
+   },
+   {
+    "dibujo": {
+     "iconos": []
+    },
+    "texto": "Una carrera de relevos",
+    "resaltar": "relevos",
+    "fondo": "ia:chas04-relevo"
+   },
+   {
+    "dibujo": {
+     "iconos": []
+    },
+    "texto": "El pututo",
+    "resaltar": "pututo",
+    "fondo": "ia:chas05-pututo",
+    "sonido": "magic_reveal",
+    "sonidoEn": 1.0
+   },
+   {
+    "dibujo": {
+     "iconos": []
+    },
+    "texto": "De memoria, o en un quipu",
+    "resaltar": "quipu.",
+    "fondo": "ia:chas06-quipu"
+   },
+   {
+    "dibujo": {
+     "iconos": []
+    },
+    "texto": "30 000 km de caminos",
+    "resaltar": "30 000 km",
+    "fondo": "ia:chas07-camino",
+    "particulas": "polvo"
+   },
+   {
+    "dibujo": {
+     "iconos": []
+    },
+    "texto": "En 2 días",
+    "resaltar": "2 días.",
+    "fondo": "ia:chas08-dos-dias"
+   },
+   {
+    "dibujo": {
+     "iconos": []
+    },
+    "texto": "Sin caballos, sin ruedas, sin papel",
+    "resaltar": "sin papel",
+    "fondo": "ia:chas09-final"
+   }
+  ],
+  "narracion": [
+   {
+    "texto": "El Inca comía pescado fresco en el Cusco, a más de tres mil metros de altura, y a cientos de kilómetros del mar.",
+    "estilo": "narrador"
+   },
+   {
+    "texto": "¿Cómo llegaba? Corriendo.",
+    "estilo": "narrador"
+   },
+   {
+    "texto": "Eran los chasquis, los mensajeros del Imperio inca.",
+    "estilo": "narrador"
+   },
+   {
+    "texto": "Cada uno corría unos pocos kilómetros, hasta una casita en el camino donde esperaba otro chasqui.",
+    "estilo": "narrador"
+   },
+   {
+    "texto": "Antes de llegar, soplaba el pututo, una concha marina, para que el siguiente estuviera listo.",
+    "estilo": "narrador"
+   },
+   {
+    "texto": "El mensaje no se escribía: se llevaba de memoria, o anudado en un quipu.",
+    "estilo": "narrador"
+   },
+   {
+    "texto": "Corrían por el Qhapaq Ñan, una red de caminos de unos treinta mil kilómetros, desde Colombia hasta Chile.",
+    "estilo": "narrador"
+   },
+   {
+    "texto": "Según los cronistas, así el pescado de la costa llegaba al Cusco en unos dos días.",
+    "estilo": "narrador"
+   },
+   {
+    "texto": "Sin caballos, sin ruedas y sin papel. Solo piernas, y un camino de piedra.",
+    "estilo": "narrador"
+   }
+  ]
+ }
+}

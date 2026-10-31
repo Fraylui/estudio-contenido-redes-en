@@ -1,0 +1,230 @@
+{
+  "formato": "Pizarra",
+  "voz": {
+    "referencia": "voz/referencias/xiomi-clara.wav",
+    "pausa": 0.18,
+    "pronunciacion": {
+      "COX": "cox",
+      "prostaglandinas": "prostaglandínas"
+    }
+  },
+  "props": {
+    "gancho": "NO SABE DÓNDE TE DUELE",
+    "musica": "musica/ciencia-ice-flow.mp3",
+    "tono": "calido",
+    "narracion": [
+      {
+        "texto": "Te tomas una pastilla para el dolor de cabeza… ¿cómo sabe que tiene que ir a tu cabeza?",
+        "estilo": "narrador"
+      },
+      {
+        "texto": "La respuesta te va a sorprender: no lo sabe.",
+        "estilo": "narrador"
+      },
+      {
+        "texto": "El ibuprofeno viaja por tu sangre a todo el cuerpo: a la cabeza, a los pies, a todas partes.",
+        "estilo": "narrador"
+      },
+      {
+        "texto": "Lo que hace es bloquear a unas enzimas llamadas COX.",
+        "estilo": "narrador"
+      },
+      {
+        "texto": "Esas enzimas fabrican prostaglandinas: mensajeros que avisan del dolor y causan la inflamación.",
+        "estilo": "narrador"
+      },
+      {
+        "texto": "Donde tienes una herida o una inflamación, hay muchísimas fabricándolos sin parar.",
+        "estilo": "narrador"
+      },
+      {
+        "texto": "Por eso el alivio se nota ahí: es donde más mensajeros estaba apagando.",
+        "estilo": "narrador"
+      },
+      {
+        "texto": "Pero como va a todas partes, también apaga una enzima que protege tu estómago.",
+        "estilo": "narrador"
+      },
+      {
+        "texto": "Por eso se toma con comida, y sin pasarse de la dosis.",
+        "estilo": "narrador"
+      },
+      {
+        "texto": "La próxima vez, piénsalo: no fue a tu cabeza. Fue a todo tu cuerpo.",
+        "estilo": "narrador"
+      },
+      {
+        "texto": "¿Tú sabías que funcionaba así?",
+        "estilo": "narrador"
+      }
+    ],
+    "escenas": [
+      {
+        "dibujo": {
+          "iconos": []
+        },
+        "texto": "¿Cómo sabe dónde duele?",
+        "resaltar": "duele",
+        "fondo": "ia:ibu-noche",
+        "khipu": {
+          "cara": "pensando",
+          "pose": "pensando",
+          "vestuario": "base",
+          "x": 30
+        },
+        "sonido": "hooks/cinematic-glass-hit-suspense",
+        "sonidoEn": 0.05
+      },
+      {
+        "dibujo": {
+          "iconos": []
+        },
+        "texto": "No lo sabe",
+        "resaltar": "No",
+        "fondo": "ia:ibu-noche",
+        "khipu": {
+          "cara": "sorprendido",
+          "pose": "abajo",
+          "vestuario": "base",
+          "x": 65,
+          "espejo": true
+        },
+        "sonido": "hooks/short-bass-hit",
+        "sonidoEn": 1.4
+      },
+      {
+        "dibujo": {
+          "iconos": []
+        },
+        "texto": "Va a todas partes",
+        "resaltar": "todas",
+        "fondo": "ia:ibu-sangre",
+        "khipu": {
+          "cara": "feliz",
+          "pose": "senala",
+          "vestuario": "base",
+          "x": 30,
+          "accion": "camina"
+        }
+      },
+      {
+        "dibujo": {
+          "iconos": []
+        },
+        "texto": "Bloquea las COX",
+        "resaltar": "COX",
+        "fondo": "ia:ibu-celula",
+        "khipu": {
+          "cara": "decidido",
+          "pose": "cadera",
+          "vestuario": "base",
+          "x": 65,
+          "espejo": true
+        }
+      },
+      {
+        "dibujo": {
+          "iconos": []
+        },
+        "texto": "Mensajeros del dolor",
+        "resaltar": "dolor",
+        "fondo": "ia:ibu-celula",
+        "khipu": {
+          "cara": "asustado",
+          "pose": "arriba",
+          "vestuario": "base",
+          "x": 30
+        }
+      },
+      {
+        "dibujo": {
+          "iconos": []
+        },
+        "texto": "Fábricas sin parar",
+        "resaltar": "parar",
+        "fondo": "ia:ibu-inflamacion",
+        "khipu": {
+          "cara": "asustado",
+          "pose": "abajo",
+          "vestuario": "base",
+          "x": 65,
+          "espejo": true,
+          "accion": "tiembla"
+        }
+      },
+      {
+        "dibujo": {
+          "iconos": []
+        },
+        "texto": "Ahí se nota",
+        "resaltar": "nota",
+        "fondo": "ia:ibu-inflamacion",
+        "khipu": {
+          "cara": "feliz",
+          "pose": "arriba",
+          "vestuario": "base",
+          "x": 30
+        }
+      },
+      {
+        "dibujo": {
+          "iconos": []
+        },
+        "texto": "También en tu estómago",
+        "resaltar": "estómago",
+        "fondo": "ia:ibu-estomago",
+        "khipu": {
+          "cara": "triste",
+          "pose": "abajo",
+          "vestuario": "base",
+          "x": 65,
+          "espejo": true
+        }
+      },
+      {
+        "dibujo": {
+          "iconos": []
+        },
+        "texto": "Con comida y sin abusar",
+        "resaltar": "comida",
+        "fondo": "ia:ibu-estomago",
+        "khipu": {
+          "cara": "decidido",
+          "pose": "senala",
+          "vestuario": "base",
+          "x": 30
+        }
+      },
+      {
+        "dibujo": {
+          "iconos": []
+        },
+        "texto": "Fue a todo tu cuerpo",
+        "resaltar": "todo",
+        "fondo": "ia:ibu-sangre",
+        "khipu": {
+          "cara": "sorprendido",
+          "pose": "senala",
+          "vestuario": "base",
+          "x": 65,
+          "espejo": true
+        },
+        "silencio": true
+      },
+      {
+        "dibujo": {
+          "iconos": []
+        },
+        "texto": "¿Lo sabías?",
+        "resaltar": "sabías",
+        "fondo": "ia:ibu-noche",
+        "khipu": {
+          "cara": "normal",
+          "pose": "pensando",
+          "vestuario": "base",
+          "x": 50
+        }
+      }
+    ]
+  }
+}

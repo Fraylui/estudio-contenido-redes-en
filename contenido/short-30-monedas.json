@@ -1,0 +1,153 @@
+{
+ "formato": "Pizarra",
+ "voz": {
+  "referencia": "voz/referencias/kokoro-alex.wav",
+  "pausa": 0.25,
+  "velocidad": 0.95,
+  "tono": "serio",
+  "pronunciacion": {
+   "Goliat": "Goliát"
+  }
+ },
+ "props": {
+  "gancho": "¿CUÁNTO VALÍAN 30 MONEDAS?",
+  "musica": "musica/antiguo.mp3",
+  "tono": "sepia",
+  "escenas": [
+   {
+    "dibujo": {
+     "iconos": []
+    },
+    "texto": "30 monedas de plata",
+    "resaltar": "30",
+    "fondo": "ia:m01-monedas",
+    "sonido": "flash_shock",
+    "sonidoEn": 0.05
+   },
+   {
+    "dibujo": {
+     "iconos": []
+    },
+    "texto": "Una noche, Judas…",
+    "resaltar": "Judas…",
+    "fondo": "ia:m02-judas:paneo",
+    "particulas": "brasas"
+   },
+   {
+    "dibujo": {
+     "iconos": []
+    },
+    "texto": "¿Cuánto me darán?",
+    "resaltar": "¿Cuánto",
+    "fondo": "ia:m03-sacerdotes",
+    "ambiente": "historia/restaurant-crowd-talking-ambience"
+   },
+   {
+    "dibujo": {
+     "iconos": []
+    },
+    "texto": "30 piezas de plata",
+    "resaltar": "30",
+    "fondo": "ia:m04-balanza",
+    "sonido": "boom",
+    "sonidoEn": 0.8
+   },
+   {
+    "dibujo": {
+     "iconos": []
+    },
+    "texto": "4 meses de trabajo",
+    "resaltar": "4 meses",
+    "fondo": "ia:m05-campo:paneo"
+   },
+   {
+    "dibujo": {
+     "iconos": []
+    },
+    "texto": "El precio de un esclavo",
+    "resaltar": "esclavo",
+    "fondo": "ia:m06-esclavo",
+    "sonido": "boom",
+    "sonidoEn": 2.6
+   },
+   {
+    "dibujo": {
+     "iconos": []
+    },
+    "texto": "Zacarías 11:12",
+    "resaltar": "Zacarías",
+    "fondo": "ia:m07-profeta"
+   },
+   {
+    "dibujo": {
+     "iconos": []
+    },
+    "texto": "Arrojó las monedas",
+    "resaltar": "Arrojó",
+    "fondo": "ia:m08-arrepentido",
+    "sonido": "transiciones/short-wind-swoosh",
+    "sonidoEn": 1.5
+   },
+   {
+    "dibujo": {
+     "iconos": []
+    },
+    "texto": "El campo de sangre",
+    "resaltar": "sangre",
+    "fondo": "ia:m09-alfarero:paneo",
+    "ambiente": "naturaleza/scary-graveyard-wind",
+    "particulas": "polvo"
+   },
+   {
+    "dibujo": {
+     "iconos": []
+    },
+    "texto": "El precio de un esclavo.",
+    "resaltar": "esclavo.",
+    "fondo": "ia:m10-final"
+   }
+  ],
+  "narracion": [
+   {
+    "texto": "Treinta monedas de plata. Ese fue el precio.",
+    "estilo": "narrador"
+   },
+   {
+    "texto": "Una noche, Judas fue a ver a los jefes de los sacerdotes.",
+    "estilo": "narrador"
+   },
+   {
+    "texto": "Y les preguntó: ¿cuánto me darán si se lo entrego?",
+    "estilo": "narrador"
+   },
+   {
+    "texto": "Le dieron treinta piezas de plata.",
+    "estilo": "narrador"
+   },
+   {
+    "texto": "Muchos historiadores creen que eran siclos de Tiro: unos cuatro meses de trabajo en el campo.",
+    "estilo": "narrador"
+   },
+   {
+    "texto": "Y en la ley de Moisés, treinta siclos era lo que se pagaba por la vida de un esclavo.",
+    "estilo": "narrador"
+   },
+   {
+    "texto": "Siglos antes, el profeta Zacarías ya había escrito sobre treinta piezas de plata.",
+    "estilo": "narrador"
+   },
+   {
+    "texto": "Cuando Judas vio lo que había hecho, arrojó las monedas en el templo.",
+    "estilo": "narrador"
+   },
+   {
+    "texto": "Con ellas, los sacerdotes compraron un campo para enterrar extranjeros. Lo llamaron el campo de sangre.",
+    "estilo": "narrador"
+   },
+   {
+    "texto": "Treinta monedas de plata: el precio de un esclavo.",
+    "estilo": "narrador"
+   }
+  ]
+ }
+}

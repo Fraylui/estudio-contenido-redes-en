@@ -1,0 +1,128 @@
+{
+  "flash_shock": {
+    "archivo": "flash_shock.mp3",
+    "nombre": "Camera Flash Sound",
+    "descripcion": "Flash fuerte tipo shock.",
+    "cuando_usar": "Arranque del video (primer frame o primer golpe visual); muy usado en contenido vertical.",
+    "duracion_s": 1.76,
+    "impacto_s": 0.16,
+    "ganancia_db_sugerida": -6
+  },
+  "flash_shock_fuerte": {
+    "archivo": "flash_shock_fuerte.mp3",
+    "nombre": "21 - Camera Flash",
+    "descripcion": "Como flash_shock pero el shock es más fuerte y con eco.",
+    "cuando_usar": "Arranques con más impacto o un segundo golpe fuerte; no lo uses más de una vez por video.",
+    "duracion_s": 1.78,
+    "impacto_s": 0.22,
+    "ganancia_db_sugerida": -6
+  },
+  "whoosh": {
+    "archivo": "whoosh.mp3",
+    "nombre": "Whoosh",
+    "descripcion": "Sonido de transición (pasada de aire).",
+    "cuando_usar": "Transiciones entre escenas, zoom in y zoom out.",
+    "duracion_s": 0.76,
+    "impacto_s": 0.16,
+    "ganancia_db_sugerida": -8
+  },
+  "whoosh_2": {
+    "archivo": "whoosh_2.mp3",
+    "nombre": "Whoosh 3",
+    "descripcion": "Variante de whoosh (sin descripción propia).",
+    "cuando_usar": "Igual que whoosh; alterna para que las transiciones no suenen repetidas.",
+    "duracion_s": 0.84,
+    "impacto_s": 0.08,
+    "ganancia_db_sugerida": -8
+  },
+  "whoosh_3": {
+    "archivo": "whoosh_3.mp3",
+    "nombre": "Whoosh 6",
+    "descripcion": "Variante de whoosh (sin descripción propia).",
+    "cuando_usar": "Igual que whoosh; alterna para que las transiciones no suenen repetidas.",
+    "duracion_s": 0.68,
+    "impacto_s": 0.16,
+    "ganancia_db_sugerida": -8
+  },
+  "click": {
+    "archivo": "click.mp3",
+    "nombre": "Camera Click",
+    "descripcion": "Click de mouse.",
+    "cuando_usar": "Al mostrar cosas en pantalla, sobre todo en demos de una app o web (clic en un botón, abrir una sección).",
+    "duracion_s": 0.84,
+    "impacto_s": 0.11,
+    "ganancia_db_sugerida": -8
+  },
+  "shutter": {
+    "archivo": "shutter.mp3",
+    "nombre": "16 - Camera Shutter",
+    "descripcion": "Disparo corto de cámara.",
+    "cuando_usar": "Cuando entra un elemento o una imagen en pantalla; también sirve para transiciones.",
+    "duracion_s": 0.86,
+    "impacto_s": 0.08,
+    "ganancia_db_sugerida": -8
+  },
+  "shutter_2": {
+    "archivo": "shutter_2.mp3",
+    "nombre": "17 - Camera Shutter 2",
+    "descripcion": "Variante de shutter (sin descripción propia).",
+    "cuando_usar": "Igual que shutter; alterna para no repetir.",
+    "duracion_s": 1.02,
+    "impacto_s": 0.14,
+    "ganancia_db_sugerida": -8
+  },
+  "boom": {
+    "archivo": "boom.mp3",
+    "nombre": "boom",
+    "descripcion": "Golpe grave de impacto.",
+    "cuando_usar": "Para mostrar algo impactante en pantalla (un dato fuerte, un resultado, una cifra).",
+    "duracion_s": 3.39,
+    "impacto_s": 0.18,
+    "ganancia_db_sugerida": -5
+  },
+  "rewind": {
+    "archivo": "rewind.mp3",
+    "nombre": "Fast Forward",
+    "descripcion": "Sonido de avance/retroceso rápido.",
+    "cuando_usar": "Retroceso de video (efecto rebobinar / cámara hacia atrás).",
+    "duracion_s": 4.11,
+    "impacto_s": 0.36,
+    "ganancia_db_sugerida": -6
+  },
+  "caja_registradora": {
+    "archivo": "caja_registradora.mp3",
+    "nombre": "Cash Register",
+    "descripcion": "Caja registradora.",
+    "cuando_usar": "Cuando se habla de dinero: sueldos, precios, ahorro, ingresos.",
+    "duracion_s": 1.63,
+    "impacto_s": 0.33,
+    "ganancia_db_sugerida": -6
+  },
+  "pop": {
+    "archivo": "pop.mp3",
+    "nombre": "Bubble Pop",
+    "descripcion": "Pop de burbuja.",
+    "cuando_usar": "Para mostrar cosas en pantalla (textos, íconos, stickers, bullets).",
+    "duracion_s": 1.06,
+    "impacto_s": 0.12,
+    "ganancia_db_sugerida": -8
+  },
+  "ding": {
+    "archivo": "ding.mp3",
+    "nombre": "Ding",
+    "descripcion": "Campanita.",
+    "cuando_usar": "Para mostrar cosas en pantalla; funciona bien para aciertos, checks o una coincidencia.",
+    "duracion_s": 1.7,
+    "impacto_s": 0.02,
+    "ganancia_db_sugerida": -8
+  },
+  "magic_reveal": {
+    "archivo": "magic_reveal.mp3",
+    "nombre": "Magic Reveal",
+    "descripcion": "Brillo mágico con subida.",
+    "cuando_usar": "Para revelar cosas (un resultado, un puntaje, un antes/después, una función nueva).",
+    "duracion_s": 3.07,
+    "impacto_s": 0.89,
+    "ganancia_db_sugerida": -6
+  }
+}

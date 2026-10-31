@@ -1,0 +1,147 @@
+{
+ "formato": "Pizarra",
+ "voz": {
+  "referencia": "voz/referencias/xiomi-clara.wav",
+  "pausa": 0.18,
+  "tono": "alegre",
+  "pronunciacion": {
+   "Arkad": "Árkad",
+   "Bansir": "Bánsir"
+  }
+ },
+ "props": {
+  "gancho": "LA REGLA DEL HOMBRE MÁS RICO DE BABILONIA",
+  "musica": "musica/documental.mp3",
+  "tono": "calido",
+  "escenas": [
+   {
+    "dibujo": {
+     "iconos": []
+    },
+    "texto": "Nunca le alcanzaba",
+    "resaltar": "alcanzaba.",
+    "fondo": "ia:babi01-bansir",
+    "sonido": "flash_shock",
+    "sonidoEn": 0.05
+   },
+   {
+    "dibujo": {
+     "iconos": []
+    },
+    "texto": "El hombre más rico",
+    "resaltar": "más rico",
+    "fondo": "ia:babi02-arkad"
+   },
+   {
+    "dibujo": {
+     "iconos": []
+    },
+    "texto": "¿Cómo lo hiciste?",
+    "resaltar": "¿Cómo",
+    "fondo": "ia:babi03-pregunta"
+   },
+   {
+    "dibujo": {
+     "iconos": []
+    },
+    "texto": "1 de cada 10",
+    "resaltar": "10",
+    "fondo": "ia:babi04-diez",
+    "sonido": "magic_reveal",
+    "sonidoEn": 2.6
+   },
+   {
+    "dibujo": {
+     "iconos": []
+    },
+    "texto": "Págate primero",
+    "resaltar": "primero.",
+    "fondo": "ia:babi05-pagate"
+   },
+   {
+    "dibujo": {
+     "iconos": []
+    },
+    "texto": "Vives con 9",
+    "resaltar": "9",
+    "fondo": "ia:babi06-nueve"
+   },
+   {
+    "dibujo": {
+     "iconos": []
+    },
+    "texto": "Más de un sueldo guardado",
+    "resaltar": "sueldo",
+    "fondo": "ia:babi07-jarra",
+    "sonido": "boom",
+    "sonidoEn": 1.0
+   },
+   {
+    "dibujo": {
+     "iconos": []
+    },
+    "texto": "Ponlo a trabajar",
+    "resaltar": "trabajar",
+    "fondo": "ia:babi08-trabajar"
+   },
+   {
+    "dibujo": {
+     "iconos": []
+    },
+    "texto": "El hombre más rico de Babilonia",
+    "resaltar": "Babilonia",
+    "fondo": "ia:babi09-libro"
+   },
+   {
+    "dibujo": {
+     "iconos": []
+    },
+    "texto": "1 de cada 10, para ti.",
+    "resaltar": "para ti.",
+    "fondo": "ia:babi10-final"
+   }
+  ],
+  "narracion": [
+   {
+    "texto": "Bansir fabricaba carros en Babilonia. Trabajaba todo el día, y nunca le alcanzaba.",
+    "estilo": "narrador"
+   },
+   {
+    "texto": "Un día fue a ver a Arkad, el hombre más rico de la ciudad, que había empezado igual de pobre.",
+    "estilo": "narrador"
+   },
+   {
+    "texto": "Y le preguntó: ¿cómo lo hiciste?",
+    "estilo": "narrador"
+   },
+   {
+    "texto": "Arkad le dijo: una parte de todo lo que ganas es tuya. Y debe ser al menos una de cada diez monedas.",
+    "estilo": "narrador"
+   },
+   {
+    "texto": "Antes de pagar a nadie, págate a ti mismo.",
+    "estilo": "narrador"
+   },
+   {
+    "texto": "Bansir pensó: si guardo una de cada diez, igual vivo con las otras nueve.",
+    "estilo": "narrador"
+   },
+   {
+    "texto": "Si lo haces cada mes, al año tienes guardado más de un sueldo entero.",
+    "estilo": "narrador"
+   },
+   {
+    "texto": "Pero Arkad le advirtió: ese dinero no es para gastarlo. Ponlo a trabajar, para que cada moneda traiga más monedas.",
+    "estilo": "narrador"
+   },
+   {
+    "texto": "Es la historia del libro El hombre más rico de Babilonia, de mil novecientos veintiséis. Y la regla sigue funcionando.",
+    "estilo": "narrador"
+   },
+   {
+    "texto": "Una de cada diez monedas, siempre para ti.",
+    "estilo": "narrador"
+   }
+  ]
+ }
+}

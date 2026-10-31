@@ -1,0 +1,169 @@
+{
+ "formato": "Pizarra",
+ "voz": {
+  "referencia": "voz/referencias/kokoro-alex.wav",
+  "pausa": 0.25,
+  "velocidad": 0.95,
+  "tono": "serio",
+  "pronunciacion": {
+   "Goliat": "Goliát"
+  }
+ },
+ "props": {
+  "gancho": "¿CÓMO CAYÓ EL GIGANTE?",
+  "musica": "musica/epica.mp3",
+  "tono": "calido",
+  "escenas": [
+   {
+    "dibujo": {
+     "iconos": []
+    },
+    "texto": "Un ejército temblaba…",
+    "resaltar": "temblaba…",
+    "fondo": "ia:g01-ejercito",
+    "sonido": "flash_shock",
+    "sonidoEn": 0.05,
+    "ambiente": "historia/big-army-crowd-marching"
+   },
+   {
+    "dibujo": {
+     "iconos": []
+    },
+    "texto": "Casi 3 metros",
+    "resaltar": "3 metros",
+    "fondo": "ia:g02-goliat:paneo",
+    "sonido": "boom",
+    "sonidoEn": 1.4,
+    "particulas": "polvo"
+   },
+   {
+    "dibujo": {
+     "iconos": []
+    },
+    "texto": "40 días gritando",
+    "resaltar": "40 días",
+    "fondo": "ia:g03-grito",
+    "ambiente": "naturaleza/wind-blowing-ambience"
+   },
+   {
+    "dibujo": {
+     "iconos": []
+    },
+    "texto": "Nadie se atrevió.",
+    "resaltar": "Nadie",
+    "fondo": "ia:g04-miedo"
+   },
+   {
+    "dibujo": {
+     "iconos": []
+    },
+    "texto": "Un joven pastor",
+    "resaltar": "pastor",
+    "fondo": "ia:g05-pastor:paneo",
+    "sonido": "magic_reveal",
+    "sonidoEn": 0.3
+   },
+   {
+    "dibujo": {
+     "iconos": []
+    },
+    "texto": "David",
+    "resaltar": "David",
+    "fondo": "ia:g06-david"
+   },
+   {
+    "dibujo": {
+     "iconos": []
+    },
+    "texto": "5 piedras lisas",
+    "resaltar": "5 piedras",
+    "fondo": "ia:g07-piedras"
+   },
+   {
+    "dibujo": {
+     "iconos": []
+    },
+    "texto": "Se burló de él.",
+    "resaltar": "burló",
+    "fondo": "ia:g08-burla",
+    "ambiente": "naturaleza/wind-blowing-ambience"
+   },
+   {
+    "dibujo": {
+     "iconos": []
+    },
+    "texto": "Giró su honda…",
+    "resaltar": "honda…",
+    "fondo": "ia:g09-honda:paneo",
+    "sonido": "transiciones/short-wind-swoosh",
+    "sonidoEn": 1.2,
+    "particulas": "polvo"
+   },
+   {
+    "dibujo": {
+     "iconos": []
+    },
+    "texto": "Y el gigante cayó.",
+    "resaltar": "cayó.",
+    "fondo": "ia:g10-cae",
+    "sonido": "boom",
+    "sonidoEn": 1.3,
+    "particulas": "polvo"
+   },
+   {
+    "dibujo": {
+     "iconos": []
+    },
+    "texto": "David contra Goliat",
+    "resaltar": "Goliat",
+    "fondo": "ia:g06-david:paneo"
+   }
+  ],
+  "narracion": [
+   {
+    "texto": "Un ejército entero temblaba por un solo hombre.",
+    "estilo": "narrador"
+   },
+   {
+    "texto": "Se llamaba Goliat. Según el texto hebreo, medía casi tres metros.",
+    "estilo": "narrador"
+   },
+   {
+    "texto": "Durante cuarenta días salió al valle a gritar: elijan a un hombre que pelee conmigo.",
+    "estilo": "narrador"
+   },
+   {
+    "texto": "Nadie se atrevió.",
+    "estilo": "narrador"
+   },
+   {
+    "texto": "Hasta que llegó un joven pastor, que solo traía pan y queso para sus hermanos.",
+    "estilo": "narrador"
+   },
+   {
+    "texto": "Se llamaba David.",
+    "estilo": "narrador"
+   },
+   {
+    "texto": "Rechazó la armadura del rey. Bajó al arroyo, y escogió cinco piedras lisas.",
+    "estilo": "narrador"
+   },
+   {
+    "texto": "Goliat se burló de él.",
+    "estilo": "narrador"
+   },
+   {
+    "texto": "David corrió hacia el gigante, y giró su honda.",
+    "estilo": "narrador"
+   },
+   {
+    "texto": "Una sola piedra. Y el gigante cayó.",
+    "estilo": "narrador"
+   },
+   {
+    "texto": "Por eso, cuando alguien enfrenta algo imposible, todavía decimos: es David contra Goliat.",
+    "estilo": "narrador"
+   }
+  ]
+ }
+}
