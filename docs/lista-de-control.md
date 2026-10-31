@@ -40,6 +40,7 @@ Se revisa ANTES de escribir el guion y OTRA VEZ antes de programar. Viene del an
 - [ ] No pegar los logos oficiales tal cual: son obras protegidas y podrían traer reclamos o problemas con la monetización. Se nombra la marca con texto propio y se dibuja el producto genérico (uso informativo).
 
 ## 4. Sonido
+- [ ] **Voz de Xiomi (`voz/referencias/xiomi-clara.wav`) en todos los videos**, también la Biblia (pedido del usuario, 31 oct).
 - [ ] Música de Kevin MacLeod distinta en cada video del día, bajo la voz.
 - [ ] Golpe de sonido al gancho, silencio en el clímax, ambiente en las escenas de lugar.
 

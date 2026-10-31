@@ -1,6 +1,6 @@
 ---
 name: khipu-short-epico
-description: Hacer de corrido un Short o un video largo de Khipu (fondos 2D de FLUX + personaje fijo de Khipu dibujado en código, cámara 2.5D, voz según la categoría) con un solo comando que se puede retomar - guion, fondos, elegir, nitidez, profundidad, voz, render, control de calidad, subir y programar en Metricool. Usar para cada Short o video largo nuevo, en la tarea diaria, o cuando haya que rehacer uno.
+description: Hacer de corrido un Short o un video largo de Khipu (fondos 2D de FLUX + personaje fijo de Khipu dibujado en código, cámara 2.5D, voz de Xiomi) con un solo comando que se puede retomar - guion, fondos, elegir, nitidez, profundidad, voz, render, control de calidad, subir y programar en Metricool. Usar para cada Short o video largo nuevo, en la tarea diaria, o cuando haya que rehacer uno.
 ---
 
 **Biblioteca de fondos:** `python3 scripts/biblioteca-fondos.py <palabras>` busca fondos ya hechos para reusarlos (ahorra cuota de FLUX); `docs/biblioteca-fondos.md` tiene la lista.
@@ -16,14 +16,14 @@ Todo el proceso es **un comando**: `bash scripts/short-epico.sh <nombre>`. Hace 
 **`contenido/<nombre>.json`**, el guion. Para un video largo, el nombre empieza con `largo-` y sale en horizontal.
 ```json
 {"formato": "Pizarra",
- "voz": {"referencia": "voz/referencias/kokoro-alex.wav", "pausa": 0.25, "velocidad": 0.95, "tono": "serio", "pronunciacion": {"Goliat": "Goliát"}},
+ "voz": {"referencia": "voz/referencias/xiomi-clara.wav", "pausa": 0.25, "tono": "serio", "pronunciacion": {"Goliat": "Goliát"}},
  "props": {"gancho": "¿CÓMO CAYÓ EL GIGANTE?", "musica": "musica/epica.mp3", "tono": "calido",
    "narracion": [{"texto": "Un ejército entero temblaba por un solo hombre.", "estilo": "narrador"}],
    "escenas": [{"dibujo": {"iconos": []}, "fondo": "ia:gol01-ejercito", "texto": "Un ejército temblaba…", "resaltar": "temblaba…",
                 "sonido": "flash_shock", "sonidoEn": 0.05}]}}
 ```
 - **Una frase de narración = una escena = una toma.** Con `":paneo"` al final del fondo, la cámara se mueve más.
-- **Voz:** la copia de `voz/voces.json` según la categoría. Los videos largos van siempre con Xiomi.
+- **Voz:** siempre Xiomi (`voz/referencias/xiomi-clara.wav`), en Shorts y largos, de cualquier categoría (pedido del usuario, 31 oct).
 - **El video largo no lleva `gancho`.** Sus secciones se marcan con `"etiqueta"`.
 - **Extras por escena:** `particulas` (polvo, brasas, lluvia, chispas, nieve, **niebla** que avanza, **rayos** de luz que respiran), `ambiente` (sonido de fondo de la biblioteca) y `sonido` + `sonidoEn` (golpe).
 - **Movimiento:** cada toma se mueve sola como filmada: la cámara se turna entre acercar, derecha, alejar, izquierda, subir y bajar, y la profundidad mueve lo cercano más que lo lejano. Se puede forzar con `"camara": "acercar"`. Úsalo con intención: `acercar` para revelar o dar tensión, `alejar` para mostrar escala, `subir` para lo enorme (Goliat, montañas) y los barridos para viajes y caminos.

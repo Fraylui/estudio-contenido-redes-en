@@ -1,311 +1,310 @@
 {
- "formato": "Pizarra",
- "voz": {
-  "referencia": "voz/referencias/kokoro-alex.wav",
-  "pausa": 0.25,
-  "velocidad": 0.95,
-  "tono": "serio",
-  "pronunciacion": {
-   "Jonás": "Jonás",
-   "Nínive": "Nínive",
-   "lánzenme": "lánzenme"
-  }
- },
- "props": {
-  "gancho": "DESPIERTAS Y ERES JONÁS",
-  "musica": "musica/misterio-hidden-agenda.mp3",
-  "tono": "calido",
-  "narracion": [
-   {
-    "texto": "Despiertas… y eres Jonás.",
-    "estilo": "narrador"
-   },
-   {
-    "texto": "Te llega una orden: ve a Nínive, la capital de tus peores enemigos, y diles que van a ser destruidos.",
-    "estilo": "narrador"
-   },
-   {
-    "texto": "Tú haces lo contrario: te subes a un barco que va justo al otro lado del mundo conocido.",
-    "estilo": "narrador"
-   },
-   {
-    "texto": "En el mar estalla una tormenta tan fuerte que los marineros creen que se van a hundir.",
-    "estilo": "narrador"
-   },
-   {
-    "texto": "Echan suertes para saber quién tiene la culpa… y sale tu nombre.",
-    "estilo": "narrador"
-   },
-   {
-    "texto": "Les dices: lánzenme al mar. Y lo hacen. El mar se calma al instante.",
-    "estilo": "narrador"
-   },
-   {
-    "texto": "Entonces, según la Biblia, un gran pez te traga.",
-    "estilo": "narrador"
-   },
-   {
-    "texto": "Tres días y tres noches dentro de su vientre. Oscuridad, algas… y tú, rezando.",
-    "estilo": "narrador"
-   },
-   {
-    "texto": "Al tercer día, el pez te escupe en la orilla.",
-    "estilo": "narrador"
-   },
-   {
-    "texto": "Esta vez sí vas a Nínive: una ciudad tan grande que se necesitaban tres días para recorrerla.",
-    "estilo": "narrador"
-   },
-   {
-    "texto": "Gritas: en cuarenta días, Nínive será destruida.",
-    "estilo": "narrador"
-   },
-   {
-    "texto": "Y pasa lo que nunca esperabas: te creen. Hasta el rey se viste de luto. Y la ciudad se salva.",
-    "estilo": "narrador"
-   },
-   {
-    "texto": "¿Y tú? Te enojas… porque querías que tus enemigos fueran castigados.",
-    "estilo": "narrador"
-   },
-   {
-    "texto": "Dime: si fueras Jonás… ¿habrías ido desde el principio?",
-    "estilo": "narrador"
-   }
-  ],
-  "escenas": [
-   {
-    "dibujo": {
-     "iconos": []
-    },
-    "texto": "Despiertas y eres Jonás",
-    "resaltar": "Jonás",
-    "fondo": "ia:jon-puerto",
-    "khipu": {
-     "cara": "sorprendido",
-     "pose": "abajo",
-     "vestuario": "biblico",
-     "x": 30
-    },
-    "sonido": "hooks/cinematic-glass-hit-suspense",
-    "sonidoEn": 0.05
-   },
-   {
-    "dibujo": {
-     "iconos": []
-    },
-    "texto": "Ve a Nínive",
-    "resaltar": "Nínive",
-    "fondo": "ia:jon-puerto",
-    "khipu": {
-     "cara": "asustado",
-     "pose": "arriba",
-     "vestuario": "biblico",
-     "x": 65,
-     "espejo": true
+  "formato": "Pizarra",
+  "voz": {
+    "referencia": "voz/referencias/xiomi-clara.wav",
+    "pausa": 0.25,
+    "tono": "serio",
+    "pronunciacion": {
+      "Jonás": "Jonás",
+      "Nínive": "Nínive",
+      "lánzenme": "lánzenme"
     }
-   },
-   {
-    "dibujo": {
-     "iconos": []
-    },
-    "texto": "Huyes al revés",
-    "resaltar": "revés",
-    "fondo": "ia:jon-barco",
-    "khipu": {
-     "cara": "decidido",
-     "pose": "cadera",
-     "vestuario": "biblico",
-     "x": 30,
-     "accion": "camina",
-     "objeto": "bolsa"
-    }
-   },
-   {
-    "dibujo": {
-     "iconos": []
-    },
-    "texto": "Una tormenta brutal",
-    "resaltar": "tormenta",
-    "fondo": "ia:jon-tormenta",
-    "khipu": {
-     "cara": "asustado",
-     "pose": "arriba",
-     "vestuario": "biblico",
-     "x": 65,
-     "espejo": true,
-     "accion": "tiembla"
-    },
-    "particulas": "lluvia",
-    "ambiente": "naturaleza/rain-and-thunder-storm"
-   },
-   {
-    "dibujo": {
-     "iconos": []
-    },
-    "texto": "Sale tu nombre",
-    "resaltar": "tu nombre",
-    "fondo": "ia:jon-tormenta",
-    "khipu": {
-     "cara": "asustado",
-     "pose": "abajo",
-     "vestuario": "biblico",
-     "x": 30
-    },
-    "silencio": true,
-    "particulas": "lluvia",
-    "sonido": "naturaleza/strong-close-thunder-explosion",
-    "sonidoEn": 2.0
-   },
-   {
-    "dibujo": {
-     "iconos": []
-    },
-    "texto": "Te lanzan al mar",
-    "resaltar": "mar",
-    "fondo": "ia:jon-mar",
-    "khipu": {
-     "cara": "triste",
-     "pose": "abajo",
-     "vestuario": "biblico",
-     "x": 65,
-     "espejo": true
-    }
-   },
-   {
-    "dibujo": {
-     "iconos": []
-    },
-    "texto": "Un gran pez te traga",
-    "resaltar": "pez",
-    "fondo": "ia:jon-pez",
-    "khipu": {
-     "cara": "asustado",
-     "pose": "arriba",
-     "vestuario": "biblico",
-     "x": 30,
-     "accion": "tiembla"
-    },
-    "sonido": "hooks/deep-heartbeat-impact",
-    "sonidoEn": 0.8
-   },
-   {
-    "dibujo": {
-     "iconos": []
-    },
-    "texto": "3 días dentro del pez",
-    "resaltar": "3 días",
-    "fondo": "ia:jon-vientre",
-    "khipu": {
-     "cara": "triste",
-     "pose": "pensando",
-     "vestuario": "biblico",
-     "x": 65,
-     "espejo": true
-    }
-   },
-   {
-    "dibujo": {
-     "iconos": []
-    },
-    "texto": "El pez te escupe",
-    "resaltar": "escupe",
-    "fondo": "ia:jon-orilla",
-    "khipu": {
-     "cara": "sorprendido",
-     "pose": "arriba",
-     "vestuario": "biblico",
-     "x": 30,
-     "accion": "salta"
-    }
-   },
-   {
-    "dibujo": {
-     "iconos": []
-    },
-    "texto": "3 días para cruzarla",
-    "resaltar": "3 días",
-    "fondo": "ia:jon-ninive",
-    "khipu": {
-     "cara": "decidido",
-     "pose": "senala",
-     "vestuario": "biblico",
-     "x": 65,
-     "espejo": true,
-     "accion": "camina"
-    }
-   },
-   {
-    "dibujo": {
-     "iconos": []
-    },
-    "texto": "40 días",
-    "resaltar": "40",
-    "fondo": "ia:jon-ninive",
-    "khipu": {
-     "cara": "enojado",
-     "pose": "arriba",
-     "vestuario": "biblico",
-     "x": 30
-    }
-   },
-   {
-    "dibujo": {
-     "iconos": []
-    },
-    "texto": "Te creen",
-    "resaltar": "creen",
-    "fondo": "ia:jon-ninive",
-    "khipu": {
-     "cara": "sorprendido",
-     "pose": "abajo",
-     "vestuario": "biblico",
-     "x": 65,
-     "espejo": true
-    },
-    "extras": [
-     {
-      "cara": "triste",
-      "pose": "abajo",
-      "vestuario": "biblico",
-      "x": 30
-     },
-     {
-      "cara": "triste",
-      "pose": "pensando",
-      "vestuario": "biblico",
-      "x": 48
-     }
+  },
+  "props": {
+    "gancho": "DESPIERTAS Y ERES JONÁS",
+    "musica": "musica/misterio-hidden-agenda.mp3",
+    "tono": "calido",
+    "narracion": [
+      {
+        "texto": "Despiertas… y eres Jonás.",
+        "estilo": "narrador"
+      },
+      {
+        "texto": "Te llega una orden: ve a Nínive, la capital de tus peores enemigos, y diles que van a ser destruidos.",
+        "estilo": "narrador"
+      },
+      {
+        "texto": "Tú haces lo contrario: te subes a un barco que va justo al otro lado del mundo conocido.",
+        "estilo": "narrador"
+      },
+      {
+        "texto": "En el mar estalla una tormenta tan fuerte que los marineros creen que se van a hundir.",
+        "estilo": "narrador"
+      },
+      {
+        "texto": "Echan suertes para saber quién tiene la culpa… y sale tu nombre.",
+        "estilo": "narrador"
+      },
+      {
+        "texto": "Les dices: lánzenme al mar. Y lo hacen. El mar se calma al instante.",
+        "estilo": "narrador"
+      },
+      {
+        "texto": "Entonces, según la Biblia, un gran pez te traga.",
+        "estilo": "narrador"
+      },
+      {
+        "texto": "Tres días y tres noches dentro de su vientre. Oscuridad, algas… y tú, rezando.",
+        "estilo": "narrador"
+      },
+      {
+        "texto": "Al tercer día, el pez te escupe en la orilla.",
+        "estilo": "narrador"
+      },
+      {
+        "texto": "Esta vez sí vas a Nínive: una ciudad tan grande que se necesitaban tres días para recorrerla.",
+        "estilo": "narrador"
+      },
+      {
+        "texto": "Gritas: en cuarenta días, Nínive será destruida.",
+        "estilo": "narrador"
+      },
+      {
+        "texto": "Y pasa lo que nunca esperabas: te creen. Hasta el rey se viste de luto. Y la ciudad se salva.",
+        "estilo": "narrador"
+      },
+      {
+        "texto": "¿Y tú? Te enojas… porque querías que tus enemigos fueran castigados.",
+        "estilo": "narrador"
+      },
+      {
+        "texto": "Dime: si fueras Jonás… ¿habrías ido desde el principio?",
+        "estilo": "narrador"
+      }
+    ],
+    "escenas": [
+      {
+        "dibujo": {
+          "iconos": []
+        },
+        "texto": "Despiertas y eres Jonás",
+        "resaltar": "Jonás",
+        "fondo": "ia:jon-puerto",
+        "khipu": {
+          "cara": "sorprendido",
+          "pose": "abajo",
+          "vestuario": "biblico",
+          "x": 30
+        },
+        "sonido": "hooks/cinematic-glass-hit-suspense",
+        "sonidoEn": 0.05
+      },
+      {
+        "dibujo": {
+          "iconos": []
+        },
+        "texto": "Ve a Nínive",
+        "resaltar": "Nínive",
+        "fondo": "ia:jon-puerto",
+        "khipu": {
+          "cara": "asustado",
+          "pose": "arriba",
+          "vestuario": "biblico",
+          "x": 65,
+          "espejo": true
+        }
+      },
+      {
+        "dibujo": {
+          "iconos": []
+        },
+        "texto": "Huyes al revés",
+        "resaltar": "revés",
+        "fondo": "ia:jon-barco",
+        "khipu": {
+          "cara": "decidido",
+          "pose": "cadera",
+          "vestuario": "biblico",
+          "x": 30,
+          "accion": "camina",
+          "objeto": "bolsa"
+        }
+      },
+      {
+        "dibujo": {
+          "iconos": []
+        },
+        "texto": "Una tormenta brutal",
+        "resaltar": "tormenta",
+        "fondo": "ia:jon-tormenta",
+        "khipu": {
+          "cara": "asustado",
+          "pose": "arriba",
+          "vestuario": "biblico",
+          "x": 65,
+          "espejo": true,
+          "accion": "tiembla"
+        },
+        "particulas": "lluvia",
+        "ambiente": "naturaleza/rain-and-thunder-storm"
+      },
+      {
+        "dibujo": {
+          "iconos": []
+        },
+        "texto": "Sale tu nombre",
+        "resaltar": "tu nombre",
+        "fondo": "ia:jon-tormenta",
+        "khipu": {
+          "cara": "asustado",
+          "pose": "abajo",
+          "vestuario": "biblico",
+          "x": 30
+        },
+        "silencio": true,
+        "particulas": "lluvia",
+        "sonido": "naturaleza/strong-close-thunder-explosion",
+        "sonidoEn": 2.0
+      },
+      {
+        "dibujo": {
+          "iconos": []
+        },
+        "texto": "Te lanzan al mar",
+        "resaltar": "mar",
+        "fondo": "ia:jon-mar",
+        "khipu": {
+          "cara": "triste",
+          "pose": "abajo",
+          "vestuario": "biblico",
+          "x": 65,
+          "espejo": true
+        }
+      },
+      {
+        "dibujo": {
+          "iconos": []
+        },
+        "texto": "Un gran pez te traga",
+        "resaltar": "pez",
+        "fondo": "ia:jon-pez",
+        "khipu": {
+          "cara": "asustado",
+          "pose": "arriba",
+          "vestuario": "biblico",
+          "x": 30,
+          "accion": "tiembla"
+        },
+        "sonido": "hooks/deep-heartbeat-impact",
+        "sonidoEn": 0.8
+      },
+      {
+        "dibujo": {
+          "iconos": []
+        },
+        "texto": "3 días dentro del pez",
+        "resaltar": "3 días",
+        "fondo": "ia:jon-vientre",
+        "khipu": {
+          "cara": "triste",
+          "pose": "pensando",
+          "vestuario": "biblico",
+          "x": 65,
+          "espejo": true
+        }
+      },
+      {
+        "dibujo": {
+          "iconos": []
+        },
+        "texto": "El pez te escupe",
+        "resaltar": "escupe",
+        "fondo": "ia:jon-orilla",
+        "khipu": {
+          "cara": "sorprendido",
+          "pose": "arriba",
+          "vestuario": "biblico",
+          "x": 30,
+          "accion": "salta"
+        }
+      },
+      {
+        "dibujo": {
+          "iconos": []
+        },
+        "texto": "3 días para cruzarla",
+        "resaltar": "3 días",
+        "fondo": "ia:jon-ninive",
+        "khipu": {
+          "cara": "decidido",
+          "pose": "senala",
+          "vestuario": "biblico",
+          "x": 65,
+          "espejo": true,
+          "accion": "camina"
+        }
+      },
+      {
+        "dibujo": {
+          "iconos": []
+        },
+        "texto": "40 días",
+        "resaltar": "40",
+        "fondo": "ia:jon-ninive",
+        "khipu": {
+          "cara": "enojado",
+          "pose": "arriba",
+          "vestuario": "biblico",
+          "x": 30
+        }
+      },
+      {
+        "dibujo": {
+          "iconos": []
+        },
+        "texto": "Te creen",
+        "resaltar": "creen",
+        "fondo": "ia:jon-ninive",
+        "khipu": {
+          "cara": "sorprendido",
+          "pose": "abajo",
+          "vestuario": "biblico",
+          "x": 65,
+          "espejo": true
+        },
+        "extras": [
+          {
+            "cara": "triste",
+            "pose": "abajo",
+            "vestuario": "biblico",
+            "x": 30
+          },
+          {
+            "cara": "triste",
+            "pose": "pensando",
+            "vestuario": "biblico",
+            "x": 48
+          }
+        ]
+      },
+      {
+        "dibujo": {
+          "iconos": []
+        },
+        "texto": "Y tú te enojas",
+        "resaltar": "enojas",
+        "fondo": "ia:jon-colina",
+        "khipu": {
+          "cara": "enojado",
+          "pose": "cadera",
+          "vestuario": "biblico",
+          "x": 30
+        }
+      },
+      {
+        "dibujo": {
+          "iconos": []
+        },
+        "texto": "¿Habrías ido?",
+        "resaltar": "ido",
+        "fondo": "ia:jon-colina",
+        "khipu": {
+          "cara": "normal",
+          "pose": "pensando",
+          "vestuario": "biblico",
+          "x": 50
+        }
+      }
     ]
-   },
-   {
-    "dibujo": {
-     "iconos": []
-    },
-    "texto": "Y tú te enojas",
-    "resaltar": "enojas",
-    "fondo": "ia:jon-colina",
-    "khipu": {
-     "cara": "enojado",
-     "pose": "cadera",
-     "vestuario": "biblico",
-     "x": 30
-    }
-   },
-   {
-    "dibujo": {
-     "iconos": []
-    },
-    "texto": "¿Habrías ido?",
-    "resaltar": "ido",
-    "fondo": "ia:jon-colina",
-    "khipu": {
-     "cara": "normal",
-     "pose": "pensando",
-     "vestuario": "biblico",
-     "x": 50
-    }
-   }
-  ]
- }
+  }
 }

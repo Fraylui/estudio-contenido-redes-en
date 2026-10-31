@@ -103,7 +103,9 @@ En `contenido/anuncio-*.json` cada escena puede indicar `"frase": n`, y entonces
 - El video final mide -14 ±0,5 LUFS con pico de -1 dBFS o menos: `ffmpeg -i out.mp4 -af ebur128=peak=true -f null -`.
 - Escúchalo con audífonos y pide a la persona que lo confirme. Ni Claude ni Whisper reemplazan un oído humano para juzgar la naturalidad.
 
-## Qué voz va en cada video (hipótesis del 28 oct, se confirma con datos)
+## Qué voz va en cada video
+
+**Desde el 31 oct: siempre Xiomi (`xiomi-clara.wav`) en todo** (pedido del usuario). Lo de abajo era la hipótesis del 28 oct y ya no se usa.
 | Voz | Va en | Por qué |
 |---|---|---|
 | **Hombre grave y pausada** (Kokoro "Alex" o "Santa", o un clon de hombre con permiso) | Biblia épica, historia y guerras, misterios, personajes históricos, mundo antiguo | Los Shorts de referencia de la Biblia y de historia usan voz de hombre grave, tipo tráiler: da peso y suspenso |

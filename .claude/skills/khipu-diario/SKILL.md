@@ -75,7 +75,7 @@ Nuestros Shorts de finanzas fueron los peores (de 27 a 442 vistas). El público 
 - **Formato (desde el 30 oct): todo en 2D** — fondos FLUX `fondo2d` + personaje fijo de Khipu; nada realista. (Antes: "tomas épicas") (el de los Shorts de la Biblia que más se ven): una imagen épica vertical por cada momento de la historia, con cámara 2.5D. Detalle en la skill `khipu-short-epico`.
 - **Cada escena se hace al máximo:** si un momento se puede mostrar mejor con una toma propia, se hace la toma; los objetos 3D solos son para datos y explicaciones, no para historias.
 - **Nunca mendigar** (regla del usuario, 28 oct): nada de "suscríbete", "comenta", "dale like" ni "te leo en los comentarios". Baja la calidad percibida y la retención. El final es un remate fuerte que **conecta con la primera frase** (bucle): la última línea lleva de vuelta a la pregunta del inicio.
-- **Voz según la categoría:** se copia de `voz/voces.json` (hombre grave en Biblia, historia, misterios y personajes; mujer cálida en hábitos, finanzas y animales; Sayra en cuerpo y psicología; en las de "prueba" se alternan y gana la que más retiene).
+- **Voz: SIEMPRE Xiomi (`voz/referencias/xiomi-clara.wav`) en todo, largos y Shorts, también la Biblia** (pedido del usuario, 31 oct: "Todo mejor utilicemos su voz de Xiomi"). Lo que sigue queda solo como historia: ~~Voz según la categoría:~~ se copia de `voz/voces.json` (hombre grave en Biblia, historia, misterios y personajes; mujer cálida en hábitos, finanzas y animales; Sayra en cuerpo y psicología; en las de "prueba" se alternan y gana la que más retiene).
 - De 20 a 40 s, **una sola idea**, de 6 a 9 escenas (una por frase), en `contenido/short-<tema>.json` y renderizado en vertical:
   `npm run lote -- short-<tema>` (la composición vertical usa `Pizarra-Vertical`).
 - **Estructura:**
@@ -93,7 +93,7 @@ Nuestros Shorts de finanzas fueron los peores (de 27 a 442 vistas). El público 
 - También valen los recortes de un video largo, siempre que se entiendan solos y lleven `"gancho"` (ver `pizarra`, sección 5b).
 
 ## 4. Video largo (miércoles y domingo a las 10:00, 8-12 min)
-- **Voz: siempre Xiomi** (pedido del usuario, 28 oct), sea cual sea la categoría. El mapa de voces por categoría es solo para los Shorts.
+- **Voz: siempre Xiomi** (pedido del usuario, 28 oct), sea cual sea la categoría. Desde el 31 oct también en los Shorts: ya no hay mapa de voces por categoría.
 Se sigue completo `docs/receta-video.md`:
 - de 6 a 10 minutos, entre 1 200 y 1 800 palabras;
 - 3 miniaturas;

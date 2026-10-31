@@ -1,9 +1,8 @@
 {
   "formato": "Pizarra",
   "voz": {
-    "referencia": "voz/referencias/kokoro-alex.wav",
+    "referencia": "voz/referencias/xiomi-clara.wav",
     "pausa": 0.25,
-    "velocidad": 0.95,
     "tono": "serio",
     "pronunciacion": {
       "Balaam": "Balaám"

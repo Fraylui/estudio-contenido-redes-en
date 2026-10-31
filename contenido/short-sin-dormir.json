@@ -1,260 +1,260 @@
 {
- "formato": "Pizarra",
- "voz": {
-  "referencia": "voz/referencias/sayra.wav",
-  "pausa": 0.18,
-  "pronunciacion": {
-   "Gardner": "Gárdner",
-   "Stanford": "Stánford",
-   "Guinness": "Guines"
-  }
- },
- "props": {
-  "gancho": "17 AÑOS SIN DORMIR",
-  "musica": "musica/tension-volatile.mp3",
-  "tono": "calido",
-  "narracion": [
-   {
-    "texto": "Diciembre de mil novecientos sesenta y tres. Tienes diecisiete años y decides no dormir… para ganar un concurso de ciencia.",
-    "estilo": "narrador"
-   },
-   {
-    "texto": "Así empezó el experimento de Randy Gardner, en Estados Unidos.",
-    "estilo": "narrador"
-   },
-   {
-    "texto": "Primero, te cuesta concentrarte. Todo se vuelve lento.",
-    "estilo": "narrador"
-   },
-   {
-    "texto": "Después, te pones de mal humor, y olvidas cosas que acabas de hacer.",
-    "estilo": "narrador"
-   },
-   {
-    "texto": "Y luego, empiezas a ver cosas que no existen.",
-    "estilo": "narrador"
-   },
-   {
-    "texto": "Tus amigos te vigilan día y noche para que no cierres los ojos. Y un científico de Stanford viene a estudiarte.",
-    "estilo": "narrador"
-   },
-   {
-    "texto": "Día once: te piden restar de siete en siete desde cien. A mitad de la cuenta, te detienes… y olvidas qué estabas haciendo.",
-    "estilo": "narrador"
-   },
-   {
-    "texto": "Llegas a once días y veinticinco minutos. Doscientas sesenta y cuatro horas despierto: el récord.",
-    "estilo": "narrador"
-   },
-   {
-    "texto": "Después, duermes catorce horas seguidas.",
-    "estilo": "narrador"
-   },
-   {
-    "texto": "Años más tarde, Randy contó que sufrió de insomnio, y lo atribuyó al experimento.",
-    "estilo": "narrador"
-   },
-   {
-    "texto": "Y Guinness dejó de aceptar este tipo de récords por ser peligrosos.",
-    "estilo": "narrador"
-   },
-   {
-    "texto": "Y tú, ¿cuántas horas llevas sin dormir bien esta semana?",
-    "estilo": "narrador"
-   }
-  ],
-  "escenas": [
-   {
-    "dibujo": {
-     "iconos": []
-    },
-    "texto": "17 años sin dormir",
-    "resaltar": "sin dormir",
-    "fondo": "ia:sd-cuarto",
-    "khipu": {
-     "cara": "decidido",
-     "pose": "cadera",
-     "vestuario": "base",
-     "x": 30
-    },
-    "sonido": "hooks/cinematic-glass-hit-suspense",
-    "sonidoEn": 0.05
-   },
-   {
-    "dibujo": {
-     "iconos": []
-    },
-    "texto": "El experimento de Randy",
-    "resaltar": "Randy",
-    "fondo": "ia:sd-cuarto",
-    "khipu": {
-     "cara": "feliz",
-     "pose": "senala",
-     "vestuario": "base",
-     "x": 65,
-     "espejo": true
+  "formato": "Pizarra",
+  "voz": {
+    "referencia": "voz/referencias/xiomi-clara.wav",
+    "pausa": 0.18,
+    "pronunciacion": {
+      "Gardner": "Gárdner",
+      "Stanford": "Stánford",
+      "Guinness": "Guines"
     }
-   },
-   {
-    "dibujo": {
-     "iconos": []
-    },
-    "texto": "Primero: no te concentras",
-    "resaltar": "concentras",
-    "fondo": "ia:sd-calle",
-    "khipu": {
-     "cara": "normal",
-     "pose": "pensando",
-     "vestuario": "base",
-     "x": 30,
-     "accion": "camina"
-    }
-   },
-   {
-    "dibujo": {
-     "iconos": []
-    },
-    "texto": "Después: olvidas",
-    "resaltar": "olvidas",
-    "fondo": "ia:sd-cuarto",
-    "khipu": {
-     "cara": "enojado",
-     "pose": "cadera",
-     "vestuario": "base",
-     "x": 65,
-     "espejo": true
-    }
-   },
-   {
-    "dibujo": {
-     "iconos": []
-    },
-    "texto": "Luego: alucinas",
-    "resaltar": "alucinas",
-    "fondo": "ia:sd-noche",
-    "khipu": {
-     "cara": "asustado",
-     "pose": "arriba",
-     "vestuario": "base",
-     "x": 30,
-     "accion": "tiembla"
-    },
-    "sonido": "hooks/deep-heartbeat-impact",
-    "sonidoEn": 1.0
-   },
-   {
-    "dibujo": {
-     "iconos": []
-    },
-    "texto": "Te vigilan",
-    "resaltar": "vigilan",
-    "fondo": "ia:sd-cuarto",
-    "khipu": {
-     "cara": "triste",
-     "pose": "abajo",
-     "vestuario": "base",
-     "x": 65,
-     "espejo": true
-    },
-    "extras": [
-     {
-      "cara": "normal",
-      "pose": "pensando",
-      "vestuario": "base",
-      "x": 28
-     }
+  },
+  "props": {
+    "gancho": "17 AÑOS SIN DORMIR",
+    "musica": "musica/tension-volatile.mp3",
+    "tono": "calido",
+    "narracion": [
+      {
+        "texto": "Diciembre de mil novecientos sesenta y tres. Tienes diecisiete años y decides no dormir… para ganar un concurso de ciencia.",
+        "estilo": "narrador"
+      },
+      {
+        "texto": "Así empezó el experimento de Randy Gardner, en Estados Unidos.",
+        "estilo": "narrador"
+      },
+      {
+        "texto": "Primero, te cuesta concentrarte. Todo se vuelve lento.",
+        "estilo": "narrador"
+      },
+      {
+        "texto": "Después, te pones de mal humor, y olvidas cosas que acabas de hacer.",
+        "estilo": "narrador"
+      },
+      {
+        "texto": "Y luego, empiezas a ver cosas que no existen.",
+        "estilo": "narrador"
+      },
+      {
+        "texto": "Tus amigos te vigilan día y noche para que no cierres los ojos. Y un científico de Stanford viene a estudiarte.",
+        "estilo": "narrador"
+      },
+      {
+        "texto": "Día once: te piden restar de siete en siete desde cien. A mitad de la cuenta, te detienes… y olvidas qué estabas haciendo.",
+        "estilo": "narrador"
+      },
+      {
+        "texto": "Llegas a once días y veinticinco minutos. Doscientas sesenta y cuatro horas despierto: el récord.",
+        "estilo": "narrador"
+      },
+      {
+        "texto": "Después, duermes catorce horas seguidas.",
+        "estilo": "narrador"
+      },
+      {
+        "texto": "Años más tarde, Randy contó que sufrió de insomnio, y lo atribuyó al experimento.",
+        "estilo": "narrador"
+      },
+      {
+        "texto": "Y Guinness dejó de aceptar este tipo de récords por ser peligrosos.",
+        "estilo": "narrador"
+      },
+      {
+        "texto": "Y tú, ¿cuántas horas llevas sin dormir bien esta semana?",
+        "estilo": "narrador"
+      }
+    ],
+    "escenas": [
+      {
+        "dibujo": {
+          "iconos": []
+        },
+        "texto": "17 años sin dormir",
+        "resaltar": "sin dormir",
+        "fondo": "ia:sd-cuarto",
+        "khipu": {
+          "cara": "decidido",
+          "pose": "cadera",
+          "vestuario": "base",
+          "x": 30
+        },
+        "sonido": "hooks/cinematic-glass-hit-suspense",
+        "sonidoEn": 0.05
+      },
+      {
+        "dibujo": {
+          "iconos": []
+        },
+        "texto": "El experimento de Randy",
+        "resaltar": "Randy",
+        "fondo": "ia:sd-cuarto",
+        "khipu": {
+          "cara": "feliz",
+          "pose": "senala",
+          "vestuario": "base",
+          "x": 65,
+          "espejo": true
+        }
+      },
+      {
+        "dibujo": {
+          "iconos": []
+        },
+        "texto": "Primero: no te concentras",
+        "resaltar": "concentras",
+        "fondo": "ia:sd-calle",
+        "khipu": {
+          "cara": "normal",
+          "pose": "pensando",
+          "vestuario": "base",
+          "x": 30,
+          "accion": "camina"
+        }
+      },
+      {
+        "dibujo": {
+          "iconos": []
+        },
+        "texto": "Después: olvidas",
+        "resaltar": "olvidas",
+        "fondo": "ia:sd-cuarto",
+        "khipu": {
+          "cara": "enojado",
+          "pose": "cadera",
+          "vestuario": "base",
+          "x": 65,
+          "espejo": true
+        }
+      },
+      {
+        "dibujo": {
+          "iconos": []
+        },
+        "texto": "Luego: alucinas",
+        "resaltar": "alucinas",
+        "fondo": "ia:sd-noche",
+        "khipu": {
+          "cara": "asustado",
+          "pose": "arriba",
+          "vestuario": "base",
+          "x": 30,
+          "accion": "tiembla"
+        },
+        "sonido": "hooks/deep-heartbeat-impact",
+        "sonidoEn": 1.0
+      },
+      {
+        "dibujo": {
+          "iconos": []
+        },
+        "texto": "Te vigilan",
+        "resaltar": "vigilan",
+        "fondo": "ia:sd-cuarto",
+        "khipu": {
+          "cara": "triste",
+          "pose": "abajo",
+          "vestuario": "base",
+          "x": 65,
+          "espejo": true
+        },
+        "extras": [
+          {
+            "cara": "normal",
+            "pose": "pensando",
+            "vestuario": "base",
+            "x": 28
+          }
+        ]
+      },
+      {
+        "dibujo": {
+          "iconos": []
+        },
+        "texto": "Día 11: 100, 93, 86…",
+        "resaltar": "Día 11",
+        "fondo": "ia:sd-pizarra",
+        "khipu": {
+          "cara": "sorprendido",
+          "pose": "pensando",
+          "vestuario": "base",
+          "x": 30
+        },
+        "silencio": true
+      },
+      {
+        "dibujo": {
+          "iconos": []
+        },
+        "texto": "264 horas",
+        "resaltar": "264",
+        "fondo": "ia:sd-cuarto",
+        "khipu": {
+          "cara": "feliz",
+          "pose": "arriba",
+          "vestuario": "base",
+          "x": 65,
+          "espejo": true,
+          "accion": "salta"
+        },
+        "sonido": "hooks/short-bass-hit",
+        "sonidoEn": 2.0
+      },
+      {
+        "dibujo": {
+          "iconos": []
+        },
+        "texto": "Duermes 14 horas",
+        "resaltar": "14",
+        "fondo": "ia:sd-cama",
+        "khipu": {
+          "cara": "feliz",
+          "pose": "abajo",
+          "vestuario": "base",
+          "x": 30
+        }
+      },
+      {
+        "dibujo": {
+          "iconos": []
+        },
+        "texto": "Años después: insomnio",
+        "resaltar": "insomnio",
+        "fondo": "ia:sd-noche",
+        "khipu": {
+          "cara": "triste",
+          "pose": "pensando",
+          "vestuario": "base",
+          "x": 65,
+          "espejo": true
+        }
+      },
+      {
+        "dibujo": {
+          "iconos": []
+        },
+        "texto": "Récord prohibido",
+        "resaltar": "prohibido",
+        "fondo": "ia:sd-pizarra",
+        "khipu": {
+          "cara": "decidido",
+          "pose": "senala",
+          "vestuario": "base",
+          "x": 30
+        }
+      },
+      {
+        "dibujo": {
+          "iconos": []
+        },
+        "texto": "¿Y tú cuántas llevas?",
+        "resaltar": "llevas",
+        "fondo": "ia:sd-cama",
+        "khipu": {
+          "cara": "normal",
+          "pose": "pensando",
+          "vestuario": "base",
+          "x": 50
+        }
+      }
     ]
-   },
-   {
-    "dibujo": {
-     "iconos": []
-    },
-    "texto": "Día 11: 100, 93, 86…",
-    "resaltar": "Día 11",
-    "fondo": "ia:sd-pizarra",
-    "khipu": {
-     "cara": "sorprendido",
-     "pose": "pensando",
-     "vestuario": "base",
-     "x": 30
-    },
-    "silencio": true
-   },
-   {
-    "dibujo": {
-     "iconos": []
-    },
-    "texto": "264 horas",
-    "resaltar": "264",
-    "fondo": "ia:sd-cuarto",
-    "khipu": {
-     "cara": "feliz",
-     "pose": "arriba",
-     "vestuario": "base",
-     "x": 65,
-     "espejo": true,
-     "accion": "salta"
-    },
-    "sonido": "hooks/short-bass-hit",
-    "sonidoEn": 2.0
-   },
-   {
-    "dibujo": {
-     "iconos": []
-    },
-    "texto": "Duermes 14 horas",
-    "resaltar": "14",
-    "fondo": "ia:sd-cama",
-    "khipu": {
-     "cara": "feliz",
-     "pose": "abajo",
-     "vestuario": "base",
-     "x": 30
-    }
-   },
-   {
-    "dibujo": {
-     "iconos": []
-    },
-    "texto": "Años después: insomnio",
-    "resaltar": "insomnio",
-    "fondo": "ia:sd-noche",
-    "khipu": {
-     "cara": "triste",
-     "pose": "pensando",
-     "vestuario": "base",
-     "x": 65,
-     "espejo": true
-    }
-   },
-   {
-    "dibujo": {
-     "iconos": []
-    },
-    "texto": "Récord prohibido",
-    "resaltar": "prohibido",
-    "fondo": "ia:sd-pizarra",
-    "khipu": {
-     "cara": "decidido",
-     "pose": "senala",
-     "vestuario": "base",
-     "x": 30
-    }
-   },
-   {
-    "dibujo": {
-     "iconos": []
-    },
-    "texto": "¿Y tú cuántas llevas?",
-    "resaltar": "llevas",
-    "fondo": "ia:sd-cama",
-    "khipu": {
-     "cara": "normal",
-     "pose": "pensando",
-     "vestuario": "base",
-     "x": 50
-    }
-   }
-  ]
- }
+  }
 }
