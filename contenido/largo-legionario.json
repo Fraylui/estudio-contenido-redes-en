@@ -1651,7 +1651,7 @@
     },
     "texto": "También construía",
     "resaltar": "construía",
-    "fondo": "ia:rom-muralla",
+    "fondo": "ia:rom-fuerte",
     "khipu": {
      "cara": "sorprendido",
      "pose": "senala",
@@ -1693,7 +1693,7 @@
     },
     "texto": "Un muro de 117 km",
     "resaltar": "117 km",
-    "fondo": "ia:rom-muralla",
+    "fondo": "ia:rom-fuerte",
     "khipu": {
      "cara": "sorprendido",
      "pose": "arriba",
@@ -1709,7 +1709,7 @@
     },
     "texto": "Todavía existe",
     "resaltar": "existe",
-    "fondo": "ia:rom-muralla",
+    "fondo": "ia:rom-fuerte",
     "khipu": {
      "cara": "feliz",
      "pose": "senala",
@@ -2125,7 +2125,7 @@
     },
     "texto": "Así nacieron ciudades",
     "resaltar": "ciudades",
-    "fondo": "ia:rom-ciudad",
+    "fondo": "ia:jes-jerusalen",
     "khipu": {
      "cara": "sorprendido",
      "pose": "senala",
@@ -2139,7 +2139,7 @@
     },
     "texto": "Mérida, España",
     "resaltar": "Mérida",
-    "fondo": "ia:rom-ciudad",
+    "fondo": "ia:jes-jerusalen",
     "khipu": {
      "cara": "feliz",
      "pose": "arriba",
@@ -2154,7 +2154,7 @@
     },
     "texto": "Emérito = retirado",
     "resaltar": "Emérito",
-    "fondo": "ia:rom-ciudad",
+    "fondo": "ia:jes-jerusalen",
     "khipu": {
      "cara": "feliz",
      "pose": "pensando",
