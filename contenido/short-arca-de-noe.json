@@ -64,7 +64,7 @@
         "estilo": "narrador"
       },
       {
-        "texto": "Casi la mitad del Titanic.",
+        "texto": "Más de la mitad del Titanic.",
         "estilo": "narrador"
       },
       {
@@ -293,7 +293,7 @@
         "dibujo": {
           "iconos": []
         },
-        "texto": "La mitad del Titanic",
+        "texto": "Más de la mitad del Titanic",
         "resaltar": "Titanic",
         "fondo": "ia:arca-titanic",
         "khipu": {
