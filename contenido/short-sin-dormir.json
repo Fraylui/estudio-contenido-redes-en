@@ -10,7 +10,7 @@
     }
   },
   "props": {
-    "gancho": "17 AÑOS SIN DORMIR",
+    "gancho": "11 DÍAS SIN DORMIR",
     "musica": "musica/tension-volatile.mp3",
     "tono": "calido",
     "narracion": [
@@ -68,8 +68,8 @@
         "dibujo": {
           "iconos": []
         },
-        "texto": "17 años sin dormir",
-        "resaltar": "sin dormir",
+        "texto": "Tienes 17 años",
+        "resaltar": "17 años",
         "fondo": "ia:sd-cuarto",
         "khipu": {
           "cara": "decidido",
