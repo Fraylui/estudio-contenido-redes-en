@@ -275,3 +275,15 @@ Cada video nuevo que mande el usuario se analiza y lo útil entra en la etapa qu
 - **Filtro de Cloudflare:** «blood», «swollen», «inflamed» dan error 400; describir la forma («red disc shaped cells», «glowing warm red area»). A veces falla al azar: reintentar.
 - **Render que no cambia:** si se edita el JSON, borrar `out/partes/<video>-*` antes de volver a renderizar.
 - **Voz de Xiomi en todo** desde el 31 oct (pedido del usuario).
+
+## Revisión semanal (hecha el 3 nov, datos públicos del canal @tu_quipu)
+| Short | Vistas | Nota |
+|---|---|---|
+| Ibuprofeno (2 nov, cuerpo, Xiomi) | ~1 000 en 1 día | El mejor de la semana: pregunta del día a día («¿cómo sabe dónde te duele?») |
+| Primer paciente de la penicilina (recorte del largo) | ~1 000 | Los recortes de largos funcionan |
+| La advertencia de Fleming (recorte) | 963 | Ídem |
+| Este cuarto todavía existe (recorte Atahualpa) | 842 | Ídem; Perú + historia |
+| Jonás (2 nov, Biblia POV) | 182 | Bajo |
+| Balaam 14 · Noé 13 · Día de Muertos 7 · Le Gentil 6 | casi cero | YouTube casi no los mostró; pedir al usuario la fuente de tráfico y "visto vs. deslizado" |
+- **Hipótesis a comprobar:** las historias bíblicas «POV» y las efemérides no enganchan en los primeros segundos; las preguntas prácticas del cuerpo y los recortes de los largos sí. La semana que viene: más «cuerpo y ciencia cotidiana» a las 12:00 y recortes de largos a las 7:00/16:00; la Biblia sigue a las 20:00 pero con gancho de contradicción (como «Rompieron el techo», 1,1 mil) en vez de «Despiertas y eres…».
+- **Metricool:** el cupo se renovó el 1 nov; se publica con él otra vez.
