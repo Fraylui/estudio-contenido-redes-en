@@ -287,3 +287,9 @@ Cada video nuevo que mande el usuario se analiza y lo útil entra en la etapa qu
 | Balaam 14 · Noé 13 · Día de Muertos 7 · Le Gentil 6 | casi cero | YouTube casi no los mostró; pedir al usuario la fuente de tráfico y "visto vs. deslizado" |
 - **Hipótesis a comprobar:** las historias bíblicas «POV» y las efemérides no enganchan en los primeros segundos; las preguntas prácticas del cuerpo y los recortes de los largos sí. La semana que viene: más «cuerpo y ciencia cotidiana» a las 12:00 y recortes de largos a las 7:00/16:00; la Biblia sigue a las 20:00 pero con gancho de contradicción (como «Rompieron el techo», 1,1 mil) en vez de «Despiertas y eres…».
 - **Metricool:** el cupo se renovó el 1 nov; se publica con él otra vez.
+
+### 4 nov: los 4 jinetes
+- En la revisión final se encontró un absoluto falso ("los partos, los únicos que habían humillado a Roma": Teutoburgo también). Regla: buscar "el único", "los únicos", "nunca", "todos" en el guion y comprobar cada uno.
+- La memoria de frases de narrar.py permite corregir una sola línea sin regrabar el video entero (unos 40 min en total con el render).
+- 50 frases dieron solo 5:27: para llegar a 8–10 min hacen falta unas 80 frases.
+- El paso video del script falla si pasa de 100 MB: recodificar con crf 26 y maxrate 1300k (172 MB → 58 MB).

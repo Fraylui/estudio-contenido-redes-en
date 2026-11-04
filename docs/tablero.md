@@ -9,11 +9,14 @@ Se actualiza en cada paso. Una sola cola: primero lo que sale antes, después lo
 | Mié 28 | 16:00 | Short: El Dorado | ✅ Programado |
 | Mié 28 | 18:00 | **Largo:** el rescate de Atahualpa | ✅ Programado |
 | Mié 28 | 20:00 | Short: 30 monedas | ✅ Programado |
+| Mié 4 nov | 10:00 | **Largo:** los 4 jinetes del Apocalipsis (5:27, Xiomi) | ✅ Programado (id 416033047) |
+| Mié 4 nov | 12:00 | Short: bacteria | ✅ Programado |
+| Mié 4 nov | 20:00 | Short: Jesús antes de Cristo | ✅ Programado |
 
 ## Cola (en este orden)
 1. **Largo del viernes 30, 10:00:** Fleming y la penicilina. Voz de Xiomi y 46 tomas en proceso.
 2. **Shorts del jueves 29:** Babilonia (7:00), hiperinflación (12:00), Inca Kola (16:00) y el techo de Cafarnaúm (20:00, con la animación por capas).
-3. **Largo del domingo 1, 10:00:** los 4 jinetes del Apocalipsis, con su historia real (guion listo, 50 escenas, ~7 min).
+3. ~~Largo de los 4 jinetes~~ → programado el mié 4 nov 10:00.
 4. **Shorts del viernes 30.**
 
 ## Reglas de orden
