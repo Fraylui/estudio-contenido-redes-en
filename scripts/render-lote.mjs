@@ -8,7 +8,7 @@
 // Los videos quedan en out/<nombre-del-archivo>-<Tamaño>.mp4 (y las miniaturas en .png)
 import { execFileSync } from "node:child_process";
 import { createHash } from "node:crypto";
-import { existsSync, readdirSync, readFileSync, writeFileSync, mkdirSync } from "node:fs";
+import { existsSync, readdirSync, readFileSync, renameSync, writeFileSync, mkdirSync } from "node:fs";
 import { join, basename } from "node:path";
 
 const args = process.argv.slice(2);
@@ -43,7 +43,10 @@ for (const archivo of archivos) {
     const voz = JSON.parse(readFileSync(json, "utf8")).voz ?? {};
     const referencia = voz.referencia ?? "voz/referencias/xiomi.wav";
     // Solo se vuelve a narrar si cambió el texto narrado o la configuración de la voz (no cualquier cambio del JSON).
-    const huella = createHash("sha1").update(JSON.stringify({ narracion: props.narracion, voz })).digest("hex");
+    // También cuentan el narrador y el ecualizador: si cambia una pronunciación (por ejemplo "VRAEM") o el sonido, hay que volver a narrar.
+    // Las frases que no cambian salen de la memoria de narrar.py, así que no se pierde tiempo.
+    const narrador = ["voz/narrar.py", "voz/ecualizar.py"].map((f) => (existsSync(f) ? readFileSync(f, "utf8") : "")).join("");
+    const huella = createHash("sha1").update(JSON.stringify({ narracion: props.narracion, voz, narrador })).digest("hex");
     const datosVoz = `public/voz/${nombre}.json`;
     const anterior = existsSync(datosVoz) ? JSON.parse(readFileSync(datosVoz, "utf8")) : null;
     const desactualizada = !existsSync(audio) || anterior?.huella !== huella;
@@ -57,11 +60,24 @@ for (const archivo of archivos) {
   }
   if (props.narracion && existsSync(`public/voz/${nombre}.json`)) {
     // Anuncio y Narrado leen la voz con su ruta dentro de public/; los demás formatos, desde public/voz/
-    props.voz = formato === "Anuncio" || formato === "Narrado" ? `voz/${nombre}.wav` : `${nombre}.wav`;
+    props.voz = ["Anuncio", "Narrado", "Pizarra"].includes(formato) ? `voz/${nombre}.wav` : `${nombre}.wav`;
     const tiemposVoz = JSON.parse(readFileSync(`public/voz/${nombre}.json`, "utf8"));
     props.duracionVoz = tiemposVoz.duracion;
     // Los anuncios usan los tiempos de cada frase para sincronizar sus escenas
     props.frasesVoz = tiemposVoz.frases.map(({ inicio, fin }) => ({ inicio, fin }));
+    // Boca del personaje: volumen de la voz por cuadro (30 fps), de 0 a 1, para que hable al ritmo de la narración
+    if (formato === "Pizarra") {
+      const pcm = execFileSync("ffmpeg", ["-v", "error", "-i", `public/voz/${nombre}.wav`, "-ac", "1", "-ar", "9000", "-f", "s16le", "-"], { maxBuffer: 1 << 30 });
+      const muestras = new Int16Array(pcm.buffer, pcm.byteOffset, Math.floor(pcm.length / 2));
+      const porCuadro = 300, boca = [];
+      for (let i = 0; i < muestras.length; i += porCuadro) {
+        let suma = 0;
+        for (let j = i; j < Math.min(i + porCuadro, muestras.length); j++) suma += muestras[j] * muestras[j];
+        boca.push(Math.sqrt(suma / porCuadro) / 32768);
+      }
+      const tope = [...boca].sort((a, b) => a - b)[Math.floor(boca.length * 0.95)] || 1;
+      props.bocaVoz = boca.map((v) => Math.round(Math.min(1, v / tope) * 100) / 100);
+    }
   }
   const rutaProps = join("out/.props", archivo);
   writeFileSync(rutaProps, JSON.stringify(props));
@@ -78,11 +94,28 @@ for (const archivo of archivos) {
   for (const tamano of tamanos) {
     const salida = `out/${nombre}-${tamano}.mp4`;
     console.log(`\n▶ ${archivo} → ${salida}`);
-    execFileSync(
-      "npx",
-      ["remotion", "render", `${formato}-${tamano}`, salida, `--props=${rutaProps}`],
-      { stdio: "inherit" },
-    );
+    if (!args.includes("--partes")) {
+      execFileSync("npx", ["remotion", "render", `${formato}-${tamano}`, salida, `--props=${rutaProps}`], { stdio: "inherit" });
+      continue;
+    }
+    // --partes: render en tramos de 20 s que se guardan uno por uno. Si el servidor se reinicia (pasa cada 20–40 min),
+    // al volver a correr solo se hacen los tramos que faltan. Al final se unen sin volver a codificar.
+    // Largo estimado por la voz; el último tramo va abierto ("5400-") hasta el final real de la composición
+    const total = Math.ceil((props.duracionVoz ?? 60) * 30);
+    const carpetaPartes = `out/partes/${nombre}-${tamano}`;
+    mkdirSync(carpetaPartes, { recursive: true });
+    const lista = [];
+    for (let a = 0; a < total; a += 600) {
+      const b = Math.min(a + 599, total - 1);
+      const parte = `${carpetaPartes}/${String(a).padStart(6, "0")}.mp4`;
+      lista.push(`file '${parte.split("/").pop()}'`);
+      if (existsSync(parte)) continue;
+      const rango = a + 600 >= total ? `${a}-` : `${a}-${b}`;
+      execFileSync("npx", ["remotion", "render", `${formato}-${tamano}`, `${parte}.tmp.mp4`, `--props=${rutaProps}`, `--frames=${rango}`], { stdio: "inherit" });
+      renameSync(`${parte}.tmp.mp4`, parte);
+    }
+    writeFileSync(`${carpetaPartes}/lista.txt`, lista.join("\n") + "\n");
+    execFileSync("ffmpeg", ["-v", "error", "-y", "-f", "concat", "-safe", "0", "-i", `${carpetaPartes}/lista.txt`, "-c", "copy", salida], { stdio: "inherit" });
   }
 }
 

@@ -1,0 +1,2210 @@
+{
+  "formato": "Pizarra",
+  "voz": {
+    "referencia": "voz/referencias/xiomi-clara.wav",
+    "pausa": 0.22,
+    "pronunciacion": {
+      "Kiyosaki": "Kiyosáki",
+      "latte": "láte",
+      "Carfax": "Cárfax",
+      "Condusef": "Condusef",
+      "snack": "snak",
+      "snacks": "snaks"
+    }
+  },
+  "props": {
+    "escenas": [
+      {
+        "dibujo": {
+          "iconos": [
+            [
+              "cup",
+              "#ffd6a5"
+            ],
+            [
+              "pizza",
+              "#ffe14d"
+            ],
+            [
+              "truck-delivery",
+              "#a2d2ff"
+            ]
+          ]
+        },
+        "texto": "Un café. Un snack. Un delivery.",
+        "resaltar": "delivery.",
+        "sonido": "flash_shock",
+        "sonidoEn": 0.1,
+        "fondo": "ia:cafeteria"
+      },
+      {
+        "dibujo": {
+          "iconos": [
+            [
+              "coin",
+              "#ffe14d"
+            ]
+          ],
+          "personaje": "caricatura:lucia:feliz:sonrisa:adelante"
+        },
+        "texto": "Gastos chiquitos… que no importan.",
+        "resaltar": "chiquitos",
+        "fondo": "ia:cafeteria"
+      },
+      {
+        "dibujo": {
+          "iconos": [
+            [
+              "calendar",
+              "#a2d2ff"
+            ],
+            [
+              "cash",
+              "#caffbf"
+            ]
+          ],
+          "rotulo": "1 800"
+        },
+        "texto": "Al año: más de 1 800.",
+        "resaltar": "1 800.",
+        "sonido": "boom",
+        "sonidoEn": 0.3
+      },
+      {
+        "dibujo": {
+          "iconos": [
+            [
+              "img:billetera"
+            ]
+          ],
+          "personaje": "caricatura:lucia:preocupado:o:abajo"
+        },
+        "texto": "Y lo peor no es lo que gastas…",
+        "resaltar": "peor"
+      },
+      {
+        "dibujo": {
+          "iconos": [
+            [
+              "chart-line",
+              "#caffbf"
+            ],
+            [
+              "building-bank",
+              "#a2d2ff"
+            ]
+          ]
+        },
+        "texto": "…es lo que pudo construir por ti.",
+        "resaltar": "construir"
+      },
+      {
+        "dibujo": {
+          "iconos": [
+            [
+              "arrow-big-up",
+              "#caffbf"
+            ],
+            [
+              "arrow-big-down",
+              "#ffadad"
+            ],
+            [
+              "hormiga",
+              "#ffd6a5"
+            ]
+          ]
+        },
+        "texto": "Activos, pasivos y gastos hormiga.",
+        "resaltar": "gastos hormiga.",
+        "sonido": "magic_reveal",
+        "sonidoEn": 0.3
+      },
+      {
+        "dibujo": {
+          "iconos": [
+            [
+              "target",
+              "#ffadad"
+            ]
+          ],
+          "personaje": "caricatura:lucia:feliz:abierta:arriba",
+          "rotulo": "5 min"
+        },
+        "texto": "Al final: un truco de 5 minutos.",
+        "resaltar": "5 minutos."
+      },
+      {
+        "dibujo": {
+          "iconos": [
+            [
+              "sparkles",
+              "#ffe14d"
+            ]
+          ]
+        },
+        "texto": "Esto es Khipu.",
+        "resaltar": "Khipu."
+      },
+      {
+        "dibujo": {
+          "iconos": [
+            [
+              "cash-banknote",
+              "#caffbf"
+            ]
+          ],
+          "personaje": "caricatura:lucia:feliz:sonrisa:adelante"
+        },
+        "texto": "Lucía gana un buen sueldo.",
+        "resaltar": "buen sueldo.",
+        "etiqueta": "La historia de Lucía",
+        "fondo": "ia:sala"
+      },
+      {
+        "dibujo": {
+          "iconos": [
+            [
+              "calendar",
+              "#ffadad"
+            ]
+          ],
+          "personaje": "caricatura:lucia:preocupado:ondulada:abajo"
+        },
+        "texto": "Pero cada fin de mes…",
+        "resaltar": "fin de mes",
+        "fondo": "ia:sala"
+      },
+      {
+        "dibujo": {
+          "iconos": [
+            [
+              "wallet",
+              "#ffadad"
+            ],
+            [
+              "question-mark",
+              "#ffe14d"
+            ]
+          ],
+          "personaje": "caricatura:lucia:sorpresa:o:cadera"
+        },
+        "texto": "¿A dónde se fue el dinero?",
+        "resaltar": "¿A dónde",
+        "fondo": "ia:sala"
+      },
+      {
+        "dibujo": {
+          "iconos": [
+            [
+              "plane",
+              "#a2d2ff"
+            ],
+            [
+              "x",
+              "#ffadad"
+            ]
+          ],
+          "personaje": "caricatura:lucia:preocupado:chica:abajo"
+        },
+        "texto": "Nada grande. Ningún viaje.",
+        "resaltar": "Ningún viaje.",
+        "fondo": "ia:sala"
+      },
+      {
+        "dibujo": {
+          "iconos": [
+            [
+              "img:cafe"
+            ]
+          ],
+          "personaje": "caricatura:lucia:feliz:sonrisa:adelante"
+        },
+        "texto": "Un cafecito… porque se lo merece.",
+        "resaltar": "cafecito",
+        "fondo": "ia:cafeteria"
+      },
+      {
+        "dibujo": {
+          "iconos": [
+            [
+              "pizza",
+              "#ffe14d"
+            ],
+            [
+              "glass-full",
+              "#a2d2ff"
+            ]
+          ],
+          "personaje": "caricatura:lucia:normal:sonrisa:adelante"
+        },
+        "texto": "Un snack para aguantar.",
+        "resaltar": "snack",
+        "fondo": "ia:tienda"
+      },
+      {
+        "dibujo": {
+          "iconos": [
+            [
+              "brand-netflix",
+              "#ffadad"
+            ],
+            [
+              "headphones",
+              "#a2d2ff"
+            ],
+            [
+              "device-gamepad-2",
+              "#cdb4db"
+            ]
+          ]
+        },
+        "texto": "Suscripciones que casi no usa.",
+        "resaltar": "casi no usa."
+      },
+      {
+        "dibujo": {
+          "iconos": [
+            [
+              "truck-delivery",
+              "#a2d2ff"
+            ],
+            [
+              "pizza",
+              "#ffe14d"
+            ]
+          ],
+          "personaje": "caricatura:lucia:cansado:ondulada:abajo"
+        },
+        "texto": "El delivery del viernes.",
+        "resaltar": "delivery",
+        "fondo": "ia:sala"
+      },
+      {
+        "dibujo": {
+          "iconos": [
+            [
+              "img:hormiga"
+            ]
+          ]
+        },
+        "texto": "Cada gasto es pequeñito…",
+        "resaltar": "pequeñito"
+      },
+      {
+        "dibujo": {
+          "iconos": [
+            [
+              "hormiga",
+              "#ffd6a5"
+            ],
+            [
+              "hormiga",
+              "#ffe14d"
+            ],
+            [
+              "hormiga",
+              "#ffadad"
+            ]
+          ]
+        },
+        "texto": "…pero juntos son una fila de hormigas.",
+        "resaltar": "hormigas.",
+        "sonido": "whoosh_3",
+        "sonidoEn": 0.3
+      },
+      {
+        "dibujo": {
+          "iconos": [
+            [
+              "img:hormiga"
+            ],
+            [
+              "coin",
+              "#ffe14d"
+            ]
+          ]
+        },
+        "texto": "Gastos hormiga.",
+        "resaltar": "hormiga.",
+        "sonido": "ding",
+        "sonidoEn": 0.8
+      },
+      {
+        "dibujo": {
+          "iconos": [
+            [
+              "droplet",
+              "#a2d2ff"
+            ],
+            [
+              "wallet",
+              "#ffadad"
+            ]
+          ],
+          "personaje": "caricatura:lucia:sorpresa:o:adelante"
+        },
+        "texto": "No es el sueldo: son las fugas.",
+        "resaltar": "fugas."
+      },
+      {
+        "dibujo": {
+          "iconos": [
+            [
+              "books",
+              "#cdb4db"
+            ]
+          ]
+        },
+        "texto": "Dos palabras que cambian todo.",
+        "resaltar": "Dos palabras",
+        "etiqueta": "Activos y pasivos"
+      },
+      {
+        "dibujo": {
+          "iconos": [
+            [
+              "arrow-big-up",
+              "#caffbf"
+            ],
+            [
+              "arrow-big-down",
+              "#ffadad"
+            ]
+          ]
+        },
+        "texto": "Activo y pasivo.",
+        "resaltar": "Activo",
+        "sonido": "magic_reveal",
+        "sonidoEn": 0.3
+      },
+      {
+        "dibujo": {
+          "iconos": [
+            [
+              "book",
+              "#ffe14d"
+            ]
+          ],
+          "rotulo": "1997"
+        },
+        "texto": "Padre rico, padre pobre (1997).",
+        "resaltar": "Padre rico,"
+      },
+      {
+        "dibujo": {
+          "iconos": [
+            [
+              "bulb",
+              "#ffe14d"
+            ]
+          ]
+        },
+        "texto": "La forma más simple:",
+        "resaltar": "simple"
+      },
+      {
+        "dibujo": {
+          "iconos": [
+            [
+              "arrow-big-up",
+              "#caffbf"
+            ],
+            [
+              "cash",
+              "#caffbf"
+            ]
+          ],
+          "colorRotulo": "#2e9e4f"
+        },
+        "texto": "Activo: pone dinero en tu bolsillo.",
+        "resaltar": "pone dinero",
+        "sonido": "caja_registradora",
+        "sonidoEn": 0.3
+      },
+      {
+        "dibujo": {
+          "iconos": [
+            [
+              "arrow-big-down",
+              "#ffadad"
+            ],
+            [
+              "wallet",
+              "#ffadad"
+            ]
+          ]
+        },
+        "texto": "Pasivo: saca dinero de tu bolsillo.",
+        "resaltar": "saca dinero"
+      },
+      {
+        "dibujo": {
+          "iconos": [
+            [
+              "receipt",
+              "#a2d2ff"
+            ],
+            [
+              "scale",
+              "#cdb4db"
+            ]
+          ]
+        },
+        "texto": "En contabilidad es más técnico…",
+        "resaltar": "contabilidad"
+      },
+      {
+        "dibujo": {
+          "iconos": [
+            [
+              "check",
+              "#caffbf"
+            ]
+          ],
+          "personaje": "caricatura:lucia:feliz:sonrisa:adelante"
+        },
+        "texto": "…pero para ti, esta regla funciona.",
+        "resaltar": "funciona."
+      },
+      {
+        "dibujo": {
+          "iconos": [
+            [
+              "sparkles",
+              "#ffe14d"
+            ]
+          ]
+        },
+        "texto": "Veamos ejemplos.",
+        "resaltar": "ejemplos."
+      },
+      {
+        "dibujo": {
+          "iconos": [
+            [
+              "home",
+              "#caffbf"
+            ],
+            [
+              "cash",
+              "#caffbf"
+            ]
+          ],
+          "colorRotulo": "#2e9e4f"
+        },
+        "texto": "Depa que alquilas: activo.",
+        "resaltar": "activo."
+      },
+      {
+        "dibujo": {
+          "iconos": [
+            [
+              "basket",
+              "#ffe14d"
+            ],
+            [
+              "chart-line",
+              "#caffbf"
+            ]
+          ],
+          "colorRotulo": "#2e9e4f"
+        },
+        "texto": "Negocio con ganancias: activo.",
+        "resaltar": "activo."
+      },
+      {
+        "dibujo": {
+          "iconos": [
+            [
+              "chart-line",
+              "#caffbf"
+            ],
+            [
+              "coin",
+              "#ffe14d"
+            ]
+          ],
+          "colorRotulo": "#2e9e4f"
+        },
+        "texto": "Inversión que crece: activo.",
+        "resaltar": "activo."
+      },
+      {
+        "dibujo": {
+          "iconos": [
+            [
+              "school",
+              "#a2d2ff"
+            ],
+            [
+              "bulb",
+              "#ffe14d"
+            ]
+          ]
+        },
+        "texto": "Lo que aprendes: también activo.",
+        "resaltar": "aprendes"
+      },
+      {
+        "dibujo": {
+          "iconos": [
+            [
+              "coin",
+              "#ffe14d"
+            ],
+            [
+              "arrow-big-up",
+              "#caffbf"
+            ]
+          ],
+          "personaje": "caricatura:lucia:feliz:abierta:arriba"
+        },
+        "texto": "Tu primer activo puede ser pequeño.",
+        "resaltar": "pequeño."
+      },
+      {
+        "dibujo": {
+          "iconos": [
+            [
+              "chart-pie",
+              "#caffbf"
+            ],
+            [
+              "school",
+              "#a2d2ff"
+            ],
+            [
+              "tools",
+              "#cdb4db"
+            ]
+          ]
+        },
+        "texto": "Un fondo, un curso, una herramienta.",
+        "resaltar": "herramienta."
+      },
+      {
+        "dibujo": {
+          "iconos": [
+            [
+              "arrow-big-down",
+              "#ffadad"
+            ]
+          ]
+        },
+        "texto": "Ahora, los pasivos.",
+        "resaltar": "pasivos.",
+        "sonido": "whoosh_2",
+        "sonidoEn": 0.3
+      },
+      {
+        "dibujo": {
+          "iconos": [
+            [
+              "credit-card",
+              "#ffadad"
+            ]
+          ]
+        },
+        "texto": "Tarjeta con intereses: pasivo.",
+        "resaltar": "pasivo."
+      },
+      {
+        "dibujo": {
+          "iconos": [
+            [
+              "car",
+              "#a2d2ff"
+            ],
+            [
+              "trending-down",
+              "#ffadad"
+            ]
+          ]
+        },
+        "texto": "Carro nuevo: pierde valor.",
+        "resaltar": "pierde valor."
+      },
+      {
+        "dibujo": {
+          "iconos": [
+            [
+              "car",
+              "#a2d2ff"
+            ]
+          ],
+          "rotulo": "-20 %"
+        },
+        "texto": "Hasta 20 % en el primer año.",
+        "resaltar": "20 %",
+        "sonido": "boom",
+        "sonidoEn": 0.3
+      },
+      {
+        "dibujo": {
+          "iconos": [
+            [
+              "droplet",
+              "#ffd6a5"
+            ],
+            [
+              "tools",
+              "#cdb4db"
+            ],
+            [
+              "receipt",
+              "#ffadad"
+            ]
+          ]
+        },
+        "texto": "Gasolina, seguro, mantenimiento…",
+        "resaltar": "mantenimiento…"
+      },
+      {
+        "dibujo": {
+          "iconos": [
+            [
+              "car",
+              "#a2d2ff"
+            ]
+          ],
+          "personaje": "caricatura:lucia:normal:sonrisa:adelante"
+        },
+        "texto": "No es que no puedas tenerlo…",
+        "resaltar": "puedas"
+      },
+      {
+        "dibujo": {
+          "iconos": [
+            [
+              "calendar",
+              "#a2d2ff"
+            ],
+            [
+              "receipt",
+              "#ffadad"
+            ]
+          ]
+        },
+        "texto": "…es saber cuánto te cuesta.",
+        "resaltar": "cuánto te cuesta."
+      },
+      {
+        "dibujo": {
+          "iconos": [
+            [
+              "sparkles",
+              "#ffe14d"
+            ]
+          ]
+        },
+        "texto": "Y aquí viene lo importante:",
+        "resaltar": "importante:"
+      },
+      {
+        "dibujo": {
+          "iconos": [
+            [
+              "scale",
+              "#cdb4db"
+            ]
+          ]
+        },
+        "texto": "Depende de cómo la uses.",
+        "resaltar": "cómo la uses."
+      },
+      {
+        "dibujo": {
+          "iconos": [
+            [
+              "motorbike",
+              "#caffbf"
+            ],
+            [
+              "cash",
+              "#caffbf"
+            ]
+          ],
+          "colorRotulo": "#2e9e4f"
+        },
+        "texto": "Moto para trabajar: activo.",
+        "resaltar": "activo."
+      },
+      {
+        "dibujo": {
+          "iconos": [
+            [
+              "motorbike",
+              "#ffadad"
+            ],
+            [
+              "sun",
+              "#ffe14d"
+            ]
+          ]
+        },
+        "texto": "Moto para pasear: pasivo.",
+        "resaltar": "pasivo."
+      },
+      {
+        "dibujo": {
+          "iconos": [
+            [
+              "question-mark",
+              "#ffe14d"
+            ]
+          ]
+        },
+        "texto": "La pregunta clave:",
+        "resaltar": "clave:"
+      },
+      {
+        "dibujo": {
+          "iconos": [
+            [
+              "wallet",
+              "#ffe14d"
+            ],
+            [
+              "question-mark",
+              "#ffadad"
+            ]
+          ],
+          "personaje": "caricatura:lucia:preocupado:o:adelante"
+        },
+        "texto": "¿Mete dinero… o lo saca?",
+        "resaltar": "o lo saca?",
+        "sonido": "ding",
+        "sonidoEn": 0.9
+      },
+      {
+        "dibujo": {
+          "iconos": [
+            [
+              "img:hormiga"
+            ]
+          ]
+        },
+        "texto": "Volvamos a las hormigas.",
+        "resaltar": "hormigas.",
+        "etiqueta": "Los gastos hormiga",
+        "fondo": "ia:tienda"
+      },
+      {
+        "dibujo": {
+          "iconos": [
+            [
+              "img:hormiga"
+            ],
+            [
+              "arrow-big-down",
+              "#ffadad"
+            ]
+          ]
+        },
+        "texto": "Pasivos disfrazados.",
+        "resaltar": "disfrazados.",
+        "sonido": "magic_reveal",
+        "sonidoEn": 0.3,
+        "fondo": "ia:tienda"
+      },
+      {
+        "dibujo": {
+          "iconos": [
+            [
+              "hormiga",
+              "#ffd6a5"
+            ],
+            [
+              "notebook",
+              "#a2d2ff"
+            ],
+            [
+              "x",
+              "#ffadad"
+            ]
+          ]
+        },
+        "texto": "Tan chiquitos que no los anotas.",
+        "resaltar": "no los anotas.",
+        "fondo": "ia:tienda"
+      },
+      {
+        "dibujo": {
+          "iconos": [
+            [
+              "chart-pie",
+              "#ffadad"
+            ]
+          ],
+          "rotulo": "12 %"
+        },
+        "texto": "Hasta 12 % de tus ingresos.",
+        "resaltar": "12 %",
+        "sonido": "boom",
+        "sonidoEn": 0.3
+      },
+      {
+        "dibujo": {
+          "iconos": [
+            [
+              "cash",
+              "#caffbf"
+            ],
+            [
+              "hormiga",
+              "#ffd6a5"
+            ]
+          ],
+          "rotulo": "12 de 100"
+        },
+        "texto": "12 de cada 100, sin darte cuenta.",
+        "resaltar": "sin darte cuenta."
+      },
+      {
+        "dibujo": {
+          "iconos": [
+            [
+              "basket",
+              "#ffe14d"
+            ]
+          ]
+        },
+        "texto": "Los más comunes:",
+        "resaltar": "comunes:",
+        "fondo": "ia:tienda"
+      },
+      {
+        "dibujo": {
+          "iconos": [
+            [
+              "img:cafe"
+            ]
+          ]
+        },
+        "texto": "1. El café de todos los días.",
+        "resaltar": "café",
+        "fondo": "ia:cafeteria"
+      },
+      {
+        "dibujo": {
+          "iconos": [
+            [
+              "pizza",
+              "#ffe14d"
+            ],
+            [
+              "glass-full",
+              "#a2d2ff"
+            ]
+          ]
+        },
+        "texto": "2. Snacks y gaseosas.",
+        "resaltar": "Snacks",
+        "fondo": "ia:tienda"
+      },
+      {
+        "dibujo": {
+          "iconos": [
+            [
+              "truck-delivery",
+              "#a2d2ff"
+            ],
+            [
+              "device-mobile",
+              "#cdb4db"
+            ]
+          ]
+        },
+        "texto": "3. Delivery y apps de comida.",
+        "resaltar": "Delivery"
+      },
+      {
+        "dibujo": {
+          "iconos": [
+            [
+              "brand-netflix",
+              "#ffadad"
+            ],
+            [
+              "credit-card",
+              "#a2d2ff"
+            ]
+          ]
+        },
+        "texto": "4. Suscripciones olvidadas.",
+        "resaltar": "olvidadas."
+      },
+      {
+        "dibujo": {
+          "iconos": [
+            [
+              "building-bank",
+              "#a2d2ff"
+            ],
+            [
+              "car",
+              "#ffe14d"
+            ]
+          ]
+        },
+        "texto": "5. Comisiones y taxis de apuro.",
+        "resaltar": "Comisiones"
+      },
+      {
+        "dibujo": {
+          "iconos": [
+            [
+              "shopping-cart",
+              "#ffadad"
+            ],
+            [
+              "ticket",
+              "#ffe14d"
+            ]
+          ],
+          "rotulo": "¡oferta!"
+        },
+        "texto": "6. Compras por impulso.",
+        "resaltar": "impulso.",
+        "fondo": "ia:tienda"
+      },
+      {
+        "dibujo": {
+          "iconos": [
+            [
+              "question-mark",
+              "#ffe14d"
+            ]
+          ],
+          "personaje": "caricatura:lucia:preocupado:o:cadera"
+        },
+        "texto": "¿Por qué caemos tan fácil?",
+        "resaltar": "tan fácil?",
+        "etiqueta": "Por qué no los sentimos"
+      },
+      {
+        "dibujo": {
+          "iconos": [
+            [
+              "heart-broken",
+              "#ffadad"
+            ],
+            [
+              "cash",
+              "#caffbf"
+            ]
+          ]
+        },
+        "texto": "El dolor de pagar.",
+        "resaltar": "dolor de pagar.",
+        "sonido": "magic_reveal",
+        "sonidoEn": 0.3
+      },
+      {
+        "dibujo": {
+          "iconos": [
+            [
+              "cash-banknote",
+              "#caffbf"
+            ],
+            [
+              "mood-sad",
+              "#ffadad"
+            ]
+          ]
+        },
+        "texto": "Con billetes: duele un poquito.",
+        "resaltar": "duele"
+      },
+      {
+        "dibujo": {
+          "iconos": [
+            [
+              "credit-card",
+              "#a2d2ff"
+            ],
+            [
+              "device-mobile",
+              "#cdb4db"
+            ]
+          ]
+        },
+        "texto": "Con tarjeta o celular: casi no duele.",
+        "resaltar": "casi no duele."
+      },
+      {
+        "dibujo": {
+          "iconos": [
+            [
+              "ticket",
+              "#ffe14d"
+            ],
+            [
+              "credit-card",
+              "#a2d2ff"
+            ]
+          ],
+          "rotulo": "x2"
+        },
+        "texto": "Con tarjeta pagaron hasta el doble.",
+        "resaltar": "el doble.",
+        "sonido": "boom",
+        "sonidoEn": 0.3
+      },
+      {
+        "dibujo": {
+          "iconos": [
+            [
+              "device-mobile",
+              "#cdb4db"
+            ],
+            [
+              "bolt",
+              "#ffe14d"
+            ]
+          ]
+        },
+        "texto": "Un clic y listo. Sin fricción.",
+        "resaltar": "Sin fricción."
+      },
+      {
+        "dibujo": {
+          "iconos": [
+            [
+              "coin",
+              "#ffe14d"
+            ]
+          ],
+          "personaje": "caricatura:lucia:sorpresa:o:adelante"
+        },
+        "texto": "Los montos pequeños engañan.",
+        "resaltar": "engañan."
+      },
+      {
+        "dibujo": {
+          "iconos": [
+            [
+              "scale",
+              "#cdb4db"
+            ],
+            [
+              "coin",
+              "#ffe14d"
+            ]
+          ]
+        },
+        "texto": "5 no parece nada…",
+        "resaltar": "nada…"
+      },
+      {
+        "dibujo": {
+          "iconos": [
+            [
+              "hormiga",
+              "#ffd6a5"
+            ],
+            [
+              "plus",
+              "#caffbf"
+            ],
+            [
+              "hormiga",
+              "#ffadad"
+            ]
+          ]
+        },
+        "texto": "Mira cada gasto solo, no la suma.",
+        "resaltar": "no la suma."
+      },
+      {
+        "dibujo": {
+          "iconos": [
+            [
+              "hormiga",
+              "#ffd6a5"
+            ],
+            [
+              "hormiga",
+              "#ffe14d"
+            ],
+            [
+              "hormiga",
+              "#ffadad"
+            ]
+          ]
+        },
+        "texto": "Por eso pasan desapercibidas.",
+        "resaltar": "desapercibidas."
+      },
+      {
+        "dibujo": {
+          "iconos": [
+            [
+              "receipt",
+              "#a2d2ff"
+            ],
+            [
+              "pencil",
+              "#ffe14d"
+            ]
+          ]
+        },
+        "texto": "La cuenta que nadie hace.",
+        "resaltar": "nadie hace.",
+        "etiqueta": "La cuenta que asusta"
+      },
+      {
+        "dibujo": {
+          "iconos": [
+            [
+              "coin",
+              "#ffe14d"
+            ]
+          ]
+        },
+        "texto": "Solo 5 al día.",
+        "resaltar": "5 al día."
+      },
+      {
+        "dibujo": {
+          "iconos": [
+            [
+              "calendar",
+              "#a2d2ff"
+            ]
+          ],
+          "rotulo": "150"
+        },
+        "texto": "En un mes: 150.",
+        "resaltar": "150."
+      },
+      {
+        "dibujo": {
+          "iconos": [
+            [
+              "calendar-week",
+              "#a2d2ff"
+            ]
+          ],
+          "rotulo": "1 825"
+        },
+        "texto": "En un año: 1 825.",
+        "resaltar": "1 825.",
+        "sonido": "caja_registradora",
+        "sonidoEn": 0.3
+      },
+      {
+        "dibujo": {
+          "iconos": [
+            [
+              "hourglass",
+              "#ffadad"
+            ]
+          ],
+          "rotulo": "36 000"
+        },
+        "texto": "En 20 años: 36 000.",
+        "resaltar": "36 000.",
+        "sonido": "boom",
+        "sonidoEn": 0.3
+      },
+      {
+        "dibujo": {
+          "iconos": [
+            [
+              "wallet",
+              "#ffadad"
+            ]
+          ],
+          "personaje": "caricatura:lucia:sorpresa:o:cadera"
+        },
+        "texto": "Y eso es solo lo gastado.",
+        "resaltar": "solo"
+      },
+      {
+        "dibujo": {
+          "iconos": [
+            [
+              "chart-line",
+              "#caffbf"
+            ],
+            [
+              "coin",
+              "#ffe14d"
+            ]
+          ],
+          "rotulo": "7 %"
+        },
+        "texto": "¿Y si los inviertes al 7 % anual?",
+        "resaltar": "inviertes"
+      },
+      {
+        "dibujo": {
+          "iconos": [
+            [
+              "chart-line",
+              "#caffbf"
+            ],
+            [
+              "building-bank",
+              "#a2d2ff"
+            ]
+          ],
+          "rotulo": "78 000",
+          "colorRotulo": "#2e9e4f"
+        },
+        "texto": "En 20 años: unos 78 000.",
+        "resaltar": "78 000.",
+        "sonido": "magic_reveal",
+        "sonidoEn": 0.3,
+        "confeti": true
+      },
+      {
+        "dibujo": {
+          "iconos": [
+            [
+              "arrow-big-up",
+              "#caffbf"
+            ]
+          ],
+          "personaje": "caricatura:lucia:dinero:abierta:arriba",
+          "rotulo": "x2",
+          "colorRotulo": "#2e9e4f"
+        },
+        "texto": "Más del doble.",
+        "resaltar": "doble."
+      },
+      {
+        "dibujo": {
+          "iconos": [
+            [
+              "coin",
+              "#ffe14d"
+            ],
+            [
+              "coin",
+              "#caffbf"
+            ],
+            [
+              "chart-line",
+              "#caffbf"
+            ]
+          ]
+        },
+        "texto": "Interés compuesto: tu dinero trabaja.",
+        "resaltar": "Interés compuesto:"
+      },
+      {
+        "dibujo": {
+          "iconos": [
+            [
+              "scale",
+              "#cdb4db"
+            ],
+            [
+              "trending-down",
+              "#ffadad"
+            ]
+          ]
+        },
+        "texto": "Ojo: no hay ganancias garantizadas.",
+        "resaltar": "no hay ganancias"
+      },
+      {
+        "dibujo": {
+          "iconos": [
+            [
+              "bulb",
+              "#ffe14d"
+            ]
+          ]
+        },
+        "texto": "Pero la idea es clara:",
+        "resaltar": "clara:"
+      },
+      {
+        "dibujo": {
+          "iconos": [
+            [
+              "hormiga",
+              "#ffd6a5"
+            ],
+            [
+              "home",
+              "#caffbf"
+            ]
+          ]
+        },
+        "texto": "Te quita lo que podías construir.",
+        "resaltar": "construir.",
+        "sonido": "ding",
+        "sonidoEn": 1.2
+      },
+      {
+        "dibujo": {
+          "iconos": [
+            [
+              "cup",
+              "#ffd6a5"
+            ],
+            [
+              "hourglass",
+              "#ffadad"
+            ]
+          ],
+          "rotulo": "latte"
+        },
+        "texto": "El factor latte (David Bach).",
+        "resaltar": "factor latte"
+      },
+      {
+        "dibujo": {
+          "iconos": [
+            [
+              "heart",
+              "#ffadad"
+            ]
+          ],
+          "personaje": "caricatura:lucia:feliz:abierta:arriba"
+        },
+        "texto": "No es dejar de disfrutar…",
+        "resaltar": "disfrutar…",
+        "etiqueta": "5 pasos"
+      },
+      {
+        "dibujo": {
+          "iconos": [
+            [
+              "target",
+              "#ffadad"
+            ]
+          ],
+          "rotulo": "5 pasos"
+        },
+        "texto": "5 pasos.",
+        "resaltar": "5 pasos.",
+        "sonido": "whoosh_3",
+        "sonidoEn": 0.3
+      },
+      {
+        "dibujo": {
+          "iconos": [
+            [
+              "notebook",
+              "#a2d2ff"
+            ],
+            [
+              "pencil",
+              "#ffe14d"
+            ]
+          ],
+          "rotulo": "7 días"
+        },
+        "texto": "1. Anota todo por 7 días.",
+        "resaltar": "Anota todo",
+        "etiqueta": "Paso 1 de 5"
+      },
+      {
+        "dibujo": {
+          "iconos": [
+            [
+              "sparkles",
+              "#ffe14d"
+            ]
+          ],
+          "personaje": "caricatura:lucia:sorpresa:o:adelante"
+        },
+        "texto": "Te vas a sorprender.",
+        "resaltar": "sorprender."
+      },
+      {
+        "dibujo": {
+          "iconos": [
+            [
+              "arrow-big-up",
+              "#caffbf"
+            ],
+            [
+              "hormiga",
+              "#ffd6a5"
+            ]
+          ]
+        },
+        "texto": "2. ¿Activo u hormiga?",
+        "resaltar": "hormiga?",
+        "etiqueta": "Paso 2 de 5"
+      },
+      {
+        "dibujo": {
+          "iconos": [
+            [
+              "heart",
+              "#ffadad"
+            ],
+            [
+              "cup",
+              "#ffd6a5"
+            ]
+          ]
+        },
+        "texto": "3. Quédate con tus 2 favoritas.",
+        "resaltar": "2 favoritas.",
+        "etiqueta": "Paso 3 de 5"
+      },
+      {
+        "dibujo": {
+          "iconos": [
+            [
+              "cup",
+              "#caffbf"
+            ],
+            [
+              "brand-netflix",
+              "#ffadad"
+            ],
+            [
+              "x",
+              "#ffadad"
+            ]
+          ],
+          "personaje": "caricatura:lucia:feliz:sonrisa:adelante"
+        },
+        "texto": "Corta las que no te importan.",
+        "resaltar": "Corta"
+      },
+      {
+        "dibujo": {
+          "iconos": [
+            [
+              "brand-netflix",
+              "#ffadad"
+            ],
+            [
+              "x",
+              "#ffadad"
+            ]
+          ]
+        },
+        "texto": "4. Cancela una suscripción hoy.",
+        "resaltar": "Cancela",
+        "etiqueta": "Paso 4 de 5"
+      },
+      {
+        "dibujo": {
+          "iconos": [
+            [
+              "building-bank",
+              "#a2d2ff"
+            ],
+            [
+              "chart-line",
+              "#caffbf"
+            ]
+          ]
+        },
+        "texto": "5. Sepáralo apenas cobres.",
+        "resaltar": "apenas cobres.",
+        "etiqueta": "Paso 5 de 5"
+      },
+      {
+        "dibujo": {
+          "iconos": [
+            [
+              "wallet",
+              "#ffe14d"
+            ],
+            [
+              "hormiga",
+              "#ffd6a5"
+            ],
+            [
+              "hormiga",
+              "#ffadad"
+            ]
+          ]
+        },
+        "texto": "Si no, las hormigas lo encuentran.",
+        "resaltar": "hormigas"
+      },
+      {
+        "dibujo": {
+          "iconos": [
+            [
+              "clock",
+              "#a2d2ff"
+            ]
+          ],
+          "rotulo": "5 min"
+        },
+        "texto": "El truco de los 5 minutos.",
+        "resaltar": "5 minutos.",
+        "sonido": "magic_reveal",
+        "sonidoEn": 0.3,
+        "etiqueta": "El truco"
+      },
+      {
+        "dibujo": {
+          "iconos": [
+            [
+              "device-mobile",
+              "#cdb4db"
+            ],
+            [
+              "building-bank",
+              "#a2d2ff"
+            ]
+          ],
+          "personaje": "caricatura:lucia:normal:sonrisa:adelante"
+        },
+        "texto": "Abre la app de tu banco.",
+        "resaltar": "app de tu banco.",
+        "fondo": "ia:sala"
+      },
+      {
+        "dibujo": {
+          "iconos": [
+            [
+              "device-mobile",
+              "#cdb4db"
+            ],
+            [
+              "repeat",
+              "#ffe14d"
+            ]
+          ]
+        },
+        "texto": "Busca los cobros que se repiten.",
+        "resaltar": "se repiten."
+      },
+      {
+        "dibujo": {
+          "iconos": [
+            [
+              "plus",
+              "#caffbf"
+            ],
+            [
+              "calendar",
+              "#a2d2ff"
+            ]
+          ],
+          "rotulo": "x12"
+        },
+        "texto": "Súmalos y multiplica por 12.",
+        "resaltar": "multiplica"
+      },
+      {
+        "dibujo": {
+          "iconos": [
+            [
+              "hormiga",
+              "#ffd6a5"
+            ],
+            [
+              "hormiga",
+              "#ffe14d"
+            ],
+            [
+              "hormiga",
+              "#ffadad"
+            ]
+          ]
+        },
+        "texto": "Eso se comen tus hormigas al año.",
+        "resaltar": "al año.",
+        "sonido": "boom",
+        "sonidoEn": 0.3
+      },
+      {
+        "dibujo": {
+          "iconos": [
+            [
+              "bulb",
+              "#ffe14d"
+            ],
+            [
+              "sparkles",
+              "#ffe14d"
+            ]
+          ],
+          "personaje": "caricatura:lucia:sorpresa:abierta:arriba"
+        },
+        "texto": "Verlo en grande lo cambia todo.",
+        "resaltar": "cambia todo."
+      },
+      {
+        "dibujo": {
+          "iconos": [
+            [
+              "check",
+              "#caffbf"
+            ]
+          ],
+          "personaje": "caricatura:lucia:feliz:sonrisa:cadera"
+        },
+        "texto": "Lucía lo hizo.",
+        "resaltar": "lo hizo.",
+        "etiqueta": "El resultado",
+        "fondo": "ia:sala"
+      },
+      {
+        "dibujo": {
+          "iconos": [
+            [
+              "brand-netflix",
+              "#ffadad"
+            ],
+            [
+              "truck-delivery",
+              "#a2d2ff"
+            ]
+          ],
+          "rotulo": "x10"
+        },
+        "texto": "3 suscripciones y 10 deliverys.",
+        "resaltar": "10 deliverys.",
+        "fondo": "ia:sala"
+      },
+      {
+        "dibujo": {
+          "iconos": [
+            [
+              "img:cafe"
+            ],
+            [
+              "heart",
+              "#ffadad"
+            ]
+          ],
+          "personaje": "caricatura:lucia:feliz:sonrisa:adelante"
+        },
+        "texto": "Se quedó con su cafecito.",
+        "resaltar": "cafecito.",
+        "fondo": "ia:cafeteria"
+      },
+      {
+        "dibujo": {
+          "iconos": [
+            [
+              "img:alcancia"
+            ],
+            [
+              "chart-line",
+              "#caffbf"
+            ]
+          ]
+        },
+        "texto": "Y empezó a invertir cada mes.",
+        "resaltar": "invertir",
+        "fondo": "ia:sala"
+      },
+      {
+        "dibujo": {
+          "iconos": [
+            [
+              "building-bank",
+              "#a2d2ff"
+            ],
+            [
+              "coin",
+              "#ffe14d"
+            ]
+          ],
+          "personaje": "caricatura:lucia:dinero:abierta:arriba"
+        },
+        "texto": "Ahora su dinero trabaja para ella.",
+        "resaltar": "trabaja",
+        "sonido": "ding",
+        "sonidoEn": 1.0,
+        "fondo": "ia:sala",
+        "confeti": true
+      },
+      {
+        "dibujo": {
+          "iconos": [
+            [
+              "notebook",
+              "#a2d2ff"
+            ],
+            [
+              "calendar-week",
+              "#caffbf"
+            ]
+          ],
+          "rotulo": "7 días"
+        },
+        "texto": "Reto: anota todo por 7 días.",
+        "resaltar": "7 días.",
+        "etiqueta": "Tu reto"
+      },
+      {
+        "dibujo": {
+          "iconos": [
+            [
+              "img:hormiga"
+            ],
+            [
+              "heart",
+              "#ffadad"
+            ]
+          ],
+          "personaje": "caricatura:lucia:feliz:abierta:adelante"
+        },
+        "texto": "¿Cuál es tu gasto hormiga favorito?",
+        "resaltar": "favorito?"
+      },
+      {
+        "dibujo": {
+          "iconos": [
+            [
+              "bell-ringing",
+              "#ffe14d"
+            ],
+            [
+              "sparkles",
+              "#ffe14d"
+            ]
+          ]
+        },
+        "texto": "Suscríbete a Khipu.",
+        "resaltar": "Khipu."
+      }
+    ],
+    "narracion": [
+      {
+        "texto": "Un café de cinco. Un snack de tres. Un delivery de veinte.",
+        "estilo": "narrador"
+      },
+      {
+        "texto": "Parecen gastos chiquitos, que no importan.",
+        "estilo": "narrador"
+      },
+      {
+        "texto": "Pero al final del año, pueden sumar más de mil ochocientos.",
+        "estilo": "narrador"
+      },
+      {
+        "texto": "Y lo peor no es lo que gastas.",
+        "estilo": "narrador"
+      },
+      {
+        "texto": "Es todo lo que ese dinero pudo haber construido por ti.",
+        "estilo": "narrador"
+      },
+      {
+        "texto": "Hoy vas a entender la diferencia entre un activo y un pasivo, y vas a descubrir por qué los gastos hormiga son el pasivo más peligroso de todos.",
+        "estilo": "narrador"
+      },
+      {
+        "texto": "Y al final, te dejo un truco de cinco minutos para cazarlos.",
+        "estilo": "narrador"
+      },
+      {
+        "texto": "Esto es Khipu.",
+        "estilo": "narrador"
+      },
+      {
+        "texto": "Ella es Lucía. Trabaja todo el mes, y gana un buen sueldo.",
+        "estilo": "narrador"
+      },
+      {
+        "texto": "Pero cada fin de mes le pasa lo mismo.",
+        "estilo": "narrador"
+      },
+      {
+        "texto": "Revisa su cuenta, y no entiende a dónde se fue su dinero.",
+        "estilo": "narrador"
+      },
+      {
+        "texto": "No compró nada grande. No hizo ningún viaje.",
+        "estilo": "narrador"
+      },
+      {
+        "texto": "Solo un cafecito en la mañana, porque se lo merece.",
+        "estilo": "narrador"
+      },
+      {
+        "texto": "Un snack en la tarde, para aguantar.",
+        "estilo": "narrador"
+      },
+      {
+        "texto": "Dos o tres suscripciones que casi no usa.",
+        "estilo": "narrador"
+      },
+      {
+        "texto": "Y el delivery del viernes, porque fue una semana dura.",
+        "estilo": "narrador"
+      },
+      {
+        "texto": "Cada gasto, por separado, es pequeñito.",
+        "estilo": "narrador"
+      },
+      {
+        "texto": "Pero juntos, son como una fila de hormigas que se lleva tu comida poco a poco.",
+        "estilo": "narrador"
+      },
+      {
+        "texto": "Por eso se llaman gastos hormiga.",
+        "estilo": "narrador"
+      },
+      {
+        "texto": "Y Lucía no tiene un problema de sueldo. Tiene un problema de fugas.",
+        "estilo": "narrador"
+      },
+      {
+        "texto": "Para entender por qué esto importa tanto, necesitas conocer dos palabras.",
+        "estilo": "narrador"
+      },
+      {
+        "texto": "Activo y pasivo.",
+        "estilo": "narrador"
+      },
+      {
+        "texto": "En mil novecientos noventa y siete, Robert Kiyosaki las hizo famosas en su libro Padre rico, padre pobre.",
+        "estilo": "narrador"
+      },
+      {
+        "texto": "Y las explicó de la forma más simple posible.",
+        "estilo": "narrador"
+      },
+      {
+        "texto": "Un activo es todo lo que pone dinero en tu bolsillo.",
+        "estilo": "narrador"
+      },
+      {
+        "texto": "Un pasivo es todo lo que saca dinero de tu bolsillo.",
+        "estilo": "narrador"
+      },
+      {
+        "texto": "Ojo: en contabilidad, estas palabras tienen otra definición, más técnica.",
+        "estilo": "narrador"
+      },
+      {
+        "texto": "Pero para tus finanzas personales, esta regla simple funciona muy bien.",
+        "estilo": "narrador"
+      },
+      {
+        "texto": "Veamos ejemplos.",
+        "estilo": "narrador"
+      },
+      {
+        "texto": "Un departamento que alquilas a otra persona, y que te paga cada mes: activo.",
+        "estilo": "narrador"
+      },
+      {
+        "texto": "Un negocio que te deja ganancias: activo.",
+        "estilo": "narrador"
+      },
+      {
+        "texto": "Dinero invertido que crece con los años: activo.",
+        "estilo": "narrador"
+      },
+      {
+        "texto": "Lo que aprendes, y te ayuda a ganar más, también puede ser un activo.",
+        "estilo": "narrador"
+      },
+      {
+        "texto": "Y no necesitas ser millonario para tener tu primer activo.",
+        "estilo": "narrador"
+      },
+      {
+        "texto": "Puede ser un fondo de inversión que acepta montos pequeños, un curso que te sube el sueldo, o una herramienta para empezar un negocio.",
+        "estilo": "narrador"
+      },
+      {
+        "texto": "Ahora, los pasivos.",
+        "estilo": "narrador"
+      },
+      {
+        "texto": "La tarjeta de crédito que pagas en cuotas, con intereses: pasivo.",
+        "estilo": "narrador"
+      },
+      {
+        "texto": "El carro nuevo, que pierde valor apenas sale de la tienda.",
+        "estilo": "narrador"
+      },
+      {
+        "texto": "Según Carfax, un carro nuevo puede perder alrededor del veinte por ciento de su valor en el primer año.",
+        "estilo": "narrador"
+      },
+      {
+        "texto": "Y además, gastas en gasolina, seguro y mantenimiento.",
+        "estilo": "narrador"
+      },
+      {
+        "texto": "Ojo, no significa que no puedas tener un carro.",
+        "estilo": "narrador"
+      },
+      {
+        "texto": "Significa que tienes que saber lo que te cuesta cada mes.",
+        "estilo": "narrador"
+      },
+      {
+        "texto": "Y aquí viene lo importante.",
+        "estilo": "narrador"
+      },
+      {
+        "texto": "La misma cosa puede ser activo o pasivo. Depende de cómo la uses.",
+        "estilo": "narrador"
+      },
+      {
+        "texto": "Una moto con la que haces delivery y ganas dinero, es un activo.",
+        "estilo": "narrador"
+      },
+      {
+        "texto": "La misma moto, solo para pasear los domingos, es un pasivo.",
+        "estilo": "narrador"
+      },
+      {
+        "texto": "La pregunta clave siempre es la misma.",
+        "estilo": "narrador"
+      },
+      {
+        "texto": "¿Esto mete dinero a mi bolsillo, o lo saca?",
+        "estilo": "narrador"
+      },
+      {
+        "texto": "Ahora volvamos a las hormigas.",
+        "estilo": "narrador"
+      },
+      {
+        "texto": "Los gastos hormiga son pasivos disfrazados.",
+        "estilo": "narrador"
+      },
+      {
+        "texto": "Son tan chiquitos que no los sientes, y por eso nunca los anotas.",
+        "estilo": "narrador"
+      },
+      {
+        "texto": "En México, la Condusef estima que pueden llevarse hasta el doce por ciento de tus ingresos.",
+        "estilo": "narrador"
+      },
+      {
+        "texto": "Es decir, de cada cien que ganas, doce se van sin que te des cuenta.",
+        "estilo": "narrador"
+      },
+      {
+        "texto": "Los más comunes son estos.",
+        "estilo": "narrador"
+      },
+      {
+        "texto": "Uno: el café o la bebida de todos los días.",
+        "estilo": "narrador"
+      },
+      {
+        "texto": "Dos: los snacks, las golosinas y las gaseosas de la tienda.",
+        "estilo": "narrador"
+      },
+      {
+        "texto": "Tres: el delivery y las apps de comida.",
+        "estilo": "narrador"
+      },
+      {
+        "texto": "Cuatro: las suscripciones que olvidaste que pagas.",
+        "estilo": "narrador"
+      },
+      {
+        "texto": "Cinco: las comisiones del banco, y el taxi por no salir cinco minutos antes.",
+        "estilo": "narrador"
+      },
+      {
+        "texto": "Y seis: las compras por impulso, porque estaba en oferta.",
+        "estilo": "narrador"
+      },
+      {
+        "texto": "¿Y por qué caemos tan fácil?",
+        "estilo": "narrador"
+      },
+      {
+        "texto": "Los investigadores Drazen Prelec y George Loewenstein lo llamaron el dolor de pagar.",
+        "estilo": "narrador"
+      },
+      {
+        "texto": "Cuando pagas con billetes, ves cómo el dinero se va. Y duele un poquito.",
+        "estilo": "narrador"
+      },
+      {
+        "texto": "Pero cuando pagas con tarjeta, o con el celular, casi no duele.",
+        "estilo": "narrador"
+      },
+      {
+        "texto": "En un experimento del MIT, las personas ofrecieron hasta el doble por las mismas entradas, solo porque pagaban con tarjeta.",
+        "estilo": "narrador"
+      },
+      {
+        "texto": "Y las apps lo saben: un clic, y listo. Sin fricción.",
+        "estilo": "narrador"
+      },
+      {
+        "texto": "Además, los montos pequeños engañan a tu cerebro.",
+        "estilo": "narrador"
+      },
+      {
+        "texto": "Cinco no parece nada, al lado de tu sueldo.",
+        "estilo": "narrador"
+      },
+      {
+        "texto": "Porque tu cerebro mira cada gasto solo, y nunca la suma de todos.",
+        "estilo": "narrador"
+      },
+      {
+        "texto": "Por eso las hormigas pasan desapercibidas.",
+        "estilo": "narrador"
+      },
+      {
+        "texto": "Ahora hagamos la cuenta que casi nadie hace.",
+        "estilo": "narrador"
+      },
+      {
+        "texto": "Imagina que tus gastos hormiga suman solo cinco al día.",
+        "estilo": "narrador"
+      },
+      {
+        "texto": "En un mes, son ciento cincuenta.",
+        "estilo": "narrador"
+      },
+      {
+        "texto": "En un año, mil ochocientos veinticinco.",
+        "estilo": "narrador"
+      },
+      {
+        "texto": "En veinte años, más de treinta y seis mil.",
+        "estilo": "narrador"
+      },
+      {
+        "texto": "Y eso, solo contando lo que gastaste.",
+        "estilo": "narrador"
+      },
+      {
+        "texto": "Ahora imagina que esos ciento cincuenta al mes los inviertes, y crecen a un siete por ciento al año.",
+        "estilo": "narrador"
+      },
+      {
+        "texto": "En veinte años, tendrías alrededor de setenta y ocho mil.",
+        "estilo": "narrador"
+      },
+      {
+        "texto": "Más del doble de lo que pusiste.",
+        "estilo": "narrador"
+      },
+      {
+        "texto": "Eso se llama interés compuesto: tu dinero gana dinero, y ese dinero gana más dinero.",
+        "estilo": "narrador"
+      },
+      {
+        "texto": "Es solo un ejemplo. Las inversiones reales suben y bajan, y no hay ganancias garantizadas.",
+        "estilo": "narrador"
+      },
+      {
+        "texto": "Pero la idea es clara.",
+        "estilo": "narrador"
+      },
+      {
+        "texto": "Cada gasto hormiga no solo te quita cinco hoy. Te quita lo que esos cinco podían construir mañana.",
+        "estilo": "narrador"
+      },
+      {
+        "texto": "El escritor David Bach lo llamó el factor latte: el café de cada día que se come tu futuro.",
+        "estilo": "narrador"
+      },
+      {
+        "texto": "La buena noticia: no tienes que dejar de disfrutar. Tienes que dejar de gastar sin darte cuenta.",
+        "estilo": "narrador"
+      },
+      {
+        "texto": "Estos son cinco pasos.",
+        "estilo": "narrador"
+      },
+      {
+        "texto": "Uno: durante siete días, anota absolutamente todo lo que gastas, hasta el chicle.",
+        "estilo": "narrador"
+      },
+      {
+        "texto": "Te vas a sorprender.",
+        "estilo": "narrador"
+      },
+      {
+        "texto": "Dos: marca cada gasto con una pregunta. ¿Esto me acerca a un activo, o es una hormiga?",
+        "estilo": "narrador"
+      },
+      {
+        "texto": "Tres: elige tus dos hormigas favoritas, y quédate con ellas.",
+        "estilo": "narrador"
+      },
+      {
+        "texto": "Si el café te hace feliz, disfrútalo. Pero corta las que no te importan.",
+        "estilo": "narrador"
+      },
+      {
+        "texto": "Cuatro: cancela hoy una suscripción que no usaste este mes.",
+        "estilo": "narrador"
+      },
+      {
+        "texto": "Cinco: lo que ahorres, sepáralo apenas cobres, y llévalo a una cuenta de ahorro o a una inversión.",
+        "estilo": "narrador"
+      },
+      {
+        "texto": "Si lo dejas en tu billetera, las hormigas lo encuentran.",
+        "estilo": "narrador"
+      },
+      {
+        "texto": "Y ahora, el truco de los cinco minutos.",
+        "estilo": "narrador"
+      },
+      {
+        "texto": "Abre la app de tu banco, y revisa los movimientos del último mes.",
+        "estilo": "narrador"
+      },
+      {
+        "texto": "Busca todos los cobros pequeños que se repiten.",
+        "estilo": "narrador"
+      },
+      {
+        "texto": "Súmalos, y multiplica por doce.",
+        "estilo": "narrador"
+      },
+      {
+        "texto": "Ese número es lo que tus hormigas se comen cada año.",
+        "estilo": "narrador"
+      },
+      {
+        "texto": "Verlo en grande lo cambia todo.",
+        "estilo": "narrador"
+      },
+      {
+        "texto": "Lucía lo hizo.",
+        "estilo": "narrador"
+      },
+      {
+        "texto": "Encontró tres suscripciones olvidadas, y casi diez pedidos de delivery al mes.",
+        "estilo": "narrador"
+      },
+      {
+        "texto": "Se quedó con su cafecito, porque la hace feliz.",
+        "estilo": "narrador"
+      },
+      {
+        "texto": "Y lo que ahorró, empezó a invertirlo cada mes.",
+        "estilo": "narrador"
+      },
+      {
+        "texto": "No gana más que antes. Pero ahora, su dinero trabaja para ella.",
+        "estilo": "narrador"
+      },
+      {
+        "texto": "Te reto a algo simple: durante siete días, anota todos tus gastos, aunque sean de uno.",
+        "estilo": "narrador"
+      },
+      {
+        "texto": "Cuéntame en los comentarios cuál es tu gasto hormiga favorito. Yo sé que tienes uno.",
+        "estilo": "narrador"
+      },
+      {
+        "texto": "Y si te sirvió, suscríbete. Esto fue Khipu: lo que nadie te explicó, explicado fácil.",
+        "estilo": "narrador"
+      }
+    ],
+    "musica": "musica/easy-lemon.mp3"
+  }
+}

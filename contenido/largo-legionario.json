@@ -1,0 +1,2309 @@
+{
+ "formato": "Pizarra",
+ "voz": {
+  "referencia": "voz/referencias/xiomi-clara.wav",
+  "pausa": 0.22,
+  "tono": "alegre",
+  "pronunciacion": {
+   "optio": "óptio",
+   "Craso": "Cráso",
+   "Septimio Severo": "Septímio Sevéro",
+   "Emerita Augusta": "Emérita Augústa",
+   "Britania": "Británia",
+   "Vegecio": "Vejésio",
+   "Lucilio": "Lucílio"
+  }
+ },
+ "props": {
+  "musica": "musica/epico-prelude-action.mp3",
+  "tono": "calido",
+  "narracion": [
+   {
+    "texto": "Tienes diecisiete años, y acabas de firmar veinticinco años de tu vida.",
+    "estilo": "narrador"
+   },
+   {
+    "texto": "Eres un recluta del ejército romano, en el siglo primero.",
+    "estilo": "narrador"
+   },
+   {
+    "texto": "Si sobrevives, puedes llegar a centurión: el hombre que manda a ochenta soldados.",
+    "estilo": "narrador"
+   },
+   {
+    "texto": "Pero casi nadie llega. Y hoy vas a ver por qué.",
+    "estilo": "narrador"
+   },
+   {
+    "texto": "Una legión tenía unos cinco mil hombres… y solo unos sesenta eran centuriones.",
+    "estilo": "narrador"
+   },
+   {
+    "texto": "Haz la cuenta: uno de cada ochenta y tantos. Y para llegar, primero tienes que sobrevivir a ocho niveles.",
+    "estilo": "narrador"
+   },
+   {
+    "texto": "Nivel uno: el recluta.",
+    "estilo": "narrador"
+   },
+   {
+    "texto": "Para entrar a una legión tienes que ser ciudadano romano, estar sano y ser joven.",
+    "estilo": "narrador"
+   },
+   {
+    "texto": "Te revisan el cuerpo, la vista, los dientes. Te preguntan si sabes leer.",
+    "estilo": "narrador"
+   },
+   {
+    "texto": "Si pasas, haces un juramento: obedecer al emperador y no abandonar nunca tu puesto.",
+    "estilo": "narrador"
+   },
+   {
+    "texto": "Desde ese momento, tu vida ya no es tuya. Es de Roma.",
+    "estilo": "narrador"
+   },
+   {
+    "texto": "Y te prometen dos cosas: un sueldo fijo, y una recompensa enorme si llegas al final.",
+    "estilo": "narrador"
+   },
+   {
+    "texto": "Tu sueldo: doscientos veinticinco denarios al año.",
+    "estilo": "narrador"
+   },
+   {
+    "texto": "Pero de ahí te descuentan la comida, la ropa, y hasta las armas.",
+    "estilo": "narrador"
+   },
+   {
+    "texto": "Y hay una regla que nadie te explicó bien: mientras seas soldado, no te puedes casar.",
+    "estilo": "narrador"
+   },
+   {
+    "texto": "Más tarde, el emperador Domiciano les subió el sueldo a trescientos denarios. Pero eso, tú todavía no lo sabes.",
+    "estilo": "narrador"
+   },
+   {
+    "texto": "Nivel dos: el entrenamiento.",
+    "estilo": "narrador"
+   },
+   {
+    "texto": "Durante meses, entrenas dos veces al día.",
+    "estilo": "narrador"
+   },
+   {
+    "texto": "Te dan una espada de madera y un escudo de mimbre… que pesan el doble que los de verdad.",
+    "estilo": "narrador"
+   },
+   {
+    "texto": "Golpeas un poste de madera hasta que los brazos no te responden.",
+    "estilo": "narrador"
+   },
+   {
+    "texto": "Cuando por fin te dan armas de verdad, sientes que son livianas. Ese era el truco.",
+    "estilo": "narrador"
+   },
+   {
+    "texto": "Entrenar con peso doble hacía que, en batalla, te movieras más rápido que el enemigo.",
+    "estilo": "narrador"
+   },
+   {
+    "texto": "Y aprendes a marchar: veinte millas romanas en cinco horas. Casi treinta kilómetros.",
+    "estilo": "narrador"
+   },
+   {
+    "texto": "El escritor romano Vegecio dice que los reclutas debían entrenar cargando hasta sesenta libras romanas: unos veinte kilos.",
+    "estilo": "narrador"
+   },
+   {
+    "texto": "Con todo tu equipo en la espalda: comida para dos semanas, una pala, estacas, una olla, una canasta.",
+    "estilo": "narrador"
+   },
+   {
+    "texto": "Por eso a los soldados los llamaban las mulas de Mario.",
+    "estilo": "narrador"
+   },
+   {
+    "texto": "Y hay una prueba más que muchos no esperan: aprender a nadar.",
+    "estilo": "narrador"
+   },
+   {
+    "texto": "Vegecio lo explica simple: los ríos no siempre tienen puentes. Y un ejército que huye, o que persigue, termina en el agua.",
+    "estilo": "narrador"
+   },
+   {
+    "texto": "Si no aprendes, en la primera campaña te lleva la corriente.",
+    "estilo": "narrador"
+   },
+   {
+    "texto": "Nivel tres: la primera campaña.",
+    "estilo": "narrador"
+   },
+   {
+    "texto": "Tu legión marcha hacia la frontera, hacia los bosques de Germania.",
+    "estilo": "narrador"
+   },
+   {
+    "texto": "Y te cuentan una historia que todos los soldados conocen.",
+    "estilo": "narrador"
+   },
+   {
+    "texto": "En el año nueve, en estos mismos bosques, tres legiones enteras cayeron en una emboscada. Miles de hombres. Casi no volvió nadie.",
+    "estilo": "narrador"
+   },
+   {
+    "texto": "Desde ese día, ningún romano confiaba en un bosque.",
+    "estilo": "narrador"
+   },
+   {
+    "texto": "Y aquí descubres algo que nadie te dijo: después de marchar todo el día… construyes una ciudad.",
+    "estilo": "narrador"
+   },
+   {
+    "texto": "Cada noche, tu legión levanta un campamento entero: zanja, muro de estacas, y calles de tiendas en orden.",
+    "estilo": "narrador"
+   },
+   {
+    "texto": "Duermes en una tienda de cuero con otros siete hombres. Ellos son tu familia ahora.",
+    "estilo": "narrador"
+   },
+   {
+    "texto": "Tu día empieza antes del amanecer, con el sonido de la trompeta.",
+    "estilo": "narrador"
+   },
+   {
+    "texto": "Pasan lista, revisan tus armas, y te dan tu tarea: guardia, leña, agua, o cavar.",
+    "estilo": "narrador"
+   },
+   {
+    "texto": "Y la noche se divide en cuatro turnos de guardia. Alguno siempre te toca a ti.",
+    "estilo": "narrador"
+   },
+   {
+    "texto": "Comen juntos, marchan juntos… y si uno huye, castigan a todos.",
+    "estilo": "narrador"
+   },
+   {
+    "texto": "Nivel cuatro: la primera batalla.",
+    "estilo": "narrador"
+   },
+   {
+    "texto": "Amanece. Del otro lado del campo, miles de guerreros gritan.",
+    "estilo": "narrador"
+   },
+   {
+    "texto": "Tu centurión no grita. Solo dice: escudos.",
+    "estilo": "narrador"
+   },
+   {
+    "texto": "Juntas tu escudo con el de tu compañero, y el de él con el siguiente. Ahora son un muro.",
+    "estilo": "narrador"
+   },
+   {
+    "texto": "Primero lanzas tu jabalina. Después, sacas la espada corta.",
+    "estilo": "narrador"
+   },
+   {
+    "texto": "La jabalina romana tenía un truco: su punta de hierro se doblaba al clavarse.",
+    "estilo": "narrador"
+   },
+   {
+    "texto": "Así el enemigo no podía lanzarla de vuelta, y su escudo quedaba pesado e inútil.",
+    "estilo": "narrador"
+   },
+   {
+    "texto": "La espada romana no era para dar grandes golpes: era para atacar rápido, desde detrás del escudo.",
+    "estilo": "narrador"
+   },
+   {
+    "texto": "Y cada pocos minutos, la primera fila descansa y la de atrás pasa adelante.",
+    "estilo": "narrador"
+   },
+   {
+    "texto": "Y si del cielo caen flechas y piedras, forman la tortuga: escudos al frente, a los lados y encima de las cabezas.",
+    "estilo": "narrador"
+   },
+   {
+    "texto": "Desde fuera parecen un caparazón de metal que camina.",
+    "estilo": "narrador"
+   },
+   {
+    "texto": "Esa era la verdadera arma de Roma: no se cansaban al mismo tiempo.",
+    "estilo": "narrador"
+   },
+   {
+    "texto": "Ganan. Pero esa noche, en tu tienda, hay un lugar vacío.",
+    "estilo": "narrador"
+   },
+   {
+    "texto": "Pero antes de seguir, una pregunta rápida: ¿tú habrías aguantado hasta aquí?",
+    "estilo": "narrador"
+   },
+   {
+    "texto": "Nivel cinco: la disciplina.",
+    "estilo": "narrador"
+   },
+   {
+    "texto": "En el ejército romano, el miedo no venía solo del enemigo.",
+    "estilo": "narrador"
+   },
+   {
+    "texto": "Si te dormías en la guardia, tus propios compañeros te podían matar a palos.",
+    "estilo": "narrador"
+   },
+   {
+    "texto": "Y si una unidad entera huía, existía un castigo peor: la decimación.",
+    "estilo": "narrador"
+   },
+   {
+    "texto": "Dividían a los soldados en grupos de diez, sorteaban uno… y los otros nueve lo mataban.",
+    "estilo": "narrador"
+   },
+   {
+    "texto": "Era muy raro: los historiadores conocen solo unos once casos.",
+    "estilo": "narrador"
+   },
+   {
+    "texto": "Uno de ellos, en el año setenta y dos antes de Cristo: Craso lo aplicó a soldados que huyeron de Espartaco.",
+    "estilo": "narrador"
+   },
+   {
+    "texto": "Nivel seis: el especialista.",
+    "estilo": "narrador"
+   },
+   {
+    "texto": "Pasan los años. Ya no eres un novato.",
+    "estilo": "narrador"
+   },
+   {
+    "texto": "Si aprendes un oficio, puedes convertirte en inmune: herrero, carpintero, médico, ingeniero.",
+    "estilo": "narrador"
+   },
+   {
+    "texto": "Los inmunes se salvaban de los trabajos más pesados… y cobraban más.",
+    "estilo": "narrador"
+   },
+   {
+    "texto": "Porque un soldado romano no solo peleaba: también construía.",
+    "estilo": "narrador"
+   },
+   {
+    "texto": "Caminos, puentes, acueductos, fuertes… y hasta murallas enteras.",
+    "estilo": "narrador"
+   },
+   {
+    "texto": "En el año ciento veintidós, en Britania, tres legiones empezaron un muro de ciento diecisiete kilómetros de largo.",
+    "estilo": "narrador"
+   },
+   {
+    "texto": "Unos quince mil soldados lo levantaron, en unos seis años. El Muro de Adriano todavía se puede recorrer hoy.",
+    "estilo": "narrador"
+   },
+   {
+    "texto": "Pero hay algo que vale más que cualquier oficio: saber leer y escribir.",
+    "estilo": "narrador"
+   },
+   {
+    "texto": "Porque para subir más alto, tienes que llevar las cuentas, las listas y los informes.",
+    "estilo": "narrador"
+   },
+   {
+    "texto": "Nivel siete: el optio.",
+    "estilo": "narrador"
+   },
+   {
+    "texto": "Si te eligen optio, eres la mano derecha del centurión.",
+    "estilo": "narrador"
+   },
+   {
+    "texto": "En batalla te pones atrás de todos, con un bastón largo.",
+    "estilo": "narrador"
+   },
+   {
+    "texto": "Tu trabajo es que nadie se escape. Ni siquiera tus amigos.",
+    "estilo": "narrador"
+   },
+   {
+    "texto": "Y si el centurión muere… el que toma su lugar eres tú.",
+    "estilo": "narrador"
+   },
+   {
+    "texto": "Nivel ocho: el centurión.",
+    "estilo": "narrador"
+   },
+   {
+    "texto": "Un día, tu centurión cae. Y te dan su casco: el de la cresta atravesada, para que todos te vean.",
+    "estilo": "narrador"
+   },
+   {
+    "texto": "Y te dan su bastón de vid, que usarás para mandar… y para castigar.",
+    "estilo": "narrador"
+   },
+   {
+    "texto": "El historiador Tácito cuenta de un centurión llamado Lucilio, que rompía su bastón en la espalda de sus soldados.",
+    "estilo": "narrador"
+   },
+   {
+    "texto": "Y cada vez que se le rompía, gritaba: ¡dame otro! Así lo apodaron sus hombres.",
+    "estilo": "narrador"
+   },
+   {
+    "texto": "Cuando sus soldados se rebelaron, fue de los primeros en morir.",
+    "estilo": "narrador"
+   },
+   {
+    "texto": "Tú decides qué clase de centurión vas a ser.",
+    "estilo": "narrador"
+   },
+   {
+    "texto": "Ahora mandas a ochenta hombres. Ganas varias veces lo que gana un soldado.",
+    "estilo": "narrador"
+   },
+   {
+    "texto": "Y si sigues subiendo, puedes llegar a primer centurión de la legión: el soldado más respetado de todos.",
+    "estilo": "narrador"
+   },
+   {
+    "texto": "Pero el centurión pelea en la primera fila, y los enemigos lo buscan primero, por la cresta.",
+    "estilo": "narrador"
+   },
+   {
+    "texto": "Por eso, en las batallas, caían muchos más centuriones de los que te imaginas.",
+    "estilo": "narrador"
+   },
+   {
+    "texto": "Ya no tienes amigos en la tienda. Ahora eres el que da las órdenes… y el que carga con los muertos.",
+    "estilo": "narrador"
+   },
+   {
+    "texto": "El final: el retiro.",
+    "estilo": "narrador"
+   },
+   {
+    "texto": "Si llegas a los veinticinco años de servicio, Roma cumple su promesa: tierra o una gran suma de dinero.",
+    "estilo": "narrador"
+   },
+   {
+    "texto": "En tiempos de Augusto, el premio de retiro era de unos tres mil denarios.",
+    "estilo": "narrador"
+   },
+   {
+    "texto": "Haz la cuenta: más de trece años de sueldo, de golpe. Por eso tantos aguantaban.",
+    "estilo": "narrador"
+   },
+   {
+    "texto": "Tienes cuarenta y dos años. Las rodillas destrozadas, cicatrices en todo el cuerpo.",
+    "estilo": "narrador"
+   },
+   {
+    "texto": "Y por fin puedes hacer lo que te prohibieron toda la vida: casarte.",
+    "estilo": "narrador"
+   },
+   {
+    "texto": "Muchos ya tenían una familia esperándolos. Una familia que la ley no reconocía.",
+    "estilo": "narrador"
+   },
+   {
+    "texto": "Muchos veteranos se quedaban a vivir juntos, en tierras que les daba Roma. Y así nacieron ciudades.",
+    "estilo": "narrador"
+   },
+   {
+    "texto": "Una de ellas está en España: Mérida. Fue fundada para soldados retirados de dos legiones.",
+    "estilo": "narrador"
+   },
+   {
+    "texto": "Su nombre romano era Emerita Augusta. Emérito: así llamaban al soldado que ya había cumplido.",
+    "estilo": "narrador"
+   },
+   {
+    "texto": "Por eso hoy decimos profesor emérito. La palabra viene de los soldados de Roma.",
+    "estilo": "narrador"
+   },
+   {
+    "texto": "Esa ley duró casi doscientos años, hasta que el emperador Septimio Severo dejó casarse a los soldados.",
+    "estilo": "narrador"
+   },
+   {
+    "texto": "Veinticinco años de marchas, batallas y castigos.",
+    "estilo": "narrador"
+   },
+   {
+    "texto": "Recluta a los diecisiete. Treinta kilómetros por día con veinte kilos en la espalda.",
+    "estilo": "narrador"
+   },
+   {
+    "texto": "Una ciudad nueva cada noche. Un muro de escudos al amanecer.",
+    "estilo": "narrador"
+   },
+   {
+    "texto": "Uno de cada diez sorteado para morir. Uno de cada ochenta y tantos llegando a centurión.",
+    "estilo": "narrador"
+   },
+   {
+    "texto": "Y al final, lo que más deseaban no era el oro… sino una casa y alguien que los esperara.",
+    "estilo": "narrador"
+   },
+   {
+    "texto": "Ahora dime: ¿hasta qué nivel habrías llegado tú?",
+    "estilo": "narrador"
+   }
+  ],
+  "escenas": [
+   {
+    "dibujo": {
+     "iconos": []
+    },
+    "texto": "25 años de tu vida",
+    "resaltar": "25 años",
+    "fondo": "ia:rom-aguila",
+    "khipu": {
+     "cara": "asustado",
+     "pose": "abajo",
+     "vestuario": "romano",
+     "x": 30
+    },
+    "sonido": "hooks/cinematic-whoosh-deep-impact",
+    "sonidoEn": 0.05
+   },
+   {
+    "dibujo": {
+     "iconos": []
+    },
+    "texto": "Recluta romano",
+    "resaltar": "Recluta",
+    "fondo": "ia:rom-foro",
+    "khipu": {
+     "cara": "sorprendido",
+     "pose": "senala",
+     "vestuario": "romano",
+     "x": 30
+    }
+   },
+   {
+    "dibujo": {
+     "iconos": []
+    },
+    "texto": "80 soldados",
+    "resaltar": "80",
+    "fondo": "ia:rom-casco",
+    "khipu": {
+     "cara": "decidido",
+     "pose": "cadera",
+     "vestuario": "romano",
+     "x": 68,
+     "espejo": true
+    }
+   },
+   {
+    "dibujo": {
+     "iconos": []
+    },
+    "texto": "Casi nadie llega",
+    "resaltar": "nadie",
+    "fondo": "ia:rom-aguila",
+    "khipu": {
+     "cara": "normal",
+     "pose": "pensando",
+     "vestuario": "romano",
+     "x": 30
+    }
+   },
+   {
+    "dibujo": {
+     "iconos": []
+    },
+    "texto": "60 de 5 000",
+    "resaltar": "60",
+    "fondo": "ia:rom-campamento",
+    "khipu": {
+     "cara": "sorprendido",
+     "pose": "senala",
+     "vestuario": "romano",
+     "x": 65,
+     "espejo": true
+    }
+   },
+   {
+    "dibujo": {
+     "iconos": []
+    },
+    "texto": "8 niveles",
+    "resaltar": "8",
+    "fondo": "ia:rom-aguila",
+    "khipu": {
+     "cara": "decidido",
+     "pose": "cadera",
+     "vestuario": "romano",
+     "x": 30
+    }
+   },
+   {
+    "dibujo": {
+     "iconos": []
+    },
+    "texto": "NIVEL 1: RECLUTA",
+    "resaltar": "NIVEL 1",
+    "fondo": "ia:rom-foro",
+    "khipu": {
+     "cara": "normal",
+     "pose": "abajo",
+     "vestuario": "romano",
+     "x": 50
+    },
+    "etiqueta": "Nivel 1",
+    "sonido": "hooks/cinematic-whoosh-fast-transition",
+    "sonidoEn": 0.05
+   },
+   {
+    "dibujo": {
+     "iconos": []
+    },
+    "texto": "Ciudadano, sano y joven",
+    "resaltar": "Ciudadano",
+    "fondo": "ia:rom-foro",
+    "khipu": {
+     "cara": "decidido",
+     "pose": "cadera",
+     "vestuario": "romano",
+     "x": 30
+    }
+   },
+   {
+    "dibujo": {
+     "iconos": []
+    },
+    "texto": "Te revisan todo",
+    "resaltar": "revisan",
+    "fondo": "ia:rom-foro",
+    "khipu": {
+     "cara": "asustado",
+     "pose": "abajo",
+     "vestuario": "romano",
+     "x": 65,
+     "espejo": true
+    }
+   },
+   {
+    "dibujo": {
+     "iconos": []
+    },
+    "texto": "El juramento",
+    "resaltar": "juramento",
+    "fondo": "ia:rom-aguila",
+    "khipu": {
+     "cara": "decidido",
+     "pose": "arriba",
+     "vestuario": "romano",
+     "x": 30
+    }
+   },
+   {
+    "dibujo": {
+     "iconos": []
+    },
+    "texto": "Tu vida es de Roma",
+    "resaltar": "Roma",
+    "fondo": "ia:rom-aguila",
+    "khipu": {
+     "cara": "asustado",
+     "pose": "abajo",
+     "vestuario": "romano",
+     "x": 65,
+     "espejo": true
+    },
+    "silencio": true
+   },
+   {
+    "dibujo": {
+     "iconos": []
+    },
+    "texto": "Sueldo y recompensa",
+    "resaltar": "recompensa",
+    "fondo": "ia:rom-tesoro",
+    "khipu": {
+     "cara": "feliz",
+     "pose": "arriba",
+     "vestuario": "romano",
+     "x": 30,
+     "accion": "salta",
+     "objeto": "bolsa"
+    }
+   },
+   {
+    "dibujo": {
+     "iconos": []
+    },
+    "texto": "225 denarios al año",
+    "resaltar": "225",
+    "fondo": "ia:rom-tesoro",
+    "khipu": {
+     "cara": "sorprendido",
+     "pose": "senala",
+     "vestuario": "romano",
+     "x": 68,
+     "espejo": true
+    }
+   },
+   {
+    "dibujo": {
+     "iconos": []
+    },
+    "texto": "Te descuentan todo",
+    "resaltar": "descuentan",
+    "fondo": "ia:rom-tesoro",
+    "khipu": {
+     "cara": "enojado",
+     "pose": "cadera",
+     "vestuario": "romano",
+     "x": 68,
+     "espejo": true
+    }
+   },
+   {
+    "dibujo": {
+     "iconos": []
+    },
+    "texto": "No te puedes casar",
+    "resaltar": "casar",
+    "fondo": "ia:rom-foro",
+    "khipu": {
+     "cara": "triste",
+     "pose": "abajo",
+     "vestuario": "romano",
+     "x": 30
+    }
+   },
+   {
+    "dibujo": {
+     "iconos": []
+    },
+    "texto": "Domiciano: 300",
+    "resaltar": "300",
+    "fondo": "ia:rom-tesoro",
+    "khipu": {
+     "cara": "feliz",
+     "pose": "senala",
+     "vestuario": "romano",
+     "x": 65,
+     "espejo": true,
+     "accion": "salta",
+     "objeto": "bolsa"
+    }
+   },
+   {
+    "dibujo": {
+     "iconos": []
+    },
+    "texto": "NIVEL 2: ENTRENAMIENTO",
+    "resaltar": "NIVEL 2",
+    "fondo": "ia:rom-campo",
+    "khipu": {
+     "cara": "normal",
+     "pose": "abajo",
+     "vestuario": "romano",
+     "x": 50,
+     "objeto": "espada"
+    },
+    "etiqueta": "Nivel 2",
+    "sonido": "hooks/cinematic-whoosh-fast-transition",
+    "sonidoEn": 0.05
+   },
+   {
+    "dibujo": {
+     "iconos": []
+    },
+    "texto": "Dos veces al día",
+    "resaltar": "Dos",
+    "fondo": "ia:rom-campo",
+    "khipu": {
+     "cara": "decidido",
+     "pose": "cadera",
+     "vestuario": "romano",
+     "x": 30,
+     "objeto": "espada"
+    }
+   },
+   {
+    "dibujo": {
+     "iconos": []
+    },
+    "texto": "Pesan el doble",
+    "resaltar": "doble",
+    "fondo": "ia:rom-campo",
+    "khipu": {
+     "cara": "asustado",
+     "pose": "arriba",
+     "vestuario": "romano",
+     "x": 65,
+     "espejo": true,
+     "objeto": "espada"
+    },
+    "sonido": "hooks/wood-hard-hit",
+    "sonidoEn": 1.2
+   },
+   {
+    "dibujo": {
+     "iconos": []
+    },
+    "texto": "Contra el poste",
+    "resaltar": "poste",
+    "fondo": "ia:rom-campo",
+    "khipu": {
+     "cara": "enojado",
+     "pose": "senala",
+     "vestuario": "romano",
+     "x": 30,
+     "objeto": "espada"
+    }
+   },
+   {
+    "dibujo": {
+     "iconos": []
+    },
+    "texto": "Ese era el truco",
+    "resaltar": "truco",
+    "fondo": "ia:rom-campo",
+    "khipu": {
+     "cara": "feliz",
+     "pose": "arriba",
+     "vestuario": "romano",
+     "x": 65,
+     "espejo": true,
+     "objeto": "espada"
+    }
+   },
+   {
+    "dibujo": {
+     "iconos": []
+    },
+    "texto": "Más rápido",
+    "resaltar": "rápido",
+    "fondo": "ia:rom-campo",
+    "khipu": {
+     "cara": "decidido",
+     "pose": "senala",
+     "vestuario": "romano",
+     "x": 30,
+     "objeto": "espada"
+    }
+   },
+   {
+    "dibujo": {
+     "iconos": []
+    },
+    "texto": "30 km en 5 horas",
+    "resaltar": "30 km",
+    "fondo": "ia:rom-camino",
+    "khipu": {
+     "cara": "asustado",
+     "pose": "abajo",
+     "vestuario": "romano",
+     "x": 30,
+     "accion": "camina",
+     "objeto": "lanza"
+    },
+    "ambiente": "naturaleza/wind-blowing-ambience",
+    "extras": [
+     {
+      "cara": "triste",
+      "pose": "abajo",
+      "vestuario": "romano",
+      "x": 70,
+      "objeto": "lanza",
+      "accion": "camina"
+     }
+    ]
+   },
+   {
+    "dibujo": {
+     "iconos": []
+    },
+    "texto": "20 kilos",
+    "resaltar": "20",
+    "fondo": "ia:rom-camino",
+    "khipu": {
+     "cara": "asustado",
+     "pose": "arriba",
+     "vestuario": "romano",
+     "x": 30,
+     "accion": "camina",
+     "objeto": "lanza"
+    },
+    "extras": [
+     {
+      "cara": "triste",
+      "pose": "abajo",
+      "vestuario": "romano",
+      "x": 70,
+      "objeto": "lanza",
+      "accion": "camina"
+     }
+    ]
+   },
+   {
+    "dibujo": {
+     "iconos": []
+    },
+    "texto": "Todo en la espalda",
+    "resaltar": "espalda",
+    "fondo": "ia:rom-camino",
+    "khipu": {
+     "cara": "triste",
+     "pose": "abajo",
+     "vestuario": "romano",
+     "x": 65,
+     "espejo": true,
+     "accion": "camina",
+     "objeto": "lanza"
+    },
+    "extras": [
+     {
+      "cara": "triste",
+      "pose": "abajo",
+      "vestuario": "romano",
+      "x": 25,
+      "objeto": "lanza",
+      "accion": "camina",
+      "espejo": true
+     }
+    ]
+   },
+   {
+    "dibujo": {
+     "iconos": []
+    },
+    "texto": "Las mulas de Mario",
+    "resaltar": "mulas",
+    "fondo": "ia:rom-camino",
+    "khipu": {
+     "cara": "normal",
+     "pose": "pensando",
+     "vestuario": "romano",
+     "x": 30,
+     "accion": "camina",
+     "objeto": "lanza"
+    },
+    "extras": [
+     {
+      "cara": "triste",
+      "pose": "abajo",
+      "vestuario": "romano",
+      "x": 70,
+      "objeto": "lanza",
+      "accion": "camina"
+     }
+    ]
+   },
+   {
+    "dibujo": {
+     "iconos": []
+    },
+    "texto": "Aprender a nadar",
+    "resaltar": "nadar",
+    "fondo": "ia:rom-rio",
+    "khipu": {
+     "cara": "sorprendido",
+     "pose": "abajo",
+     "vestuario": "romano",
+     "x": 30
+    }
+   },
+   {
+    "dibujo": {
+     "iconos": []
+    },
+    "texto": "Los ríos no tienen puentes",
+    "resaltar": "puentes",
+    "fondo": "ia:rom-rio",
+    "khipu": {
+     "cara": "decidido",
+     "pose": "senala",
+     "vestuario": "romano",
+     "x": 65,
+     "espejo": true
+    },
+    "ambiente": "naturaleza/river-in-the-forest-with-birds"
+   },
+   {
+    "dibujo": {
+     "iconos": []
+    },
+    "texto": "Te lleva la corriente",
+    "resaltar": "corriente",
+    "fondo": "ia:rom-rio",
+    "khipu": {
+     "cara": "asustado",
+     "pose": "arriba",
+     "vestuario": "romano",
+     "x": 30,
+     "accion": "tiembla"
+    }
+   },
+   {
+    "dibujo": {
+     "iconos": []
+    },
+    "texto": "NIVEL 3: CAMPAÑA",
+    "resaltar": "NIVEL 3",
+    "fondo": "ia:rom-campamento",
+    "khipu": {
+     "cara": "normal",
+     "pose": "abajo",
+     "vestuario": "romano",
+     "x": 50
+    },
+    "etiqueta": "Nivel 3",
+    "sonido": "hooks/cinematic-whoosh-fast-transition",
+    "sonidoEn": 0.05
+   },
+   {
+    "dibujo": {
+     "iconos": []
+    },
+    "texto": "Hacia Germania",
+    "resaltar": "Germania",
+    "fondo": "ia:rom-bosque",
+    "khipu": {
+     "cara": "asustado",
+     "pose": "abajo",
+     "vestuario": "romano",
+     "x": 30,
+     "accion": "tiembla",
+     "objeto": "lanza"
+    },
+    "ambiente": "naturaleza/deep-cinematic-wind-hum"
+   },
+   {
+    "dibujo": {
+     "iconos": []
+    },
+    "texto": "Una historia de miedo",
+    "resaltar": "miedo",
+    "fondo": "ia:rom-bosque",
+    "khipu": {
+     "cara": "normal",
+     "pose": "pensando",
+     "vestuario": "romano",
+     "x": 65,
+     "espejo": true
+    }
+   },
+   {
+    "dibujo": {
+     "iconos": []
+    },
+    "texto": "3 legiones perdidas",
+    "resaltar": "3 legiones",
+    "fondo": "ia:rom-bosque",
+    "khipu": {
+     "cara": "asustado",
+     "pose": "abajo",
+     "vestuario": "romano",
+     "x": 30,
+     "accion": "tiembla",
+     "objeto": "lanza"
+    },
+    "silencio": true,
+    "sonido": "hooks/deep-heartbeat-impact",
+    "sonidoEn": 2.5
+   },
+   {
+    "dibujo": {
+     "iconos": []
+    },
+    "texto": "Nadie confiaba",
+    "resaltar": "bosque",
+    "fondo": "ia:rom-bosque",
+    "khipu": {
+     "cara": "triste",
+     "pose": "abajo",
+     "vestuario": "romano",
+     "x": 65,
+     "espejo": true
+    }
+   },
+   {
+    "dibujo": {
+     "iconos": []
+    },
+    "texto": "Construyes una ciudad",
+    "resaltar": "ciudad",
+    "fondo": "ia:rom-campamento",
+    "khipu": {
+     "cara": "sorprendido",
+     "pose": "arriba",
+     "vestuario": "romano",
+     "x": 65,
+     "espejo": true
+    }
+   },
+   {
+    "dibujo": {
+     "iconos": []
+    },
+    "texto": "Un campamento cada noche",
+    "resaltar": "cada noche",
+    "fondo": "ia:rom-campamento",
+    "khipu": {
+     "cara": "decidido",
+     "pose": "senala",
+     "vestuario": "romano",
+     "x": 30
+    }
+   },
+   {
+    "dibujo": {
+     "iconos": []
+    },
+    "texto": "8 en una tienda",
+    "resaltar": "8",
+    "fondo": "ia:rom-tienda",
+    "khipu": {
+     "cara": "feliz",
+     "pose": "abajo",
+     "vestuario": "romano",
+     "x": 50
+    },
+    "extras": [
+     {
+      "cara": "feliz",
+      "pose": "abajo",
+      "vestuario": "romano",
+      "x": 28
+     }
+    ]
+   },
+   {
+    "dibujo": {
+     "iconos": []
+    },
+    "texto": "La trompeta",
+    "resaltar": "trompeta",
+    "fondo": "ia:rom-campamento",
+    "khipu": {
+     "cara": "asustado",
+     "pose": "arriba",
+     "vestuario": "romano",
+     "x": 30
+    },
+    "sonido": "historia/cinematic-church-bell-hit",
+    "sonidoEn": 0.3
+   },
+   {
+    "dibujo": {
+     "iconos": []
+    },
+    "texto": "Guardia, leña, agua o cavar",
+    "resaltar": "cavar",
+    "fondo": "ia:rom-campamento",
+    "khipu": {
+     "cara": "normal",
+     "pose": "cadera",
+     "vestuario": "romano",
+     "x": 65,
+     "espejo": true
+    }
+   },
+   {
+    "dibujo": {
+     "iconos": []
+    },
+    "texto": "4 turnos de guardia",
+    "resaltar": "4",
+    "fondo": "ia:rom-noche",
+    "khipu": {
+     "cara": "triste",
+     "pose": "abajo",
+     "vestuario": "romano",
+     "x": 30
+    }
+   },
+   {
+    "dibujo": {
+     "iconos": []
+    },
+    "texto": "Si uno huye…",
+    "resaltar": "huye",
+    "fondo": "ia:rom-tienda",
+    "khipu": {
+     "cara": "asustado",
+     "pose": "abajo",
+     "vestuario": "romano",
+     "x": 65,
+     "espejo": true
+    },
+    "extras": [
+     {
+      "cara": "normal",
+      "pose": "abajo",
+      "vestuario": "romano",
+      "x": 28
+     }
+    ]
+   },
+   {
+    "dibujo": {
+     "iconos": []
+    },
+    "texto": "NIVEL 4: BATALLA",
+    "resaltar": "NIVEL 4",
+    "fondo": "ia:rom-batalla",
+    "khipu": {
+     "cara": "normal",
+     "pose": "abajo",
+     "vestuario": "romano",
+     "x": 50,
+     "objeto": "escudo"
+    },
+    "etiqueta": "Nivel 4",
+    "sonido": "hooks/movie-trailer-epic-impact",
+    "sonidoEn": 0.05
+   },
+   {
+    "dibujo": {
+     "iconos": []
+    },
+    "texto": "Miles gritan",
+    "resaltar": "Miles",
+    "fondo": "ia:rom-batalla",
+    "khipu": {
+     "cara": "asustado",
+     "pose": "abajo",
+     "vestuario": "romano",
+     "x": 30,
+     "objeto": "escudo",
+     "accion": "tiembla"
+    },
+    "ambiente": "historia/huge-crowd-cheering-victory"
+   },
+   {
+    "dibujo": {
+     "iconos": []
+    },
+    "texto": "Escudos",
+    "resaltar": "Escudos",
+    "fondo": "ia:rom-muro",
+    "khipu": {
+     "cara": "decidido",
+     "pose": "cadera",
+     "vestuario": "romano",
+     "x": 65,
+     "espejo": true,
+     "objeto": "escudo"
+    },
+    "extras": [
+     {
+      "cara": "decidido",
+      "pose": "abajo",
+      "vestuario": "romano",
+      "x": 45,
+      "objeto": "escudo"
+     },
+     {
+      "cara": "decidido",
+      "pose": "abajo",
+      "vestuario": "romano",
+      "x": 20,
+      "objeto": "escudo"
+     }
+    ]
+   },
+   {
+    "dibujo": {
+     "iconos": []
+    },
+    "texto": "Ahora son un muro",
+    "resaltar": "muro",
+    "fondo": "ia:rom-muro",
+    "khipu": {
+     "cara": "decidido",
+     "pose": "senala",
+     "vestuario": "romano",
+     "x": 30,
+     "objeto": "escudo"
+    },
+    "sonido": "historia/metal-hit-woosh",
+    "sonidoEn": 2.0,
+    "extras": [
+     {
+      "cara": "decidido",
+      "pose": "abajo",
+      "vestuario": "romano",
+      "x": 55,
+      "objeto": "escudo"
+     },
+     {
+      "cara": "decidido",
+      "pose": "abajo",
+      "vestuario": "romano",
+      "x": 80,
+      "objeto": "escudo"
+     }
+    ]
+   },
+   {
+    "dibujo": {
+     "iconos": []
+    },
+    "texto": "Jabalina y espada",
+    "resaltar": "espada",
+    "fondo": "ia:rom-batalla",
+    "khipu": {
+     "cara": "enojado",
+     "pose": "arriba",
+     "vestuario": "romano",
+     "x": 30,
+     "objeto": "espada"
+    }
+   },
+   {
+    "dibujo": {
+     "iconos": []
+    },
+    "texto": "Se doblaba",
+    "resaltar": "doblaba",
+    "fondo": "ia:rom-muro",
+    "khipu": {
+     "cara": "sorprendido",
+     "pose": "pensando",
+     "vestuario": "romano",
+     "x": 65,
+     "espejo": true,
+     "objeto": "escudo"
+    },
+    "extras": [
+     {
+      "cara": "decidido",
+      "pose": "abajo",
+      "vestuario": "romano",
+      "x": 45,
+      "objeto": "escudo"
+     },
+     {
+      "cara": "decidido",
+      "pose": "abajo",
+      "vestuario": "romano",
+      "x": 20,
+      "objeto": "escudo"
+     }
+    ]
+   },
+   {
+    "dibujo": {
+     "iconos": []
+    },
+    "texto": "Escudo inútil",
+    "resaltar": "inútil",
+    "fondo": "ia:rom-muro",
+    "khipu": {
+     "cara": "feliz",
+     "pose": "senala",
+     "vestuario": "romano",
+     "x": 30,
+     "objeto": "escudo"
+    },
+    "extras": [
+     {
+      "cara": "decidido",
+      "pose": "abajo",
+      "vestuario": "romano",
+      "x": 55,
+      "objeto": "escudo"
+     },
+     {
+      "cara": "decidido",
+      "pose": "abajo",
+      "vestuario": "romano",
+      "x": 80,
+      "objeto": "escudo"
+     }
+    ]
+   },
+   {
+    "dibujo": {
+     "iconos": []
+    },
+    "texto": "Desde el escudo",
+    "resaltar": "escudo",
+    "fondo": "ia:rom-muro",
+    "khipu": {
+     "cara": "decidido",
+     "pose": "senala",
+     "vestuario": "romano",
+     "x": 65,
+     "espejo": true,
+     "objeto": "escudo"
+    },
+    "extras": [
+     {
+      "cara": "decidido",
+      "pose": "abajo",
+      "vestuario": "romano",
+      "x": 45,
+      "objeto": "escudo"
+     },
+     {
+      "cara": "decidido",
+      "pose": "abajo",
+      "vestuario": "romano",
+      "x": 20,
+      "objeto": "escudo"
+     }
+    ]
+   },
+   {
+    "dibujo": {
+     "iconos": []
+    },
+    "texto": "Relevo de filas",
+    "resaltar": "Relevo",
+    "fondo": "ia:rom-batalla",
+    "khipu": {
+     "cara": "sorprendido",
+     "pose": "senala",
+     "vestuario": "romano",
+     "x": 30,
+     "objeto": "escudo"
+    }
+   },
+   {
+    "dibujo": {
+     "iconos": []
+    },
+    "texto": "La tortuga",
+    "resaltar": "tortuga",
+    "fondo": "ia:rom-muro",
+    "khipu": {
+     "cara": "decidido",
+     "pose": "arriba",
+     "vestuario": "romano",
+     "x": 30,
+     "objeto": "escudo"
+    },
+    "sonido": "historia/metal-hit-woosh",
+    "sonidoEn": 2.5,
+    "extras": [
+     {
+      "cara": "decidido",
+      "pose": "abajo",
+      "vestuario": "romano",
+      "x": 55,
+      "objeto": "escudo"
+     },
+     {
+      "cara": "decidido",
+      "pose": "abajo",
+      "vestuario": "romano",
+      "x": 80,
+      "objeto": "escudo"
+     }
+    ]
+   },
+   {
+    "dibujo": {
+     "iconos": []
+    },
+    "texto": "Un caparazón que camina",
+    "resaltar": "caparazón",
+    "fondo": "ia:rom-muro",
+    "khipu": {
+     "cara": "feliz",
+     "pose": "senala",
+     "vestuario": "romano",
+     "x": 65,
+     "espejo": true,
+     "objeto": "escudo"
+    },
+    "extras": [
+     {
+      "cara": "decidido",
+      "pose": "abajo",
+      "vestuario": "romano",
+      "x": 45,
+      "objeto": "escudo"
+     },
+     {
+      "cara": "decidido",
+      "pose": "abajo",
+      "vestuario": "romano",
+      "x": 20,
+      "objeto": "escudo"
+     }
+    ]
+   },
+   {
+    "dibujo": {
+     "iconos": []
+    },
+    "texto": "No se cansaban",
+    "resaltar": "cansaban",
+    "fondo": "ia:rom-aguila",
+    "khipu": {
+     "cara": "feliz",
+     "pose": "arriba",
+     "vestuario": "romano",
+     "x": 50
+    }
+   },
+   {
+    "dibujo": {
+     "iconos": []
+    },
+    "texto": "Un lugar vacío",
+    "resaltar": "vacío",
+    "fondo": "ia:rom-noche",
+    "khipu": {
+     "cara": "triste",
+     "pose": "abajo",
+     "vestuario": "romano",
+     "x": 50
+    },
+    "silencio": true
+   },
+   {
+    "dibujo": {
+     "iconos": []
+    },
+    "texto": "¿Tú habrías aguantado?",
+    "resaltar": "aguantado",
+    "fondo": "ia:rom-noche",
+    "khipu": {
+     "cara": "normal",
+     "pose": "pensando",
+     "vestuario": "romano",
+     "x": 50
+    }
+   },
+   {
+    "dibujo": {
+     "iconos": []
+    },
+    "texto": "NIVEL 5: DISCIPLINA",
+    "resaltar": "NIVEL 5",
+    "fondo": "ia:rom-tribunal",
+    "khipu": {
+     "cara": "normal",
+     "pose": "abajo",
+     "vestuario": "romano",
+     "x": 50
+    },
+    "etiqueta": "Nivel 5",
+    "sonido": "hooks/cinematic-whoosh-fast-transition",
+    "sonidoEn": 0.05
+   },
+   {
+    "dibujo": {
+     "iconos": []
+    },
+    "texto": "El miedo de adentro",
+    "resaltar": "miedo",
+    "fondo": "ia:rom-tribunal",
+    "khipu": {
+     "cara": "asustado",
+     "pose": "abajo",
+     "vestuario": "romano",
+     "x": 30
+    }
+   },
+   {
+    "dibujo": {
+     "iconos": []
+    },
+    "texto": "Dormirse era morir",
+    "resaltar": "Dormirse",
+    "fondo": "ia:rom-noche",
+    "khipu": {
+     "cara": "asustado",
+     "pose": "arriba",
+     "vestuario": "romano",
+     "x": 65,
+     "espejo": true,
+     "accion": "tiembla",
+     "objeto": "antorcha"
+    }
+   },
+   {
+    "dibujo": {
+     "iconos": []
+    },
+    "texto": "La decimación",
+    "resaltar": "decimación",
+    "fondo": "ia:rom-tribunal",
+    "khipu": {
+     "cara": "asustado",
+     "pose": "abajo",
+     "vestuario": "romano",
+     "x": 30
+    },
+    "sonido": "hooks/deep-heartbeat-impact",
+    "sonidoEn": 1.5
+   },
+   {
+    "dibujo": {
+     "iconos": []
+    },
+    "texto": "1 de cada 10",
+    "resaltar": "1 de cada 10",
+    "fondo": "ia:rom-tribunal",
+    "khipu": {
+     "cara": "triste",
+     "pose": "abajo",
+     "vestuario": "romano",
+     "x": 65,
+     "espejo": true
+    },
+    "silencio": true
+   },
+   {
+    "dibujo": {
+     "iconos": []
+    },
+    "texto": "Solo 11 casos",
+    "resaltar": "11",
+    "fondo": "ia:rom-tribunal",
+    "khipu": {
+     "cara": "normal",
+     "pose": "pensando",
+     "vestuario": "romano",
+     "x": 30
+    }
+   },
+   {
+    "dibujo": {
+     "iconos": []
+    },
+    "texto": "Craso, 72 a. C.",
+    "resaltar": "Craso",
+    "fondo": "ia:rom-batalla",
+    "khipu": {
+     "cara": "enojado",
+     "pose": "cadera",
+     "vestuario": "romano",
+     "x": 65,
+     "espejo": true,
+     "objeto": "espada"
+    }
+   },
+   {
+    "dibujo": {
+     "iconos": []
+    },
+    "texto": "NIVEL 6: ESPECIALISTA",
+    "resaltar": "NIVEL 6",
+    "fondo": "ia:rom-taller",
+    "khipu": {
+     "cara": "normal",
+     "pose": "abajo",
+     "vestuario": "romano",
+     "x": 50
+    },
+    "etiqueta": "Nivel 6",
+    "sonido": "hooks/cinematic-whoosh-fast-transition",
+    "sonidoEn": 0.05
+   },
+   {
+    "dibujo": {
+     "iconos": []
+    },
+    "texto": "Ya no eres novato",
+    "resaltar": "novato",
+    "fondo": "ia:rom-fuerte",
+    "khipu": {
+     "cara": "decidido",
+     "pose": "cadera",
+     "vestuario": "romano",
+     "x": 30
+    }
+   },
+   {
+    "dibujo": {
+     "iconos": []
+    },
+    "texto": "Inmune",
+    "resaltar": "Inmune",
+    "fondo": "ia:rom-taller",
+    "khipu": {
+     "cara": "feliz",
+     "pose": "senala",
+     "vestuario": "romano",
+     "x": 30
+    }
+   },
+   {
+    "dibujo": {
+     "iconos": []
+    },
+    "texto": "Menos trabajo, más paga",
+    "resaltar": "más",
+    "fondo": "ia:rom-taller",
+    "khipu": {
+     "cara": "feliz",
+     "pose": "arriba",
+     "vestuario": "romano",
+     "x": 65,
+     "espejo": true
+    },
+    "sonido": "dinero/clinking-coins",
+    "sonidoEn": 1.5
+   },
+   {
+    "dibujo": {
+     "iconos": []
+    },
+    "texto": "También construía",
+    "resaltar": "construía",
+    "fondo": "ia:rom-fuerte",
+    "khipu": {
+     "cara": "sorprendido",
+     "pose": "senala",
+     "vestuario": "romano",
+     "x": 30
+    }
+   },
+   {
+    "dibujo": {
+     "iconos": []
+    },
+    "texto": "Caminos, puentes, murallas",
+    "resaltar": "murallas",
+    "fondo": "ia:rom-camino",
+    "khipu": {
+     "cara": "feliz",
+     "pose": "arriba",
+     "vestuario": "romano",
+     "x": 65,
+     "espejo": true,
+     "accion": "camina",
+     "objeto": "lanza"
+    },
+    "extras": [
+     {
+      "cara": "triste",
+      "pose": "abajo",
+      "vestuario": "romano",
+      "x": 25,
+      "objeto": "lanza",
+      "accion": "camina",
+      "espejo": true
+     }
+    ]
+   },
+   {
+    "dibujo": {
+     "iconos": []
+    },
+    "texto": "Un muro de 117 km",
+    "resaltar": "117 km",
+    "fondo": "ia:rom-fuerte",
+    "khipu": {
+     "cara": "sorprendido",
+     "pose": "arriba",
+     "vestuario": "romano",
+     "x": 30
+    },
+    "sonido": "hooks/movie-trailer-epic-impact",
+    "sonidoEn": 2.0
+   },
+   {
+    "dibujo": {
+     "iconos": []
+    },
+    "texto": "Todavía existe",
+    "resaltar": "existe",
+    "fondo": "ia:rom-fuerte",
+    "khipu": {
+     "cara": "feliz",
+     "pose": "senala",
+     "vestuario": "romano",
+     "x": 65,
+     "espejo": true
+    }
+   },
+   {
+    "dibujo": {
+     "iconos": []
+    },
+    "texto": "Saber escribir",
+    "resaltar": "escribir",
+    "fondo": "ia:rom-tablilla",
+    "khipu": {
+     "cara": "sorprendido",
+     "pose": "pensando",
+     "vestuario": "romano",
+     "x": 30,
+     "objeto": "pergamino"
+    }
+   },
+   {
+    "dibujo": {
+     "iconos": []
+    },
+    "texto": "Cuentas e informes",
+    "resaltar": "informes",
+    "fondo": "ia:rom-tablilla",
+    "khipu": {
+     "cara": "decidido",
+     "pose": "senala",
+     "vestuario": "romano",
+     "x": 65,
+     "espejo": true,
+     "objeto": "pergamino"
+    }
+   },
+   {
+    "dibujo": {
+     "iconos": []
+    },
+    "texto": "NIVEL 7: OPTIO",
+    "resaltar": "NIVEL 7",
+    "fondo": "ia:rom-campamento",
+    "khipu": {
+     "cara": "normal",
+     "pose": "abajo",
+     "vestuario": "romano",
+     "x": 50
+    },
+    "etiqueta": "Nivel 7",
+    "sonido": "hooks/cinematic-whoosh-fast-transition",
+    "sonidoEn": 0.05
+   },
+   {
+    "dibujo": {
+     "iconos": []
+    },
+    "texto": "La mano derecha",
+    "resaltar": "derecha",
+    "fondo": "ia:rom-campamento",
+    "khipu": {
+     "cara": "feliz",
+     "pose": "cadera",
+     "vestuario": "romano",
+     "x": 30
+    }
+   },
+   {
+    "dibujo": {
+     "iconos": []
+    },
+    "texto": "Atrás de todos",
+    "resaltar": "Atrás",
+    "fondo": "ia:rom-batalla",
+    "khipu": {
+     "cara": "decidido",
+     "pose": "abajo",
+     "vestuario": "romano",
+     "x": 65,
+     "espejo": true,
+     "objeto": "espada"
+    }
+   },
+   {
+    "dibujo": {
+     "iconos": []
+    },
+    "texto": "Que nadie escape",
+    "resaltar": "nadie",
+    "fondo": "ia:rom-batalla",
+    "khipu": {
+     "cara": "enojado",
+     "pose": "senala",
+     "vestuario": "romano",
+     "x": 65,
+     "espejo": true,
+     "objeto": "espada"
+    }
+   },
+   {
+    "dibujo": {
+     "iconos": []
+    },
+    "texto": "Si él muere…",
+    "resaltar": "muere",
+    "fondo": "ia:rom-aguila",
+    "khipu": {
+     "cara": "asustado",
+     "pose": "abajo",
+     "vestuario": "romano",
+     "x": 30
+    },
+    "silencio": true
+   },
+   {
+    "dibujo": {
+     "iconos": []
+    },
+    "texto": "NIVEL 8: CENTURIÓN",
+    "resaltar": "NIVEL 8",
+    "fondo": "ia:rom-casco",
+    "khipu": {
+     "cara": "normal",
+     "pose": "abajo",
+     "vestuario": "romano",
+     "x": 50
+    },
+    "etiqueta": "Nivel 8",
+    "sonido": "hooks/movie-trailer-epic-impact",
+    "sonidoEn": 0.05
+   },
+   {
+    "dibujo": {
+     "iconos": []
+    },
+    "texto": "El casco de la cresta",
+    "resaltar": "casco",
+    "fondo": "ia:rom-casco",
+    "khipu": {
+     "cara": "sorprendido",
+     "pose": "arriba",
+     "vestuario": "romano",
+     "x": 30
+    }
+   },
+   {
+    "dibujo": {
+     "iconos": []
+    },
+    "texto": "El bastón de vid",
+    "resaltar": "vid",
+    "fondo": "ia:rom-casco",
+    "khipu": {
+     "cara": "decidido",
+     "pose": "cadera",
+     "vestuario": "romano",
+     "x": 65,
+     "espejo": true,
+     "objeto": "lanza"
+    }
+   },
+   {
+    "dibujo": {
+     "iconos": []
+    },
+    "texto": "El centurión Lucilio",
+    "resaltar": "Lucilio",
+    "fondo": "ia:rom-casco",
+    "khipu": {
+     "cara": "enojado",
+     "pose": "cadera",
+     "vestuario": "romano",
+     "x": 30
+    }
+   },
+   {
+    "dibujo": {
+     "iconos": []
+    },
+    "texto": "¡Dame otro!",
+    "resaltar": "otro",
+    "fondo": "ia:rom-casco",
+    "khipu": {
+     "cara": "enojado",
+     "pose": "senala",
+     "vestuario": "romano",
+     "x": 65,
+     "espejo": true
+    },
+    "sonido": "hooks/wood-hard-hit",
+    "sonidoEn": 1.2
+   },
+   {
+    "dibujo": {
+     "iconos": []
+    },
+    "texto": "Fue de los primeros",
+    "resaltar": "primeros",
+    "fondo": "ia:rom-noche",
+    "khipu": {
+     "cara": "asustado",
+     "pose": "abajo",
+     "vestuario": "romano",
+     "x": 30,
+     "accion": "tiembla",
+     "objeto": "antorcha"
+    },
+    "silencio": true
+   },
+   {
+    "dibujo": {
+     "iconos": []
+    },
+    "texto": "¿Qué centurión serás?",
+    "resaltar": "centurión",
+    "fondo": "ia:rom-casco",
+    "khipu": {
+     "cara": "normal",
+     "pose": "pensando",
+     "vestuario": "romano",
+     "x": 50
+    }
+   },
+   {
+    "dibujo": {
+     "iconos": []
+    },
+    "texto": "80 hombres a tu cargo",
+    "resaltar": "80",
+    "fondo": "ia:rom-fuerte",
+    "khipu": {
+     "cara": "decidido",
+     "pose": "senala",
+     "vestuario": "romano",
+     "x": 30
+    }
+   },
+   {
+    "dibujo": {
+     "iconos": []
+    },
+    "texto": "Primer centurión",
+    "resaltar": "Primer",
+    "fondo": "ia:rom-aguila",
+    "khipu": {
+     "cara": "feliz",
+     "pose": "arriba",
+     "vestuario": "romano",
+     "x": 65,
+     "espejo": true
+    }
+   },
+   {
+    "dibujo": {
+     "iconos": []
+    },
+    "texto": "Te buscan primero",
+    "resaltar": "primero",
+    "fondo": "ia:rom-batalla",
+    "khipu": {
+     "cara": "asustado",
+     "pose": "abajo",
+     "vestuario": "romano",
+     "x": 30,
+     "objeto": "escudo",
+     "accion": "tiembla"
+    }
+   },
+   {
+    "dibujo": {
+     "iconos": []
+    },
+    "texto": "Morían más",
+    "resaltar": "más",
+    "fondo": "ia:rom-noche",
+    "khipu": {
+     "cara": "triste",
+     "pose": "abajo",
+     "vestuario": "romano",
+     "x": 65,
+     "espejo": true
+    }
+   },
+   {
+    "dibujo": {
+     "iconos": []
+    },
+    "texto": "El que carga los muertos",
+    "resaltar": "muertos",
+    "fondo": "ia:rom-noche",
+    "khipu": {
+     "cara": "triste",
+     "pose": "pensando",
+     "vestuario": "romano",
+     "x": 50
+    },
+    "silencio": true
+   },
+   {
+    "dibujo": {
+     "iconos": []
+    },
+    "texto": "FINAL: EL RETIRO",
+    "resaltar": "RETIRO",
+    "fondo": "ia:rom-granja",
+    "khipu": {
+     "cara": "normal",
+     "pose": "abajo",
+     "vestuario": "romano",
+     "x": 50
+    },
+    "etiqueta": "Final",
+    "sonido": "hooks/cinematic-whoosh-fast-transition",
+    "sonidoEn": 0.05
+   },
+   {
+    "dibujo": {
+     "iconos": []
+    },
+    "texto": "Tierra o dinero",
+    "resaltar": "Tierra",
+    "fondo": "ia:rom-granja",
+    "khipu": {
+     "cara": "feliz",
+     "pose": "arriba",
+     "vestuario": "romano",
+     "x": 30
+    }
+   },
+   {
+    "dibujo": {
+     "iconos": []
+    },
+    "texto": "3 000 denarios",
+    "resaltar": "3 000",
+    "fondo": "ia:rom-tesoro",
+    "khipu": {
+     "cara": "sorprendido",
+     "pose": "arriba",
+     "vestuario": "romano",
+     "x": 65,
+     "espejo": true
+    },
+    "sonido": "dinero/clinking-coins",
+    "sonidoEn": 1.0
+   },
+   {
+    "dibujo": {
+     "iconos": []
+    },
+    "texto": "13 años de sueldo",
+    "resaltar": "13 años",
+    "fondo": "ia:rom-tesoro",
+    "khipu": {
+     "cara": "feliz",
+     "pose": "senala",
+     "vestuario": "romano",
+     "x": 30,
+     "accion": "salta",
+     "objeto": "bolsa"
+    }
+   },
+   {
+    "dibujo": {
+     "iconos": []
+    },
+    "texto": "42 años y cicatrices",
+    "resaltar": "cicatrices",
+    "fondo": "ia:rom-granja",
+    "khipu": {
+     "cara": "normal",
+     "pose": "abajo",
+     "vestuario": "romano",
+     "x": 65,
+     "espejo": true
+    }
+   },
+   {
+    "dibujo": {
+     "iconos": []
+    },
+    "texto": "Por fin, casarte",
+    "resaltar": "casarte",
+    "fondo": "ia:rom-granja",
+    "khipu": {
+     "cara": "feliz",
+     "pose": "senala",
+     "vestuario": "romano",
+     "x": 30
+    }
+   },
+   {
+    "dibujo": {
+     "iconos": []
+    },
+    "texto": "La familia que esperaba",
+    "resaltar": "familia",
+    "fondo": "ia:rom-granja",
+    "khipu": {
+     "cara": "triste",
+     "pose": "pensando",
+     "vestuario": "romano",
+     "x": 65,
+     "espejo": true
+    }
+   },
+   {
+    "dibujo": {
+     "iconos": []
+    },
+    "texto": "Así nacieron ciudades",
+    "resaltar": "ciudades",
+    "fondo": "ia:jes-jerusalen",
+    "khipu": {
+     "cara": "sorprendido",
+     "pose": "senala",
+     "vestuario": "romano",
+     "x": 30
+    }
+   },
+   {
+    "dibujo": {
+     "iconos": []
+    },
+    "texto": "Mérida, España",
+    "resaltar": "Mérida",
+    "fondo": "ia:jes-jerusalen",
+    "khipu": {
+     "cara": "feliz",
+     "pose": "arriba",
+     "vestuario": "romano",
+     "x": 65,
+     "espejo": true
+    }
+   },
+   {
+    "dibujo": {
+     "iconos": []
+    },
+    "texto": "Emérito = retirado",
+    "resaltar": "Emérito",
+    "fondo": "ia:jes-jerusalen",
+    "khipu": {
+     "cara": "feliz",
+     "pose": "pensando",
+     "vestuario": "romano",
+     "x": 30
+    }
+   },
+   {
+    "dibujo": {
+     "iconos": []
+    },
+    "texto": "Profesor emérito",
+    "resaltar": "emérito",
+    "fondo": "ia:rom-tablilla",
+    "khipu": {
+     "cara": "sorprendido",
+     "pose": "senala",
+     "vestuario": "romano",
+     "x": 65,
+     "espejo": true,
+     "objeto": "pergamino"
+    },
+    "sonido": "hooks/short-bass-hit",
+    "sonidoEn": 1.0
+   },
+   {
+    "dibujo": {
+     "iconos": []
+    },
+    "texto": "Septimio Severo",
+    "resaltar": "Severo",
+    "fondo": "ia:rom-aguila",
+    "khipu": {
+     "cara": "sorprendido",
+     "pose": "senala",
+     "vestuario": "romano",
+     "x": 30
+    }
+   },
+   {
+    "dibujo": {
+     "iconos": []
+    },
+    "texto": "25 años",
+    "resaltar": "25",
+    "fondo": "ia:rom-camino",
+    "khipu": {
+     "cara": "normal",
+     "pose": "pensando",
+     "vestuario": "romano",
+     "x": 50,
+     "accion": "camina",
+     "objeto": "lanza"
+    },
+    "extras": [
+     {
+      "cara": "triste",
+      "pose": "abajo",
+      "vestuario": "romano",
+      "x": 25,
+      "objeto": "lanza",
+      "accion": "camina"
+     }
+    ]
+   },
+   {
+    "dibujo": {
+     "iconos": []
+    },
+    "texto": "Recluta: 30 km, 20 kilos",
+    "resaltar": "Recluta",
+    "fondo": "ia:rom-camino",
+    "khipu": {
+     "cara": "normal",
+     "pose": "abajo",
+     "vestuario": "romano",
+     "x": 30,
+     "accion": "camina",
+     "objeto": "lanza"
+    },
+    "extras": [
+     {
+      "cara": "triste",
+      "pose": "abajo",
+      "vestuario": "romano",
+      "x": 70,
+      "objeto": "lanza",
+      "accion": "camina"
+     }
+    ]
+   },
+   {
+    "dibujo": {
+     "iconos": []
+    },
+    "texto": "Campamento y batalla",
+    "resaltar": "batalla",
+    "fondo": "ia:rom-campamento",
+    "khipu": {
+     "cara": "decidido",
+     "pose": "cadera",
+     "vestuario": "romano",
+     "x": 65,
+     "espejo": true
+    }
+   },
+   {
+    "dibujo": {
+     "iconos": []
+    },
+    "texto": "1 de cada 10 · 1 de cada 80",
+    "resaltar": "1 de cada",
+    "fondo": "ia:rom-tribunal",
+    "khipu": {
+     "cara": "asustado",
+     "pose": "abajo",
+     "vestuario": "romano",
+     "x": 30
+    }
+   },
+   {
+    "dibujo": {
+     "iconos": []
+    },
+    "texto": "Lo que más deseaban",
+    "resaltar": "casa",
+    "fondo": "ia:rom-granja",
+    "khipu": {
+     "cara": "feliz",
+     "pose": "abajo",
+     "vestuario": "romano",
+     "x": 50
+    },
+    "silencio": true
+   },
+   {
+    "dibujo": {
+     "iconos": []
+    },
+    "texto": "¿Hasta qué nivel?",
+    "resaltar": "nivel",
+    "fondo": "ia:rom-aguila",
+    "khipu": {
+     "cara": "normal",
+     "pose": "pensando",
+     "vestuario": "romano",
+     "x": 50
+    }
+   }
+  ]
+ }
+}

@@ -1,0 +1,152 @@
+{
+ "formato": "Pizarra",
+ "voz": {
+  "referencia": "voz/referencias/kokoro-santa.wav",
+  "pausa": 0.2,
+  "tono": "epico"
+ },
+ "props": {
+  "gancho": "EL GOL QUE CALLÓ A 200 000",
+  "musica": "musica/epico-prelude-action.mp3",
+  "tono": "calido",
+  "narracion": [
+   {
+    "texto": "Doscientas mil personas se quedaron en silencio al mismo tiempo.",
+    "estilo": "narrador"
+   },
+   {
+    "texto": "Río de Janeiro, mil novecientos cincuenta. La final del Mundial: Brasil contra Uruguay, en el Maracaná.",
+    "estilo": "narrador"
+   },
+   {
+    "texto": "A Brasil le bastaba un empate. Los diarios ya habían impreso: Brasil campeón.",
+    "estilo": "narrador"
+   },
+   {
+    "texto": "Brasil hizo el primer gol. El estadio explotó.",
+    "estilo": "narrador"
+   },
+   {
+    "texto": "Pero Uruguay empató. Y faltando once minutos, Alcides Ghiggia corrió por la derecha.",
+    "estilo": "narrador"
+   },
+   {
+    "texto": "Todos esperaban un centro. Pateó al primer palo, y la pelota entró.",
+    "estilo": "narrador"
+   },
+   {
+    "texto": "Y el Maracaná se quedó mudo.",
+    "estilo": "narrador"
+   },
+   {
+    "texto": "Ghiggia diría después: solo tres personas callaron el Maracaná. Frank Sinatra, el Papa, y yo.",
+    "estilo": "narrador"
+   },
+   {
+    "texto": "Brasil nunca volvió a usar su camiseta blanca. Desde entonces, juega de amarillo.",
+    "estilo": "narrador"
+   },
+   {
+    "texto": "Le dicen el Maracanazo. El día en que doscientas mil personas aprendieron a guardar silencio.",
+    "estilo": "narrador"
+   }
+  ],
+  "escenas": [
+   {
+    "dibujo": {
+     "iconos": []
+    },
+    "texto": "200 000 en silencio",
+    "resaltar": "silencio",
+    "fondo": "ia:mar-01-silencio",
+    "sonido": "hooks/cinematic-glass-hit-suspense",
+    "sonidoEn": 0.05
+   },
+   {
+    "dibujo": {
+     "iconos": []
+    },
+    "texto": "Brasil vs Uruguay, 1950",
+    "resaltar": "1950",
+    "fondo": "ia:mar-02-estadio",
+    "ambiente": "historia/huge-crowd-cheering-victory"
+   },
+   {
+    "dibujo": {
+     "iconos": []
+    },
+    "texto": "Ya eran campeones",
+    "resaltar": "campeones",
+    "fondo": "ia:mar-02-estadio"
+   },
+   {
+    "dibujo": {
+     "iconos": []
+    },
+    "texto": "1 a 0",
+    "resaltar": "1 a 0",
+    "fondo": "ia:mar-04-gol",
+    "sonido": "hooks/big-cinematic-impact",
+    "sonidoEn": 0.05,
+    "ambiente": "historia/huge-crowd-cheering-victory"
+   },
+   {
+    "dibujo": {
+     "iconos": []
+    },
+    "texto": "Ghiggia corrió",
+    "resaltar": "Ghiggia",
+    "fondo": "ia:mar-06-pelota",
+    "sonido": "hooks/cinematic-transition-swoosh-heartbeat-trailer",
+    "sonidoEn": 0.05
+   },
+   {
+    "dibujo": {
+     "iconos": []
+    },
+    "texto": "2 a 1",
+    "resaltar": "2 a 1",
+    "fondo": "ia:mar-06-pelota",
+    "sonido": "hooks/deep-heartbeat-impact",
+    "sonidoEn": 0.05
+   },
+   {
+    "dibujo": {
+     "iconos": []
+    },
+    "texto": "Silencio",
+    "resaltar": "Silencio",
+    "fondo": "ia:mar-07-mudo",
+    "silencio": true
+   },
+   {
+    "dibujo": {
+     "iconos": []
+    },
+    "texto": "Sinatra, el Papa y yo",
+    "resaltar": "yo",
+    "fondo": "ia:mar-08-frase"
+   },
+   {
+    "dibujo": {
+     "iconos": []
+    },
+    "texto": "Adiós a la blanca",
+    "resaltar": "amarillo",
+    "fondo": "ia:mar-09-camiseta",
+    "sonido": "hooks/cinematic-whoosh-deep-impact",
+    "sonidoEn": 0.05
+   },
+   {
+    "dibujo": {
+     "iconos": []
+    },
+    "texto": "El Maracanazo",
+    "resaltar": "Maracanazo",
+    "fondo": "ia:mar-10-final",
+    "sonido": "hooks/angelic-swell-presentation",
+    "sonidoEn": 0.05
+   }
+  ]
+ }
+}

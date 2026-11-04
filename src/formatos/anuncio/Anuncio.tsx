@@ -15,6 +15,25 @@ import {
 import { useEscala } from "../../comun/escala";
 import { marca } from "../../marca";
 import { MapaRuta } from "./MapaRuta";
+import catalogoSfx from "../../../public/sfx/efectos/sfx.json";
+
+type Efecto = NonNullable<Props["efectos"]>[number];
+const CATALOGO = catalogoSfx as Record<
+  string,
+  { archivo: string; impacto_s: number; ganancia_db_sugerida: number }
+>;
+
+// Archivo, adelanto (para que el golpe caiga en el segundo pedido) y volumen de un efecto
+const resolverEfecto = (e: Efecto) => {
+  const c = e.sonido ? CATALOGO[e.sonido] : undefined;
+  if (e.sonido && !c) throw new Error(`Efecto desconocido: ${e.sonido}. Mira public/sfx/efectos/sfx.json`);
+  if (!c) return { archivo: e.archivo ?? "", adelanto: 0, volumen: e.volumen ?? 0.35 };
+  return {
+    archivo: `sfx/efectos/${c.archivo}`,
+    adelanto: c.impacto_s,
+    volumen: e.volumen ?? Math.pow(10, (e.db ?? c.ganancia_db_sugerida) / 20),
+  };
+};
 
 export const anuncioSchema = z.object({
   negocio: z.object({
@@ -59,9 +78,14 @@ export const anuncioSchema = z.object({
   efectos: z
     .array(
       z.object({
-        archivo: z.string(),
+        // Un efecto del catálogo de la skill video-sfx (public/sfx/efectos/sfx.json): cae justo en su golpe
+        sonido: z.string().optional(),
+        // o cualquier archivo de public/ (sin alinear el golpe)
+        archivo: z.string().optional(),
         segundo: z.number(),
         volumen: z.number().optional(),
+        // Ganancia en dB para los efectos del catálogo (por defecto, la sugerida de cada uno)
+        db: z.number().optional(),
         // Si se indica, "segundo" se cuenta desde el inicio de esa escena (1 = la primera)
         escena: z.number().int().min(1).optional(),
       }),
@@ -123,18 +147,26 @@ export const Anuncio: React.FC<Props> = ({ negocio, escenas, voz, musica, efecto
         ))}
       </Series>
       {voz ? <Audio src={staticFile(voz)} /> : null}
-      {(efectos ?? []).map((e, i) => (
-        <Sequence
-          key={i}
-          name={`Efecto ${e.archivo}`}
-          from={Math.round(
-            (e.segundo + (e.escena ? escenas.slice(0, e.escena - 1).reduce((t, x) => t + x.segundos, 0) : 0)) * FPS,
-          )}
-          layout="none"
-        >
-          <Audio src={staticFile(e.archivo)} volume={e.volumen ?? 0.35} />
-        </Sequence>
-      ))}
+      {(efectos ?? []).map((e, i) => {
+        const r = resolverEfecto(e);
+        const golpe = e.segundo + (e.escena ? escenas.slice(0, e.escena - 1).reduce((t, x) => t + x.segundos, 0) : 0);
+        const desde = golpe - r.adelanto;
+        return (
+          <Sequence
+            key={i}
+            name={`Efecto ${e.sonido ?? e.archivo}`}
+            from={Math.max(0, Math.round(desde * FPS))}
+            layout="none"
+          >
+            {/* Si el golpe cae antes de que empiece el archivo, se recorta el inicio */}
+            <Audio
+              src={staticFile(r.archivo)}
+              volume={r.volumen}
+              trimBefore={desde < 0 ? Math.round(-desde * FPS) : undefined}
+            />
+          </Sequence>
+        );
+      })}
       {musica ? (
         <Audio
           src={staticFile(musica)}

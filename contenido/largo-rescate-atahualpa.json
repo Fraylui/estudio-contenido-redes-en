@@ -1,0 +1,485 @@
+{
+ "formato": "Pizarra",
+ "voz": {
+  "referencia": "voz/referencias/xiomi-clara.wav",
+  "pausa": 0.22,
+  "tono": "alegre",
+  "pronunciacion": {
+   "Atahualpa": "Atahuálpa",
+   "Huáscar": "Huáscar",
+   "Cajamarca": "Cajamárca",
+   "Coricancha": "Coricáncha"
+  }
+ },
+ "props": {
+  "musica": "musica/documental.mp3",
+  "tono": "calido",
+  "escenas": [
+   {
+    "dibujo": {
+     "iconos": []
+    },
+    "texto": "Una habitación llena de oro",
+    "resaltar": "oro",
+    "fondo": "ia:ata23-llenando",
+    "sonido": "flash_shock",
+    "sonidoEn": 0.05
+   },
+   {
+    "dibujo": {
+     "iconos": []
+    },
+    "texto": "No le salvó la vida",
+    "resaltar": "vida",
+    "fondo": "ia:ata14-prisionero",
+    "sonido": "boom",
+    "sonidoEn": 0.5
+   },
+   {
+    "dibujo": {
+     "iconos": []
+    },
+    "texto": "El rescate más grande de la historia",
+    "resaltar": "más grande",
+    "fondo": "ia:ata03-cajamarca"
+   },
+   {
+    "dibujo": {
+     "iconos": []
+    },
+    "texto": "1532",
+    "resaltar": "1532",
+    "fondo": "ia:ata04-imperio",
+    "etiqueta": "El imperio"
+   },
+   {
+    "dibujo": {
+     "iconos": []
+    },
+    "texto": "Colombia → Chile",
+    "resaltar": "Chile",
+    "fondo": "ia:ata05-caminos"
+   },
+   {
+    "dibujo": {
+     "iconos": []
+    },
+    "texto": "Una guerra entre hermanos",
+    "resaltar": "hermanos",
+    "fondo": "ia:ata06-guerra-hermanos",
+    "particulas": "polvo"
+   },
+   {
+    "dibujo": {
+     "iconos": []
+    },
+    "texto": "Los baños de Cajamarca",
+    "resaltar": "Cajamarca",
+    "fondo": "ia:ata07-banos"
+   },
+   {
+    "dibujo": {
+     "iconos": []
+    },
+    "texto": "Unos 170 hombres",
+    "resaltar": "170",
+    "fondo": "ia:ata08-espanoles"
+   },
+   {
+    "dibujo": {
+     "iconos": []
+    },
+    "texto": "Francisco Pizarro",
+    "resaltar": "Pizarro",
+    "fondo": "ia:ata09-pizarro"
+   },
+   {
+    "dibujo": {
+     "iconos": []
+    },
+    "texto": "16 de noviembre de 1532",
+    "resaltar": "16 de noviembre",
+    "fondo": "ia:ata10-litera"
+   },
+   {
+    "dibujo": {
+     "iconos": []
+    },
+    "texto": "Escondidos",
+    "resaltar": "Escondidos",
+    "fondo": "ia:ata09-pizarro:paneo"
+   },
+   {
+    "dibujo": {
+     "iconos": []
+    },
+    "texto": "Un libro en el suelo",
+    "resaltar": "libro",
+    "fondo": "ia:ata12-libro"
+   },
+   {
+    "dibujo": {
+     "iconos": []
+    },
+    "texto": "En menos de 2 horas",
+    "resaltar": "2 horas",
+    "fondo": "ia:ata13-ataque",
+    "sonido": "boom",
+    "sonidoEn": 0.8,
+    "particulas": "brasas"
+   },
+   {
+    "dibujo": {
+     "iconos": []
+    },
+    "texto": "Un prisionero",
+    "resaltar": "prisionero",
+    "fondo": "ia:ata14-prisionero"
+   },
+   {
+    "dibujo": {
+     "iconos": []
+    },
+    "texto": "Solo hablaban de oro",
+    "resaltar": "oro",
+    "fondo": "ia:ata15-oro-ojos",
+    "etiqueta": "La oferta"
+   },
+   {
+    "dibujo": {
+     "iconos": []
+    },
+    "texto": "Una oferta única",
+    "resaltar": "oferta",
+    "fondo": "ia:ata16-oferta",
+    "sonido": "magic_reveal",
+    "sonidoEn": 0.6
+   },
+   {
+    "dibujo": {
+     "iconos": []
+    },
+    "texto": "Una línea en la pared",
+    "resaltar": "línea",
+    "fondo": "ia:ata17-linea"
+   },
+   {
+    "dibujo": {
+     "iconos": []
+    },
+    "texto": "1 cuarto de oro, 2 de plata",
+    "resaltar": "oro",
+    "fondo": "ia:ata18-cuartos"
+   },
+   {
+    "dibujo": {
+     "iconos": []
+    },
+    "texto": "En 2 meses",
+    "resaltar": "2 meses",
+    "fondo": "ia:ata19-dos-meses"
+   },
+   {
+    "dibujo": {
+     "iconos": []
+    },
+    "texto": "Empezó a llegar el oro",
+    "resaltar": "oro",
+    "fondo": "ia:ata20-caravana",
+    "etiqueta": "El rescate"
+   },
+   {
+    "dibujo": {
+     "iconos": []
+    },
+    "texto": "Planchas de los templos",
+    "resaltar": "templos",
+    "fondo": "ia:ata21-templo"
+   },
+   {
+    "dibujo": {
+     "iconos": []
+    },
+    "texto": "700 planchas de oro",
+    "resaltar": "700",
+    "fondo": "ia:ata22-coricancha"
+   },
+   {
+    "dibujo": {
+     "iconos": []
+    },
+    "texto": "Se fue llenando",
+    "resaltar": "llenando",
+    "fondo": "ia:ata23-llenando"
+   },
+   {
+    "dibujo": {
+     "iconos": []
+    },
+    "texto": "1 326 539 pesos de oro",
+    "resaltar": "pesos de oro",
+    "fondo": "ia:ata24-pesos",
+    "particulas": "brasas"
+   },
+   {
+    "dibujo": {
+     "iconos": []
+    },
+    "texto": "6 toneladas de oro",
+    "resaltar": "6 toneladas",
+    "fondo": "ia:ata25-toneladas",
+    "sonido": "boom",
+    "sonidoEn": 0.6
+   },
+   {
+    "dibujo": {
+     "iconos": []
+    },
+    "texto": "Se fundió casi todo",
+    "resaltar": "fundió",
+    "fondo": "ia:ata26-fundido"
+   },
+   {
+    "dibujo": {
+     "iconos": []
+    },
+    "texto": "Atahualpa cumplió",
+    "resaltar": "cumplió",
+    "fondo": "ia:ata27-espera",
+    "etiqueta": "El final"
+   },
+   {
+    "dibujo": {
+     "iconos": []
+    },
+    "texto": "Tenían miedo",
+    "resaltar": "miedo",
+    "fondo": "ia:ata28-miedo"
+   },
+   {
+    "dibujo": {
+     "iconos": []
+    },
+    "texto": "Un juicio injusto",
+    "resaltar": "injusto",
+    "fondo": "ia:ata29-juicio"
+   },
+   {
+    "dibujo": {
+     "iconos": []
+    },
+    "texto": "26 de julio de 1533",
+    "resaltar": "1533",
+    "fondo": "ia:ata30-ejecucion"
+   },
+   {
+    "dibujo": {
+     "iconos": []
+    },
+    "texto": "Empezó a caer",
+    "resaltar": "caer",
+    "fondo": "ia:ata31-cae"
+   },
+   {
+    "dibujo": {
+     "iconos": []
+    },
+    "texto": "Algo que muchos no saben",
+    "resaltar": "no saben",
+    "fondo": "ia:ata32-giro",
+    "sonido": "magic_reveal",
+    "sonidoEn": 0.4
+   },
+   {
+    "dibujo": {
+     "iconos": []
+    },
+    "texto": "El Cuarto del Rescate",
+    "resaltar": "Cuarto",
+    "fondo": "ia:ata33-cuarto-hoy"
+   },
+   {
+    "dibujo": {
+     "iconos": []
+    },
+    "texto": "6,7 m × 5,2 m",
+    "resaltar": "6,7 m",
+    "fondo": "ia:ata34-medidas"
+   },
+   {
+    "dibujo": {
+     "iconos": []
+    },
+    "texto": "A 2,75 m de altura",
+    "resaltar": "2,75 m",
+    "fondo": "ia:ata35-altura"
+   },
+   {
+    "dibujo": {
+     "iconos": []
+    },
+    "texto": "Lleno de oro",
+    "resaltar": "oro",
+    "fondo": "ia:ata36-imagina"
+   },
+   {
+    "dibujo": {
+     "iconos": []
+    },
+    "texto": "No fue suficiente.",
+    "resaltar": "suficiente.",
+    "fondo": "ia:ata37-final"
+   }
+  ],
+  "narracion": [
+   {
+    "texto": "Una habitación llena de oro hasta donde alcanzaba el brazo de un hombre. Ese fue el precio que el último gran Inca ofreció por su libertad.",
+    "estilo": "narrador"
+   },
+   {
+    "texto": "Y la pagó. Pero no le salvó la vida.",
+    "estilo": "narrador"
+   },
+   {
+    "texto": "Esta es la historia del rescate de Atahualpa: el rescate más grande de la historia.",
+    "estilo": "narrador"
+   },
+   {
+    "texto": "Año mil quinientos treinta y dos. El Imperio inca era el más grande de América.",
+    "estilo": "narrador"
+   },
+   {
+    "texto": "Iba desde el sur de Colombia hasta el centro de Chile, unidos por miles de kilómetros de caminos de piedra.",
+    "estilo": "narrador"
+   },
+   {
+    "texto": "Pero acababa de salir de una guerra entre dos hermanos: Huáscar y Atahualpa.",
+    "estilo": "narrador"
+   },
+   {
+    "texto": "Atahualpa ganó. Y mientras descansaba en los baños termales de Cajamarca, llegó una noticia extraña.",
+    "estilo": "narrador"
+   },
+   {
+    "texto": "Unos ciento setenta hombres barbudos, con animales enormes que nadie había visto nunca, avanzaban por los Andes.",
+    "estilo": "narrador"
+   },
+   {
+    "texto": "Eran los españoles de Francisco Pizarro.",
+    "estilo": "narrador"
+   },
+   {
+    "texto": "El dieciséis de noviembre, Atahualpa entró a la plaza de Cajamarca cargado en una litera, rodeado de miles de sus hombres, casi todos desarmados.",
+    "estilo": "narrador"
+   },
+   {
+    "texto": "Los españoles estaban escondidos en los edificios alrededor de la plaza.",
+    "estilo": "narrador"
+   },
+   {
+    "texto": "Un fraile se acercó con un libro. Atahualpa lo tomó, no entendió qué era, y lo dejó caer.",
+    "estilo": "narrador"
+   },
+   {
+    "texto": "Fue la señal. Sonaron los cañones, cargaron los caballos, y en menos de dos horas la plaza quedó en silencio.",
+    "estilo": "narrador"
+   },
+   {
+    "texto": "Miles murieron. Y el emperador del Imperio inca era ahora un prisionero.",
+    "estilo": "narrador"
+   },
+   {
+    "texto": "Pero Atahualpa era inteligente. Vio que los españoles solo hablaban de una cosa: oro.",
+    "estilo": "narrador"
+   },
+   {
+    "texto": "Y les hizo una oferta que nadie en la historia había hecho.",
+    "estilo": "narrador"
+   },
+   {
+    "texto": "Se paró en la habitación donde estaba preso, levantó el brazo, y marcó una línea en la pared.",
+    "estilo": "narrador"
+   },
+   {
+    "texto": "Prometió llenar ese cuarto de oro hasta la línea. Y dos cuartos más, de plata.",
+    "estilo": "narrador"
+   },
+   {
+    "texto": "Todo en dos meses.",
+    "estilo": "narrador"
+   },
+   {
+    "texto": "Pizarro aceptó. Y entonces empezó algo increíble.",
+    "estilo": "narrador"
+   },
+   {
+    "texto": "Desde todo el imperio empezaron a llegar caravanas: vasos, estatuas, joyas, y hasta planchas de oro arrancadas de los templos.",
+    "estilo": "narrador"
+   },
+   {
+    "texto": "Del templo del Sol, en el Cusco, sacaron setecientas planchas de oro.",
+    "estilo": "narrador"
+   },
+   {
+    "texto": "Durante meses, el cuarto se fue llenando.",
+    "estilo": "narrador"
+   },
+   {
+    "texto": "Las cuentas de la época dicen que, fundido, el oro sumó más de un millón trescientos mil pesos de oro.",
+    "estilo": "narrador"
+   },
+   {
+    "texto": "Hoy se calcula que eran unas seis toneladas de oro, y el doble de plata.",
+    "estilo": "narrador"
+   },
+   {
+    "texto": "Pero casi todo se fundió. Piezas de arte de siglos se convirtieron en lingotes en pocas semanas.",
+    "estilo": "narrador"
+   },
+   {
+    "texto": "Atahualpa cumplió. Y esperaba su libertad.",
+    "estilo": "narrador"
+   },
+   {
+    "texto": "Pero los españoles tenían miedo. Si lo liberaban, podía reunir a su ejército y acabar con ellos.",
+    "estilo": "narrador"
+   },
+   {
+    "texto": "Lo acusaron de traición y de otros cargos, en un juicio que hasta hoy se considera injusto.",
+    "estilo": "narrador"
+   },
+   {
+    "texto": "El veintiséis de julio de mil quinientos treinta y tres, Atahualpa fue ejecutado en la plaza de Cajamarca.",
+    "estilo": "narrador"
+   },
+   {
+    "texto": "Con él, el Imperio inca empezó a caer.",
+    "estilo": "narrador"
+   },
+   {
+    "texto": "Pero hay algo que muchos no saben.",
+    "estilo": "narrador"
+   },
+   {
+    "texto": "El cuarto del rescate todavía existe. Está en Cajamarca, y se puede visitar.",
+    "estilo": "narrador"
+   },
+   {
+    "texto": "Mide casi siete metros de largo y algo más de cinco de ancho. Es el único edificio inca que queda en pie en la ciudad.",
+    "estilo": "narrador"
+   },
+   {
+    "texto": "Y la línea que marcó Atahualpa, según la tradición, estaba a dos metros setenta y cinco de altura.",
+    "estilo": "narrador"
+   },
+   {
+    "texto": "Imagina un cuarto así, lleno de oro hasta el techo.",
+    "estilo": "narrador"
+   },
+   {
+    "texto": "Fue el rescate más grande que se ha pagado jamás. Y aun así, no fue suficiente.",
+    "estilo": "narrador"
+   }
+  ]
+ }
+}

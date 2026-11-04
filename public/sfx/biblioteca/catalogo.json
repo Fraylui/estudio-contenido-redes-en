@@ -1,0 +1,3008 @@
+{
+ "hooks/cinematic-whoosh-deep-impact": {
+  "archivo": "biblioteca/hooks/cinematic-whoosh-deep-impact.mp3",
+  "nombre": "Cinematic whoosh deep impact",
+  "etiqueta": "impact",
+  "duracion_s": 4.06,
+  "impacto_s": 0.544,
+  "ganancia_db_sugerida": -8,
+  "fuente": "https://mixkit.co/free-sound-effects/impact/"
+ },
+ "hooks/big-cinematic-impact": {
+  "archivo": "biblioteca/hooks/big-cinematic-impact.mp3",
+  "nombre": "Big cinematic impact",
+  "etiqueta": "impact",
+  "duracion_s": 7.93,
+  "impacto_s": 2.179,
+  "ganancia_db_sugerida": -8,
+  "fuente": "https://mixkit.co/free-sound-effects/impact/"
+ },
+ "hooks/movie-trailer-epic-impact": {
+  "archivo": "biblioteca/hooks/movie-trailer-epic-impact.mp3",
+  "nombre": "Movie trailer epic impact",
+  "etiqueta": "impact",
+  "duracion_s": 4.87,
+  "impacto_s": 1.007,
+  "ganancia_db_sugerida": -8,
+  "fuente": "https://mixkit.co/free-sound-effects/impact/"
+ },
+ "hooks/strong-punches-to-the-body": {
+  "archivo": "biblioteca/hooks/strong-punches-to-the-body.mp3",
+  "nombre": "Strong punches to the body",
+  "etiqueta": "impact",
+  "duracion_s": 3.03,
+  "impacto_s": 2.514,
+  "ganancia_db_sugerida": -8,
+  "fuente": "https://mixkit.co/free-sound-effects/impact/"
+ },
+ "hooks/epic-impact-afar-explosion": {
+  "archivo": "biblioteca/hooks/epic-impact-afar-explosion.mp3",
+  "nombre": "Epic impact afar explosion",
+  "etiqueta": "impact",
+  "duracion_s": 4.53,
+  "impacto_s": 0.016,
+  "ganancia_db_sugerida": -8,
+  "fuente": "https://mixkit.co/free-sound-effects/impact/"
+ },
+ "hooks/shot-light-energy-flowing": {
+  "archivo": "biblioteca/hooks/shot-light-energy-flowing.mp3",
+  "nombre": "Shot light energy flowing",
+  "etiqueta": "impact",
+  "duracion_s": 7.41,
+  "impacto_s": 1.71,
+  "ganancia_db_sugerida": -8,
+  "fuente": "https://mixkit.co/free-sound-effects/impact/"
+ },
+ "hooks/cinematic-whoosh-fast-transition": {
+  "archivo": "biblioteca/hooks/cinematic-whoosh-fast-transition.mp3",
+  "nombre": "Cinematic whoosh fast transition",
+  "etiqueta": "cinematic",
+  "duracion_s": 1.33,
+  "impacto_s": 1.077,
+  "ganancia_db_sugerida": -8,
+  "fuente": "https://mixkit.co/free-sound-effects/cinematic/"
+ },
+ "hooks/cinematic-transition-swoosh-heartbeat-trailer": {
+  "archivo": "biblioteca/hooks/cinematic-transition-swoosh-heartbeat-trailer.mp3",
+  "nombre": "Cinematic transition swoosh heartbeat trailer",
+  "etiqueta": "cinematic",
+  "duracion_s": 8.11,
+  "impacto_s": 0.969,
+  "ganancia_db_sugerida": -8,
+  "fuente": "https://mixkit.co/free-sound-effects/cinematic/"
+ },
+ "hooks/epic-orchestra-transition": {
+  "archivo": "biblioteca/hooks/epic-orchestra-transition.mp3",
+  "nombre": "Epic orchestra transition",
+  "etiqueta": "cinematic",
+  "duracion_s": 7.12,
+  "impacto_s": 1.077,
+  "ganancia_db_sugerida": -8,
+  "fuente": "https://mixkit.co/free-sound-effects/cinematic/"
+ },
+ "hooks/cinematic-tunnel-reverb-woosh": {
+  "archivo": "biblioteca/hooks/cinematic-tunnel-reverb-woosh.mp3",
+  "nombre": "Cinematic tunnel reverb woosh",
+  "etiqueta": "cinematic",
+  "duracion_s": 6.75,
+  "impacto_s": 0.611,
+  "ganancia_db_sugerida": -8,
+  "fuente": "https://mixkit.co/free-sound-effects/cinematic/"
+ },
+ "hooks/cinematic-trailer-riser": {
+  "archivo": "biblioteca/hooks/cinematic-trailer-riser.mp3",
+  "nombre": "Cinematic trailer riser",
+  "etiqueta": "cinematic",
+  "duracion_s": 2.58,
+  "impacto_s": 2.49,
+  "ganancia_db_sugerida": -8,
+  "fuente": "https://mixkit.co/free-sound-effects/cinematic/"
+ },
+ "hooks/cinematic-laser-gun-thunder": {
+  "archivo": "biblioteca/hooks/cinematic-laser-gun-thunder.mp3",
+  "nombre": "Cinematic laser gun thunder",
+  "etiqueta": "cinematic",
+  "duracion_s": 4.81,
+  "impacto_s": 1.032,
+  "ganancia_db_sugerida": -8,
+  "fuente": "https://mixkit.co/free-sound-effects/cinematic/"
+ },
+ "hooks/movie-impact-intro-presentation": {
+  "archivo": "biblioteca/hooks/movie-impact-intro-presentation.mp3",
+  "nombre": "Movie impact intro presentation",
+  "etiqueta": "boom",
+  "duracion_s": 5.99,
+  "impacto_s": 1.26,
+  "ganancia_db_sugerida": -8,
+  "fuente": "https://mixkit.co/free-sound-effects/boom/"
+ },
+ "hooks/human-single-heart-beat": {
+  "archivo": "biblioteca/hooks/human-single-heart-beat.mp3",
+  "nombre": "Human single heart beat",
+  "etiqueta": "boom",
+  "duracion_s": 1.1,
+  "impacto_s": 0.038,
+  "ganancia_db_sugerida": -8,
+  "fuente": "https://mixkit.co/free-sound-effects/boom/"
+ },
+ "hooks/8-bit-explosion-gun": {
+  "archivo": "biblioteca/hooks/8-bit-explosion-gun.mp3",
+  "nombre": "8-bit explosion gun",
+  "etiqueta": "boom",
+  "duracion_s": 2.04,
+  "impacto_s": 0.018,
+  "ganancia_db_sugerida": -8,
+  "fuente": "https://mixkit.co/free-sound-effects/boom/"
+ },
+ "hooks/intro-news-sound": {
+  "archivo": "biblioteca/hooks/intro-news-sound.mp3",
+  "nombre": "Intro news sound",
+  "etiqueta": "boom",
+  "duracion_s": 3.49,
+  "impacto_s": 0.804,
+  "ganancia_db_sugerida": -8,
+  "fuente": "https://mixkit.co/free-sound-effects/boom/"
+ },
+ "hooks/tribal-ritual-drums": {
+  "archivo": "biblioteca/hooks/tribal-ritual-drums.mp3",
+  "nombre": "Tribal ritual drums",
+  "etiqueta": "boom",
+  "duracion_s": 20.87,
+  "impacto_s": 15.952,
+  "ganancia_db_sugerida": -8,
+  "fuente": "https://mixkit.co/free-sound-effects/boom/"
+ },
+ "hooks/arcade-game-explosion": {
+  "archivo": "biblioteca/hooks/arcade-game-explosion.mp3",
+  "nombre": "Arcade game explosion",
+  "etiqueta": "boom",
+  "duracion_s": 1.58,
+  "impacto_s": 0.085,
+  "ganancia_db_sugerida": -8,
+  "fuente": "https://mixkit.co/free-sound-effects/boom/"
+ },
+ "hooks/glitchy-cinematic-suspense-hit": {
+  "archivo": "biblioteca/hooks/glitchy-cinematic-suspense-hit.mp3",
+  "nombre": "Glitchy cinematic suspense hit",
+  "etiqueta": "swell",
+  "duracion_s": 13.33,
+  "impacto_s": 0.268,
+  "ganancia_db_sugerida": -8,
+  "fuente": "https://mixkit.co/free-sound-effects/swell/"
+ },
+ "hooks/heavenly-swell": {
+  "archivo": "biblioteca/hooks/heavenly-swell.mp3",
+  "nombre": "Heavenly swell",
+  "etiqueta": "swell",
+  "duracion_s": 14.93,
+  "impacto_s": 5.96,
+  "ganancia_db_sugerida": -8,
+  "fuente": "https://mixkit.co/free-sound-effects/swell/"
+ },
+ "hooks/trailer-cinematic-suspense-swell": {
+  "archivo": "biblioteca/hooks/trailer-cinematic-suspense-swell.mp3",
+  "nombre": "Trailer cinematic suspense swell",
+  "etiqueta": "swell",
+  "duracion_s": 12.44,
+  "impacto_s": 0.297,
+  "ganancia_db_sugerida": -8,
+  "fuente": "https://mixkit.co/free-sound-effects/swell/"
+ },
+ "hooks/tech-choir-cinematic-riser": {
+  "archivo": "biblioteca/hooks/tech-choir-cinematic-riser.mp3",
+  "nombre": "Tech choir cinematic riser",
+  "etiqueta": "swell",
+  "duracion_s": 17.57,
+  "impacto_s": 10.627,
+  "ganancia_db_sugerida": -8,
+  "fuente": "https://mixkit.co/free-sound-effects/swell/"
+ },
+ "hooks/angelic-swell-presentation": {
+  "archivo": "biblioteca/hooks/angelic-swell-presentation.mp3",
+  "nombre": "Angelic swell presentation",
+  "etiqueta": "swell",
+  "duracion_s": 8.84,
+  "impacto_s": 0.94,
+  "ganancia_db_sugerida": -8,
+  "fuente": "https://mixkit.co/free-sound-effects/swell/"
+ },
+ "hooks/cinematic-deep-drums-suspense-swell": {
+  "archivo": "biblioteca/hooks/cinematic-deep-drums-suspense-swell.mp3",
+  "nombre": "Cinematic deep drums suspense swell",
+  "etiqueta": "swell",
+  "duracion_s": 31.81,
+  "impacto_s": 12.489,
+  "ganancia_db_sugerida": -8,
+  "fuente": "https://mixkit.co/free-sound-effects/swell/"
+ },
+ "hooks/martial-arts-fast-punch": {
+  "archivo": "biblioteca/hooks/martial-arts-fast-punch.mp3",
+  "nombre": "Martial arts fast punch",
+  "etiqueta": "hit",
+  "duracion_s": 1.34,
+  "impacto_s": 0.266,
+  "ganancia_db_sugerida": -8,
+  "fuente": "https://mixkit.co/free-sound-effects/hit/"
+ },
+ "hooks/cinematic-glass-hit-suspense": {
+  "archivo": "biblioteca/hooks/cinematic-glass-hit-suspense.mp3",
+  "nombre": "Cinematic glass hit suspense",
+  "etiqueta": "hit",
+  "duracion_s": 4.72,
+  "impacto_s": 0.073,
+  "ganancia_db_sugerida": -8,
+  "fuente": "https://mixkit.co/free-sound-effects/hit/"
+ },
+ "hooks/deep-heartbeat-impact": {
+  "archivo": "biblioteca/hooks/deep-heartbeat-impact.mp3",
+  "nombre": "Deep heartbeat impact",
+  "etiqueta": "hit",
+  "duracion_s": 3.47,
+  "impacto_s": 0.088,
+  "ganancia_db_sugerida": -8,
+  "fuente": "https://mixkit.co/free-sound-effects/hit/"
+ },
+ "hooks/wood-hard-hit": {
+  "archivo": "biblioteca/hooks/wood-hard-hit.mp3",
+  "nombre": "Wood hard hit",
+  "etiqueta": "hit",
+  "duracion_s": 0.42,
+  "impacto_s": 0.068,
+  "ganancia_db_sugerida": -8,
+  "fuente": "https://mixkit.co/free-sound-effects/hit/"
+ },
+ "hooks/cartoon-dazzle-hit-and-birds": {
+  "archivo": "biblioteca/hooks/cartoon-dazzle-hit-and-birds.mp3",
+  "nombre": "Cartoon dazzle hit and birds",
+  "etiqueta": "hit",
+  "duracion_s": 1.87,
+  "impacto_s": 0.047,
+  "ganancia_db_sugerida": -8,
+  "fuente": "https://mixkit.co/free-sound-effects/hit/"
+ },
+ "hooks/hard-horror-hit-drum": {
+  "archivo": "biblioteca/hooks/hard-horror-hit-drum.mp3",
+  "nombre": "Hard horror hit drum",
+  "etiqueta": "hit",
+  "duracion_s": 4.14,
+  "impacto_s": 0.07,
+  "ganancia_db_sugerida": -8,
+  "fuente": "https://mixkit.co/free-sound-effects/hit/"
+ },
+ "hooks/mystwrious-bass-pulse": {
+  "archivo": "biblioteca/hooks/mystwrious-bass-pulse.mp3",
+  "nombre": "Mystwrious bass pulse",
+  "etiqueta": "bass",
+  "duracion_s": 16.56,
+  "impacto_s": 15.073,
+  "ganancia_db_sugerida": -8,
+  "fuente": "https://mixkit.co/free-sound-effects/bass/"
+ },
+ "hooks/wrong-answer-bass-buzzer": {
+  "archivo": "biblioteca/hooks/wrong-answer-bass-buzzer.mp3",
+  "nombre": "Wrong answer bass buzzer",
+  "etiqueta": "bass",
+  "duracion_s": 2.55,
+  "impacto_s": 0.031,
+  "ganancia_db_sugerida": -8,
+  "fuente": "https://mixkit.co/free-sound-effects/bass/"
+ },
+ "hooks/short-bass-hit": {
+  "archivo": "biblioteca/hooks/short-bass-hit.mp3",
+  "nombre": "Short bass hit",
+  "etiqueta": "bass",
+  "duracion_s": 1.1,
+  "impacto_s": 0.089,
+  "ganancia_db_sugerida": -8,
+  "fuente": "https://mixkit.co/free-sound-effects/bass/"
+ },
+ "hooks/suspense-mystery-bass": {
+  "archivo": "biblioteca/hooks/suspense-mystery-bass.mp3",
+  "nombre": "Suspense mystery bass",
+  "etiqueta": "bass",
+  "duracion_s": 65.58,
+  "impacto_s": 0.169,
+  "ganancia_db_sugerida": -8,
+  "fuente": "https://mixkit.co/free-sound-effects/bass/"
+ },
+ "hooks/pulsating-bass-transition": {
+  "archivo": "biblioteca/hooks/pulsating-bass-transition.mp3",
+  "nombre": "Pulsating bass transition",
+  "etiqueta": "bass",
+  "duracion_s": 7.29,
+  "impacto_s": 0.234,
+  "ganancia_db_sugerida": -8,
+  "fuente": "https://mixkit.co/free-sound-effects/bass/"
+ },
+ "hooks/bass-rumble-hum": {
+  "archivo": "biblioteca/hooks/bass-rumble-hum.mp3",
+  "nombre": "Bass rumble hum",
+  "etiqueta": "bass",
+  "duracion_s": 7.0,
+  "impacto_s": 0.822,
+  "ganancia_db_sugerida": -8,
+  "fuente": "https://mixkit.co/free-sound-effects/bass/"
+ },
+ "hooks/intro-transition": {
+  "archivo": "biblioteca/hooks/intro-transition.mp3",
+  "nombre": "Intro transition",
+  "etiqueta": "intro",
+  "duracion_s": 7.51,
+  "impacto_s": 1.714,
+  "ganancia_db_sugerida": -8,
+  "fuente": "https://mixkit.co/free-sound-effects/intro/"
+ },
+ "hooks/terror-sweep-of-darkness": {
+  "archivo": "biblioteca/hooks/terror-sweep-of-darkness.mp3",
+  "nombre": "Terror sweep of darkness",
+  "etiqueta": "intro",
+  "duracion_s": 7.95,
+  "impacto_s": 1.853,
+  "ganancia_db_sugerida": -8,
+  "fuente": "https://mixkit.co/free-sound-effects/intro/"
+ },
+ "hooks/short-space-stutter-intro-riser": {
+  "archivo": "biblioteca/hooks/short-space-stutter-intro-riser.mp3",
+  "nombre": "Short space stutter intro riser",
+  "etiqueta": "intro",
+  "duracion_s": 6.54,
+  "impacto_s": 5.942,
+  "ganancia_db_sugerida": -8,
+  "fuente": "https://mixkit.co/free-sound-effects/intro/"
+ },
+ "hooks/movie-logo-intro-impact": {
+  "archivo": "biblioteca/hooks/movie-logo-intro-impact.mp3",
+  "nombre": "Movie logo intro impact",
+  "etiqueta": "intro",
+  "duracion_s": 8.97,
+  "impacto_s": 4.835,
+  "ganancia_db_sugerida": -8,
+  "fuente": "https://mixkit.co/free-sound-effects/intro/"
+ },
+ "hooks/cinematic-transition-brass-hum": {
+  "archivo": "biblioteca/hooks/cinematic-transition-brass-hum.mp3",
+  "nombre": "Cinematic transition brass hum",
+  "etiqueta": "intro",
+  "duracion_s": 20.88,
+  "impacto_s": 17.361,
+  "ganancia_db_sugerida": -8,
+  "fuente": "https://mixkit.co/free-sound-effects/intro/"
+ },
+ "hooks/epic-blockbuster-movie-transition": {
+  "archivo": "biblioteca/hooks/epic-blockbuster-movie-transition.mp3",
+  "nombre": "Epic blockbuster movie transition",
+  "etiqueta": "intro",
+  "duracion_s": 4.75,
+  "impacto_s": 1.459,
+  "ganancia_db_sugerida": -8,
+  "fuente": "https://mixkit.co/free-sound-effects/intro/"
+ },
+ "transiciones/air-woosh": {
+  "archivo": "biblioteca/transiciones/air-woosh.mp3",
+  "nombre": "Air woosh",
+  "etiqueta": "whoosh",
+  "duracion_s": 2.32,
+  "impacto_s": 0.722,
+  "ganancia_db_sugerida": -8,
+  "fuente": "https://mixkit.co/free-sound-effects/whoosh/"
+ },
+ "transiciones/arrow-whoosh": {
+  "archivo": "biblioteca/transiciones/arrow-whoosh.mp3",
+  "nombre": "Arrow whoosh",
+  "etiqueta": "whoosh",
+  "duracion_s": 1.1,
+  "impacto_s": 0.288,
+  "ganancia_db_sugerida": -8,
+  "fuente": "https://mixkit.co/free-sound-effects/whoosh/"
+ },
+ "transiciones/fast-rocket-whoosh": {
+  "archivo": "biblioteca/transiciones/fast-rocket-whoosh.mp3",
+  "nombre": "Fast rocket whoosh",
+  "etiqueta": "whoosh",
+  "duracion_s": 4.75,
+  "impacto_s": 1.096,
+  "ganancia_db_sugerida": -8,
+  "fuente": "https://mixkit.co/free-sound-effects/whoosh/"
+ },
+ "transiciones/fast-whoosh-transition": {
+  "archivo": "biblioteca/transiciones/fast-whoosh-transition.mp3",
+  "nombre": "Fast whoosh transition",
+  "etiqueta": "whoosh",
+  "duracion_s": 1.76,
+  "impacto_s": 0.731,
+  "ganancia_db_sugerida": -8,
+  "fuente": "https://mixkit.co/free-sound-effects/whoosh/"
+ },
+ "transiciones/explainer-video-pops-whoosh-light-pop": {
+  "archivo": "biblioteca/transiciones/explainer-video-pops-whoosh-light-pop.mp3",
+  "nombre": "Explainer video pops whoosh light pop",
+  "etiqueta": "whoosh",
+  "duracion_s": 0.18,
+  "impacto_s": 0.033,
+  "ganancia_db_sugerida": -8,
+  "fuente": "https://mixkit.co/free-sound-effects/whoosh/"
+ },
+ "transiciones/magic-sparkle-whoosh": {
+  "archivo": "biblioteca/transiciones/magic-sparkle-whoosh.mp3",
+  "nombre": "Magic sparkle whoosh",
+  "etiqueta": "whoosh",
+  "duracion_s": 3.5,
+  "impacto_s": 0.825,
+  "ganancia_db_sugerida": -8,
+  "fuente": "https://mixkit.co/free-sound-effects/whoosh/"
+ },
+ "transiciones/fast-small-sweep-transition": {
+  "archivo": "biblioteca/transiciones/fast-small-sweep-transition.mp3",
+  "nombre": "Fast small sweep transition",
+  "etiqueta": "swoosh",
+  "duracion_s": 0.78,
+  "impacto_s": 0.285,
+  "ganancia_db_sugerida": -8,
+  "fuente": "https://mixkit.co/free-sound-effects/swoosh/"
+ },
+ "transiciones/transition-windy-swoosh": {
+  "archivo": "biblioteca/transiciones/transition-windy-swoosh.mp3",
+  "nombre": "Transition windy swoosh",
+  "etiqueta": "swoosh",
+  "duracion_s": 3.2,
+  "impacto_s": 0.991,
+  "ganancia_db_sugerida": -8,
+  "fuente": "https://mixkit.co/free-sound-effects/swoosh/"
+ },
+ "transiciones/vacuum-swoosh-transition": {
+  "archivo": "biblioteca/transiciones/vacuum-swoosh-transition.mp3",
+  "nombre": "Vacuum swoosh transition",
+  "etiqueta": "swoosh",
+  "duracion_s": 2.26,
+  "impacto_s": 1.56,
+  "ganancia_db_sugerida": -8,
+  "fuente": "https://mixkit.co/free-sound-effects/swoosh/"
+ },
+ "transiciones/cinematic-wind-swoosh": {
+  "archivo": "biblioteca/transiciones/cinematic-wind-swoosh.mp3",
+  "nombre": "Cinematic wind swoosh",
+  "etiqueta": "swoosh",
+  "duracion_s": 1.45,
+  "impacto_s": 0.395,
+  "ganancia_db_sugerida": -8,
+  "fuente": "https://mixkit.co/free-sound-effects/swoosh/"
+ },
+ "transiciones/short-wind-swoosh": {
+  "archivo": "biblioteca/transiciones/short-wind-swoosh.mp3",
+  "nombre": "Short wind swoosh",
+  "etiqueta": "swoosh",
+  "duracion_s": 1.39,
+  "impacto_s": 0.164,
+  "ganancia_db_sugerida": -8,
+  "fuente": "https://mixkit.co/free-sound-effects/swoosh/"
+ },
+ "transiciones/fast-transitions-swoosh": {
+  "archivo": "biblioteca/transiciones/fast-transitions-swoosh.mp3",
+  "nombre": "Fast transitions swoosh",
+  "etiqueta": "swoosh",
+  "duracion_s": 0.57,
+  "impacto_s": 0.108,
+  "ganancia_db_sugerida": -8,
+  "fuente": "https://mixkit.co/free-sound-effects/swoosh/"
+ },
+ "transiciones/air-zoom-vacuum": {
+  "archivo": "biblioteca/transiciones/air-zoom-vacuum.mp3",
+  "nombre": "Air zoom vacuum",
+  "etiqueta": "transition",
+  "duracion_s": 1.27,
+  "impacto_s": 0.44,
+  "ganancia_db_sugerida": -8,
+  "fuente": "https://mixkit.co/free-sound-effects/transition/"
+ },
+ "transiciones/cool-impact-movie-trailer": {
+  "archivo": "biblioteca/transiciones/cool-impact-movie-trailer.mp3",
+  "nombre": "Cool impact movie trailer",
+  "etiqueta": "transition",
+  "duracion_s": 6.0,
+  "impacto_s": 0.163,
+  "ganancia_db_sugerida": -8,
+  "fuente": "https://mixkit.co/free-sound-effects/transition/"
+ },
+ "transiciones/technology-transition-slide": {
+  "archivo": "biblioteca/transiciones/technology-transition-slide.mp3",
+  "nombre": "Technology transition slide",
+  "etiqueta": "transition",
+  "duracion_s": 1.65,
+  "impacto_s": 0.175,
+  "ganancia_db_sugerida": -8,
+  "fuente": "https://mixkit.co/free-sound-effects/transition/"
+ },
+ "transiciones/short-transition-sweep": {
+  "archivo": "biblioteca/transiciones/short-transition-sweep.mp3",
+  "nombre": "Short transition sweep",
+  "etiqueta": "transition",
+  "duracion_s": 0.61,
+  "impacto_s": 0.489,
+  "ganancia_db_sugerida": -8,
+  "fuente": "https://mixkit.co/free-sound-effects/transition/"
+ },
+ "transiciones/magic-transition-sweep-presentation": {
+  "archivo": "biblioteca/transiciones/magic-transition-sweep-presentation.mp3",
+  "nombre": "Magic transition sweep presentation",
+  "etiqueta": "transition",
+  "duracion_s": 3.94,
+  "impacto_s": 1.303,
+  "ganancia_db_sugerida": -8,
+  "fuente": "https://mixkit.co/free-sound-effects/transition/"
+ },
+ "transiciones/cinematic-riser-helicopter-engine": {
+  "archivo": "biblioteca/transiciones/cinematic-riser-helicopter-engine.mp3",
+  "nombre": "Cinematic riser helicopter engine",
+  "etiqueta": "transition",
+  "duracion_s": 13.43,
+  "impacto_s": 3.4,
+  "ganancia_db_sugerida": -8,
+  "fuente": "https://mixkit.co/free-sound-effects/transition/"
+ },
+ "transiciones/cinematic-horror-trailer-long-sweep": {
+  "archivo": "biblioteca/transiciones/cinematic-horror-trailer-long-sweep.mp3",
+  "nombre": "Cinematic horror trailer long sweep",
+  "etiqueta": "sweep",
+  "duracion_s": 8.59,
+  "impacto_s": 0.302,
+  "ganancia_db_sugerida": -8,
+  "fuente": "https://mixkit.co/free-sound-effects/sweep/"
+ },
+ "transiciones/fast-air-transition-sweep": {
+  "archivo": "biblioteca/transiciones/fast-air-transition-sweep.mp3",
+  "nombre": "Fast air transition sweep",
+  "etiqueta": "sweep",
+  "duracion_s": 0.95,
+  "impacto_s": 0.483,
+  "ganancia_db_sugerida": -8,
+  "fuente": "https://mixkit.co/free-sound-effects/sweep/"
+ },
+ "transiciones/fast-sci-fi-transition-sweep": {
+  "archivo": "biblioteca/transiciones/fast-sci-fi-transition-sweep.mp3",
+  "nombre": "Fast sci fi transition sweep",
+  "etiqueta": "sweep",
+  "duracion_s": 1.21,
+  "impacto_s": 0.359,
+  "ganancia_db_sugerida": -8,
+  "fuente": "https://mixkit.co/free-sound-effects/sweep/"
+ },
+ "transiciones/sweeping-sparkle-presentation-intro": {
+  "archivo": "biblioteca/transiciones/sweeping-sparkle-presentation-intro.mp3",
+  "nombre": "Sweeping sparkle presentation intro",
+  "etiqueta": "sweep",
+  "duracion_s": 3.0,
+  "impacto_s": 0.922,
+  "ganancia_db_sugerida": -8,
+  "fuente": "https://mixkit.co/free-sound-effects/sweep/"
+ },
+ "transiciones/relaxing-harp-sweep": {
+  "archivo": "biblioteca/transiciones/relaxing-harp-sweep.mp3",
+  "nombre": "Relaxing harp sweep",
+  "etiqueta": "sweep",
+  "duracion_s": 6.33,
+  "impacto_s": 1.945,
+  "ganancia_db_sugerida": -8,
+  "fuente": "https://mixkit.co/free-sound-effects/sweep/"
+ },
+ "transiciones/fast-sweep-transition": {
+  "archivo": "biblioteca/transiciones/fast-sweep-transition.mp3",
+  "nombre": "Fast sweep transition",
+  "etiqueta": "sweep",
+  "duracion_s": 1.0,
+  "impacto_s": 0.494,
+  "ganancia_db_sugerida": -8,
+  "fuente": "https://mixkit.co/free-sound-effects/sweep/"
+ },
+ "transiciones/air-in-a-hit": {
+  "archivo": "biblioteca/transiciones/air-in-a-hit.mp3",
+  "nombre": "Air in a hit",
+  "etiqueta": "swish",
+  "duracion_s": 1.28,
+  "impacto_s": 0.104,
+  "ganancia_db_sugerida": -8,
+  "fuente": "https://mixkit.co/free-sound-effects/swish/"
+ },
+ "transiciones/horror-swish": {
+  "archivo": "biblioteca/transiciones/horror-swish.mp3",
+  "nombre": "Horror swish",
+  "etiqueta": "swish",
+  "duracion_s": 2.84,
+  "impacto_s": 1.04,
+  "ganancia_db_sugerida": -8,
+  "fuente": "https://mixkit.co/free-sound-effects/swish/"
+ },
+ "transiciones/sword-blade-swish": {
+  "archivo": "biblioteca/transiciones/sword-blade-swish.mp3",
+  "nombre": "Sword blade swish",
+  "etiqueta": "swish",
+  "duracion_s": 1.66,
+  "impacto_s": 0.524,
+  "ganancia_db_sugerida": -8,
+  "fuente": "https://mixkit.co/free-sound-effects/swish/"
+ },
+ "transiciones/sand-swish": {
+  "archivo": "biblioteca/transiciones/sand-swish.mp3",
+  "nombre": "Sand swish",
+  "etiqueta": "swish",
+  "duracion_s": 1.91,
+  "impacto_s": 0.266,
+  "ganancia_db_sugerida": -8,
+  "fuente": "https://mixkit.co/free-sound-effects/swish/"
+ },
+ "transiciones/swift-sword-strike": {
+  "archivo": "biblioteca/transiciones/swift-sword-strike.mp3",
+  "nombre": "Swift Sword Strike",
+  "etiqueta": "swish",
+  "duracion_s": 1.25,
+  "impacto_s": 0.131,
+  "ganancia_db_sugerida": -8,
+  "fuente": "https://mixkit.co/free-sound-effects/swish/"
+ },
+ "transiciones/fairy-spell-swish": {
+  "archivo": "biblioteca/transiciones/fairy-spell-swish.mp3",
+  "nombre": "Fairy spell swish",
+  "etiqueta": "swish",
+  "duracion_s": 2.28,
+  "impacto_s": 0.415,
+  "ganancia_db_sugerida": -8,
+  "fuente": "https://mixkit.co/free-sound-effects/swish/"
+ },
+ "transiciones/ghostly-whoosh-passing": {
+  "archivo": "biblioteca/transiciones/ghostly-whoosh-passing.mp3",
+  "nombre": "Ghostly whoosh passing",
+  "etiqueta": "zoom",
+  "duracion_s": 3.76,
+  "impacto_s": 2.305,
+  "ganancia_db_sugerida": -8,
+  "fuente": "https://mixkit.co/free-sound-effects/zoom/"
+ },
+ "transiciones/fast-swipe-zoom": {
+  "archivo": "biblioteca/transiciones/fast-swipe-zoom.mp3",
+  "nombre": "Fast swipe zoom",
+  "etiqueta": "zoom",
+  "duracion_s": 1.06,
+  "impacto_s": 0.238,
+  "ganancia_db_sugerida": -8,
+  "fuente": "https://mixkit.co/free-sound-effects/zoom/"
+ },
+ "transiciones/ui-zoom-out": {
+  "archivo": "biblioteca/transiciones/ui-zoom-out.mp3",
+  "nombre": "UI zoom out",
+  "etiqueta": "zoom",
+  "duracion_s": 1.15,
+  "impacto_s": 0.272,
+  "ganancia_db_sugerida": -8,
+  "fuente": "https://mixkit.co/free-sound-effects/zoom/"
+ },
+ "transiciones/quick-zoom-impact": {
+  "archivo": "biblioteca/transiciones/quick-zoom-impact.mp3",
+  "nombre": "Quick zoom impact",
+  "etiqueta": "zoom",
+  "duracion_s": 1.22,
+  "impacto_s": 0.521,
+  "ganancia_db_sugerida": -8,
+  "fuente": "https://mixkit.co/free-sound-effects/zoom/"
+ },
+ "transiciones/fast-air-zoom": {
+  "archivo": "biblioteca/transiciones/fast-air-zoom.mp3",
+  "nombre": "Fast air zoom",
+  "etiqueta": "zoom",
+  "duracion_s": 1.28,
+  "impacto_s": 0.469,
+  "ganancia_db_sugerida": -8,
+  "fuente": "https://mixkit.co/free-sound-effects/zoom/"
+ },
+ "transiciones/ui-zoom-in-long-sound": {
+  "archivo": "biblioteca/transiciones/ui-zoom-in-long-sound.mp3",
+  "nombre": "Ui zoom in, long sound",
+  "etiqueta": "zoom",
+  "duracion_s": 1.15,
+  "impacto_s": 0.307,
+  "ganancia_db_sugerida": -8,
+  "fuente": "https://mixkit.co/free-sound-effects/zoom/"
+ },
+ "historia/trailer-screaming-people-annihilation": {
+  "archivo": "biblioteca/historia/trailer-screaming-people-annihilation.mp3",
+  "nombre": "Trailer screaming people annihilation",
+  "etiqueta": "battle",
+  "duracion_s": 10.19,
+  "impacto_s": 0.548,
+  "ganancia_db_sugerida": -8,
+  "fuente": "https://mixkit.co/free-sound-effects/battle/"
+ },
+ "historia/drums-of-war-call": {
+  "archivo": "biblioteca/historia/drums-of-war-call.mp3",
+  "nombre": "Drums of war call",
+  "etiqueta": "battle",
+  "duracion_s": 4.1,
+  "impacto_s": 1.257,
+  "ganancia_db_sugerida": -8,
+  "fuente": "https://mixkit.co/free-sound-effects/battle/"
+ },
+ "historia/body-cutting-impact": {
+  "archivo": "biblioteca/historia/body-cutting-impact.mp3",
+  "nombre": "Body cutting impact",
+  "etiqueta": "battle",
+  "duracion_s": 4.46,
+  "impacto_s": 3.369,
+  "ganancia_db_sugerida": -8,
+  "fuente": "https://mixkit.co/free-sound-effects/battle/"
+ },
+ "historia/masive-explosion-in-battle": {
+  "archivo": "biblioteca/historia/masive-explosion-in-battle.mp3",
+  "nombre": "Masive explosion in battle",
+  "etiqueta": "battle",
+  "duracion_s": 8.5,
+  "impacto_s": 0.038,
+  "ganancia_db_sugerida": -8,
+  "fuente": "https://mixkit.co/free-sound-effects/battle/"
+ },
+ "historia/battle-man-scream": {
+  "archivo": "biblioteca/historia/battle-man-scream.mp3",
+  "nombre": "Battle man scream",
+  "etiqueta": "battle",
+  "duracion_s": 1.8,
+  "impacto_s": 0.397,
+  "ganancia_db_sugerida": -8,
+  "fuente": "https://mixkit.co/free-sound-effects/battle/"
+ },
+ "historia/8-bit-game-shots": {
+  "archivo": "biblioteca/historia/8-bit-game-shots.mp3",
+  "nombre": "8-bit game shots",
+  "etiqueta": "battle",
+  "duracion_s": 2.13,
+  "impacto_s": 0.028,
+  "ganancia_db_sugerida": -8,
+  "fuente": "https://mixkit.co/free-sound-effects/battle/"
+ },
+ "historia/explosion-hit": {
+  "archivo": "biblioteca/historia/explosion-hit.mp3",
+  "nombre": "Explosion hit",
+  "etiqueta": "war",
+  "duracion_s": 8.35,
+  "impacto_s": 1.223,
+  "ganancia_db_sugerida": -8,
+  "fuente": "https://mixkit.co/free-sound-effects/war/"
+ },
+ "historia/bomb-drop-impact": {
+  "archivo": "biblioteca/historia/bomb-drop-impact.mp3",
+  "nombre": "Bomb drop impact",
+  "etiqueta": "war",
+  "duracion_s": 7.96,
+  "impacto_s": 2.033,
+  "ganancia_db_sugerida": -8,
+  "fuente": "https://mixkit.co/free-sound-effects/war/"
+ },
+ "historia/futuristic-space-war-percussion": {
+  "archivo": "biblioteca/historia/futuristic-space-war-percussion.mp3",
+  "nombre": "Futuristic space war percussion",
+  "etiqueta": "war",
+  "duracion_s": 39.99,
+  "impacto_s": 7.04,
+  "ganancia_db_sugerida": -8,
+  "fuente": "https://mixkit.co/free-sound-effects/war/"
+ },
+ "historia/big-army-crowd-marching": {
+  "archivo": "biblioteca/historia/big-army-crowd-marching.mp3",
+  "nombre": "Big army crowd marching",
+  "etiqueta": "war",
+  "duracion_s": 8.65,
+  "impacto_s": 2.513,
+  "ganancia_db_sugerida": -8,
+  "fuente": "https://mixkit.co/free-sound-effects/war/"
+ },
+ "historia/explosion-in-battle": {
+  "archivo": "biblioteca/historia/explosion-in-battle.mp3",
+  "nombre": "Explosion in battle",
+  "etiqueta": "war",
+  "duracion_s": 5.94,
+  "impacto_s": 0.368,
+  "ganancia_db_sugerida": -8,
+  "fuente": "https://mixkit.co/free-sound-effects/war/"
+ },
+ "historia/war-horn-ambience": {
+  "archivo": "biblioteca/historia/war-horn-ambience.mp3",
+  "nombre": "War horn ambience",
+  "etiqueta": "war",
+  "duracion_s": 8.92,
+  "impacto_s": 0.912,
+  "ganancia_db_sugerida": -8,
+  "fuente": "https://mixkit.co/free-sound-effects/war/"
+ },
+ "historia/sword-strikes-armor": {
+  "archivo": "biblioteca/historia/sword-strikes-armor.mp3",
+  "nombre": "Sword strikes armor",
+  "etiqueta": "medieval-battle",
+  "duracion_s": 1.05,
+  "impacto_s": 0.142,
+  "ganancia_db_sugerida": -8,
+  "fuente": "https://mixkit.co/free-sound-effects/medieval-battle/"
+ },
+ "historia/human-fighter-pain-scream": {
+  "archivo": "biblioteca/historia/human-fighter-pain-scream.mp3",
+  "nombre": "Human fighter pain scream",
+  "etiqueta": "medieval-battle",
+  "duracion_s": 1.07,
+  "impacto_s": 0.327,
+  "ganancia_db_sugerida": -8,
+  "fuente": "https://mixkit.co/free-sound-effects/medieval-battle/"
+ },
+ "historia/medieval-metal-sword-blade": {
+  "archivo": "biblioteca/historia/medieval-metal-sword-blade.mp3",
+  "nombre": "Medieval metal sword blade",
+  "etiqueta": "medieval-battle",
+  "duracion_s": 1.56,
+  "impacto_s": 0.303,
+  "ganancia_db_sugerida": -8,
+  "fuente": "https://mixkit.co/free-sound-effects/medieval-battle/"
+ },
+ "historia/arrow-shot-through-air": {
+  "archivo": "biblioteca/historia/arrow-shot-through-air.mp3",
+  "nombre": "Arrow shot through air",
+  "etiqueta": "medieval-battle",
+  "duracion_s": 1.04,
+  "impacto_s": 0.14,
+  "ganancia_db_sugerida": -8,
+  "fuente": "https://mixkit.co/free-sound-effects/medieval-battle/"
+ },
+ "historia/sword-blade-attack-in-medieval-battle": {
+  "archivo": "biblioteca/historia/sword-blade-attack-in-medieval-battle.mp3",
+  "nombre": "Sword blade attack in medieval battle",
+  "etiqueta": "medieval-battle",
+  "duracion_s": 1.11,
+  "impacto_s": 0.092,
+  "ganancia_db_sugerida": -8,
+  "fuente": "https://mixkit.co/free-sound-effects/medieval-battle/"
+ },
+ "historia/sword-slashes-in-battle": {
+  "archivo": "biblioteca/historia/sword-slashes-in-battle.mp3",
+  "nombre": "Sword slashes in battle",
+  "etiqueta": "medieval-battle",
+  "duracion_s": 1.16,
+  "impacto_s": 0.067,
+  "ganancia_db_sugerida": -8,
+  "fuente": "https://mixkit.co/free-sound-effects/medieval-battle/"
+ },
+ "historia/metal-hit-woosh": {
+  "archivo": "biblioteca/historia/metal-hit-woosh.mp3",
+  "nombre": "Metal hit woosh",
+  "etiqueta": "sword",
+  "duracion_s": 0.48,
+  "impacto_s": 0.103,
+  "ganancia_db_sugerida": -8,
+  "fuente": "https://mixkit.co/free-sound-effects/sword/"
+ },
+ "historia/dagger-woosh": {
+  "archivo": "biblioteca/historia/dagger-woosh.mp3",
+  "nombre": "Dagger woosh",
+  "etiqueta": "sword",
+  "duracion_s": 0.28,
+  "impacto_s": 0.172,
+  "ganancia_db_sugerida": -8,
+  "fuente": "https://mixkit.co/free-sound-effects/sword/"
+ },
+ "historia/fast-sword-whoosh": {
+  "archivo": "biblioteca/historia/fast-sword-whoosh.mp3",
+  "nombre": "Fast sword whoosh",
+  "etiqueta": "sword",
+  "duracion_s": 1.12,
+  "impacto_s": 0.039,
+  "ganancia_db_sugerida": -8,
+  "fuente": "https://mixkit.co/free-sound-effects/sword/"
+ },
+ "historia/sword-slash-swoosh": {
+  "archivo": "biblioteca/historia/sword-slash-swoosh.mp3",
+  "nombre": "Sword slash swoosh",
+  "etiqueta": "sword",
+  "duracion_s": 2.05,
+  "impacto_s": 0.328,
+  "ganancia_db_sugerida": -8,
+  "fuente": "https://mixkit.co/free-sound-effects/sword/"
+ },
+ "historia/metallic-sword-strike": {
+  "archivo": "biblioteca/historia/metallic-sword-strike.mp3",
+  "nombre": "Metallic sword strike",
+  "etiqueta": "sword",
+  "duracion_s": 1.33,
+  "impacto_s": 0.057,
+  "ganancia_db_sugerida": -8,
+  "fuente": "https://mixkit.co/free-sound-effects/sword/"
+ },
+ "historia/gore-video-game-blood-splash": {
+  "archivo": "biblioteca/historia/gore-video-game-blood-splash.mp3",
+  "nombre": "Gore video game blood splash",
+  "etiqueta": "sword",
+  "duracion_s": 1.5,
+  "impacto_s": 0.192,
+  "ganancia_db_sugerida": -8,
+  "fuente": "https://mixkit.co/free-sound-effects/sword/"
+ },
+ "historia/scared-horse-neighing": {
+  "archivo": "biblioteca/historia/scared-horse-neighing.mp3",
+  "nombre": "Scared horse neighing",
+  "etiqueta": "horse",
+  "duracion_s": 2.48,
+  "impacto_s": 1.233,
+  "ganancia_db_sugerida": -8,
+  "fuente": "https://mixkit.co/free-sound-effects/horse/"
+ },
+ "historia/intense-horse-stallion-neigh": {
+  "archivo": "biblioteca/historia/intense-horse-stallion-neigh.mp3",
+  "nombre": "Intense horse stallion neigh",
+  "etiqueta": "horse",
+  "duracion_s": 2.52,
+  "impacto_s": 1.374,
+  "ganancia_db_sugerida": -8,
+  "fuente": "https://mixkit.co/free-sound-effects/horse/"
+ },
+ "historia/horse-fast-gallop-on-a-concrete-surface": {
+  "archivo": "biblioteca/historia/horse-fast-gallop-on-a-concrete-surface.mp3",
+  "nombre": "Horse fast gallop on a concrete surface",
+  "etiqueta": "horse",
+  "duracion_s": 12.97,
+  "impacto_s": 1.65,
+  "ganancia_db_sugerida": -8,
+  "fuente": "https://mixkit.co/free-sound-effects/horse/"
+ },
+ "historia/farm-animals-in-the-morning": {
+  "archivo": "biblioteca/historia/farm-animals-in-the-morning.mp3",
+  "nombre": "Farm animals in the morning",
+  "etiqueta": "horse",
+  "duracion_s": 44.36,
+  "impacto_s": 12.232,
+  "ganancia_db_sugerida": -8,
+  "fuente": "https://mixkit.co/free-sound-effects/horse/"
+ },
+ "historia/horse-fast-gallop-in-the-dirt": {
+  "archivo": "biblioteca/historia/horse-fast-gallop-in-the-dirt.mp3",
+  "nombre": "Horse fast gallop in the dirt",
+  "etiqueta": "horse",
+  "duracion_s": 13.17,
+  "impacto_s": 10.315,
+  "ganancia_db_sugerida": -8,
+  "fuente": "https://mixkit.co/free-sound-effects/horse/"
+ },
+ "historia/stallion-horse-neigh": {
+  "archivo": "biblioteca/historia/stallion-horse-neigh.mp3",
+  "nombre": "Stallion horse neigh",
+  "etiqueta": "horse",
+  "duracion_s": 2.99,
+  "impacto_s": 1.802,
+  "ganancia_db_sugerida": -8,
+  "fuente": "https://mixkit.co/free-sound-effects/horse/"
+ },
+ "historia/crowd-laugh": {
+  "archivo": "biblioteca/historia/crowd-laugh.mp3",
+  "nombre": "Crowd laugh",
+  "etiqueta": "crowd",
+  "duracion_s": 4.12,
+  "impacto_s": 0.819,
+  "ganancia_db_sugerida": -8,
+  "fuente": "https://mixkit.co/free-sound-effects/crowd/"
+ },
+ "historia/ending-show-audience-clapping": {
+  "archivo": "biblioteca/historia/ending-show-audience-clapping.mp3",
+  "nombre": "Ending show audience clapping",
+  "etiqueta": "crowd",
+  "duracion_s": 24.48,
+  "impacto_s": 3.505,
+  "ganancia_db_sugerida": -8,
+  "fuente": "https://mixkit.co/free-sound-effects/crowd/"
+ },
+ "historia/laughing-teenagers": {
+  "archivo": "biblioteca/historia/laughing-teenagers.mp3",
+  "nombre": "Laughing teenagers",
+  "etiqueta": "crowd",
+  "duracion_s": 11.79,
+  "impacto_s": 7.751,
+  "ganancia_db_sugerida": -8,
+  "fuente": "https://mixkit.co/free-sound-effects/crowd/"
+ },
+ "historia/conference-audience-clapping-strongly": {
+  "archivo": "biblioteca/historia/conference-audience-clapping-strongly.mp3",
+  "nombre": "Conference audience clapping strongly",
+  "etiqueta": "crowd",
+  "duracion_s": 8.6,
+  "impacto_s": 1.835,
+  "ganancia_db_sugerida": -8,
+  "fuente": "https://mixkit.co/free-sound-effects/crowd/"
+ },
+ "historia/restaurant-crowd-talking-ambience": {
+  "archivo": "biblioteca/historia/restaurant-crowd-talking-ambience.mp3",
+  "nombre": "Restaurant crowd talking ambience",
+  "etiqueta": "crowd",
+  "duracion_s": 120.0,
+  "impacto_s": 74.311,
+  "ganancia_db_sugerida": -8,
+  "fuente": "https://mixkit.co/free-sound-effects/crowd/"
+ },
+ "historia/huge-crowd-cheering-victory": {
+  "archivo": "biblioteca/historia/huge-crowd-cheering-victory.mp3",
+  "nombre": "Huge crowd cheering victory",
+  "etiqueta": "crowd",
+  "duracion_s": 10.06,
+  "impacto_s": 1.617,
+  "ganancia_db_sugerida": -8,
+  "fuente": "https://mixkit.co/free-sound-effects/crowd/"
+ },
+ "historia/church-bell-calling": {
+  "archivo": "biblioteca/historia/church-bell-calling.mp3",
+  "nombre": "Church bell calling",
+  "etiqueta": "church-bell",
+  "duracion_s": 27.97,
+  "impacto_s": 3.329,
+  "ganancia_db_sugerida": -8,
+  "fuente": "https://mixkit.co/free-sound-effects/church-bell/"
+ },
+ "historia/relaxing-bell-chime": {
+  "archivo": "biblioteca/historia/relaxing-bell-chime.mp3",
+  "nombre": "Relaxing bell chime",
+  "etiqueta": "church-bell",
+  "duracion_s": 1.68,
+  "impacto_s": 0.081,
+  "ganancia_db_sugerida": -8,
+  "fuente": "https://mixkit.co/free-sound-effects/church-bell/"
+ },
+ "historia/church-bell-loop": {
+  "archivo": "biblioteca/historia/church-bell-loop.mp3",
+  "nombre": "Church bell loop",
+  "etiqueta": "church-bell",
+  "duracion_s": 12.0,
+  "impacto_s": 0.432,
+  "ganancia_db_sugerida": -8,
+  "fuente": "https://mixkit.co/free-sound-effects/church-bell/"
+ },
+ "historia/cinematic-church-bell-hit": {
+  "archivo": "biblioteca/historia/cinematic-church-bell-hit.mp3",
+  "nombre": "Cinematic church bell hit",
+  "etiqueta": "church-bell",
+  "duracion_s": 7.24,
+  "impacto_s": 0.738,
+  "ganancia_db_sugerida": -8,
+  "fuente": "https://mixkit.co/free-sound-effects/church-bell/"
+ },
+ "historia/clock-tower-or-cathedral-bell": {
+  "archivo": "biblioteca/historia/clock-tower-or-cathedral-bell.mp3",
+  "nombre": "Clock tower or cathedral bell",
+  "etiqueta": "church-bell",
+  "duracion_s": 28.88,
+  "impacto_s": 15.263,
+  "ganancia_db_sugerida": -8,
+  "fuente": "https://mixkit.co/free-sound-effects/church-bell/"
+ },
+ "historia/low-church-bell-calling": {
+  "archivo": "biblioteca/historia/low-church-bell-calling.mp3",
+  "nombre": "Low church bell calling",
+  "etiqueta": "church-bell",
+  "duracion_s": 101.65,
+  "impacto_s": 31.613,
+  "ganancia_db_sugerida": -8,
+  "fuente": "https://mixkit.co/free-sound-effects/church-bell/"
+ },
+ "naturaleza/light-rain-loop": {
+  "archivo": "biblioteca/naturaleza/light-rain-loop.mp3",
+  "nombre": "Light rain loop",
+  "etiqueta": "rain",
+  "duracion_s": 15.0,
+  "impacto_s": 11.336,
+  "ganancia_db_sugerida": -8,
+  "fuente": "https://mixkit.co/free-sound-effects/rain/"
+ },
+ "naturaleza/morning-birds": {
+  "archivo": "biblioteca/naturaleza/morning-birds.mp3",
+  "nombre": "Morning birds",
+  "etiqueta": "ambience",
+  "duracion_s": 209.72,
+  "impacto_s": 127.035,
+  "ganancia_db_sugerida": -8,
+  "fuente": "https://mixkit.co/free-sound-effects/ambience/"
+ },
+ "naturaleza/crickets-and-insects-in-the-wild-ambience": {
+  "archivo": "biblioteca/naturaleza/crickets-and-insects-in-the-wild-ambience.mp3",
+  "nombre": "Crickets and insects in the wild ambience",
+  "etiqueta": "ambience",
+  "duracion_s": 26.01,
+  "impacto_s": 15.41,
+  "ganancia_db_sugerida": -8,
+  "fuente": "https://mixkit.co/free-sound-effects/ambience/"
+ },
+ "naturaleza/forest-birds-singing": {
+  "archivo": "biblioteca/naturaleza/forest-birds-singing.mp3",
+  "nombre": "Forest birds singing",
+  "etiqueta": "ambience",
+  "duracion_s": 2.22,
+  "impacto_s": 0.805,
+  "ganancia_db_sugerida": -8,
+  "fuente": "https://mixkit.co/free-sound-effects/ambience/"
+ },
+ "naturaleza/cinematic-mystery-heartbeat-transition": {
+  "archivo": "biblioteca/naturaleza/cinematic-mystery-heartbeat-transition.mp3",
+  "nombre": "Cinematic mystery heartbeat transition",
+  "etiqueta": "ambience",
+  "duracion_s": 67.27,
+  "impacto_s": 30.939,
+  "ganancia_db_sugerida": -8,
+  "fuente": "https://mixkit.co/free-sound-effects/ambience/"
+ },
+ "naturaleza/forest-birds-ambience": {
+  "archivo": "biblioteca/naturaleza/forest-birds-ambience.mp3",
+  "nombre": "Forest birds ambience",
+  "etiqueta": "ambience",
+  "duracion_s": 151.56,
+  "impacto_s": 63.115,
+  "ganancia_db_sugerida": -8,
+  "fuente": "https://mixkit.co/free-sound-effects/ambience/"
+ },
+ "naturaleza/wolves-at-scary-forest": {
+  "archivo": "biblioteca/naturaleza/wolves-at-scary-forest.mp3",
+  "nombre": "Wolves at scary forest",
+  "etiqueta": "nature",
+  "duracion_s": 9.74,
+  "impacto_s": 2.922,
+  "ganancia_db_sugerida": -8,
+  "fuente": "https://mixkit.co/free-sound-effects/nature/"
+ },
+ "naturaleza/rain-and-thunder-storm": {
+  "archivo": "biblioteca/naturaleza/rain-and-thunder-storm.mp3",
+  "nombre": "Rain and thunder storm",
+  "etiqueta": "nature",
+  "duracion_s": 29.0,
+  "impacto_s": 1.944,
+  "ganancia_db_sugerida": -8,
+  "fuente": "https://mixkit.co/free-sound-effects/nature/"
+ },
+ "naturaleza/wind-blowing-ambience": {
+  "archivo": "biblioteca/naturaleza/wind-blowing-ambience.mp3",
+  "nombre": "Wind blowing ambience",
+  "etiqueta": "nature",
+  "duracion_s": 61.84,
+  "impacto_s": 8.065,
+  "ganancia_db_sugerida": -8,
+  "fuente": "https://mixkit.co/free-sound-effects/nature/"
+ },
+ "naturaleza/calm-thunderstorm-in-the-jungle": {
+  "archivo": "biblioteca/naturaleza/calm-thunderstorm-in-the-jungle.mp3",
+  "nombre": "Calm thunderstorm in the jungle",
+  "etiqueta": "nature",
+  "duracion_s": 49.0,
+  "impacto_s": 0.85,
+  "ganancia_db_sugerida": -8,
+  "fuente": "https://mixkit.co/free-sound-effects/nature/"
+ },
+ "naturaleza/birds-chirping-near-the-river": {
+  "archivo": "biblioteca/naturaleza/birds-chirping-near-the-river.mp3",
+  "nombre": "Birds chirping near the river",
+  "etiqueta": "nature",
+  "duracion_s": 90.14,
+  "impacto_s": 66.473,
+  "ganancia_db_sugerida": -8,
+  "fuente": "https://mixkit.co/free-sound-effects/nature/"
+ },
+ "naturaleza/thunder-rumble-during-a-storm": {
+  "archivo": "biblioteca/naturaleza/thunder-rumble-during-a-storm.mp3",
+  "nombre": "Thunder rumble during a storm",
+  "etiqueta": "nature",
+  "duracion_s": 51.75,
+  "impacto_s": 32.061,
+  "ganancia_db_sugerida": -8,
+  "fuente": "https://mixkit.co/free-sound-effects/nature/"
+ },
+ "naturaleza/wind-in-the-top-of-the-mountain": {
+  "archivo": "biblioteca/naturaleza/wind-in-the-top-of-the-mountain.mp3",
+  "nombre": "Wind in the top of the mountain",
+  "etiqueta": "wind",
+  "duracion_s": 31.8,
+  "impacto_s": 17.656,
+  "ganancia_db_sugerida": -8,
+  "fuente": "https://mixkit.co/free-sound-effects/wind/"
+ },
+ "naturaleza/scary-graveyard-wind": {
+  "archivo": "biblioteca/naturaleza/scary-graveyard-wind.mp3",
+  "nombre": "Scary graveyard wind",
+  "etiqueta": "wind",
+  "duracion_s": 12.35,
+  "impacto_s": 1.292,
+  "ganancia_db_sugerida": -8,
+  "fuente": "https://mixkit.co/free-sound-effects/wind/"
+ },
+ "naturaleza/deep-cinematic-wind-hum": {
+  "archivo": "biblioteca/naturaleza/deep-cinematic-wind-hum.mp3",
+  "nombre": "Deep cinematic wind hum",
+  "etiqueta": "wind",
+  "duracion_s": 54.0,
+  "impacto_s": 36.64,
+  "ganancia_db_sugerida": -8,
+  "fuente": "https://mixkit.co/free-sound-effects/wind/"
+ },
+ "naturaleza/woosh-wind": {
+  "archivo": "biblioteca/naturaleza/woosh-wind.mp3",
+  "nombre": "Woosh wind",
+  "etiqueta": "wind",
+  "duracion_s": 3.94,
+  "impacto_s": 1.596,
+  "ganancia_db_sugerida": -8,
+  "fuente": "https://mixkit.co/free-sound-effects/wind/"
+ },
+ "naturaleza/windy-humming-forest-with-birds": {
+  "archivo": "biblioteca/naturaleza/windy-humming-forest-with-birds.mp3",
+  "nombre": "Windy humming forest with birds",
+  "etiqueta": "wind",
+  "duracion_s": 125.35,
+  "impacto_s": 58.109,
+  "ganancia_db_sugerida": -8,
+  "fuente": "https://mixkit.co/free-sound-effects/wind/"
+ },
+ "naturaleza/ending-wind-swoosh": {
+  "archivo": "biblioteca/naturaleza/ending-wind-swoosh.mp3",
+  "nombre": "Ending wind swoosh",
+  "etiqueta": "wind",
+  "duracion_s": 2.39,
+  "impacto_s": 0.929,
+  "ganancia_db_sugerida": -8,
+  "fuente": "https://mixkit.co/free-sound-effects/wind/"
+ },
+ "naturaleza/heavy-rain-drops": {
+  "archivo": "biblioteca/naturaleza/heavy-rain-drops.mp3",
+  "nombre": "Heavy rain drops",
+  "etiqueta": "rain",
+  "duracion_s": 12.17,
+  "impacto_s": 5.776,
+  "ganancia_db_sugerida": -8,
+  "fuente": "https://mixkit.co/free-sound-effects/rain/"
+ },
+ "naturaleza/long-rain-ambience": {
+  "archivo": "biblioteca/naturaleza/long-rain-ambience.mp3",
+  "nombre": "Long rain ambience",
+  "etiqueta": "rain",
+  "duracion_s": 335.2,
+  "impacto_s": 327.73,
+  "ganancia_db_sugerida": -8,
+  "fuente": "https://mixkit.co/free-sound-effects/rain/"
+ },
+ "naturaleza/thunder-with-rain-in-the-storm": {
+  "archivo": "biblioteca/naturaleza/thunder-with-rain-in-the-storm.mp3",
+  "nombre": "Thunder with rain in the storm",
+  "etiqueta": "rain",
+  "duracion_s": 20.28,
+  "impacto_s": 2.005,
+  "ganancia_db_sugerida": -8,
+  "fuente": "https://mixkit.co/free-sound-effects/rain/"
+ },
+ "naturaleza/rain-long-loop": {
+  "archivo": "biblioteca/naturaleza/rain-long-loop.mp3",
+  "nombre": "Rain long loop",
+  "etiqueta": "rain",
+  "duracion_s": 57.07,
+  "impacto_s": 42.917,
+  "ganancia_db_sugerida": -8,
+  "fuente": "https://mixkit.co/free-sound-effects/rain/"
+ },
+ "naturaleza/light-rain-looping": {
+  "archivo": "biblioteca/naturaleza/light-rain-looping.mp3",
+  "nombre": "Light rain looping",
+  "etiqueta": "rain",
+  "duracion_s": 96.0,
+  "impacto_s": 49.617,
+  "ganancia_db_sugerida": -8,
+  "fuente": "https://mixkit.co/free-sound-effects/rain/"
+ },
+ "naturaleza/little-birds-singing-in-the-trees": {
+  "archivo": "biblioteca/naturaleza/little-birds-singing-in-the-trees.mp3",
+  "nombre": "Little birds singing in the trees",
+  "etiqueta": "forest",
+  "duracion_s": 8.33,
+  "impacto_s": 2.804,
+  "ganancia_db_sugerida": -8,
+  "fuente": "https://mixkit.co/free-sound-effects/forest/"
+ },
+ "naturaleza/running-through-the-forest": {
+  "archivo": "biblioteca/naturaleza/running-through-the-forest.mp3",
+  "nombre": "Running through the forest",
+  "etiqueta": "forest",
+  "duracion_s": 14.64,
+  "impacto_s": 3.473,
+  "ganancia_db_sugerida": -8,
+  "fuente": "https://mixkit.co/free-sound-effects/forest/"
+ },
+ "naturaleza/night-forest-with-insects": {
+  "archivo": "biblioteca/naturaleza/night-forest-with-insects.mp3",
+  "nombre": "Night forest with insects",
+  "etiqueta": "forest",
+  "duracion_s": 84.0,
+  "impacto_s": 4.216,
+  "ganancia_db_sugerida": -8,
+  "fuente": "https://mixkit.co/free-sound-effects/forest/"
+ },
+ "naturaleza/footsteps-in-the-forest-ground": {
+  "archivo": "biblioteca/naturaleza/footsteps-in-the-forest-ground.mp3",
+  "nombre": "Footsteps in the forest ground",
+  "etiqueta": "forest",
+  "duracion_s": 34.2,
+  "impacto_s": 6.088,
+  "ganancia_db_sugerida": -8,
+  "fuente": "https://mixkit.co/free-sound-effects/forest/"
+ },
+ "naturaleza/birds-in-the-jungle": {
+  "archivo": "biblioteca/naturaleza/birds-in-the-jungle.mp3",
+  "nombre": "Birds in the jungle",
+  "etiqueta": "forest",
+  "duracion_s": 60.83,
+  "impacto_s": 1.774,
+  "ganancia_db_sugerida": -8,
+  "fuente": "https://mixkit.co/free-sound-effects/forest/"
+ },
+ "naturaleza/wind-in-the-forest": {
+  "archivo": "biblioteca/naturaleza/wind-in-the-forest.mp3",
+  "nombre": "Wind in the forest",
+  "etiqueta": "forest",
+  "duracion_s": 25.32,
+  "impacto_s": 23.921,
+  "ganancia_db_sugerida": -8,
+  "fuente": "https://mixkit.co/free-sound-effects/forest/"
+ },
+ "naturaleza/sea-waves-with-birds-loop": {
+  "archivo": "biblioteca/naturaleza/sea-waves-with-birds-loop.mp3",
+  "nombre": "Sea waves with birds loop",
+  "etiqueta": "ocean",
+  "duracion_s": 38.04,
+  "impacto_s": 15.445,
+  "ganancia_db_sugerida": -8,
+  "fuente": "https://mixkit.co/free-sound-effects/ocean/"
+ },
+ "naturaleza/small-waves-harbor-rocks": {
+  "archivo": "biblioteca/naturaleza/small-waves-harbor-rocks.mp3",
+  "nombre": "Small waves harbor rocks",
+  "etiqueta": "ocean",
+  "duracion_s": 77.86,
+  "impacto_s": 35.432,
+  "ganancia_db_sugerida": -8,
+  "fuente": "https://mixkit.co/free-sound-effects/ocean/"
+ },
+ "naturaleza/close-sea-waves-loop": {
+  "archivo": "biblioteca/naturaleza/close-sea-waves-loop.mp3",
+  "nombre": "Close sea waves loop",
+  "etiqueta": "ocean",
+  "duracion_s": 29.0,
+  "impacto_s": 5.261,
+  "ganancia_db_sugerida": -8,
+  "fuente": "https://mixkit.co/free-sound-effects/ocean/"
+ },
+ "naturaleza/sea-waves-loop": {
+  "archivo": "biblioteca/naturaleza/sea-waves-loop.mp3",
+  "nombre": "Sea waves loop",
+  "etiqueta": "ocean",
+  "duracion_s": 48.25,
+  "impacto_s": 0.953,
+  "ganancia_db_sugerida": -8,
+  "fuente": "https://mixkit.co/free-sound-effects/ocean/"
+ },
+ "naturaleza/rough-sea-waves-loop": {
+  "archivo": "biblioteca/naturaleza/rough-sea-waves-loop.mp3",
+  "nombre": "Rough sea waves loop",
+  "etiqueta": "ocean",
+  "duracion_s": 70.84,
+  "impacto_s": 26.41,
+  "ganancia_db_sugerida": -8,
+  "fuente": "https://mixkit.co/free-sound-effects/ocean/"
+ },
+ "naturaleza/windy-sea-loop": {
+  "archivo": "biblioteca/naturaleza/windy-sea-loop.mp3",
+  "nombre": "Windy sea loop",
+  "etiqueta": "ocean",
+  "duracion_s": 30.39,
+  "impacto_s": 17.038,
+  "ganancia_db_sugerida": -8,
+  "fuente": "https://mixkit.co/free-sound-effects/ocean/"
+ },
+ "naturaleza/city-traffic-background-ambience": {
+  "archivo": "biblioteca/naturaleza/city-traffic-background-ambience.mp3",
+  "nombre": "City traffic background ambience",
+  "etiqueta": "city",
+  "duracion_s": 67.19,
+  "impacto_s": 18.088,
+  "ganancia_db_sugerida": -8,
+  "fuente": "https://mixkit.co/free-sound-effects/city/"
+ },
+ "naturaleza/passing-car-and-urban-ambience": {
+  "archivo": "biblioteca/naturaleza/passing-car-and-urban-ambience.mp3",
+  "nombre": "Passing car and urban ambience",
+  "etiqueta": "city",
+  "duracion_s": 14.0,
+  "impacto_s": 1.119,
+  "ganancia_db_sugerida": -8,
+  "fuente": "https://mixkit.co/free-sound-effects/city/"
+ },
+ "naturaleza/urban-ambient-sound": {
+  "archivo": "biblioteca/naturaleza/urban-ambient-sound.mp3",
+  "nombre": "Urban ambient sound",
+  "etiqueta": "city",
+  "duracion_s": 65.69,
+  "impacto_s": 33.461,
+  "ganancia_db_sugerida": -8,
+  "fuente": "https://mixkit.co/free-sound-effects/city/"
+ },
+ "naturaleza/urban-city-ambience-at-night": {
+  "archivo": "biblioteca/naturaleza/urban-city-ambience-at-night.mp3",
+  "nombre": "Urban city ambience at night",
+  "etiqueta": "city",
+  "duracion_s": 126.33,
+  "impacto_s": 5.6,
+  "ganancia_db_sugerida": -8,
+  "fuente": "https://mixkit.co/free-sound-effects/city/"
+ },
+ "naturaleza/road-traffic-sound": {
+  "archivo": "biblioteca/naturaleza/road-traffic-sound.mp3",
+  "nombre": "Road traffic sound",
+  "etiqueta": "city",
+  "duracion_s": 66.2,
+  "impacto_s": 40.158,
+  "ganancia_db_sugerida": -8,
+  "fuente": "https://mixkit.co/free-sound-effects/city/"
+ },
+ "naturaleza/urban-park-and-traffic": {
+  "archivo": "biblioteca/naturaleza/urban-park-and-traffic.mp3",
+  "nombre": "Urban park and traffic",
+  "etiqueta": "city",
+  "duracion_s": 109.97,
+  "impacto_s": 58.004,
+  "ganancia_db_sugerida": -8,
+  "fuente": "https://mixkit.co/free-sound-effects/city/"
+ },
+ "naturaleza/flock-of-wild-geese": {
+  "archivo": "biblioteca/naturaleza/flock-of-wild-geese.mp3",
+  "nombre": "Flock of wild geese",
+  "etiqueta": "bird",
+  "duracion_s": 5.22,
+  "impacto_s": 4.563,
+  "ganancia_db_sugerida": -8,
+  "fuente": "https://mixkit.co/free-sound-effects/bird/"
+ },
+ "naturaleza/natural-ambience-with-flowing-water-and-birds": {
+  "archivo": "biblioteca/naturaleza/natural-ambience-with-flowing-water-and-birds.mp3",
+  "nombre": "Natural ambience with flowing water and birds",
+  "etiqueta": "bird",
+  "duracion_s": 48.0,
+  "impacto_s": 12.995,
+  "ganancia_db_sugerida": -8,
+  "fuente": "https://mixkit.co/free-sound-effects/bird/"
+ },
+ "naturaleza/river-in-the-forest-with-birds": {
+  "archivo": "biblioteca/naturaleza/river-in-the-forest-with-birds.mp3",
+  "nombre": "River in the forest with birds",
+  "etiqueta": "bird",
+  "duracion_s": 95.0,
+  "impacto_s": 23.081,
+  "ganancia_db_sugerida": -8,
+  "fuente": "https://mixkit.co/free-sound-effects/bird/"
+ },
+ "naturaleza/tropical-bird-squeak": {
+  "archivo": "biblioteca/naturaleza/tropical-bird-squeak.mp3",
+  "nombre": "Tropical bird squeak",
+  "etiqueta": "bird",
+  "duracion_s": 1.26,
+  "impacto_s": 0.866,
+  "ganancia_db_sugerida": -8,
+  "fuente": "https://mixkit.co/free-sound-effects/bird/"
+ },
+ "naturaleza/morning-birds-singing": {
+  "archivo": "biblioteca/naturaleza/morning-birds-singing.mp3",
+  "nombre": "Morning birds singing",
+  "etiqueta": "bird",
+  "duracion_s": 120.09,
+  "impacto_s": 35.157,
+  "ganancia_db_sugerida": -8,
+  "fuente": "https://mixkit.co/free-sound-effects/bird/"
+ },
+ "naturaleza/short-rooster-crowing": {
+  "archivo": "biblioteca/naturaleza/short-rooster-crowing.mp3",
+  "nombre": "Short rooster crowing",
+  "etiqueta": "bird",
+  "duracion_s": 2.18,
+  "impacto_s": 1.587,
+  "ganancia_db_sugerida": -8,
+  "fuente": "https://mixkit.co/free-sound-effects/bird/"
+ },
+ "naturaleza/distant-thunder-explosion": {
+  "archivo": "biblioteca/naturaleza/distant-thunder-explosion.mp3",
+  "nombre": "Distant thunder explosion",
+  "etiqueta": "thunder",
+  "duracion_s": 13.38,
+  "impacto_s": 1.385,
+  "ganancia_db_sugerida": -8,
+  "fuente": "https://mixkit.co/free-sound-effects/thunder/"
+ },
+ "naturaleza/fast-thunder-impact": {
+  "archivo": "biblioteca/naturaleza/fast-thunder-impact.mp3",
+  "nombre": "Fast thunder impact",
+  "etiqueta": "thunder",
+  "duracion_s": 9.84,
+  "impacto_s": 0.965,
+  "ganancia_db_sugerida": -8,
+  "fuente": "https://mixkit.co/free-sound-effects/thunder/"
+ },
+ "naturaleza/thunderstorm-and-clear-rain": {
+  "archivo": "biblioteca/naturaleza/thunderstorm-and-clear-rain.mp3",
+  "nombre": "Thunderstorm and clear rain",
+  "etiqueta": "thunder",
+  "duracion_s": 44.22,
+  "impacto_s": 35.544,
+  "ganancia_db_sugerida": -8,
+  "fuente": "https://mixkit.co/free-sound-effects/thunder/"
+ },
+ "naturaleza/thunderstorm-and-rain-loop": {
+  "archivo": "biblioteca/naturaleza/thunderstorm-and-rain-loop.mp3",
+  "nombre": "Thunderstorm and rain loop",
+  "etiqueta": "thunder",
+  "duracion_s": 52.75,
+  "impacto_s": 33.029,
+  "ganancia_db_sugerida": -8,
+  "fuente": "https://mixkit.co/free-sound-effects/thunder/"
+ },
+ "naturaleza/nature-ambience-with-lightning-strike-and-thunde": {
+  "archivo": "biblioteca/naturaleza/nature-ambience-with-lightning-strike-and-thunde.mp3",
+  "nombre": "Nature ambience with lightning strike and thunder",
+  "etiqueta": "thunder",
+  "duracion_s": 28.75,
+  "impacto_s": 1.904,
+  "ganancia_db_sugerida": -8,
+  "fuente": "https://mixkit.co/free-sound-effects/thunder/"
+ },
+ "naturaleza/strong-close-thunder-explosion": {
+  "archivo": "biblioteca/naturaleza/strong-close-thunder-explosion.mp3",
+  "nombre": "Strong close thunder explosion",
+  "etiqueta": "thunder",
+  "duracion_s": 8.87,
+  "impacto_s": 0.677,
+  "ganancia_db_sugerida": -8,
+  "fuente": "https://mixkit.co/free-sound-effects/thunder/"
+ },
+ "naturaleza/campfire-crackles": {
+  "archivo": "biblioteca/naturaleza/campfire-crackles.mp3",
+  "nombre": "Campfire crackles",
+  "etiqueta": "fire",
+  "duracion_s": 24.03,
+  "impacto_s": 0.116,
+  "ganancia_db_sugerida": -8,
+  "fuente": "https://mixkit.co/free-sound-effects/fire/"
+ },
+ "naturaleza/short-fire-whoosh": {
+  "archivo": "biblioteca/naturaleza/short-fire-whoosh.mp3",
+  "nombre": "Short fire whoosh",
+  "etiqueta": "fire",
+  "duracion_s": 3.19,
+  "impacto_s": 0.565,
+  "ganancia_db_sugerida": -8,
+  "fuente": "https://mixkit.co/free-sound-effects/fire/"
+ },
+ "naturaleza/fire-swoosh-burning": {
+  "archivo": "biblioteca/naturaleza/fire-swoosh-burning.mp3",
+  "nombre": "Fire swoosh burning",
+  "etiqueta": "fire",
+  "duracion_s": 3.63,
+  "impacto_s": 0.892,
+  "ganancia_db_sugerida": -8,
+  "fuente": "https://mixkit.co/free-sound-effects/fire/"
+ },
+ "naturaleza/campfire-night-wind": {
+  "archivo": "biblioteca/naturaleza/campfire-night-wind.mp3",
+  "nombre": "Campfire night wind",
+  "etiqueta": "fire",
+  "duracion_s": 30.75,
+  "impacto_s": 8.24,
+  "ganancia_db_sugerida": -8,
+  "fuente": "https://mixkit.co/free-sound-effects/fire/"
+ },
+ "naturaleza/campfire-burning-crackles": {
+  "archivo": "biblioteca/naturaleza/campfire-burning-crackles.mp3",
+  "nombre": "Campfire burning crackles",
+  "etiqueta": "fire",
+  "duracion_s": 14.08,
+  "impacto_s": 12.658,
+  "ganancia_db_sugerida": -8,
+  "fuente": "https://mixkit.co/free-sound-effects/fire/"
+ },
+ "naturaleza/papers-blowing-in-the-windstorm": {
+  "archivo": "biblioteca/naturaleza/papers-blowing-in-the-windstorm.mp3",
+  "nombre": "Papers blowing in the windstorm",
+  "etiqueta": "fire",
+  "duracion_s": 5.2,
+  "impacto_s": 1.136,
+  "ganancia_db_sugerida": -8,
+  "fuente": "https://mixkit.co/free-sound-effects/fire/"
+ },
+ "animacion/cartoon-toy-whistle": {
+  "archivo": "biblioteca/animacion/cartoon-toy-whistle.mp3",
+  "nombre": "Cartoon toy whistle",
+  "etiqueta": "cartoon",
+  "duracion_s": 1.21,
+  "impacto_s": 0.271,
+  "ganancia_db_sugerida": -8,
+  "fuente": "https://mixkit.co/free-sound-effects/cartoon/"
+ },
+ "animacion/cartoon-laugh-voice": {
+  "archivo": "biblioteca/animacion/cartoon-laugh-voice.mp3",
+  "nombre": "Cartoon laugh voice",
+  "etiqueta": "cartoon",
+  "duracion_s": 2.08,
+  "impacto_s": 0.437,
+  "ganancia_db_sugerida": -8,
+  "fuente": "https://mixkit.co/free-sound-effects/cartoon/"
+ },
+ "animacion/hard-pop-click": {
+  "archivo": "biblioteca/animacion/hard-pop-click.mp3",
+  "nombre": "Hard pop click",
+  "etiqueta": "cartoon",
+  "duracion_s": 1.17,
+  "impacto_s": 0.054,
+  "ganancia_db_sugerida": -8,
+  "fuente": "https://mixkit.co/free-sound-effects/cartoon/"
+ },
+ "animacion/laughing-cartoon-creature": {
+  "archivo": "biblioteca/animacion/laughing-cartoon-creature.mp3",
+  "nombre": "Laughing cartoon creature",
+  "etiqueta": "cartoon",
+  "duracion_s": 3.53,
+  "impacto_s": 1.437,
+  "ganancia_db_sugerida": -8,
+  "fuente": "https://mixkit.co/free-sound-effects/cartoon/"
+ },
+ "animacion/cartoon-failure-piano": {
+  "archivo": "biblioteca/animacion/cartoon-failure-piano.mp3",
+  "nombre": "Cartoon failure piano",
+  "etiqueta": "cartoon",
+  "duracion_s": 2.31,
+  "impacto_s": 0.105,
+  "ganancia_db_sugerida": -8,
+  "fuente": "https://mixkit.co/free-sound-effects/cartoon/"
+ },
+ "animacion/trombone-disappoint": {
+  "archivo": "biblioteca/animacion/trombone-disappoint.mp3",
+  "nombre": "Trombone disappoint",
+  "etiqueta": "cartoon",
+  "duracion_s": 2.65,
+  "impacto_s": 0.503,
+  "ganancia_db_sugerida": -8,
+  "fuente": "https://mixkit.co/free-sound-effects/cartoon/"
+ },
+ "animacion/long-pop": {
+  "archivo": "biblioteca/animacion/long-pop.mp3",
+  "nombre": "Long pop",
+  "etiqueta": "pop",
+  "duracion_s": 0.48,
+  "impacto_s": 0.044,
+  "ganancia_db_sugerida": -8,
+  "fuente": "https://mixkit.co/free-sound-effects/pop/"
+ },
+ "animacion/message-pop-alert": {
+  "archivo": "biblioteca/animacion/message-pop-alert.mp3",
+  "nombre": "Message pop alert",
+  "etiqueta": "pop",
+  "duracion_s": 1.06,
+  "impacto_s": 0.065,
+  "ganancia_db_sugerida": -8,
+  "fuente": "https://mixkit.co/free-sound-effects/pop/"
+ },
+ "animacion/bubble-pop-up-alert-notification": {
+  "archivo": "biblioteca/animacion/bubble-pop-up-alert-notification.mp3",
+  "nombre": "Bubble pop up alert notification",
+  "etiqueta": "pop",
+  "duracion_s": 0.38,
+  "impacto_s": 0.139,
+  "ganancia_db_sugerida": -8,
+  "fuente": "https://mixkit.co/free-sound-effects/pop/"
+ },
+ "animacion/dry-pop-up-notification-alert": {
+  "archivo": "biblioteca/animacion/dry-pop-up-notification-alert.mp3",
+  "nombre": "Dry pop up notification alert",
+  "etiqueta": "pop",
+  "duracion_s": 0.3,
+  "impacto_s": 0.049,
+  "ganancia_db_sugerida": -8,
+  "fuente": "https://mixkit.co/free-sound-effects/pop/"
+ },
+ "animacion/soap-bubble-sound": {
+  "archivo": "biblioteca/animacion/soap-bubble-sound.mp3",
+  "nombre": "Soap bubble sound",
+  "etiqueta": "pop",
+  "duracion_s": 1.14,
+  "impacto_s": 0.061,
+  "ganancia_db_sugerida": -8,
+  "fuente": "https://mixkit.co/free-sound-effects/pop/"
+ },
+ "animacion/game-blood-pop-slide": {
+  "archivo": "biblioteca/animacion/game-blood-pop-slide.mp3",
+  "nombre": "Game blood pop slide",
+  "etiqueta": "pop",
+  "duracion_s": 2.88,
+  "impacto_s": 0.191,
+  "ganancia_db_sugerida": -8,
+  "fuente": "https://mixkit.co/free-sound-effects/pop/"
+ },
+ "animacion/camera-shutter-click": {
+  "archivo": "biblioteca/animacion/camera-shutter-click.mp3",
+  "nombre": "Camera shutter click",
+  "etiqueta": "click",
+  "duracion_s": 0.35,
+  "impacto_s": 0.2,
+  "ganancia_db_sugerida": -8,
+  "fuente": "https://mixkit.co/free-sound-effects/click/"
+ },
+ "animacion/fast-double-click-on-mouse": {
+  "archivo": "biblioteca/animacion/fast-double-click-on-mouse.mp3",
+  "nombre": "Fast double click on mouse",
+  "etiqueta": "click",
+  "duracion_s": 0.47,
+  "impacto_s": 0.216,
+  "ganancia_db_sugerida": -8,
+  "fuente": "https://mixkit.co/free-sound-effects/click/"
+ },
+ "animacion/select-click": {
+  "archivo": "biblioteca/animacion/select-click.mp3",
+  "nombre": "Select click",
+  "etiqueta": "click",
+  "duracion_s": 1.1,
+  "impacto_s": 0.075,
+  "ganancia_db_sugerida": -8,
+  "fuente": "https://mixkit.co/free-sound-effects/click/"
+ },
+ "animacion/sci-fi-click": {
+  "archivo": "biblioteca/animacion/sci-fi-click.mp3",
+  "nombre": "Sci fi click",
+  "etiqueta": "click",
+  "duracion_s": 0.7,
+  "impacto_s": 0.15,
+  "ganancia_db_sugerida": -8,
+  "fuente": "https://mixkit.co/free-sound-effects/click/"
+ },
+ "animacion/typing-on-a-laptop-keyboard": {
+  "archivo": "biblioteca/animacion/typing-on-a-laptop-keyboard.mp3",
+  "nombre": "Typing on a laptop keyboard",
+  "etiqueta": "click",
+  "duracion_s": 19.63,
+  "impacto_s": 10.91,
+  "ganancia_db_sugerida": -8,
+  "fuente": "https://mixkit.co/free-sound-effects/click/"
+ },
+ "animacion/modern-technology-select": {
+  "archivo": "biblioteca/animacion/modern-technology-select.mp3",
+  "nombre": "Modern technology select",
+  "etiqueta": "click",
+  "duracion_s": 0.5,
+  "impacto_s": 0.013,
+  "ganancia_db_sugerida": -8,
+  "fuente": "https://mixkit.co/free-sound-effects/click/"
+ },
+ "animacion/little-cute-kiss": {
+  "archivo": "biblioteca/animacion/little-cute-kiss.mp3",
+  "nombre": "Little cute kiss",
+  "etiqueta": "cute",
+  "duracion_s": 1.08,
+  "impacto_s": 0.052,
+  "ganancia_db_sugerida": -8,
+  "fuente": "https://mixkit.co/free-sound-effects/cute/"
+ },
+ "animacion/cartoon-character-cute-sneeze": {
+  "archivo": "biblioteca/animacion/cartoon-character-cute-sneeze.mp3",
+  "nombre": "Cartoon character cute sneeze",
+  "etiqueta": "cute",
+  "duracion_s": 1.08,
+  "impacto_s": 0.395,
+  "ganancia_db_sugerida": -8,
+  "fuente": "https://mixkit.co/free-sound-effects/cute/"
+ },
+ "animacion/laser-gun-shot": {
+  "archivo": "biblioteca/animacion/laser-gun-shot.mp3",
+  "nombre": "Laser gun shot",
+  "etiqueta": "cute",
+  "duracion_s": 3.0,
+  "impacto_s": 0.254,
+  "ganancia_db_sugerida": -8,
+  "fuente": "https://mixkit.co/free-sound-effects/cute/"
+ },
+ "animacion/sad-game-over-trombone": {
+  "archivo": "biblioteca/animacion/sad-game-over-trombone.mp3",
+  "nombre": "Sad game over trombone",
+  "etiqueta": "funny",
+  "duracion_s": 5.61,
+  "impacto_s": 2.136,
+  "ganancia_db_sugerida": -8,
+  "fuente": "https://mixkit.co/free-sound-effects/funny/"
+ },
+ "animacion/funny-squeaky-toy-hits": {
+  "archivo": "biblioteca/animacion/funny-squeaky-toy-hits.mp3",
+  "nombre": "Funny squeaky toy hits",
+  "etiqueta": "funny",
+  "duracion_s": 1.08,
+  "impacto_s": 0.044,
+  "ganancia_db_sugerida": -8,
+  "fuente": "https://mixkit.co/free-sound-effects/funny/"
+ },
+ "animacion/boing-hit-sound": {
+  "archivo": "biblioteca/animacion/boing-hit-sound.mp3",
+  "nombre": "Boing hit sound",
+  "etiqueta": "funny",
+  "duracion_s": 1.24,
+  "impacto_s": 0.089,
+  "ganancia_db_sugerida": -8,
+  "fuente": "https://mixkit.co/free-sound-effects/funny/"
+ },
+ "animacion/cartoon-friendly-kiss": {
+  "archivo": "biblioteca/animacion/cartoon-friendly-kiss.mp3",
+  "nombre": "Cartoon friendly kiss",
+  "etiqueta": "funny",
+  "duracion_s": 1.03,
+  "impacto_s": 0.249,
+  "ganancia_db_sugerida": -8,
+  "fuente": "https://mixkit.co/free-sound-effects/funny/"
+ },
+ "animacion/small-crowd-laugh-and-applause": {
+  "archivo": "biblioteca/animacion/small-crowd-laugh-and-applause.mp3",
+  "nombre": "Small crowd laugh and applause",
+  "etiqueta": "funny",
+  "duracion_s": 5.76,
+  "impacto_s": 1.235,
+  "ganancia_db_sugerida": -8,
+  "fuente": "https://mixkit.co/free-sound-effects/funny/"
+ },
+ "animacion/clown-horn-at-circus": {
+  "archivo": "biblioteca/animacion/clown-horn-at-circus.mp3",
+  "nombre": "Clown horn at circus",
+  "etiqueta": "funny",
+  "duracion_s": 2.48,
+  "impacto_s": 0.04,
+  "ganancia_db_sugerida": -8,
+  "fuente": "https://mixkit.co/free-sound-effects/funny/"
+ },
+ "animacion/jump-into-the-water": {
+  "archivo": "biblioteca/animacion/jump-into-the-water.mp3",
+  "nombre": "Jump into the water",
+  "etiqueta": "jump",
+  "duracion_s": 2.28,
+  "impacto_s": 0.368,
+  "ganancia_db_sugerida": -8,
+  "fuente": "https://mixkit.co/free-sound-effects/jump/"
+ },
+ "animacion/player-jumping-in-a-video-game": {
+  "archivo": "biblioteca/animacion/player-jumping-in-a-video-game.mp3",
+  "nombre": "Player jumping in a video game",
+  "etiqueta": "jump",
+  "duracion_s": 1.32,
+  "impacto_s": 0.11,
+  "ganancia_db_sugerida": -8,
+  "fuente": "https://mixkit.co/free-sound-effects/jump/"
+ },
+ "animacion/video-game-spin-jump": {
+  "archivo": "biblioteca/animacion/video-game-spin-jump.mp3",
+  "nombre": "Video game spin jump",
+  "etiqueta": "jump",
+  "duracion_s": 1.54,
+  "impacto_s": 0.147,
+  "ganancia_db_sugerida": -8,
+  "fuente": "https://mixkit.co/free-sound-effects/jump/"
+ },
+ "animacion/jumping-into-water": {
+  "archivo": "biblioteca/animacion/jumping-into-water.mp3",
+  "nombre": "Jumping into water",
+  "etiqueta": "jump",
+  "duracion_s": 1.91,
+  "impacto_s": 0.119,
+  "ganancia_db_sugerida": -8,
+  "fuente": "https://mixkit.co/free-sound-effects/jump/"
+ },
+ "animacion/skateboard-indoors": {
+  "archivo": "biblioteca/animacion/skateboard-indoors.mp3",
+  "nombre": "Skateboard indoors",
+  "etiqueta": "jump",
+  "duracion_s": 3.3,
+  "impacto_s": 0.814,
+  "ganancia_db_sugerida": -8,
+  "fuente": "https://mixkit.co/free-sound-effects/jump/"
+ },
+ "animacion/striking-jump-rope": {
+  "archivo": "biblioteca/animacion/striking-jump-rope.mp3",
+  "nombre": "Striking jump rope",
+  "etiqueta": "jump",
+  "duracion_s": 12.46,
+  "impacto_s": 1.321,
+  "ganancia_db_sugerida": -8,
+  "fuente": "https://mixkit.co/free-sound-effects/jump/"
+ },
+ "animacion/fairy-arcade-sparkle": {
+  "archivo": "biblioteca/animacion/fairy-arcade-sparkle.mp3",
+  "nombre": "Fairy arcade sparkle",
+  "etiqueta": "sparkle",
+  "duracion_s": 1.5,
+  "impacto_s": 0.164,
+  "ganancia_db_sugerida": -8,
+  "fuente": "https://mixkit.co/free-sound-effects/sparkle/"
+ },
+ "animacion/fairy-magic-sparkle": {
+  "archivo": "biblioteca/animacion/fairy-magic-sparkle.mp3",
+  "nombre": "Fairy magic sparkle",
+  "etiqueta": "sparkle",
+  "duracion_s": 1.3,
+  "impacto_s": 0.283,
+  "ganancia_db_sugerida": -8,
+  "fuente": "https://mixkit.co/free-sound-effects/sparkle/"
+ },
+ "animacion/fairy-sparkle-whoosh": {
+  "archivo": "biblioteca/animacion/fairy-sparkle-whoosh.mp3",
+  "nombre": "Fairy sparkle whoosh",
+  "etiqueta": "sparkle",
+  "duracion_s": 4.55,
+  "impacto_s": 1.368,
+  "ganancia_db_sugerida": -8,
+  "fuente": "https://mixkit.co/free-sound-effects/sparkle/"
+ },
+ "animacion/magic-wand-sparkle": {
+  "archivo": "biblioteca/animacion/magic-wand-sparkle.mp3",
+  "nombre": "Magic wand sparkle",
+  "etiqueta": "sparkle",
+  "duracion_s": 2.5,
+  "impacto_s": 0.263,
+  "ganancia_db_sugerida": -8,
+  "fuente": "https://mixkit.co/free-sound-effects/sparkle/"
+ },
+ "animacion/laser-gun-impact-destruction": {
+  "archivo": "biblioteca/animacion/laser-gun-impact-destruction.mp3",
+  "nombre": "Laser gun impact destruction",
+  "etiqueta": "sparkle",
+  "duracion_s": 6.04,
+  "impacto_s": 0.861,
+  "ganancia_db_sugerida": -8,
+  "fuente": "https://mixkit.co/free-sound-effects/sparkle/"
+ },
+ "animacion/sparkle-hybrid-transition": {
+  "archivo": "biblioteca/animacion/sparkle-hybrid-transition.mp3",
+  "nombre": "Sparkle hybrid transition",
+  "etiqueta": "sparkle",
+  "duracion_s": 1.25,
+  "impacto_s": 0.256,
+  "ganancia_db_sugerida": -8,
+  "fuente": "https://mixkit.co/free-sound-effects/sparkle/"
+ },
+ "animacion/magic-notification-ring": {
+  "archivo": "biblioteca/animacion/magic-notification-ring.mp3",
+  "nombre": "Magic notification ring",
+  "etiqueta": "magic",
+  "duracion_s": 3.01,
+  "impacto_s": 0.128,
+  "ganancia_db_sugerida": -8,
+  "fuente": "https://mixkit.co/free-sound-effects/magic/"
+ },
+ "animacion/magic-glitter-shot": {
+  "archivo": "biblioteca/animacion/magic-glitter-shot.mp3",
+  "nombre": "Magic glitter shot",
+  "etiqueta": "magic",
+  "duracion_s": 4.8,
+  "impacto_s": 1.097,
+  "ganancia_db_sugerida": -8,
+  "fuente": "https://mixkit.co/free-sound-effects/magic/"
+ },
+ "animacion/fairy-glitter": {
+  "archivo": "biblioteca/animacion/fairy-glitter.mp3",
+  "nombre": "Fairy glitter",
+  "etiqueta": "magic",
+  "duracion_s": 2.3,
+  "impacto_s": 0.602,
+  "ganancia_db_sugerida": -8,
+  "fuente": "https://mixkit.co/free-sound-effects/magic/"
+ },
+ "animacion/fantasy-game-success-notification": {
+  "archivo": "biblioteca/animacion/fantasy-game-success-notification.mp3",
+  "nombre": "Fantasy game success notification",
+  "etiqueta": "magic",
+  "duracion_s": 3.0,
+  "impacto_s": 0.015,
+  "ganancia_db_sugerida": -8,
+  "fuente": "https://mixkit.co/free-sound-effects/magic/"
+ },
+ "animacion/magical-light-transition": {
+  "archivo": "biblioteca/animacion/magical-light-transition.mp3",
+  "nombre": "Magical light transition",
+  "etiqueta": "magic",
+  "duracion_s": 5.06,
+  "impacto_s": 2.651,
+  "ganancia_db_sugerida": -8,
+  "fuente": "https://mixkit.co/free-sound-effects/magic/"
+ },
+ "animacion/magic-glitter-or-particles": {
+  "archivo": "biblioteca/animacion/magic-glitter-or-particles.mp3",
+  "nombre": "Magic glitter or particles",
+  "etiqueta": "magic",
+  "duracion_s": 6.0,
+  "impacto_s": 1.471,
+  "ganancia_db_sugerida": -8,
+  "fuente": "https://mixkit.co/free-sound-effects/magic/"
+ },
+ "tension/game-show-suspense-waiting": {
+  "archivo": "biblioteca/tension/game-show-suspense-waiting.mp3",
+  "nombre": "Game show suspense waiting",
+  "etiqueta": "suspense-music",
+  "duracion_s": 41.81,
+  "impacto_s": 5.434,
+  "ganancia_db_sugerida": -8,
+  "fuente": "https://mixkit.co/free-sound-effects/suspense-music/"
+ },
+ "tension/tick-tock-clock-close-up": {
+  "archivo": "biblioteca/tension/tick-tock-clock-close-up.mp3",
+  "nombre": "Tick tock clock close up",
+  "etiqueta": "suspense-music",
+  "duracion_s": 11.7,
+  "impacto_s": 1.112,
+  "ganancia_db_sugerida": -8,
+  "fuente": "https://mixkit.co/free-sound-effects/suspense-music/"
+ },
+ "tension/tactical-drone-ambience": {
+  "archivo": "biblioteca/tension/tactical-drone-ambience.mp3",
+  "nombre": "Tactical drone ambience",
+  "etiqueta": "suspense-music",
+  "duracion_s": 54.1,
+  "impacto_s": 31.319,
+  "ganancia_db_sugerida": -8,
+  "fuente": "https://mixkit.co/free-sound-effects/suspense-music/"
+ },
+ "tension/cinematic-suspense-swell": {
+  "archivo": "biblioteca/tension/cinematic-suspense-swell.mp3",
+  "nombre": "Cinematic suspense swell",
+  "etiqueta": "suspense-music",
+  "duracion_s": 11.27,
+  "impacto_s": 3.856,
+  "ganancia_db_sugerida": -8,
+  "fuente": "https://mixkit.co/free-sound-effects/suspense-music/"
+ },
+ "tension/glitchy-sci-fi-bass-suspense": {
+  "archivo": "biblioteca/tension/glitchy-sci-fi-bass-suspense.mp3",
+  "nombre": "Glitchy Sci Fi bass suspense",
+  "etiqueta": "suspense-music",
+  "duracion_s": 94.22,
+  "impacto_s": 14.23,
+  "ganancia_db_sugerida": -8,
+  "fuente": "https://mixkit.co/free-sound-effects/suspense-music/"
+ },
+ "tension/cinematic-suspense-ambience": {
+  "archivo": "biblioteca/tension/cinematic-suspense-ambience.mp3",
+  "nombre": "Cinematic suspense ambience",
+  "etiqueta": "suspense-music",
+  "duracion_s": 62.5,
+  "impacto_s": 44.327,
+  "ganancia_db_sugerida": -8,
+  "fuente": "https://mixkit.co/free-sound-effects/suspense-music/"
+ },
+ "tension/cinematic-heartbeat-ambience": {
+  "archivo": "biblioteca/tension/cinematic-heartbeat-ambience.mp3",
+  "nombre": "Cinematic heartbeat ambience",
+  "etiqueta": "heartbeat",
+  "duracion_s": 5.86,
+  "impacto_s": 2.906,
+  "ganancia_db_sugerida": -8,
+  "fuente": "https://mixkit.co/free-sound-effects/heartbeat/"
+ },
+ "tension/cinematic-horror-heartbeat-transition": {
+  "archivo": "biblioteca/tension/cinematic-horror-heartbeat-transition.mp3",
+  "nombre": "Cinematic horror heartbeat transition",
+  "etiqueta": "heartbeat",
+  "duracion_s": 50.99,
+  "impacto_s": 0.365,
+  "ganancia_db_sugerida": -8,
+  "fuente": "https://mixkit.co/free-sound-effects/heartbeat/"
+ },
+ "tension/horror-deep-drum-heartbeat": {
+  "archivo": "biblioteca/tension/horror-deep-drum-heartbeat.mp3",
+  "nombre": "Horror deep drum heartbeat",
+  "etiqueta": "heartbeat",
+  "duracion_s": 4.33,
+  "impacto_s": 0.045,
+  "ganancia_db_sugerida": -8,
+  "fuente": "https://mixkit.co/free-sound-effects/heartbeat/"
+ },
+ "tension/fast-heartbeat": {
+  "archivo": "biblioteca/tension/fast-heartbeat.mp3",
+  "nombre": "Fast Heartbeat",
+  "etiqueta": "heartbeat",
+  "duracion_s": 9.87,
+  "impacto_s": 3.114,
+  "ganancia_db_sugerida": -8,
+  "fuente": "https://mixkit.co/free-sound-effects/heartbeat/"
+ },
+ "tension/slow-heartbeat": {
+  "archivo": "biblioteca/tension/slow-heartbeat.mp3",
+  "nombre": "Slow heartbeat",
+  "etiqueta": "heartbeat",
+  "duracion_s": 45.34,
+  "impacto_s": 14.827,
+  "ganancia_db_sugerida": -8,
+  "fuente": "https://mixkit.co/free-sound-effects/heartbeat/"
+ },
+ "tension/heartbeat-medium-speed": {
+  "archivo": "biblioteca/tension/heartbeat-medium-speed.mp3",
+  "nombre": "Heartbeat medium speed",
+  "etiqueta": "heartbeat",
+  "duracion_s": 29.73,
+  "impacto_s": 16.745,
+  "ganancia_db_sugerida": -8,
+  "fuente": "https://mixkit.co/free-sound-effects/heartbeat/"
+ },
+ "tension/tick-tock-clock-timer": {
+  "archivo": "biblioteca/tension/tick-tock-clock-timer.mp3",
+  "nombre": "Tick tock clock timer",
+  "etiqueta": "clock",
+  "duracion_s": 16.85,
+  "impacto_s": 1.138,
+  "ganancia_db_sugerida": -8,
+  "fuente": "https://mixkit.co/free-sound-effects/clock/"
+ },
+ "tension/wall-clock-tick-tock": {
+  "archivo": "biblioteca/tension/wall-clock-tick-tock.mp3",
+  "nombre": "Wall clock tick tock",
+  "etiqueta": "clock",
+  "duracion_s": 23.01,
+  "impacto_s": 1.368,
+  "ganancia_db_sugerida": -8,
+  "fuente": "https://mixkit.co/free-sound-effects/clock/"
+ },
+ "tension/alarm-clock-beep": {
+  "archivo": "biblioteca/tension/alarm-clock-beep.mp3",
+  "nombre": "Alarm clock beep",
+  "etiqueta": "clock",
+  "duracion_s": 8.0,
+  "impacto_s": 0.049,
+  "ganancia_db_sugerida": -8,
+  "fuente": "https://mixkit.co/free-sound-effects/clock/"
+ },
+ "tension/fast-wall-clock-ticking": {
+  "archivo": "biblioteca/tension/fast-wall-clock-ticking.mp3",
+  "nombre": "Fast wall clock ticking",
+  "etiqueta": "clock",
+  "duracion_s": 2.48,
+  "impacto_s": 2.199,
+  "ganancia_db_sugerida": -8,
+  "fuente": "https://mixkit.co/free-sound-effects/clock/"
+ },
+ "tension/clock-ticker-single": {
+  "archivo": "biblioteca/tension/clock-ticker-single.mp3",
+  "nombre": "Clock ticker single",
+  "etiqueta": "clock",
+  "duracion_s": 0.85,
+  "impacto_s": 0.6,
+  "ganancia_db_sugerida": -8,
+  "fuente": "https://mixkit.co/free-sound-effects/clock/"
+ },
+ "tension/bell-tick-tock-timer": {
+  "archivo": "biblioteca/tension/bell-tick-tock-timer.mp3",
+  "nombre": "Bell tick tock timer",
+  "etiqueta": "clock",
+  "duracion_s": 48.99,
+  "impacto_s": 17.536,
+  "ganancia_db_sugerida": -8,
+  "fuente": "https://mixkit.co/free-sound-effects/clock/"
+ },
+ "tension/low-drone-engine-hum": {
+  "archivo": "biblioteca/tension/low-drone-engine-hum.mp3",
+  "nombre": "Low drone engine hum",
+  "etiqueta": "drone",
+  "duracion_s": 88.4,
+  "impacto_s": 62.531,
+  "ganancia_db_sugerida": -8,
+  "fuente": "https://mixkit.co/free-sound-effects/drone/"
+ },
+ "tension/futuristic-metal-transition-sweep": {
+  "archivo": "biblioteca/tension/futuristic-metal-transition-sweep.mp3",
+  "nombre": "Futuristic metal transition sweep",
+  "etiqueta": "drone",
+  "duracion_s": 0.95,
+  "impacto_s": 0.735,
+  "ganancia_db_sugerida": -8,
+  "fuente": "https://mixkit.co/free-sound-effects/drone/"
+ },
+ "tension/drone-terror-ambience": {
+  "archivo": "biblioteca/tension/drone-terror-ambience.mp3",
+  "nombre": "Drone terror ambience",
+  "etiqueta": "drone",
+  "duracion_s": 89.84,
+  "impacto_s": 69.589,
+  "ganancia_db_sugerida": -8,
+  "fuente": "https://mixkit.co/free-sound-effects/drone/"
+ },
+ "tension/creepy-organ-drone": {
+  "archivo": "biblioteca/tension/creepy-organ-drone.mp3",
+  "nombre": "Creepy organ drone",
+  "etiqueta": "drone",
+  "duracion_s": 95.38,
+  "impacto_s": 54.09,
+  "ganancia_db_sugerida": -8,
+  "fuente": "https://mixkit.co/free-sound-effects/drone/"
+ },
+ "tension/drone-logo-presentation": {
+  "archivo": "biblioteca/tension/drone-logo-presentation.mp3",
+  "nombre": "Drone logo presentation",
+  "etiqueta": "drone",
+  "duracion_s": 7.31,
+  "impacto_s": 3.646,
+  "ganancia_db_sugerida": -8,
+  "fuente": "https://mixkit.co/free-sound-effects/drone/"
+ },
+ "tension/large-drone-engine": {
+  "archivo": "biblioteca/tension/large-drone-engine.mp3",
+  "nombre": "Large drone engine",
+  "etiqueta": "drone",
+  "duracion_s": 70.51,
+  "impacto_s": 23.914,
+  "ganancia_db_sugerida": -8,
+  "fuente": "https://mixkit.co/free-sound-effects/drone/"
+ },
+ "tension/terror-transition": {
+  "archivo": "biblioteca/tension/terror-transition.mp3",
+  "nombre": "Terror transition",
+  "etiqueta": "horror",
+  "duracion_s": 12.48,
+  "impacto_s": 9.342,
+  "ganancia_db_sugerida": -8,
+  "fuente": "https://mixkit.co/free-sound-effects/horror/"
+ },
+ "tension/wolf-howling": {
+  "archivo": "biblioteca/tension/wolf-howling.mp3",
+  "nombre": "Wolf howling",
+  "etiqueta": "horror",
+  "duracion_s": 8.03,
+  "impacto_s": 1.071,
+  "ganancia_db_sugerida": -8,
+  "fuente": "https://mixkit.co/free-sound-effects/horror/"
+ },
+ "tension/horror-ambience": {
+  "archivo": "biblioteca/tension/horror-ambience.mp3",
+  "nombre": "Horror ambience",
+  "etiqueta": "horror",
+  "duracion_s": 82.14,
+  "impacto_s": 9.828,
+  "ganancia_db_sugerida": -8,
+  "fuente": "https://mixkit.co/free-sound-effects/horror/"
+ },
+ "tension/terror-radio-frequency": {
+  "archivo": "biblioteca/tension/terror-radio-frequency.mp3",
+  "nombre": "Terror radio frequency",
+  "etiqueta": "horror",
+  "duracion_s": 25.76,
+  "impacto_s": 19.386,
+  "ganancia_db_sugerida": -8,
+  "fuente": "https://mixkit.co/free-sound-effects/horror/"
+ },
+ "tension/angry-dragon-growl": {
+  "archivo": "biblioteca/tension/angry-dragon-growl.mp3",
+  "nombre": "Angry dragon growl",
+  "etiqueta": "horror",
+  "duracion_s": 5.13,
+  "impacto_s": 0.861,
+  "ganancia_db_sugerida": -8,
+  "fuente": "https://mixkit.co/free-sound-effects/horror/"
+ },
+ "tension/broken-radio-frequency-signal": {
+  "archivo": "biblioteca/tension/broken-radio-frequency-signal.mp3",
+  "nombre": "Broken radio frequency signal",
+  "etiqueta": "horror",
+  "duracion_s": 6.18,
+  "impacto_s": 3.867,
+  "ganancia_db_sugerida": -8,
+  "fuente": "https://mixkit.co/free-sound-effects/horror/"
+ },
+ "tension/female-astonished-gasp": {
+  "archivo": "biblioteca/tension/female-astonished-gasp.mp3",
+  "nombre": "Female astonished gasp",
+  "etiqueta": "gasp",
+  "duracion_s": 1.09,
+  "impacto_s": 0.323,
+  "ganancia_db_sugerida": -8,
+  "fuente": "https://mixkit.co/free-sound-effects/gasp/"
+ },
+ "tension/gasping-zombie": {
+  "archivo": "biblioteca/tension/gasping-zombie.mp3",
+  "nombre": "Gasping zombie",
+  "etiqueta": "gasp",
+  "duracion_s": 1.93,
+  "impacto_s": 0.471,
+  "ganancia_db_sugerida": -8,
+  "fuente": "https://mixkit.co/free-sound-effects/gasp/"
+ },
+ "tension/male-astonished-gasp": {
+  "archivo": "biblioteca/tension/male-astonished-gasp.mp3",
+  "nombre": "Male astonished gasp",
+  "etiqueta": "gasp",
+  "duracion_s": 1.27,
+  "impacto_s": 0.142,
+  "ganancia_db_sugerida": -8,
+  "fuente": "https://mixkit.co/free-sound-effects/gasp/"
+ },
+ "tension/female-surprised-gasp": {
+  "archivo": "biblioteca/tension/female-surprised-gasp.mp3",
+  "nombre": "Female surprised gasp",
+  "etiqueta": "gasp",
+  "duracion_s": 1.25,
+  "impacto_s": 0.203,
+  "ganancia_db_sugerida": -8,
+  "fuente": "https://mixkit.co/free-sound-effects/gasp/"
+ },
+ "tension/cartoon-surprise-gasp": {
+  "archivo": "biblioteca/tension/cartoon-surprise-gasp.mp3",
+  "nombre": "Cartoon surprise gasp",
+  "etiqueta": "gasp",
+  "duracion_s": 1.09,
+  "impacto_s": 0.09,
+  "ganancia_db_sugerida": -8,
+  "fuente": "https://mixkit.co/free-sound-effects/gasp/"
+ },
+ "tension/female-shocked-gasp": {
+  "archivo": "biblioteca/tension/female-shocked-gasp.mp3",
+  "nombre": "Female shocked gasp",
+  "etiqueta": "gasp",
+  "duracion_s": 1.08,
+  "impacto_s": 0.466,
+  "ganancia_db_sugerida": -8,
+  "fuente": "https://mixkit.co/free-sound-effects/gasp/"
+ },
+ "tecnologia/technological-futuristic-hum": {
+  "archivo": "biblioteca/tecnologia/technological-futuristic-hum.mp3",
+  "nombre": "Technological futuristic hum",
+  "etiqueta": "high-tech",
+  "duracion_s": 6.0,
+  "impacto_s": 1.049,
+  "ganancia_db_sugerida": -8,
+  "fuente": "https://mixkit.co/free-sound-effects/high-tech/"
+ },
+ "tecnologia/interface-hint-notification": {
+  "archivo": "biblioteca/tecnologia/interface-hint-notification.mp3",
+  "nombre": "Interface hint notification",
+  "etiqueta": "high-tech",
+  "duracion_s": 1.72,
+  "impacto_s": 0.31,
+  "ganancia_db_sugerida": -8,
+  "fuente": "https://mixkit.co/free-sound-effects/high-tech/"
+ },
+ "tecnologia/sci-fi-reject-notification": {
+  "archivo": "biblioteca/tecnologia/sci-fi-reject-notification.mp3",
+  "nombre": "Sci-Fi reject notification",
+  "etiqueta": "high-tech",
+  "duracion_s": 3.19,
+  "impacto_s": 0.323,
+  "ganancia_db_sugerida": -8,
+  "fuente": "https://mixkit.co/free-sound-effects/high-tech/"
+ },
+ "tecnologia/sci-fi-loading-operative-system": {
+  "archivo": "biblioteca/tecnologia/sci-fi-loading-operative-system.mp3",
+  "nombre": "Sci fi loading operative system",
+  "etiqueta": "high-tech",
+  "duracion_s": 2.63,
+  "impacto_s": 0.729,
+  "ganancia_db_sugerida": -8,
+  "fuente": "https://mixkit.co/free-sound-effects/high-tech/"
+ },
+ "tecnologia/cybernetic-technology-affirmation": {
+  "archivo": "biblioteca/tecnologia/cybernetic-technology-affirmation.mp3",
+  "nombre": "Cybernetic technology affirmation",
+  "etiqueta": "high-tech",
+  "duracion_s": 2.12,
+  "impacto_s": 0.081,
+  "ganancia_db_sugerida": -8,
+  "fuente": "https://mixkit.co/free-sound-effects/high-tech/"
+ },
+ "tecnologia/high-tech-bleep": {
+  "archivo": "biblioteca/tecnologia/high-tech-bleep.mp3",
+  "nombre": "High tech bleep",
+  "etiqueta": "high-tech",
+  "duracion_s": 0.69,
+  "impacto_s": 0.48,
+  "ganancia_db_sugerida": -8,
+  "fuente": "https://mixkit.co/free-sound-effects/high-tech/"
+ },
+ "tecnologia/classic-alarm": {
+  "archivo": "biblioteca/tecnologia/classic-alarm.mp3",
+  "nombre": "Classic alarm",
+  "etiqueta": "technology",
+  "duracion_s": 5.03,
+  "impacto_s": 2.15,
+  "ganancia_db_sugerida": -8,
+  "fuente": "https://mixkit.co/free-sound-effects/technology/"
+ },
+ "tecnologia/clock-countdown-bleeps": {
+  "archivo": "biblioteca/tecnologia/clock-countdown-bleeps.mp3",
+  "nombre": "Clock countdown bleeps",
+  "etiqueta": "technology",
+  "duracion_s": 5.0,
+  "impacto_s": 0.013,
+  "ganancia_db_sugerida": -8,
+  "fuente": "https://mixkit.co/free-sound-effects/technology/"
+ },
+ "tecnologia/retro-game-emergency-alarm": {
+  "archivo": "biblioteca/tecnologia/retro-game-emergency-alarm.mp3",
+  "nombre": "Retro game emergency alarm",
+  "etiqueta": "technology",
+  "duracion_s": 25.43,
+  "impacto_s": 2.072,
+  "ganancia_db_sugerida": -8,
+  "fuente": "https://mixkit.co/free-sound-effects/technology/"
+ },
+ "tecnologia/interface-option-select": {
+  "archivo": "biblioteca/tecnologia/interface-option-select.mp3",
+  "nombre": "Interface option select",
+  "etiqueta": "technology",
+  "duracion_s": 1.55,
+  "impacto_s": 0.129,
+  "ganancia_db_sugerida": -8,
+  "fuente": "https://mixkit.co/free-sound-effects/technology/"
+ },
+ "tecnologia/interface-device-click": {
+  "archivo": "biblioteca/tecnologia/interface-device-click.mp3",
+  "nombre": "Interface device click",
+  "etiqueta": "technology",
+  "duracion_s": 1.05,
+  "impacto_s": 0.014,
+  "ganancia_db_sugerida": -8,
+  "fuente": "https://mixkit.co/free-sound-effects/technology/"
+ },
+ "tecnologia/electric-buzz-glitch": {
+  "archivo": "biblioteca/tecnologia/electric-buzz-glitch.mp3",
+  "nombre": "Electric buzz glitch",
+  "etiqueta": "technology",
+  "duracion_s": 1.02,
+  "impacto_s": 0.194,
+  "ganancia_db_sugerida": -8,
+  "fuente": "https://mixkit.co/free-sound-effects/technology/"
+ },
+ "tecnologia/software-interface-start": {
+  "archivo": "biblioteca/tecnologia/software-interface-start.mp3",
+  "nombre": "Software interface start",
+  "etiqueta": "interface",
+  "duracion_s": 2.35,
+  "impacto_s": 0.141,
+  "ganancia_db_sugerida": -8,
+  "fuente": "https://mixkit.co/free-sound-effects/interface/"
+ },
+ "tecnologia/software-interface-back": {
+  "archivo": "biblioteca/tecnologia/software-interface-back.mp3",
+  "nombre": "Software interface back",
+  "etiqueta": "interface",
+  "duracion_s": 1.33,
+  "impacto_s": 0.14,
+  "ganancia_db_sugerida": -8,
+  "fuente": "https://mixkit.co/free-sound-effects/interface/"
+ },
+ "tecnologia/cool-interface-click-tone": {
+  "archivo": "biblioteca/tecnologia/cool-interface-click-tone.mp3",
+  "nombre": "Cool interface click tone",
+  "etiqueta": "interface",
+  "duracion_s": 0.2,
+  "impacto_s": 0.013,
+  "ganancia_db_sugerida": -8,
+  "fuente": "https://mixkit.co/free-sound-effects/interface/"
+ },
+ "tecnologia/software-interface-remove": {
+  "archivo": "biblioteca/tecnologia/software-interface-remove.mp3",
+  "nombre": "Software interface remove",
+  "etiqueta": "interface",
+  "duracion_s": 2.16,
+  "impacto_s": 0.143,
+  "ganancia_db_sugerida": -8,
+  "fuente": "https://mixkit.co/free-sound-effects/interface/"
+ },
+ "tecnologia/page-forward-single-chime": {
+  "archivo": "biblioteca/tecnologia/page-forward-single-chime.mp3",
+  "nombre": "Page forward single chime",
+  "etiqueta": "interface",
+  "duracion_s": 1.69,
+  "impacto_s": 0.307,
+  "ganancia_db_sugerida": -8,
+  "fuente": "https://mixkit.co/free-sound-effects/interface/"
+ },
+ "tecnologia/click-error": {
+  "archivo": "biblioteca/tecnologia/click-error.mp3",
+  "nombre": "Click error",
+  "etiqueta": "interface",
+  "duracion_s": 1.11,
+  "impacto_s": 0.024,
+  "ganancia_db_sugerida": -8,
+  "fuente": "https://mixkit.co/free-sound-effects/interface/"
+ },
+ "tecnologia/small-electric-glitch": {
+  "archivo": "biblioteca/tecnologia/small-electric-glitch.mp3",
+  "nombre": "Small electric glitch",
+  "etiqueta": "glitch",
+  "duracion_s": 1.02,
+  "impacto_s": 0.24,
+  "ganancia_db_sugerida": -8,
+  "fuente": "https://mixkit.co/free-sound-effects/glitch/"
+ },
+ "tecnologia/glitch-static": {
+  "archivo": "biblioteca/tecnologia/glitch-static.mp3",
+  "nombre": "Glitch static",
+  "etiqueta": "glitch",
+  "duracion_s": 1.4,
+  "impacto_s": 0.275,
+  "ganancia_db_sugerida": -8,
+  "fuente": "https://mixkit.co/free-sound-effects/glitch/"
+ },
+ "tecnologia/glitch-roar": {
+  "archivo": "biblioteca/tecnologia/glitch-roar.mp3",
+  "nombre": "Glitch roar",
+  "etiqueta": "glitch",
+  "duracion_s": 1.08,
+  "impacto_s": 0.044,
+  "ganancia_db_sugerida": -8,
+  "fuente": "https://mixkit.co/free-sound-effects/glitch/"
+ },
+ "tecnologia/glitch-sci-fi-rewind-transition": {
+  "archivo": "biblioteca/tecnologia/glitch-sci-fi-rewind-transition.mp3",
+  "nombre": "Glitch sci fi rewind transition",
+  "etiqueta": "glitch",
+  "duracion_s": 3.7,
+  "impacto_s": 0.363,
+  "ganancia_db_sugerida": -8,
+  "fuente": "https://mixkit.co/free-sound-effects/glitch/"
+ },
+ "tecnologia/electric-whoosh": {
+  "archivo": "biblioteca/tecnologia/electric-whoosh.mp3",
+  "nombre": "Electric whoosh",
+  "etiqueta": "glitch",
+  "duracion_s": 3.11,
+  "impacto_s": 0.825,
+  "ganancia_db_sugerida": -8,
+  "fuente": "https://mixkit.co/free-sound-effects/glitch/"
+ },
+ "tecnologia/futuristic-glitch-robot": {
+  "archivo": "biblioteca/tecnologia/futuristic-glitch-robot.mp3",
+  "nombre": "Futuristic glitch robot",
+  "etiqueta": "glitch",
+  "duracion_s": 4.5,
+  "impacto_s": 0.867,
+  "ganancia_db_sugerida": -8,
+  "fuente": "https://mixkit.co/free-sound-effects/glitch/"
+ },
+ "tecnologia/keyboard-typing": {
+  "archivo": "biblioteca/tecnologia/keyboard-typing.mp3",
+  "nombre": "Keyboard typing",
+  "etiqueta": "typewriter",
+  "duracion_s": 26.31,
+  "impacto_s": 1.213,
+  "ganancia_db_sugerida": -8,
+  "fuente": "https://mixkit.co/free-sound-effects/typewriter/"
+ },
+ "tecnologia/typewriter-soft-click": {
+  "archivo": "biblioteca/tecnologia/typewriter-soft-click.mp3",
+  "nombre": "Typewriter soft click",
+  "etiqueta": "typewriter",
+  "duracion_s": 0.22,
+  "impacto_s": 0.117,
+  "ganancia_db_sugerida": -8,
+  "fuente": "https://mixkit.co/free-sound-effects/typewriter/"
+ },
+ "tecnologia/hard-typewriter-click": {
+  "archivo": "biblioteca/tecnologia/hard-typewriter-click.mp3",
+  "nombre": "Hard typewriter click",
+  "etiqueta": "typewriter",
+  "duracion_s": 0.33,
+  "impacto_s": 0.157,
+  "ganancia_db_sugerida": -8,
+  "fuente": "https://mixkit.co/free-sound-effects/typewriter/"
+ },
+ "tecnologia/old-typewriter-typing": {
+  "archivo": "biblioteca/tecnologia/old-typewriter-typing.mp3",
+  "nombre": "Old typewriter typing",
+  "etiqueta": "typewriter",
+  "duracion_s": 24.4,
+  "impacto_s": 3.823,
+  "ganancia_db_sugerida": -8,
+  "fuente": "https://mixkit.co/free-sound-effects/typewriter/"
+ },
+ "tecnologia/typing-on-an-electronic-device": {
+  "archivo": "biblioteca/tecnologia/typing-on-an-electronic-device.mp3",
+  "nombre": "Typing on an electronic device",
+  "etiqueta": "typewriter",
+  "duracion_s": 3.88,
+  "impacto_s": 2.646,
+  "ganancia_db_sugerida": -8,
+  "fuente": "https://mixkit.co/free-sound-effects/typewriter/"
+ },
+ "tecnologia/typewriter-return-bell": {
+  "archivo": "biblioteca/tecnologia/typewriter-return-bell.mp3",
+  "nombre": "Typewriter return bell",
+  "etiqueta": "typewriter",
+  "duracion_s": 1.76,
+  "impacto_s": 0.167,
+  "ganancia_db_sugerida": -8,
+  "fuente": "https://mixkit.co/free-sound-effects/typewriter/"
+ },
+ "dinero/clinking-coins": {
+  "archivo": "biblioteca/dinero/clinking-coins.mp3",
+  "nombre": "Clinking coins",
+  "etiqueta": "money",
+  "duracion_s": 1.02,
+  "impacto_s": 0.512,
+  "ganancia_db_sugerida": -8,
+  "fuente": "https://mixkit.co/free-sound-effects/money/"
+ },
+ "dinero/gold-coin-prize": {
+  "archivo": "biblioteca/dinero/gold-coin-prize.mp3",
+  "nombre": "Gold coin prize",
+  "etiqueta": "money",
+  "duracion_s": 1.96,
+  "impacto_s": 0.173,
+  "ganancia_db_sugerida": -8,
+  "fuente": "https://mixkit.co/free-sound-effects/money/"
+ },
+ "dinero/atm-cash-machine-key-press": {
+  "archivo": "biblioteca/dinero/atm-cash-machine-key-press.mp3",
+  "nombre": "Atm cash machine key press",
+  "etiqueta": "money",
+  "duracion_s": 1.03,
+  "impacto_s": 0.055,
+  "ganancia_db_sugerida": -8,
+  "fuente": "https://mixkit.co/free-sound-effects/money/"
+ },
+ "dinero/coins-handling": {
+  "archivo": "biblioteca/dinero/coins-handling.mp3",
+  "nombre": "Coins handling",
+  "etiqueta": "money",
+  "duracion_s": 1.14,
+  "impacto_s": 0.131,
+  "ganancia_db_sugerida": -8,
+  "fuente": "https://mixkit.co/free-sound-effects/money/"
+ },
+ "dinero/slot-machine-payout-alarm": {
+  "archivo": "biblioteca/dinero/slot-machine-payout-alarm.mp3",
+  "nombre": "Slot machine payout alarm",
+  "etiqueta": "money",
+  "duracion_s": 10.86,
+  "impacto_s": 7.443,
+  "ganancia_db_sugerida": -8,
+  "fuente": "https://mixkit.co/free-sound-effects/money/"
+ },
+ "dinero/money-bag-drop": {
+  "archivo": "biblioteca/dinero/money-bag-drop.mp3",
+  "nombre": "Money bag drop",
+  "etiqueta": "money",
+  "duracion_s": 1.22,
+  "impacto_s": 0.119,
+  "ganancia_db_sugerida": -8,
+  "fuente": "https://mixkit.co/free-sound-effects/money/"
+ },
+ "dinero/winning-a-coin-video-game": {
+  "archivo": "biblioteca/dinero/winning-a-coin-video-game.mp3",
+  "nombre": "Winning a coin, video game",
+  "etiqueta": "coin",
+  "duracion_s": 1.03,
+  "impacto_s": 0.083,
+  "ganancia_db_sugerida": -8,
+  "fuente": "https://mixkit.co/free-sound-effects/coin/"
+ },
+ "dinero/unlock-game-notification": {
+  "archivo": "biblioteca/dinero/unlock-game-notification.mp3",
+  "nombre": "Unlock game notification",
+  "etiqueta": "coin",
+  "duracion_s": 1.4,
+  "impacto_s": 0.176,
+  "ganancia_db_sugerida": -8,
+  "fuente": "https://mixkit.co/free-sound-effects/coin/"
+ },
+ "dinero/arcade-game-jump-coin": {
+  "archivo": "biblioteca/dinero/arcade-game-jump-coin.mp3",
+  "nombre": "Arcade game jump coin",
+  "etiqueta": "coin",
+  "duracion_s": 0.12,
+  "impacto_s": 0.053,
+  "ganancia_db_sugerida": -8,
+  "fuente": "https://mixkit.co/free-sound-effects/coin/"
+ },
+ "dinero/game-success-alert": {
+  "archivo": "biblioteca/dinero/game-success-alert.mp3",
+  "nombre": "Game success alert",
+  "etiqueta": "coin",
+  "duracion_s": 1.94,
+  "impacto_s": 0.084,
+  "ganancia_db_sugerida": -8,
+  "fuente": "https://mixkit.co/free-sound-effects/coin/"
+ },
+ "dinero/magical-coin-win": {
+  "archivo": "biblioteca/dinero/magical-coin-win.mp3",
+  "nombre": "Magical coin win",
+  "etiqueta": "coin",
+  "duracion_s": 2.61,
+  "impacto_s": 0.177,
+  "ganancia_db_sugerida": -8,
+  "fuente": "https://mixkit.co/free-sound-effects/coin/"
+ },
+ "dinero/coins-sound": {
+  "archivo": "biblioteca/dinero/coins-sound.mp3",
+  "nombre": "Coins sound",
+  "etiqueta": "coin",
+  "duracion_s": 1.1,
+  "impacto_s": 0.194,
+  "ganancia_db_sugerida": -8,
+  "fuente": "https://mixkit.co/free-sound-effects/coin/"
+ },
+ "dinero/retro-arcade-casino-notification": {
+  "archivo": "biblioteca/dinero/retro-arcade-casino-notification.mp3",
+  "nombre": "Retro arcade casino notification",
+  "etiqueta": "casino",
+  "duracion_s": 4.25,
+  "impacto_s": 0.212,
+  "ganancia_db_sugerida": -8,
+  "fuente": "https://mixkit.co/free-sound-effects/casino/"
+ },
+ "dinero/casino-bling-achievement": {
+  "archivo": "biblioteca/dinero/casino-bling-achievement.mp3",
+  "nombre": "Casino bling achievement",
+  "etiqueta": "casino",
+  "duracion_s": 4.0,
+  "impacto_s": 0.039,
+  "ganancia_db_sugerida": -8,
+  "fuente": "https://mixkit.co/free-sound-effects/casino/"
+ },
+ "dinero/slot-machine-win-alarm": {
+  "archivo": "biblioteca/dinero/slot-machine-win-alarm.mp3",
+  "nombre": "Slot machine win alarm",
+  "etiqueta": "casino",
+  "duracion_s": 6.68,
+  "impacto_s": 2.059,
+  "ganancia_db_sugerida": -8,
+  "fuente": "https://mixkit.co/free-sound-effects/casino/"
+ },
+ "dinero/coin-win-notification": {
+  "archivo": "biblioteca/dinero/coin-win-notification.mp3",
+  "nombre": "Coin win notification",
+  "etiqueta": "casino",
+  "duracion_s": 2.5,
+  "impacto_s": 0.258,
+  "ganancia_db_sugerida": -8,
+  "fuente": "https://mixkit.co/free-sound-effects/casino/"
+ },
+ "dinero/melodic-gold-price": {
+  "archivo": "biblioteca/dinero/melodic-gold-price.mp3",
+  "nombre": "Melodic gold price",
+  "etiqueta": "casino",
+  "duracion_s": 1.97,
+  "impacto_s": 0.265,
+  "ganancia_db_sugerida": -8,
+  "fuente": "https://mixkit.co/free-sound-effects/casino/"
+ },
+ "dinero/slot-machine-win-alert": {
+  "archivo": "biblioteca/dinero/slot-machine-win-alert.mp3",
+  "nombre": "Slot machine win alert",
+  "etiqueta": "casino",
+  "duracion_s": 3.56,
+  "impacto_s": 0.795,
+  "ganancia_db_sugerida": -8,
+  "fuente": "https://mixkit.co/free-sound-effects/casino/"
+ },
+ "reacciones/cartoon-voice-laugh": {
+  "archivo": "biblioteca/reacciones/cartoon-voice-laugh.mp3",
+  "nombre": "Cartoon voice laugh",
+  "etiqueta": "laugh",
+  "duracion_s": 1.26,
+  "impacto_s": 0.046,
+  "ganancia_db_sugerida": -8,
+  "fuente": "https://mixkit.co/free-sound-effects/laugh/"
+ },
+ "reacciones/happy-child-laughing": {
+  "archivo": "biblioteca/reacciones/happy-child-laughing.mp3",
+  "nombre": "Happy child laughing",
+  "etiqueta": "laugh",
+  "duracion_s": 2.4,
+  "impacto_s": 0.798,
+  "ganancia_db_sugerida": -8,
+  "fuente": "https://mixkit.co/free-sound-effects/laugh/"
+ },
+ "reacciones/funny-giggling": {
+  "archivo": "biblioteca/reacciones/funny-giggling.mp3",
+  "nombre": "Funny Giggling",
+  "etiqueta": "laugh",
+  "duracion_s": 2.09,
+  "impacto_s": 0.119,
+  "ganancia_db_sugerida": -8,
+  "fuente": "https://mixkit.co/free-sound-effects/laugh/"
+ },
+ "reacciones/people-in-fair-ambience-and-laughter": {
+  "archivo": "biblioteca/reacciones/people-in-fair-ambience-and-laughter.mp3",
+  "nombre": "People in fair ambience and laughter",
+  "etiqueta": "laugh",
+  "duracion_s": 15.01,
+  "impacto_s": 3.634,
+  "ganancia_db_sugerida": -8,
+  "fuente": "https://mixkit.co/free-sound-effects/laugh/"
+ },
+ "reacciones/creepy-little-creature": {
+  "archivo": "biblioteca/reacciones/creepy-little-creature.mp3",
+  "nombre": "Creepy little creature",
+  "etiqueta": "laugh",
+  "duracion_s": 1.93,
+  "impacto_s": 0.619,
+  "ganancia_db_sugerida": -8,
+  "fuente": "https://mixkit.co/free-sound-effects/laugh/"
+ },
+ "reacciones/big-crowd-laughing": {
+  "archivo": "biblioteca/reacciones/big-crowd-laughing.mp3",
+  "nombre": "Big crowd laughing",
+  "etiqueta": "laugh",
+  "duracion_s": 7.45,
+  "impacto_s": 1.075,
+  "ganancia_db_sugerida": -8,
+  "fuente": "https://mixkit.co/free-sound-effects/laugh/"
+ },
+ "reacciones/small-group-cheer-and-applause": {
+  "archivo": "biblioteca/reacciones/small-group-cheer-and-applause.mp3",
+  "nombre": "Small group cheer and applause",
+  "etiqueta": "applause",
+  "duracion_s": 10.6,
+  "impacto_s": 1.836,
+  "ganancia_db_sugerida": -8,
+  "fuente": "https://mixkit.co/free-sound-effects/applause/"
+ },
+ "reacciones/stadium-crowd-light-applause": {
+  "archivo": "biblioteca/reacciones/stadium-crowd-light-applause.mp3",
+  "nombre": "Stadium crowd light applause",
+  "etiqueta": "applause",
+  "duracion_s": 11.09,
+  "impacto_s": 1.816,
+  "ganancia_db_sugerida": -8,
+  "fuente": "https://mixkit.co/free-sound-effects/applause/"
+ },
+ "reacciones/cheering-crowd-loud-whistle": {
+  "archivo": "biblioteca/reacciones/cheering-crowd-loud-whistle.mp3",
+  "nombre": "Cheering crowd loud whistle",
+  "etiqueta": "applause",
+  "duracion_s": 14.76,
+  "impacto_s": 2.418,
+  "ganancia_db_sugerida": -8,
+  "fuente": "https://mixkit.co/free-sound-effects/applause/"
+ },
+ "reacciones/small-crowd-clapping": {
+  "archivo": "biblioteca/reacciones/small-crowd-clapping.mp3",
+  "nombre": "Small crowd clapping",
+  "etiqueta": "applause",
+  "duracion_s": 15.0,
+  "impacto_s": 4.39,
+  "ganancia_db_sugerida": -8,
+  "fuente": "https://mixkit.co/free-sound-effects/applause/"
+ },
+ "reacciones/auditorium-moderate-applause-and-cheering": {
+  "archivo": "biblioteca/reacciones/auditorium-moderate-applause-and-cheering.mp3",
+  "nombre": "Auditorium moderate applause and cheering",
+  "etiqueta": "applause",
+  "duracion_s": 17.84,
+  "impacto_s": 11.383,
+  "ganancia_db_sugerida": -8,
+  "fuente": "https://mixkit.co/free-sound-effects/applause/"
+ },
+ "reacciones/medium-size-crowd-applause": {
+  "archivo": "biblioteca/reacciones/medium-size-crowd-applause.mp3",
+  "nombre": "Medium size crowd applause",
+  "etiqueta": "applause",
+  "duracion_s": 11.95,
+  "impacto_s": 1.901,
+  "ganancia_db_sugerida": -8,
+  "fuente": "https://mixkit.co/free-sound-effects/applause/"
+ },
+ "reacciones/rewind-magic-spell": {
+  "archivo": "biblioteca/reacciones/rewind-magic-spell.mp3",
+  "nombre": "Rewind magic spell",
+  "etiqueta": "wow",
+  "duracion_s": 2.08,
+  "impacto_s": 1.259,
+  "ganancia_db_sugerida": -8,
+  "fuente": "https://mixkit.co/free-sound-effects/wow/"
+ },
+ "reacciones/cartoon-insect-long-buzz": {
+  "archivo": "biblioteca/reacciones/cartoon-insect-long-buzz.mp3",
+  "nombre": "Cartoon insect long buzz",
+  "etiqueta": "wow",
+  "duracion_s": 1.11,
+  "impacto_s": 0.739,
+  "ganancia_db_sugerida": -8,
+  "fuente": "https://mixkit.co/free-sound-effects/wow/"
+ },
+ "reacciones/stadium-joy-shouting-crowd": {
+  "archivo": "biblioteca/reacciones/stadium-joy-shouting-crowd.mp3",
+  "nombre": "Stadium joy shouting crowd",
+  "etiqueta": "crowd",
+  "duracion_s": 15.77,
+  "impacto_s": 5.452,
+  "ganancia_db_sugerida": -8,
+  "fuente": "https://mixkit.co/free-sound-effects/crowd/"
+ },
+ "reacciones/very-crowded-pub-or-party-loop": {
+  "archivo": "biblioteca/reacciones/very-crowded-pub-or-party-loop.mp3",
+  "nombre": "Very crowded pub or party loop",
+  "etiqueta": "crowd",
+  "duracion_s": 36.0,
+  "impacto_s": 19.28,
+  "ganancia_db_sugerida": -8,
+  "fuente": "https://mixkit.co/free-sound-effects/crowd/"
+ },
+ "reacciones/big-crowd-talking-loop": {
+  "archivo": "biblioteca/reacciones/big-crowd-talking-loop.mp3",
+  "nombre": "Big crowd talking loop",
+  "etiqueta": "crowd",
+  "duracion_s": 59.74,
+  "impacto_s": 4.232,
+  "ganancia_db_sugerida": -8,
+  "fuente": "https://mixkit.co/free-sound-effects/crowd/"
+ },
+ "reacciones/reporters-crowd-and-camera-flashes": {
+  "archivo": "biblioteca/reacciones/reporters-crowd-and-camera-flashes.mp3",
+  "nombre": "Reporters crowd and camera flashes",
+  "etiqueta": "crowd",
+  "duracion_s": 16.15,
+  "impacto_s": 10.663,
+  "ganancia_db_sugerida": -8,
+  "fuente": "https://mixkit.co/free-sound-effects/crowd/"
+ },
+ "reacciones/male-crowd-cheering-short": {
+  "archivo": "biblioteca/reacciones/male-crowd-cheering-short.mp3",
+  "nombre": "Male crowd cheering short",
+  "etiqueta": "crowd",
+  "duracion_s": 4.32,
+  "impacto_s": 1.261,
+  "ganancia_db_sugerida": -8,
+  "fuente": "https://mixkit.co/free-sound-effects/crowd/"
+ },
+ "reacciones/birthday-crowd-party-cheer": {
+  "archivo": "biblioteca/reacciones/birthday-crowd-party-cheer.mp3",
+  "nombre": "Birthday crowd party cheer",
+  "etiqueta": "crowd",
+  "duracion_s": 5.38,
+  "impacto_s": 2.352,
+  "ganancia_db_sugerida": -8,
+  "fuente": "https://mixkit.co/free-sound-effects/crowd/"
+ },
+ "reacciones/light-applause-with-laughter-audience": {
+  "archivo": "biblioteca/reacciones/light-applause-with-laughter-audience.mp3",
+  "nombre": "Light applause with laughter audience",
+  "etiqueta": "cheer",
+  "duracion_s": 10.43,
+  "impacto_s": 1.284,
+  "ganancia_db_sugerida": -8,
+  "fuente": "https://mixkit.co/free-sound-effects/cheer/"
+ },
+ "reacciones/one-man-clapping": {
+  "archivo": "biblioteca/reacciones/one-man-clapping.mp3",
+  "nombre": "One man clapping",
+  "etiqueta": "cheer",
+  "duracion_s": 3.0,
+  "impacto_s": 1.578,
+  "ganancia_db_sugerida": -8,
+  "fuente": "https://mixkit.co/free-sound-effects/cheer/"
+ },
+ "reacciones/end-of-show-clapping-crowd": {
+  "archivo": "biblioteca/reacciones/end-of-show-clapping-crowd.mp3",
+  "nombre": "End of show clapping crowd",
+  "etiqueta": "cheer",
+  "duracion_s": 8.95,
+  "impacto_s": 4.236,
+  "ganancia_db_sugerida": -8,
+  "fuente": "https://mixkit.co/free-sound-effects/cheer/"
+ },
+ "reacciones/girls-audience-applause": {
+  "archivo": "biblioteca/reacciones/girls-audience-applause.mp3",
+  "nombre": "Girls audience applause",
+  "etiqueta": "cheer",
+  "duracion_s": 6.55,
+  "impacto_s": 1.119,
+  "ganancia_db_sugerida": -8,
+  "fuente": "https://mixkit.co/free-sound-effects/cheer/"
+ },
+ "reacciones/small-group-light-applause": {
+  "archivo": "biblioteca/reacciones/small-group-light-applause.mp3",
+  "nombre": "Small group light applause",
+  "etiqueta": "cheer",
+  "duracion_s": 5.09,
+  "impacto_s": 4.651,
+  "ganancia_db_sugerida": -8,
+  "fuente": "https://mixkit.co/free-sound-effects/cheer/"
+ },
+ "reacciones/clapping-slowly": {
+  "archivo": "biblioteca/reacciones/clapping-slowly.mp3",
+  "nombre": "Clapping slowly",
+  "etiqueta": "cheer",
+  "duracion_s": 2.67,
+  "impacto_s": 0.527,
+  "ganancia_db_sugerida": -8,
+  "fuente": "https://mixkit.co/free-sound-effects/cheer/"
+ }
+}

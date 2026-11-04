@@ -1,0 +1,153 @@
+{
+ "formato": "Pizarra",
+ "voz": {
+  "referencia": "voz/referencias/kokoro-alex.wav",
+  "pausa": 0.25,
+  "velocidad": 0.95,
+  "tono": "serio",
+  "pronunciacion": {
+   "Guatavita": "Guatavíta",
+   "muiscas": "muíscas"
+  }
+ },
+ "props": {
+  "gancho": "¿EXISTIÓ EL DORADO?",
+  "musica": "musica/aventura.mp3",
+  "tono": "calido",
+  "escenas": [
+   {
+    "dibujo": {
+     "iconos": []
+    },
+    "texto": "Una ciudad de oro",
+    "resaltar": "oro.",
+    "fondo": "ia:dora01-conquistadores",
+    "sonido": "flash_shock",
+    "sonidoEn": 0.05
+   },
+   {
+    "dibujo": {
+     "iconos": []
+    },
+    "texto": "Nunca fue una ciudad.",
+    "resaltar": "ciudad.",
+    "fondo": "ia:dora02-ciudad"
+   },
+   {
+    "dibujo": {
+     "iconos": []
+    },
+    "texto": "Era un hombre.",
+    "resaltar": "hombre.",
+    "fondo": "ia:dora03-hombre",
+    "sonido": "boom",
+    "sonidoEn": 0.4
+   },
+   {
+    "dibujo": {
+     "iconos": []
+    },
+    "texto": "Laguna de Guatavita",
+    "resaltar": "Guatavita",
+    "fondo": "ia:dora04-laguna",
+    "particulas": "polvo"
+   },
+   {
+    "dibujo": {
+     "iconos": []
+    },
+    "texto": "Cubierto de oro",
+    "resaltar": "oro",
+    "fondo": "ia:dora05-polvo",
+    "sonido": "magic_reveal",
+    "sonidoEn": 0.4
+   },
+   {
+    "dibujo": {
+     "iconos": []
+    },
+    "texto": "Oro al agua",
+    "resaltar": "agua.",
+    "fondo": "ia:dora06-balsa",
+    "ambiente": "naturaleza/wind-blowing-ambience"
+   },
+   {
+    "dibujo": {
+     "iconos": []
+    },
+    "texto": "Una ciudad que nunca existió",
+    "resaltar": "nunca",
+    "fondo": "ia:dora07-mapa"
+   },
+   {
+    "dibujo": {
+     "iconos": []
+    },
+    "texto": "El corte en la montaña",
+    "resaltar": "corte",
+    "fondo": "ia:dora08-corte",
+    "particulas": "polvo"
+   },
+   {
+    "dibujo": {
+     "iconos": []
+    },
+    "texto": "La balsa de oro",
+    "resaltar": "balsa de oro",
+    "fondo": "ia:dora09-balsa-oro",
+    "sonido": "magic_reveal",
+    "sonidoEn": 2.0
+   },
+   {
+    "dibujo": {
+     "iconos": []
+    },
+    "texto": "No era un lugar.",
+    "resaltar": "lugar.",
+    "fondo": "ia:dora10-final"
+   }
+  ],
+  "narracion": [
+   {
+    "texto": "Durante cien años, miles de hombres murieron buscando una ciudad de oro.",
+    "estilo": "narrador"
+   },
+   {
+    "texto": "La llamaron El Dorado. Pero nunca fue una ciudad.",
+    "estilo": "narrador"
+   },
+   {
+    "texto": "Era un hombre.",
+    "estilo": "narrador"
+   },
+   {
+    "texto": "En la laguna de Guatavita, en Colombia, los muiscas coronaban a su nuevo jefe así.",
+    "estilo": "narrador"
+   },
+   {
+    "texto": "Lo cubrían de polvo de oro, de pies a cabeza.",
+    "estilo": "narrador"
+   },
+   {
+    "texto": "Subía a una balsa con sus sacerdotes, y en el centro de la laguna arrojaban oro y esmeraldas al agua.",
+    "estilo": "narrador"
+   },
+   {
+    "texto": "Los españoles escucharon la historia, y la convirtieron en una ciudad de oro que nunca existió.",
+    "estilo": "narrador"
+   },
+   {
+    "texto": "En mil quinientos ochenta intentaron vaciar la laguna. Todavía se ve el corte en la montaña.",
+    "estilo": "narrador"
+   },
+   {
+    "texto": "Y en mil novecientos sesenta y nueve, unos campesinos encontraron esto: una balsa de oro que cuenta la misma ceremonia.",
+    "estilo": "narrador"
+   },
+   {
+    "texto": "El Dorado sí existió. Solo que no era un lugar.",
+    "estilo": "narrador"
+   }
+  ]
+ }
+}

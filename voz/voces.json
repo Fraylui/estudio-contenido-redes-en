@@ -1,0 +1,116 @@
+{
+  "_nota": "Qué voz narra cada categoría de Khipu. narrar.py usa el campo 'voz' del JSON del video; al crear un video se copia de aquí según su categoría. Las referencias están en voz/referencias/ (no se suben a GitHub). 'prueba' = se alternan las dos y gana la de más % visto (marcador en docs/mejora-continua.md). Los videos largos van siempre con la voz de Xiomi (mujer-calida), pedido del usuario del 28 oct; las categorías aplican a los Shorts.",
+  "voces": {
+    "mujer-calida": {
+      "referencia": "voz/referencias/xiomi-clara.wav",
+      "quien": "Xiomi (con permiso)",
+      "pausa": 0.18
+    },
+    "mujer-cercana": {
+      "referencia": "voz/referencias/sayra.wav",
+      "quien": "Sayra (con permiso; nota de WhatsApp tratada)",
+      "pausa": 0.18
+    },
+    "hombre-grave": {
+      "referencia": "voz/referencias/kokoro-alex.wav",
+      "quien": "Kokoro em_alex (sintética, Apache 2.0) clonada con Chatterbox",
+      "pausa": 0.25,
+      "velocidad": 0.95
+    },
+    "hombre-narrador": {
+      "referencia": "voz/referencias/kokoro-santa.wav",
+      "quien": "Kokoro em_santa (sintética, Apache 2.0) clonada con Chatterbox",
+      "pausa": 0.2
+    }
+  },
+  "categorias": {
+    "ciencia": [
+      "hombre-narrador",
+      "mujer-calida",
+      "prueba"
+    ],
+    "habitos": [
+      "mujer-calida"
+    ],
+    "cuerpo": [
+      "mujer-cercana"
+    ],
+    "psicologia": [
+      "mujer-cercana"
+    ],
+    "historia-peru": [
+      "hombre-narrador"
+    ],
+    "historia-mundial": [
+      "hombre-grave"
+    ],
+    "finanzas": [
+      "mujer-calida"
+    ],
+    "economia": [
+      "hombre-narrador",
+      "mujer-calida",
+      "prueba"
+    ],
+    "tecnologia": [
+      "hombre-narrador",
+      "mujer-calida",
+      "prueba"
+    ],
+    "personajes": [
+      "hombre-grave"
+    ],
+    "lugares": [
+      "hombre-narrador",
+      "mujer-cercana",
+      "prueba"
+    ],
+    "animales": [
+      "mujer-calida"
+    ],
+    "misterios": [
+      "hombre-grave"
+    ],
+    "biblia": [
+      "hombre-grave"
+    ],
+    "espacio": [
+      "hombre-narrador"
+    ],
+    "inventos": [
+      "hombre-narrador",
+      "mujer-calida",
+      "prueba"
+    ],
+    "marcas": [
+      "hombre-narrador"
+    ],
+    "comida": [
+      "mujer-calida"
+    ],
+    "leyendas": [
+      "hombre-grave"
+    ],
+    "deportes": [
+      "hombre-narrador"
+    ],
+    "tierra": [
+      "hombre-narrador",
+      "mujer-calida",
+      "prueba"
+    ],
+    "palabras": [
+      "mujer-calida"
+    ],
+    "arte": [
+      "mujer-cercana"
+    ],
+    "quepasaria": [
+      "hombre-narrador"
+    ],
+    "sabiduria": [
+      "hombre-grave"
+    ]
+  },
+  "videos_largos": "mujer-calida"
+}

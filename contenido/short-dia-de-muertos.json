@@ -1,0 +1,270 @@
+{
+ "formato": "Pizarra",
+ "voz": {
+  "referencia": "voz/referencias/xiomi-clara.wav",
+  "pausa": 0.2,
+  "tono": "alegre",
+  "pronunciacion": {
+   "cempasúchil": "sempasúchil",
+   "náhuatl": "náuatl",
+   "Posada": "Posáda",
+   "tantawawas": "tantawáwas",
+   "wawa": "wáwa",
+   "aimara": "aimára"
+  }
+ },
+ "props": {
+  "gancho": "UN PLATO PARA UN MUERTO",
+  "musica": "musica/emotivo-dreams.mp3",
+  "tono": "calido",
+  "narracion": [
+   {
+    "texto": "Esta noche, en millones de casas, alguien pone un plato de comida… para una persona que ya murió.",
+    "estilo": "narrador"
+   },
+   {
+    "texto": "Es el Día de Muertos. Y no es una fiesta triste.",
+    "estilo": "narrador"
+   },
+   {
+    "texto": "Según la tradición, una vez al año las almas de los que se fueron vuelven a casa.",
+    "estilo": "narrador"
+   },
+   {
+    "texto": "Por eso se hace un camino de pétalos de cempasúchil: su color y su olor les muestran por dónde llegar.",
+    "estilo": "narrador"
+   },
+   {
+    "texto": "Cempasúchil viene del náhuatl, y quiere decir: veinte flores.",
+    "estilo": "narrador"
+   },
+   {
+    "texto": "El primero de noviembre llegan los niños. El dos, los adultos.",
+    "estilo": "narrador"
+   },
+   {
+    "texto": "En la ofrenda les ponen lo que más les gustaba en vida: su comida, su bebida, hasta sus juguetes.",
+    "estilo": "narrador"
+   },
+   {
+    "texto": "Y la famosa Catrina nació como una burla: el grabador José Guadalupe Posada dibujó una calavera vestida a la moda europea.",
+    "estilo": "narrador"
+   },
+   {
+    "texto": "Años después, el pintor Diego Rivera le puso el nombre de Catrina.",
+    "estilo": "narrador"
+   },
+   {
+    "texto": "En dos mil ocho, la UNESCO la inscribió como patrimonio de la humanidad.",
+    "estilo": "narrador"
+   },
+   {
+    "texto": "Y en los Andes, esos mismos días, se hornean bebés de pan: las tantawawas.",
+    "estilo": "narrador"
+   },
+   {
+    "texto": "En aimara, tanta es pan, y wawa es bebé.",
+    "estilo": "narrador"
+   },
+   {
+    "texto": "Dime: en tu casa, ¿a quién le pondrías un plato esta noche?",
+    "estilo": "narrador"
+   }
+  ],
+  "escenas": [
+   {
+    "dibujo": {
+     "iconos": []
+    },
+    "texto": "Un plato para un muerto",
+    "resaltar": "muerto",
+    "fondo": "ia:dm-ofrenda",
+    "khipu": {
+     "cara": "sorprendido",
+     "pose": "abajo",
+     "vestuario": "base",
+     "x": 30
+    },
+    "sonido": "hooks/cinematic-glass-hit-suspense",
+    "sonidoEn": 0.05
+   },
+   {
+    "dibujo": {
+     "iconos": []
+    },
+    "texto": "No es una fiesta triste",
+    "resaltar": "triste",
+    "fondo": "ia:dm-cementerio",
+    "khipu": {
+     "cara": "feliz",
+     "pose": "arriba",
+     "vestuario": "base",
+     "x": 65,
+     "espejo": true
+    }
+   },
+   {
+    "dibujo": {
+     "iconos": []
+    },
+    "texto": "Vuelven a casa",
+    "resaltar": "casa",
+    "fondo": "ia:dm-camino",
+    "khipu": {
+     "cara": "normal",
+     "pose": "senala",
+     "vestuario": "base",
+     "x": 30
+    }
+   },
+   {
+    "dibujo": {
+     "iconos": []
+    },
+    "texto": "Un camino de flores",
+    "resaltar": "camino",
+    "fondo": "ia:dm-camino",
+    "khipu": {
+     "cara": "normal",
+     "pose": "pensando",
+     "vestuario": "base",
+     "x": 65,
+     "espejo": true
+    }
+   },
+   {
+    "dibujo": {
+     "iconos": []
+    },
+    "texto": "Veinte flores",
+    "resaltar": "Veinte",
+    "fondo": "ia:dm-flores",
+    "khipu": {
+     "cara": "sorprendido",
+     "pose": "senala",
+     "vestuario": "base",
+     "x": 30
+    }
+   },
+   {
+    "dibujo": {
+     "iconos": []
+    },
+    "texto": "1: niños · 2: adultos",
+    "resaltar": "niños",
+    "fondo": "ia:dm-ofrenda",
+    "khipu": {
+     "cara": "feliz",
+     "pose": "senala",
+     "vestuario": "base",
+     "x": 65,
+     "espejo": true
+    }
+   },
+   {
+    "dibujo": {
+     "iconos": []
+    },
+    "texto": "Lo que más les gustaba",
+    "resaltar": "gustaba",
+    "fondo": "ia:dm-ofrenda",
+    "khipu": {
+     "cara": "feliz",
+     "pose": "arriba",
+     "vestuario": "base",
+     "x": 30
+    }
+   },
+   {
+    "dibujo": {
+     "iconos": []
+    },
+    "texto": "Nació como una burla",
+    "resaltar": "burla",
+    "fondo": "ia:dm-catrina",
+    "khipu": {
+     "cara": "sorprendido",
+     "pose": "pensando",
+     "vestuario": "base",
+     "x": 65,
+     "espejo": true
+    }
+   },
+   {
+    "dibujo": {
+     "iconos": []
+    },
+    "texto": "Diego Rivera la nombró",
+    "resaltar": "Rivera",
+    "fondo": "ia:dm-catrina",
+    "khipu": {
+     "cara": "feliz",
+     "pose": "senala",
+     "vestuario": "base",
+     "x": 30
+    }
+   },
+   {
+    "dibujo": {
+     "iconos": []
+    },
+    "texto": "Patrimonio de la humanidad",
+    "resaltar": "patrimonio",
+    "fondo": "ia:dm-cementerio",
+    "khipu": {
+     "cara": "decidido",
+     "pose": "cadera",
+     "vestuario": "base",
+     "x": 65,
+     "espejo": true
+    },
+    "sonido": "hooks/short-bass-hit",
+    "sonidoEn": 1.2
+   },
+   {
+    "dibujo": {
+     "iconos": []
+    },
+    "texto": "Bebés de pan",
+    "resaltar": "pan",
+    "fondo": "ia:dm-tantawawa",
+    "khipu": {
+     "cara": "sorprendido",
+     "pose": "abajo",
+     "vestuario": "inca",
+     "x": 30
+    }
+   },
+   {
+    "dibujo": {
+     "iconos": []
+    },
+    "texto": "Tanta + wawa",
+    "resaltar": "wawa",
+    "fondo": "ia:dm-tantawawa",
+    "khipu": {
+     "cara": "feliz",
+     "pose": "senala",
+     "vestuario": "inca",
+     "x": 65,
+     "espejo": true
+    }
+   },
+   {
+    "dibujo": {
+     "iconos": []
+    },
+    "texto": "¿A quién le pondrías un plato?",
+    "resaltar": "plato",
+    "fondo": "ia:dm-ofrenda",
+    "khipu": {
+     "cara": "normal",
+     "pose": "pensando",
+     "vestuario": "base",
+     "x": 50
+    },
+    "silencio": true
+   }
+  ]
+ }
+}
